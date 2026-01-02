@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Prompt Engineer Collective — a community of 1,300+ AI professionals sharing job leads, career advice, and industry insights.">
+  
+  <title>Join the Community — PE Collective</title>
+  
+  <meta property="og:title" content="Join PE Collective">
+  <meta property="og:description" content="Connect with 1,300+ prompt engineers, AI engineers, and ML practitioners.">
+  
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <style>
+    .join-page {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      padding: var(--space-3xl) 0;
+    }
+    
+    .join-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4xl);
+      align-items: start;
+    }
+    
+    @media (max-width: 900px) {
+      .join-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+    
+    .join-info h1 {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .join-info__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .join-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .join-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      color: var(--color-text-secondary);
+    }
+    
+    .join-benefits li::before {
+      content: '✓';
+      color: var(--color-success);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    
+    .join-form-container {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+    }
+    
+    .join-form-header {
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .join-form-header h2 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .join-form-header p {
+      font-size: 0.9375rem;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+    
+    @media (max-width: 500px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .form-submit {
+      margin-top: var(--space-lg);
+    }
+    
+    .form-submit .btn {
+      width: 100%;
+    }
+    
+    .form-note {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-md);
+      text-align: center;
+    }
+    
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-2xl);
+    }
+    
+    .form-success.show {
+      display: block;
+    }
+    
+    .form-success h3 {
+      color: var(--color-success);
+      margin-bottom: var(--space-md);
+    }
+    
+    .form-success p {
+      margin-bottom: var(--space-lg);
+    }
+    
+    #join-form.hidden {
+      display: none;
+    }
+    
+    .member-stats {
+      display: flex;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .member-stat {
+      text-align: center;
+    }
+    
+    .member-stat__value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+    
+    .member-stat__label {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <img src="/assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+        
+        <nav class="header__nav">
+          <a href="/jobs/">Jobs</a>
+          <a href="/tools/">Tools</a>
+          <a href="/about/">About</a>
+        </nav>
+        
+        <div class="header__cta">
+          <a href="/join/" class="btn btn--secondary btn--small active">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="join-page">
+      <div class="container">
+        <div class="join-container">
+          <!-- Left: Info -->
+          <div class="join-info">
+            <h1>Join the <span class="text-gold">PE Collective</span></h1>
+            <p class="join-info__subtitle">
+              A private community of prompt engineers, AI engineers, and ML practitioners sharing job leads, career insights, and industry knowledge.
+            </p>
+            
+            <ul class="join-benefits">
+              <li>Access our private Slack with 1,300+ AI professionals</li>
+              <li>Get early access to job postings from member companies</li>
+              <li>Share and receive referrals from trusted peers</li>
+              <li>Discuss salary benchmarks and negotiation strategies</li>
+              <li>Learn from practitioners at Anthropic, OpenAI, Google, Meta, and startups</li>
+              <li>Weekly office hours and AMAs with industry experts</li>
+            </ul>
+            
+            <div class="member-stats">
+              <div class="member-stat">
+                <div class="member-stat__value">1,300+</div>
+                <div class="member-stat__label">Members</div>
+              </div>
+              <div class="member-stat">
+                <div class="member-stat__value">500+</div>
+                <div class="member-stat__label">Companies</div>
+              </div>
+              <div class="member-stat">
+                <div class="member-stat__value">Free</div>
+                <div class="member-stat__label">Forever</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Form -->
+          <div class="join-form-container">
+            <div class="join-form-header">
+              <h2>Apply to Join</h2>
+              <p>We review applications to keep the community high-quality and spam-free.</p>
+            </div>
+            
+            <form id="join-form" class="form">
+              <!-- Honeypot field for bot detection -->
+              <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name" class="form-label">First Name <span>(required)</span></label>
+                  <input type="text" id="first-name" name="first_name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Last Name <span>(required)</span></label>
+                  <input type="text" id="last-name" name="last_name" class="form-input" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email <span>(required)</span></label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="linkedin" class="form-label">LinkedIn URL <span>(required)</span></label>
+                <input type="url" id="linkedin" name="linkedin_url" class="form-input" placeholder="https://linkedin.com/in/yourprofile" required pattern="https?://(www\.)?linkedin\.com/.*">
+                <span class="form-hint">This helps us verify you're a real person and maintain community quality.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="company" class="form-label">Company <span>(required)</span></label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="e.g., Anthropic" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="job-title" class="form-label">Job Title <span>(required)</span></label>
+                <input type="text" id="job-title" name="job_title" class="form-input" placeholder="e.g., Senior Prompt Engineer" required>
+              </div>
+              
+              <div class="form-submit">
+                <button type="submit" class="btn btn--primary btn--large">Submit Application</button>
+              </div>
+              
+              <p class="form-note">
+                We typically review applications within 48 hours. You'll receive an email with your Slack invite once approved.
+              </p>
+            </form>
+            
+            <div id="form-success" class="form-success">
+              <h3>🎉 Application Received!</h3>
+              <p>Thanks for applying to join PE Collective. We'll review your application and send your Slack invite within 48 hours.</p>
+              <p>In the meantime, subscribe to our newsletter for weekly AI market intelligence:</p>
+              <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary">Subscribe to AI News Digest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">
+            <img src="/assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="/jobs/">All Jobs</a>
+            <a href="/jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="/jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="/jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="/tools/">All Tools</a>
+            <a href="/tools/cursor/">Cursor</a>
+            <a href="/tools/github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="/join/">Join Us</a>
+            <a href="/about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===========================================
+    // SETUP INSTRUCTIONS:
+    // 1. Open your Google Sheet
+    // 2. Go to Extensions → Apps Script
+    // 3. Paste the code from google-apps-script.js (included in this package)
+    // 4. Deploy → New deployment → Web app → Anyone can access
+    // 5. Copy the Web app URL and paste it below
+    // ===========================================
+    
+    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+    
+    const form = document.getElementById('join-form');
+    const successMessage = document.getElementById('form-success');
+    
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Check honeypot
+      const honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot.value) {
+        // Bot detected, silently fail
+        form.classList.add('hidden');
+        successMessage.classList.add('show');
+        return;
+      }
+      
+      // Validate LinkedIn URL format
+      const linkedinInput = document.getElementById('linkedin');
+      const linkedinUrl = linkedinInput.value;
+      if (!linkedinUrl.includes('linkedin.com')) {
+        linkedinInput.setCustomValidity('Please enter a valid LinkedIn URL');
+        linkedinInput.reportValidity();
+        return;
+      }
+      
+      // Disable submit button
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+      
+      try {
+        // Gather form data
+        const formData = {
+          first_name: document.getElementById('first-name').value,
+          last_name: document.getElementById('last-name').value,
+          email: document.getElementById('email').value,
+          linkedin_url: document.getElementById('linkedin').value,
+          company: document.getElementById('company').value,
+          job_title: document.getElementById('job-title').value,
+          date_joined: new Date().toLocaleDateString('en-US')
+        };
+        
+        // Submit to Google Apps Script
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // Required for Apps Script
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        // With no-cors, we can't read the response, but if no error thrown, assume success
+        form.classList.add('hidden');
+        successMessage.classList.add('show');
+        
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('There was an error submitting your application. Please try again or email us directly.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+    
+    // Clear custom validity on input
+    document.getElementById('linkedin').addEventListener('input', function() {
+      this.setCustomValidity('');
+    });
+  </script>
+</body>
+</html>

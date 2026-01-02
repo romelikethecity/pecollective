@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI job board for Prompt Engineers, AI Engineers, ML Engineers, and AI professionals. Real salary data, market intelligence, and community for your AI career.">
+  <meta name="keywords" content="prompt engineer jobs, AI engineer jobs, ML engineer jobs, AI careers, prompt engineering salary">
+  
+  <title>PE Collective — AI Jobs & Market Intelligence for Prompt Engineers</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="PE Collective — AI Jobs for Prompt Engineers">
+  <meta property="og:description" content="The job board built by AI professionals, for AI professionals. Real jobs, real salaries, no recruiter spin.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <img src="/assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+        
+        <nav class="header__nav">
+          <a href="/jobs/" class="active">Jobs</a>
+          <a href="/tools/">Tools</a>
+          <a href="/about/">About</a>
+        </nav>
+        
+        <div class="header__cta">
+          <a href="/join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span>Updated weekly with fresh AI roles</span>
+        </div>
+        
+        <h1 class="hero__title">
+          Find Your Next <span>AI Career Move</span>
+        </h1>
+        
+        <p class="hero__subtitle">
+          The job board built by AI professionals, for AI professionals. Real jobs, real salaries, and market intelligence without the recruiter spin.
+        </p>
+        
+        <div class="hero__actions">
+          <a href="/jobs/" class="btn btn--primary btn--large">Browse All Jobs</a>
+          <a href="/join/" class="btn btn--secondary btn--large">Join the Community</a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-card__value" id="stat-jobs">247</div>
+            <div class="stat-card__label">Active AI Jobs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">$185k</div>
+            <div class="stat-card__label">Median Salary</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">68%</div>
+            <div class="stat-card__label">Remote Roles</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">1.3k</div>
+            <div class="stat-card__label">Community Members</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Featured AI Roles</h2>
+          <p class="section__subtitle">Hand-picked opportunities from top AI companies. Updated every week.</p>
+        </div>
+        
+        <div class="jobs-grid" id="featured-jobs">
+          <!-- Jobs loaded dynamically -->
+          <a href="#" class="job-card">
+            <div class="job-card__content">
+              <span class="job-card__company">Anthropic</span>
+              <h3 class="job-card__title">Senior Prompt Engineer</h3>
+              <div class="job-card__meta">
+                <span class="job-card__tag">San Francisco, CA</span>
+                <span class="job-card__tag job-card__tag--remote">Hybrid</span>
+                <span class="job-card__tag">Senior</span>
+              </div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">Claude</span>
+                <span class="job-card__tag">Python</span>
+                <span class="job-card__tag">RAG</span>
+              </div>
+            </div>
+            <div class="job-card__salary">$180k – $250k</div>
+          </a>
+          
+          <a href="#" class="job-card">
+            <div class="job-card__content">
+              <span class="job-card__company">OpenAI</span>
+              <h3 class="job-card__title">AI Agent Developer</h3>
+              <div class="job-card__meta">
+                <span class="job-card__tag job-card__tag--remote">Remote</span>
+                <span class="job-card__tag">Senior</span>
+              </div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">LangChain</span>
+                <span class="job-card__tag">GPT-4</span>
+                <span class="job-card__tag">Python</span>
+              </div>
+            </div>
+            <div class="job-card__salary">$200k – $300k</div>
+          </a>
+          
+          <a href="#" class="job-card">
+            <div class="job-card__content">
+              <span class="job-card__company">Cohere</span>
+              <h3 class="job-card__title">LLM Engineer</h3>
+              <div class="job-card__meta">
+                <span class="job-card__tag">Toronto, Canada</span>
+                <span class="job-card__tag job-card__tag--remote">Hybrid</span>
+                <span class="job-card__tag">Mid-Level</span>
+              </div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">PyTorch</span>
+                <span class="job-card__tag">Transformers</span>
+                <span class="job-card__tag">RAG</span>
+              </div>
+            </div>
+            <div class="job-card__salary">$150k – $200k</div>
+          </a>
+          
+          <a href="#" class="job-card">
+            <div class="job-card__content">
+              <span class="job-card__company">Notion</span>
+              <h3 class="job-card__title">AI Product Manager</h3>
+              <div class="job-card__meta">
+                <span class="job-card__tag">New York, NY</span>
+                <span class="job-card__tag job-card__tag--remote">Remote</span>
+                <span class="job-card__tag">Senior</span>
+              </div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">OpenAI</span>
+                <span class="job-card__tag">Claude</span>
+                <span class="job-card__tag">RAG</span>
+              </div>
+            </div>
+            <div class="job-card__salary">$170k – $230k</div>
+          </a>
+          
+          <a href="#" class="job-card">
+            <div class="job-card__content">
+              <span class="job-card__company">Databricks</span>
+              <h3 class="job-card__title">ML Ops Engineer</h3>
+              <div class="job-card__meta">
+                <span class="job-card__tag">Seattle, WA</span>
+                <span class="job-card__tag">On-site</span>
+                <span class="job-card__tag">Mid-Level</span>
+              </div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">Kubernetes</span>
+                <span class="job-card__tag">AWS</span>
+                <span class="job-card__tag">MLflow</span>
+              </div>
+            </div>
+            <div class="job-card__salary">$160k – $220k</div>
+          </a>
+        </div>
+        
+        <div class="text-center mt-xl">
+          <a href="/jobs/" class="btn btn--primary btn--large">View All Jobs →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Smarter About AI in 3 Minutes</h2>
+          <p class="cta-section__text">
+            Weekly AI market intelligence: job trends, salary movements, skills in demand, and strategic analysis.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Essential AI Tools</h2>
+          <p class="section__subtitle">Reviews and comparisons of the tools every AI professional should know.</p>
+        </div>
+        
+        <div class="tools-grid">
+          <a href="/tools/cursor/" class="tool-card">
+            <div class="tool-card__icon">⚡</div>
+            <h3 class="tool-card__name">Cursor</h3>
+            <span class="tool-card__category">AI Code Editor</span>
+            <p class="tool-card__description">The AI-first code editor that's replacing VS Code for many developers. Multi-file editing with Claude and GPT-4.</p>
+          </a>
+          
+          <a href="/tools/github-copilot/" class="tool-card">
+            <div class="tool-card__icon">🤖</div>
+            <h3 class="tool-card__name">GitHub Copilot</h3>
+            <span class="tool-card__category">AI Pair Programming</span>
+            <p class="tool-card__description">Microsoft's AI coding assistant. Deep GitHub integration and the most widely adopted AI coding tool.</p>
+          </a>
+          
+          <a href="/tools/cursor-vs-github-copilot/" class="tool-card">
+            <div class="tool-card__icon">⚔️</div>
+            <h3 class="tool-card__name">Cursor vs Copilot</h3>
+            <span class="tool-card__category">Comparison</span>
+            <p class="tool-card__description">Head-to-head comparison: which AI coding tool should you invest your time in learning?</p>
+          </a>
+        </div>
+        
+        <div class="text-center mt-xl">
+          <a href="/tools/" class="btn btn--secondary btn--large">Browse All Tools →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Join 1,300+ AI Professionals</h2>
+          <p class="cta-section__text">
+            Connect with prompt engineers, AI engineers, and ML practitioners. Share job leads, get career advice, and stay ahead of the curve.
+          </p>
+          <a href="/join/" class="btn btn--primary btn--large">Apply to Join →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">
+            <img src="/assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="/jobs/">All Jobs</a>
+            <a href="/jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="/jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="/jobs/?category=ml-engineer">ML Engineer</a>
+            <a href="/jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="/tools/">All Tools</a>
+            <a href="/tools/cursor/">Cursor</a>
+            <a href="/tools/github-copilot/">GitHub Copilot</a>
+            <a href="/tools/cursor-vs-github-copilot/">Cursor vs Copilot</a>
+          </nav>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="/join/">Join Us</a>
+            <a href="/about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+            <a href="https://twitter.com/pecollective" target="_blank" rel="noopener">Twitter</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Animate stat numbers on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const animateValue = (element, start, end, duration) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        
+        // Format based on the type of stat
+        if (element.textContent.includes('k')) {
+          element.textContent = '$' + value + 'k';
+        } else if (element.textContent.includes('%')) {
+          element.textContent = value + '%';
+        } else {
+          element.textContent = value.toLocaleString();
+        }
+        
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    // Simple intersection observer for stats animation
+    const statCards = document.querySelectorAll('.stat-card__value');
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          // Animation would go here if we want to animate numbers
+        }
+      });
+    }, observerOptions);
+
+    statCards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

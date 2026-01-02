@@ -10,8 +10,8 @@
   <meta property="og:title" content="AI Jobs — PE Collective">
   <meta property="og:description" content="Browse hundreds of AI jobs. Prompt Engineer, AI Engineer, ML Engineer, and more. Real salaries, updated weekly.">
   
-  <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     /* Jobs page specific styles */
@@ -155,19 +155,19 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a href="/" class="header__logo">
-          <img src="/assets/logo.jpeg" alt="PE Collective Logo">
+        <a href="../" class="header__logo">
+          <img src="../assets/logo.jpeg" alt="PE Collective Logo">
           <span>PE Collective</span>
         </a>
         
         <nav class="header__nav">
-          <a href="/jobs/" class="active">Jobs</a>
-          <a href="/tools/">Tools</a>
-          <a href="/about/">About</a>
+          <a href="./" class="active">Jobs</a>
+          <a href="../tools/">Tools</a>
+          <a href="../about/">About</a>
         </nav>
         
         <div class="header__cta">
-          <a href="/join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="../join/" class="btn btn--secondary btn--small">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
       </div>
@@ -276,8 +276,8 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="/" class="footer__logo">
-            <img src="/assets/logo.jpeg" alt="PE Collective">
+          <a href="../" class="footer__logo">
+            <img src="../assets/logo.jpeg" alt="PE Collective">
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
@@ -288,27 +288,27 @@
         <div class="footer__column">
           <h4>Jobs</h4>
           <nav class="footer__links">
-            <a href="/jobs/">All Jobs</a>
-            <a href="/jobs/?category=prompt-engineer">Prompt Engineer</a>
-            <a href="/jobs/?category=ai-engineer">AI Engineer</a>
-            <a href="/jobs/?remote=true">Remote Only</a>
+            <a href="./">All Jobs</a>
+            <a href="../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../jobs/?remote=true">Remote Only</a>
           </nav>
         </div>
         
         <div class="footer__column">
           <h4>Tools</h4>
           <nav class="footer__links">
-            <a href="/tools/">All Tools</a>
-            <a href="/tools/cursor/">Cursor</a>
-            <a href="/tools/github-copilot/">GitHub Copilot</a>
+            <a href="../tools/">All Tools</a>
+            <a href="../tools/cursor/">Cursor</a>
+            <a href="../tools/github-copilot/">GitHub Copilot</a>
           </nav>
         </div>
         
         <div class="footer__column">
           <h4>Community</h4>
           <nav class="footer__links">
-            <a href="/join/">Join Us</a>
-            <a href="/about/">About</a>
+            <a href="../join/">Join Us</a>
+            <a href="../about/">About</a>
             <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
           </nav>
         </div>
@@ -338,7 +338,7 @@
       
       async loadJobs() {
         try {
-          const response = await fetch('/data/jobs.json');
+          const response = await fetch('../data/jobs.json');
           const data = await response.json();
           this.jobs = data.jobs || [];
           this.filteredJobs = [...this.jobs];

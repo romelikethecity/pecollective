@@ -1,0 +1,97 @@
+name: Build and Deploy PE Collective
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'site/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy
+
+      - name: Create directories
+        run: |
+          mkdir -p site/jobs site/salaries site/insights site/assets
+          # Preserve existing static pages
+          if [ -d "tools" ]; then cp -r tools site/; fi
+          if [ -d "about" ]; then cp -r about site/; fi
+          if [ -d "join" ]; then cp -r join site/; fi
+          if [ -f "index.html" ]; then cp index.html site/; fi
+          if [ -d "assets" ]; then cp -r assets site/; fi
+
+      - name: Enrich job data
+        run: python scripts/enrich_jobs.py
+        continue-on-error: true
+
+      - name: Merge to master database
+        run: python scripts/merge_to_master.py
+        continue-on-error: true
+
+      - name: Generate job board
+        run: python scripts/generate_job_board.py
+
+      - name: Generate individual job pages
+        run: python scripts/generate_job_pages.py
+
+      - name: Generate salary pages
+        run: python scripts/generate_salary_pages.py
+
+      - name: Generate category pages
+        run: python scripts/generate_category_pages.py
+
+      - name: Generate insights page
+        run: python scripts/generate_insights_page.py
+
+      - name: Generate sitemap
+        run: python scripts/generate_sitemap.py
+
+      - name: Commit generated site
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/*.csv data/*.json data/*.txt site/ || true
+          git diff --staged --quiet || git commit -m "Update site - $(date +%Y-%m-%d) [skip ci]"
+          git push || true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

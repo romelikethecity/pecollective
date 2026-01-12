@@ -1,0 +1,120 @@
+{
+  "date": "2026-01-11",
+  "total_jobs": 12,
+  "skills": {
+    "Python": 10,
+    "RAG": 4,
+    "Claude": 3,
+    "GPT-4": 3,
+    "Evaluation": 2,
+    "LangChain": 2,
+    "PyTorch": 2,
+    "Transformers": 2,
+    "AWS": 2,
+    "Research": 2,
+    "Fine-tuning": 1,
+    "Tool Use": 1,
+    "Hugging Face": 1,
+    "Kubernetes": 1,
+    "Docker": 1,
+    "MLflow": 1,
+    "Product Strategy": 1,
+    "LLMs": 1,
+    "User Research": 1,
+    "Roadmapping": 1,
+    "Content Generation": 1,
+    "A/B Testing": 1,
+    "JAX": 1,
+    "TensorFlow": 1,
+    "Fraud Detection": 1,
+    "Real-time ML": 1,
+    "AI Safety": 1,
+    "Red Teaming": 1,
+    "Data Labeling": 1,
+    "Pinecone": 1,
+    "Vector DBs": 1,
+    "Bedrock": 1,
+    "SageMaker": 1,
+    "Architecture": 1
+  },
+  "skills_by_category": {
+    "LLM Providers": {
+      "Claude": 3,
+      "GPT-4": 3,
+      "Hugging Face": 1
+    },
+    "Languages": {
+      "Python": 10
+    },
+    "Techniques": {
+      "RAG": 4,
+      "Fine-tuning": 1
+    },
+    "Other": {
+      "Evaluation": 2,
+      "Tool Use": 1,
+      "Product Strategy": 1,
+      "LLMs": 1,
+      "User Research": 1,
+      "Roadmapping": 1,
+      "Content Generation": 1,
+      "A/B Testing": 1,
+      "Research": 2,
+      "Fraud Detection": 1,
+      "Real-time ML": 1,
+      "AI Safety": 1,
+      "Red Teaming": 1,
+      "Data Labeling": 1,
+      "Vector DBs": 1,
+      "Architecture": 1
+    },
+    "LLM Frameworks": {
+      "LangChain": 2
+    },
+    "ML Frameworks": {
+      "PyTorch": 2,
+      "Transformers": 2,
+      "JAX": 1,
+      "TensorFlow": 1
+    },
+    "Cloud/Infrastructure": {
+      "Kubernetes": 1,
+      "Docker": 1,
+      "AWS": 2,
+      "MLflow": 1,
+      "Bedrock": 1,
+      "SageMaker": 1
+    },
+    "Vector Databases": {
+      "Pinecone": 1
+    }
+  },
+  "categories": {
+    "Prompt Engineer": 3,
+    "LLM Application Developer": 2,
+    "AI/ML Engineer": 2,
+    "AI Agent Developer": 1,
+    "ML Ops Engineer": 1,
+    "AI Product Manager": 1,
+    "Research Engineer": 1,
+    "AI Safety/Red Team": 1
+  },
+  "experience_levels": {
+    "senior": 7,
+    "mid": 4,
+    "entry": 1
+  },
+  "remote_breakdown": {
+    "hybrid": 6,
+    "remote": 5,
+    "onsite": 1
+  },
+  "top_metros": {},
+  "salary_stats": {
+    "min": 130000,
+    "max": 320000,
+    "median": 250000,
+    "avg": 237500,
+    "count_with_salary": 12
+  }
+}

@@ -1,0 +1,12 @@
+anthropic-senior-prompt-engineer-68cf98
+openai-ai-agent-developer-f9211c
+cohere-llm-engineer-bee0c7
+databricks-ml-ops-engineer-f6261b
+notion-ai-product-manager-9bcd41
+jasper-prompt-engineer-1fb8f2
+google-deepmind-ai-research-engineer-33c18d
+stripe-staff-ml-engineer-4a9009
+anthropic-ai-safety-researcher-af5896
+scale-ai-junior-prompt-engineer-089e83
+pinecone-rag-engineer-2ddc4e
+aws-ai-solutions-architect-f070eb

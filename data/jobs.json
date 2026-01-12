@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-02",
+  "last_updated": "2026-01-11",
   "total_jobs": 12,
   "jobs": [
     {
@@ -13,7 +13,13 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "Prompt Engineer",
-      "skills_tags": ["Claude", "Python", "RAG", "Fine-tuning", "Evaluation"],
+      "skills_tags": [
+        "Claude",
+        "Python",
+        "RAG",
+        "Fine-tuning",
+        "Evaluation"
+      ],
       "date_posted": "2025-12-28",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -31,7 +37,13 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "AI Agent Developer",
-      "skills_tags": ["LangChain", "GPT-4", "Python", "RAG", "Tool Use"],
+      "skills_tags": [
+        "LangChain",
+        "GPT-4",
+        "Python",
+        "RAG",
+        "Tool Use"
+      ],
       "date_posted": "2025-12-30",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -49,7 +61,13 @@
       "salary_type": "annual",
       "experience_level": "mid",
       "job_category": "LLM Application Developer",
-      "skills_tags": ["Python", "PyTorch", "Transformers", "Hugging Face", "RAG"],
+      "skills_tags": [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "Hugging Face",
+        "RAG"
+      ],
       "date_posted": "2025-12-27",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -67,7 +85,13 @@
       "salary_type": "annual",
       "experience_level": "mid",
       "job_category": "ML Ops Engineer",
-      "skills_tags": ["Kubernetes", "Docker", "AWS", "Python", "MLflow"],
+      "skills_tags": [
+        "Kubernetes",
+        "Docker",
+        "AWS",
+        "Python",
+        "MLflow"
+      ],
       "date_posted": "2025-12-26",
       "date_scraped": "2026-01-02",
       "source": "indeed",
@@ -85,7 +109,12 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "AI Product Manager",
-      "skills_tags": ["Product Strategy", "LLMs", "User Research", "Roadmapping"],
+      "skills_tags": [
+        "Product Strategy",
+        "LLMs",
+        "User Research",
+        "Roadmapping"
+      ],
       "date_posted": "2025-12-29",
       "date_scraped": "2026-01-02",
       "source": "ai-jobs",
@@ -103,7 +132,12 @@
       "salary_type": "annual",
       "experience_level": "mid",
       "job_category": "Prompt Engineer",
-      "skills_tags": ["GPT-4", "Claude", "Content Generation", "A/B Testing"],
+      "skills_tags": [
+        "GPT-4",
+        "Claude",
+        "Content Generation",
+        "A/B Testing"
+      ],
       "date_posted": "2025-12-31",
       "date_scraped": "2026-01-02",
       "source": "indeed",
@@ -121,7 +155,13 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "Research Engineer",
-      "skills_tags": ["PyTorch", "JAX", "Transformers", "Research", "Python"],
+      "skills_tags": [
+        "PyTorch",
+        "JAX",
+        "Transformers",
+        "Research",
+        "Python"
+      ],
       "date_posted": "2025-12-25",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -139,7 +179,12 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "AI/ML Engineer",
-      "skills_tags": ["Python", "TensorFlow", "Fraud Detection", "Real-time ML"],
+      "skills_tags": [
+        "Python",
+        "TensorFlow",
+        "Fraud Detection",
+        "Real-time ML"
+      ],
       "date_posted": "2025-12-28",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -157,7 +202,13 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "AI Safety/Red Team",
-      "skills_tags": ["AI Safety", "Red Teaming", "Research", "Python", "Evaluation"],
+      "skills_tags": [
+        "AI Safety",
+        "Red Teaming",
+        "Research",
+        "Python",
+        "Evaluation"
+      ],
       "date_posted": "2025-12-30",
       "date_scraped": "2026-01-02",
       "source": "company",
@@ -175,7 +226,12 @@
       "salary_type": "annual",
       "experience_level": "entry",
       "job_category": "Prompt Engineer",
-      "skills_tags": ["GPT-4", "Claude", "Data Labeling", "Python"],
+      "skills_tags": [
+        "GPT-4",
+        "Claude",
+        "Data Labeling",
+        "Python"
+      ],
       "date_posted": "2026-01-01",
       "date_scraped": "2026-01-02",
       "source": "indeed",
@@ -193,7 +249,13 @@
       "salary_type": "annual",
       "experience_level": "mid",
       "job_category": "LLM Application Developer",
-      "skills_tags": ["Pinecone", "LangChain", "RAG", "Python", "Vector DBs"],
+      "skills_tags": [
+        "Pinecone",
+        "LangChain",
+        "RAG",
+        "Python",
+        "Vector DBs"
+      ],
       "date_posted": "2025-12-29",
       "date_scraped": "2026-01-02",
       "source": "ai-jobs",
@@ -211,7 +273,13 @@
       "salary_type": "annual",
       "experience_level": "senior",
       "job_category": "AI/ML Engineer",
-      "skills_tags": ["AWS", "Bedrock", "SageMaker", "Architecture", "Python"],
+      "skills_tags": [
+        "AWS",
+        "Bedrock",
+        "SageMaker",
+        "Architecture",
+        "Python"
+      ],
       "date_posted": "2025-12-27",
       "date_scraped": "2026-01-02",
       "source": "company",

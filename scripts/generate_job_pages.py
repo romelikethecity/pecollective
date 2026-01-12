@@ -226,6 +226,7 @@ def create_job_page(job, idx):
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
     <meta name="twitter:title" content="{title_escaped} at {company_escaped}">
     <meta name="twitter:description" content="{meta_desc}">
     <meta name="twitter:image" content="{BASE_URL}/assets/social-preview.png">

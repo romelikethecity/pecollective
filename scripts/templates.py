@@ -815,6 +815,7 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
     <meta name="twitter:title" content="{title}">
     <meta name="twitter:description" content="{description}">
     <meta name="twitter:image" content="{BASE_URL}/assets/social-preview.png">

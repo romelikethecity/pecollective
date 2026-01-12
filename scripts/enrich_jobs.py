@@ -429,7 +429,15 @@ def main():
     # Find raw job files
     raw_files = glob.glob(f"{DATA_DIR}/raw_ai_jobs_*.csv")
     if not raw_files:
-        # Try loading from jobs.json if no raw files
+        # Check if enriched data already exists
+        existing_csv = glob.glob(f"{DATA_DIR}/ai_jobs_*.csv")
+        if existing_csv:
+            print("\n No raw files to process, using existing enriched data")
+            print(f"   Found: {existing_csv}")
+            print("   Skipping enrichment.")
+            return
+
+        # Try loading from jobs.json if no raw files and no existing CSV
         jobs_json = f"{DATA_DIR}/jobs.json"
         if os.path.exists(jobs_json):
             print(f"\n Loading from existing jobs.json")

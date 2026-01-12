@@ -31,42 +31,6 @@ DATA_DIR = 'data'
 SITE_DIR = 'site'
 JOBS_DIR = f'{SITE_DIR}/jobs'
 
-print("="*70)
-print("  PE COLLECTIVE - GENERATING JOB BOARD")
-print("="*70)
-
-os.makedirs(JOBS_DIR, exist_ok=True)
-
-# Load job data
-files = glob.glob(f"{DATA_DIR}/ai_jobs_*.csv")
-if files:
-    latest_file = max(files, key=os.path.getctime)
-    df = pd.read_csv(latest_file)
-    print(f"\n Loaded {len(df)} jobs from {latest_file}")
-elif os.path.exists(f"{DATA_DIR}/jobs.json"):
-    with open(f"{DATA_DIR}/jobs.json") as f:
-        data = json.load(f)
-    df = pd.DataFrame(data.get('jobs', []))
-    print(f"\n Loaded {len(df)} jobs from jobs.json")
-else:
-    print(" No job data found")
-    exit(1)
-
-update_date = datetime.now().strftime('%B %d, %Y')
-
-# Calculate stats
-total_jobs = len(df)
-remote_jobs = len(df[df.get('remote_type', df.get('is_remote', '')).astype(str).str.contains('remote', case=False, na=False)]) if 'remote_type' in df.columns else 0
-
-# Salary stats
-salary_col = 'salary_max' if 'salary_max' in df.columns else 'max_amount'
-salaries = df[salary_col].dropna()
-salaries = salaries[salaries > 0]
-avg_salary = int(salaries.mean() / 1000) if len(salaries) > 0 else 0
-
-# Category counts
-categories = df['job_category'].value_counts().head(6).to_dict() if 'job_category' in df.columns else {}
-
 
 def make_slug(text):
     if pd.isna(text):
@@ -83,49 +47,97 @@ def escape_html(text):
     return str(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
 
 
-# Generate job cards HTML
-job_cards_html = ""
-for idx, row in df.head(100).iterrows():  # Show first 100 jobs
-    company = escape_html(str(row.get('company', row.get('company_name', 'Unknown'))))
-    title = escape_html(str(row.get('title', 'AI Role')))
-    location = escape_html(str(row.get('location', ''))) if pd.notna(row.get('location')) else ''
-    category = escape_html(str(row.get('job_category', ''))) if pd.notna(row.get('job_category')) else ''
-    remote_status = is_remote(row)
+def main():
+    print("="*70)
+    print("  PE COLLECTIVE - GENERATING JOB BOARD")
+    print("="*70)
 
-    salary = format_salary(row.get('salary_min', row.get('min_amount')), row.get('salary_max', row.get('max_amount')))
+    os.makedirs(JOBS_DIR, exist_ok=True)
 
-    # Generate slug
-    job_slug = f"{make_slug(row.get('company', row.get('company_name', '')))}-{make_slug(row.get('title', ''))}"
-    hash_suffix = hashlib.md5(f"{row.get('company', row.get('company_name', ''))}{row.get('title','')}{row.get('location','')}".encode()).hexdigest()[:6]
-    job_slug = f"{job_slug}-{hash_suffix}"
+    # Load job data
+    files = glob.glob(f"{DATA_DIR}/ai_jobs_*.csv")
+    print(f"  Looking for CSV files in {DATA_DIR}/")
+    print(f"  Found: {files}")
 
-    job_cards_html += f'''
-        <a href="/jobs/{job_slug}/" class="job-card">
-            <div class="job-card__content">
-                <div class="job-card__company">{company}</div>
-                <div class="job-card__title">{title}</div>
-                <div class="job-card__meta">
-                    {f'<span class="job-card__tag job-card__tag--salary">{salary}</span>' if salary else ''}
-                    {f'<span class="job-card__tag job-card__tag--remote">Remote</span>' if remote_status else ''}
-                    {f'<span class="job-card__tag">{location}</span>' if location and not remote_status else ''}
-                    {f'<span class="job-card__tag">{category}</span>' if category else ''}
+    if files:
+        latest_file = max(files, key=os.path.getmtime)
+        print(f"  Loading: {latest_file}")
+        df = pd.read_csv(latest_file)
+        print(f"\n Loaded {len(df)} jobs from {latest_file}")
+        print(f"  Columns: {list(df.columns)}")
+    elif os.path.exists(f"{DATA_DIR}/jobs.json"):
+        with open(f"{DATA_DIR}/jobs.json") as f:
+            data = json.load(f)
+        df = pd.DataFrame(data.get('jobs', []))
+        print(f"\n Loaded {len(df)} jobs from jobs.json")
+    else:
+        print(f" No job data found in {DATA_DIR}/")
+        print(f"  Current directory: {os.getcwd()}")
+        print(f"  Directory contents: {os.listdir('.')}")
+        if os.path.exists(DATA_DIR):
+            print(f"  Data dir contents: {os.listdir(DATA_DIR)}")
+        sys.exit(1)
+
+    # Calculate stats
+    total_jobs = len(df)
+
+    # Count remote jobs safely
+    remote_jobs = 0
+    if 'remote_type' in df.columns:
+        remote_jobs = len(df[df['remote_type'].astype(str).str.contains('remote', case=False, na=False)])
+
+    # Salary stats
+    salary_col = 'salary_max' if 'salary_max' in df.columns else 'max_amount'
+    salaries = df[salary_col].dropna() if salary_col in df.columns else pd.Series([])
+    salaries = salaries[salaries > 0]
+    avg_salary = int(salaries.mean() / 1000) if len(salaries) > 0 else 0
+
+    # Category counts
+    categories = df['job_category'].value_counts().head(6).to_dict() if 'job_category' in df.columns else {}
+
+    # Generate job cards HTML
+    job_cards_html = ""
+    for idx, row in df.head(100).iterrows():
+        company = escape_html(str(row.get('company', row.get('company_name', 'Unknown'))))
+        title = escape_html(str(row.get('title', 'AI Role')))
+        location = escape_html(str(row.get('location', ''))) if pd.notna(row.get('location')) else ''
+        category = escape_html(str(row.get('job_category', ''))) if pd.notna(row.get('job_category')) else ''
+        remote_status = is_remote(row)
+
+        salary = format_salary(row.get('salary_min', row.get('min_amount')), row.get('salary_max', row.get('max_amount')))
+
+        # Generate slug
+        job_slug = f"{make_slug(row.get('company', row.get('company_name', '')))}-{make_slug(row.get('title', ''))}"
+        hash_suffix = hashlib.md5(f"{row.get('company', row.get('company_name', ''))}{row.get('title','')}{row.get('location','')}".encode()).hexdigest()[:6]
+        job_slug = f"{job_slug}-{hash_suffix}"
+
+        job_cards_html += f'''
+            <a href="/jobs/{job_slug}/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">{company}</div>
+                    <div class="job-card__title">{title}</div>
+                    <div class="job-card__meta">
+                        {f'<span class="job-card__tag job-card__tag--salary">{salary}</span>' if salary else ''}
+                        {f'<span class="job-card__tag job-card__tag--remote">Remote</span>' if remote_status else ''}
+                        {f'<span class="job-card__tag">{location}</span>' if location and not remote_status else ''}
+                        {f'<span class="job-card__tag">{category}</span>' if category else ''}
+                    </div>
                 </div>
-            </div>
-        </a>
-    '''
+            </a>
+        '''
 
-# Category filter buttons
-category_filters = ""
-for cat, count in categories.items():
-    cat_slug = make_slug(cat)
-    category_filters += f'<a href="/jobs/{cat_slug}/" class="filter-btn">{escape_html(cat)} ({count})</a>\n'
+    # Category filter buttons
+    category_filters = ""
+    for cat, count in categories.items():
+        cat_slug = make_slug(cat)
+        category_filters += f'<a href="/jobs/{cat_slug}/" class="filter-btn">{escape_html(cat)} ({count})</a>\n'
 
-# Page HTML
-html = f'''{get_html_head(
-    f"{total_jobs} AI & ML Engineer Jobs - ${avg_salary}K avg",
-    f"Browse {total_jobs} AI engineer, ML engineer, and prompt engineer jobs. Average salary ${avg_salary}K. {remote_jobs} remote positions available. Updated weekly.",
-    "jobs/"
-)}
+    # Page HTML
+    html = f'''{get_html_head(
+        f"{total_jobs} AI & ML Engineer Jobs - ${avg_salary}K avg",
+        f"Browse {total_jobs} AI engineer, ML engineer, and prompt engineer jobs. Average salary ${avg_salary}K. {remote_jobs} remote positions available. Updated weekly.",
+        "jobs/"
+    )}
 {get_nav_html('jobs')}
 
     <div class="page-header">
@@ -198,10 +210,19 @@ html = f'''{get_html_head(
 
 {get_footer_html()}'''
 
-# Save
-with open(f'{JOBS_DIR}/index.html', 'w') as f:
-    f.write(html)
+    # Save
+    with open(f'{JOBS_DIR}/index.html', 'w') as f:
+        f.write(html)
 
-print(f"\n Generated job board with {total_jobs} jobs")
-print(f" Saved to {JOBS_DIR}/index.html")
-print("="*70)
+    print(f"\n Generated job board with {total_jobs} jobs")
+    print(f" Saved to {JOBS_DIR}/index.html")
+    print("="*70)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        print(f"ERROR: {e}")
+        traceback.print_exc()
+        sys.exit(1)

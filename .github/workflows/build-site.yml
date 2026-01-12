@@ -47,6 +47,14 @@ jobs:
           if [ -f "index.html" ]; then cp index.html site/; fi
           if [ -d "assets" ]; then cp -r assets site/; fi
 
+      - name: Fix history file naming
+        run: |
+          # Rename old history file if it exists (was matching ai_jobs_*.csv pattern)
+          if [ -f "data/ai_jobs_history.csv" ]; then
+            mv data/ai_jobs_history.csv data/job_count_history.csv
+            echo "Renamed ai_jobs_history.csv to job_count_history.csv"
+          fi
+
       - name: Enrich job data
         run: python scripts/enrich_jobs.py
         continue-on-error: true

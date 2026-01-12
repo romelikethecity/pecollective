@@ -65,7 +65,7 @@ combined_df.to_csv(master_file, index=False)
 print(f"\n Master database saved: {len(combined_df)} total records")
 
 # Update historical tracking file for trend charts
-tracking_file = f"{DATA_DIR}/ai_jobs_history.csv"
+tracking_file = f"{DATA_DIR}/job_count_history.csv"
 today = datetime.now().strftime('%Y-%m-%d')
 job_count = len(new_df)
 

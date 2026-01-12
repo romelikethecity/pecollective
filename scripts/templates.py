@@ -11,11 +11,15 @@ Design System: Dark teal + gold accent theme
 import re
 import pandas as pd
 import sys
+import os
 
-sys.path.insert(0, 'scripts')
+# Add scripts directory to path using absolute path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, script_dir)
+
 try:
     from nav_config import NAV_ITEMS, FOOTER_ITEMS, SUBSCRIBE_LINK, SUBSCRIBE_LABEL, NEWSLETTER_LINK, NEWSLETTER_LABEL, SITE_NAME, COPYRIGHT_YEAR
-except:
+except Exception as e:
     # Fallback if nav_config not found
     NAV_ITEMS = [
         {"href": "/jobs/", "label": "AI Jobs"},

@@ -69,7 +69,12 @@ jobs:
           head -3 data/ai_jobs_*.csv || echo "No CSV found"
 
       - name: Generate salary pages
-        run: python scripts/generate_salary_pages.py
+        run: |
+          python scripts/generate_salary_pages.py 2>&1 || {
+            echo "=== SCRIPT FAILED ==="
+            echo "Exit code: $?"
+            exit 1
+          }
         env:
           PYTHONUNBUFFERED: "1"
 

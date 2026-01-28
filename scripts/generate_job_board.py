@@ -19,7 +19,7 @@ sys.path.insert(0, script_dir)
 
 try:
     from templates import (
-        get_html_head, get_nav_html, get_footer_html, get_cta_box,
+        get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema,
         slugify, format_salary, is_remote, BASE_URL, SITE_NAME
     )
 except Exception as e:
@@ -132,11 +132,36 @@ def main():
         cat_slug = make_slug(cat)
         category_filters += f'<a href="/jobs/{cat_slug}/" class="filter-btn">{escape_html(cat)} ({count})</a>\n'
 
+    # Build ItemList schema for job listings
+    import json as _json
+    item_list_items = []
+    for idx, row in df.head(50).iterrows():
+        job_title = str(row.get('title', 'AI Role'))
+        job_company = str(row.get('company', row.get('company_name', '')))
+        job_slug_il = f"{make_slug(job_company)}-{make_slug(job_title)}"
+        hash_il = hashlib.md5(f"{job_company}{job_title}{row.get('location','')}".encode()).hexdigest()[:6]
+        job_slug_il = f"{job_slug_il}-{hash_il}"
+        item_list_items.append({
+            "@type": "ListItem",
+            "position": len(item_list_items) + 1,
+            "url": f"{BASE_URL}/jobs/{job_slug_il}/"
+        })
+    itemlist_schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "AI & ML Engineer Jobs",
+        "numberOfItems": total_jobs,
+        "itemListElement": item_list_items
+    }
+    itemlist_json = f'<script type="application/ld+json">\n{_json.dumps(itemlist_schema, indent=2)}\n</script>'
+
     # Page HTML
+    job_board_breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("AI Jobs", "/jobs/")])
     html = f'''{get_html_head(
         f"{total_jobs} AI & ML Engineer Jobs - ${avg_salary}K avg",
         f"Browse {total_jobs} AI engineer, ML engineer, and prompt engineer jobs. Average salary ${avg_salary}K. {remote_jobs} remote positions available. Updated weekly.",
-        "jobs/"
+        "jobs/",
+        extra_head=job_board_breadcrumbs + '\n' + itemlist_json
     )}
 {get_nav_html('jobs')}
 

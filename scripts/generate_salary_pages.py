@@ -17,7 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 try:
-    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, BASE_URL, SITE_NAME
+    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, BASE_URL, SITE_NAME
 except Exception as e:
     print(f"ERROR importing templates: {e}")
     traceback.print_exc()
@@ -99,10 +99,12 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
             </div>
         '''
 
+    breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Salaries", "/salaries/"), (title, f"/salaries/{slug}/")])
     html = f'''{get_html_head(
         f"{title} Salary 2026 - ${avg_max//1000}K Average",
-        f"{title} salary benchmarks based on {sample_size} job postings. Average ${avg_min//1000}K-${avg_max//1000}K. Median ${median//1000}K.",
-        f"salaries/{slug}/"
+        f"{title} salary benchmarks based on {sample_size} job postings. Average ${avg_min//1000}K-${avg_max//1000}K. Median ${median//1000}K. Updated weekly with real compensation data.",
+        f"salaries/{slug}/",
+        extra_head=breadcrumbs
     )}
 {get_nav_html('salaries')}
 
@@ -243,10 +245,12 @@ def main():
 
     # Generate index page
     overall_avg = int(df_salary[salary_col].mean()) if len(df_salary) > 0 else 0
+    salary_index_breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Salaries", "/salaries/")])
     index_html = f'''{get_html_head(
         "AI & ML Engineer Salary Benchmarks 2026",
-        f"Comprehensive salary data for AI engineers, ML engineers, and prompt engineers. Average ${overall_avg//1000}K based on {len(df_salary)} jobs.",
-        "salaries/"
+        f"Comprehensive salary data for AI engineers, ML engineers, and prompt engineers. Average ${overall_avg//1000}K based on {len(df_salary)} job postings with disclosed compensation. Updated weekly.",
+        "salaries/",
+        extra_head=salary_index_breadcrumbs
     )}
 {get_nav_html('salaries')}
 

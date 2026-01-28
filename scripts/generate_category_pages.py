@@ -19,7 +19,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 try:
-    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, format_salary, is_remote, BASE_URL, SITE_NAME
+    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, format_salary, is_remote, BASE_URL, SITE_NAME
 except Exception as e:
     print(f"ERROR importing templates: {e}")
     traceback.print_exc()
@@ -101,10 +101,35 @@ def generate_category_page(filtered_df, slug, title, description):
             </a>
         '''
 
+    # Build schemas
+    breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("AI Jobs", "/jobs/"), (title, f"/jobs/{slug}/")])
+
+    import json as _json
+    item_list_items = []
+    for idx, row in filtered_df.head(50).iterrows():
+        jt = str(row.get('title', 'AI Role'))
+        jc = str(row.get('company', row.get('company_name', '')))
+        js = f"{make_slug(jc)}-{make_slug(jt)}"
+        jh = hashlib.md5(f"{jc}{jt}{row.get('location','')}".encode()).hexdigest()[:6]
+        item_list_items.append({
+            "@type": "ListItem",
+            "position": len(item_list_items) + 1,
+            "url": f"{BASE_URL}/jobs/{js}-{jh}/"
+        })
+    itemlist_schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": title,
+        "numberOfItems": total,
+        "itemListElement": item_list_items
+    }
+    itemlist_json = f'<script type="application/ld+json">\n{_json.dumps(itemlist_schema, indent=2)}\n</script>'
+
     html = f'''{get_html_head(
         f"{title} - {total} Jobs",
         description,
-        f"jobs/{slug}/"
+        f"jobs/{slug}/",
+        extra_head=breadcrumbs + '\n' + itemlist_json
     )}
 {get_nav_html('jobs')}
 
@@ -140,20 +165,32 @@ def generate_category_page(filtered_df, slug, title, description):
 # Define categories
 CATEGORIES = [
     # By Role
-    ('job_category', 'Prompt Engineer', 'prompt-engineer', 'Prompt Engineer Jobs', f'Browse Prompt Engineer positions at top AI companies.'),
-    ('job_category', 'AI/ML Engineer', 'ai-ml-engineer', 'AI/ML Engineer Jobs', f'Machine Learning and AI Engineer positions.'),
-    ('job_category', 'LLM Engineer', 'llm-engineer', 'LLM Engineer Jobs', f'Large Language Model Engineer positions.'),
-    ('job_category', 'MLOps Engineer', 'mlops-engineer', 'MLOps Engineer Jobs', f'MLOps and ML Infrastructure Engineer roles.'),
-    ('job_category', 'Research Engineer', 'research-engineer', 'Research Engineer Jobs', f'AI Research Engineer and Applied Scientist roles.'),
-    ('job_category', 'AI Agent Developer', 'ai-agent-developer', 'AI Agent Developer Jobs', f'AI Agent and Autonomous Systems Developer roles.'),
+    ('job_category', 'Prompt Engineer', 'prompt-engineer', 'Prompt Engineer Jobs',
+     'Browse prompt engineer positions at top AI companies. Salary data, requirements, and application links updated weekly from our community of 1,300+ professionals.'),
+    ('job_category', 'AI/ML Engineer', 'ai-ml-engineer', 'AI/ML Engineer Jobs',
+     'AI and machine learning engineer jobs with salary data and requirements. Browse open roles at companies building production AI systems, updated weekly.'),
+    ('job_category', 'LLM Engineer', 'llm-engineer', 'LLM Engineer Jobs',
+     'Large language model engineer positions at companies working with GPT-4, Claude, and open-source models. Salary data and requirements included.'),
+    ('job_category', 'MLOps Engineer', 'mlops-engineer', 'MLOps Engineer Jobs',
+     'MLOps and ML infrastructure engineer roles. Build and maintain production ML pipelines at top AI companies. Salary data and requirements included.'),
+    ('job_category', 'Research Engineer', 'research-engineer', 'Research Engineer Jobs',
+     'AI research engineer and applied scientist positions at leading AI labs. Work on frontier models with competitive salaries and full job details.'),
+    ('job_category', 'AI Agent Developer', 'ai-agent-developer', 'AI Agent Developer Jobs',
+     'AI agent and autonomous systems developer roles. Build agentic AI products at top companies. Browse positions with salary data and requirements.'),
     # By Experience
-    ('experience_level', 'senior', 'senior', 'Senior AI Jobs', f'Senior and Lead AI/ML positions.'),
-    ('experience_level', 'entry', 'entry-level', 'Entry-Level AI Jobs', f'Entry-level and junior AI/ML positions.'),
+    ('experience_level', 'senior', 'senior', 'Senior AI Jobs',
+     'Senior and lead AI/ML positions for experienced professionals. Staff, principal, and director-level roles with salary data at top AI companies.'),
+    ('experience_level', 'entry', 'entry-level', 'Entry-Level AI Jobs',
+     'Entry-level and junior AI/ML positions for people starting their AI career. Browse roles with salary data, requirements, and application links.'),
     # By Location
-    ('metro', 'San Francisco', 'san-francisco', 'AI Jobs in San Francisco', f'AI and ML jobs in the San Francisco Bay Area.'),
-    ('metro', 'New York', 'new-york', 'AI Jobs in New York', f'AI and ML jobs in New York City.'),
-    ('metro', 'Seattle', 'seattle', 'AI Jobs in Seattle', f'AI and ML jobs in Seattle.'),
-    ('metro', 'Remote', 'remote', 'Remote AI Jobs', f'Remote AI and ML engineering positions.'),
+    ('metro', 'San Francisco', 'san-francisco', 'AI Jobs in San Francisco',
+     'AI and ML jobs in the San Francisco Bay Area. Browse roles at companies like OpenAI, Anthropic, and leading startups with salary data included.'),
+    ('metro', 'New York', 'new-york', 'AI Jobs in New York',
+     'AI and ML jobs in New York City. Browse prompt engineering, ML engineering, and AI research roles at top companies with salary data included.'),
+    ('metro', 'Seattle', 'seattle', 'AI Jobs in Seattle',
+     'AI and ML jobs in Seattle. Browse roles at Amazon, Microsoft, and leading AI companies with salary data, requirements, and application links.'),
+    ('metro', 'Remote', 'remote', 'Remote AI Jobs',
+     'Remote AI and ML engineering positions you can work from anywhere. Browse prompt engineering, ML, and AI research roles with salary data included.'),
 ]
 
 print("\n Generating category pages...")

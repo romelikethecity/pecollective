@@ -28,7 +28,7 @@ sys.path.insert(0, script_dir)
 
 try:
     from templates import (
-        get_html_head, get_nav_html, get_footer_html, get_cta_box,
+        get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema,
         get_job_posting_schema, slugify, format_salary, is_remote,
         BASE_URL, SITE_NAME, CSS_VARIABLES, CSS_NAV, CSS_LAYOUT, CSS_CARDS, CSS_CTA, CSS_FOOTER, CSS_JOB_PAGE
     )
@@ -148,16 +148,11 @@ def create_job_page(job, idx):
     location_escaped = escape_html(location)
 
     # === SEO-OPTIMIZED TITLE ===
-    title_parts = [f"{title_escaped} at {company_escaped}"]
-    if salary_short:
-        title_parts.append(f"- {salary_short}")
+    # Keep under 60 chars total (including " | PE Collective" suffix = 17 chars)
+    # So page_title should be under ~43 chars
+    page_title = f"{title_escaped} at {company_escaped}"
     if remote_status:
-        title_parts.append("(Remote)")
-    elif location:
-        city = location.split(',')[0].strip() if ',' in location else location
-        if len(city) < 20:
-            title_parts.append(f"({escape_html(city)})")
-    page_title = ' '.join(title_parts)
+        page_title += " (Remote)"
 
     # === META DESCRIPTION ===
     meta_desc = f"{title_escaped} at {company_escaped}"
@@ -206,12 +201,25 @@ def create_job_page(job, idx):
     meta_badges.append(f'<span class="job-meta-badge">{escape_html(job_category)}</span>')
     meta_badges_html = '\n                    '.join(meta_badges)
 
+    # Build breadcrumb schema
+    breadcrumb_json = get_breadcrumb_schema([("Home", "/"), ("AI Jobs", "/jobs/"), (f"{title_escaped} at {company_escaped}", f"/jobs/{slug}/")])
+
     # Build the page
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
     <title>{page_title} | {SITE_NAME}</title>
     <meta name="description" content="{meta_desc}">
     <link rel="canonical" href="{canonical_url}">
@@ -237,6 +245,7 @@ def create_job_page(job, idx):
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     {schema_json}
+    {breadcrumb_json}
 
     <style>
         {CSS_VARIABLES}
@@ -286,6 +295,7 @@ def create_job_page(job, idx):
 </head>
 {get_nav_html('jobs').replace('<body>', '<body>')}
 
+    <main>
     <header class="job-header">
         <div class="container">
             <div class="breadcrumb">
@@ -344,6 +354,7 @@ def create_job_page(job, idx):
         </div>
     </div>
 
+    </main>
     <footer class="site-footer">
         <div class="footer-content">
             <span>&copy; 2026 <a href="/">{SITE_NAME}</a></span>

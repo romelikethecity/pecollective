@@ -17,7 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 try:
-    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, BASE_URL, SITE_NAME
+    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, BASE_URL, SITE_NAME
 except Exception as e:
     print(f"ERROR importing templates: {e}")
     traceback.print_exc()
@@ -95,10 +95,12 @@ def make_bar_chart(data, max_width=100, color='var(--gold)'):
 
 
 # Build page
+insights_breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Market Intel", "/insights/")])
 html = f'''{get_html_head(
     "AI Job Market Intelligence 2026",
     f"Market trends, top tools, and insights from {total_jobs} AI job postings. See which frameworks, skills, and technologies are in demand.",
-    "insights/"
+    "insights/",
+    extra_head=insights_breadcrumbs
 )}
 {get_nav_html('insights')}
 

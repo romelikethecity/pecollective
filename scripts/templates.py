@@ -9,6 +9,7 @@ Design System: Dark teal + gold accent theme
 """
 
 import re
+import json
 import pandas as pd
 import sys
 import os
@@ -792,6 +793,30 @@ def get_base_styles():
 # HTML GENERATORS
 # =============================================================================
 
+def get_breadcrumb_schema(breadcrumbs):
+    """Generate BreadcrumbList JSON-LD schema.
+
+    Args:
+        breadcrumbs: list of (name, url) tuples, e.g. [("Home", "/"), ("AI Jobs", "/jobs/"), ("Prompt Engineer", "/jobs/prompt-engineer/")]
+    """
+    items = []
+    for i, (name, url) in enumerate(breadcrumbs, 1):
+        full_url = f"{BASE_URL}{url}" if url.startswith('/') else url
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "name": name,
+            "item": full_url
+        })
+
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items
+    }
+    return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2)}\n</script>'
+
+
 def get_html_head(title, description, page_path, include_styles=True, extra_head=''):
     """Generate SEO-compliant head section"""
     styles = get_base_styles() if include_styles else ''
@@ -801,6 +826,16 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
     <title>{title} | {SITE_NAME}</title>
     <meta name="description" content="{description}">
     <link rel="canonical" href="{BASE_URL}/{page_path}">

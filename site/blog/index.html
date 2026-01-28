@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prompt engineering guides, tutorials, and best practices from the PE Collective community of 1,300+ AI professionals.">
+
+  <title>Blog — Prompt Engineering Guides & Tutorials | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com/blog/">
+  <meta property="og:title" content="Blog — Prompt Engineering Guides & Tutorials">
+  <meta property="og:description" content="Prompt engineering guides, tutorials, and best practices from the PE Collective community of 1,300+ AI professionals.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Blog — Prompt Engineering Guides & Tutorials">
+  <meta name="twitter:description" content="Prompt engineering guides, tutorials, and best practices from the PE Collective community.">
+
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .blog-header {
+      text-align: center;
+      padding: var(--space-3xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .blog-header__title {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .blog-header__description {
+      color: var(--color-text-secondary);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: var(--space-xl);
+      padding: var(--space-3xl) 0;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .blog-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: var(--color-teal-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .blog-card__category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .blog-card__title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+      line-height: 1.3;
+    }
+
+    .blog-card__title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-card__title a:hover {
+      color: var(--color-gold);
+    }
+
+    .blog-card__excerpt {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+      flex: 1;
+    }
+
+    .blog-card__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border);
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+
+    .blog-card__read-more {
+      color: var(--color-gold);
+      font-weight: 500;
+    }
+
+    .blog-card__read-more:hover {
+      color: var(--color-gold-light);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../" class="header__logo">
+          <img src="../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../jobs/">Jobs</a>
+          <a href="../tools/">Tools</a>
+          <a href="./" class="active">Blog</a>
+          <a href="../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <header class="blog-header">
+        <h1 class="blog-header__title">Blog</h1>
+        <p class="blog-header__description">Guides, tutorials, and insights on prompt engineering from our community of 1,300+ AI professionals.</p>
+      </header>
+
+      <div class="blog-grid">
+        <!-- Article 1: Prompt Engineering Guide -->
+        <article class="blog-card">
+          <span class="blog-card__category">Guide</span>
+          <h2 class="blog-card__title">
+            <a href="./prompt-engineering-guide/">The Complete Prompt Engineering Guide for 2026</a>
+          </h2>
+          <p class="blog-card__excerpt">Everything you need to know about prompt engineering. Core techniques, tools, career paths, and common mistakes to avoid.</p>
+          <div class="blog-card__meta">
+            <span>January 28, 2026 · 12 min</span>
+            <a href="./prompt-engineering-guide/" class="blog-card__read-more">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Article 2: Freelance Guide -->
+        <article class="blog-card">
+          <span class="blog-card__category">Freelance</span>
+          <h2 class="blog-card__title">
+            <a href="./gpt-4-prompt-engineering-freelance/">How to Freelance as a GPT-4 Prompt Engineer</a>
+          </h2>
+          <p class="blog-card__excerpt">Rates, platforms, and strategies for building a freelance prompt engineering practice. What clients actually pay for.</p>
+          <div class="blog-card__meta">
+            <span>January 28, 2026 · 10 min</span>
+            <a href="./gpt-4-prompt-engineering-freelance/" class="blog-card__read-more">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Article 3: Best Practices -->
+        <article class="blog-card">
+          <span class="blog-card__category">Best Practices</span>
+          <h2 class="blog-card__title">
+            <a href="./prompt-engineering-best-practices/">Prompt Engineering Best Practices: What Actually Works</a>
+          </h2>
+          <p class="blog-card__excerpt">Skip the theory. Proven techniques from hundreds of real projects. What works in production.</p>
+          <div class="blog-card__meta">
+            <span>January 28, 2026 · 8 min</span>
+            <a href="./prompt-engineering-best-practices/" class="blog-card__read-more">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get New Articles in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI insights, prompt engineering tips, and community updates.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../" class="footer__logo">
+            <img src="../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../jobs/">All Jobs</a>
+            <a href="../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="./">Blog</a>
+            <a href="../tools/">Tools</a>
+            <a href="../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../join/">Join Us</a>
+            <a href="../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

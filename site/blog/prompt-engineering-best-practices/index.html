@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
+
+  <title>Prompt Engineering Best Practices: What Works | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/prompt-engineering-best-practices/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/prompt-engineering-best-practices/">
+  <meta property="og:title" content="Prompt Engineering Best Practices: What Actually Works">
+  <meta property="og:description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Prompt Engineering Best Practices: What Actually Works">
+  <meta name="twitter:description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Prompt Engineering Best Practices: What Actually Works",
+    "author": {
+      "@type": "Person",
+      "name": "Rome Thorndike",
+      "url": "https://www.linkedin.com/in/romethorndike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PE Collective",
+      "url": "https://pecollective.com"
+    },
+    "datePublished": "2026-01-28",
+    "dateModified": "2026-01-28",
+    "description": "Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production."
+  }
+  </script>
+
+  <style>
+    .article-page {
+      padding: var(--space-3xl) 0;
+    }
+
+    .article-header {
+      max-width: 800px;
+      margin: 0 auto var(--space-3xl);
+      text-align: center;
+    }
+
+    .article-header__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-header__title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .article-header__title {
+        font-size: 1.75rem;
+      }
+    }
+
+    .article-header__meta {
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .article-header__meta a {
+      color: var(--color-gold);
+    }
+
+    .article-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin: var(--space-3xl) 0 var(--space-md);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-content h3 {
+      font-size: 1.125rem;
+      margin: var(--space-xl) 0 var(--space-sm);
+      color: var(--color-gold);
+    }
+
+    .article-content p {
+      margin-bottom: var(--space-md);
+      line-height: 1.8;
+      color: var(--color-text-secondary);
+    }
+
+    .article-content ul, .article-content ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .article-content li {
+      margin-bottom: var(--space-sm);
+      line-height: 1.7;
+    }
+
+    .article-content strong {
+      color: var(--color-text-primary);
+    }
+
+    .article-content code {
+      background: var(--color-bg-card);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.875em;
+    }
+
+    .best-practice {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-gold);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .best-practice__number {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+    }
+
+    .best-practice__title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .best-practice__content {
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    .example-box {
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin: var(--space-md) 0;
+    }
+
+    .example-box__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+    }
+
+    .example-box__bad {
+      color: var(--color-error);
+      font-family: monospace;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .example-box__good {
+      color: var(--color-success);
+      font-family: monospace;
+      font-size: 0.9375rem;
+    }
+
+    .mistake-card {
+      background: rgba(248, 113, 113, 0.1);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .mistake-card__title {
+      color: var(--color-error);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .mistake-card__content {
+      color: var(--color-text-secondary);
+    }
+
+    .author-bio {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-top: var(--space-3xl);
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+    }
+
+    @media (max-width: 600px) {
+      .author-bio {
+        flex-direction: column;
+      }
+    }
+
+    .author-bio__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-bg-darker);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .author-bio__content {
+      flex: 1;
+    }
+
+    .author-bio__name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .author-bio__text {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .author-bio__text a {
+      color: var(--color-gold);
+    }
+
+    .related-links {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .related-links a {
+      color: var(--color-gold);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">Jobs</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Best Practices</span>
+          <h1 class="article-header__title">Prompt Engineering Best Practices: What Actually Works</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> · January 28, 2026 · 8 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>Most prompt engineering advice is theoretical. It sounds good but doesn't hold up in production. This guide is different.</p>
+
+          <p>Everything here comes from real projects. Patterns that worked across hundreds of use cases from our community of 1,300+ prompt engineers. Skip the theory. Here's what to do.</p>
+
+          <h2>Start With Clear Intent</h2>
+
+          <div class="best-practice">
+            <div class="best-practice__number">Practice #1</div>
+            <div class="best-practice__title">Define the task before writing the prompt</div>
+            <p class="best-practice__content">Write down exactly what you want the output to look like. Format, length, tone, structure. Most bad prompts fail because the person writing them hadn't decided what success looks like.</p>
+          </div>
+
+          <p>Before you touch the prompt, answer these questions:</p>
+          <ul>
+            <li>What format should the output be? (JSON, markdown, plain text, code)</li>
+            <li>How long should it be? (one sentence, paragraph, full document)</li>
+            <li>What tone? (formal, casual, technical)</li>
+            <li>What should it definitely include?</li>
+            <li>What should it definitely avoid?</li>
+          </ul>
+
+          <p>Once you've got those answers, the prompt almost writes itself.</p>
+
+          <h2>Structure Matters More Than Length</h2>
+
+          <div class="best-practice">
+            <div class="best-practice__number">Practice #2</div>
+            <div class="best-practice__title">Use clear sections and labels</div>
+            <p class="best-practice__content">Break your prompt into labeled sections. The model processes structured prompts more reliably than walls of text. Headers like "CONTEXT:", "TASK:", "FORMAT:" work better than one long paragraph.</p>
+          </div>
+
+          <div class="example-box">
+            <div class="example-box__label">Instead of this:</div>
+            <div class="example-box__bad">I need you to analyze customer reviews and tell me what people like and don't like and also categorize them and give me a summary at the end that I can share with my team.</div>
+            <div class="example-box__label">Do this:</div>
+            <div class="example-box__good">TASK: Analyze customer reviews<br><br>INPUT: [reviews will be provided]<br><br>OUTPUT FORMAT:<br>1. Top 3 positive themes with examples<br>2. Top 3 negative themes with examples<br>3. Executive summary (2-3 sentences)</div>
+          </div>
+
+          <p>The structured version is clearer to read and produces more consistent outputs. Models handle explicit structure better than implicit expectations.</p>
+
+          <h2>Give Examples When Precision Matters</h2>
+
+          <div class="best-practice">
+            <div class="best-practice__number">Practice #3</div>
+            <div class="best-practice__title">Show, don't tell</div>
+            <p class="best-practice__content">If you need a specific format or style, include 2-3 examples. One example shows the pattern. Two examples confirm it. Three examples make it reliable.</p>
+          </div>
+
+          <p>This is few-shot prompting, and it works because examples communicate things that instructions can't. The model learns what you mean from seeing what you want.</p>
+
+          <p>Where examples help most:</p>
+          <ul>
+            <li>Output formatting (JSON structure, markdown style)</li>
+            <li>Tone and voice (how formal, how technical)</li>
+            <li>Classification tasks (what goes in each category)</li>
+            <li>Anything where "good" is subjective</li>
+          </ul>
+
+          <h2>Control Temperature and Other Settings</h2>
+
+          <div class="best-practice">
+            <div class="best-practice__number">Practice #4</div>
+            <div class="best-practice__title">Match parameters to the task</div>
+            <p class="best-practice__content">Temperature isn't just a dial. Low temperature (0.0-0.3) for factual, consistent outputs. High temperature (0.7-1.0) for creative, varied outputs. The default is often wrong for your specific task.</p>
+          </div>
+
+          <p>Quick reference:</p>
+          <ul>
+            <li><strong>Temperature 0:</strong> Data extraction, classification, code generation where consistency matters</li>
+            <li><strong>Temperature 0.3-0.5:</strong> General tasks, summaries, Q&A</li>
+            <li><strong>Temperature 0.7-0.9:</strong> Creative writing, brainstorming, generating options</li>
+          </ul>
+
+          <p>Also pay attention to max tokens. Set it deliberately. Too low cuts off outputs. Too high wastes money and time.</p>
+
+          <h2>Test Systematically</h2>
+
+          <div class="best-practice">
+            <div class="best-practice__number">Practice #5</div>
+            <div class="best-practice__title">Build a test set, not a test case</div>
+            <p class="best-practice__content">One successful output means nothing. Ten successful outputs across different inputs means something. Create a set of test cases that cover normal inputs, edge cases, and potential failure modes.</p>
+          </div>
+
+          <p>For any production prompt, you need:</p>
+          <ul>
+            <li>5-10 "golden" examples where you know the correct output</li>
+            <li>Edge cases that might break the prompt</li>
+            <li>Adversarial inputs that try to confuse or manipulate</li>
+          </ul>
+
+          <p>Run your test set every time you change the prompt. Regression testing isn't just for code. Prompts break in surprising ways when you change them.</p>
+
+          <h2>Common Mistakes to Avoid</h2>
+
+          <div class="mistake-card">
+            <div class="mistake-card__title">Being too vague</div>
+            <p class="mistake-card__content">"Make it better" or "improve this" tells the model nothing. Be specific about what better means. Faster? More accurate? Shorter? More formal?</p>
+          </div>
+
+          <div class="mistake-card">
+            <div class="mistake-card__title">Prompt stuffing</div>
+            <p class="mistake-card__content">Adding more instructions doesn't always help. Long prompts can confuse models. If your prompt is over 500 words, you're probably overcomplicating things.</p>
+          </div>
+
+          <div class="mistake-card">
+            <div class="mistake-card__title">Ignoring failures</div>
+            <p class="mistake-card__content">When a prompt fails, don't just retry. Understand why it failed. Was the instruction unclear? Was the input malformed? Was the task actually impossible? Each failure teaches you something.</p>
+          </div>
+
+          <div class="mistake-card">
+            <div class="mistake-card__title">No version control</div>
+            <p class="mistake-card__content">Keep track of your prompts. When you change something, note what changed and why. Six months from now, you'll want to know why you wrote it that way.</p>
+          </div>
+
+          <h2>Production-Ready Prompts</h2>
+
+          <p>Taking a prompt from "works sometimes" to "works in production" requires extra work.</p>
+
+          <h3>Add Error Handling</h3>
+          <p>Tell the model what to do when it can't complete the task. "If the input doesn't contain enough information, respond with: INSUFFICIENT_DATA" is better than hoping it figures it out.</p>
+
+          <h3>Validate Outputs</h3>
+          <p>If you expect JSON, parse the JSON. If you expect a number, check it's a number. Don't trust that the model will always follow your format instructions perfectly. Build validation into your pipeline.</p>
+
+          <h3>Log Everything</h3>
+          <p>Store the prompt, input, output, and any metadata for every call. When something goes wrong in production, you need to be able to investigate. Debugging AI failures without logs is nearly impossible.</p>
+
+          <h3>Monitor Drift</h3>
+          <p>Model behavior changes. Updates happen. What worked last month might not work as well today. Set up monitoring to catch when output quality degrades.</p>
+
+          <h2>Keep Learning</h2>
+
+          <p>The best practices evolve as models improve. What required elaborate prompting a year ago now works with simple instructions. Stay current with model updates and new techniques.</p>
+
+          <p>Join communities where people share what's working. Our <a href="../../join/">Prompt Engineer Collective</a> has channels dedicated to prompt sharing and troubleshooting. Reading research papers helps too, though the practical insights often come from people building real applications.</p>
+
+          <p>And ship things. The fastest way to get better at prompt engineering is to prompt engineer. Build projects. Hit problems. Solve them. Repeat.</p>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="../prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="../gpt-4-prompt-engineering-freelance/">How to Freelance as a Prompt Engineer</a> | <a href="../../jobs/">AI Job Board</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Join 1,300+ Prompt Engineers</h2>
+          <p class="cta-section__text">
+            Get job alerts, salary insights, and weekly AI tool reviews.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

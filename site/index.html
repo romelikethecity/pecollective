@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI job board for Prompt Engineers, AI Engineers, ML Engineers, and AI professionals. Real salary data, market intelligence, and community for your AI career.">
-  <meta name="keywords" content="prompt engineer jobs, AI engineer jobs, ML engineer jobs, AI careers, prompt engineering salary">
-  
-  <title>PE Collective — AI Jobs & Market Intelligence for Prompt Engineers</title>
-  
+  <meta name="description" content="Guides, salaries, and AI jobs from 1,300+ prompt engineers. Learn techniques that actually work and find your next role.">
+  <meta name="keywords" content="prompt engineering guide, prompt engineering best practices, prompt engineer jobs, AI jobs, prompt engineering salary">
+
+  <title>Prompt Engineering Guides, Jobs & Salaries | PE Collective</title>
+
   <!-- Open Graph -->
-  <meta property="og:title" content="PE Collective — AI Jobs for Prompt Engineers">
-  <meta property="og:description" content="The job board built by AI professionals, for AI professionals. Real jobs, real salaries, no recruiter spin.">
+  <meta property="og:title" content="Prompt engineering from people who actually do it | PE Collective">
+  <meta property="og:description" content="Guides, salaries, and AI jobs from 1,300+ prompt engineers. Learn techniques that actually work.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pecollective.com">
   
@@ -19,6 +19,118 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is prompt engineering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prompt engineering is the practice of designing inputs for AI models like GPT-4 and Claude to get reliable, useful outputs. It's part writing, part logic, part experimentation. Our prompt engineering guide covers the core techniques, from zero-shot prompting to chain-of-thought reasoning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started as a prompt engineer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start by learning the fundamentals. Our complete guide walks you through core techniques, and our best practices article covers what actually works in production. Then practice. A lot. Build a portfolio of prompts that solve real problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do prompt engineers earn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based on data from our community and job board, prompt engineers in the US earn between $120k and $250k depending on experience and company. Check our salary data for current numbers broken down by role, location, and experience level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is prompt engineering a real career?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Companies like Anthropic, OpenAI, Google, and hundreds of startups actively hire prompt engineers. Our job board tracks 200+ active AI roles with real salary data. The field is still young, but demand is growing fast as more companies deploy AI products."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .faq__item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-bg-card);
+      overflow: hidden;
+    }
+
+    .faq__question {
+      padding: var(--space-lg) var(--space-xl);
+      font-weight: 600;
+      font-size: 1.0625rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--color-text-primary);
+    }
+
+    .faq__question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq__question::before {
+      content: "+";
+      margin-right: var(--space-md);
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+
+    details[open] .faq__question::before {
+      content: "−";
+    }
+
+    .faq__answer {
+      padding: 0 var(--space-xl) var(--space-lg);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq__answer a {
+      color: var(--color-gold);
+      text-decoration: underline;
+    }
+
+    .founder-note {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      border-left: 3px solid var(--color-gold);
+      padding-left: var(--space-xl);
+      margin: var(--space-lg) 0;
+      font-style: normal;
+    }
+
+    .founder-note p {
+      margin-bottom: var(--space-md);
+    }
+
+    .founder-note cite {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -36,6 +148,7 @@
           <a href="jobs/">AI Jobs</a>
           <a href="salaries/">Salaries</a>
           <a href="tools/">Tools</a>
+          <a href="blog/">Blog</a>
           <a href="insights/">Market Intel</a>
           <a href="about/">About</a>
         </nav>
@@ -55,20 +168,20 @@
       <div class="container">
         <div class="hero__badge">
           <span class="hero__badge-dot"></span>
-          <span>Updated weekly with fresh AI roles</span>
+          <span>Built by 1,300+ prompt engineers</span>
         </div>
-        
+
         <h1 class="hero__title">
-          Find Your Next <span>AI Career Move</span>
+          Prompt engineering from people <span>who actually do it</span>
         </h1>
-        
+
         <p class="hero__subtitle">
-          The job board built by AI professionals, for AI professionals. Real jobs, real salaries, and market intelligence without the recruiter spin.
+          Guides, salaries, and AI jobs from 1,300+ prompt engineers.
         </p>
-        
+
         <div class="hero__actions">
-          <a href="jobs/" class="btn btn--primary btn--large">Browse All Jobs</a>
-          <a href="join/" class="btn btn--secondary btn--large">Join the Community</a>
+          <a href="blog/prompt-engineering-guide/" class="btn btn--primary btn--large">Read the Guide</a>
+          <a href="jobs/" class="btn btn--secondary btn--large">Browse AI Jobs</a>
         </div>
         
         <!-- Stats -->
@@ -89,6 +202,43 @@
             <div class="stat-card__value">1.3k</div>
             <div class="stat-card__label">Community Members</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guides & Resources -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Guides & Resources</h2>
+          <p class="section__subtitle">Written by prompt engineers, not content marketers.</p>
+        </div>
+
+        <div class="tools-grid">
+          <a href="blog/prompt-engineering-guide/" class="tool-card">
+            <div class="tool-card__icon">📖</div>
+            <h3 class="tool-card__name">Prompt Engineering Guide</h3>
+            <span class="tool-card__category">Guide</span>
+            <p class="tool-card__description">Everything you need to know about prompt engineering. Core techniques, tools, career paths, and common mistakes to avoid.</p>
+          </a>
+
+          <a href="blog/gpt-4-prompt-engineering-freelance/" class="tool-card">
+            <div class="tool-card__icon">💼</div>
+            <h3 class="tool-card__name">Freelance as a Prompt Engineer</h3>
+            <span class="tool-card__category">Freelance</span>
+            <p class="tool-card__description">Rates, platforms, and strategies for building a freelance prompt engineering practice. What clients actually pay for.</p>
+          </a>
+
+          <a href="blog/prompt-engineering-best-practices/" class="tool-card">
+            <div class="tool-card__icon">✅</div>
+            <h3 class="tool-card__name">Best Practices</h3>
+            <span class="tool-card__category">Best Practices</span>
+            <p class="tool-card__description">Skip the theory. Proven techniques from hundreds of real projects. What works in production.</p>
+          </a>
+        </div>
+
+        <div class="text-center mt-xl">
+          <a href="blog/" class="btn btn--secondary btn--large">Read All Articles →</a>
         </div>
       </div>
     </section>
@@ -252,6 +402,58 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <h2 class="section__title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">What is prompt engineering?</summary>
+            <div class="faq__answer">
+              <p>Prompt engineering is the practice of designing inputs for AI models like GPT-4 and Claude to get reliable, useful outputs. It's part writing, part logic, part experimentation. Our <a href="blog/prompt-engineering-guide/">prompt engineering guide</a> covers the core techniques, from zero-shot prompting to chain-of-thought reasoning.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">How do I get started as a prompt engineer?</summary>
+            <div class="faq__answer">
+              <p>Start by learning the fundamentals. Our <a href="blog/prompt-engineering-guide/">complete guide</a> walks you through core techniques, and our <a href="blog/prompt-engineering-best-practices/">best practices article</a> covers what actually works in production. Then practice. A lot. Build a portfolio of prompts that solve real problems.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">What do prompt engineers earn?</summary>
+            <div class="faq__answer">
+              <p>Based on data from our community and job board, prompt engineers in the US earn between $120k and $250k depending on experience and company. Check our <a href="salaries/">salary data</a> for current numbers broken down by role, location, and experience level.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Is prompt engineering a real career?</summary>
+            <div class="faq__answer">
+              <p>Yes. Companies like Anthropic, OpenAI, Google, and hundreds of startups actively hire prompt engineers. Our <a href="jobs/">job board</a> tracks 200+ active AI roles with real salary data. The field is still young, but demand is growing fast as more companies deploy AI products.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder's Note -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Why I Built This</h2>
+          <blockquote class="founder-note">
+            <p>"I started PE Collective 3 years ago because I couldn't find a community of generative AI builders. So I built one. We're 1,300+ prompt engineers, AI engineers, and ML practitioners sharing what actually works. Whether you're writing your first prompt or shipping production AI, you've got people here who get it."</p>
+            <cite>— Rome, Founder</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
     <!-- Community CTA -->
     <section class="section">
       <div class="container container--narrow">
@@ -276,45 +478,43 @@
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
-            The job board and community built by AI professionals, for AI professionals.
+            Prompt engineering guides, jobs, and community from 1,300+ AI professionals.
           </p>
         </div>
-        
+
         <div class="footer__column">
           <h4>Jobs</h4>
           <nav class="footer__links">
-            <a href="jobs/">All Jobs</a>
+            <a href="jobs/">All AI Jobs</a>
             <a href="jobs/?category=prompt-engineer">Prompt Engineer</a>
             <a href="jobs/?category=ai-engineer">AI Engineer</a>
             <a href="jobs/?category=ml-engineer">ML Engineer</a>
-            <a href="jobs/?remote=true">Remote Only</a>
+            <a href="salaries/">Salaries</a>
           </nav>
         </div>
-        
+
         <div class="footer__column">
-          <h4>Tools</h4>
+          <h4>Resources</h4>
           <nav class="footer__links">
-            <a href="tools/">All Tools</a>
-            <a href="tools/cursor/">Cursor</a>
-            <a href="tools/github-copilot/">GitHub Copilot</a>
-            <a href="tools/cursor-vs-github-copilot/">Cursor vs Copilot</a>
+            <a href="blog/">Blog</a>
+            <a href="blog/prompt-engineering-guide/">Prompt Engineering Guide</a>
+            <a href="tools/">Tools</a>
+            <a href="insights/">Market Intel</a>
           </nav>
         </div>
-        
+
         <div class="footer__column">
           <h4>Community</h4>
           <nav class="footer__links">
             <a href="join/">Join Us</a>
             <a href="about/">About</a>
             <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
-            <a href="https://twitter.com/pecollective" target="_blank" rel="noopener">Twitter</a>
           </nav>
         </div>
       </div>
-      
+
       <div class="footer__bottom">
-        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
-        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+        <span>&copy; 2026 PE Collective. Built for the AI community.</span>
       </div>
     </div>
   </footer>

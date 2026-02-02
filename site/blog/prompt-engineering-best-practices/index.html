@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
@@ -24,13 +25,13 @@
   <meta property="og:title" content="Prompt Engineering Best Practices: What Actually Works">
   <meta property="og:description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
   <meta property="og:site_name" content="PE Collective">
-  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="Prompt Engineering Best Practices: What Actually Works">
   <meta name="twitter:description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
-  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -68,240 +69,8 @@
     "description": "Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production."
   }
   </script>
-
-  <style>
-    .article-page {
-      padding: var(--space-3xl) 0;
-    }
-
-    .article-header {
-      max-width: 800px;
-      margin: 0 auto var(--space-3xl);
-      text-align: center;
-    }
-
-    .article-header__category {
-      font-size: 0.875rem;
-      color: var(--color-gold);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-sm);
-    }
-
-    .article-header__title {
-      font-size: 2.5rem;
-      line-height: 1.2;
-      margin-bottom: var(--space-md);
-    }
-
-    @media (max-width: 768px) {
-      .article-header__title {
-        font-size: 1.75rem;
-      }
-    }
-
-    .article-header__meta {
-      color: var(--color-text-muted);
-      font-size: 0.9375rem;
-    }
-
-    .article-header__meta a {
-      color: var(--color-gold);
-    }
-
-    .article-content {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .article-content h2 {
-      font-size: 1.5rem;
-      margin: var(--space-3xl) 0 var(--space-md);
-      padding-top: var(--space-xl);
-      border-top: 1px solid var(--color-border);
-    }
-
-    .article-content h2:first-child {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .article-content h3 {
-      font-size: 1.125rem;
-      margin: var(--space-xl) 0 var(--space-sm);
-      color: var(--color-gold);
-    }
-
-    .article-content p {
-      margin-bottom: var(--space-md);
-      line-height: 1.8;
-      color: var(--color-text-secondary);
-    }
-
-    .article-content ul, .article-content ol {
-      margin-bottom: var(--space-lg);
-      padding-left: var(--space-lg);
-      color: var(--color-text-secondary);
-    }
-
-    .article-content li {
-      margin-bottom: var(--space-sm);
-      line-height: 1.7;
-    }
-
-    .article-content strong {
-      color: var(--color-text-primary);
-    }
-
-    .article-content code {
-      background: var(--color-bg-card);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.875em;
-    }
-
-    .best-practice {
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-gold);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      margin-bottom: var(--space-lg);
-    }
-
-    .best-practice__number {
-      font-size: 0.8125rem;
-      font-weight: 700;
-      color: var(--color-gold);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-xs);
-    }
-
-    .best-practice__title {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-sm);
-    }
-
-    .best-practice__content {
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-    }
-
-    .example-box {
-      background: var(--color-bg-darker);
-      border-radius: var(--radius-md);
-      padding: var(--space-md);
-      margin: var(--space-md) 0;
-    }
-
-    .example-box__label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-xs);
-    }
-
-    .example-box__bad {
-      color: var(--color-error);
-      font-family: monospace;
-      font-size: 0.9375rem;
-      margin-bottom: var(--space-md);
-      padding-bottom: var(--space-md);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .example-box__good {
-      color: var(--color-success);
-      font-family: monospace;
-      font-size: 0.9375rem;
-    }
-
-    .mistake-card {
-      background: rgba(248, 113, 113, 0.1);
-      border: 1px solid rgba(248, 113, 113, 0.3);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      margin-bottom: var(--space-lg);
-    }
-
-    .mistake-card__title {
-      color: var(--color-error);
-      font-weight: 600;
-      margin-bottom: var(--space-sm);
-    }
-
-    .mistake-card__content {
-      color: var(--color-text-secondary);
-    }
-
-    .author-bio {
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin-top: var(--space-3xl);
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-    }
-
-    @media (max-width: 600px) {
-      .author-bio {
-        flex-direction: column;
-      }
-    }
-
-    .author-bio__avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--color-bg-darker);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    .author-bio__content {
-      flex: 1;
-    }
-
-    .author-bio__name {
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-xs);
-    }
-
-    .author-bio__text {
-      color: var(--color-text-secondary);
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    .author-bio__text a {
-      color: var(--color-gold);
-    }
-
-    .related-links {
-      margin-top: var(--space-2xl);
-      padding-top: var(--space-lg);
-      border-top: 1px solid var(--color-border);
-      color: var(--color-text-muted);
-      font-size: 0.9375rem;
-    }
-
-    .related-links a {
-      color: var(--color-gold);
-    }
-  </style>
-</head>
+    <link rel="stylesheet" href="/assets/css/inline-7f3b96be.css">
+    </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
@@ -19,7 +20,7 @@
   
   <meta property="og:title" content="GitHub Copilot Review 2026 — The AI Coding Standard">
   <meta property="og:description" content="Honest review of GitHub Copilot. Features, pricing, and real-world performance.">
-  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image" content="https://pecollective.com/assets/og-tools.png">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/tools/github-copilot/">
@@ -28,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GitHub Copilot Review 2026 — The AI Coding Standard">
   <meta name="twitter:description" content="Honest review of GitHub Copilot. Features, pricing, and real-world performance.">
-  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-tools.png">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -45,264 +46,8 @@
 
   <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  
-  
-  <style>
-    .tool-review {
-      padding: var(--space-3xl) 0;
-    }
-    
-    .tool-review__header {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-xl);
-      margin-bottom: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
-      border-bottom: 1px solid var(--color-border);
-    }
-    
-    .tool-review__icon {
-      width: 80px;
-      height: 80px;
-      background: var(--color-bg-card);
-      border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      flex-shrink: 0;
-    }
-    
-    .tool-review__meta {
-      flex: 1;
-    }
-    
-    .tool-review__category {
-      font-size: 0.875rem;
-      color: var(--color-gold);
-      margin-bottom: var(--space-xs);
-    }
-    
-    .tool-review__title {
-      margin-bottom: var(--space-sm);
-    }
-    
-    .tool-review__subtitle {
-      font-size: 1.125rem;
-      margin-bottom: var(--space-md);
-    }
-    
-    .tool-review__actions {
-      display: flex;
-      gap: var(--space-sm);
-      flex-wrap: wrap;
-    }
-    
-    .tool-review__content {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: var(--space-3xl);
-    }
-    
-    @media (max-width: 900px) {
-      .tool-review__content {
-        grid-template-columns: 1fr;
-      }
-      
-      .tool-review__header {
-        flex-direction: column;
-      }
-    }
-    
-    .tool-review__main h2 {
-      font-size: 1.5rem;
-      margin: var(--space-2xl) 0 var(--space-md);
-      padding-top: var(--space-lg);
-      border-top: 1px solid var(--color-border);
-    }
-    
-    .tool-review__main h2:first-child {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-    
-    .tool-review__main h3 {
-      font-size: 1.125rem;
-      margin: var(--space-lg) 0 var(--space-sm);
-    }
-    
-    .tool-review__main p {
-      margin-bottom: var(--space-md);
-      line-height: 1.7;
-    }
-    
-    .tool-review__main ul, .tool-review__main ol {
-      margin-bottom: var(--space-md);
-      padding-left: var(--space-lg);
-      color: var(--color-text-secondary);
-    }
-    
-    .tool-review__main li {
-      margin-bottom: var(--space-sm);
-    }
-    
-    .tool-review__sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-lg);
-    }
-    
-    .sidebar-card {
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-    }
-    
-    .sidebar-card__title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-md);
-    }
-    
-    .pricing-table {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
-    }
-    
-    .pricing-row {
-      display: flex;
-      justify-content: space-between;
-      padding: var(--space-sm) 0;
-      border-bottom: 1px solid var(--color-border-light);
-    }
-    
-    .pricing-row:last-child {
-      border-bottom: none;
-    }
-    
-    .pricing-row__label {
-      color: var(--color-text-secondary);
-    }
-    
-    .pricing-row__value {
-      font-weight: 600;
-      color: var(--color-text-primary);
-    }
-    
-    .pros-cons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-lg);
-      margin: var(--space-lg) 0;
-    }
-    
-    @media (max-width: 600px) {
-      .pros-cons {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .pros-cons__column h4 {
-      font-size: 0.9375rem;
-      margin-bottom: var(--space-md);
-    }
-    
-    .pros-cons__column ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .pros-cons__column li {
-      padding: var(--space-sm) 0;
-      padding-left: var(--space-lg);
-      position: relative;
-      color: var(--color-text-secondary);
-    }
-    
-    .pros-cons__column--pros li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--color-success);
-      font-weight: 700;
-    }
-    
-    .pros-cons__column--cons li::before {
-      content: '✗';
-      position: absolute;
-      left: 0;
-      color: var(--color-error);
-      font-weight: 700;
-    }
-    
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-    }
-    
-    .rating__stars {
-      color: var(--color-gold);
-      letter-spacing: 2px;
-    }
-    
-    .rating__value {
-      font-family: var(--font-display);
-      font-weight: 700;
-      color: var(--color-text-primary);
-    }
-    
-    .related-tools {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
-    }
-    
-    .related-tools a {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-sm);
-      background: var(--color-bg-darker);
-      border-radius: var(--radius-md);
-      color: var(--color-text-secondary);
-      transition: all var(--transition-fast);
-    }
-    
-    .related-tools a:hover {
-      background: var(--color-bg-card-hover);
-      color: var(--color-text-primary);
-    }
-    
-    .verdict-box {
-      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
-      border: 1px solid var(--color-teal-light);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    
-    .verdict-box h3 {
-      color: var(--color-gold);
-      margin-bottom: var(--space-md);
-    }
-    
-    .affiliate-disclosure {
-      font-size: 0.8125rem;
-      color: var(--color-text-muted);
-      padding: var(--space-md);
-      background: var(--color-bg-darker);
-      border-radius: var(--radius-md);
-      margin-top: var(--space-2xl);
-    }
-  </style>
-</head>
+    <link rel="stylesheet" href="/assets/css/tool-review-1.css">
+    </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   

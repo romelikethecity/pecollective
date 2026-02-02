@@ -1,0 +1,202 @@
+.article-page {
+      padding: var(--space-3xl) 0;
+    }
+
+    .article-header {
+      max-width: 800px;
+      margin: 0 auto var(--space-3xl);
+      text-align: center;
+    }
+
+    .article-header__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-header__title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .article-header__title {
+        font-size: 1.75rem;
+      }
+    }
+
+    .article-header__meta {
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .article-header__meta a {
+      color: var(--color-gold);
+    }
+
+    .article-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin: var(--space-3xl) 0 var(--space-md);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-content h3 {
+      font-size: 1.125rem;
+      margin: var(--space-xl) 0 var(--space-sm);
+      color: var(--color-gold);
+    }
+
+    .article-content p {
+      margin-bottom: var(--space-md);
+      line-height: 1.8;
+      color: var(--color-text-secondary);
+    }
+
+    .article-content ul, .article-content ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .article-content li {
+      margin-bottom: var(--space-sm);
+      line-height: 1.7;
+    }
+
+    .article-content strong {
+      color: var(--color-text-primary);
+    }
+
+    .rate-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .rate-card__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .rate-card__range {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+    }
+
+    .rate-card__description {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+
+    .platform-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .platform-card__name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .platform-card__type {
+      font-size: 0.8125rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+    }
+
+    .platform-card__description {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .author-bio {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-top: var(--space-3xl);
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+    }
+
+    @media (max-width: 600px) {
+      .author-bio {
+        flex-direction: column;
+      }
+    }
+
+    .author-bio__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-bg-darker);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .author-bio__content {
+      flex: 1;
+    }
+
+    .author-bio__name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .author-bio__text {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .author-bio__text a {
+      color: var(--color-gold);
+    }
+
+    .related-links {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .related-links a {
+      color: var(--color-gold);
+    }

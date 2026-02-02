@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
@@ -103,77 +104,8 @@
     ]
   }
   </script>
-
-  <style>
-    .faq {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-md);
-    }
-
-    .faq__item {
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      background: var(--color-bg-card);
-      overflow: hidden;
-    }
-
-    .faq__question {
-      padding: var(--space-lg) var(--space-xl);
-      font-weight: 600;
-      font-size: 1.0625rem;
-      cursor: pointer;
-      list-style: none;
-      color: var(--color-text-primary);
-    }
-
-    .faq__question::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq__question::before {
-      content: "+";
-      margin-right: var(--space-md);
-      font-weight: 700;
-      color: var(--color-gold);
-    }
-
-    details[open] .faq__question::before {
-      content: "−";
-    }
-
-    .faq__answer {
-      padding: 0 var(--space-xl) var(--space-lg);
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-    }
-
-    .faq__answer a {
-      color: var(--color-gold);
-      text-decoration: underline;
-    }
-
-    .founder-note {
-      font-size: 1.125rem;
-      line-height: 1.7;
-      color: var(--color-text-secondary);
-      border-left: 3px solid var(--color-gold);
-      padding-left: var(--space-xl);
-      margin: var(--space-lg) 0;
-      font-style: normal;
-    }
-
-    .founder-note p {
-      margin-bottom: var(--space-md);
-    }
-
-    .founder-note cite {
-      font-style: normal;
-      font-weight: 600;
-      color: var(--color-text-primary);
-    }
-  </style>
-</head>
+    <link rel="stylesheet" href="/assets/css/homepage-inline.css">
+    </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   

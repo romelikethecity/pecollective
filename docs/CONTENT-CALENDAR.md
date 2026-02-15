@@ -4,8 +4,10 @@
 
 ### Glossary Expansion
 - [x] Initial 20 terms (done)
-- [ ] Add 15 more: Transformer, Attention Mechanism, Tokenizer, Multimodal AI, Agentic AI, Prompt Injection, Constitutional AI, DPO, Quantization, Mixture of Experts, Knowledge Distillation, Inference, Latency, Throughput, Guardrails
-- [ ] Add 15 more: Model Context Protocol, Anthropic API, OpenAI API, Batch Processing, Streaming, Tool Use, JSON Mode, Structured Output, Model Evaluation, Benchmarks, MMLU, HumanEval, Perplexity (metric), Cross-Entropy, Loss Function
+- [x] Add 15 more: Transformer, Attention Mechanism, Tokenizer, Multimodal AI, Agentic AI, Prompt Injection, Constitutional AI, DPO, Quantization, Mixture of Experts, Knowledge Distillation, Inference, Latency, Throughput, Guardrails (done)
+- [x] Add 13 from planned list: Model Context Protocol, Batch Processing, Streaming, Tool Use, JSON Mode, Structured Output, Model Evaluation, Benchmarks, MMLU, HumanEval, Perplexity (metric), Cross-Entropy, Loss Function (done - replaced Anthropic API/OpenAI API with higher-value terms)
+- [x] Add 12 bonus high-traffic terms: Large Language Model (LLM), GPT, Natural Language Processing (NLP), Prompt Chaining, Prompt Template, Prompt Optimization, AI Alignment, AI Safety, Synthetic Data, Instruction Tuning, Reasoning Models, AI Coding Assistant (done 2026-02-15)
+- **Total: 60 glossary terms live** (up from 35)
 
 ### Comparison Pages (create manually or via generator)
 - [ ] Cursor vs Windsurf → `/tools/cursor-vs-windsurf/`

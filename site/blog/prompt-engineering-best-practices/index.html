@@ -16,7 +16,7 @@
 
   <meta name="description" content="Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production.">
 
-  <title>Prompt Engineering Best Practices: What Works | PE Collective</title>
+  <title>Prompt Engineering Best Practices: What Actually Works | PE Collective</title>
 
   <link rel="canonical" href="https://pecollective.com/blog/prompt-engineering-best-practices/">
 
@@ -41,14 +41,29 @@
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pecollective.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pecollective.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Prompt Engineering Best Practices", "item": "https://pecollective.com/blog/prompt-engineering-best-practices/"}
-    ]
-  }
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Prompt Engineering Best Practices",
+      "item": "https://pecollective.com/blog/prompt-engineering-best-practices/"
+    }
+  ]
+}
   </script>
 
   <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
@@ -58,26 +73,26 @@
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Prompt Engineering Best Practices: What Actually Works",
-    "image": "https://pecollective.com/assets/og-blog.png",
-    "author": {
-      "@type": "Person",
-      "name": "Rome Thorndike",
-      "url": "https://www.linkedin.com/in/romethorndike/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "PE Collective",
-      "url": "https://pecollective.com"
-    },
-    "datePublished": "2026-01-28",
-    "dateModified": "2026-01-28",
-    "description": "Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production."
-  }
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Prompt Engineering Best Practices: What Actually Works",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-01-28",
+  "dateModified": "2026-01-28",
+  "description": "Proven prompt engineering best practices from 1,300+ professionals. Skip the theory and learn what works in production."
+}
   </script>
-    <link rel="stylesheet" href="/assets/css/inline-7f3b96be.css">
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
     </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -142,148 +157,148 @@
           <span class="article-header__category">Best Practices</span>
           <h1 class="article-header__title">Prompt Engineering Best Practices: What Actually Works</h1>
           <p class="article-header__meta">
-            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> · January 28, 2026 · 8 min read
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; January 28, 2026 &middot; 8 min read
           </p>
         </header>
 
         <div class="article-content">
           <p>Most prompt engineering advice is theoretical. It sounds good but doesn't hold up in production. This guide is different.</p>
 
-          <p>Everything here comes from real projects. Patterns that worked across hundreds of use cases from our community of 1,300+ prompt engineers. Skip the theory. Here's what to do.</p>
+<p>Everything here comes from real projects. Patterns that worked across hundreds of use cases from our community of 1,300+ prompt engineers. Skip the theory. Here's what to do.</p>
 
-          <h2>Start With Clear Intent</h2>
+<h2>Start With Clear Intent</h2>
 
-          <div class="best-practice">
-            <div class="best-practice__number">Practice #1</div>
-            <div class="best-practice__title">Define the task before writing the prompt</div>
-            <p class="best-practice__content">Write down exactly what you want the output to look like. Format, length, tone, structure. Most bad prompts fail because the person writing them hadn't decided what success looks like.</p>
-          </div>
+<div class="best-practice">
+  <div class="best-practice__number">Practice #1</div>
+  <div class="best-practice__title">Define the task before writing the prompt</div>
+  <p class="best-practice__content">Write down exactly what you want the output to look like. Format, length, tone, structure. Most bad prompts fail because the person writing them hadn't decided what success looks like.</p>
+</div>
 
-          <p>Before you touch the prompt, answer these questions:</p>
-          <ul>
-            <li>What format should the output be? (JSON, markdown, plain text, code)</li>
-            <li>How long should it be? (one sentence, paragraph, full document)</li>
-            <li>What tone? (formal, casual, technical)</li>
-            <li>What should it definitely include?</li>
-            <li>What should it definitely avoid?</li>
-          </ul>
+<p>Before you touch the prompt, answer these questions:</p>
+<ul>
+  <li>What format should the output be? (JSON, markdown, plain text, code)</li>
+  <li>How long should it be? (one sentence, paragraph, full document)</li>
+  <li>What tone? (formal, casual, technical)</li>
+  <li>What should it definitely include?</li>
+  <li>What should it definitely avoid?</li>
+</ul>
 
-          <p>Once you've got those answers, the prompt almost writes itself.</p>
+<p>Once you've got those answers, the prompt almost writes itself.</p>
 
-          <h2>Structure Matters More Than Length</h2>
+<h2>Structure Matters More Than Length</h2>
 
-          <div class="best-practice">
-            <div class="best-practice__number">Practice #2</div>
-            <div class="best-practice__title">Use clear sections and labels</div>
-            <p class="best-practice__content">Break your prompt into labeled sections. The model processes structured prompts more reliably than walls of text. Headers like "CONTEXT:", "TASK:", "FORMAT:" work better than one long paragraph.</p>
-          </div>
+<div class="best-practice">
+  <div class="best-practice__number">Practice #2</div>
+  <div class="best-practice__title">Use clear sections and labels</div>
+  <p class="best-practice__content">Break your prompt into labeled sections. The model processes structured prompts more reliably than walls of text. Headers like "CONTEXT:", "TASK:", "FORMAT:" work better than one long paragraph.</p>
+</div>
 
-          <div class="example-box">
-            <div class="example-box__label">Instead of this:</div>
-            <div class="example-box__bad">I need you to analyze customer reviews and tell me what people like and don't like and also categorize them and give me a summary at the end that I can share with my team.</div>
-            <div class="example-box__label">Do this:</div>
-            <div class="example-box__good">TASK: Analyze customer reviews<br><br>INPUT: [reviews will be provided]<br><br>OUTPUT FORMAT:<br>1. Top 3 positive themes with examples<br>2. Top 3 negative themes with examples<br>3. Executive summary (2-3 sentences)</div>
-          </div>
+<div class="example-box">
+  <div class="example-box__label">Instead of this:</div>
+  <div class="example-box__bad">I need you to analyze customer reviews and tell me what people like and don't like and also categorize them and give me a summary at the end that I can share with my team.</div>
+  <div class="example-box__label">Do this:</div>
+  <div class="example-box__good">TASK: Analyze customer reviews<br><br>INPUT: [reviews will be provided]<br><br>OUTPUT FORMAT:<br>1. Top 3 positive themes with examples<br>2. Top 3 negative themes with examples<br>3. Executive summary (2-3 sentences)</div>
+</div>
 
-          <p>The structured version is clearer to read and produces more consistent outputs. Models handle explicit structure better than implicit expectations.</p>
+<p>The structured version is clearer to read and produces more consistent outputs. Models handle explicit structure better than implicit expectations.</p>
 
-          <h2>Give Examples When Precision Matters</h2>
+<h2>Give Examples When Precision Matters</h2>
 
-          <div class="best-practice">
-            <div class="best-practice__number">Practice #3</div>
-            <div class="best-practice__title">Show, don't tell</div>
-            <p class="best-practice__content">If you need a specific format or style, include 2-3 examples. One example shows the pattern. Two examples confirm it. Three examples make it reliable.</p>
-          </div>
+<div class="best-practice">
+  <div class="best-practice__number">Practice #3</div>
+  <div class="best-practice__title">Show, don't tell</div>
+  <p class="best-practice__content">If you need a specific format or style, include 2-3 examples. One example shows the pattern. Two examples confirm it. Three examples make it reliable.</p>
+</div>
 
-          <p>This is few-shot prompting, and it works because examples communicate things that instructions can't. The model learns what you mean from seeing what you want.</p>
+<p>This is few-shot prompting, and it works because examples communicate things that instructions can't. The model learns what you mean from seeing what you want.</p>
 
-          <p>Where examples help most:</p>
-          <ul>
-            <li>Output formatting (JSON structure, markdown style)</li>
-            <li>Tone and voice (how formal, how technical)</li>
-            <li>Classification tasks (what goes in each category)</li>
-            <li>Anything where "good" is subjective</li>
-          </ul>
+<p>Where examples help most:</p>
+<ul>
+  <li>Output formatting (JSON structure, markdown style)</li>
+  <li>Tone and voice (how formal, how technical)</li>
+  <li>Classification tasks (what goes in each category)</li>
+  <li>Anything where "good" is subjective</li>
+</ul>
 
-          <h2>Control Temperature and Other Settings</h2>
+<h2>Control Temperature and Other Settings</h2>
 
-          <div class="best-practice">
-            <div class="best-practice__number">Practice #4</div>
-            <div class="best-practice__title">Match parameters to the task</div>
-            <p class="best-practice__content">Temperature isn't just a dial. Low temperature (0.0-0.3) for factual, consistent outputs. High temperature (0.7-1.0) for creative, varied outputs. The default is often wrong for your specific task.</p>
-          </div>
+<div class="best-practice">
+  <div class="best-practice__number">Practice #4</div>
+  <div class="best-practice__title">Match parameters to the task</div>
+  <p class="best-practice__content">Temperature isn't just a dial. Low temperature (0.0-0.3) for factual, consistent outputs. High temperature (0.7-1.0) for creative, varied outputs. The default is often wrong for your specific task.</p>
+</div>
 
-          <p>Quick reference:</p>
-          <ul>
-            <li><strong>Temperature 0:</strong> Data extraction, classification, code generation where consistency matters</li>
-            <li><strong>Temperature 0.3-0.5:</strong> General tasks, summaries, Q&A</li>
-            <li><strong>Temperature 0.7-0.9:</strong> Creative writing, brainstorming, generating options</li>
-          </ul>
+<p>Quick reference:</p>
+<ul>
+  <li><strong>Temperature 0:</strong> Data extraction, classification, code generation where consistency matters</li>
+  <li><strong>Temperature 0.3-0.5:</strong> General tasks, summaries, Q&A</li>
+  <li><strong>Temperature 0.7-0.9:</strong> Creative writing, brainstorming, generating options</li>
+</ul>
 
-          <p>Also pay attention to max tokens. Set it deliberately. Too low cuts off outputs. Too high wastes money and time.</p>
+<p>Also pay attention to max tokens. Set it deliberately. Too low cuts off outputs. Too high wastes money and time.</p>
 
-          <h2>Test Systematically</h2>
+<h2>Test Systematically</h2>
 
-          <div class="best-practice">
-            <div class="best-practice__number">Practice #5</div>
-            <div class="best-practice__title">Build a test set, not a test case</div>
-            <p class="best-practice__content">One successful output means nothing. Ten successful outputs across different inputs means something. Create a set of test cases that cover normal inputs, edge cases, and potential failure modes.</p>
-          </div>
+<div class="best-practice">
+  <div class="best-practice__number">Practice #5</div>
+  <div class="best-practice__title">Build a test set, not a test case</div>
+  <p class="best-practice__content">One successful output means nothing. Ten successful outputs across different inputs means something. Create a set of test cases that cover normal inputs, edge cases, and potential failure modes.</p>
+</div>
 
-          <p>For any production prompt, you need:</p>
-          <ul>
-            <li>5-10 "golden" examples where you know the correct output</li>
-            <li>Edge cases that might break the prompt</li>
-            <li>Adversarial inputs that try to confuse or manipulate</li>
-          </ul>
+<p>For any production prompt, you need:</p>
+<ul>
+  <li>5-10 "golden" examples where you know the correct output</li>
+  <li>Edge cases that might break the prompt</li>
+  <li>Adversarial inputs that try to confuse or manipulate</li>
+</ul>
 
-          <p>Run your test set every time you change the prompt. Regression testing isn't just for code. Prompts break in surprising ways when you change them.</p>
+<p>Run your test set every time you change the prompt. Regression testing isn't just for code. Prompts break in surprising ways when you change them.</p>
 
-          <h2>Common Mistakes to Avoid</h2>
+<h2>Common Mistakes to Avoid</h2>
 
-          <div class="mistake-card">
-            <div class="mistake-card__title">Being too vague</div>
-            <p class="mistake-card__content">"Make it better" or "improve this" tells the model nothing. Be specific about what better means. Faster? More accurate? Shorter? More formal?</p>
-          </div>
+<div class="mistake-card">
+  <div class="mistake-card__title">Being too vague</div>
+  <p class="mistake-card__content">"Make it better" or "improve this" tells the model nothing. Be specific about what better means. Faster? More accurate? Shorter? More formal?</p>
+</div>
 
-          <div class="mistake-card">
-            <div class="mistake-card__title">Prompt stuffing</div>
-            <p class="mistake-card__content">Adding more instructions doesn't always help. Long prompts can confuse models. If your prompt is over 500 words, you're probably overcomplicating things.</p>
-          </div>
+<div class="mistake-card">
+  <div class="mistake-card__title">Prompt stuffing</div>
+  <p class="mistake-card__content">Adding more instructions doesn't always help. Long prompts can confuse models. If your prompt is over 500 words, you're probably overcomplicating things.</p>
+</div>
 
-          <div class="mistake-card">
-            <div class="mistake-card__title">Ignoring failures</div>
-            <p class="mistake-card__content">When a prompt fails, don't just retry. Understand why it failed. Was the instruction unclear? Was the input malformed? Was the task actually impossible? Each failure teaches you something.</p>
-          </div>
+<div class="mistake-card">
+  <div class="mistake-card__title">Ignoring failures</div>
+  <p class="mistake-card__content">When a prompt fails, don't just retry. Understand why it failed. Was the instruction unclear? Was the input malformed? Was the task actually impossible? Each failure teaches you something.</p>
+</div>
 
-          <div class="mistake-card">
-            <div class="mistake-card__title">No version control</div>
-            <p class="mistake-card__content">Keep track of your prompts. When you change something, note what changed and why. Six months from now, you'll want to know why you wrote it that way.</p>
-          </div>
+<div class="mistake-card">
+  <div class="mistake-card__title">No version control</div>
+  <p class="mistake-card__content">Keep track of your prompts. When you change something, note what changed and why. Six months from now, you'll want to know why you wrote it that way.</p>
+</div>
 
-          <h2>Production-Ready Prompts</h2>
+<h2>Production-Ready Prompts</h2>
 
-          <p>Taking a prompt from "works sometimes" to "works in production" requires extra work.</p>
+<p>Taking a prompt from "works sometimes" to "works in production" requires extra work.</p>
 
-          <h3>Add Error Handling</h3>
-          <p>Tell the model what to do when it can't complete the task. "If the input doesn't contain enough information, respond with: INSUFFICIENT_DATA" is better than hoping it figures it out.</p>
+<h3>Add Error Handling</h3>
+<p>Tell the model what to do when it can't complete the task. "If the input doesn't contain enough information, respond with: INSUFFICIENT_DATA" is better than hoping it figures it out.</p>
 
-          <h3>Validate Outputs</h3>
-          <p>If you expect JSON, parse the JSON. If you expect a number, check it's a number. Don't trust that the model will always follow your format instructions perfectly. Build validation into your pipeline.</p>
+<h3>Validate Outputs</h3>
+<p>If you expect JSON, parse the JSON. If you expect a number, check it's a number. Don't trust that the model will always follow your format instructions perfectly. Build validation into your pipeline.</p>
 
-          <h3>Log Everything</h3>
-          <p>Store the prompt, input, output, and any metadata for every call. When something goes wrong in production, you need to be able to investigate. Debugging AI failures without logs is nearly impossible.</p>
+<h3>Log Everything</h3>
+<p>Store the prompt, input, output, and any metadata for every call. When something goes wrong in production, you need to be able to investigate. Debugging AI failures without logs is nearly impossible.</p>
 
-          <h3>Monitor Drift</h3>
-          <p>Model behavior changes. Updates happen. What worked last month might not work as well today. Set up monitoring to catch when output quality degrades.</p>
+<h3>Monitor Drift</h3>
+<p>Model behavior changes. Updates happen. What worked last month might not work as well today. Set up monitoring to catch when output quality degrades.</p>
 
-          <h2>Keep Learning</h2>
+<h2>Keep Learning</h2>
 
-          <p>The best practices evolve as models improve. What required elaborate prompting a year ago now works with simple instructions. Stay current with model updates and new techniques.</p>
+<p>The best practices evolve as models improve. What required elaborate prompting a year ago now works with simple instructions. Stay current with model updates and new techniques.</p>
 
-          <p>Join communities where people share what's working. Our <a href="../../join/">Prompt Engineer Collective</a> has channels dedicated to prompt sharing and troubleshooting. Reading research papers helps too, though the practical insights often come from people building real applications.</p>
+<p>Join communities where people share what's working. Our <a href="/join/">Prompt Engineer Collective</a> has channels dedicated to prompt sharing and troubleshooting. Reading research papers helps too, though the practical insights often come from people building real applications.</p>
 
-          <p>And ship things. The fastest way to get better at prompt engineering is to prompt engineer. Build projects. Hit problems. Solve them. Repeat.</p>
+<p>And ship things. The fastest way to get better at prompt engineering is to prompt engineer. Build projects. Hit problems. Solve them. Repeat.</p>
 
           <!-- Author Bio -->
           <div class="author-bio">
@@ -298,7 +313,7 @@
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="../prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="../what-does-a-prompt-engineer-do/">What Does a Prompt Engineer Do?</a> | <a href="../gpt-4-prompt-engineering-freelance/">How to Freelance as a Prompt Engineer</a> | <a href="../../jobs/">AI Job Board</a>
+            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/what-does-a-prompt-engineer-do/">What Does a Prompt Engineer Do?</a> | <a href="/blog/gpt-4-prompt-engineering-freelance/">How to Freelance as a Prompt Engineer</a> | <a href="/jobs/">AI Job Board</a>
           </p>
         </div>
       </div>

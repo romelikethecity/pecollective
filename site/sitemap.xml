@@ -49,6 +49,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/best-prompt-engineering-courses/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/best-vector-databases/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/claude-vs-chatgpt-coding/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -85,7 +97,19 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/best-ai-coding-assistants/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/pinecone-vs-weaviate/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/ai-salary-calculator/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -140,6 +164,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/blog/what-does-a-prompt-engineer-do/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/blog/how-to-become-prompt-engineer/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

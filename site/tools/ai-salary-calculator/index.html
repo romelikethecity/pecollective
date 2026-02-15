@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <title>AI Salary Calculator 2026 — Estimate Your AI/ML Salary | PE Collective</title>
+  <meta name="description" content="Free AI salary calculator based on 1,300+ job postings. Get personalized salary estimates for prompt engineer, AI engineer, ML engineer, and other AI roles by location and experience level.">
+
+  <link rel="canonical" href="https://pecollective.com/tools/ai-salary-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com/tools/ai-salary-calculator/">
+  <meta property="og:title" content="AI Salary Calculator 2026 — What Should You Earn?">
+  <meta property="og:description" content="Free salary calculator based on 1,300+ AI job postings. Personalized estimates by role, location, experience, and skills.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="AI Salary Calculator 2026 — What Should You Earn?">
+  <meta name="twitter:description" content="Free salary calculator based on 1,300+ AI job postings. Personalized estimates by role, location, experience, and skills.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pecollective.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://pecollective.com/tools/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Salary Calculator", "item": "https://pecollective.com/tools/ai-salary-calculator/"}
+    ]
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Salary Calculator",
+    "url": "https://pecollective.com/tools/ai-salary-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "PE Collective",
+      "url": "https://pecollective.com"
+    },
+    "description": "Free AI salary calculator based on analysis of 1,300+ job postings. Get personalized salary estimates for AI and ML roles."
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average prompt engineer salary in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based on PE Collective's analysis of 1,300+ job postings, the median prompt engineer salary in 2026 is $145,000 per year. Entry-level positions start around $90,000-$110,000, mid-level roles pay $120,000-$160,000, and senior prompt engineers earn $160,000-$250,000+."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do AI engineers make?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI engineers in 2026 earn between $130,000 and $320,000 depending on experience and location. The median is approximately $185,000. San Francisco and New York pay the highest, while remote roles typically offer 85-95% of top-market rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do prompt engineers make more than software engineers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At equivalent experience levels, prompt engineers typically earn 10-20% more than traditional software engineers. This premium reflects the specialized nature of the role and current talent scarcity. However, the gap is narrowing as more engineers develop AI skills."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What skills increase AI salary the most?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The highest-paying AI skills in 2026 are: RAG architecture experience (+15-20% salary premium), multi-agent system design (+15-25%), AI safety and red teaming (+10-20%), and production ML deployment (+10-15%). Python proficiency is table stakes and doesn't command a premium on its own."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* Calculator-specific styles */
+    .calc-page {
+      padding: var(--space-3xl) 0;
+      min-height: 60vh;
+    }
+
+    .calc-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    .calc-header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .calc-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .calc-header h1 { font-size: 1.75rem; }
+    }
+
+    .calc-header .lead {
+      color: var(--color-text-secondary);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .calc-header .data-note {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-sm);
+    }
+
+    /* Form */
+    .calc-form {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.02em;
+    }
+
+    .form-group select,
+    .form-group input {
+      background: var(--color-bg-darker);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      color: var(--color-text-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      padding: 12px 16px;
+      transition: border-color var(--transition-fast);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23a8c5cc'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+    }
+
+    .form-group select option {
+      background: var(--color-bg-darker);
+      color: var(--color-text-primary);
+    }
+
+    /* Skills checkboxes */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-sm);
+    }
+
+    .skill-checkbox {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      cursor: pointer;
+      padding: 8px 12px;
+      background: var(--color-bg-darker);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    .skill-checkbox:hover {
+      border-color: var(--color-teal-light);
+    }
+
+    .skill-checkbox.selected {
+      border-color: var(--color-gold);
+      background: rgba(232, 168, 124, 0.1);
+      color: var(--color-text-primary);
+    }
+
+    .skill-checkbox input {
+      display: none;
+    }
+
+    .skill-check-icon {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--color-border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+      font-size: 0.75rem;
+    }
+
+    .skill-checkbox.selected .skill-check-icon {
+      background: var(--color-gold);
+      border-color: var(--color-gold);
+      color: var(--color-bg-darker);
+    }
+
+    /* Calculate button */
+    .calc-btn {
+      display: block;
+      width: 100%;
+      margin-top: var(--space-xl);
+      padding: 16px 32px;
+      background: var(--color-gold);
+      color: var(--color-bg-darker);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .calc-btn:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    /* Results */
+    .calc-results {
+      display: none;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .calc-results.visible {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .results-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .results-card__label {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .results-card__salary {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+
+    @media (max-width: 768px) {
+      .results-card__salary { font-size: 2.5rem; }
+    }
+
+    .results-card__range {
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      margin-bottom: var(--space-lg);
+    }
+
+    .results-card__context {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Breakdown grid */
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 600px) {
+      .breakdown-grid { grid-template-columns: 1fr; }
+    }
+
+    .breakdown-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      text-align: center;
+    }
+
+    .breakdown-card__label {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-xs);
+    }
+
+    .breakdown-card__value {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .breakdown-card__value.positive {
+      color: var(--color-success);
+    }
+
+    .breakdown-card__value.negative {
+      color: var(--color-error);
+    }
+
+    /* Factors list */
+    .factors-section {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .factors-section h3 {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-lg);
+      color: var(--color-text-primary);
+    }
+
+    .factor-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .factor-row:last-child {
+      border-bottom: none;
+    }
+
+    .factor-name {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .factor-impact {
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+
+    .factor-impact.positive { color: var(--color-success); }
+    .factor-impact.negative { color: var(--color-error); }
+    .factor-impact.neutral { color: var(--color-text-muted); }
+
+    /* Methodology note */
+    .methodology {
+      background: var(--color-bg-darker);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+
+    .methodology h3 {
+      font-size: 1rem;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .methodology p {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+    }
+
+    .methodology p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FAQ section */
+    .faq-section {
+      margin-top: var(--space-3xl);
+    }
+
+    .faq-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-xl);
+      text-align: center;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-lg) 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .faq-item summary {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      cursor: pointer;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-left: var(--space-md);
+    }
+
+    .faq-item[open] summary::after { content: '-'; }
+
+    .faq-item .faq-answer {
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-top: var(--space-md);
+      font-size: 0.9375rem;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-darker) 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      text-align: center;
+      margin: var(--space-3xl) 0;
+      border: 1px solid var(--color-border);
+    }
+
+    .cta-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .cta-box p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--color-gold);
+      color: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-gold:hover {
+      background: var(--color-gold-hover);
+      color: var(--color-bg-darker);
+      transform: translateY(-1px);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-lg);
+    }
+
+    .breadcrumb a {
+      color: var(--color-gold);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; height: 64px;">
+      <a href="/" class="header__logo" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--color-text-primary); font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.125rem;">
+        <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36" style="border-radius: 8px;">
+        PE Collective
+      </a>
+      <nav class="header__nav" style="display: flex; gap: 2rem; align-items: center;">
+        <a href="/jobs/" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500;">AI Jobs</a>
+        <a href="/salaries/" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500;">Salaries</a>
+        <a href="/tools/" style="color: var(--color-text-primary); text-decoration: none; font-size: 0.9375rem; font-weight: 600;">Tools</a>
+        <a href="/blog/" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500;">Blog</a>
+        <a href="/insights/" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500;">Market Intel</a>
+        <a href="/about/" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500;">About</a>
+      </nav>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <a href="/join/" style="padding: 8px 16px; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text-primary); text-decoration: none; font-weight: 500; font-size: 0.9375rem;">Join Community</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu" style="display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-primary);">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 999; opacity: 0; transition: opacity 0.3s;"></div>
+  <nav class="mobile-nav" style="position: fixed; top: 0; right: -100%; width: 280px; max-width: 85%; height: 100vh; background: var(--color-bg-darker); z-index: 1000; padding: 1.5rem; box-shadow: -4px 0 20px rgba(0,0,0,0.3); transition: right 0.3s; overflow-y: auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border);">
+      <span style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); font-family: 'Space Grotesk', sans-serif;">PE Collective</span>
+      <button class="mobile-nav-close" aria-label="Close menu" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-muted);">&#10005;</button>
+    </div>
+    <ul style="list-style: none; margin: 0 0 2rem 0; padding: 0;">
+      <li style="border-bottom: 1px solid rgba(255,255,255,0.05);"><a href="/jobs/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">AI Jobs</a></li>
+      <li style="border-bottom: 1px solid rgba(255,255,255,0.05);"><a href="/salaries/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">Salaries</a></li>
+      <li style="border-bottom: 1px solid rgba(255,255,255,0.05);"><a href="/tools/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">Tools</a></li>
+      <li style="border-bottom: 1px solid rgba(255,255,255,0.05);"><a href="/blog/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">Blog</a></li>
+      <li style="border-bottom: 1px solid rgba(255,255,255,0.05);"><a href="/insights/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">Market Intel</a></li>
+      <li><a href="/about/" style="display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--color-text-secondary); text-decoration: none;">About</a></li>
+    </ul>
+    <a href="/join/" style="display: block; width: 100%; padding: 1rem; background: var(--color-gold); color: var(--color-bg-darker); text-align: center; font-weight: 600; border-radius: 8px; text-decoration: none;">Join Community</a>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-container">
+
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; AI Salary Calculator
+      </div>
+
+      <div class="calc-header">
+        <h1>AI Salary Calculator</h1>
+        <p class="lead">Get a personalized salary estimate based on your role, experience, location, and skills. Updated for 2026.</p>
+        <p class="data-note">Based on PE Collective's analysis of 1,300+ AI and ML job postings</p>
+      </div>
+
+      <!-- Calculator Form -->
+      <div class="calc-form">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role">
+              <option value="">Select your role...</option>
+              <option value="prompt-engineer">Prompt Engineer</option>
+              <option value="ai-engineer">AI/ML Engineer</option>
+              <option value="llm-engineer">LLM Application Developer</option>
+              <option value="ai-agent-developer">AI Agent Developer</option>
+              <option value="ml-ops">ML Ops Engineer</option>
+              <option value="ai-research">AI Research Engineer</option>
+              <option value="ai-product-manager">AI Product Manager</option>
+              <option value="ai-safety">AI Safety / Red Team</option>
+              <option value="data-scientist-ai">Data Scientist (AI/ML focus)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Experience Level</label>
+            <select id="experience">
+              <option value="">Select experience...</option>
+              <option value="entry">Entry Level (0-2 years)</option>
+              <option value="mid">Mid Level (2-5 years)</option>
+              <option value="senior">Senior (5-8 years)</option>
+              <option value="staff">Staff / Principal (8+ years)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <select id="location">
+              <option value="">Select location...</option>
+              <option value="sf">San Francisco / Bay Area</option>
+              <option value="nyc">New York City</option>
+              <option value="seattle">Seattle</option>
+              <option value="austin">Austin / Texas</option>
+              <option value="boston">Boston</option>
+              <option value="la">Los Angeles</option>
+              <option value="remote-us">Remote (US-based)</option>
+              <option value="london">London</option>
+              <option value="toronto">Toronto / Canada</option>
+              <option value="other-us">Other US City</option>
+              <option value="other-intl">Other International</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="company-type">Company Type</label>
+            <select id="company-type">
+              <option value="">Select company type...</option>
+              <option value="big-tech">Big Tech (FAANG/MAANG)</option>
+              <option value="ai-startup">AI Startup (funded)</option>
+              <option value="ai-lab">AI Research Lab</option>
+              <option value="enterprise">Enterprise / Fortune 500</option>
+              <option value="mid-market">Mid-Market SaaS</option>
+              <option value="agency">Agency / Consultancy</option>
+              <option value="early-startup">Early-Stage Startup</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Skills (select all that apply)</label>
+            <div class="skills-grid" id="skills-grid">
+              <label class="skill-checkbox" data-skill="python">
+                <input type="checkbox" value="python">
+                <span class="skill-check-icon"></span>
+                Python
+              </label>
+              <label class="skill-checkbox" data-skill="rag">
+                <input type="checkbox" value="rag">
+                <span class="skill-check-icon"></span>
+                RAG Architecture
+              </label>
+              <label class="skill-checkbox" data-skill="fine-tuning">
+                <input type="checkbox" value="fine-tuning">
+                <span class="skill-check-icon"></span>
+                Fine-tuning
+              </label>
+              <label class="skill-checkbox" data-skill="agents">
+                <input type="checkbox" value="agents">
+                <span class="skill-check-icon"></span>
+                Multi-Agent Systems
+              </label>
+              <label class="skill-checkbox" data-skill="langchain">
+                <input type="checkbox" value="langchain">
+                <span class="skill-check-icon"></span>
+                LangChain / LlamaIndex
+              </label>
+              <label class="skill-checkbox" data-skill="pytorch">
+                <input type="checkbox" value="pytorch">
+                <span class="skill-check-icon"></span>
+                PyTorch / TensorFlow
+              </label>
+              <label class="skill-checkbox" data-skill="cloud">
+                <input type="checkbox" value="cloud">
+                <span class="skill-check-icon"></span>
+                Cloud (AWS/GCP/Azure)
+              </label>
+              <label class="skill-checkbox" data-skill="evaluation">
+                <input type="checkbox" value="evaluation">
+                <span class="skill-check-icon"></span>
+                LLM Evaluation
+              </label>
+              <label class="skill-checkbox" data-skill="safety">
+                <input type="checkbox" value="safety">
+                <span class="skill-check-icon"></span>
+                AI Safety / Red Teaming
+              </label>
+              <label class="skill-checkbox" data-skill="vector-db">
+                <input type="checkbox" value="vector-db">
+                <span class="skill-check-icon"></span>
+                Vector Databases
+              </label>
+              <label class="skill-checkbox" data-skill="mlops">
+                <input type="checkbox" value="mlops">
+                <span class="skill-check-icon"></span>
+                MLOps / Kubernetes
+              </label>
+              <label class="skill-checkbox" data-skill="research">
+                <input type="checkbox" value="research">
+                <span class="skill-check-icon"></span>
+                Research / Publications
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button class="calc-btn" id="calculate-btn">Calculate My Salary Estimate</button>
+      </div>
+
+      <!-- Results Section -->
+      <div class="calc-results" id="results">
+
+        <div class="results-card">
+          <div class="results-card__label">Estimated Annual Salary</div>
+          <div class="results-card__salary" id="result-salary">$185,000</div>
+          <div class="results-card__range" id="result-range">Range: $160,000 - $220,000</div>
+          <div class="results-card__context" id="result-context">Based on Senior AI/ML Engineer roles in San Francisco</div>
+        </div>
+
+        <div class="breakdown-grid">
+          <div class="breakdown-card">
+            <div class="breakdown-card__label">Location Adjustment</div>
+            <div class="breakdown-card__value" id="loc-adjust">+0%</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-card__label">Skills Premium</div>
+            <div class="breakdown-card__value" id="skill-adjust">+0%</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-card__label">Company Type</div>
+            <div class="breakdown-card__value" id="company-adjust">+0%</div>
+          </div>
+        </div>
+
+        <div class="factors-section">
+          <h3>How We Calculated This</h3>
+          <div id="factors-list"></div>
+        </div>
+
+        <div class="methodology">
+          <h3>Methodology</h3>
+          <p>This calculator uses salary data from PE Collective's database of 1,300+ AI and ML job postings collected between December 2025 and February 2026. We analyze base salary ranges by role, experience level, and location, then apply adjustments for company type and in-demand skills.</p>
+          <p>Salary figures represent base compensation only. Total compensation at Big Tech and well-funded startups can be 30-60% higher when including equity, bonuses, and benefits. International salaries are converted to USD equivalent.</p>
+          <p>These estimates are directional. Your actual offer depends on negotiation, company stage, funding, team budget, and dozens of other factors we can't measure from a job posting.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is the average prompt engineer salary in 2026?</summary>
+          <div class="faq-answer">
+            <p>Based on PE Collective's analysis of 1,300+ job postings, the median prompt engineer salary in 2026 is $145,000 per year. Entry-level positions start around $90,000-$110,000, mid-level roles pay $120,000-$160,000, and senior prompt engineers earn $160,000-$250,000+. San Francisco and New York pay the highest, with remote roles typically coming in 5-15% lower than top-market rates.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much do AI engineers make compared to software engineers?</summary>
+          <div class="faq-answer">
+            <p>AI engineers earn roughly 10-20% more than traditional software engineers at the same experience level. A mid-level software engineer in SF might earn $160,000-$200,000, while a mid-level AI engineer at the same company earns $180,000-$230,000. This premium reflects specialized skills in ML, LLMs, and production AI systems that are in short supply relative to demand.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What skills increase my AI salary the most?</summary>
+          <div class="faq-answer">
+            <p>The highest-premium skills in 2026 AI roles are: multi-agent system design (+15-25% premium), RAG architecture experience (+15-20%), AI safety and red teaming (+10-20%), and production ML deployment experience (+10-15%). Python is table stakes and doesn't command a premium on its own. Research publications and fine-tuning experience also carry meaningful premiums, especially at AI research labs.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does this calculator include equity and bonuses?</summary>
+          <div class="faq-answer">
+            <p>No, this calculator estimates base salary only. Total compensation varies dramatically by company type. At Big Tech companies, equity and bonuses can add 30-60% on top of base. Well-funded AI startups may offer significant equity (though its value is uncertain). Enterprise companies lean heavier on base salary with smaller bonus percentages. When comparing offers, always look at total comp, not just base.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Want real salary data?</h3>
+        <p>Browse actual AI job postings with verified salary ranges on PE Collective.</p>
+        <a href="/jobs/" class="btn-gold">Browse AI Jobs &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: var(--color-bg-darker); border-top: 1px solid var(--color-border); padding: 3rem 0 1.5rem; margin-top: 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--color-text-muted); flex-wrap: wrap; gap: 1rem;">
+      <span>&copy; 2026 <a href="/" style="color: var(--color-text-muted); text-decoration: none;">PE Collective</a></span>
+      <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="/jobs/" style="color: var(--color-text-muted); text-decoration: none;">AI Jobs</a>
+        <a href="/salaries/" style="color: var(--color-text-muted); text-decoration: none;">Salaries</a>
+        <a href="/tools/" style="color: var(--color-text-muted); text-decoration: none;">Tools</a>
+        <a href="/blog/" style="color: var(--color-text-muted); text-decoration: none;">Blog</a>
+        <a href="/glossary/" style="color: var(--color-text-muted); text-decoration: none;">Glossary</a>
+        <a href="/insights/" style="color: var(--color-text-muted); text-decoration: none;">Market Intel</a>
+        <a href="/about/" style="color: var(--color-text-muted); text-decoration: none;">About</a>
+        <a href="/join/" style="color: var(--color-text-muted); text-decoration: none;">Community</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // =========================================================================
+    // SALARY DATA — Based on PE Collective's analysis of 1,300+ job postings
+    // =========================================================================
+
+    // Base salaries by role (median) — represents mid-level in average US market
+    var BASE_SALARIES = {
+      'prompt-engineer':      { base: 140000, p25: 110000, p75: 175000 },
+      'ai-engineer':          { base: 175000, p25: 140000, p75: 220000 },
+      'llm-engineer':         { base: 160000, p25: 130000, p75: 200000 },
+      'ai-agent-developer':   { base: 180000, p25: 145000, p75: 230000 },
+      'ml-ops':               { base: 165000, p25: 135000, p75: 210000 },
+      'ai-research':          { base: 195000, p25: 155000, p75: 260000 },
+      'ai-product-manager':   { base: 170000, p25: 140000, p75: 215000 },
+      'ai-safety':            { base: 190000, p25: 150000, p75: 250000 },
+      'data-scientist-ai':    { base: 155000, p25: 120000, p75: 195000 }
+    };
+
+    var ROLE_LABELS = {
+      'prompt-engineer': 'Prompt Engineer',
+      'ai-engineer': 'AI/ML Engineer',
+      'llm-engineer': 'LLM Application Developer',
+      'ai-agent-developer': 'AI Agent Developer',
+      'ml-ops': 'ML Ops Engineer',
+      'ai-research': 'AI Research Engineer',
+      'ai-product-manager': 'AI Product Manager',
+      'ai-safety': 'AI Safety / Red Team',
+      'data-scientist-ai': 'Data Scientist (AI/ML)'
+    };
+
+    // Experience multipliers (applied to base)
+    var EXP_MULTIPLIERS = {
+      'entry':  { mult: 0.68, label: 'Entry Level' },
+      'mid':    { mult: 1.00, label: 'Mid Level' },
+      'senior': { mult: 1.30, label: 'Senior' },
+      'staff':  { mult: 1.65, label: 'Staff / Principal' }
+    };
+
+    // Location adjustments (percentage change from average US)
+    var LOCATION_ADJUSTMENTS = {
+      'sf':         { adj: 0.18, label: 'San Francisco / Bay Area' },
+      'nyc':        { adj: 0.12, label: 'New York City' },
+      'seattle':    { adj: 0.10, label: 'Seattle' },
+      'boston':      { adj: 0.06, label: 'Boston' },
+      'la':         { adj: 0.04, label: 'Los Angeles' },
+      'austin':     { adj: 0.00, label: 'Austin / Texas' },
+      'remote-us':  { adj: -0.05, label: 'Remote (US-based)' },
+      'london':     { adj: -0.08, label: 'London' },
+      'toronto':    { adj: -0.15, label: 'Toronto / Canada' },
+      'other-us':   { adj: -0.10, label: 'Other US City' },
+      'other-intl': { adj: -0.25, label: 'Other International' }
+    };
+
+    // Company type adjustments
+    var COMPANY_ADJUSTMENTS = {
+      'big-tech':      { adj: 0.15, label: 'Big Tech' },
+      'ai-lab':        { adj: 0.20, label: 'AI Research Lab' },
+      'ai-startup':    { adj: 0.05, label: 'AI Startup (funded)' },
+      'enterprise':    { adj: 0.00, label: 'Enterprise / Fortune 500' },
+      'mid-market':    { adj: -0.05, label: 'Mid-Market SaaS' },
+      'agency':        { adj: -0.12, label: 'Agency / Consultancy' },
+      'early-startup': { adj: -0.10, label: 'Early-Stage Startup' }
+    };
+
+    // Skill premiums (cumulative, but with diminishing returns)
+    var SKILL_PREMIUMS = {
+      'python':      { prem: 0.00, label: 'Python (table stakes)' },
+      'rag':         { prem: 0.06, label: 'RAG Architecture' },
+      'fine-tuning': { prem: 0.05, label: 'Fine-tuning' },
+      'agents':      { prem: 0.08, label: 'Multi-Agent Systems' },
+      'langchain':   { prem: 0.03, label: 'LangChain / LlamaIndex' },
+      'pytorch':     { prem: 0.04, label: 'PyTorch / TensorFlow' },
+      'cloud':       { prem: 0.03, label: 'Cloud (AWS/GCP/Azure)' },
+      'evaluation':  { prem: 0.04, label: 'LLM Evaluation' },
+      'safety':      { prem: 0.06, label: 'AI Safety / Red Teaming' },
+      'vector-db':   { prem: 0.03, label: 'Vector Databases' },
+      'mlops':       { prem: 0.04, label: 'MLOps / Kubernetes' },
+      'research':    { prem: 0.05, label: 'Research / Publications' }
+    };
+
+    // =========================================================================
+    // CALCULATION
+    // =========================================================================
+
+    function calculateSalary() {
+      var role = document.getElementById('role').value;
+      var exp = document.getElementById('experience').value;
+      var loc = document.getElementById('location').value;
+      var compType = document.getElementById('company-type').value;
+
+      // Validate
+      if (!role || !exp || !loc || !compType) {
+        alert('Please fill in all fields to get your salary estimate.');
+        return;
+      }
+
+      // Get selected skills
+      var selectedSkills = [];
+      var checkboxes = document.querySelectorAll('.skill-checkbox input:checked');
+      checkboxes.forEach(function(cb) { selectedSkills.push(cb.value); });
+
+      // 1. Base salary for role
+      var roleData = BASE_SALARIES[role];
+      var baseSalary = roleData.base;
+
+      // 2. Experience multiplier
+      var expData = EXP_MULTIPLIERS[exp];
+      var afterExp = baseSalary * expData.mult;
+
+      // 3. Location adjustment
+      var locData = LOCATION_ADJUSTMENTS[loc];
+      var locAdj = locData.adj;
+      var afterLoc = afterExp * (1 + locAdj);
+
+      // 4. Company type adjustment
+      var compData = COMPANY_ADJUSTMENTS[compType];
+      var compAdj = compData.adj;
+      var afterComp = afterLoc * (1 + compAdj);
+
+      // 5. Skills premium (with diminishing returns after 3 skills)
+      var rawSkillPremium = 0;
+      var skillFactors = [];
+      selectedSkills.forEach(function(skill) {
+        var sd = SKILL_PREMIUMS[skill];
+        if (sd) {
+          rawSkillPremium += sd.prem;
+          if (sd.prem > 0) {
+            skillFactors.push({ name: sd.label, impact: '+' + Math.round(sd.prem * 100) + '%' });
+          } else {
+            skillFactors.push({ name: sd.label, impact: 'Base requirement' });
+          }
+        }
+      });
+
+      // Diminishing returns: cap effective skill premium
+      var effectiveSkillPremium = rawSkillPremium;
+      if (rawSkillPremium > 0.15) {
+        effectiveSkillPremium = 0.15 + (rawSkillPremium - 0.15) * 0.5;
+      }
+      if (effectiveSkillPremium > 0.25) {
+        effectiveSkillPremium = 0.25;
+      }
+
+      var finalSalary = afterComp * (1 + effectiveSkillPremium);
+
+      // Calculate range (p25 and p75 scaled similarly)
+      var rangeMultiplier = expData.mult * (1 + locAdj) * (1 + compAdj) * (1 + effectiveSkillPremium);
+      var lowSalary = roleData.p25 * rangeMultiplier / 1.0; // p25 already lower
+      var highSalary = roleData.p75 * rangeMultiplier / 1.0;
+
+      // Round to nearest 5K
+      finalSalary = Math.round(finalSalary / 5000) * 5000;
+      lowSalary = Math.round(lowSalary / 5000) * 5000;
+      highSalary = Math.round(highSalary / 5000) * 5000;
+
+      // =====================================================================
+      // DISPLAY RESULTS
+      // =====================================================================
+
+      document.getElementById('result-salary').textContent = '$' + finalSalary.toLocaleString();
+      document.getElementById('result-range').textContent = 'Range: $' + lowSalary.toLocaleString() + ' - $' + highSalary.toLocaleString();
+      document.getElementById('result-context').textContent = 'Based on ' + expData.label + ' ' + ROLE_LABELS[role] + ' roles in ' + locData.label;
+
+      // Location adjustment display
+      var locEl = document.getElementById('loc-adjust');
+      var locPct = Math.round(locAdj * 100);
+      locEl.textContent = (locPct >= 0 ? '+' : '') + locPct + '%';
+      locEl.className = 'breakdown-card__value ' + (locPct > 0 ? 'positive' : locPct < 0 ? 'negative' : '');
+
+      // Skills premium display
+      var skillEl = document.getElementById('skill-adjust');
+      var skillPct = Math.round(effectiveSkillPremium * 100);
+      skillEl.textContent = (skillPct >= 0 ? '+' : '') + skillPct + '%';
+      skillEl.className = 'breakdown-card__value ' + (skillPct > 0 ? 'positive' : '');
+
+      // Company adjustment display
+      var compEl = document.getElementById('company-adjust');
+      var compPct = Math.round(compAdj * 100);
+      compEl.textContent = (compPct >= 0 ? '+' : '') + compPct + '%';
+      compEl.className = 'breakdown-card__value ' + (compPct > 0 ? 'positive' : compPct < 0 ? 'negative' : '');
+
+      // Build factors breakdown
+      var factorsHtml = '';
+
+      factorsHtml += '<div class="factor-row"><span class="factor-name">Base salary (' + ROLE_LABELS[role] + ', mid-level)</span><span class="factor-impact neutral">$' + baseSalary.toLocaleString() + '</span></div>';
+
+      var expPct = Math.round((expData.mult - 1) * 100);
+      var expClass = expPct > 0 ? 'positive' : expPct < 0 ? 'negative' : 'neutral';
+      factorsHtml += '<div class="factor-row"><span class="factor-name">Experience: ' + expData.label + '</span><span class="factor-impact ' + expClass + '">' + (expPct >= 0 ? '+' : '') + expPct + '%</span></div>';
+
+      var locClass = locPct > 0 ? 'positive' : locPct < 0 ? 'negative' : 'neutral';
+      factorsHtml += '<div class="factor-row"><span class="factor-name">Location: ' + locData.label + '</span><span class="factor-impact ' + locClass + '">' + (locPct >= 0 ? '+' : '') + locPct + '%</span></div>';
+
+      var compClass = compPct > 0 ? 'positive' : compPct < 0 ? 'negative' : 'neutral';
+      factorsHtml += '<div class="factor-row"><span class="factor-name">Company: ' + compData.label + '</span><span class="factor-impact ' + compClass + '">' + (compPct >= 0 ? '+' : '') + compPct + '%</span></div>';
+
+      if (skillFactors.length > 0) {
+        skillFactors.forEach(function(sf) {
+          var sfClass = sf.impact.indexOf('+') === 0 ? 'positive' : 'neutral';
+          factorsHtml += '<div class="factor-row"><span class="factor-name">' + sf.name + '</span><span class="factor-impact ' + sfClass + '">' + sf.impact + '</span></div>';
+        });
+        if (rawSkillPremium > 0.15) {
+          factorsHtml += '<div class="factor-row"><span class="factor-name">Diminishing returns applied</span><span class="factor-impact neutral">Skills capped at +' + skillPct + '%</span></div>';
+        }
+      }
+
+      document.getElementById('factors-list').innerHTML = factorsHtml;
+
+      // Show results
+      var resultsEl = document.getElementById('results');
+      resultsEl.classList.add('visible');
+      resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // =========================================================================
+    // EVENT LISTENERS
+    // =========================================================================
+
+    document.getElementById('calculate-btn').addEventListener('click', calculateSalary);
+
+    // Skill checkbox toggle
+    document.querySelectorAll('.skill-checkbox').forEach(function(label) {
+      label.addEventListener('click', function(e) {
+        e.preventDefault();
+        var cb = this.querySelector('input');
+        cb.checked = !cb.checked;
+        this.classList.toggle('selected', cb.checked);
+        var icon = this.querySelector('.skill-check-icon');
+        icon.textContent = cb.checked ? '\u2713' : '';
+      });
+    });
+
+    // Mobile nav
+    var menuBtn = document.querySelector('.mobile-menu-btn');
+    var closeBtn = document.querySelector('.mobile-nav-close');
+    var overlay = document.querySelector('.mobile-nav-overlay');
+    var mobileNav = document.querySelector('.mobile-nav');
+
+    function openMobileNav() {
+      mobileNav.style.right = '0';
+      overlay.style.display = 'block';
+      overlay.style.pointerEvents = 'auto';
+      setTimeout(function() { overlay.style.opacity = '1'; }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      mobileNav.style.right = '-100%';
+      overlay.style.opacity = '0';
+      setTimeout(function() { overlay.style.pointerEvents = 'none'; }, 300);
+      document.body.style.overflow = '';
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', openMobileNav);
+    if (closeBtn) closeBtn.addEventListener('click', closeMobileNav);
+    if (overlay) overlay.addEventListener('click', closeMobileNav);
+
+    // Show mobile menu button at 768px
+    var mql = window.matchMedia('(max-width: 768px)');
+    function handleMobile(e) {
+      if (menuBtn) menuBtn.style.display = e.matches ? 'block' : 'none';
+      var headerNav = document.querySelector('.header__nav');
+      if (headerNav) headerNav.style.display = e.matches ? 'none' : 'flex';
+      var headerBtns = document.querySelector('.header__container > div:last-of-type');
+      // Hide join button on mobile (it's in mobile nav)
+    }
+    mql.addEventListener('change', handleMobile);
+    handleMobile(mql);
+  })();
+  </script>
+  <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Best Vector Databases for AI (2026) | PE Collective</title>
+    <meta name="description" content="Comparing the 5 best vector databases for AI applications in 2026: Pinecone, Weaviate, Chroma, Qdrant, and Milvus. Pricing, performance, and honest tradeoffs.">
+    <link rel="canonical" href="https://pecollective.com/tools/best-vector-databases/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/best-vector-databases/">
+    <meta property="og:title" content="Best Vector Databases for AI (2026)">
+    <meta property="og:description" content="Comparing the 5 best vector databases for AI applications in 2026: Pinecone, Weaviate, Chroma, Qdrant, and Milvus. Pricing, performance, and honest tradeoffs.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Best Vector Databases for AI (2026)">
+    <meta name="twitter:description" content="Comparing the 5 best vector databases for AI applications in 2026: Pinecone, Weaviate, Chroma, Qdrant, and Milvus. Pricing, performance, and honest tradeoffs.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://pecollective.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Best Vector Databases for AI (2026)",
+      "item": "https://pecollective.com/tools/best-vector-databases/"
+    }
+  ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a dedicated vector database, or can I use pgvector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most applications with under 1M vectors and simple similarity search, pgvector is fine. It keeps your stack simple since you're already using Postgres. Switch to a dedicated vector database when you need: filtered search performance, hybrid search, more than 5M vectors, or sub-10ms query latency at scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many vectors can the free tiers handle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pinecone's free tier supports 100K vectors. Chroma, Qdrant, Weaviate, and Milvus are open source with no vector limits when self-hosted (limited only by your hardware). For cloud offerings, Qdrant Cloud and Weaviate Cloud start around $25/mo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which vector database is best for RAG applications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most RAG pipelines, Weaviate or Pinecone are the strongest choices. Weaviate's hybrid search (vector + keyword) improves retrieval quality for documents where exact keyword matches matter. Pinecone is simpler to operate. If you're still prototyping your RAG pipeline, start with Chroma locally and migrate later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch vector databases later without rebuilding everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switching is possible but not painless. You'll need to re-embed and re-index your data, update your query code, and adjust any filtering logic. The embedding vectors themselves are portable since they're just arrays of numbers. Plan for 1-2 weeks of migration work for a production system. This is why starting with the right choice matters."
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- ItemList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best Vector Databases for AI (2026)",
+  "description": "Comparing the 5 best vector databases for AI applications in 2026: Pinecone, Weaviate, Chroma, Qdrant, and Milvus. Pricing, performance, and honest tradeoffs.",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pinecone",
+      "url": "https://www.pinecone.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Weaviate",
+      "url": "https://weaviate.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chroma",
+      "url": "https://www.trychroma.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Qdrant",
+      "url": "https://qdrant.tech"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Milvus",
+      "url": "https://milvus.io"
+    }
+  ]
+}
+    </script>
+    
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    
+    <style>
+    /* Best-of page layout */
+    .bestof-header {
+      padding: 60px 0 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bestof-header .page-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .bestof-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .bestof-header .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+    .bestof-header .date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 12px;
+    }
+
+    /* Intro */
+    .bestof-intro {
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+    .bestof-intro p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1.0625rem;
+    }
+
+    /* Quick picks summary */
+    .quick-picks {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--teal-light);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .quick-picks h2 {
+      font-size: 1.25rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .quick-pick {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .quick-pick:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .quick-pick__number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      width: 32px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .quick-pick__info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .quick-pick__name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+    .quick-pick__award {
+      display: inline-block;
+      padding: 2px 10px;
+      background: rgba(232, 168, 124, 0.15);
+      color: var(--gold);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .quick-pick__price {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /* Pick cards */
+    .picks-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .picks-section > h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+    .pick-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+    }
+    .pick-card:hover {
+      border-color: var(--teal-light);
+    }
+    .pick-card__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .pick-card__rank {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .pick-card__title-group {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      min-width: 0;
+    }
+    .pick-card__name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .pick-card__award-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--gold);
+      color: var(--bg-darker);
+      border-radius: 6px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .pick-card__price {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      flex-shrink: 0;
+    }
+    .pick-card__body {
+      padding: 24px 28px;
+    }
+    .pick-card__body > p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .pick-card__detail {
+      padding: 12px 16px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 0.9375rem;
+    }
+    .pick-card__detail strong {
+      color: var(--success);
+    }
+    .pick-card__caveat strong {
+      color: var(--warning);
+    }
+    .pick-card__footer {
+      padding: 0 28px 24px;
+    }
+
+    /* Methodology */
+    .methodology-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .methodology-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+    .methodology-section p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Related links */
+    .related-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .related-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+    .related-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+    .related-link {
+      display: block;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .related-link:hover {
+      border-color: var(--teal-light);
+      background: var(--bg-card-hover);
+      transform: translateY(-1px);
+      color: var(--gold-light);
+    }
+
+    /* FAQ section */
+    .faq-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .faq-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin-bottom: 8px;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      color: var(--text-primary);
+      list-style: none;
+      padding: 4px 0;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::before {
+      content: '+';
+      display: inline-block;
+      width: 24px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    .faq-item[open] summary::before {
+      content: '\2212';
+    }
+    .faq-item p {
+      margin-top: 8px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-left: 24px;
+    }
+
+    /* Newsletter CTA */
+    .newsletter-cta {
+      max-width: 600px;
+      margin: 48px auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .newsletter-cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .newsletter-cta form {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .newsletter-cta input {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-darker);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      width: 240px;
+    }
+    .newsletter-cta button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gold);
+      color: var(--bg-darker);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .newsletter-cta button:hover {
+      background: var(--gold-hover);
+    }
+
+    /* Disclosure */
+    .affiliate-disclosure {
+      max-width: 800px;
+      margin: 0 auto 32px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding: 12px 16px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .bestof-header h1 {
+        font-size: 1.75rem;
+      }
+      .quick-pick {
+        flex-wrap: wrap;
+      }
+      .quick-pick__price {
+        width: 100%;
+        text-align: left;
+        padding-left: 48px;
+      }
+      .pick-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .pick-card__price {
+        font-size: 0.875rem;
+      }
+      .related-links-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-cta form {
+        flex-direction: column;
+        align-items: center;
+      }
+      .newsletter-cta input {
+        width: 100%;
+      }
+    }
+    </style>
+    
+
+    <main>
+      <article>
+        <div class="bestof-header">
+          <div class="page-label">Best Of Roundup</div>
+          <h1>Best Vector Databases for AI (2026)</h1>
+          <p class="subtitle">Pinecone, Weaviate, Chroma, Qdrant, and Milvus compared. Which one fits your RAG pipeline?</p>
+          <p class="date">Last updated: February 2026</p>
+        </div>
+
+        <div class="bestof-intro">
+            <p>Every RAG pipeline needs a vector database. The question isn't whether you need one. It's which one won't become a headache at 3 AM when your similarity search starts returning garbage results.</p>
+            <p>The market has matured since the early days when Pinecone was basically the only managed option. Now you've got serious open-source contenders, cloud-managed alternatives, and specialized engines built for different scale points. The right choice depends on where you are: prototyping, early production, or serving millions of queries.</p>
+            <p>We tested all five against the same workloads: 1M vectors at 1536 dimensions (OpenAI embedding size), mixed read/write patterns, and filtered search queries. Here's how they stack up.</p>
+        </div>
+
+        <div class="quick-picks">
+          <h2>Our Top Picks</h2>
+          
+              <div class="quick-pick">
+                <span class="quick-pick__number">1</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Pinecone</span>
+                  <span class="quick-pick__award">Best Managed</span>
+                </div>
+                <span class="quick-pick__price">Free tier (100K vectors) / Usage-based from $0.33/hr</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">2</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Weaviate</span>
+                  <span class="quick-pick__award">Best Open Source</span>
+                </div>
+                <span class="quick-pick__price">Free (self-hosted) / Cloud from $25/mo</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">3</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Chroma</span>
+                  <span class="quick-pick__award">Best for Prototyping</span>
+                </div>
+                <span class="quick-pick__price">Free (open source)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">4</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Qdrant</span>
+                  <span class="quick-pick__award">Best Performance</span>
+                </div>
+                <span class="quick-pick__price">Free (self-hosted) / Cloud from $25/mo</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">5</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Milvus</span>
+                  <span class="quick-pick__award">Best for Scale</span>
+                </div>
+                <span class="quick-pick__price">Free (open source) / Zilliz Cloud managed option</span>
+              </div>
+        </div>
+
+        <div class="picks-section">
+          <h2>Detailed Reviews</h2>
+          
+          <div class="pick-card" id="pick-1">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#1</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Pinecone</h3>
+                <span class="pick-card__award-badge">Best Managed</span>
+              </div>
+              <div class="pick-card__price">Free tier (100K vectors) / Usage-based from $0.33/hr</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Pinecone pioneered the managed vector database category and it shows. Serverless mode means you don't think about infrastructure at all. Queries are fast, the API is simple, and it handles scaling automatically. The free tier gives you 100K vectors, which is enough to build and test a real RAG application before spending anything.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Teams that want zero infrastructure management. If you don't have a dedicated ops person and want your vector database to just work, Pinecone is the safest bet.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Costs can spike unpredictably at scale. You can't self-host, so you're locked into their cloud. Filtering performance lags behind Qdrant on complex metadata queries. And if Pinecone has an outage, there's nothing you can do but wait.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://www.pinecone.io" target="_blank" rel="noopener" class="btn btn-gold">Visit Pinecone &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-2">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#2</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Weaviate</h3>
+                <span class="pick-card__award-badge">Best Open Source</span>
+              </div>
+              <div class="pick-card__price">Free (self-hosted) / Cloud from $25/mo</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Weaviate gives you the most flexibility of any vector database. You can self-host it, use their cloud, or run it embedded. Hybrid search (combining vector similarity with keyword BM25) works out of the box. Built-in vectorization means you can send raw text and let Weaviate handle the embedding step. The GraphQL API is well-designed.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Teams that want full control over their infrastructure. Hybrid search (vector + keyword) use cases. Organizations with compliance requirements that mandate self-hosting.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Self-hosting requires real ops work: monitoring, scaling, backups. The learning curve is steeper than Pinecone. Resource consumption is higher than Qdrant for equivalent workloads. Cloud pricing is less transparent than competitors.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://weaviate.io" target="_blank" rel="noopener" class="btn btn-gold">Visit Weaviate &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-3">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#3</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Chroma</h3>
+                <span class="pick-card__award-badge">Best for Prototyping</span>
+              </div>
+              <div class="pick-card__price">Free (open source)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Chroma is the SQLite of vector databases. Install it with pip, and you're running queries in under five minutes. It stores everything locally by default, which makes development and testing dead simple. The Python API is intuitive and well-documented. For prototyping RAG applications or running local experiments, nothing gets you started faster.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Rapid prototyping, local development, and small-to-medium production workloads (under 1M vectors). Data scientists who want to experiment without spinning up infrastructure.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Not built for large-scale production. Performance degrades noticeably past 1M vectors. No built-in replication or high availability. You'll probably outgrow it and need to migrate to something else.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://www.trychroma.com" target="_blank" rel="noopener" class="btn btn-gold">Visit Chroma &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-4">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#4</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Qdrant</h3>
+                <span class="pick-card__award-badge">Best Performance</span>
+              </div>
+              <div class="pick-card__price">Free (self-hosted) / Cloud from $25/mo</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Qdrant is written in Rust and it shows in the benchmarks. It consistently posts the fastest query times in our testing, especially for filtered searches where you're combining vector similarity with metadata conditions. The payload filtering system is more powerful than any competitor. Memory efficiency is excellent, so you get more vectors per dollar of RAM.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Performance-critical applications. Workloads with complex filtering requirements. Teams that need to maximize vectors-per-dollar on their infrastructure budget.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Smaller community than Weaviate or Pinecone. Documentation has gaps, especially for advanced deployment patterns. The cloud offering is newer and less battle-tested than Pinecone's managed service.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://qdrant.tech" target="_blank" rel="noopener" class="btn btn-gold">Visit Qdrant &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-5">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#5</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Milvus</h3>
+                <span class="pick-card__award-badge">Best for Scale</span>
+              </div>
+              <div class="pick-card__price">Free (open source) / Zilliz Cloud managed option</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Milvus was built from the ground up for billion-scale vector workloads. If you're storing hundreds of millions or billions of vectors, Milvus handles it with a distributed architecture that no other open-source option matches. It supports multiple index types (IVF, HNSW, DiskANN) so you can tune the speed/accuracy/memory tradeoff for your specific use case.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Large-scale deployments with 100M+ vectors. Organizations that need distributed vector search across multiple nodes. Teams already running Kubernetes who want a cloud-native vector database.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Overkill for anything under 10M vectors. The operational complexity is significant: it needs etcd, MinIO, and Pulsar/Kafka as dependencies. Getting a development environment running locally takes real effort compared to Chroma or Qdrant.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://milvus.io" target="_blank" rel="noopener" class="btn btn-gold">Visit Milvus &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology-section">
+          <h2>How We Tested</h2>
+          <p>We benchmarked each database with 1M vectors at 1536 dimensions using OpenAI's text-embedding-3-small output. Tests covered insertion speed, query latency (p50 and p99), filtered search performance, and memory usage. We also evaluated developer experience: documentation quality, SDK maturity, and time-to-first-query for a new developer.</p>
+        </div>
+
+        <div class="related-section">
+          <h2>Related Comparisons &amp; Guides</h2>
+          <div class="related-links-grid">
+            
+              <a href="/tools/pinecone-vs-weaviate/" class="related-link">Pinecone vs Weaviate: Full Comparison &rarr;</a>
+              <a href="/glossary/vector-database/" class="related-link">What Is a Vector Database? &rarr;</a>
+              <a href="/glossary/rag/" class="related-link">Retrieval-Augmented Generation (RAG) Explained &rarr;</a>
+              <a href="/glossary/embeddings/" class="related-link">Understanding Embeddings &rarr;</a>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          
+            <details class="faq-item">
+              <summary>Do I need a dedicated vector database, or can I use pgvector?</summary>
+              <p>For most applications with under 1M vectors and simple similarity search, pgvector is fine. It keeps your stack simple since you're already using Postgres. Switch to a dedicated vector database when you need: filtered search performance, hybrid search, more than 5M vectors, or sub-10ms query latency at scale.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How many vectors can the free tiers handle?</summary>
+              <p>Pinecone's free tier supports 100K vectors. Chroma, Qdrant, Weaviate, and Milvus are open source with no vector limits when self-hosted (limited only by your hardware). For cloud offerings, Qdrant Cloud and Weaviate Cloud start around $25/mo.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Which vector database is best for RAG applications?</summary>
+              <p>For most RAG pipelines, Weaviate or Pinecone are the strongest choices. Weaviate's hybrid search (vector + keyword) improves retrieval quality for documents where exact keyword matches matter. Pinecone is simpler to operate. If you're still prototyping your RAG pipeline, start with Chroma locally and migrate later.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I switch vector databases later without rebuilding everything?</summary>
+              <p>Switching is possible but not painless. You'll need to re-embed and re-index your data, update your query code, and adjust any filtering logic. The embedding vectors themselves are portable since they're just arrays of numbers. Plan for 1-2 weeks of migration work for a production system. This is why starting with the right choice matters.</p>
+            </details>
+        </div>
+
+        <div class="affiliate-disclosure">
+          <strong>Disclosure:</strong> Some links on this page may be affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. Our recommendations are based on real-world testing, not sponsorships.
+        </div>
+      </article>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>Get Tool Reviews in Your Inbox</h2>
+        <p>Weekly AI tool updates, new releases, and honest comparisons.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

@@ -10,11 +10,12 @@
 - **Total: 60 glossary terms live** (up from 35)
 
 ### Comparison Pages (create manually or via generator)
-- [ ] Cursor vs Windsurf → `/tools/cursor-vs-windsurf/`
-- [ ] LangChain vs LlamaIndex → `/tools/langchain-vs-llamaindex/`
-- [ ] Pinecone vs Weaviate → `/tools/pinecone-vs-weaviate/`
-- [ ] Claude vs ChatGPT for Coding → `/tools/claude-vs-chatgpt-coding/`
-- [ ] GitHub Copilot vs Amazon CodeWhisperer → `/tools/copilot-vs-codewhisperer/`
+- [x] Cursor vs Windsurf → `/tools/cursor-vs-windsurf/` (done)
+- [x] LangChain vs LlamaIndex → `/tools/langchain-vs-llamaindex/` (done)
+- [x] Pinecone vs Weaviate → `/tools/pinecone-vs-weaviate/` (done 2026-02-15)
+- [x] Claude vs ChatGPT for Coding → `/tools/claude-vs-chatgpt-coding/` (done 2026-02-15)
+- [x] GitHub Copilot vs Amazon Q Developer → `/tools/copilot-vs-codewhisperer/` (done 2026-02-15, updated name from CodeWhisperer)
+- **Total: 5 comparison pages live**
 
 ### Salary Page Expansion
 - [ ] Cross-filter pages: `/salaries/prompt-engineer/san-francisco/`

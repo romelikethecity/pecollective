@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Pinecone vs Weaviate: Which Vector Database Should You Choose? | PE Collective</title>
+    <meta name="description" content="Pinecone vs Weaviate: Compare pricing, performance, and features of the two leading vector databases for RAG and AI applications in 2026.">
+    <link rel="canonical" href="https://pecollective.com/tools/pinecone-vs-weaviate/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/pinecone-vs-weaviate/">
+    <meta property="og:title" content="Pinecone vs Weaviate: Which Vector Database Should You Choose?">
+    <meta property="og:description" content="Pinecone vs Weaviate: Compare pricing, performance, and features of the two leading vector databases for RAG and AI applications in 2026.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Pinecone vs Weaviate: Which Vector Database Should You Choose?">
+    <meta name="twitter:description" content="Pinecone vs Weaviate: Compare pricing, performance, and features of the two leading vector databases for RAG and AI applications in 2026.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://pecollective.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pinecone vs Weaviate",
+      "item": "https://pecollective.com/tools/pinecone-vs-weaviate/"
+    }
+  ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Pinecone better than Weaviate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your priorities. Pinecone is simpler to set up and manage with its fully serverless model. Weaviate offers more flexibility with hybrid search, self-hosting, and open-source access. For pure vector search with minimal ops, choose Pinecone. For hybrid search or self-hosted needs, choose Weaviate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I migrate from Pinecone to Weaviate or vice versa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but it requires re-indexing your vectors. Export your vectors and metadata from one system and import into the other. The embeddings themselves are model-dependent, not database-dependent, so they transfer directly. Plan for a few hours of migration work for most datasets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which vector database is cheaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At small scale, both have free tiers. At medium scale, Weaviate's self-hosted option is cheapest (just your compute costs). At large scale, Pinecone's serverless pricing can add up with high query volumes. Run cost estimates with your expected traffic before committing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a vector database for RAG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For production RAG systems, yes. While you can prototype with in-memory vectors or SQLite extensions, a purpose-built vector database handles indexing, scaling, filtering, and concurrent queries. Both Pinecone and Weaviate are designed for exactly this use case."
+      }
+    }
+  ]
+}
+    </script>
+    
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    
+    <style>
+    .comparison-header {
+      padding: 60px 0 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-header__tools {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .comparison-header__tool {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comparison-header__icon {
+      width: 60px;
+      height: 60px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .comparison-header__name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .comparison-header__vs {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .comparison-header h1 {
+      margin-top: 24px;
+      font-size: 2rem;
+    }
+    .comparison-header .subtitle {
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+    .quick-verdict {
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--teal-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px auto;
+      max-width: 800px;
+    }
+    .quick-verdict h2 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+    .quick-verdict p {
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .comparison-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .comparison-content h3 {
+      font-size: 1.125rem;
+      margin: 24px 0 8px;
+      color: var(--gold);
+    }
+    .comparison-content p {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table th {
+      background: var(--bg-card);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .comparison-table th:first-child { width: 35%; }
+    .comparison-table td { color: var(--text-secondary); }
+    .comparison-table tr:hover td { background: var(--bg-card); }
+    .comparison-table .winner {
+      color: var(--success);
+      font-weight: 600;
+    }
+    .section-divider {
+      margin: 48px 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .use-case-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .use-case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .use-case-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .use-case-card ul { list-style: none; padding: 0; }
+    .use-case-card li {
+      padding: 4px 0;
+      color: var(--text-secondary);
+    }
+    .cta-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .cta-comparison__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .cta-comparison__card h4 { margin-bottom: 8px; }
+    .cta-comparison__card p {
+      margin-bottom: 12px;
+      font-size: 0.9375rem;
+    }
+    .cta-comparison__card .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      background: var(--gold);
+      color: var(--bg-darker);
+      text-decoration: none;
+    }
+    .cta-comparison__card .btn:hover {
+      background: var(--gold-hover);
+    }
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding: 12px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .faq-section { max-width: 800px; margin: 0 auto; }
+    .faq-section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+    .newsletter-cta {
+      max-width: 600px;
+      margin: 48px auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .newsletter-cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .newsletter-cta form {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .newsletter-cta input {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-darker);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      width: 240px;
+    }
+    .newsletter-cta button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gold);
+      color: var(--bg-darker);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 700px) {
+      .use-case-cards, .cta-comparison { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 0.875rem; }
+      .comparison-table th, .comparison-table td { padding: 8px; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+    
+
+    <main>
+      <article>
+        <div class="comparison-header">
+          <div class="comparison-header__tools">
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">🌲</span>
+              <span class="comparison-header__name">Pinecone</span>
+            </div>
+            <span class="comparison-header__vs">VS</span>
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">🔷</span>
+              <span class="comparison-header__name">Weaviate</span>
+            </div>
+          </div>
+          <h1>Which Vector Database Should You Use?</h1>
+          <p class="subtitle">A practical comparison for building RAG systems and AI search applications</p>
+        </div>
+
+        <div class="quick-verdict">
+          <h2>Quick Verdict</h2>
+          <p><strong>Choose Pinecone if:</strong> You want a fully managed, serverless vector database with zero infrastructure overhead. Pinecone handles scaling, indexing, and operations so you can focus on your application logic.</p>
+          <p><strong>Choose Weaviate if:</strong> You want an open-source vector database with hybrid search capabilities, self-hosting options, and transparent pricing. Weaviate gives you full control over your data and deployment.</p>
+        </div>
+
+        <div class="comparison-content">
+          <h2>Feature Comparison</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Pinecone</th>
+                <th>Weaviate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Deployment Model</strong></td>
+                <td>Fully managed (serverless)</td>
+                <td>Cloud managed or self-hosted</td>
+              </tr>
+              <tr>
+                <td><strong>Open Source</strong></td>
+                <td>No (proprietary)</td>
+                <td class="winner">✓ Yes (BSD-3)</td>
+              </tr>
+              <tr>
+                <td><strong>Hybrid Search</strong></td>
+                <td>Vector only</td>
+                <td class="winner">✓ Vector + keyword combined</td>
+              </tr>
+              <tr>
+                <td><strong>Setup Complexity</strong></td>
+                <td class="winner">Minutes (API key only)</td>
+                <td>Minutes (cloud) or hours (self-hosted)</td>
+              </tr>
+              <tr>
+                <td><strong>Scaling</strong></td>
+                <td class="winner">Automatic (serverless)</td>
+                <td>Manual or managed</td>
+              </tr>
+              <tr>
+                <td><strong>Filtering</strong></td>
+                <td>Metadata filtering</td>
+                <td class="winner">Advanced filtering + GraphQL</td>
+              </tr>
+              <tr>
+                <td><strong>Data Privacy</strong></td>
+                <td>Cloud only</td>
+                <td class="winner">Self-host option</td>
+              </tr>
+              <tr>
+                <td><strong>Multi-tenancy</strong></td>
+                <td>Namespace-based</td>
+                <td class="winner">✓ Native multi-tenancy</td>
+              </tr>
+              <tr>
+                <td><strong>Free Tier</strong></td>
+                <td>~1M vectors</td>
+                <td>Sandbox cluster</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="section-divider">
+            <h2>Deep Dive: Where Each Tool Wins</h2>
+            
+          <div class="section-divider">
+            <h3>🌲 Pinecone Wins: Simplicity and Scale</h3>
+            <p>Pinecone's serverless model is its strongest selling point. You create an index, send vectors, and query them. No clusters to manage, no nodes to scale, no YAML configs to debug at 2 AM. For teams that want to build RAG applications without becoming database administrators, Pinecone removes the entire infrastructure layer.</p>
+            <p>Scaling is automatic and invisible. Whether you're storing 10,000 vectors or 10 million, Pinecone handles the infrastructure. You pay for what you use (read units, write units, storage) and never think about capacity planning.</p>
+            <p>The developer experience is also more polished. Pinecone's SDKs, documentation, and quickstart guides are consistently praised. If you've never worked with vector databases before, Pinecone has the shortest path from zero to working RAG system.</p>
+          </div>
+          <div class="section-divider">
+            <h3>🔷 Weaviate Wins: Flexibility and Hybrid Search</h3>
+            <p>Weaviate's hybrid search is a genuine differentiator. Instead of choosing between keyword search and vector search, Weaviate combines both in a single query. This matters because pure vector search sometimes misses exact matches (product SKUs, error codes, proper nouns) that keyword search catches instantly.</p>
+            <p>Being open source gives you options that Pinecone can't match. You can self-host on your own infrastructure for data sovereignty, run it locally during development, inspect the source code, and avoid vendor lock-in entirely. For regulated industries (healthcare, finance, government), the self-hosting option is often a hard requirement.</p>
+            <p>Native multi-tenancy is another Weaviate advantage. If you're building a SaaS product where each customer needs isolated data, Weaviate handles this at the database level rather than requiring application-level workarounds. At scale, this simplifies architecture significantly.</p>
+          </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Use Case Recommendations</h2>
+            <div class="use-case-cards">
+              <div class="use-case-card">
+                <h4>🌲 Use Pinecone For:</h4>
+                <ul>
+                  <li>→ Teams that want zero infrastructure management</li>
+                  <li>→ Rapid prototyping of RAG applications</li>
+                  <li>→ Serverless architectures</li>
+                  <li>→ Startups that need to move fast</li>
+                  <li>→ Applications where vector search alone is sufficient</li>
+                  <li>→ Projects prioritizing developer experience</li>
+                </ul>
+              </div>
+              <div class="use-case-card">
+                <h4>🔷 Use Weaviate For:</h4>
+                <ul>
+                  <li>→ Applications requiring hybrid (vector + keyword) search</li>
+                  <li>→ Regulated industries needing self-hosted deployment</li>
+                  <li>→ Multi-tenant SaaS platforms</li>
+                  <li>→ Teams that want open-source flexibility</li>
+                  <li>→ Cost-sensitive deployments at scale</li>
+                  <li>→ Projects requiring advanced filtering and GraphQL</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Pricing Breakdown</h2>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Pinecone</th>
+                  <th>Weaviate</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><strong>Free / Trial</strong></td>
+                <td>Starter (free tier)</td>
+                <td>Free sandbox cluster</td>
+              </tr>
+              <tr>
+                <td><strong>Individual</strong></td>
+                <td>Serverless: usage-based</td>
+                <td>Self-hosted (open source)</td>
+              </tr>
+              <tr>
+                <td><strong>Business</strong></td>
+                <td>Standard: from $50/mo</td>
+                <td>Cloud: ~$0.095/1M dims</td>
+              </tr>
+              <tr>
+                <td><strong>Enterprise</strong></td>
+                <td>Enterprise: from $500/mo</td>
+                <td>Custom pricing</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section-divider">
+            <h2>Our Recommendation</h2>
+            
+            <p><strong>For AI Engineers Building RAG:</strong> Start with Pinecone if you want the fastest path to a working system. The serverless model means you can have a RAG pipeline running in an afternoon. Switch to Weaviate if you need hybrid search, self-hosting, or hit Pinecone's pricing limits at scale.</p>
+            <p><strong>For Enterprise Teams:</strong> Weaviate's self-hosting option and open-source license make compliance conversations easier. If your security team has concerns about sending data to a third-party managed service, Weaviate on your own infrastructure removes that objection entirely.</p>
+            <p><strong>The Bottom Line:</strong> Pinecone for speed and simplicity. Weaviate for flexibility and control. Both are production-ready and power thousands of AI applications. If hybrid search matters to your use case, Weaviate wins. If you want the simplest possible setup, Pinecone wins.</p>
+          </div>
+
+          <div class="cta-comparison">
+            <div class="cta-comparison__card">
+              <h4>🌲 Try Pinecone Free</h4>
+              <p>Pinecone - AI-powered development</p>
+              <a href="https://www.pinecone.io" target="_blank" rel="noopener" class="btn">Try Pinecone Free →</a>
+            </div>
+            <div class="cta-comparison__card">
+              <h4>🔷 Try Weaviate Free</h4>
+              <p>Weaviate - AI-powered development</p>
+              <a href="https://weaviate.io" target="_blank" rel="noopener" class="btn">Try Weaviate Free →</a>
+            </div>
+          </div>
+
+          <div class="affiliate-disclosure">
+            <strong>Disclosure:</strong> This comparison may contain affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. Our recommendations are based on real-world experience, not sponsorships.
+          </div>
+        </div>
+      </article>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Pinecone better than Weaviate?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">It depends on your priorities. Pinecone is simpler to set up and manage with its fully serverless model. Weaviate offers more flexibility with hybrid search, self-hosting, and open-source access. For pure vector search with minimal ops, choose Pinecone. For hybrid search or self-hosted needs, choose Weaviate.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can I migrate from Pinecone to Weaviate or vice versa?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Yes, but it requires re-indexing your vectors. Export your vectors and metadata from one system and import into the other. The embeddings themselves are model-dependent, not database-dependent, so they transfer directly. Plan for a few hours of migration work for most datasets.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which vector database is cheaper?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">At small scale, both have free tiers. At medium scale, Weaviate's self-hosted option is cheapest (just your compute costs). At large scale, Pinecone's serverless pricing can add up with high query volumes. Run cost estimates with your expected traffic before committing.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Do I need a vector database for RAG?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For production RAG systems, yes. While you can prototype with in-memory vectors or SQLite extensions, a purpose-built vector database handles indexing, scaling, filtering, and concurrent queries. Both Pinecone and Weaviate are designed for exactly this use case.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>Get Tool Comparisons in Your Inbox</h2>
+        <p>Weekly AI tool updates, new releases, and honest comparisons.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

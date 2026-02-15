@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Perplexity (Evaluation Metric)</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A statistical measure of how well a language model predicts a sequence of text.
+                </div>
+
                 <div class="glossary-definition">
-                    A statistical measure of how well a language model predicts a sequence of text. Lower perplexity means the model is less "surprised" by the text, indicating better language understanding. Perplexity of 1.0 would mean perfect prediction; typical LLMs achieve perplexity of 5-20 on standard benchmarks.
+                    <strong>Perplexity (Evaluation Metric)</strong> is a statistical measure of how well a language model predicts a sequence of text. Lower perplexity means the model is less "surprised" by the text, indicating better language understanding. Perplexity of 1.0 would mean perfect prediction; typical LLMs achieve perplexity of 5-20 on standard benchmarks.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Perplexity is the foundational metric for language model quality. While benchmarks like MMLU test specific capabilities, perplexity measures core language modeling ability. Lower perplexity generally correlates with better performance across all downstream tasks.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

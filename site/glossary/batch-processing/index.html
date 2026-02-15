@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> Running multiple AI model requests as a group rather than one at a time.
+                </div>
+
                 <div class="glossary-definition">
-                    Running multiple AI model requests as a group rather than one at a time. Batch processing trades latency for throughput and cost savings, processing hundreds or thousands of prompts in a single job at significantly reduced per-token pricing (typically 50% off).
+                    <strong>Batch Processing</strong> is running multiple AI model requests as a group rather than one at a time. Batch processing trades latency for throughput and cost savings, processing hundreds or thousands of prompts in a single job at significantly reduced per-token pricing (typically 50% off).
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Batch processing cuts AI costs in half for any workload that doesn't need real-time responses. Data processing, content generation, document analysis, and evaluation pipelines all benefit. It's the first optimization most teams implement at scale.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

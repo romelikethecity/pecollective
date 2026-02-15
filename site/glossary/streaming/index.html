@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A technique where model responses are delivered token by token as they're generated, rather than waiting for the complete response before displaying anything.
+                </div>
+
                 <div class="glossary-definition">
-                    A technique where model responses are delivered token by token as they're generated, rather than waiting for the complete response before displaying anything. Streaming shows text appearing in real-time, dramatically reducing perceived latency in chat interfaces and AI applications.
+                    <strong>Streaming</strong> is a technique where model responses are delivered token by token as they're generated, rather than waiting for the complete response before displaying anything. Streaming shows text appearing in real-time, dramatically reducing perceived latency in chat interfaces and AI applications.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Streaming is a non-negotiable feature for user-facing AI products. ChatGPT's typing effect is streaming in action. Understanding server-sent events (SSE) and streaming API integration is a core skill for anyone building AI interfaces.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

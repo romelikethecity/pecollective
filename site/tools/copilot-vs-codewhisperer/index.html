@@ -768,6 +768,84 @@
   ]
 }
     </script>
+
+    <!-- SoftwareApplication Schema: GitHub Copilot -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GitHub Copilot",
+  "url": "https://github.com/features/copilot",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free tier available"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Pro: $10/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "Business: $19/user/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Enterprise: $39/user/month"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Amazon Q Developer -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Amazon Q Developer",
+  "url": "https://aws.amazon.com/q/developer/",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free (50 agentic chats/mo)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Pro: $19/user/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$19/user/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Included with AWS"
+      }
+    ]
+  }
+}
+    </script>
     
 </head>
 
@@ -1003,6 +1081,32 @@
     .cta-comparison__card .btn:hover {
       background: var(--gold-hover);
     }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
     .affiliate-disclosure {
       font-size: 0.8125rem;
       color: var(--text-muted);
@@ -1083,6 +1187,7 @@
           </div>
           <h1>Which AI Coding Assistant Should You Use?</h1>
           <p class="subtitle">Comparing the two enterprise-grade AI coding assistants (Amazon Q Developer was formerly CodeWhisperer)</p>
+          <p class="comparison-header__date">Last updated: February 15, 2026</p>
         </div>
 
         <div class="quick-verdict">
@@ -1236,6 +1341,30 @@
             <p><strong>For Individual Developers:</strong> GitHub Copilot Pro at $10/month is the clear winner for most developers. Better autocomplete, broader ecosystem, and the free tier lets you try before buying. Choose Q Developer only if you spend most of your time in AWS services.</p>
             <p><strong>For Enterprise Teams:</strong> The choice depends on your stack. GitHub-centric teams should use Copilot Enterprise. AWS-centric teams get more value from Q Developer, especially with its code transformation and security scanning features. Some enterprises use both.</p>
             <p><strong>The Bottom Line:</strong> Copilot is the better general-purpose coding assistant. Q Developer is the better AWS companion. If you write code that runs on AWS, Q Developer adds value that Copilot can't. For everything else, Copilot's autocomplete quality and ecosystem make it the default choice.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between GitHub Copilot and Amazon Q Developer</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>IDE setup (both support VS Code and JetBrains)</li>
+                  <li>Your codebase and project configuration</li>
+                  <li>Git workflow and version control setup</li>
+                  <li>General coding habits and AI interaction patterns</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>Extension/plugin installation (uninstall one, install the other)</li>
+                  <li>Authentication (GitHub account vs AWS account)</li>
+                  <li>AI behavior preferences and custom instructions</li>
+                  <li>Code review and security scanning workflows (different feature sets)</li>
+                  <li>Team/organization settings (different admin consoles)</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>Under 30 minutes. Uninstall the old extension, install the new one, authenticate, and start coding. The learning curve is the bigger time investment: 1-2 weeks to get comfortable with the new tool's strengths.</p>
+            </div>
           </div>
 
           <div class="cta-comparison">

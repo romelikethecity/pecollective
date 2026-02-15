@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The systematic process of measuring how well an AI model performs on specific tasks.
+                </div>
+
                 <div class="glossary-definition">
-                    The systematic process of measuring how well an AI model performs on specific tasks. Model evaluation uses test datasets, automated metrics, and human judgment to assess accuracy, reliability, safety, and fitness for a particular use case before deployment.
+                    <strong>Model Evaluation</strong> is the systematic process of measuring how well an AI model performs on specific tasks. Model evaluation uses test datasets, automated metrics, and human judgment to assess accuracy, reliability, safety, and fitness for a particular use case before deployment.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>You can't improve what you can't measure. Model evaluation is how teams decide which model to use, whether a fine-tune worked, and when a system is ready for production. It's increasingly a dedicated role, with 'AI Evaluation Engineer' appearing in job boards.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

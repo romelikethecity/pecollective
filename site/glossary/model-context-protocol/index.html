@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Model Context Protocol (MCP)</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> An open standard developed by Anthropic that defines how AI models connect to external data sources and tools.
+                </div>
+
                 <div class="glossary-definition">
-                    An open standard developed by Anthropic that defines how AI models connect to external data sources and tools. MCP provides a universal interface for LLMs to access files, databases, APIs, and other resources without custom integration code for each data source.
+                    <strong>Model Context Protocol (MCP)</strong> is an open standard developed by Anthropic that defines how AI models connect to external data sources and tools. MCP provides a universal interface for LLMs to access files, databases, APIs, and other resources without custom integration code for each data source.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>MCP is becoming the standard plumbing for AI applications. It eliminates the N-times-M integration problem (N models times M tools) by providing a single protocol. Job postings mentioning MCP have grown rapidly since its late 2024 release.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The time delay between sending a request to an AI model and receiving the response.
+                </div>
+
                 <div class="glossary-definition">
-                    The time delay between sending a request to an AI model and receiving the response. In LLM applications, latency includes time-to-first-token (TTFT) and total generation time. Lower latency means faster, more responsive user experiences.
+                    <strong>Latency</strong> is the time delay between sending a request to an AI model and receiving the response. In LLM applications, latency includes time-to-first-token (TTFT) and total generation time. Lower latency means faster, more responsive user experiences.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Latency directly impacts user satisfaction and adoption. Studies show users abandon AI features when response time exceeds 5 seconds. Prompt engineers must balance output quality against speed by choosing appropriate models and prompt lengths.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

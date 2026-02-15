@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The process of running a trained model to generate predictions or outputs from new inputs.
+                </div>
+
                 <div class="glossary-definition">
-                    The process of running a trained model to generate predictions or outputs from new inputs. In the context of LLMs, inference means processing a prompt and generating a response. Inference cost and speed are the primary operational concerns for deployed AI systems.
+                    <strong>Inference</strong> is the process of running a trained model to generate predictions or outputs from new inputs. In the context of LLMs, inference means processing a prompt and generating a response. Inference cost and speed are the primary operational concerns for deployed AI systems.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Inference costs dominate AI budgets in production. Understanding inference optimization — batching, caching, quantization, speculative decoding — is essential for anyone building or managing AI applications at scale.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

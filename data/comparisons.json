@@ -3,7 +3,7 @@
     "slug": "cursor-vs-windsurf",
     "tool_a": {
       "name": "Cursor",
-      "icon": "\u26a1",
+      "icon": "⚡",
       "url": "https://www.cursor.com",
       "cta_text": "Get Cursor Free",
       "price_free": "Limited free tier",
@@ -13,7 +13,7 @@
     },
     "tool_b": {
       "name": "Windsurf",
-      "icon": "\ud83c\udf0a",
+      "icon": "🌊",
       "url": "https://windsurf.com",
       "cta_text": "Get Windsurf Free",
       "price_free": "Free tier available",
@@ -91,7 +91,7 @@
     "deep_dive": [
       {
         "heading": "Cursor Wins: Maturity and Model Flexibility",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "paragraphs": [
           "Cursor has been in the AI code editor market longer and it shows. The Composer feature is more refined, the codebase indexing is faster, and the overall editor experience has had more time to polish edge cases.",
           "Model flexibility is a significant advantage. Cursor lets you switch between Claude, GPT-4, and other models depending on the task. Some coding tasks work better with Claude's reasoning; others benefit from GPT-4's speed. Having the choice matters.",
@@ -100,7 +100,7 @@
       },
       {
         "heading": "Windsurf Wins: Agentic Coding and Price",
-        "icon": "\ud83c\udf0a",
+        "icon": "🌊",
         "paragraphs": [
           "Windsurf's Cascade feature represents a different approach to AI-assisted development. Rather than single-turn interactions, Cascade handles multi-step workflows: 'Add authentication to this app' becomes a series of coordinated file changes with context preserved between steps.",
           "At $15/month vs Cursor's $20, Windsurf is 25% cheaper for individuals. The free tier is also more generous, making it easier to evaluate before committing.",
@@ -155,13 +155,29 @@
         "question": "Do Cursor and Windsurf use the same AI models?",
         "answer": "Both support Claude and GPT-4, but Cursor offers more model options and the ability to bring your own API keys. Windsurf focuses on providing a curated model experience rather than maximum flexibility."
       }
-    ]
+    ],
+    "date_updated": "February 15, 2026",
+    "migration": {
+      "what_transfers": [
+        "VS Code extensions (both are VS Code forks, most extensions work in either)",
+        "Keyboard shortcuts and keybindings (same base editor)",
+        "Workspace settings and project configurations",
+        "Git integration and terminal workflows"
+      ],
+      "what_needs_reconfiguration": [
+        "AI chat history and saved conversations (not portable)",
+        "Custom AI rules and prompt configurations (different formats)",
+        "Subscription and billing (separate accounts)",
+        "Codebase indexing (needs to re-index your project)"
+      ],
+      "time_estimate": "About 30 minutes. Install the new editor, open your project, let it index, and reconfigure your AI preferences. Your code, git history, and extensions carry over immediately."
+    }
   },
   {
     "slug": "langchain-vs-llamaindex",
     "tool_a": {
       "name": "LangChain",
-      "icon": "\ud83e\udd9c",
+      "icon": "🦜",
       "url": "https://langchain.com",
       "cta_text": "Explore LangChain",
       "price_free": "Open source",
@@ -171,7 +187,7 @@
     },
     "tool_b": {
       "name": "LlamaIndex",
-      "icon": "\ud83e\udd99",
+      "icon": "🦙",
       "url": "https://llamaindex.ai",
       "cta_text": "Explore LlamaIndex",
       "price_free": "Open source",
@@ -245,7 +261,7 @@
     "deep_dive": [
       {
         "heading": "LangChain Wins: Flexibility and Ecosystem",
-        "icon": "\ud83e\udd9c",
+        "icon": "🦜",
         "paragraphs": [
           "LangChain is the Swiss Army knife of AI frameworks. If you need to build a complex agent that uses tools, makes decisions, and orchestrates multiple LLM calls, LangChain (and LangGraph for stateful agents) is the most capable option.",
           "The ecosystem is massive. Over 100 integrations with vector stores, LLMs, tools, and data sources. Whatever you want to connect to, there's probably a LangChain integration for it.",
@@ -254,7 +270,7 @@
       },
       {
         "heading": "LlamaIndex Wins: Data and Retrieval",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "paragraphs": [
           "If your primary use case involves connecting LLMs to your data, LlamaIndex is the better choice. It was built specifically for this problem and it shows. The data connectors, indexing strategies, and retrieval optimizations are more sophisticated.",
           "LlamaIndex's approach to chunking, embedding, and retrieval is more opinionated but also more effective out of the box. You spend less time configuring and more time building.",
@@ -309,13 +325,29 @@
         "question": "Are LangChain and LlamaIndex free?",
         "answer": "Both core frameworks are free and open source. Each offers paid cloud services: LangSmith (from $39/month) for LangChain observability, and LlamaCloud (from $35/month) for LlamaIndex hosting and managed indexing."
       }
-    ]
+    ],
+    "date_updated": "February 15, 2026",
+    "migration": {
+      "what_transfers": [
+        "Your data sources and documents (both use standard file formats)",
+        "Embedding vectors (model-dependent, not framework-dependent)",
+        "Vector database connections (both support Pinecone, Weaviate, Chroma, etc.)",
+        "LLM API keys and model configurations"
+      ],
+      "what_needs_reconfiguration": [
+        "Chain/pipeline logic (completely different APIs and abstractions)",
+        "Agent configurations (LangGraph vs LlamaIndex agents)",
+        "Retrieval strategies (different chunking, indexing, and query approaches)",
+        "Observability setup (LangSmith vs LlamaCloud monitoring)"
+      ],
+      "time_estimate": "1-3 days for a typical RAG application. The data pipeline stays the same, but you'll rewrite the orchestration layer. Budget extra time if migrating complex agent workflows."
+    }
   },
   {
     "slug": "pinecone-vs-weaviate",
     "tool_a": {
       "name": "Pinecone",
-      "icon": "\ud83c\udf32",
+      "icon": "🌲",
       "url": "https://www.pinecone.io",
       "cta_text": "Try Pinecone Free",
       "price_free": "Starter (free tier)",
@@ -325,7 +357,7 @@
     },
     "tool_b": {
       "name": "Weaviate",
-      "icon": "\ud83d\udd37",
+      "icon": "🔷",
       "url": "https://weaviate.io",
       "cta_text": "Try Weaviate Free",
       "price_free": "Free sandbox cluster",
@@ -402,7 +434,7 @@
     "deep_dive": [
       {
         "heading": "Pinecone Wins: Simplicity and Scale",
-        "icon": "\ud83c\udf32",
+        "icon": "🌲",
         "paragraphs": [
           "Pinecone's serverless model is its strongest selling point. You create an index, send vectors, and query them. No clusters to manage, no nodes to scale, no YAML configs to debug at 2 AM. For teams that want to build RAG applications without becoming database administrators, Pinecone removes the entire infrastructure layer.",
           "Scaling is automatic and invisible. Whether you're storing 10,000 vectors or 10 million, Pinecone handles the infrastructure. You pay for what you use (read units, write units, storage) and never think about capacity planning.",
@@ -411,7 +443,7 @@
       },
       {
         "heading": "Weaviate Wins: Flexibility and Hybrid Search",
-        "icon": "\ud83d\udd37",
+        "icon": "🔷",
         "paragraphs": [
           "Weaviate's hybrid search is a genuine differentiator. Instead of choosing between keyword search and vector search, Weaviate combines both in a single query. This matters because pure vector search sometimes misses exact matches (product SKUs, error codes, proper nouns) that keyword search catches instantly.",
           "Being open source gives you options that Pinecone can't match. You can self-host on your own infrastructure for data sovereignty, run it locally during development, inspect the source code, and avoid vendor lock-in entirely. For regulated industries (healthcare, finance, government), the self-hosting option is often a hard requirement.",
@@ -466,13 +498,29 @@
         "question": "Do I need a vector database for RAG?",
         "answer": "For production RAG systems, yes. While you can prototype with in-memory vectors or SQLite extensions, a purpose-built vector database handles indexing, scaling, filtering, and concurrent queries. Both Pinecone and Weaviate are designed for exactly this use case."
       }
-    ]
+    ],
+    "date_updated": "February 15, 2026",
+    "migration": {
+      "what_transfers": [
+        "Embedding vectors (export from one, import to the other)",
+        "Metadata and filtering logic (both support metadata-based filtering)",
+        "Embedding model configuration (vectors are model-dependent, not DB-dependent)",
+        "Application-level query logic (search patterns are similar)"
+      ],
+      "what_needs_reconfiguration": [
+        "Client SDK code (different APIs: Pinecone SDK vs Weaviate client)",
+        "Index/collection configuration (namespaces vs classes/collections)",
+        "Query syntax (REST/gRPC vs GraphQL)",
+        "Deployment infrastructure (serverless vs self-hosted considerations)"
+      ],
+      "time_estimate": "A few hours for re-indexing plus 1-2 days for client code changes. The vectors themselves transfer directly. Plan for re-indexing time proportional to your dataset size."
+    }
   },
   {
     "slug": "claude-vs-chatgpt-coding",
     "tool_a": {
       "name": "Claude",
-      "icon": "\ud83d\udfe0",
+      "icon": "🟠",
       "url": "https://claude.ai",
       "cta_text": "Try Claude Free",
       "price_free": "Free tier available",
@@ -482,7 +530,7 @@
     },
     "tool_b": {
       "name": "ChatGPT",
-      "icon": "\ud83d\udfe2",
+      "icon": "🟢",
       "url": "https://chat.openai.com",
       "cta_text": "Try ChatGPT Free",
       "price_free": "Free tier (GPT-4o mini)",
@@ -558,7 +606,7 @@
     "deep_dive": [
       {
         "heading": "Claude Wins: Code Quality and Instruction Following",
-        "icon": "\ud83d\udfe0",
+        "icon": "🟠",
         "paragraphs": [
           "Claude consistently produces cleaner, more idiomatic code. In SWE-bench evaluations (resolving real GitHub issues), Claude models have set the high-water mark. The code it generates tends to be more concise, better structured, and more closely aligned with what you actually asked for.",
           "The 200K token context window is a significant practical advantage. You can paste an entire codebase into a conversation and Claude will reference specific files, understand cross-file dependencies, and suggest changes that account for the broader system architecture. ChatGPT's 128K window is large but hits limits sooner with real codebases.",
@@ -567,7 +615,7 @@
       },
       {
         "heading": "ChatGPT Wins: Ecosystem and Versatility",
-        "icon": "\ud83d\udfe2",
+        "icon": "🟢",
         "paragraphs": [
           "ChatGPT's ecosystem is unmatched. Custom GPTs, plugins, web browsing, DALL-E for generating architecture diagrams, and a community that shares thousands of coding-specific GPTs. If you want a single tool that handles coding, research, image generation, and data analysis, ChatGPT covers more ground.",
           "The o1 and o3 reasoning models are genuinely powerful for hard algorithmic problems. When you need to solve a complex dynamic programming challenge or debug a subtle concurrency issue, the reasoning models take extra time to think through the problem step by step. Both Claude and ChatGPT offer reasoning modes, but OpenAI's have been available longer with more refinement.",
@@ -622,13 +670,30 @@
         "question": "Which AI handles longer code files better?",
         "answer": "Claude, with its 200K token context window (roughly 150,000 words). GPT-4 Turbo supports 128K tokens. For analyzing entire codebases or very long files, Claude can process about 50% more content in a single conversation."
       }
-    ]
+    ],
+    "date_updated": "February 15, 2026",
+    "migration": {
+      "what_transfers": [
+        "Prompt templates and system prompts (both use similar formats)",
+        "API integration patterns (both offer REST APIs with comparable structures)",
+        "General workflow patterns (chat-based coding, paste-and-ask, etc.)",
+        "Conversation strategies (chain-of-thought, few-shot examples work in both)"
+      ],
+      "what_needs_reconfiguration": [
+        "API client code (different SDKs: anthropic vs openai packages)",
+        "Function/tool calling syntax (different JSON schema formats)",
+        "Rate limiting and error handling (different thresholds and error codes)",
+        "Streaming response parsers (slightly different SSE formats)",
+        "Token counting (different tokenizers, so budget estimates change)"
+      ],
+      "time_estimate": "2-4 hours for API client swaps. 1-2 days to tune prompts for optimal results on the new model, since each model responds differently to the same instructions."
+    }
   },
   {
     "slug": "copilot-vs-codewhisperer",
     "tool_a": {
       "name": "GitHub Copilot",
-      "icon": "\ud83e\udd16",
+      "icon": "🤖",
       "url": "https://github.com/features/copilot",
       "cta_text": "Get Copilot Free",
       "price_free": "Free tier available",
@@ -638,7 +703,7 @@
     },
     "tool_b": {
       "name": "Amazon Q Developer",
-      "icon": "\ud83d\udd36",
+      "icon": "🔶",
       "url": "https://aws.amazon.com/q/developer/",
       "cta_text": "Try Q Developer Free",
       "price_free": "Free (50 agentic chats/mo)",
@@ -715,7 +780,7 @@
     "deep_dive": [
       {
         "heading": "GitHub Copilot Wins: Autocomplete and Ecosystem",
-        "icon": "\ud83e\udd16",
+        "icon": "🤖",
         "paragraphs": [
           "Copilot's inline code suggestions are the benchmark that every competitor tries to match. The autocomplete is faster, more context-aware, and more consistently useful than Amazon Q Developer's suggestions. When you're in flow and want code to materialize as you type, Copilot is still the tool to beat.",
           "The GitHub integration creates a workflow that nothing else replicates. Copilot can reference your repositories, understand your commit history, and generate PR descriptions that actually reflect the changes. For teams already on GitHub (which is most teams), this integration eliminates friction.",
@@ -724,7 +789,7 @@
       },
       {
         "heading": "Amazon Q Developer Wins: AWS and Enterprise Security",
-        "icon": "\ud83d\udd36",
+        "icon": "🔶",
         "paragraphs": [
           "If your infrastructure runs on AWS, Q Developer understands it in a way that Copilot can't. It can analyze your CloudFormation templates, suggest IAM policy changes, troubleshoot Lambda functions, and navigate AWS service configurations. This isn't just code completion; it's infrastructure intelligence.",
           "Code transformation is a unique feature. Q Developer can automatically upgrade Java 8 applications to Java 17, or port .NET Framework applications to cross-platform .NET. For enterprises maintaining legacy codebases, this alone can justify the cost by saving months of manual migration work.",
@@ -779,6 +844,23 @@
         "question": "Which offers a better free tier?",
         "answer": "Both offer free tiers. Copilot Free provides limited completions and chat. Q Developer Free includes 50 agentic chat interactions per month and 1,000 lines of code transformation. For code completion, Copilot's free tier is more useful. For AWS-specific help, Q Developer's free tier offers more."
       }
-    ]
+    ],
+    "date_updated": "February 15, 2026",
+    "migration": {
+      "what_transfers": [
+        "IDE setup (both support VS Code and JetBrains)",
+        "Your codebase and project configuration",
+        "Git workflow and version control setup",
+        "General coding habits and AI interaction patterns"
+      ],
+      "what_needs_reconfiguration": [
+        "Extension/plugin installation (uninstall one, install the other)",
+        "Authentication (GitHub account vs AWS account)",
+        "AI behavior preferences and custom instructions",
+        "Code review and security scanning workflows (different feature sets)",
+        "Team/organization settings (different admin consoles)"
+      ],
+      "time_estimate": "Under 30 minutes. Uninstall the old extension, install the new one, authenticate, and start coding. The learning curve is the bigger time investment: 1-2 weeks to get comfortable with the new tool's strengths."
+    }
   }
 ]

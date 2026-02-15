@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The maximum amount of text (measured in tokens) that a language model can process in a single request, including both the input prompt and the generated output.
+                </div>
+
                 <div class="glossary-definition">
-                    The maximum amount of text (measured in tokens) that a language model can process in a single request, including both the input prompt and the generated output. Larger context windows allow processing more information at once.
+                    <strong>Context Window</strong> is the maximum amount of text (measured in tokens) that a language model can process in a single request, including both the input prompt and the generated output. Larger context windows allow processing more information at once.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Context window size determines what's possible without RAG. Larger windows reduce the need for complex retrieval architectures but cost more per request. Understanding token limits is essential for production prompt engineering.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

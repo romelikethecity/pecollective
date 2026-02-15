@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Generative Pre-trained Transformer</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A family of large language models developed by OpenAI that generate text by predicting the next token in a sequence.
+                </div>
+
                 <div class="glossary-definition">
-                    A family of large language models developed by OpenAI that generate text by predicting the next token in a sequence. GPT models are pre-trained on internet text (the 'pre-trained' part), use transformer architecture (the 'transformer' part), and produce new content token by token (the 'generative' part).
+                    <strong>Generative Pre-trained Transformer</strong> is a family of large language models developed by OpenAI that generate text by predicting the next token in a sequence. GPT models are pre-trained on internet text (the 'pre-trained' part), use transformer architecture (the 'transformer' part), and produce new content token by token (the 'generative' part).
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>GPT is the model family that popularized prompt engineering as a discipline. Understanding GPT's architecture helps explain why techniques like chain-of-thought prompting and system prompts work, and why the field exists at all.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

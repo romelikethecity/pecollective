@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> Software tools that use AI models to help developers write, edit, debug, and understand code.
+                </div>
+
                 <div class="glossary-definition">
-                    Software tools that use AI models to help developers write, edit, debug, and understand code. AI coding assistants range from inline autocomplete (GitHub Copilot) to full IDE environments (Cursor, Windsurf) to terminal-based agents (Claude Code) that can execute multi-file changes autonomously.
+                    <strong>AI Coding Assistant</strong> is software tools that use AI models to help developers write, edit, debug, and understand code. AI coding assistants range from inline autocomplete (GitHub Copilot) to full IDE environments (Cursor, Windsurf) to terminal-based agents (Claude Code) that can execute multi-file changes autonomously.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>AI coding assistants are the most widely adopted AI productivity tools, used by over 50% of professional developers. Understanding their capabilities and limits is essential for any AI professional. The market is fiercely competitive, with new tools launching monthly.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

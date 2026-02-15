@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A training technique where a smaller 'student' model learns to replicate the behavior of a larger 'teacher' model.
+                </div>
+
                 <div class="glossary-definition">
-                    A training technique where a smaller 'student' model learns to replicate the behavior of a larger 'teacher' model. The student is trained on the teacher's outputs rather than on raw data, transferring knowledge into a more compact and efficient form.
+                    <strong>Knowledge Distillation</strong> is a training technique where a smaller 'student' model learns to replicate the behavior of a larger 'teacher' model. The student is trained on the teacher's outputs rather than on raw data, transferring knowledge into a more compact and efficient form.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Distillation is how companies create affordable, production-ready models. Many 'small but capable' models are distilled from larger ones. It's also a common strategy for reducing API costs — fine-tune a small model on outputs from a large one.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

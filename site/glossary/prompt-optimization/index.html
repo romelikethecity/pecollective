@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The systematic process of improving prompt performance through testing, measurement, and iteration.
+                </div>
+
                 <div class="glossary-definition">
-                    The systematic process of improving prompt performance through testing, measurement, and iteration. Prompt optimization treats prompts as code: version-controlled, tested against evaluation datasets, and refined based on metrics rather than intuition.
+                    <strong>Prompt Optimization</strong> is the systematic process of improving prompt performance through testing, measurement, and iteration. Prompt optimization treats prompts as code: version-controlled, tested against evaluation datasets, and refined based on metrics rather than intuition.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Prompt optimization is where prompt engineering becomes engineering. Companies spending $10K+/month on API calls can cut costs 30-50% by optimizing prompt length and structure. It's the difference between hobby prompting and professional prompt engineering.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

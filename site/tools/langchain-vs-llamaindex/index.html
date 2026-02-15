@@ -768,6 +768,84 @@
   ]
 }
     </script>
+
+    <!-- SoftwareApplication Schema: LangChain -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LangChain",
+  "url": "https://langchain.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Open source"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Free (OSS)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "LangSmith from $39/mo"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Custom pricing"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: LlamaIndex -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LlamaIndex",
+  "url": "https://llamaindex.ai",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Open source"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Free (OSS)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "LlamaCloud from $35/mo"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Custom pricing"
+      }
+    ]
+  }
+}
+    </script>
     
 </head>
 
@@ -1003,6 +1081,32 @@
     .cta-comparison__card .btn:hover {
       background: var(--gold-hover);
     }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
     .affiliate-disclosure {
       font-size: 0.8125rem;
       color: var(--text-muted);
@@ -1083,6 +1187,7 @@
           </div>
           <h1>Which AI Framework Should You Use?</h1>
           <p class="subtitle">A practical comparison for building LLM-powered applications</p>
+          <p class="comparison-header__date">Last updated: February 15, 2026</p>
         </div>
 
         <div class="quick-verdict">
@@ -1236,6 +1341,29 @@
             <p><strong>For AI Engineers:</strong> Learn both. Use LangChain (with LangGraph) for agent-heavy applications and LlamaIndex for data-heavy ones. They're complementary tools, not competitors. Many production systems use both.</p>
             <p><strong>For Prompt Engineers:</strong> Start with LlamaIndex. Most prompt engineering work involves connecting models to data (RAG), and LlamaIndex makes that straightforward. Add LangChain when you need agent orchestration.</p>
             <p><strong>The Bottom Line:</strong> LangChain for agents and complex workflows. LlamaIndex for data retrieval and RAG. Both are open source, well-maintained, and production-ready. Your use case should drive the choice, not brand preference.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between LangChain and LlamaIndex</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>Your data sources and documents (both use standard file formats)</li>
+                  <li>Embedding vectors (model-dependent, not framework-dependent)</li>
+                  <li>Vector database connections (both support Pinecone, Weaviate, Chroma, etc.)</li>
+                  <li>LLM API keys and model configurations</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>Chain/pipeline logic (completely different APIs and abstractions)</li>
+                  <li>Agent configurations (LangGraph vs LlamaIndex agents)</li>
+                  <li>Retrieval strategies (different chunking, indexing, and query approaches)</li>
+                  <li>Observability setup (LangSmith vs LlamaCloud monitoring)</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>1-3 days for a typical RAG application. The data pipeline stays the same, but you'll rewrite the orchestration layer. Budget extra time if migrating complex agent workflows.</p>
+            </div>
           </div>
 
           <div class="cta-comparison">

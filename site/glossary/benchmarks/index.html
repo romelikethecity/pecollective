@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> Standardized tests used to compare AI model performance across specific capabilities.
+                </div>
+
                 <div class="glossary-definition">
-                    Standardized tests used to compare AI model performance across specific capabilities. Benchmarks provide consistent evaluation criteria so different models can be ranked and compared fairly on tasks like reasoning, coding, math, and general knowledge.
+                    <strong>Benchmarks</strong> is standardized tests used to compare AI model performance across specific capabilities. Benchmarks provide consistent evaluation criteria so different models can be ranked and compared fairly on tasks like reasoning, coding, math, and general knowledge.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Benchmarks are the primary language for comparing models. When Anthropic says Claude scores 88.7% on MMLU or OpenAI reports GPT-4o scores 90.2% on HumanEval, benchmarks make those comparisons meaningful. Understanding them helps you cut through marketing claims.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

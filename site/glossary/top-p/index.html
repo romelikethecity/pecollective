@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Nucleus Sampling</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A text generation parameter that limits the model's token selection to the smallest set of tokens whose cumulative probability exceeds a threshold P.
+                </div>
+
                 <div class="glossary-definition">
-                    A text generation parameter that limits the model's token selection to the smallest set of tokens whose cumulative probability exceeds a threshold P. At top_p=0.9, the model considers only the tokens that make up 90% of the probability mass.
+                    <strong>Nucleus Sampling</strong> is a text generation parameter that limits the model's token selection to the smallest set of tokens whose cumulative probability exceeds a threshold P. At top_p=0.9, the model considers only the tokens that make up 90% of the probability mass.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Top-P gives prompt engineers another lever for controlling output quality. The general best practice: adjust either temperature or top-P, not both simultaneously. Most APIs default to top_p=1.0.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

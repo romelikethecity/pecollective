@@ -67,6 +67,20 @@ def get_glossary_page_css():
         font-weight: 600;
     }}
 
+    .glossary-quick-answer {{
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }}
+
+    .glossary-quick-answer strong {{
+        color: var(--gold);
+    }}
+
     .glossary-definition {{
         font-size: 1.125rem;
         line-height: 1.8;
@@ -76,6 +90,10 @@ def get_glossary_page_css():
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }}
+
+    .glossary-definition strong {{
+        color: var(--text-primary);
     }}
 
     .glossary-section {{
@@ -280,6 +298,16 @@ def generate_term_page(term_data, all_terms):
                 "text": term_data['why_it_matters']
             }
         })
+    # Add extra FAQs from data if present
+    for extra_faq in term_data.get('faqs', []):
+        faq_qa['mainEntity'].append({
+            "@type": "Question",
+            "name": extra_faq['question'],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": extra_faq['answer']
+            }
+        })
     faq_schema = json.dumps(faq_qa, indent=2)
 
     extra_head = f'''
@@ -331,6 +359,20 @@ def generate_term_page(term_data, all_terms):
 
     full_name_html = f'<p class="full-name">{full_name}</p>' if full_name else ''
 
+    # AEO: Build bold-term definition ("Term is definition...")
+    def_lower = definition[0].lower() + definition[1:]
+    display_name = full_name if full_name else term
+    aeo_definition = f'<strong>{display_name}</strong> is {def_lower}'
+
+    # Quick answer: first sentence, under 30 words ideal
+    quick_answer = term_data.get('quick_answer', '')
+    if not quick_answer:
+        # Auto-generate from first sentence of definition
+        first_sentence = definition.split('. ')[0]
+        if not first_sentence.endswith('.'):
+            first_sentence += '.'
+        quick_answer = first_sentence
+
     example_html = ''
     if term_data.get('example'):
         example_html = f'''
@@ -347,6 +389,22 @@ def generate_term_page(term_data, all_terms):
         <p>{term_data["why_it_matters"]}</p>
     </div>'''
 
+    # Extra FAQ details (visible on page, beyond schema)
+    extra_faq_html = ''
+    if term_data.get('faqs'):
+        faq_items = ''
+        for faq in term_data['faqs']:
+            faq_items += f'''
+        <details style="background: var(--bg-card); border: 1px solid var(--teal-primary); border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary); list-style: none;">{faq["question"]}</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">{faq["answer"]}</p>
+        </details>'''
+        extra_faq_html = f'''
+    <div class="glossary-section">
+        <h2>Frequently Asked Questions</h2>
+        {faq_items}
+    </div>'''
+
     html = f'''{get_html_head(title, description, page_path, extra_head=extra_head)}
 {get_nav_html()}
     <main>
@@ -358,12 +416,17 @@ def generate_term_page(term_data, all_terms):
                     {full_name_html}
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> {quick_answer}
+                </div>
+
                 <div class="glossary-definition">
-                    {definition}
+                    {aeo_definition}
                 </div>
 
                 {example_html}
                 {why_html}
+                {extra_faq_html}
                 {related_html}
                 {links_html}
             </div>

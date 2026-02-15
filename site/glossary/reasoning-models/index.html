@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A category of AI models specifically designed to perform multi-step logical reasoning before producing a final answer.
+                </div>
+
                 <div class="glossary-definition">
-                    A category of AI models specifically designed to perform multi-step logical reasoning before producing a final answer. Reasoning models like OpenAI's o1 and o3, DeepSeek R1, and Claude's extended thinking mode use internal chain-of-thought processing to solve complex math, science, and coding problems that standard models struggle with.
+                    <strong>Reasoning Models</strong> is a category of AI models specifically designed to perform multi-step logical reasoning before producing a final answer. Reasoning models like OpenAI's o1 and o3, DeepSeek R1, and Claude's extended thinking mode use internal chain-of-thought processing to solve complex math, science, and coding problems that standard models struggle with.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Reasoning models are changing which tasks AI can handle. They've achieved expert-level performance on PhD-level science questions and competitive programming. For prompt engineers, they require different techniques: simpler prompts often work better because the model handles the reasoning internally.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

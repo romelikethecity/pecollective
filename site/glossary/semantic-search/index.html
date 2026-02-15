@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A search approach that understands the meaning and intent behind a query rather than just matching keywords.
+                </div>
+
                 <div class="glossary-definition">
-                    A search approach that understands the meaning and intent behind a query rather than just matching keywords. Semantic search uses embeddings to find content that is conceptually similar to the query, even when different words are used.
+                    <strong>Semantic Search</strong> is a search approach that understands the meaning and intent behind a query rather than just matching keywords. Semantic search uses embeddings to find content that is conceptually similar to the query, even when different words are used.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Semantic search is the retrieval layer that makes RAG systems work. It's replacing keyword search across enterprise applications and is a core competency for AI engineers building search and knowledge systems.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

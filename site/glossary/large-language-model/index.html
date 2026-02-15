@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Large Language Model (LLM)</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A neural network trained on massive text datasets that can understand and generate human language.
+                </div>
+
                 <div class="glossary-definition">
-                    A neural network trained on massive text datasets that can understand and generate human language. LLMs like GPT-4, Claude, Gemini, and Llama contain billions of parameters and power chatbots, coding assistants, content generation, and AI agents. The "large" refers to both the training data (trillions of tokens) and the model size (billions to trillions of parameters).
+                    <strong>Large Language Model (LLM)</strong> is a neural network trained on massive text datasets that can understand and generate human language. LLMs like GPT-4, Claude, Gemini, and Llama contain billions of parameters and power chatbots, coding assistants, content generation, and AI agents. The "large" refers to both the training data (trillions of tokens) and the model size (billions to trillions of parameters).
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>LLMs are the foundation of the entire AI application stack. Every prompt engineering technique, RAG system, and AI agent ultimately depends on an LLM. Understanding their capabilities and limits is the starting point for any AI career.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

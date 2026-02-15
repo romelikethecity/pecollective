@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The practice of designing and optimizing inputs to large language models (LLMs) to produce accurate, relevant, and useful outputs.
+                </div>
+
                 <div class="glossary-definition">
-                    The practice of designing and optimizing inputs to large language models (LLMs) to produce accurate, relevant, and useful outputs. Prompt engineering combines writing skill, logical thinking, and systematic experimentation to get reliable results from AI systems.
+                    <strong>Prompt Engineering</strong> is the practice of designing and optimizing inputs to large language models (LLMs) to produce accurate, relevant, and useful outputs. Prompt engineering combines writing skill, logical thinking, and systematic experimentation to get reliable results from AI systems.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>As AI models become central to products and workflows, the quality of outputs depends heavily on input design. Prompt engineers bridge the gap between what models can do and what businesses need them to do.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

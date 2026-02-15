@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Retrieval-Augmented Generation</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> An architecture pattern that combines information retrieval with text generation.
+                </div>
+
                 <div class="glossary-definition">
-                    An architecture pattern that combines information retrieval with text generation. RAG systems first search a knowledge base for relevant documents, then pass those documents to a language model as context to generate accurate, grounded responses.
+                    <strong>Retrieval-Augmented Generation</strong> is an architecture pattern that combines information retrieval with text generation. RAG systems first search a knowledge base for relevant documents, then pass those documents to a language model as context to generate accurate, grounded responses.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>RAG solves the hallucination problem by grounding model responses in real data. It's the most common architecture for building production AI applications that need accurate, up-to-date information.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

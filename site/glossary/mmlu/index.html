@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Massive Multitask Language Understanding</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A benchmark that tests AI models across 57 academic subjects including math, history, law, medicine, and computer science.
+                </div>
+
                 <div class="glossary-definition">
-                    A benchmark that tests AI models across 57 academic subjects including math, history, law, medicine, and computer science. MMLU uses multiple-choice questions at difficulty levels ranging from elementary to professional, making it the most widely cited general-knowledge benchmark for LLMs.
+                    <strong>Massive Multitask Language Understanding</strong> is a benchmark that tests AI models across 57 academic subjects including math, history, law, medicine, and computer science. MMLU uses multiple-choice questions at difficulty levels ranging from elementary to professional, making it the most widely cited general-knowledge benchmark for LLMs.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>MMLU is the benchmark that headlines most model launches. GPT-4 scored 86.4%, Claude 3.5 Sonnet hit 88.7%, and Gemini Ultra reached 90.0%. These numbers drive enterprise adoption decisions. When evaluating models for a project, MMLU scores provide the broadest capability comparison.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

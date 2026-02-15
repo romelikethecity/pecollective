@@ -89,6 +89,30 @@ def generate_breadcrumb_schema(slug, display_name):
     return json.dumps(schema, indent=2)
 
 
+def generate_software_schema(tool, base_url):
+    """Generate SoftwareApplication JSON-LD schema for a tool."""
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": tool['name'],
+        "url": tool['url'],
+        "applicationCategory": "DeveloperApplication",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "0",
+            "offerCount": "4",
+            "offers": [
+                {"@type": "Offer", "name": "Free", "description": tool['price_free']},
+                {"@type": "Offer", "name": "Individual", "description": tool['price_individual']},
+                {"@type": "Offer", "name": "Business", "description": tool['price_business']},
+                {"@type": "Offer", "name": "Enterprise", "description": tool['price_enterprise']}
+            ]
+        }
+    }
+    return json.dumps(schema, indent=2)
+
+
 def generate_comparison_page(comp):
     """Generate a full comparison page HTML."""
     slug = comp['slug']
@@ -99,6 +123,8 @@ def generate_comparison_page(comp):
     breadcrumb_name = f"{tool_a['name']} vs {tool_b['name']}"
     breadcrumb_schema = generate_breadcrumb_schema(slug, breadcrumb_name)
     faq_schema = generate_faq_schema(comp['faqs'])
+    software_schema_a = generate_software_schema(tool_a, BASE_URL)
+    software_schema_b = generate_software_schema(tool_b, BASE_URL)
 
     extra_head = f'''
     <!-- BreadcrumbList Schema -->
@@ -109,6 +135,16 @@ def generate_comparison_page(comp):
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {faq_schema}
+    </script>
+
+    <!-- SoftwareApplication Schema: {tool_a['name']} -->
+    <script type="application/ld+json">
+    {software_schema_a}
+    </script>
+
+    <!-- SoftwareApplication Schema: {tool_b['name']} -->
+    <script type="application/ld+json">
+    {software_schema_b}
     </script>
     '''
 
@@ -134,6 +170,30 @@ def generate_comparison_page(comp):
     for rec in comp.get('recommendation_sections', []):
         rec_html += f'''
             <p><strong>{rec['audience']}:</strong> {rec['text']}</p>'''
+
+    # Migration guidance section
+    migration_html = ''
+    if comp.get('migration'):
+        mig = comp['migration']
+        transfers_items = '\n                  '.join(f'<li>{item}</li>' for item in mig.get('what_transfers', []))
+        reconfig_items = '\n                  '.join(f'<li>{item}</li>' for item in mig.get('what_needs_reconfiguration', []))
+        time_est = mig.get('time_estimate', '')
+        migration_html = f'''
+          <div class="section-divider">
+            <h2>Switching Between {tool_a['name']} and {tool_b['name']}</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  {transfers_items}
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  {reconfig_items}
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>{time_est}</p>
+            </div>
+          </div>'''
 
     # FAQ details
     faq_details = ''
@@ -347,6 +407,32 @@ def generate_comparison_page(comp):
     .cta-comparison__card .btn:hover {
       background: var(--gold-hover);
     }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
     .affiliate-disclosure {
       font-size: 0.8125rem;
       color: var(--text-muted);
@@ -433,6 +519,7 @@ def generate_comparison_page(comp):
           </div>
           <h1>{comp['h1']}</h1>
           <p class="subtitle">{comp['subtitle']}</p>
+          <p class="comparison-header__date">Last updated: {comp.get('date_updated', 'February 2026')}</p>
         </div>
 
         <div class="quick-verdict">
@@ -499,6 +586,8 @@ def generate_comparison_page(comp):
             <h2>Our Recommendation</h2>
             {rec_html}
           </div>
+
+          {migration_html}
 
           <div class="cta-comparison">
             <div class="cta-comparison__card">

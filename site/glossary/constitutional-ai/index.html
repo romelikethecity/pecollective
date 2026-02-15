@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Constitutional AI (CAI)</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> An alignment technique developed by Anthropic where AI systems are trained to follow a set of principles (a 'constitution') that guide their behavior.
+                </div>
+
                 <div class="glossary-definition">
-                    An alignment technique developed by Anthropic where AI systems are trained to follow a set of principles (a 'constitution') that guide their behavior. The model critiques and revises its own outputs based on these principles, reducing the need for human feedback labeling.
+                    <strong>Constitutional AI (CAI)</strong> is an alignment technique developed by Anthropic where AI systems are trained to follow a set of principles (a 'constitution') that guide their behavior. The model critiques and revises its own outputs based on these principles, reducing the need for human feedback labeling.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Constitutional AI is how Claude is trained. Understanding it helps prompt engineers work with Claude's behavioral patterns — Claude's tendency to be direct about uncertainty and refuse harmful requests stems from its constitutional training.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

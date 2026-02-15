@@ -768,6 +768,84 @@
   ]
 }
     </script>
+
+    <!-- SoftwareApplication Schema: Pinecone -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pinecone",
+  "url": "https://www.pinecone.io",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Starter (free tier)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Serverless: usage-based"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "Standard: from $50/mo"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Enterprise: from $500/mo"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Weaviate -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Weaviate",
+  "url": "https://weaviate.io",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free sandbox cluster"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "Self-hosted (open source)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "Cloud: ~$0.095/1M dims"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Custom pricing"
+      }
+    ]
+  }
+}
+    </script>
     
 </head>
 
@@ -1003,6 +1081,32 @@
     .cta-comparison__card .btn:hover {
       background: var(--gold-hover);
     }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
     .affiliate-disclosure {
       font-size: 0.8125rem;
       color: var(--text-muted);
@@ -1083,6 +1187,7 @@
           </div>
           <h1>Which Vector Database Should You Use?</h1>
           <p class="subtitle">A practical comparison for building RAG systems and AI search applications</p>
+          <p class="comparison-header__date">Last updated: February 15, 2026</p>
         </div>
 
         <div class="quick-verdict">
@@ -1236,6 +1341,29 @@
             <p><strong>For AI Engineers Building RAG:</strong> Start with Pinecone if you want the fastest path to a working system. The serverless model means you can have a RAG pipeline running in an afternoon. Switch to Weaviate if you need hybrid search, self-hosting, or hit Pinecone's pricing limits at scale.</p>
             <p><strong>For Enterprise Teams:</strong> Weaviate's self-hosting option and open-source license make compliance conversations easier. If your security team has concerns about sending data to a third-party managed service, Weaviate on your own infrastructure removes that objection entirely.</p>
             <p><strong>The Bottom Line:</strong> Pinecone for speed and simplicity. Weaviate for flexibility and control. Both are production-ready and power thousands of AI applications. If hybrid search matters to your use case, Weaviate wins. If you want the simplest possible setup, Pinecone wins.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between Pinecone and Weaviate</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>Embedding vectors (export from one, import to the other)</li>
+                  <li>Metadata and filtering logic (both support metadata-based filtering)</li>
+                  <li>Embedding model configuration (vectors are model-dependent, not DB-dependent)</li>
+                  <li>Application-level query logic (search patterns are similar)</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>Client SDK code (different APIs: Pinecone SDK vs Weaviate client)</li>
+                  <li>Index/collection configuration (namespaces vs classes/collections)</li>
+                  <li>Query syntax (REST/gRPC vs GraphQL)</li>
+                  <li>Deployment infrastructure (serverless vs self-hosted considerations)</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>A few hours for re-indexing plus 1-2 days for client code changes. The vectors themselves transfer directly. Plan for re-indexing time proportional to your dataset size.</p>
+            </div>
           </div>
 
           <div class="cta-comparison">

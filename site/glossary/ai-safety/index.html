@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The field focused on preventing AI systems from causing unintended harm, both in current applications and as systems become more capable.
+                </div>
+
                 <div class="glossary-definition">
-                    The field focused on preventing AI systems from causing unintended harm, both in current applications and as systems become more capable. AI safety covers technical problems (jailbreaking, prompt injection, hallucination), policy questions (regulation, liability), and longer-term concerns about increasingly autonomous systems.
+                    <strong>AI Safety</strong> is the field focused on preventing AI systems from causing unintended harm, both in current applications and as systems become more capable. AI safety covers technical problems (jailbreaking, prompt injection, hallucination), policy questions (regulation, liability), and longer-term concerns about increasingly autonomous systems.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>AI safety is becoming a regulatory requirement. The EU AI Act, Executive Orders on AI, and industry standards all mandate safety evaluations. Prompt engineers increasingly need safety expertise: designing red-team tests, building guardrails, and evaluating model behavior.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

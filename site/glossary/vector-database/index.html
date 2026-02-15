@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A specialized database designed to store, index, and query high-dimensional vectors (embeddings).
+                </div>
+
                 <div class="glossary-definition">
-                    A specialized database designed to store, index, and query high-dimensional vectors (embeddings). Vector databases enable semantic similarity search, finding items by meaning rather than exact keyword matches.
+                    <strong>Vector Database</strong> is a specialized database designed to store, index, and query high-dimensional vectors (embeddings). Vector databases enable semantic similarity search, finding items by meaning rather than exact keyword matches.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Vector databases are the backbone of RAG systems and semantic search. The vector DB market is projected to exceed $4B by 2028, with Pinecone, Weaviate, and Chroma leading adoption.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

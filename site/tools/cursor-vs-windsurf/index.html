@@ -768,6 +768,84 @@
   ]
 }
     </script>
+
+    <!-- SoftwareApplication Schema: Cursor -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cursor",
+  "url": "https://www.cursor.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Limited free tier"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$20/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$40/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Contact sales"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Windsurf -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Windsurf",
+  "url": "https://windsurf.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free tier available"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$15/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$30/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Contact sales"
+      }
+    ]
+  }
+}
+    </script>
     
 </head>
 
@@ -1003,6 +1081,32 @@
     .cta-comparison__card .btn:hover {
       background: var(--gold-hover);
     }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
     .affiliate-disclosure {
       font-size: 0.8125rem;
       color: var(--text-muted);
@@ -1083,6 +1187,7 @@
           </div>
           <h1>Which AI Code Editor Should You Use?</h1>
           <p class="subtitle">A head-to-head comparison for AI-powered development workflows</p>
+          <p class="comparison-header__date">Last updated: February 15, 2026</p>
         </div>
 
         <div class="quick-verdict">
@@ -1236,6 +1341,29 @@
             <p><strong>For AI Professionals:</strong> Cursor is the safer choice. The model flexibility and mature Composer feature make it better for the kind of complex, multi-file work that AI professionals do daily. The larger community also means more shared prompts and workflows.</p>
             <p><strong>For General Developers:</strong> Try Windsurf first. The lower price point and generous free tier let you evaluate AI-assisted coding without a big commitment. If you find yourself needing more model control or better extension support, switch to Cursor.</p>
             <p><strong>The Bottom Line:</strong> Both editors are excellent. The gap between them is smaller than the gap between either one and coding without AI assistance. Pick one, learn it well, and switch later if needed.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between Cursor and Windsurf</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>VS Code extensions (both are VS Code forks, most extensions work in either)</li>
+                  <li>Keyboard shortcuts and keybindings (same base editor)</li>
+                  <li>Workspace settings and project configurations</li>
+                  <li>Git integration and terminal workflows</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>AI chat history and saved conversations (not portable)</li>
+                  <li>Custom AI rules and prompt configurations (different formats)</li>
+                  <li>Subscription and billing (separate accounts)</li>
+                  <li>Codebase indexing (needs to re-index your project)</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>About 30 minutes. Install the new editor, open your project, let it index, and reconfigure your AI preferences. Your code, git history, and extensions carry over immediately.</p>
+            </div>
           </div>
 
           <div class="cta-comparison">

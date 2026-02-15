@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> The capability of AI models to interact with external tools, APIs, and systems by generating structured requests during a conversation.
+                </div>
+
                 <div class="glossary-definition">
-                    The capability of AI models to interact with external tools, APIs, and systems by generating structured requests during a conversation. Tool use extends LLMs beyond text generation into taking real-world actions like searching the web, running code, querying databases, or calling APIs.
+                    <strong>Tool Use</strong> is the capability of AI models to interact with external tools, APIs, and systems by generating structured requests during a conversation. Tool use extends LLMs beyond text generation into taking real-world actions like searching the web, running code, querying databases, or calling APIs.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>Tool use transforms LLMs from knowledge bases into action-takers. It's the mechanism that makes AI agents possible and is required for building any production AI system that needs to interact with external data or services.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

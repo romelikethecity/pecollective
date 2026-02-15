@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A special instruction given to a language model that sets its behavior, personality, constraints, and role for an entire conversation.
+                </div>
+
                 <div class="glossary-definition">
-                    A special instruction given to a language model that sets its behavior, personality, constraints, and role for an entire conversation. System prompts are processed before user messages and establish the model's operating context.
+                    <strong>System Prompt</strong> is a special instruction given to a language model that sets its behavior, personality, constraints, and role for an entire conversation. System prompts are processed before user messages and establish the model's operating context.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>System prompts are the foundation of every AI-powered product. They define what the AI does, how it behaves, and what guardrails it follows. Getting them right is a core prompt engineering skill.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -814,6 +814,20 @@
         font-weight: 600;
     }
 
+    .glossary-quick-answer {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-darker);
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .glossary-quick-answer strong {
+        color: var(--gold);
+    }
+
     .glossary-definition {
         font-size: 1.125rem;
         line-height: 1.8;
@@ -823,6 +837,10 @@
         background: var(--bg-card);
         border-left: 3px solid var(--gold);
         border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-definition strong {
+        color: var(--text-primary);
     }
 
     .glossary-section {
@@ -1111,8 +1129,12 @@
                     <p class="full-name">Mixture of Experts (MoE)</p>
                 </div>
 
+                <div class="glossary-quick-answer">
+                    <strong>Quick Answer:</strong> A model architecture where multiple specialized sub-networks (experts) exist within a single model, but only a subset are activated for each input.
+                </div>
+
                 <div class="glossary-definition">
-                    A model architecture where multiple specialized sub-networks (experts) exist within a single model, but only a subset are activated for each input. A routing mechanism decides which experts to use for each token, keeping computation efficient while maintaining a large total parameter count.
+                    <strong>Mixture of Experts (MoE)</strong> is a model architecture where multiple specialized sub-networks (experts) exist within a single model, but only a subset are activated for each input. A routing mechanism decides which experts to use for each token, keeping computation efficient while maintaining a large total parameter count.
                 </div>
 
                 
@@ -1125,6 +1147,7 @@
         <h2>Why It Matters</h2>
         <p>MoE explains why some models punch above their weight class on benchmarks. GPT-4 is widely believed to use MoE architecture. Understanding MoE helps prompt engineers reason about model capabilities and cost-performance tradeoffs.</p>
     </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -155,6 +155,12 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
 
             {'<div class="section"><h2 style="margin-bottom: 20px;">Top Paying Companies</h2>' + companies_html + '</div>' if companies_html else ''}
 
+            <div class="section" style="text-align: center; padding: 24px 0;">
+                <a href="/salaries/" style="color: var(--teal-light); font-weight: 600; text-decoration: none;">&larr; Browse All Salary Data</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/jobs/" style="color: var(--teal-light); font-weight: 600; text-decoration: none;">View AI Job Listings &rarr;</a>
+            </div>
+
             <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border);">
                 <h3>Methodology</h3>
                 <p style="color: var(--text-secondary); margin-top: 12px;">
@@ -211,11 +217,17 @@ def main():
     df_salary = df[df[salary_col].notna() & (df[salary_col] > 0)].copy()
     print(f" Jobs with salary: {len(df_salary)}")
 
+    # Track which pages were actually generated
+    generated_roles = []
+    generated_metros = []
+    generated_experience = []
+
     # Generate role-based salary pages
     print("\n Generating role-based salary pages...")
     for category, slug, display in ROLE_CATEGORIES:
         filtered = df_salary[df_salary['job_category'] == category] if 'job_category' in df_salary.columns else pd.DataFrame()
         if generate_salary_page(filtered, slug, display, 'role', salary_col, min_col):
+            generated_roles.append((category, slug, display))
             print(f"   Generated /salaries/{slug}/ ({len(filtered)} jobs)")
 
     # Generate metro-based salary pages
@@ -234,6 +246,7 @@ def main():
             else:
                 filtered = pd.DataFrame()
         if generate_salary_page(filtered, slug, metro, 'metro', salary_col, min_col):
+            generated_metros.append((metro, slug))
             print(f"   Generated /salaries/{slug}/ ({len(filtered)} jobs)")
 
     # Generate experience-based salary pages
@@ -241,11 +254,23 @@ def main():
     for level, slug, display in EXPERIENCE_CATEGORIES:
         filtered = df_salary[df_salary['experience_level'] == level] if 'experience_level' in df_salary.columns else pd.DataFrame()
         if generate_salary_page(filtered, slug, display, 'experience', salary_col, min_col):
+            generated_experience.append((level, slug, display))
             print(f"   Generated /salaries/{slug}/ ({len(filtered)} jobs)")
 
     # Generate index page
     overall_avg = int(df_salary[salary_col].mean()) if len(df_salary) > 0 else 0
     salary_index_breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Salaries", "/salaries/")])
+
+    # Build category sections (only link to pages that were actually generated)
+    role_cards = ''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{display}</h3><p>View salary data</p></a>' for _, slug, display in generated_roles])
+    role_section = f'<h2 style="margin-bottom: 20px;">By Role</h2><div class="category-grid">{role_cards}</div>' if generated_roles else ''
+
+    metro_cards = ''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{metro}</h3><p>View salary data</p></a>' for metro, slug in generated_metros])
+    metro_section = f'<h2 style="margin-bottom: 20px;">By Location</h2><div class="category-grid">{metro_cards}</div>' if generated_metros else ''
+
+    exp_cards = ''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{display}</h3><p>View salary data</p></a>' for _, slug, display in generated_experience])
+    exp_section = f'<h2 style="margin-bottom: 20px;">By Experience</h2><div class="category-grid">{exp_cards}</div>' if generated_experience else ''
+
     index_html = f'''{get_html_head(
         "AI & ML Engineer Salary Benchmarks 2026",
         f"Comprehensive salary data for AI engineers, ML engineers, and prompt engineers. Average ${overall_avg//1000}K based on {len(df_salary)} job postings with disclosed compensation. Updated weekly.",
@@ -279,20 +304,11 @@ def main():
                 .category-card p {{ color: var(--text-secondary); font-size: 0.9rem; }}
             </style>
 
-            <h2 style="margin-bottom: 20px;">By Role</h2>
-            <div class="category-grid">
-                {''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{display}</h3><p>View salary data</p></a>' for _, slug, display in ROLE_CATEGORIES])}
-            </div>
+            {role_section}
 
-            <h2 style="margin-bottom: 20px;">By Location</h2>
-            <div class="category-grid">
-                {''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{metro}</h3><p>View salary data</p></a>' for metro, slug in METRO_CATEGORIES])}
-            </div>
+            {metro_section}
 
-            <h2 style="margin-bottom: 20px;">By Experience</h2>
-            <div class="category-grid">
-                {''.join([f'<a href="/salaries/{slug}/" class="category-card"><h3>{display}</h3><p>View salary data</p></a>' for _, slug, display in EXPERIENCE_CATEGORIES])}
-            </div>
+            {exp_section}
 
             {get_cta_box()}
         </div>

@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>AI & Prompt Engineering Glossary | PE Collective</title>
+    <meta name="description" content="Definitions and examples for key AI, prompt engineering, and machine learning terms. From RAG to RLHF, learn the concepts that matter.">
+    <link rel="canonical" href="https://pecollective.com/glossary/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/glossary/">
+    <meta property="og:title" content="AI & Prompt Engineering Glossary">
+    <meta property="og:description" content="Definitions and examples for key AI, prompt engineering, and machine learning terms. From RAG to RLHF, learn the concepts that matter.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="AI & Prompt Engineering Glossary">
+    <meta name="twitter:description" content="Definitions and examples for key AI, prompt engineering, and machine learning terms. From RAG to RLHF, learn the concepts that matter.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    
+    <style>
+    
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+
+    .glossary-page {
+        padding: 3rem 0;
+        min-height: 60vh;
+    }
+
+    .glossary-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .glossary-term-header {
+        margin-bottom: 2rem;
+    }
+
+    .glossary-term-header h1 {
+        font-size: 2.25rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .glossary-term-header .full-name {
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .glossary-category-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: var(--teal-primary);
+        color: var(--gold);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+    }
+
+    .glossary-definition {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--bg-card);
+        border-left: 3px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-section {
+        margin-bottom: 2rem;
+    }
+
+    .glossary-section h2 {
+        font-size: 1.25rem;
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+    }
+
+    .glossary-section p,
+    .glossary-section .example-block {
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+
+    .example-block {
+        background: var(--bg-darker);
+        padding: 1.25rem;
+        border-radius: 8px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.9375rem;
+        white-space: pre-wrap;
+        border: 1px solid var(--teal-primary);
+    }
+
+    .related-terms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .related-terms a {
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--bg-card);
+        color: var(--text-secondary);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        border: 1px solid var(--teal-primary);
+        transition: all 0.2s;
+    }
+
+    .related-terms a:hover {
+        background: var(--teal-primary);
+        color: var(--text-primary);
+    }
+
+    .related-links {
+        list-style: none;
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .related-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .related-links a {
+        color: var(--gold);
+        font-weight: 500;
+    }
+
+    .related-links a:hover {
+        color: var(--gold-light);
+    }
+
+    /* Hub page styles */
+    .glossary-hub {
+        padding: 3rem 0;
+    }
+
+    .glossary-hub h1 {
+        font-size: 2.25rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .glossary-hub .hub-subtitle {
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+        margin-bottom: 2.5rem;
+        max-width: 640px;
+    }
+
+    .glossary-category {
+        margin-bottom: 2.5rem;
+    }
+
+    .glossary-category h2 {
+        font-size: 1.25rem;
+        color: var(--gold);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--teal-primary);
+    }
+
+    .glossary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .glossary-card {
+        display: block;
+        padding: 1.25rem;
+        background: var(--bg-card);
+        border: 1px solid var(--teal-primary);
+        border-radius: 8px;
+        transition: all 0.2s;
+    }
+
+    .glossary-card:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--gold);
+        transform: translateY(-2px);
+    }
+
+    .glossary-card h3 {
+        color: var(--text-primary);
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .glossary-card p {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .glossary-term-header h1,
+        .glossary-hub h1 {
+            font-size: 1.75rem;
+        }
+
+        .glossary-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://pecollective.com/glossary/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AI & Prompt Engineering Glossary",
+  "description": "Definitions and examples for key AI, prompt engineering, and machine learning terms. From RAG to RLHF, learn the concepts that matter.",
+  "numberOfItems": 35,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://pecollective.com/glossary/prompt-engineering/",
+      "name": "Prompt Engineering"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://pecollective.com/glossary/rag/",
+      "name": "RAG"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://pecollective.com/glossary/chain-of-thought/",
+      "name": "Chain-of-Thought Prompting"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://pecollective.com/glossary/few-shot-prompting/",
+      "name": "Few-Shot Prompting"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://pecollective.com/glossary/zero-shot-prompting/",
+      "name": "Zero-Shot Prompting"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://pecollective.com/glossary/system-prompt/",
+      "name": "System Prompt"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://pecollective.com/glossary/vector-database/",
+      "name": "Vector Database"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://pecollective.com/glossary/embeddings/",
+      "name": "Embeddings"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://pecollective.com/glossary/fine-tuning/",
+      "name": "Fine-Tuning"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://pecollective.com/glossary/context-window/",
+      "name": "Context Window"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://pecollective.com/glossary/tokens/",
+      "name": "Tokens"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://pecollective.com/glossary/hallucination/",
+      "name": "Hallucination"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://pecollective.com/glossary/temperature/",
+      "name": "Temperature"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://pecollective.com/glossary/ai-agent/",
+      "name": "AI Agent"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://pecollective.com/glossary/function-calling/",
+      "name": "Function Calling"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://pecollective.com/glossary/rlhf/",
+      "name": "RLHF"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://pecollective.com/glossary/lora/",
+      "name": "LoRA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://pecollective.com/glossary/semantic-search/",
+      "name": "Semantic Search"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://pecollective.com/glossary/grounding/",
+      "name": "Grounding"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://pecollective.com/glossary/top-p/",
+      "name": "Top-P Sampling"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://pecollective.com/glossary/transformer/",
+      "name": "Transformer"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://pecollective.com/glossary/attention-mechanism/",
+      "name": "Attention Mechanism"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://pecollective.com/glossary/tokenizer/",
+      "name": "Tokenizer"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://pecollective.com/glossary/multimodal-ai/",
+      "name": "Multimodal AI"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://pecollective.com/glossary/agentic-ai/",
+      "name": "Agentic AI"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://pecollective.com/glossary/prompt-injection/",
+      "name": "Prompt Injection"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://pecollective.com/glossary/constitutional-ai/",
+      "name": "Constitutional AI"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://pecollective.com/glossary/dpo/",
+      "name": "DPO"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://pecollective.com/glossary/quantization/",
+      "name": "Quantization"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://pecollective.com/glossary/mixture-of-experts/",
+      "name": "Mixture of Experts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://pecollective.com/glossary/knowledge-distillation/",
+      "name": "Knowledge Distillation"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://pecollective.com/glossary/inference/",
+      "name": "Inference"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://pecollective.com/glossary/latency/",
+      "name": "Latency"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://pecollective.com/glossary/throughput/",
+      "name": "Throughput"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "url": "https://pecollective.com/glossary/guardrails/",
+      "name": "Guardrails"
+    }
+  ]
+}
+    </script>
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+    <main>
+        <div class="glossary-hub">
+            <div class="glossary-container">
+                <h1>AI & Prompt Engineering Glossary</h1>
+                <p class="hub-subtitle">
+                    35 essential terms defined with examples. From foundational concepts to advanced techniques,
+                    learn the language of AI engineering.
+                </p>
+
+                
+        <div class="glossary-category">
+            <h2>Core Concepts</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/attention-mechanism/" class="glossary-card">
+                <h3>Attention Mechanism</h3>
+                <p>The core innovation in transformers that allows models to weigh the importance of different parts of the input when...</p>
+            </a>
+            <a href="/glossary/context-window/" class="glossary-card">
+                <h3>Context Window</h3>
+                <p>The maximum amount of text (measured in tokens) that a language model can process in a single request, including both...</p>
+            </a>
+            <a href="/glossary/embeddings/" class="glossary-card">
+                <h3>Embeddings</h3>
+                <p>Dense numerical representations of text, images, or other data in a high-dimensional vector space. Similar items are...</p>
+            </a>
+            <a href="/glossary/guardrails/" class="glossary-card">
+                <h3>Guardrails</h3>
+                <p>Safety mechanisms and constraints built around AI systems to prevent harmful, off-topic, or undesirable outputs....</p>
+            </a>
+            <a href="/glossary/hallucination/" class="glossary-card">
+                <h3>Hallucination</h3>
+                <p>When a language model generates information that sounds plausible but is factually incorrect, fabricated, or not...</p>
+            </a>
+            <a href="/glossary/multimodal-ai/" class="glossary-card">
+                <h3>Multimodal AI</h3>
+                <p>AI systems that can process and generate multiple types of data — text, images, audio, video, or code — within a single...</p>
+            </a>
+            <a href="/glossary/prompt-engineering/" class="glossary-card">
+                <h3>Prompt Engineering</h3>
+                <p>The practice of designing and optimizing inputs to large language models (LLMs) to produce accurate, relevant, and...</p>
+            </a>
+            <a href="/glossary/prompt-injection/" class="glossary-card">
+                <h3>Prompt Injection</h3>
+                <p>A security vulnerability where malicious user input overrides or manipulates a language model's system prompt or...</p>
+            </a>
+            <a href="/glossary/system-prompt/" class="glossary-card">
+                <h3>System Prompt</h3>
+                <p>A special instruction given to a language model that sets its behavior, personality, constraints, and role for an...</p>
+            </a>
+            <a href="/glossary/tokens/" class="glossary-card">
+                <h3>Tokens</h3>
+                <p>The basic units that language models use to process text. A token is typically a word, part of a word, or a punctuation...</p>
+            </a>
+            <a href="/glossary/transformer/" class="glossary-card">
+                <h3>Transformer</h3>
+                <p>The neural network architecture behind virtually all modern large language models. Introduced in the 2017 paper...</p>
+            </a>
+            </div>
+        </div>
+        <div class="glossary-category">
+            <h2>Prompting Techniques</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/chain-of-thought/" class="glossary-card">
+                <h3>Chain-of-Thought Prompting</h3>
+                <p>A prompting technique where the model is instructed to break down complex problems into intermediate reasoning steps...</p>
+            </a>
+            <a href="/glossary/few-shot-prompting/" class="glossary-card">
+                <h3>Few-Shot Prompting</h3>
+                <p>A technique where you provide a small number of input-output examples in your prompt to demonstrate the desired task...</p>
+            </a>
+            <a href="/glossary/zero-shot-prompting/" class="glossary-card">
+                <h3>Zero-Shot Prompting</h3>
+                <p>Giving a language model a task instruction without any examples, relying entirely on the model's pre-trained knowledge...</p>
+            </a>
+            </div>
+        </div>
+        <div class="glossary-category">
+            <h2>Architecture Patterns</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/ai-agent/" class="glossary-card">
+                <h3>AI Agent</h3>
+                <p>An AI system that can autonomously plan and execute multi-step tasks by using tools, making decisions, and iterating...</p>
+            </a>
+            <a href="/glossary/agentic-ai/" class="glossary-card">
+                <h3>Agentic AI</h3>
+                <p>An approach to AI system design where models autonomously plan, execute, and iterate on complex tasks with minimal...</p>
+            </a>
+            <a href="/glossary/function-calling/" class="glossary-card">
+                <h3>Function Calling</h3>
+                <p>A capability where language models can generate structured JSON that maps to predefined function signatures, allowing...</p>
+            </a>
+            <a href="/glossary/grounding/" class="glossary-card">
+                <h3>Grounding</h3>
+                <p>The practice of connecting language model outputs to verified, factual sources of information. Grounding techniques...</p>
+            </a>
+            <a href="/glossary/mixture-of-experts/" class="glossary-card">
+                <h3>Mixture of Experts</h3>
+                <p>A model architecture where multiple specialized sub-networks (experts) exist within a single model, but only a subset...</p>
+            </a>
+            <a href="/glossary/rag/" class="glossary-card">
+                <h3>RAG</h3>
+                <p>An architecture pattern that combines information retrieval with text generation. RAG systems first search a knowledge...</p>
+            </a>
+            <a href="/glossary/semantic-search/" class="glossary-card">
+                <h3>Semantic Search</h3>
+                <p>A search approach that understands the meaning and intent behind a query rather than just matching keywords. Semantic...</p>
+            </a>
+            </div>
+        </div>
+        <div class="glossary-category">
+            <h2>Model Parameters</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/temperature/" class="glossary-card">
+                <h3>Temperature</h3>
+                <p>A model parameter (typically 0 to 2) that controls the randomness of outputs. Lower temperature (0-0.3) produces more...</p>
+            </a>
+            <a href="/glossary/top-p/" class="glossary-card">
+                <h3>Top-P Sampling</h3>
+                <p>A text generation parameter that limits the model's token selection to the smallest set of tokens whose cumulative...</p>
+            </a>
+            </div>
+        </div>
+        <div class="glossary-category">
+            <h2>Model Training</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/constitutional-ai/" class="glossary-card">
+                <h3>Constitutional AI</h3>
+                <p>An alignment technique developed by Anthropic where AI systems are trained to follow a set of principles (a...</p>
+            </a>
+            <a href="/glossary/dpo/" class="glossary-card">
+                <h3>DPO</h3>
+                <p>A simpler alternative to RLHF that skips training a separate reward model. DPO directly optimizes a language model...</p>
+            </a>
+            <a href="/glossary/fine-tuning/" class="glossary-card">
+                <h3>Fine-Tuning</h3>
+                <p>The process of taking a pre-trained language model and training it further on a specific dataset to specialize its...</p>
+            </a>
+            <a href="/glossary/knowledge-distillation/" class="glossary-card">
+                <h3>Knowledge Distillation</h3>
+                <p>A training technique where a smaller 'student' model learns to replicate the behavior of a larger 'teacher' model. The...</p>
+            </a>
+            <a href="/glossary/lora/" class="glossary-card">
+                <h3>LoRA</h3>
+                <p>A parameter-efficient fine-tuning technique that freezes the original model weights and injects small trainable...</p>
+            </a>
+            <a href="/glossary/rlhf/" class="glossary-card">
+                <h3>RLHF</h3>
+                <p>A training technique where human evaluators rank model outputs by quality, and these rankings are used to train a...</p>
+            </a>
+            </div>
+        </div>
+        <div class="glossary-category">
+            <h2>Infrastructure</h2>
+            <div class="glossary-grid">
+                
+            <a href="/glossary/inference/" class="glossary-card">
+                <h3>Inference</h3>
+                <p>The process of running a trained model to generate predictions or outputs from new inputs. In the context of LLMs,...</p>
+            </a>
+            <a href="/glossary/latency/" class="glossary-card">
+                <h3>Latency</h3>
+                <p>The time delay between sending a request to an AI model and receiving the response. In LLM applications, latency...</p>
+            </a>
+            <a href="/glossary/quantization/" class="glossary-card">
+                <h3>Quantization</h3>
+                <p>A technique that reduces model size and memory usage by representing weights with fewer bits — for example, converting...</p>
+            </a>
+            <a href="/glossary/throughput/" class="glossary-card">
+                <h3>Throughput</h3>
+                <p>The number of tokens or requests an AI system can process per unit of time. High throughput means handling more users...</p>
+            </a>
+            <a href="/glossary/tokenizer/" class="glossary-card">
+                <h3>Tokenizer</h3>
+                <p>The component that converts raw text into the sequence of tokens a model can process, and converts tokens back into...</p>
+            </a>
+            <a href="/glossary/vector-database/" class="glossary-card">
+                <h3>Vector Database</h3>
+                <p>A specialized database designed to store, index, and query high-dimensional vectors (embeddings). Vector databases...</p>
+            </a>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        
+    <div class="cta-box">
+        <h3>Go Deeper</h3>
+        <p>Our complete prompt engineering guide covers these concepts in practice, with real-world examples and techniques you can use today.</p>
+        <a href="/blog/prompt-engineering-guide/" class="btn btn-gold">Read the Guide →</a>
+    </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

@@ -18,15 +18,19 @@
   
   <title>Join the Community — PE Collective</title>
   
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com/join/">
   <meta property="og:title" content="Join PE Collective">
   <meta property="og:description" content="Connect with 1,300+ prompt engineers, AI engineers, and ML practitioners.">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/join/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="Join PE Collective">
   <meta name="twitter:description" content="Connect with 1,300+ prompt engineers, AI engineers, and ML practitioners.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
@@ -42,11 +46,243 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com",
+    "logo": "https://pecollective.com/assets/logo.jpeg",
+    "description": "AI Jobs & Market Intelligence for Prompt Engineers",
+    "sameAs": [
+      "https://twitter.com/pecollective",
+      "https://ainewsdigest.substack.com"
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpeg">
   <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/inline-7e537ea7.css">
-    </head>
+  
+  <style>
+    .join-page {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      padding: var(--space-3xl) 0;
+    }
+    
+    .join-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4xl);
+      align-items: start;
+    }
+    
+    @media (max-width: 900px) {
+      .join-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+    
+    .join-info h1 {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .join-info__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .join-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .join-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      color: var(--color-text-secondary);
+    }
+    
+    .join-benefits li::before {
+      content: '✓';
+      color: var(--color-success);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    
+    .join-form-container {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+    }
+    
+    .join-form-header {
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .join-form-header h2 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .join-form-header p {
+      font-size: 0.9375rem;
+    }
+    
+    .member-stats {
+      display: flex;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .member-stat {
+      text-align: center;
+    }
+    
+    .member-stat__value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+    
+    .member-stat__label {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+    
+    /* Pricing Display */
+    .pricing-highlight {
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+    
+    .pricing-badge {
+      display: inline-block;
+      padding: var(--space-xs) var(--space-md);
+      background: rgba(74, 222, 128, 0.15);
+      color: var(--color-success);
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+    }
+    
+    .pricing-amount {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2px;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .pricing-dollar {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+    
+    .pricing-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      line-height: 1;
+    }
+    
+    .pricing-period {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+    }
+    
+    .pricing-monthly {
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+    }
+    
+    .pricing-note {
+      font-size: 0.8125rem;
+      color: var(--color-gold);
+      font-style: italic;
+    }
+    
+    .join-cta-buttons {
+      margin-top: var(--space-xl);
+    }
+    
+    .join-existing {
+      margin-top: var(--space-xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+    
+    .join-existing p {
+      font-size: 0.875rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .join-free-option {
+      margin-top: var(--space-lg);
+      text-align: center;
+    }
+    
+    .join-free-option p {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .join-free-option a {
+      font-size: 0.875rem;
+    }
+
+    .join-email-form {
+      display: flex;
+      gap: 8px;
+      margin-top: var(--space-sm);
+      justify-content: center;
+    }
+
+    .join-email-form input[type="email"] {
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-darker);
+      color: var(--color-text-primary);
+      font-size: 0.875rem;
+      width: 200px;
+      outline: none;
+    }
+
+    .join-email-form input[type="email"]:focus {
+      border-color: var(--color-gold);
+    }
+
+    @media (max-width: 480px) {
+      .join-email-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .join-email-form input[type="email"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   
@@ -63,6 +299,7 @@
           <a href="../jobs/">AI Jobs</a>
           <a href="../salaries/">Salaries</a>
           <a href="../tools/">Tools</a>
+          <a href="../blog/">Blog</a>
           <a href="../insights/">Market Intel</a>
           <a href="../about/">About</a>
         </nav>
@@ -71,9 +308,36 @@
           <a href="./" class="btn btn--secondary btn--small active">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
   </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../jobs/">AI Jobs</a></li>
+      <li><a href="../salaries/">Salaries</a></li>
+      <li><a href="../tools/">Tools</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../insights/">Market Intel</a></li>
+      <li><a href="../about/">About</a></li>
+    </ul>
+    <a href="./" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
 
   <main id="main">
     <section class="join-page">
@@ -130,7 +394,7 @@
             </div>
             
             <div class="join-cta-buttons">
-              <a href="https://www.theainewsdigest.com/subscribe" target="_blank" rel="noopener" class="btn btn--primary btn--large" style="width: 100%;">Subscribe & Get Access →</a>
+              <a href="https://ainewsdigest.substack.com/subscribe" target="_blank" rel="noopener" class="btn btn--primary btn--large" style="width: 100%;">Subscribe & Get Access →</a>
             </div>
             
             <div class="join-existing">
@@ -140,7 +404,10 @@
             
             <div class="join-free-option">
               <p>Not ready for paid? Get the free newsletter:</p>
-              <a href="https://www.theainewsdigest.com" target="_blank" rel="noopener">Subscribe free →</a>
+              <form class="join-email-form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+                <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+                <button type="submit" class="btn btn--primary btn--small">Subscribe Free</button>
+              </form>
             </div>
           </div>
         </div>
@@ -192,12 +459,13 @@
       </div>
       
       <div class="footer__bottom">
-        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
+        <span>© 2026 PE Collective. Built with 🧠 for the AI community.</span>
         <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
       </div>
     </div>
   </footer>
 
   <!-- No JavaScript needed - simple links to Substack -->
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

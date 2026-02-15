@@ -162,8 +162,6 @@ CSS_VARIABLES = '''
         --white: #ffffff;
     }
 
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -826,6 +824,7 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
@@ -846,7 +845,11 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{description}">
     <meta property="og:site_name" content="{SITE_NAME}">
+    <meta property="og:locale" content="en_US">
     <meta property="og:image" content="{BASE_URL}/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{SITE_NAME} - AI jobs, salaries, and tools for prompt engineers">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -854,12 +857,14 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
     <meta name="twitter:title" content="{title}">
     <meta name="twitter:description" content="{description}">
     <meta name="twitter:image" content="{BASE_URL}/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="{SITE_NAME} - AI jobs, salaries, and tools for prompt engineers">
 
     <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
     {styles}
     {extra_head}
 </head>
@@ -890,7 +895,7 @@ def get_nav_html(active_page=None):
     <header class="site-header">
         <div class="header-container">
             <a href="/" class="logo">
-                <img src="/assets/logo.jpeg" alt="{SITE_NAME}">
+                <img src="/assets/logo.jpeg" alt="{SITE_NAME}" width="36" height="36">
                 {SITE_NAME}
             </a>
             <nav class="nav">
@@ -963,6 +968,7 @@ def get_footer_html():
             </div>
         </div>
     </footer>
+    <script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>
 '''

@@ -23,21 +23,34 @@
   <meta property="og:title" content="Prompt engineering from people who actually do it | PE Collective">
   <meta property="og:description" content="Guides, salaries, and AI jobs from 1,300+ prompt engineers. Learn techniques that actually work.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pecollective.com">
+  <meta property="og:url" content="https://pecollective.com/">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="Prompt engineering from people who actually do it | PE Collective">
   <meta name="twitter:description" content="Guides, salaries, and AI jobs from 1,300+ prompt engineers. Learn techniques that actually work.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.jpeg">
   
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -50,7 +63,10 @@
     "url": "https://pecollective.com",
     "logo": "https://pecollective.com/assets/logo.jpeg",
     "description": "A community of 1,300+ prompt engineers, AI engineers, and ML practitioners sharing guides, jobs, salaries, and career advice.",
-    "sameAs": []
+    "sameAs": [
+      "https://twitter.com/pe_collective",
+      "https://ainewsdigest.substack.com"
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -59,7 +75,12 @@
     "@type": "WebSite",
     "name": "PE Collective",
     "url": "https://pecollective.com",
-    "description": "Prompt engineering guides, jobs, and salaries from 1,300+ AI professionals."
+    "description": "Prompt engineering guides, jobs, and salaries from 1,300+ AI professionals.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pecollective.com/jobs/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
@@ -183,7 +204,7 @@
     <div class="container">
       <div class="header__inner">
         <a href="./" class="header__logo">
-          <img src="assets/logo.jpeg" alt="PE Collective Logo">
+          <img src="assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
           <span>PE Collective</span>
         </a>
         
@@ -200,9 +221,37 @@
           <a href="join/" class="btn btn--secondary btn--small">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation -->
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="jobs/">AI Jobs</a></li>
+      <li><a href="salaries/">Salaries</a></li>
+      <li><a href="tools/">Tools</a></li>
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="insights/">Market Intel</a></li>
+      <li><a href="about/">About</a></li>
+    </ul>
+    <a href="join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
 
   <!-- Main Content -->
   <main id="main">
@@ -296,7 +345,7 @@
         
         <div class="jobs-grid" id="featured-jobs">
           <!-- Jobs loaded dynamically -->
-          <a href="#" class="job-card">
+          <a href="/jobs/" class="job-card">
             <div class="job-card__content">
               <span class="job-card__company">Anthropic</span>
               <h3 class="job-card__title">Senior Prompt Engineer</h3>
@@ -314,7 +363,7 @@
             <div class="job-card__salary">$180k – $250k</div>
           </a>
           
-          <a href="#" class="job-card">
+          <a href="/jobs/" class="job-card">
             <div class="job-card__content">
               <span class="job-card__company">OpenAI</span>
               <h3 class="job-card__title">AI Agent Developer</h3>
@@ -331,7 +380,7 @@
             <div class="job-card__salary">$200k – $300k</div>
           </a>
           
-          <a href="#" class="job-card">
+          <a href="/jobs/" class="job-card">
             <div class="job-card__content">
               <span class="job-card__company">Cohere</span>
               <h3 class="job-card__title">LLM Engineer</h3>
@@ -349,7 +398,7 @@
             <div class="job-card__salary">$150k – $200k</div>
           </a>
           
-          <a href="#" class="job-card">
+          <a href="/jobs/" class="job-card">
             <div class="job-card__content">
               <span class="job-card__company">Notion</span>
               <h3 class="job-card__title">AI Product Manager</h3>
@@ -367,7 +416,7 @@
             <div class="job-card__salary">$170k – $230k</div>
           </a>
           
-          <a href="#" class="job-card">
+          <a href="/jobs/" class="job-card">
             <div class="job-card__content">
               <span class="job-card__company">Databricks</span>
               <h3 class="job-card__title">ML Ops Engineer</h3>
@@ -437,6 +486,13 @@
             <span class="tool-card__category">Comparison</span>
             <p class="tool-card__description">Head-to-head comparison: which AI coding tool should you invest your time in learning?</p>
           </a>
+
+          <a href="tools/cursor-vs-windsurf/" class="tool-card">
+            <div class="tool-card__icon">⚔️</div>
+            <h3 class="tool-card__name">Cursor vs Windsurf</h3>
+            <span class="tool-card__category">Comparison</span>
+            <p class="tool-card__description">Two AI-native code editors go head-to-head. Which one fits your workflow better?</p>
+          </a>
         </div>
         
         <div class="text-center mt-xl">
@@ -456,7 +512,7 @@
           <details class="faq__item">
             <summary class="faq__question">What is prompt engineering?</summary>
             <div class="faq__answer">
-              <p>Prompt engineering is the practice of designing inputs for AI models like GPT-4 and Claude to get reliable, useful outputs. It's part writing, part logic, part experimentation. Our <a href="blog/prompt-engineering-guide/">prompt engineering guide</a> covers the core techniques, from zero-shot prompting to chain-of-thought reasoning.</p>
+              <p>Prompt engineering is the practice of designing inputs for AI models like GPT-4 and Claude to get reliable, useful outputs. It's part writing, part logic, part experimentation. Our <a href="blog/prompt-engineering-guide/">prompt engineering guide</a> covers the core techniques, from <a href="glossary/zero-shot-prompting/">zero-shot prompting</a> to <a href="glossary/chain-of-thought/">chain-of-thought reasoning</a>. Check the full <a href="glossary/">AI glossary</a> for more terms.</p>
             </div>
           </details>
 
@@ -477,7 +533,7 @@
           <details class="faq__item">
             <summary class="faq__question">Is prompt engineering a real career?</summary>
             <div class="faq__answer">
-              <p>Yes. Companies like Anthropic, OpenAI, Google, and hundreds of startups actively hire prompt engineers. Our <a href="jobs/">job board</a> tracks 200+ active AI roles with real salary data. The field is still young, but demand is growing fast as more companies deploy AI products.</p>
+              <p>Yes. Companies like Anthropic, OpenAI, Google, and hundreds of startups actively hire prompt engineers. Our <a href="jobs/">job board</a> tracks 200+ active AI roles with real salary data. Read our <a href="blog/what-does-a-prompt-engineer-do/">guide to what prompt engineers actually do</a> for a full breakdown of responsibilities, skills, and career paths. The field is still young, but demand is growing fast as more companies deploy AI products.</p>
             </div>
           </details>
         </div>
@@ -517,7 +573,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="./" class="footer__logo">
-            <img src="assets/logo.jpeg" alt="PE Collective">
+            <img src="assets/logo.jpeg" alt="PE Collective" width="32" height="32">
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
@@ -542,6 +598,7 @@
             <a href="blog/">Blog</a>
             <a href="blog/prompt-engineering-guide/">Prompt Engineering Guide</a>
             <a href="tools/">Tools</a>
+            <a href="glossary/">Glossary</a>
             <a href="insights/">Market Intel</a>
           </nav>
         </div>
@@ -557,7 +614,7 @@
       </div>
 
       <div class="footer__bottom">
-        <span>&copy; 2026 PE Collective. Built for the AI community.</span>
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
       </div>
     </div>
   </footer>
@@ -608,5 +665,6 @@
 
     statCards.forEach(card => observer.observe(card));
   </script>
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

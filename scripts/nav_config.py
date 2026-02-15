@@ -36,6 +36,7 @@ FOOTER_ITEMS = [
     {"href": "/salaries/", "label": "Salaries"},
     {"href": "/tools/", "label": "Tools"},
     {"href": "/blog/", "label": "Blog"},
+    {"href": "/glossary/", "label": "Glossary"},
     {"href": "/insights/", "label": "Market Intel"},
     {"href": "/about/", "label": "About"},
     {"href": "/join/", "label": "Community"},

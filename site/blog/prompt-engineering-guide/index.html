@@ -25,13 +25,18 @@
   <meta property="og:title" content="The Complete Prompt Engineering Guide for 2026">
   <meta property="og:description" content="Master prompt engineering with this comprehensive guide. Learn techniques, tools, and strategies used by 1,300+ professionals.">
   <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="The Complete Prompt Engineering Guide for 2026">
   <meta name="twitter:description" content="Master prompt engineering with this comprehensive guide. Learn techniques, tools, and strategies used by 1,300+ professionals.">
   <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -47,6 +52,8 @@
   </script>
 
   <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
 
   <script type="application/ld+json">
@@ -54,6 +61,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "The Complete Prompt Engineering Guide for 2026",
+    "image": "https://pecollective.com/assets/og-blog.png",
     "author": {
       "@type": "Person",
       "name": "Rome Thorndike",
@@ -79,14 +87,16 @@
     <div class="container">
       <div class="header__inner">
         <a href="../../" class="header__logo">
-          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
           <span>PE Collective</span>
         </a>
 
         <nav class="header__nav">
-          <a href="../../jobs/">Jobs</a>
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
           <a href="../../tools/">Tools</a>
           <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
           <a href="../../about/">About</a>
         </nav>
 
@@ -94,9 +104,36 @@
           <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
   </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
 
   <main id="main">
     <article class="article-page">
@@ -244,7 +281,7 @@ Review: "The product arrived late but works great." → ?</div>
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="../gpt-4-prompt-engineering-freelance/">How to Freelance as a Prompt Engineer</a> | <a href="../prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="../../jobs/">AI Job Board</a>
+            Related: <a href="../what-does-a-prompt-engineer-do/">What Does a Prompt Engineer Do?</a> | <a href="../gpt-4-prompt-engineering-freelance/">How to Freelance as a Prompt Engineer</a> | <a href="../prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="../../jobs/">AI Job Board</a>
           </p>
         </div>
       </div>
@@ -273,7 +310,7 @@ Review: "The product arrived late but works great." → ?</div>
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="../../" class="footer__logo">
-            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
@@ -296,6 +333,7 @@ Review: "The product arrived late but works great." → ?</div>
           <nav class="footer__links">
             <a href="../">Blog</a>
             <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
             <a href="../../insights/">Market Intel</a>
           </nav>
         </div>
@@ -311,9 +349,10 @@ Review: "The product arrived late but works great." → ?</div>
       </div>
 
       <div class="footer__bottom">
-        <span>&copy; 2026 PE Collective. Built for the AI community.</span>
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
       </div>
     </div>
   </footer>
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

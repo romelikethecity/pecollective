@@ -92,6 +92,12 @@ jobs:
       - name: Generate insights page
         run: python scripts/generate_insights_page.py
 
+      - name: Generate glossary pages
+        run: python scripts/generate_glossary_pages.py
+
+      - name: Generate comparison pages
+        run: python scripts/generate_comparison_pages.py
+
       - name: Generate sitemap
         run: python scripts/generate_sitemap.py
 

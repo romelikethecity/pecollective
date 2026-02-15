@@ -49,8 +49,20 @@ for root, dirs, files in os.walk(SITE_DIR):
             if any(p['loc'].endswith(url_path) for p in pages):
                 continue
 
-            # Determine priority
-            if '/jobs/' in url_path and len(url_path.split('/')) > 3:
+            # Determine priority and changefreq
+            if '/tools/' in url_path and '-vs-' in url_path:
+                priority = 0.7  # Comparison pages
+                changefreq = 'monthly'
+            elif '/glossary/' in url_path and len(url_path.split('/')) > 3:
+                priority = 0.6  # Individual glossary terms
+                changefreq = 'monthly'
+            elif url_path == 'glossary/':
+                priority = 0.7  # Glossary hub
+                changefreq = 'weekly'
+            elif '/blog/' in url_path and len(url_path.split('/')) > 3:
+                changefreq = 'monthly'  # Blog posts don't change often
+                priority = 0.6
+            elif '/jobs/' in url_path and len(url_path.split('/')) > 3:
                 priority = 0.6  # Individual job pages
             elif '/salaries/' in url_path and len(url_path.split('/')) > 3:
                 priority = 0.7  # Salary category pages

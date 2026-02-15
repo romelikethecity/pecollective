@@ -18,18 +18,27 @@
   
   <title>Join the Community — PE Collective</title>
   
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com/join/">
   <meta property="og:title" content="Join PE Collective">
   <meta property="og:description" content="Connect with 1,300+ prompt engineers, AI engineers, and ML practitioners.">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/join/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="Join PE Collective">
   <meta name="twitter:description" content="Connect with 1,300+ prompt engineers, AI engineers, and ML practitioners.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -42,8 +51,25 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com",
+    "logo": "https://pecollective.com/assets/logo.jpeg",
+    "description": "AI Jobs & Market Intelligence for Prompt Engineers",
+    "sameAs": [
+      "https://twitter.com/pe_collective",
+      "https://ainewsdigest.substack.com"
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
@@ -230,6 +256,38 @@
     .join-free-option a {
       font-size: 0.875rem;
     }
+
+    .join-email-form {
+      display: flex;
+      gap: 8px;
+      margin-top: var(--space-sm);
+      justify-content: center;
+    }
+
+    .join-email-form input[type="email"] {
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-darker);
+      color: var(--color-text-primary);
+      font-size: 0.875rem;
+      width: 200px;
+      outline: none;
+    }
+
+    .join-email-form input[type="email"]:focus {
+      border-color: var(--color-gold);
+    }
+
+    @media (max-width: 480px) {
+      .join-email-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .join-email-form input[type="email"] {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -240,7 +298,7 @@
     <div class="container">
       <div class="header__inner">
         <a href="../" class="header__logo">
-          <img src="../assets/logo.jpeg" alt="PE Collective Logo">
+          <img src="../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
           <span>PE Collective</span>
         </a>
         
@@ -248,6 +306,7 @@
           <a href="../jobs/">AI Jobs</a>
           <a href="../salaries/">Salaries</a>
           <a href="../tools/">Tools</a>
+          <a href="../blog/">Blog</a>
           <a href="../insights/">Market Intel</a>
           <a href="../about/">About</a>
         </nav>
@@ -256,9 +315,36 @@
           <a href="./" class="btn btn--secondary btn--small active">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
   </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../jobs/">AI Jobs</a></li>
+      <li><a href="../salaries/">Salaries</a></li>
+      <li><a href="../tools/">Tools</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../insights/">Market Intel</a></li>
+      <li><a href="../about/">About</a></li>
+    </ul>
+    <a href="./" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
 
   <main id="main">
     <section class="join-page">
@@ -315,7 +401,7 @@
             </div>
             
             <div class="join-cta-buttons">
-              <a href="https://www.theainewsdigest.com/subscribe" target="_blank" rel="noopener" class="btn btn--primary btn--large" style="width: 100%;">Subscribe & Get Access →</a>
+              <a href="https://ainewsdigest.substack.com/subscribe" target="_blank" rel="noopener" class="btn btn--primary btn--large" style="width: 100%;">Subscribe & Get Access →</a>
             </div>
             
             <div class="join-existing">
@@ -325,7 +411,10 @@
             
             <div class="join-free-option">
               <p>Not ready for paid? Get the free newsletter:</p>
-              <a href="https://www.theainewsdigest.com" target="_blank" rel="noopener">Subscribe free →</a>
+              <form class="join-email-form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+                <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+                <button type="submit" class="btn btn--primary btn--small">Subscribe Free</button>
+              </form>
             </div>
           </div>
         </div>
@@ -339,7 +428,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="../" class="footer__logo">
-            <img src="../assets/logo.jpeg" alt="PE Collective">
+            <img src="../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
@@ -363,9 +452,10 @@
             <a href="../tools/">All Tools</a>
             <a href="../tools/cursor/">Cursor</a>
             <a href="../tools/github-copilot/">GitHub Copilot</a>
+            <a href="../glossary/">Glossary</a>
           </nav>
         </div>
-        
+
         <div class="footer__column">
           <h4>Community</h4>
           <nav class="footer__links">
@@ -377,12 +467,13 @@
       </div>
       
       <div class="footer__bottom">
-        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
+        <span>© 2026 PE Collective. Built with 🧠 for the AI community.</span>
         <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
       </div>
     </div>
   </footer>
 
   <!-- No JavaScript needed - simple links to Substack -->
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

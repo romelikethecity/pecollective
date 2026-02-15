@@ -1,0 +1,220 @@
+[
+  {
+    "slug": "cursor-vs-windsurf",
+    "tool_a": {
+      "name": "Cursor",
+      "icon": "⚡",
+      "url": "https://www.cursor.com",
+      "cta_text": "Get Cursor Free",
+      "price_free": "Limited free tier",
+      "price_individual": "$20/month",
+      "price_business": "$40/month",
+      "price_enterprise": "Contact sales"
+    },
+    "tool_b": {
+      "name": "Windsurf",
+      "icon": "🌊",
+      "url": "https://windsurf.com",
+      "cta_text": "Get Windsurf Free",
+      "price_free": "Free tier available",
+      "price_individual": "$15/month",
+      "price_business": "$30/month",
+      "price_enterprise": "Contact sales"
+    },
+    "title": "Cursor vs Windsurf: Which AI Code Editor Should You Choose?",
+    "h1": "Which AI Code Editor Should You Use?",
+    "meta_description": "Cursor vs Windsurf: Head-to-head comparison of features, pricing, AI capabilities, and real-world performance for developers in 2026.",
+    "og_description": "Which AI code editor is better for developers? We compare Cursor and Windsurf on features, pricing, and real-world use cases.",
+    "subtitle": "A head-to-head comparison for AI-powered development workflows",
+    "verdict_a": "You want the most mature AI code editor with proven multi-file editing, deep codebase indexing, and access to both Claude and GPT-4. Cursor has a larger user base and more battle-tested features.",
+    "verdict_b": "You want a newer alternative with competitive pricing, strong AI flows, and a fresh take on agentic coding. Windsurf's Cascade feature handles complex multi-step tasks well.",
+    "features": [
+      {"feature": "Multi-File Editing", "a": "Composer feature", "b": "Cascade flows", "winner": "a", "a_check": true, "b_check": true},
+      {"feature": "Autocomplete Quality", "a": "Excellent", "b": "Very Good", "winner": "a"},
+      {"feature": "Codebase Indexing", "a": "Full codebase indexed", "b": "Full codebase indexed", "winner": "tie", "a_check": true, "b_check": true},
+      {"feature": "AI Models", "a": "Claude + GPT-4 + custom", "b": "Claude + GPT-4", "winner": "a"},
+      {"feature": "Agentic Workflows", "a": "Agent mode", "b": "Cascade (multi-step)", "winner": "b"},
+      {"feature": "IDE Base", "a": "VS Code fork", "b": "VS Code fork", "winner": "tie"},
+      {"feature": "Price (Individual)", "a": "$20/month", "b": "$15/month", "winner": "b"},
+      {"feature": "Free Tier", "a": "Limited", "b": "Generous", "winner": "b"},
+      {"feature": "Community & Ecosystem", "a": "Large, established", "b": "Growing", "winner": "a"}
+    ],
+    "deep_dive": [
+      {
+        "heading": "Cursor Wins: Maturity and Model Flexibility",
+        "icon": "⚡",
+        "paragraphs": [
+          "Cursor has been in the AI code editor market longer and it shows. The Composer feature is more refined, the codebase indexing is faster, and the overall editor experience has had more time to polish edge cases.",
+          "Model flexibility is a significant advantage. Cursor lets you switch between Claude, GPT-4, and other models depending on the task. Some coding tasks work better with Claude's reasoning; others benefit from GPT-4's speed. Having the choice matters.",
+          "The extension ecosystem is also more developed. Since Cursor has been a VS Code fork longer, compatibility with VS Code extensions is more reliable."
+        ]
+      },
+      {
+        "heading": "Windsurf Wins: Agentic Coding and Price",
+        "icon": "🌊",
+        "paragraphs": [
+          "Windsurf's Cascade feature represents a different approach to AI-assisted development. Rather than single-turn interactions, Cascade handles multi-step workflows: 'Add authentication to this app' becomes a series of coordinated file changes with context preserved between steps.",
+          "At $15/month vs Cursor's $20, Windsurf is 25% cheaper for individuals. The free tier is also more generous, making it easier to evaluate before committing.",
+          "Windsurf is also iterating faster. Being newer means they can make breaking changes and ship features without worrying about a massive existing user base. If you like being on the cutting edge, Windsurf moves quicker."
+        ]
+      }
+    ],
+    "use_cases_a": [
+      "Complex refactoring across large codebases",
+      "Teams that need model flexibility",
+      "Developers who value stability and maturity",
+      "VS Code power users with many extensions",
+      "Enterprise environments",
+      "Projects requiring fine-grained AI control"
+    ],
+    "use_cases_b": [
+      "Agentic multi-step coding workflows",
+      "Budget-conscious developers",
+      "Greenfield projects and rapid prototyping",
+      "Developers who want opinionated AI assistance",
+      "Solo developers and indie hackers",
+      "Teams exploring AI-first development"
+    ],
+    "recommendation_sections": [
+      {
+        "audience": "For AI Professionals",
+        "text": "Cursor is the safer choice. The model flexibility and mature Composer feature make it better for the kind of complex, multi-file work that AI professionals do daily. The larger community also means more shared prompts and workflows."
+      },
+      {
+        "audience": "For General Developers",
+        "text": "Try Windsurf first. The lower price point and generous free tier let you evaluate AI-assisted coding without a big commitment. If you find yourself needing more model control or better extension support, switch to Cursor."
+      },
+      {
+        "audience": "The Bottom Line",
+        "text": "Both editors are excellent. The gap between them is smaller than the gap between either one and coding without AI assistance. Pick one, learn it well, and switch later if needed."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Cursor better than Windsurf?",
+        "answer": "Cursor is more mature with better model flexibility and a larger community. Windsurf offers stronger agentic workflows and lower pricing. For most developers, Cursor is the safer choice, but Windsurf is catching up fast."
+      },
+      {
+        "question": "Can I switch from Cursor to Windsurf easily?",
+        "answer": "Yes. Both are VS Code forks, so your settings, keybindings, and most extensions transfer directly. You can run both side by side during a transition period."
+      },
+      {
+        "question": "Which is cheaper, Cursor or Windsurf?",
+        "answer": "Windsurf is cheaper at $15/month vs Cursor's $20/month for individual plans. Windsurf also offers a more generous free tier. Business plans follow the same pattern: $30/month for Windsurf vs $40/month for Cursor."
+      },
+      {
+        "question": "Do Cursor and Windsurf use the same AI models?",
+        "answer": "Both support Claude and GPT-4, but Cursor offers more model options and the ability to bring your own API keys. Windsurf focuses on providing a curated model experience rather than maximum flexibility."
+      }
+    ]
+  },
+  {
+    "slug": "langchain-vs-llamaindex",
+    "tool_a": {
+      "name": "LangChain",
+      "icon": "🦜",
+      "url": "https://langchain.com",
+      "cta_text": "Explore LangChain",
+      "price_free": "Open source",
+      "price_individual": "Free (OSS)",
+      "price_business": "LangSmith from $39/mo",
+      "price_enterprise": "Custom pricing"
+    },
+    "tool_b": {
+      "name": "LlamaIndex",
+      "icon": "🦙",
+      "url": "https://llamaindex.ai",
+      "cta_text": "Explore LlamaIndex",
+      "price_free": "Open source",
+      "price_individual": "Free (OSS)",
+      "price_business": "LlamaCloud from $35/mo",
+      "price_enterprise": "Custom pricing"
+    },
+    "title": "LangChain vs LlamaIndex: Which AI Framework Should You Use?",
+    "h1": "Which AI Framework Should You Use?",
+    "meta_description": "LangChain vs LlamaIndex: Compare these two leading AI frameworks for building LLM applications. Features, use cases, and performance in 2026.",
+    "og_description": "LangChain or LlamaIndex? We compare the two most popular frameworks for building AI applications with LLMs.",
+    "subtitle": "A practical comparison for building LLM-powered applications",
+    "verdict_a": "You're building complex AI applications with multiple components: agents, tools, chains, and custom workflows. LangChain's flexibility and extensive ecosystem make it the go-to for ambitious projects.",
+    "verdict_b": "You're building retrieval-focused applications (RAG, search, Q&A over documents). LlamaIndex is purpose-built for connecting LLMs to your data and does it better than anything else.",
+    "features": [
+      {"feature": "RAG / Data Retrieval", "a": "Supported", "b": "Purpose-built", "winner": "b"},
+      {"feature": "Agent Frameworks", "a": "LangGraph (mature)", "b": "Basic agents", "winner": "a"},
+      {"feature": "Tool Integration", "a": "100+ integrations", "b": "Growing ecosystem", "winner": "a"},
+      {"feature": "Learning Curve", "a": "Steep", "b": "Moderate", "winner": "b"},
+      {"feature": "Documentation", "a": "Extensive", "b": "Clear and focused", "winner": "tie"},
+      {"feature": "Production Readiness", "a": "LangSmith for monitoring", "b": "LlamaCloud for hosting", "winner": "tie"},
+      {"feature": "Community Size", "a": "Larger", "b": "Growing fast", "winner": "a"},
+      {"feature": "Data Connectors", "a": "Many via integrations", "b": "150+ native connectors", "winner": "b"},
+      {"feature": "Structured Output", "a": "Supported", "b": "Strong (Pydantic)", "winner": "tie"}
+    ],
+    "deep_dive": [
+      {
+        "heading": "LangChain Wins: Flexibility and Ecosystem",
+        "icon": "🦜",
+        "paragraphs": [
+          "LangChain is the Swiss Army knife of AI frameworks. If you need to build a complex agent that uses tools, makes decisions, and orchestrates multiple LLM calls, LangChain (and LangGraph for stateful agents) is the most capable option.",
+          "The ecosystem is massive. Over 100 integrations with vector stores, LLMs, tools, and data sources. Whatever you want to connect to, there's probably a LangChain integration for it.",
+          "LangSmith, their observability platform, is also best-in-class for debugging and monitoring LLM applications in production. When your agent misbehaves at 2 AM, LangSmith helps you figure out why."
+        ]
+      },
+      {
+        "heading": "LlamaIndex Wins: Data and Retrieval",
+        "icon": "🦙",
+        "paragraphs": [
+          "If your primary use case involves connecting LLMs to your data, LlamaIndex is the better choice. It was built specifically for this problem and it shows. The data connectors, indexing strategies, and retrieval optimizations are more sophisticated.",
+          "LlamaIndex's approach to chunking, embedding, and retrieval is more opinionated but also more effective out of the box. You spend less time configuring and more time building.",
+          "The learning curve is also more forgiving. LlamaIndex has a clearer mental model: ingest data, build an index, query it. LangChain's flexibility comes with complexity that can be overwhelming for simpler use cases."
+        ]
+      }
+    ],
+    "use_cases_a": [
+      "Complex multi-agent systems",
+      "Custom AI workflows and chains",
+      "Applications needing many tool integrations",
+      "Teams that want maximum flexibility",
+      "Projects requiring LangSmith observability",
+      "Conversational AI with complex state"
+    ],
+    "use_cases_b": [
+      "RAG (Retrieval-Augmented Generation)",
+      "Document Q&A systems",
+      "Knowledge base search",
+      "Data ingestion pipelines",
+      "Structured data extraction",
+      "Quick prototypes that connect LLMs to data"
+    ],
+    "recommendation_sections": [
+      {
+        "audience": "For AI Engineers",
+        "text": "Learn both. Use LangChain (with LangGraph) for agent-heavy applications and LlamaIndex for data-heavy ones. They're complementary tools, not competitors. Many production systems use both."
+      },
+      {
+        "audience": "For Prompt Engineers",
+        "text": "Start with LlamaIndex. Most prompt engineering work involves connecting models to data (RAG), and LlamaIndex makes that straightforward. Add LangChain when you need agent orchestration."
+      },
+      {
+        "audience": "The Bottom Line",
+        "text": "LangChain for agents and complex workflows. LlamaIndex for data retrieval and RAG. Both are open source, well-maintained, and production-ready. Your use case should drive the choice, not brand preference."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LangChain better than LlamaIndex?",
+        "answer": "They solve different problems. LangChain is better for complex agent workflows and tool integrations. LlamaIndex is better for RAG, document retrieval, and connecting LLMs to your data. Many teams use both."
+      },
+      {
+        "question": "Can I use LangChain and LlamaIndex together?",
+        "answer": "Yes. LlamaIndex has native LangChain integrations. A common pattern is using LlamaIndex for data retrieval and LangChain for agent orchestration in the same application."
+      },
+      {
+        "question": "Which framework is easier to learn?",
+        "answer": "LlamaIndex has a gentler learning curve with a clearer mental model (ingest, index, query). LangChain is more flexible but also more complex, especially once you add LangGraph for stateful agents."
+      },
+      {
+        "question": "Are LangChain and LlamaIndex free?",
+        "answer": "Both core frameworks are free and open source. Each offers paid cloud services: LangSmith (from $39/month) for LangChain observability, and LlamaCloud (from $35/month) for LlamaIndex hosting and managed indexing."
+      }
+    ]
+  }
+]

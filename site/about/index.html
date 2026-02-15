@@ -18,15 +18,19 @@
   
   <title>About — PE Collective</title>
   
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pecollective.com/about/">
   <meta property="og:title" content="About PE Collective">
   <meta property="og:description" content="The job board and community built by AI professionals, for AI professionals.">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/about/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
   <meta name="twitter:title" content="About PE Collective">
   <meta name="twitter:description" content="The job board and community built by AI professionals, for AI professionals.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
@@ -42,11 +46,201 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com",
+    "logo": "https://pecollective.com/assets/logo.jpeg",
+    "description": "AI Jobs & Market Intelligence for Prompt Engineers",
+    "sameAs": [
+      "https://twitter.com/pecollective",
+      "https://ainewsdigest.substack.com"
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpeg">
   <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/inline-5032a777.css">
-    </head>
+  
+  <style>
+    .about-hero {
+      padding: var(--space-4xl) 0 var(--space-2xl);
+      text-align: center;
+    }
+    
+    .about-hero h1 {
+      margin-bottom: var(--space-md);
+    }
+    
+    .about-hero__subtitle {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .about-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .about-content h2 {
+      font-size: 1.5rem;
+      margin: var(--space-3xl) 0 var(--space-md);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .about-content h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    
+    .about-content p {
+      margin-bottom: var(--space-md);
+      line-height: 1.8;
+    }
+    
+    .about-content ul {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+    
+    .about-content li {
+      margin-bottom: var(--space-sm);
+      line-height: 1.6;
+    }
+    
+    .about-content a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    
+    .founder-section {
+      display: flex;
+      gap: var(--space-xl);
+      align-items: flex-start;
+      margin: var(--space-xl) 0;
+      padding: var(--space-xl);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+    
+    @media (max-width: 600px) {
+      .founder-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    .founder-avatar {
+      width: 100px;
+      height: 100px;
+      background: var(--color-teal-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+    
+    .founder-info h3 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .founder-info p {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .founder-links {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+    
+    @media (max-width: 600px) {
+      .founder-links {
+        justify-content: center;
+      }
+    }
+    
+    .founder-links a {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    
+    .value-card {
+      padding: var(--space-lg);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+    
+    .value-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .value-card h4 {
+      margin-bottom: var(--space-xs);
+      font-size: 1rem;
+    }
+    
+    .value-card p {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+    
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+    
+    .contact-option {
+      padding: var(--space-lg);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    
+    .contact-option:hover {
+      border-color: var(--color-teal-light);
+    }
+    
+    .contact-option__icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .contact-option h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .contact-option p {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  </style>
+</head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   
@@ -63,6 +257,7 @@
           <a href="../jobs/">AI Jobs</a>
           <a href="../salaries/">Salaries</a>
           <a href="../tools/">Tools</a>
+          <a href="../blog/">Blog</a>
           <a href="../insights/">Market Intel</a>
           <a href="./" class="active">About</a>
         </nav>
@@ -71,9 +266,36 @@
           <a href="../join/" class="btn btn--secondary btn--small">Join Community</a>
           <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
         </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
   </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../jobs/">AI Jobs</a></li>
+      <li><a href="../salaries/">Salaries</a></li>
+      <li><a href="../tools/">Tools</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../insights/">Market Intel</a></li>
+      <li><a href="./">About</a></li>
+    </ul>
+    <a href="../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
 
   <main id="main">
     <!-- Hero -->
@@ -132,7 +354,6 @@
               <p>AI practitioner and founder of PE Collective and the AI News Digest newsletter. Previously in sales leadership and GTM strategy, now focused on building tools and communities for AI professionals.</p>
               <div class="founder-links">
                 <a href="https://twitter.com/pecollective" target="_blank" rel="noopener">Twitter</a>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
               </div>
             </div>
@@ -222,10 +443,11 @@
       </div>
       
       <div class="footer__bottom">
-        <span>© 2025 PE Collective. Built with 🧠 for the AI community.</span>
+        <span>© 2026 PE Collective. Built with 🧠 for the AI community.</span>
         <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
       </div>
     </div>
   </footer>
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

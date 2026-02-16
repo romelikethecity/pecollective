@@ -157,11 +157,12 @@ def main():
 
     # Page HTML
     job_board_breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("AI Jobs", "/jobs/")])
+    extra_head_content = job_board_breadcrumbs + '\n' + itemlist_json
     html = f'''{get_html_head(
         f"{total_jobs} AI & ML Engineer Jobs - ${avg_salary}K avg",
         f"Browse {total_jobs} AI engineer, ML engineer, and prompt engineer jobs. Average salary ${avg_salary}K. {remote_jobs} remote positions available. Updated weekly.",
         "jobs/",
-        extra_head=job_board_breadcrumbs + '\n' + itemlist_json
+        extra_head=extra_head_content
     )}
 {get_nav_html('jobs')}
 

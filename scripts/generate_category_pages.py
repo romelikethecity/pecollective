@@ -125,11 +125,12 @@ def generate_category_page(filtered_df, slug, title, description):
     }
     itemlist_json = f'<script type="application/ld+json">\n{_json.dumps(itemlist_schema, indent=2)}\n</script>'
 
+    extra_head_content = breadcrumbs + '\n' + itemlist_json
     html = f'''{get_html_head(
         f"{title} - {total} Jobs",
         description,
         f"jobs/{slug}/",
-        extra_head=breadcrumbs + '\n' + itemlist_json
+        extra_head=extra_head_content
     )}
 {get_nav_html('jobs')}
 

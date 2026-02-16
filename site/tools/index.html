@@ -23,7 +23,11 @@
   <meta property="og:title" content="AI Tools Directory — PE Collective">
   <meta property="og:description" content="Reviews and comparisons of essential AI tools for prompt engineers and AI developers.">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
   <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://pecollective.com/tools/">
@@ -34,6 +38,7 @@
   <meta name="twitter:title" content="AI Tools Directory — PE Collective">
   <meta name="twitter:description" content="Reviews and comparisons of essential AI tools for prompt engineers and AI developers.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
   <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
@@ -54,35 +59,17 @@
     "@type": "ItemList",
     "name": "AI Tools for Prompt Engineers",
     "description": "Reviews and comparisons of essential AI tools for prompt engineers and AI developers.",
-    "numberOfItems": 5,
+    "numberOfItems": 2,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "url": "https://pecollective.com/tools/best-ai-coding-assistants/",
-        "name": "Best AI Coding Assistants (2026)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://pecollective.com/tools/best-vector-databases/",
-        "name": "Best Vector Databases for AI (2026)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://pecollective.com/tools/best-prompt-engineering-courses/",
-        "name": "Best Prompt Engineering Courses (Free & Paid)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "url": "https://pecollective.com/tools/cursor/",
         "name": "Cursor — AI-First Code Editor"
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 2,
         "url": "https://pecollective.com/tools/github-copilot/",
         "name": "GitHub Copilot — AI Pair Programming"
       }
@@ -92,6 +79,8 @@
 
   <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
@@ -158,69 +147,6 @@
       margin-bottom: var(--space-sm);
     }
     
-    /* Best Of roundup cards */
-    .bestof-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-lg);
-    }
-
-    .bestof-card {
-      background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-teal-primary) 100%);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      text-decoration: none;
-      transition: all var(--transition-base);
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-lg);
-    }
-
-    .bestof-card:hover {
-      border-color: var(--color-teal-light);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .bestof-card__icon {
-      font-size: 1.75rem;
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      background: rgba(232, 168, 124, 0.12);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .bestof-card__title {
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: var(--space-xs);
-    }
-
-    .bestof-card__description {
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-      line-height: 1.5;
-    }
-
-    .bestof-card__count {
-      display: inline-block;
-      margin-top: var(--space-sm);
-      padding: 2px 8px;
-      background: rgba(232, 168, 124, 0.15);
-      color: var(--color-gold);
-      border-radius: var(--radius-sm);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
     .comparison-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -273,7 +199,7 @@
     <div class="container">
       <div class="header__inner">
         <a href="../" class="header__logo">
-          <img src="../assets/logo.jpeg" alt="PE Collective Logo">
+          <img src="../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
           <span>PE Collective</span>
         </a>
         
@@ -339,42 +265,6 @@
       </div>
     </section>
 
-    <!-- Best Of Roundups -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <h2 class="tools-section__title">Best Of Roundups</h2>
-
-        <div class="bestof-cards">
-          <a href="best-ai-coding-assistants/" class="bestof-card">
-            <span class="bestof-card__icon">⚡</span>
-            <div>
-              <h3 class="bestof-card__title">Best AI Coding Assistants (2026)</h3>
-              <p class="bestof-card__description">Cursor, Copilot, Claude Code, Windsurf, and Amazon Q compared. Real tradeoffs, honest pricing.</p>
-              <span class="bestof-card__count">5 picks</span>
-            </div>
-          </a>
-
-          <a href="best-vector-databases/" class="bestof-card">
-            <span class="bestof-card__icon">🗄️</span>
-            <div>
-              <h3 class="bestof-card__title">Best Vector Databases for AI (2026)</h3>
-              <p class="bestof-card__description">Pinecone, Weaviate, Chroma, Qdrant, and Milvus tested with real workloads.</p>
-              <span class="bestof-card__count">5 picks</span>
-            </div>
-          </a>
-
-          <a href="best-prompt-engineering-courses/" class="bestof-card">
-            <span class="bestof-card__icon">🎓</span>
-            <div>
-              <h3 class="bestof-card__title">Best Prompt Engineering Courses</h3>
-              <p class="bestof-card__description">Free and paid courses from Coursera, DeepLearning.AI, Anthropic, OpenAI, and more.</p>
-              <span class="bestof-card__count">6 picks</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Comparisons -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
@@ -405,29 +295,14 @@
             </div>
           </a>
 
-          <a href="pinecone-vs-weaviate/" class="comparison-card">
+          <div class="comparison-card comparison-card--soon">
             <span class="comparison-card__vs">VS</span>
             <div>
               <h3 class="comparison-card__title">Pinecone vs Weaviate</h3>
               <p class="comparison-card__description">Vector databases for production AI applications.</p>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
-          </a>
-
-          <a href="claude-vs-chatgpt-coding/" class="comparison-card">
-            <span class="comparison-card__vs">VS</span>
-            <div>
-              <h3 class="comparison-card__title">Claude vs ChatGPT for Coding</h3>
-              <p class="comparison-card__description">Which AI assistant writes better code?</p>
-            </div>
-          </a>
-
-          <a href="copilot-vs-codewhisperer/" class="comparison-card">
-            <span class="comparison-card__vs">VS</span>
-            <div>
-              <h3 class="comparison-card__title">GitHub Copilot vs Amazon Q Developer</h3>
-              <p class="comparison-card__description">Enterprise AI coding assistants compared.</p>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -577,7 +452,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="../" class="footer__logo">
-            <img src="../assets/logo.jpeg" alt="PE Collective">
+            <img src="../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
             <span>PE Collective</span>
           </a>
           <p class="footer__tagline">
@@ -601,9 +476,10 @@
             <a href="./">All Tools</a>
             <a href="cursor/">Cursor</a>
             <a href="github-copilot/">GitHub Copilot</a>
+            <a href="../glossary/">Glossary</a>
           </nav>
         </div>
-        
+
         <div class="footer__column">
           <h4>Community</h4>
           <nav class="footer__links">

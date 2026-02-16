@@ -1,672 +1,1114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WMWEZTSWM0');
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
 
-  <meta name="description" content="Browse AI jobs: Prompt Engineer, AI Engineer, ML Engineer, MLOps, and more. Filter by remote, salary, seniority. Updated weekly.">
-  
-  <title>AI Jobs — Prompt Engineer, AI Engineer, ML Engineer Roles | PE Collective</title>
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pecollective.com/jobs/">
-  <meta property="og:title" content="AI Jobs — PE Collective">
-  <meta property="og:description" content="Browse hundreds of AI jobs. Prompt Engineer, AI Engineer, ML Engineer, and more. Real salaries, updated weekly.">
-  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
-  <meta property="og:site_name" content="PE Collective">
-  <meta property="og:locale" content="en_US">
+    <title>12 AI & ML Engineer Jobs - $237K avg | PE Collective</title>
+    <meta name="description" content="Browse 12 AI engineer, ML engineer, and prompt engineer jobs. Average salary $237K. 5 remote positions available. Updated weekly.">
+    <link rel="canonical" href="https://pecollective.com/jobs/">
 
-  <link rel="canonical" href="https://pecollective.com/jobs/">
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/jobs/">
+    <meta property="og:title" content="12 AI & ML Engineer Jobs - $237K avg">
+    <meta property="og:description" content="Browse 12 AI engineer, ML engineer, and prompt engineer jobs. Average salary $237K. 5 remote positions available. Updated weekly.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@pe_collective">
-  <meta name="twitter:title" content="AI Jobs — Prompt Engineer, AI Engineer, ML Engineer Roles">
-  <meta name="twitter:description" content="Browse hundreds of AI jobs. Prompt Engineer, AI Engineer, ML Engineer, and more. Real salaries, updated weekly.">
-  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
-  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="12 AI & ML Engineer Jobs - $237K avg">
+    <meta name="twitter:description" content="Browse 12 AI engineer, ML engineer, and prompt engineer jobs. Average salary $237K. 5 remote positions available. Updated weekly.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
-  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  
-  <style>
-    /* Jobs page specific styles */
-    .jobs-header {
-      padding: var(--space-3xl) 0 var(--space-xl);
-    }
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
     
-    .jobs-header__title {
-      margin-bottom: var(--space-sm);
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
     }
-    
-    .jobs-header__subtitle {
-      margin-bottom: var(--space-lg);
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
     }
-    
-    .jobs-count {
-      font-size: 0.9375rem;
-      color: var(--color-text-muted);
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
     }
-    
-    .jobs-count strong {
-      color: var(--color-gold);
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
     }
-    
-    .filters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: var(--space-md);
+
+    a:hover {
+        color: var(--gold-light);
     }
-    
-    .filter-group {
-      flex: 1;
-      min-width: 140px;
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
-    
-    .filters__actions {
-      display: flex;
-      align-items: flex-end;
-      gap: var(--space-sm);
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    
-    .btn--reset {
-      background: transparent;
-      color: var(--color-text-muted);
-      border: 1px solid var(--color-border);
-      padding: var(--space-sm) var(--space-md);
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
     }
-    
-    .btn--reset:hover {
-      color: var(--color-text-primary);
-      border-color: var(--color-teal-light);
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
     }
-    
-    .job-card__skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: var(--space-sm);
+
+    .logo:hover {
+        color: var(--text-primary);
     }
-    
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
     .skill-tag {
-      padding: 2px 8px;
-      background: rgba(61, 138, 154, 0.2);
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      color: var(--color-teal-accent);
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
     }
-    
-    .no-results {
-      text-align: center;
-      padding: var(--space-3xl);
-      color: var(--color-text-muted);
-    }
-    
-    .no-results h3 {
-      margin-bottom: var(--space-md);
-      color: var(--color-text-secondary);
-    }
-    
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: var(--space-sm);
-      margin-top: var(--space-xl);
-    }
-    
-    .pagination button {
-      padding: var(--space-sm) var(--space-md);
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      color: var(--color-text-secondary);
-      cursor: pointer;
-      transition: all var(--transition-fast);
-    }
-    
-    .pagination button:hover:not(:disabled) {
-      border-color: var(--color-teal-light);
-      color: var(--color-text-primary);
-    }
-    
-    .pagination button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    
-    .pagination button.active {
-      background: var(--color-gold);
-      color: var(--color-bg-darker);
-      border-color: var(--color-gold);
-    }
-    
-    .loading {
-      text-align: center;
-      padding: var(--space-3xl);
-      color: var(--color-text-muted);
-    }
-    
-    .loading::after {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid var(--color-border);
-      border-top-color: var(--color-gold);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-left: var(--space-sm);
-      vertical-align: middle;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "AI Jobs — Prompt Engineer, AI Engineer, ML Engineer Roles",
-    "description": "Browse AI jobs: Prompt Engineer, AI Engineer, ML Engineer, MLOps, and more. Filter by remote, salary, seniority. Updated weekly.",
-    "url": "https://pecollective.com/jobs/",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "PE Collective",
-      "url": "https://pecollective.com"
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
     },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pecollective.com/"},
-        {"@type": "ListItem", "position": 2, "name": "AI Jobs", "item": "https://pecollective.com/jobs/"}
-      ]
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Jobs",
+      "item": "https://pecollective.com/jobs/"
     }
-  }
-  </script>
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AI & ML Engineer Jobs",
+  "numberOfItems": 12,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://pecollective.com/jobs/anthropic-senior-prompt-engineer-68cf98/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://pecollective.com/jobs/openai-ai-agent-developer-f9211c/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://pecollective.com/jobs/cohere-llm-engineer-bee0c7/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://pecollective.com/jobs/databricks-ml-ops-engineer-f6261b/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://pecollective.com/jobs/notion-ai-product-manager-9bcd41/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://pecollective.com/jobs/jasper-prompt-engineer-1fb8f2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://pecollective.com/jobs/google-deepmind-ai-research-engineer-33c18d/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://pecollective.com/jobs/stripe-staff-ml-engineer-4a9009/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://pecollective.com/jobs/anthropic-ai-safety-researcher-af5896/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://pecollective.com/jobs/scale-ai-junior-prompt-engineer-089e83/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://pecollective.com/jobs/pinecone-rag-engineer-2ddc4e/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://pecollective.com/jobs/aws-ai-solutions-architect-f070eb/"
+    }
+  ]
+}
+</script>
 </head>
+
+
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="../" class="header__logo">
-          <img src="../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
-          <span>PE Collective</span>
-        </a>
-        
-        <nav class="header__nav">
-          <a href="./" class="active">AI Jobs</a>
-          <a href="../salaries/">Salaries</a>
-          <a href="../tools/">Tools</a>
-          <a href="../blog/">Blog</a>
-          <a href="../insights/">Market Intel</a>
-          <a href="../about/">About</a>
-        </nav>
-        
-        <div class="header__cta">
-          <a href="../join/" class="btn btn--secondary btn--small">Join Community</a>
-          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
-        </div>
-        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="header__mobile-overlay"></div>
-  <nav class="header__mobile-nav" aria-label="Mobile navigation">
-    <div class="header__mobile-nav-top">
-      <span>PE Collective</span>
-      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
-    </div>
-    <ul class="header__mobile-links">
-      <li><a href="./">AI Jobs</a></li>
-      <li><a href="../salaries/">Salaries</a></li>
-      <li><a href="../tools/">Tools</a></li>
-      <li><a href="../blog/">Blog</a></li>
-      <li><a href="../insights/">Market Intel</a></li>
-      <li><a href="../about/">About</a></li>
-    </ul>
-    <a href="../join/" class="header__mobile-cta">Join Community</a>
-  </nav>
-  <script>
-  (function(){
-    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
-    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
-    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
-    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
-    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
-  })();
-  </script>
-
-  <main id="main">
-    <!-- Page Header -->
-    <section class="jobs-header">
-      <div class="container">
-        <h1 class="jobs-header__title">AI Jobs</h1>
-        <p class="jobs-header__subtitle">Prompt Engineer, AI Engineer, ML Engineer, and more. Updated weekly.</p>
-        <p class="jobs-count">Showing <strong id="visible-count">0</strong> of <strong id="total-count">0</strong> jobs</p>
-      </div>
-    </section>
-    
-    <!-- Filters -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <div class="filters" id="filters">
-          <div class="filter-group">
-            <label for="filter-category">Role Type</label>
-            <select id="filter-category" class="filter-select">
-              <option value="">All Roles</option>
-              <option value="Prompt Engineer">Prompt Engineer</option>
-              <option value="AI Agent Developer">AI Agent Developer</option>
-              <option value="LLM Application Developer">LLM Engineer</option>
-              <option value="AI/ML Engineer">AI/ML Engineer</option>
-              <option value="ML Ops Engineer">MLOps</option>
-              <option value="AI Product Manager">AI Product Manager</option>
-              <option value="Research Engineer">Research</option>
-              <option value="AI Safety/Red Team">AI Safety</option>
-            </select>
-          </div>
-          
-          <div class="filter-group">
-            <label for="filter-remote">Work Type</label>
-            <select id="filter-remote" class="filter-select">
-              <option value="">All Types</option>
-              <option value="remote">Remote</option>
-              <option value="hybrid">Hybrid</option>
-              <option value="onsite">On-site</option>
-            </select>
-          </div>
-          
-          <div class="filter-group">
-            <label for="filter-level">Seniority</label>
-            <select id="filter-level" class="filter-select">
-              <option value="">All Levels</option>
-              <option value="entry">Entry Level</option>
-              <option value="mid">Mid Level</option>
-              <option value="senior">Senior</option>
-            </select>
-          </div>
-          
-          <div class="filter-group">
-            <label for="filter-salary">Min Salary</label>
-            <select id="filter-salary" class="filter-select">
-              <option value="">Any Salary</option>
-              <option value="100000">$100k+</option>
-              <option value="150000">$150k+</option>
-              <option value="200000">$200k+</option>
-              <option value="250000">$250k+</option>
-            </select>
-          </div>
-          
-          <div class="filter-group">
-            <label for="filter-search">Search</label>
-            <input type="text" id="filter-search" class="filter-input" placeholder="Company or keyword...">
-          </div>
-          
-          <div class="filters__actions">
-            <button type="button" class="btn btn--reset" id="reset-filters">Reset</button>
-          </div>
-        </div>
-        
-        <!-- Jobs List -->
-        <div id="jobs-container" class="jobs-grid mt-xl">
-          <div class="loading">Loading jobs</div>
-        </div>
-        
-        <!-- Pagination -->
-        <div class="pagination" id="pagination"></div>
-      </div>
-    </section>
-    
-    <!-- Newsletter CTA -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="cta-section">
-          <h2 class="cta-section__title">Get New Jobs in Your Inbox</h2>
-          <p class="cta-section__text">
-            Weekly digest of the best AI roles, salary trends, and market intelligence.
-          </p>
-          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
-            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
-            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="../" class="footer__logo">
-            <img src="../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
-            <span>PE Collective</span>
-          </a>
-          <p class="footer__tagline">
-            The job board and community built by AI professionals, for AI professionals.
-          </p>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Jobs</h4>
-          <nav class="footer__links">
-            <a href="./">All Jobs</a>
-            <a href="../jobs/?category=prompt-engineer">Prompt Engineer</a>
-            <a href="../jobs/?category=ai-engineer">AI Engineer</a>
-            <a href="../jobs/?remote=true">Remote Only</a>
-          </nav>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Tools</h4>
-          <nav class="footer__links">
-            <a href="../tools/">All Tools</a>
-            <a href="../tools/cursor/">Cursor</a>
-            <a href="../tools/github-copilot/">GitHub Copilot</a>
-            <a href="../glossary/">Glossary</a>
-          </nav>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Community</h4>
-          <nav class="footer__links">
-            <a href="../join/">Join Us</a>
-            <a href="../about/">About</a>
-            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
-          </nav>
-        </div>
-      </div>
-      
-      <div class="footer__bottom">
-        <span>© 2026 PE Collective. Built with 🧠 for the AI community.</span>
-        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Jobs Board Application
-    const JobsBoard = {
-      jobs: [],
-      filteredJobs: [],
-      currentPage: 1,
-      jobsPerPage: 20,
-      
-      async init() {
-        await this.loadJobs();
-        this.bindEvents();
-        this.applyFiltersFromURL();
-        this.render();
-      },
-      
-      async loadJobs() {
-        try {
-          const response = await fetch('../data/jobs.json');
-          const data = await response.json();
-          this.jobs = data.jobs || [];
-          this.filteredJobs = [...this.jobs];
-          document.getElementById('total-count').textContent = this.jobs.length;
-        } catch (error) {
-          console.error('Error loading jobs:', error);
-          // Use sample data if fetch fails
-          this.jobs = this.getSampleJobs();
-          this.filteredJobs = [...this.jobs];
-        }
-      },
-      
-      getSampleJobs() {
-        return [
-          {
-            job_id: "abc123def456",
-            title: "Senior Prompt Engineer",
-            company_name: "Anthropic",
-            location: "San Francisco, CA",
-            remote_type: "hybrid",
-            salary_min: 180000,
-            salary_max: 250000,
-            experience_level: "senior",
-            job_category: "Prompt Engineer",
-            skills_tags: ["Claude", "Python", "RAG"],
-            date_posted: "2025-12-10",
-            source_url: "#"
-          },
-          {
-            job_id: "def456ghi789",
-            title: "AI Agent Developer",
-            company_name: "OpenAI",
-            location: "Remote",
-            remote_type: "remote",
-            salary_min: 200000,
-            salary_max: 300000,
-            experience_level: "senior",
-            job_category: "AI Agent Developer",
-            skills_tags: ["LangChain", "GPT-4", "Python"],
-            date_posted: "2025-12-11",
-            source_url: "#"
-          },
-          {
-            job_id: "ghi789jkl012",
-            title: "LLM Engineer",
-            company_name: "Cohere",
-            location: "Toronto, Canada",
-            remote_type: "hybrid",
-            salary_min: 150000,
-            salary_max: 200000,
-            experience_level: "mid",
-            job_category: "LLM Application Developer",
-            skills_tags: ["PyTorch", "Transformers", "RAG"],
-            date_posted: "2025-12-09",
-            source_url: "#"
-          },
-          {
-            job_id: "jkl012mno345",
-            title: "ML Ops Engineer",
-            company_name: "Databricks",
-            location: "Seattle, WA",
-            remote_type: "onsite",
-            salary_min: 160000,
-            salary_max: 220000,
-            experience_level: "mid",
-            job_category: "ML Ops Engineer",
-            skills_tags: ["Kubernetes", "AWS", "MLflow"],
-            date_posted: "2025-12-08",
-            source_url: "#"
-          },
-          {
-            job_id: "mno345pqr678",
-            title: "AI Product Manager",
-            company_name: "Notion",
-            location: "New York, NY",
-            remote_type: "remote",
-            salary_min: 170000,
-            salary_max: 230000,
-            experience_level: "senior",
-            job_category: "AI Product Manager",
-            skills_tags: ["OpenAI", "Claude", "RAG"],
-            date_posted: "2025-12-12",
-            source_url: "#"
-          }
-        ];
-      },
-      
-      bindEvents() {
-        // Filter changes
-        document.querySelectorAll('.filter-select, .filter-input').forEach(el => {
-          el.addEventListener('change', () => this.applyFilters());
-          if (el.type === 'text') {
-            el.addEventListener('input', () => this.applyFilters());
-          }
-        });
-        
-        // Reset button
-        document.getElementById('reset-filters').addEventListener('click', () => {
-          document.querySelectorAll('.filter-select').forEach(el => el.value = '');
-          document.getElementById('filter-search').value = '';
-          this.applyFilters();
-        });
-      },
-      
-      applyFiltersFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        
-        if (params.get('category')) {
-          const categoryMap = {
-            'prompt-engineer': 'Prompt Engineer',
-            'ai-engineer': 'AI/ML Engineer',
-            'ml-engineer': 'AI/ML Engineer'
-          };
-          const category = categoryMap[params.get('category')] || '';
-          document.getElementById('filter-category').value = category;
-        }
-        
-        if (params.get('remote') === 'true') {
-          document.getElementById('filter-remote').value = 'remote';
-        }
-      },
-      
-      applyFilters() {
-        const category = document.getElementById('filter-category').value;
-        const remote = document.getElementById('filter-remote').value;
-        const level = document.getElementById('filter-level').value;
-        const minSalary = parseInt(document.getElementById('filter-salary').value) || 0;
-        const search = document.getElementById('filter-search').value.toLowerCase();
-        
-        this.filteredJobs = this.jobs.filter(job => {
-          if (category && job.job_category !== category) return false;
-          if (remote && job.remote_type !== remote) return false;
-          if (level && job.experience_level !== level) return false;
-          if (minSalary && (!job.salary_min || job.salary_min < minSalary)) return false;
-          if (search) {
-            const searchStr = `${job.title} ${job.company_name} ${job.skills_tags?.join(' ')}`.toLowerCase();
-            if (!searchStr.includes(search)) return false;
-          }
-          return true;
-        });
-        
-        this.currentPage = 1;
-        this.render();
-      },
-      
-      render() {
-        const container = document.getElementById('jobs-container');
-        const start = (this.currentPage - 1) * this.jobsPerPage;
-        const end = start + this.jobsPerPage;
-        const pageJobs = this.filteredJobs.slice(start, end);
-        
-        document.getElementById('visible-count').textContent = this.filteredJobs.length;
-        
-        if (pageJobs.length === 0) {
-          container.innerHTML = `
-            <div class="no-results">
-              <h3>No jobs found</h3>
-              <p>Try adjusting your filters or check back soon for new listings.</p>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/" class="active">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
             </div>
-          `;
-          document.getElementById('pagination').innerHTML = '';
-          return;
-        }
-        
-        container.innerHTML = pageJobs.map(job => this.renderJobCard(job)).join('');
-        this.renderPagination();
-      },
-      
-      renderJobCard(job) {
-        const salaryText = job.salary_min && job.salary_max
-          ? `$${Math.round(job.salary_min/1000)}k – $${Math.round(job.salary_max/1000)}k`
-          : '';
-        
-        const remoteClass = job.remote_type === 'remote' ? 'job-card__tag--remote' : '';
-        const remoteText = job.remote_type ? job.remote_type.charAt(0).toUpperCase() + job.remote_type.slice(1) : '';
-        
-        const levelText = job.experience_level 
-          ? job.experience_level.charAt(0).toUpperCase() + job.experience_level.slice(1)
-          : '';
-        
-        const skills = (job.skills_tags || []).slice(0, 5).map(s => 
-          `<span class="skill-tag">${s}</span>`
-        ).join('');
-        
-        const daysAgo = job.date_posted 
-          ? Math.floor((Date.now() - new Date(job.date_posted)) / (1000 * 60 * 60 * 24))
-          : null;
-        const postedText = daysAgo !== null 
-          ? (daysAgo === 0 ? 'Today' : daysAgo === 1 ? '1 day ago' : `${daysAgo} days ago`)
-          : '';
-        
-        return `
-          <a href="${job.source_url}" class="job-card" target="_blank" rel="noopener">
-            <div class="job-card__content">
-              <span class="job-card__company">${job.company_name}</span>
-              <h3 class="job-card__title">${job.title}</h3>
-              <div class="job-card__meta">
-                ${job.location ? `<span class="job-card__tag">${job.location}</span>` : ''}
-                ${remoteText ? `<span class="job-card__tag ${remoteClass}">${remoteText}</span>` : ''}
-                ${levelText ? `<span class="job-card__tag">${levelText}</span>` : ''}
-              </div>
-              ${skills ? `<div class="job-card__skills">${skills}</div>` : ''}
-              ${postedText ? `<div class="job-card__posted">${postedText}</div>` : ''}
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    <div class="page-header">
+        <div class="container">
+            <div class="page-label">AI Job Board</div>
+            <h1>12 AI & ML Jobs</h1>
+            <p class="lead">Prompt Engineer, AI Engineer, ML Engineer, and more. Real salaries, no recruiter spin. Updated weekly.</p>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Open Roles</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">$237K</div>
+                    <div class="stat-label">Avg Salary</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Remote</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
             </div>
-            ${salaryText ? `<div class="job-card__salary">${salaryText}</div>` : ''}
-          </a>
-        `;
-      },
-      
-      renderPagination() {
-        const totalPages = Math.ceil(this.filteredJobs.length / this.jobsPerPage);
-        const pagination = document.getElementById('pagination');
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="filters-section" style="margin-bottom: 32px;">
+                <h3 style="margin-bottom: 16px; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">Filter by Category</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <a href="/jobs/prompt-engineer/" class="filter-btn">Prompt Engineer (3)</a>
+<a href="/jobs/llm-application-developer/" class="filter-btn">LLM Application Developer (2)</a>
+<a href="/jobs/aiml-engineer/" class="filter-btn">AI/ML Engineer (2)</a>
+<a href="/jobs/ai-agent-developer/" class="filter-btn">AI Agent Developer (1)</a>
+<a href="/jobs/ml-ops-engineer/" class="filter-btn">ML Ops Engineer (1)</a>
+<a href="/jobs/ai-product-manager/" class="filter-btn">AI Product Manager (1)</a>
+
+                    <a href="/jobs/remote/" class="filter-btn">Remote (5)</a>
+                </div>
+            </div>
+
+            <style>
+                .filter-btn {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    background: var(--bg-card);
+                    border: 1px solid var(--border);
+                    border-radius: 20px;
+                    color: var(--text-secondary);
+                    text-decoration: none;
+                    font-size: 0.875rem;
+                    transition: all 0.15s;
+                }
+                .filter-btn:hover {
+                    border-color: var(--teal-light);
+                    color: var(--text-primary);
+                }
+                .jobs-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+            </style>
+
+            <div class="jobs-grid">
+                
+            <a href="/jobs/anthropic-senior-prompt-engineer-68cf98/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Anthropic</div>
+                    <div class="job-card__title">Senior Prompt Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$180K - $250K</span>
+                        
+                        <span class="job-card__tag">San Francisco, CA</span>
+                        <span class="job-card__tag">Prompt Engineer</span>
+                    </div>
+                </div>
+            </a>
         
-        if (totalPages <= 1) {
-          pagination.innerHTML = '';
-          return;
-        }
+            <a href="/jobs/openai-ai-agent-developer-f9211c/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">OpenAI</div>
+                    <div class="job-card__title">AI Agent Developer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$200K - $300K</span>
+                        <span class="job-card__tag job-card__tag--remote">Remote</span>
+                        
+                        <span class="job-card__tag">AI Agent Developer</span>
+                    </div>
+                </div>
+            </a>
         
-        let html = '';
+            <a href="/jobs/cohere-llm-engineer-bee0c7/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Cohere</div>
+                    <div class="job-card__title">LLM Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$150K - $200K</span>
+                        
+                        <span class="job-card__tag">Toronto, Canada</span>
+                        <span class="job-card__tag">LLM Application Developer</span>
+                    </div>
+                </div>
+            </a>
         
-        // Previous button
-        html += `<button ${this.currentPage === 1 ? 'disabled' : ''} onclick="JobsBoard.goToPage(${this.currentPage - 1})">← Prev</button>`;
+            <a href="/jobs/databricks-ml-ops-engineer-f6261b/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Databricks</div>
+                    <div class="job-card__title">ML Ops Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$160K - $220K</span>
+                        
+                        <span class="job-card__tag">Seattle, WA</span>
+                        <span class="job-card__tag">ML Ops Engineer</span>
+                    </div>
+                </div>
+            </a>
         
-        // Page numbers
-        for (let i = 1; i <= Math.min(totalPages, 5); i++) {
-          html += `<button class="${i === this.currentPage ? 'active' : ''}" onclick="JobsBoard.goToPage(${i})">${i}</button>`;
-        }
+            <a href="/jobs/notion-ai-product-manager-9bcd41/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Notion</div>
+                    <div class="job-card__title">AI Product Manager</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$170K - $230K</span>
+                        <span class="job-card__tag job-card__tag--remote">Remote</span>
+                        
+                        <span class="job-card__tag">AI Product Manager</span>
+                    </div>
+                </div>
+            </a>
         
-        // Next button
-        html += `<button ${this.currentPage === totalPages ? 'disabled' : ''} onclick="JobsBoard.goToPage(${this.currentPage + 1})">Next →</button>`;
+            <a href="/jobs/jasper-prompt-engineer-1fb8f2/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Jasper</div>
+                    <div class="job-card__title">Prompt Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$120K - $160K</span>
+                        <span class="job-card__tag job-card__tag--remote">Remote</span>
+                        
+                        <span class="job-card__tag">Prompt Engineer</span>
+                    </div>
+                </div>
+            </a>
         
-        pagination.innerHTML = html;
-      },
-      
-      goToPage(page) {
-        this.currentPage = page;
-        this.render();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    };
-    
-    // Initialize on load
-    document.addEventListener('DOMContentLoaded', () => JobsBoard.init());
-  </script>
-<script src="/assets/js/tracking.js" defer></script>
+            <a href="/jobs/google-deepmind-ai-research-engineer-33c18d/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Google DeepMind</div>
+                    <div class="job-card__title">AI Research Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$180K - $280K</span>
+                        
+                        <span class="job-card__tag">London, UK</span>
+                        <span class="job-card__tag">Research Engineer</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="/jobs/stripe-staff-ml-engineer-4a9009/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Stripe</div>
+                    <div class="job-card__title">Staff ML Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$220K - $320K</span>
+                        
+                        <span class="job-card__tag">San Francisco, CA</span>
+                        <span class="job-card__tag">AI/ML Engineer</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="/jobs/anthropic-ai-safety-researcher-af5896/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Anthropic</div>
+                    <div class="job-card__title">AI Safety Researcher</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$200K - $300K</span>
+                        
+                        <span class="job-card__tag">San Francisco, CA</span>
+                        <span class="job-card__tag">AI Safety/Red Team</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="/jobs/scale-ai-junior-prompt-engineer-089e83/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Scale AI</div>
+                    <div class="job-card__title">Junior Prompt Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$90K - $130K</span>
+                        <span class="job-card__tag job-card__tag--remote">Remote</span>
+                        
+                        <span class="job-card__tag">Prompt Engineer</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="/jobs/pinecone-rag-engineer-2ddc4e/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">Pinecone</div>
+                    <div class="job-card__title">RAG Engineer</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$150K - $200K</span>
+                        <span class="job-card__tag job-card__tag--remote">Remote</span>
+                        
+                        <span class="job-card__tag">LLM Application Developer</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="/jobs/aws-ai-solutions-architect-f070eb/" class="job-card">
+                <div class="job-card__content">
+                    <div class="job-card__company">AWS</div>
+                    <div class="job-card__title">AI Solutions Architect</div>
+                    <div class="job-card__meta">
+                        <span class="job-card__tag job-card__tag--salary">$180K - $260K</span>
+                        
+                        <span class="job-card__tag">Seattle, WA</span>
+                        <span class="job-card__tag">AI/ML Engineer</span>
+                    </div>
+                </div>
+            </a>
+        
+            </div>
+
+            
+    <div class="cta-box">
+        <h3>Join the AI Community</h3>
+        <p>Connect with prompt engineers and AI professionals. Get job alerts, salary insights, and market intelligence.</p>
+        <a href="/join/" class="btn btn-gold">Join Community →</a>
+    </div>
+
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>

@@ -724,6 +724,30 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the average AI salary in San Francisco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI engineers in SF earn $180K-$350K in base salary. Total compensation at major companies (including equity) ranges from $250K to $600K+ depending on level and company."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does SF AI pay compare to other cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SF AI salaries run 15-25% higher than NYC and Seattle, 40-60% higher than Austin or Denver, and roughly double most non-tech-hub cities. However, California state income tax and housing costs offset some of this advantage."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 
@@ -838,6 +862,12 @@
                 .company-salary { color: var(--gold); font-weight: 600; }
             </style>
 
+            
+            <div style="margin-bottom: 32px; line-height: 1.8; color: var(--text-secondary);">
+                <p>San Francisco and the Bay Area pay the highest AI salaries in the world. The concentration of AI labs (OpenAI, Anthropic, Google DeepMind) and well-funded startups creates intense competition for talent. Cost of living is high, but AI salaries more than compensate.</p>
+            </div>
+            
+
             <div class="section"><h2 style="margin-bottom: 20px;">Top Paying Companies</h2>
             <div class="company-row">
                 <span class="company-name">Stripe</span>
@@ -871,7 +901,21 @@
                 <a href="/jobs/" style="color: var(--teal-light); font-weight: 600; text-decoration: none;">View AI Job Listings &rarr;</a>
             </div>
 
-            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border);">
+            
+            <div style="margin-top: 32px;">
+                <h2 style="margin-bottom: 16px; font-size: 1.25rem;">Frequently Asked Questions</h2>
+                
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What is the average AI salary in San Francisco?</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">AI engineers in SF earn $180K-$350K in base salary. Total compensation at major companies (including equity) ranges from $250K to $600K+ depending on level and company.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How does SF AI pay compare to other cities?</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">SF AI salaries run 15-25% higher than NYC and Seattle, 40-60% higher than Austin or Denver, and roughly double most non-tech-hub cities. However, California state income tax and housing costs offset some of this advantage.</p>
+        </details>
+            </div>
+
+            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border); margin-top: 32px;">
                 <h3>Methodology</h3>
                 <p style="color: var(--text-secondary); margin-top: 12px;">
                     Salary data is collected from job postings on Indeed and company career pages.

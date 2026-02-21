@@ -1148,6 +1148,29 @@
         <p>Cross-entropy is the objective function that LLMs are trained to minimize. Understanding it explains why models sometimes generate high-probability but incorrect text (hallucinations) and why temperature adjustments change output quality.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Cross-entropy measures the difference between two probability distributions: what the model predicted and what actually happened. For language models, it measures how surprised the model is by each token in the training data. The goal of training is to minimize this surprise across trillions of tokens.</p><p>The formula computes the negative log probability assigned to the correct token at each position. If the model assigned high probability to the correct token, the cross-entropy for that position is low. If it assigned low probability, the cross-entropy is high. Averaging across all positions gives the model's overall loss.</p><p>Cross-entropy connects to perplexity through a simple relationship: perplexity = 2^(cross-entropy). This means a model with cross-entropy loss of 3.32 has a perplexity of 10. Understanding this relationship helps interpret training curves and model comparisons.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Confusing training loss (cross-entropy) with model quality for downstream tasks</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Lower training loss means better next-token prediction, not necessarily better task performance. Models are typically evaluated on downstream tasks, not training loss.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Expecting cross-entropy to decrease monotonically during training</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Loss curves have noise, and validation loss may increase while training loss decreases (overfitting). Monitor validation loss and use early stopping when it starts rising.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Cross-entropy understanding is fundamental for ML engineers and researchers working on model training. It's the objective function that drives all language model development, making it important background knowledge for anyone in the AI field.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

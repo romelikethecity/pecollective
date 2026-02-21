@@ -1148,6 +1148,29 @@
         <p>Structured output is essential for production AI pipelines. Any system that feeds model output into downstream code needs reliable, typed responses. It eliminates an entire class of runtime errors caused by unexpected model output formats.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Structured output goes beyond JSON mode by constraining model outputs to match a specific schema. Instead of just guaranteeing valid JSON, structured output ensures the response contains exactly the fields, types, and formats your application expects. This eliminates an entire class of integration bugs.</p><p>Implementation varies by provider. OpenAI's structured outputs use JSON Schema definitions. Anthropic's tool use effectively provides structured output through function return schemas. Open-source solutions like Outlines and Instructor use constrained decoding to enforce arbitrary output schemas.</p><p>Structured output is particularly valuable for: data extraction (pulling specific fields from unstructured text), classification (ensuring responses match predefined categories), and multi-step pipelines (where one model's output feeds into another model or function as input).</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Making schemas too rigid, preventing the model from expressing uncertainty or edge cases</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Include optional fields for confidence scores, notes, and edge case flags. A schema that only allows exact answers will get incorrect forced answers when the model is uncertain.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not testing structured output with adversarial inputs</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Test with inputs that don't clearly map to your schema: ambiguous data, missing information, and conflicting signals. Verify the model handles these gracefully within the schema constraints.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Structured output design is a high-value skill for AI engineers building reliable automation pipelines. Companies processing thousands of AI requests per day need engineers who can design schemas that balance reliability with flexibility.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -1148,6 +1148,29 @@
         <p>JSON mode solves one of the biggest pain points in production AI: unreliable output formatting. Before JSON mode, developers spent significant time on output parsing, validation, and retry logic. It's now a standard feature in OpenAI, Anthropic, and Google APIs.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>JSON mode forces a language model to output valid JSON, ensuring that every response can be parsed programmatically without error handling for malformed text. This is critical for building reliable AI pipelines where model output feeds into downstream systems.</p><p>Most model providers offer JSON mode through API parameters. OpenAI's 'response_format: {type: json_object}' guarantees valid JSON. Anthropic and Google have similar mechanisms. Some providers go further with structured outputs, where you define a JSON schema and the model is constrained to produce conforming output.</p><p>JSON mode works by modifying the model's token sampling process. At each generation step, the model is constrained to only produce tokens that maintain valid JSON syntax. This guarantees structural validity but doesn't guarantee the content is correct or the schema is followed (unless structured outputs with schema validation are used).</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using JSON mode without specifying the expected schema in the prompt</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">JSON mode guarantees valid JSON, not the right JSON. Always describe the exact schema you want in the prompt, including field names, types, and constraints.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Relying on JSON mode for complex nested structures without validation</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Use structured outputs with schema validation when available. For complex schemas, add a validation step after parsing to catch semantic errors the model might make.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">JSON mode and structured outputs are essential for AI engineers building data pipelines, API integrations, and automated workflows. Understanding output formatting constraints is a practical skill used daily in production AI development.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

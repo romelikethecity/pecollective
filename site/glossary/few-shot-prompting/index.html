@@ -1152,6 +1152,29 @@
         <p>Few-shot prompting lets you customize model behavior without expensive fine-tuning. It's often the fastest way to get consistent, formatted outputs from any model.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Few-shot prompting exploits in-context learning, a capability where language models infer patterns from examples provided in the prompt without any weight updates. The model essentially reverse-engineers the task specification from the examples.</p><p>The number and quality of examples matter significantly. Research shows 3-5 well-chosen examples often outperform 10+ poorly chosen ones. Example selection should cover the distribution of expected inputs, including edge cases. The order of examples also affects performance, with some models showing recency bias (favoring patterns from the last example).</p><p>Few-shot prompting works best when combined with clear instructions. The examples demonstrate the format and reasoning pattern, while the instructions specify constraints and edge case handling that examples alone can't cover.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using only 'happy path' examples that don't cover edge cases</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Include at least one edge case example (ambiguous input, missing data, unusual format) in your few-shot set.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Providing examples that are too similar to each other</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Diversify your examples across different categories, lengths, and complexity levels to show the full range of expected behavior.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Few-shot prompting is a daily tool for prompt engineers and anyone building LLM-powered features. It's the fastest way to prototype new AI capabilities without fine-tuning, making it essential for rapid product development.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

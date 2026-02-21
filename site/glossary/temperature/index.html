@@ -1148,6 +1148,29 @@
         <p>Choosing the right temperature is a key prompt engineering decision. Code generation needs low temperature (0-0.2) for correctness. Creative writing benefits from higher values (0.7-1.0). Most production systems use 0-0.3.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Temperature is a parameter that controls the randomness of a language model's output by adjusting the probability distribution over possible next tokens. At temperature 0, the model always picks the most likely token (deterministic). At temperature 1.0, it samples proportionally from the full distribution. Above 1.0, it amplifies the probabilities of less likely tokens, creating more surprising and sometimes incoherent output.</p><p>Temperature interacts with other sampling parameters like top-p (nucleus sampling) and top-k. In practice, most applications use temperature between 0 and 0.7. Code generation and factual Q&A work best at 0-0.2. Creative writing and brainstorming benefit from 0.7-1.0. Values above 1.0 are rarely useful.</p><p>An important nuance: temperature 0 doesn't guarantee identical outputs across calls. Model providers may add small amounts of randomness even at temperature 0, and different hardware can produce slightly different results.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using high temperature for tasks that require accuracy and consistency</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Use temperature 0-0.3 for factual tasks, classification, data extraction, and code generation. Reserve higher temperatures for creative tasks.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Setting temperature to 0 and assuming outputs will be identical every time</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Temperature 0 makes outputs more deterministic but not perfectly reproducible. If you need exact reproducibility, cache responses or use seed parameters where available.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Temperature tuning is a basic but essential prompt engineering skill. Knowing the right temperature for different use cases separates experienced practitioners from beginners. It's commonly tested in interviews with scenario-based questions.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

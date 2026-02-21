@@ -1148,6 +1148,29 @@
         <p>Agentic AI is the fastest-growing paradigm in AI development. It's creating new job categories (AI Agent Developer, Agent Engineer) and shifting prompt engineering from single prompts to designing entire autonomous workflows.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Agentic AI refers to AI systems that can autonomously plan and execute multi-step tasks, making decisions about which tools to use and when. Unlike traditional chatbots that respond to single queries, agentic systems maintain state, pursue goals, and adapt their approach based on intermediate results.</p><p>Agentic architectures range from simple ReAct loops (Reason + Act) to complex multi-agent systems where specialized agents collaborate on subtasks. Frameworks like LangGraph, CrewAI, and AutoGen provide scaffolding for building these systems.</p><p>The key challenges are reliability and controllability. Agentic systems can enter error loops, make expensive API calls repeatedly, or take unintended actions. Production agentic systems require extensive guardrails: spending limits, action whitelists, human-in-the-loop approval for high-stakes decisions, and comprehensive logging for debugging.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Building agentic systems before establishing reliable non-agentic baselines</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Start with deterministic pipelines using prompt chaining. Only add agentic autonomy for sub-tasks that genuinely require dynamic decision-making.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not implementing cost controls and circuit breakers</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Set hard limits on API calls, tool invocations, and total cost per agent run. A runaway agent can burn through hundreds of dollars in minutes.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Agentic AI development is the fastest-growing specialization in AI engineering. Companies are actively hiring for roles focused on building reliable agent systems. Salaries for agentic AI engineers range from $160K-$280K+ at major tech companies.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

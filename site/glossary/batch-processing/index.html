@@ -1148,6 +1148,29 @@
         <p>Batch processing cuts AI costs in half for any workload that doesn't need real-time responses. Data processing, content generation, document analysis, and evaluation pipelines all benefit. It's the first optimization most teams implement at scale.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Batch processing in AI sends multiple requests to a model simultaneously or in queued batches rather than one at a time. This approach trades latency for cost efficiency and throughput. Most model providers offer batch APIs with 50% discounts compared to real-time pricing.</p><p>Batch processing is ideal for tasks that don't need immediate results: analyzing a dataset of 10,000 customer reviews, classifying a backlog of support tickets, generating product descriptions for an entire catalog, or extracting structured data from a document archive.</p><p>Key considerations include: batch size limits (API providers cap batch sizes), error handling (some items in a batch may fail while others succeed), rate limiting (batch APIs still have rate limits, just higher ones), and result management (storing and reconciling results from potentially out-of-order batch completions).</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Processing items one-by-one when a batch API is available</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Check if your model provider offers a batch API. OpenAI's Batch API offers 50% cost reduction. For large jobs, the savings are substantial.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not implementing retry logic for failed items within a batch</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Batch processing will have partial failures. Track which items succeeded and which failed, then retry only the failures in subsequent batches.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Batch processing skills are essential for data engineers and ML engineers working with AI at scale. Companies processing large datasets through AI models need engineers who can design efficient batch pipelines with proper error handling and cost optimization.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

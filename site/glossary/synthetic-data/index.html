@@ -1148,6 +1148,29 @@
         <p>Synthetic data is reshaping model training economics. Instead of spending months collecting and labeling data, teams generate training data in hours. Models like Llama 3 and Phi-3 used significant amounts of synthetic data in training. It's also a key tool for privacy-compliant AI development.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Synthetic data is artificially generated data used to train, evaluate, or augment AI models. It addresses a fundamental bottleneck in AI development: high-quality labeled data is expensive, time-consuming, and sometimes impossible to collect at scale.</p><p>Generation methods include: LLM-based generation (using frontier models to create training examples), rule-based generation (programmatic creation of data following predefined patterns), simulation-based generation (creating data from simulated environments), and augmentation (transforming existing data through paraphrasing, translation, or perturbation).</p><p>Synthetic data powers many recent AI breakthroughs. Microsoft's Phi-3 used extensively filtered synthetic data to achieve strong performance at small model sizes. Anthropic and OpenAI use synthetic data for safety training. Companies regularly generate synthetic training data for custom classifiers, saving months of manual annotation.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Generating synthetic data without quality filtering</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Not all synthetic data is useful. Filter generated data for quality, diversity, and accuracy. A smaller, high-quality synthetic dataset outperforms a larger, noisy one.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using the same model for generation and evaluation of synthetic data</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">The generating model has blind spots that it can't detect in its own output. Use a different model or human review to validate synthetic data quality.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Synthetic data generation is a practical skill for ML engineers and data scientists. Companies that can't access large real-world datasets (due to privacy, cost, or rarity) rely on synthetic data. It's particularly valuable in healthcare, finance, and other regulated industries.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

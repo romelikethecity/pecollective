@@ -1148,6 +1148,29 @@
         <p>Semantic search is the retrieval layer that makes RAG systems work. It's replacing keyword search across enterprise applications and is a core competency for AI engineers building search and knowledge systems.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Semantic search finds results based on meaning rather than keyword matching. The query 'how to fix a slow website' would match a document about 'web performance optimization techniques' even though they share no keywords. This works by comparing vector embeddings of the query and documents in high-dimensional space.</p><p>The pipeline involves three steps: encoding documents into embeddings (done once, at index time), encoding the search query into an embedding (done per query), and finding the closest document embeddings using similarity metrics. Popular approaches include cosine similarity, dot product, and Euclidean distance.</p><p>Hybrid search, which combines semantic search with traditional keyword matching (BM25), often outperforms pure semantic search. The keyword component catches exact matches and proper nouns that embeddings sometimes miss, while the semantic component handles paraphrasing and conceptual similarity.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Relying solely on semantic search without keyword matching</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Implement hybrid search (semantic + BM25). Pure semantic search misses exact keyword matches that users expect, especially for product names and technical terms.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using the same embedding model for queries and documents without considering the asymmetry</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Some embedding models are trained for asymmetric search (short query vs long document). Using a symmetric model for asymmetric tasks degrades retrieval quality.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Semantic search is a foundational skill for building AI-powered search, recommendation, and RAG systems. It's listed in most AI engineer job postings and is increasingly relevant for product managers and designers working on AI-powered features.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

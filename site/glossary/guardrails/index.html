@@ -1148,6 +1148,29 @@
         <p>Guardrails are mandatory for enterprise AI deployments. Prompt engineers spend significant time designing, testing, and iterating on guardrails. The guardrails framework (like NeMo Guardrails or Guardrails AI) is a growing tooling category.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Guardrails are safety mechanisms that constrain AI system behavior to prevent harmful, off-topic, or incorrect outputs. They operate at multiple levels: input guardrails filter or modify user requests before they reach the model, output guardrails check and potentially block or modify the model's response, and system-level guardrails limit what actions an AI agent can take.</p><p>Implementation approaches include: prompt-based guardrails (system prompt instructions), classifier-based guardrails (separate models that classify inputs/outputs as safe or unsafe), rule-based guardrails (regex patterns, keyword filters, format validation), and constitutional guardrails (training the model itself to follow safety principles).</p><p>Popular guardrails frameworks include NVIDIA's NeMo Guardrails, Guardrails AI, and LlamaGuard. These provide pre-built components for content moderation, PII detection, topic filtering, and output validation that can be integrated into AI applications.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Implementing guardrails only at the prompt level without application-layer enforcement</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Prompt-level guardrails can be bypassed by prompt injection. Add application-layer validation: output format checking, PII scanning, and content classification as separate steps.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Making guardrails too restrictive, blocking legitimate use cases</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Overly aggressive guardrails create false positives that frustrate users. Measure both safety (false negatives) and usability (false positives) when tuning guardrail thresholds.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Guardrails engineering is a growing specialization within AI safety and ML engineering. Companies deploying customer-facing AI products need engineers who can design effective guardrails that balance safety with usability. It's particularly important in regulated industries.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

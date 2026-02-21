@@ -1148,6 +1148,29 @@
         <p>Benchmarks are the primary language for comparing models. When Anthropic says Claude scores 88.7% on MMLU or OpenAI reports GPT-4o scores 90.2% on HumanEval, benchmarks make those comparisons meaningful. Understanding them helps you cut through marketing claims.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Benchmarks are standardized tests that measure specific AI model capabilities. They provide a common language for comparing models across providers and generations. Key benchmarks include MMLU (broad academic knowledge), HumanEval (code generation), GSM8K (math reasoning), and MT-Bench (conversational ability).</p><p>Benchmarks have limitations: models can be optimized for specific benchmarks through training data contamination (including benchmark questions in training data) or targeted fine-tuning. This has led to an 'arms race' where benchmark scores may not reflect real-world capability improvements.</p><p>Newer evaluation approaches address these limitations: LiveBench uses continuously updated questions to prevent contamination, Chatbot Arena uses blind human preferences on real conversations, and custom evaluation sets test domain-specific performance. The trend is toward more ecologically valid evaluation methods that better predict real-world usefulness.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Treating benchmark scores as definitive rankings of model capability</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Benchmarks test specific skills, not overall model quality. A model scoring 90% on MMLU vs 88% might still perform worse on your specific task. Use benchmarks as rough guides, not gospel.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Ignoring benchmark contamination concerns</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Check whether evaluation sets might overlap with training data. Prefer newer benchmarks with contamination prevention measures, and supplement with your own task-specific evaluations.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding benchmark interpretation is important for anyone evaluating or selecting AI models. It's especially relevant for AI product managers, engineers making build-vs-buy decisions, and researchers comparing their models against the state of the art.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

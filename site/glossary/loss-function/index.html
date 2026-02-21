@@ -1148,6 +1148,29 @@
         <p>Loss functions determine what a model learns. The shift from pure cross-entropy to RLHF and DPO-based training objectives is what made models helpful and conversational instead of just good at text completion. Understanding loss helps you understand model behavior.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>A loss function (also called a cost function or objective function) defines what a model is optimizing for during training. For language models, the primary loss function is cross-entropy loss over next-token predictions, but the full training pipeline often uses multiple loss functions at different stages.</p><p>During pre-training, cross-entropy loss teaches the model to predict text. During RLHF, a combination of reward model scores and KL divergence (to prevent the model from diverging too far from the base model) forms the objective. DPO uses a preference-based loss that directly optimizes on human preference data.</p><p>Understanding loss functions explains many model behaviors. Why do models sometimes generate plausible-sounding but incorrect text? Because the loss function optimizes for likelihood, not truthfulness. Why do RLHF models sometimes refuse harmless requests? Because the reward model penalizes certain topics during alignment training.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Thinking the loss function fully determines model behavior</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">The loss function sets the optimization target, but the training data, model architecture, and training procedure all shape final behavior. Two models with the same loss function but different data will behave differently.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Ignoring the connection between loss function design and model failure modes</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Each loss function creates specific incentives. Cross-entropy rewards plausible text (enabling hallucination). RLHF reward models can develop reward hacking behaviors. Understanding these connections helps predict and mitigate failures.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Loss function knowledge is essential for ML researchers and engineers training models. For AI application developers, it provides valuable context for understanding why models behave certain ways and how different training approaches produce different strengths and weaknesses.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

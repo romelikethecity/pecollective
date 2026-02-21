@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Claude Code review: Anthropic's terminal-based AI coding agent. Features, pricing, pros and cons for developers who prefer the command line.">
+
+  <title>Claude Code Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="Claude Code Review 2026">
+  <meta property="og:description" content="Honest review of Claude Code, Anthropic's terminal AI coding agent. Is the command line the future of AI-assisted development?">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/claude-code/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Claude Code Review 2026">
+  <meta name="twitter:description" content="Honest review of Claude Code, Anthropic's terminal AI coding agent. Is the command line the future of AI-assisted development?">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Claude Code",
+            "item": "https://pecollective.com/tools/claude-code/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is Claude Code free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Claude Code requires a Claude Pro subscription ($20/month), Claude Max ($100/month), or an Anthropic API key with pay-per-token billing. There's no free tier."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Claude Code work with any editor?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Claude Code runs in your terminal independently of any editor. You can use it alongside VS Code, Vim, Emacs, or any editor you prefer. It reads and writes files directly, so your editor just needs to reload changed files."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Claude Code compare to Cursor?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cursor is a visual code editor with AI built in, best for autocomplete and visual multi-file editing. Claude Code is a terminal agent, best for deep reasoning, complex refactoring, and architecture-level work. Many developers use both for different tasks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can Claude Code run my tests?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Claude Code can execute shell commands, including running test suites. It can read test output, identify failures, and fix the code in the same session. It can also install dependencies, run builds, and interact with other CLI tools."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Claude Code",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "url": "https://docs.anthropic.com/en/docs/claude-code",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.7",
+            "bestRating": "5"
+        },
+        "reviewBody": "Claude Code is the most capable AI coding tool available if you measure by depth of understanding. It doesn't just complete your code. It reads your entire project, understands the architecture, and makes changes that respect your patterns and conventions. The reasoning quality from Claude's models is a clear step above what you get from autocomplete-focused tools. The tradeoff is accessibility. There's no GUI, no free tier, and the terminal interface means you need to be comfortable working tha"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🧠</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">AI Coding Agent</span>
+            <h1 class="tool-review__title">Claude Code Review 2026</h1>
+            <p class="tool-review__subtitle">Anthropic's terminal-based AI coding agent. No GUI, no distractions. Just you, your codebase, and one of the smartest models available.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener" class="btn btn--primary">Try Claude Code &rarr;</a>
+              <a href="/tools/cursor-vs-github-copilot/" class="btn btn--secondary">Compare to Cursor</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is Claude Code?</h2>
+<p>Claude Code is Anthropic's command-line AI coding agent. You install it via npm, run it in your terminal, and it gets full access to your project files. No VS Code required. No browser tab. Just a conversation in your terminal where Claude can read, write, search, and execute code across your entire repository.</p>
+<p>Think of it less as an autocomplete tool and more as an AI pair programmer who sits in your terminal and can actually do things. It creates files, edits existing ones, runs tests, makes git commits, and explains what it's doing along the way.</p>
+
+<h2>Key Features</h2>
+
+<h3>Full Codebase Awareness</h3>
+<p>Claude Code reads your entire project when you start a session. It understands file relationships, import chains, and architectural patterns. When you ask it to make a change, it knows which files need updating and how they connect.</p>
+<p>This isn't just indexing for search. Claude actually reasons about your code structure. Ask it "how does authentication work in this project?" and it'll trace the flow from middleware through controllers to the database layer.</p>
+
+<h3>Agentic Editing</h3>
+<p>You describe what you want, and Claude Code plans and executes multi-file changes. It shows you what it intends to do, makes the edits, and asks for confirmation. The workflow is conversational. You can refine, redirect, or undo at any point.</p>
+<p>For <a href="/glossary/prompt-engineering/">prompt engineers</a> building AI applications, this is powerful. You can say "add error handling to all the LLM API calls and make sure each one falls back to a secondary model" and Claude Code will find every relevant file, understand the pattern, and apply consistent changes.</p>
+
+<h3>Git Integration</h3>
+<p>Claude Code can create commits with well-written messages, review diffs, create branches, and manage your git workflow. The commit messages it generates are surprisingly good. They describe the "why" not just the "what."</p>
+
+<h3>Tool Use and Execution</h3>
+<p>Beyond editing files, Claude Code can run shell commands, execute tests, install dependencies, and interact with APIs. If your test suite fails after a change, it can read the errors and fix the issues in the same session.</p>
+
+<h2>Pricing Model</h2>
+<p>Claude Code requires either a Claude Pro subscription ($20/month) or an Anthropic API key. With Pro, you get a generous allowance of messages. With the API, you pay per token, which means large codebases can get expensive if you're working on long sessions.</p>
+<p>The Max plan at $100/month gives you significantly more usage and priority access to the latest models. For professional developers who use Claude Code daily, the Max plan usually makes more sense than API pricing.</p>
+
+<h2>Claude Code vs Cursor</h2>
+<p>These tools solve different problems. Cursor is a visual editor with AI built in. Claude Code is a terminal agent with editing capabilities. Cursor excels at autocomplete and visual diffs. Claude Code excels at deep reasoning and complex multi-step tasks. Many developers use both. Cursor for day-to-day coding, Claude Code for architecture work and major refactors.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Best code understanding and reasoning of any AI tool</li>
+                  <li>Works in your existing terminal workflow, no editor switch needed</li>
+                  <li>Can read, write, and execute code across your entire project</li>
+                  <li>Multi-file awareness that matches or exceeds Cursor's Composer</li>
+                  <li>Git integration for reviewing diffs, creating commits, and managing branches</li>
+                  <li>No VS Code dependency means it works with any editor</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>No free tier, requires Claude Pro ($20/mo) or API credits</li>
+                  <li>Terminal-only interface has a steeper learning curve</li>
+                  <li>No visual diff preview before accepting changes</li>
+                  <li>Token usage on large codebases can add up fast on API pricing</li>
+                  <li>No autocomplete or inline suggestions while typing</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use Claude Code?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>Senior developers and architects</strong> who think in terms of systems and want an AI that does too</li>
+              <li><strong>Terminal-first developers</strong> who live in tmux/vim/emacs and don't want to switch to VS Code</li>
+              <li><strong>Complex refactoring projects</strong> where understanding the full codebase context matters more than autocomplete speed</li>
+              <li><strong>AI/ML engineers</strong> building applications with <a href="/glossary/langchain/">LangChain</a>, embeddings, or multi-service architectures</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Developers who prefer visual interfaces</strong> because there's no GUI, just terminal commands</li>
+              <li><strong>Those who mainly need autocomplete</strong> since Claude Code doesn't do inline suggestions while typing</li>
+              <li><strong>Budget-conscious hobbyists</strong> because there's no free tier and API costs can scale up</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>Claude Code is the most capable AI coding tool available if you measure by depth of understanding. It doesn't just complete your code. It reads your entire project, understands the architecture, and makes changes that respect your patterns and conventions. The reasoning quality from Claude's models is a clear step above what you get from autocomplete-focused tools.</p><p>The tradeoff is accessibility. There's no GUI, no free tier, and the terminal interface means you need to be comfortable working that way. For experienced developers who already live in the terminal, Claude Code feels like gaining a senior engineer who's read every file in your project. For everyone else, Cursor or Windsurf might be an easier starting point.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★★</span>
+                <span class="rating__value">4.7/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Claude Pro</span>
+                  <span class="pricing-row__value">$20/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">API Usage</span>
+                  <span class="pricing-row__value">Pay per token</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Max Plan</span>
+                  <span class="pricing-row__value">$100/mo</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get Claude Code &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Platform</span>
+                  <span class="pricing-row__value">Mac, Win, Linux</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Interface</span>
+                  <span class="pricing-row__value">Terminal (CLI)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">AI Model</span>
+                  <span class="pricing-row__value">Claude Opus/Sonnet</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Free Tier</span>
+                  <span class="pricing-row__value">No</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/cursor/">⚡ Cursor</a>
+                <a href="/tools/github-copilot/">🤖 GitHub Copilot</a>
+                <a href="/tools/windsurf/">🌊 Windsurf</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is Claude Code free?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">No. Claude Code requires a Claude Pro subscription ($20/month), Claude Max ($100/month), or an Anthropic API key with pay-per-token billing. There's no free tier.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Does Claude Code work with any editor?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Claude Code runs in your terminal independently of any editor. You can use it alongside VS Code, Vim, Emacs, or any editor you prefer. It reads and writes files directly, so your editor just needs to reload changed files.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">How does Claude Code compare to Cursor?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Cursor is a visual code editor with AI built in, best for autocomplete and visual multi-file editing. Claude Code is a terminal agent, best for deep reasoning, complex refactoring, and architecture-level work. Many developers use both for different tasks.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Can Claude Code run my tests?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. Claude Code can execute shell commands, including running test suites. It can read test output, identify failures, and fix the code in the same session. It can also install dependencies, run builds, and interact with other CLI tools.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

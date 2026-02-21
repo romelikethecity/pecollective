@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="LangChain review: LLM application framework for building AI apps. Features, pricing, pros and cons. Is it still the best choice for AI developers?">
+
+  <title>LangChain Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="LangChain Review 2026">
+  <meta property="og:description" content="Honest review of LangChain, the most popular LLM application framework. Worth the complexity? Our take for AI professionals.">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/langchain/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="LangChain Review 2026">
+  <meta name="twitter:description" content="Honest review of LangChain, the most popular LLM application framework. Worth the complexity? Our take for AI professionals.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LangChain",
+            "item": "https://pecollective.com/tools/langchain/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is LangChain free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The core LangChain library is free and open source under the MIT license. LangSmith, their observability and evaluation platform, is a paid product starting at $39/month."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is LangChain worth learning in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, especially if you're building complex AI applications with multiple LLM calls, tool use, or agent workflows. For simple chatbots, you might not need it. But for production AI systems, LangChain and LangGraph provide structure that's hard to replicate from scratch."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "LangChain vs LlamaIndex: which should I use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use LangChain if you're building agents with complex multi-step workflows. Use LlamaIndex if your primary use case is RAG (retrieval-augmented generation) and data ingestion. Many projects use both: LlamaIndex for the data pipeline, LangChain for the agent logic."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does LangChain work with all LLM providers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LangChain supports 150+ integrations including OpenAI, Anthropic (Claude), Google (Gemini), Mistral, Cohere, and many others. It also supports local models through Ollama, HuggingFace, and vLLM."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LangChain",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform (Python, JavaScript)",
+    "url": "https://www.langchain.com/",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.2",
+            "bestRating": "5"
+        },
+        "reviewBody": "LangChain is the de facto standard for building LLM applications, and that position is earned. The integration ecosystem is unmatched, LangGraph solved the agent orchestration problem that earlier versions struggled with, and LangSmith fills the critical gap of production observability. If you're building anything complex with LLMs, you'll probably end up using at least parts of LangChain. The honest criticism is that LangChain adds complexity. For simple projects, it's overhead. The abstraction"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🔗</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">LLM Framework</span>
+            <h1 class="tool-review__title">LangChain Review 2026</h1>
+            <p class="tool-review__subtitle">The most popular framework for building LLM applications. Everyone uses it. Not everyone loves it. Here's why both things are true.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://www.langchain.com/" target="_blank" rel="noopener" class="btn btn--primary">Get Started Free &rarr;</a>
+              <a href="/tools/langchain-vs-llamaindex/" class="btn btn--secondary">Compare to LlamaIndex</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is LangChain?</h2>
+<p>LangChain is an open-source framework for building applications powered by <a href="/glossary/large-language-model/">large language models</a>. It provides a standardized way to chain together LLM calls, connect to data sources, and build agents that can use tools and make decisions.</p>
+<p>Think of it as the plumbing layer between your application code and LLM APIs. Instead of writing raw HTTP calls to OpenAI and parsing JSON responses, you work with higher-level abstractions like chains, retrievers, and agents. Whether that abstraction helps or hurts depends on what you're building.</p>
+
+<h2>Key Components</h2>
+
+<h3>LangChain Core</h3>
+<p>The foundation library provides the interface for working with LLMs, prompts, output parsers, and basic chains. It's been refactored significantly since early versions. The current LCEL (LangChain Expression Language) syntax is more composable than the original chain approach, though it takes some getting used to.</p>
+
+<h3>LangGraph</h3>
+<p>This is where LangChain gets interesting for complex projects. LangGraph lets you build stateful, multi-step agent workflows as directed graphs. Each node is a function, edges control the flow, and state persists across steps. It's the right abstraction for building agents that need to plan, execute, evaluate, and retry.</p>
+<p>For <a href="/glossary/prompt-engineering/">prompt engineers</a> building production agents, LangGraph replaced the chaotic AgentExecutor pattern with something you can actually reason about and debug.</p>
+
+<h3>LangSmith</h3>
+<p>LangSmith is LangChain's paid observability platform. It traces every LLM call, chain execution, and tool use in your application. You can see exactly what prompts were sent, what came back, how long each step took, and how much it cost.</p>
+<p>The evaluation features let you build test datasets and run your chains against them automatically. This is critical for production AI applications where you need to catch regressions when you change a prompt or switch models.</p>
+
+<h3>Integrations</h3>
+<p>LangChain supports 150+ integrations: every major LLM provider (OpenAI, Anthropic, Google, Mistral, Cohere), <a href="/glossary/vector-database/">vector databases</a> (Pinecone, Weaviate, Chroma, Qdrant), document loaders, embedding models, and tools. The breadth is unmatched by any competitor.</p>
+
+<h2>Pricing</h2>
+<p>The core LangChain library is free and MIT licensed. You can build and deploy applications without paying LangChain anything. The paid product is LangSmith, which starts at $39/month for the Developer plan (limited traces) and $99/month for Plus (more traces, team features). Enterprise pricing is custom.</p>
+<p>You don't need LangSmith to use LangChain, but debugging complex chains without it is painful. Most teams that use LangChain in production end up paying for LangSmith.</p>
+
+<h2>LangChain vs LlamaIndex</h2>
+<p>These frameworks overlap but have different strengths. LangChain is broader and better for agent workflows. LlamaIndex is more focused on RAG and data ingestion. Read our <a href="/tools/langchain-vs-llamaindex/">LangChain vs LlamaIndex comparison</a> for the full breakdown.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Largest ecosystem of integrations (150+ LLMs, vector stores, tools)</li>
+                  <li>Free and open source with MIT license</li>
+                  <li>LangGraph adds proper state machine support for complex agents</li>
+                  <li>Excellent documentation and community resources</li>
+                  <li>LangSmith provides production-grade tracing and evaluation</li>
+                  <li>Supports both Python and JavaScript/TypeScript</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>Abstraction layers can hide what's actually happening with your LLM calls</li>
+                  <li>Learning curve is steep, especially for LangGraph</li>
+                  <li>Breaking changes between versions have burned early adopters</li>
+                  <li>Simple tasks often need more boilerplate than calling an API directly</li>
+                  <li>Debugging chains and agents can be frustrating without LangSmith</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use LangChain?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>AI engineers building complex multi-step agents</strong> where LangGraph's state machine model shines</li>
+              <li><strong>Teams that need production observability</strong> since LangSmith's tracing and evaluation tools are best-in-class</li>
+              <li><strong>Projects integrating multiple LLM providers</strong> where LangChain's unified interface saves time switching between OpenAI, Anthropic, and others</li>
+              <li><strong><a href="/glossary/prompt-engineering/">Prompt engineers</a> building RAG applications</strong> where the retriever/vector store abstractions accelerate development</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Simple chatbot projects</strong> where calling the OpenAI API directly is cleaner and faster</li>
+              <li><strong>Developers who want to understand every API call</strong> since LangChain's abstractions can obscure what's happening underneath</li>
+              <li><strong>Teams on tight deadlines</strong> because the learning curve for LangGraph and advanced features takes real time investment</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>LangChain is the de facto standard for building LLM applications, and that position is earned. The integration ecosystem is unmatched, LangGraph solved the agent orchestration problem that earlier versions struggled with, and LangSmith fills the critical gap of production observability. If you're building anything complex with LLMs, you'll probably end up using at least parts of LangChain.</p><p>The honest criticism is that LangChain adds complexity. For simple projects, it's overhead. The abstractions can make debugging harder if you don't understand what's happening at the API level. Our recommendation: learn the raw APIs first, then adopt LangChain when your project's complexity justifies it. That usually happens faster than you'd expect.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★☆</span>
+                <span class="rating__value">4.2/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LangChain</span>
+                  <span class="pricing-row__value">Free (OSS)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LangSmith Dev</span>
+                  <span class="pricing-row__value">$39/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LangSmith Plus</span>
+                  <span class="pricing-row__value">$99/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Enterprise</span>
+                  <span class="pricing-row__value">Custom</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://www.langchain.com/" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get LangChain &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Platform</span>
+                  <span class="pricing-row__value">Python, JS/TS</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">License</span>
+                  <span class="pricing-row__value">MIT (Open Source)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">GitHub Stars</span>
+                  <span class="pricing-row__value">95K+</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LangSmith</span>
+                  <span class="pricing-row__value">Paid add-on</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/langchain-vs-llamaindex/">⚔️ LangChain vs LlamaIndex</a>
+                <a href="/tools/cursor/">⚡ Cursor</a>
+                <a href="/tools/claude-code/">🧠 Claude Code</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is LangChain free?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. The core LangChain library is free and open source under the MIT license. LangSmith, their observability and evaluation platform, is a paid product starting at $39/month.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is LangChain worth learning in 2026?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes, especially if you're building complex AI applications with multiple LLM calls, tool use, or agent workflows. For simple chatbots, you might not need it. But for production AI systems, LangChain and LangGraph provide structure that's hard to replicate from scratch.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">LangChain vs LlamaIndex: which should I use?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Use LangChain if you're building agents with complex multi-step workflows. Use LlamaIndex if your primary use case is RAG (retrieval-augmented generation) and data ingestion. Many projects use both: LlamaIndex for the data pipeline, LangChain for the agent logic.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Does LangChain work with all LLM providers?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">LangChain supports 150+ integrations including OpenAI, Anthropic (Claude), Google (Gemini), Mistral, Cohere, and many others. It also supports local models through Ollama, HuggingFace, and vLLM.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

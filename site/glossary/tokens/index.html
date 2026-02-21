@@ -1148,6 +1148,29 @@
         <p>Token count directly impacts cost and performance. Efficient prompt engineering means getting the same quality output with fewer input tokens. At enterprise scale, reducing prompt length by 20% can save thousands per month.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Tokens are the fundamental units that language models process. A token might be a whole word ('hello'), a word fragment ('un' + 'believ' + 'able'), a punctuation mark, or a special character. Different models use different tokenizers, so the same text produces different token counts across models.</p><p>Tokenization affects both cost and behavior. API pricing is per-token, so understanding token counts is essential for budget management. Tokenization quirks also cause model behavior oddities: models struggle with character-counting tasks because they don't see individual characters, only tokens.</p><p>Common ratios: English text averages about 0.75 tokens per word (or about 4 characters per token). Code tends to use more tokens per line than prose. Non-English languages, especially those with non-Latin scripts, typically require more tokens per word, making API calls more expensive.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Estimating costs based on word count instead of actual token count</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Use the model provider's tokenizer tool to get exact counts. Libraries like tiktoken (OpenAI) give precise token counts for budgeting.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Ignoring that both input AND output tokens are billed</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Output tokens are typically 3-4x more expensive than input tokens. Limiting output length (e.g., 'respond in under 100 words') can significantly reduce costs.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Token economics directly affect AI product viability. Prompt engineers and AI product managers need to understand token costs to build sustainable products. A prompt that uses 2,000 tokens vs 500 tokens for the same task means 4x the API cost at scale.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

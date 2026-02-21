@@ -1148,6 +1148,29 @@
         <p>You can't improve what you can't measure. Model evaluation is how teams decide which model to use, whether a fine-tune worked, and when a system is ready for production. It's increasingly a dedicated role, with 'AI Evaluation Engineer' appearing in job boards.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Model evaluation measures how well an AI model performs on specific tasks using standardized tests and metrics. For language models, evaluation spans multiple dimensions: factual accuracy, reasoning ability, code generation, instruction following, safety compliance, and task-specific performance.</p><p>Evaluation approaches include: benchmark-based evaluation (MMLU, HumanEval, GSM8K for math), human evaluation (paid raters comparing model outputs), automated evaluation (using a strong model to grade a weaker model's outputs, called LLM-as-judge), and task-specific metrics (BLEU for translation, ROUGE for summarization, F1 for classification).</p><p>The most valuable evaluation is on your specific use case. Generic benchmarks show broad capabilities, but a model that scores highest on MMLU might not be the best choice for your customer support chatbot. Building custom evaluation datasets that represent your production distribution is the most reliable way to compare models.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Choosing models based solely on leaderboard rankings</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Leaderboards test general capabilities. Build an evaluation set from your actual use case (50-100 representative examples) and test candidate models against it.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using a single metric to evaluate model performance</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Measure multiple dimensions: accuracy, latency, cost, consistency, and safety. A model with 95% accuracy but 10-second latency may be worse than one with 90% accuracy and 500ms latency for a real-time application.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Model evaluation skills are in high demand for AI engineers and ML researchers. Companies making multi-million dollar model selection decisions need engineers who can design rigorous, representative evaluation frameworks.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

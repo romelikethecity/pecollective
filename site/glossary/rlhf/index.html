@@ -1148,6 +1148,29 @@
         <p>RLHF is why modern chatbots feel helpful rather than just generating text. It's the technique that made ChatGPT usable. Understanding RLHF helps prompt engineers understand why models behave the way they do.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>RLHF (Reinforcement Learning from Human Feedback) is the training technique that transforms raw language models into helpful, safe assistants. The process has three stages: supervised fine-tuning on high-quality demonstrations, training a reward model on human preference comparisons, and optimizing the language model against the reward model using reinforcement learning (typically PPO).</p><p>The preference data collection is critical: human raters compare pairs of model outputs and indicate which one is better. These comparisons train the reward model to score outputs by quality. The language model then learns to generate outputs that score highly.</p><p>RLHF has largely been superseded by simpler alternatives like DPO (Direct Preference Optimization) and ORPO, which achieve similar results without the complexity of training a separate reward model. However, understanding RLHF remains essential because it explains why modern AI assistants behave the way they do.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Thinking RLHF is just about safety and content filtering</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">RLHF shapes all aspects of model behavior: helpfulness, formatting, tone, verbosity, and reasoning quality. It's why models answer questions instead of just completing text.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming RLHF-trained models are unbiased because humans provided the feedback</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Human raters have their own biases, which get baked into the reward model. RLHF-trained models can exhibit systematic biases from the preference data.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding RLHF is important for AI researchers and ML engineers working on model training. For prompt engineers, it provides crucial context for why models behave certain ways and how to work with (rather than against) their training.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

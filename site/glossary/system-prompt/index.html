@@ -1148,6 +1148,29 @@
         <p>System prompts are the foundation of every AI-powered product. They define what the AI does, how it behaves, and what guardrails it follows. Getting them right is a core prompt engineering skill.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>System prompts set the operating parameters for an AI conversation. They're processed before any user input and establish the model's persona, capabilities, constraints, and output format. Unlike user messages, system prompts carry higher priority in most model architectures.</p><p>Effective system prompts have a clear structure: role definition, behavioral guidelines, output format specifications, and explicit constraints. The best system prompts anticipate failure modes and include guardrails. For example, a medical chatbot's system prompt should specify 'Never provide a diagnosis' rather than hoping the model infers this.</p><p>System prompts are also where you implement safety measures, content filtering rules, and brand voice guidelines. In production applications, they're often hundreds or thousands of tokens long and version-controlled like code.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Writing a system prompt that contradicts itself or gives conflicting priorities</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Structure your system prompt with numbered priorities. 'If rules conflict, safety overrides helpfulness, and helpfulness overrides brevity.'</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Putting task-specific instructions in the system prompt instead of the user message</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">System prompts define behavior and constraints. Put the specific task (what to analyze, what to write) in the user message where it can vary per request.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">System prompt design is one of the most commercially valuable prompt engineering skills. Companies pay premium salaries for engineers who can design system prompts that reliably control model behavior at scale across thousands of conversations.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

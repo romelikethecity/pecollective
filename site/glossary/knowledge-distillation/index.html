@@ -1148,6 +1148,29 @@
         <p>Distillation is how companies create affordable, production-ready models. Many 'small but capable' models are distilled from larger ones. It's also a common strategy for reducing API costs — fine-tune a small model on outputs from a large one.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Knowledge distillation trains a smaller 'student' model to mimic the behavior of a larger 'teacher' model. Rather than training on raw data labels, the student learns from the teacher's output probability distributions, which contain richer information about relationships between categories and the teacher's uncertainty.</p><p>The process involves running the teacher model on a large dataset to generate 'soft labels' (probability distributions), then training the student to match these distributions. A temperature parameter during distillation controls how much of the teacher's uncertainty is transferred. Higher temperatures spread probability mass more evenly, transferring more subtle knowledge.</p><p>Distillation has become a key strategy in AI deployment. Companies run expensive frontier models (GPT-4, Claude) to generate training data, then distill the knowledge into smaller, faster, cheaper models for production. Models like Phi-3 and Gemma achieved remarkable performance partly through distillation from larger models.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Distilling from a teacher model on a dataset that doesn't match your production distribution</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Use a dataset that closely matches your actual use case. Distilling on generic web text won't transfer task-specific knowledge well.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Expecting a 1B student model to fully replicate a 70B teacher's capabilities</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Set realistic expectations. Distillation transfers knowledge efficiently but can't overcome fundamental capacity limits. Target specific capabilities rather than general intelligence.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Knowledge distillation is a practical skill for ML engineers focused on model deployment and cost optimization. Companies regularly need to compress large models for edge deployment, mobile applications, or cost-efficient production serving.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

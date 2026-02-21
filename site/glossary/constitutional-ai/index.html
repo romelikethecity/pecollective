@@ -1148,6 +1148,29 @@
         <p>Constitutional AI is how Claude is trained. Understanding it helps prompt engineers work with Claude's behavioral patterns — Claude's tendency to be direct about uncertainty and refuse harmful requests stems from its constitutional training.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Constitutional AI (CAI) is Anthropic's approach to AI alignment where a model is trained to follow a set of principles (a 'constitution') rather than relying solely on human feedback for every behavior. The training process has two phases: in the first, the model critiques and revises its own responses based on the constitutional principles. In the second, the revised responses are used to train a preference model.</p><p>The constitution typically includes principles about helpfulness, harmlessness, and honesty. By making the rules explicit and having the model self-supervise, CAI reduces the need for large-scale human annotation while producing more consistent behavior.</p><p>CAI addresses a key limitation of RLHF: human raters may have inconsistent or conflicting preferences. By grounding training in explicit principles, the model's behavior becomes more predictable and auditable. It also enables transparent discussion about what rules AI systems should follow.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Thinking Constitutional AI means the model will always refuse potentially sensitive requests</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">CAI balances helpfulness with safety. The constitution includes principles about being helpful, not just about refusing. The goal is thoughtful, nuanced responses.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Confusing Constitutional AI with content filtering or content moderation</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Content filtering is a post-processing layer. CAI shapes the model's training and internal behavior. They're complementary but different approaches.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Constitutional AI knowledge is valuable for roles at Anthropic and companies building safety-focused AI systems. More broadly, understanding AI training methodologies helps prompt engineers and AI engineers anticipate model behavior and design better systems.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

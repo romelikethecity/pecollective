@@ -1148,6 +1148,29 @@
         <p>Prompt chaining is how production AI systems handle complex tasks that a single prompt can't reliably solve. It's the manual predecessor to agentic AI. Designing effective chains is one of the most practically valuable prompt engineering skills.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Prompt chaining breaks a complex task into a sequence of simpler sub-tasks, where each prompt handles one step and passes its output to the next prompt as input. This is more reliable than attempting complex tasks in a single prompt because each step can be focused, validated, and debugged independently.</p><p>A typical chain might involve: (1) extract relevant information from a document, (2) analyze the extracted information against criteria, (3) generate a recommendation based on the analysis, (4) format the recommendation for the target audience. Each step uses a different prompt optimized for that specific task.</p><p>Chaining strategies include sequential chains (linear A -> B -> C), branching chains (route to different prompts based on classification), and parallel chains (run multiple analyses simultaneously, then merge results). The choice depends on the task structure and whether intermediate results affect which subsequent steps are needed.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Creating chains that are too long, amplifying errors at each step</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Keep chains to 3-5 steps maximum. Each step has a small error rate that compounds. Longer chains need intermediate validation checks.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not validating intermediate outputs between chain steps</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Add format and content validation between steps. If step 2's output doesn't match step 3's expected input format, catch it early rather than getting garbage at the end.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Prompt chaining is a fundamental production skill for prompt engineers and AI engineers. It's the primary technique for building reliable AI workflows and is the conceptual foundation for more advanced agentic systems.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -1148,6 +1148,29 @@
         <p>Latency directly impacts user satisfaction and adoption. Studies show users abandon AI features when response time exceeds 5 seconds. Prompt engineers must balance output quality against speed by choosing appropriate models and prompt lengths.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>In AI systems, latency measures the time from sending a request to receiving the first (or complete) response. For language models, there are two key metrics: time-to-first-token (TTFT, how long until the first word appears) and end-to-end latency (total time to generate the complete response).</p><p>Latency depends on multiple factors: model size (larger models are slower), input length (longer prompts take longer to process), output length (more tokens to generate means more time), GPU hardware (A100 vs H100 vs inference-optimized chips), and serving infrastructure (batch size, queue depth, geographic distance).</p><p>For user-facing applications, latency directly impacts user experience. Research shows users perceive delays over 200ms for TTFT and expect streaming responses to match reading speed (about 15-20 tokens per second). Batch processing applications care less about latency and more about throughput.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Optimizing for average latency instead of p95/p99 latency</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Average latency hides outliers. One request taking 30 seconds while 99 take 200ms still means 1% of users have a terrible experience. Track and optimize percentile latencies.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not using streaming for user-facing applications</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Streaming responses dramatically improves perceived latency. Users start reading immediately instead of waiting for the full response. Most model APIs support streaming with minimal additional complexity.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Latency optimization is a core skill for MLOps engineers and backend developers working with AI systems. Understanding latency trade-offs helps product teams make informed decisions about model selection, architecture, and user experience design.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

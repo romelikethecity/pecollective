@@ -1148,6 +1148,29 @@
         <p>HumanEval scores directly predict how useful a model is as a coding assistant. If you're evaluating Cursor vs Copilot vs Claude for code generation, HumanEval (and its expanded version, HumanEval+) is the most relevant benchmark to check.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>HumanEval is a code generation benchmark containing 164 Python programming problems, each with a function signature, docstring, and hidden test cases. The model must generate a complete function that passes all test cases. The primary metric is pass@1: the percentage of problems solved correctly on the first attempt.</p><p>HumanEval problems range from simple (string manipulation, list operations) to medium difficulty (dynamic programming, tree traversal). They don't include very hard competitive programming problems, which is why newer benchmarks like SWE-bench (real GitHub issues) and LiveCodeBench (continuously updated problems) have gained popularity.</p><p>HumanEval+ is an enhanced version with 80x more test cases per problem, catching solutions that pass the original tests through luck or edge case exploitation. Models typically score 5-15% lower on HumanEval+ compared to HumanEval, revealing that many 'correct' solutions were actually fragile.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming HumanEval scores predict performance on production coding tasks</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">HumanEval tests standalone function generation. Production coding involves understanding large codebases, debugging, refactoring, and working with frameworks. SWE-bench is more predictive of real-world utility.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Comparing pass@1 scores across different evaluation setups</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Temperature, prompting strategy, and number of attempts all affect scores. Only compare results from the same evaluation framework and parameters.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">HumanEval is the standard reference for discussing AI coding capabilities. Understanding what it measures helps engineers evaluate AI coding assistants and choose the right model for code generation tasks.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

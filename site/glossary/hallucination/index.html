@@ -1148,6 +1148,29 @@
         <p>Hallucination is the single biggest barrier to enterprise AI adoption. Prompt engineering techniques like RAG, source citation requirements, and confidence scoring are the primary defenses.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Hallucination occurs when language models generate text that sounds plausible but is factually incorrect, fabricated, or unsupported by the provided context. This happens because language models are trained to predict likely text sequences, not to verify factual accuracy. A statistically probable-sounding sentence can be completely false.</p><p>Hallucinations come in several forms: factual errors (wrong dates, invented statistics), entity confusion (mixing up attributes of similar entities), source fabrication (citing papers or URLs that don't exist), and logical errors (drawing conclusions that don't follow from premises).</p><p>Mitigation strategies include RAG (grounding responses in real documents), asking models to cite sources, using structured outputs with verification, chain-of-verification prompting (where the model checks its own claims), and setting lower temperature values to reduce creative generation.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Trusting model outputs on factual questions without verification</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Always verify critical facts, especially dates, statistics, URLs, and citations. Use RAG or web search to ground factual claims.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming hallucination is just a 'bug' that will be fixed in future models</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Hallucination is inherent to how language models work. Design your system architecture to mitigate it rather than waiting for it to disappear.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Hallucination mitigation is one of the most practically important prompt engineering skills. Every production AI system must handle hallucinations. Understanding the techniques (RAG, structured prompting, verification chains) is essential for any AI-facing role.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

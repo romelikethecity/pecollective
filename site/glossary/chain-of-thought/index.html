@@ -1148,6 +1148,29 @@
         <p>Research from Google shows chain-of-thought prompting can improve accuracy by 20-40% on reasoning tasks compared to direct prompting, especially with larger models.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Chain-of-thought (CoT) works because language models process text sequentially. When a model generates intermediate reasoning steps, each step adds context that improves the accuracy of subsequent steps. This is analogous to how humans solve math problems by writing out their work.</p><p>There are several CoT variants. Zero-shot CoT uses the simple trigger 'Let's think step by step.' Few-shot CoT provides example problems with worked-out solutions. Tree-of-thought explores multiple reasoning paths and selects the best one. Self-consistency generates multiple CoT paths and takes a majority vote on the final answer.</p><p>Research shows CoT provides the biggest gains on tasks requiring arithmetic, commonsense reasoning, and symbolic manipulation. The improvement is proportional to model size, with smaller models sometimes performing worse with CoT than without it.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using chain-of-thought for simple factual questions where it adds unnecessary verbosity</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Reserve CoT for multi-step reasoning tasks. For simple lookups, direct prompting is faster and cheaper.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Providing chain-of-thought examples with incorrect reasoning steps</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Verify every step in your few-shot examples is logically sound. Models will imitate flawed reasoning patterns.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Chain-of-thought is a fundamental prompting technique that every prompt engineer must master. It appears in virtually every prompt engineering job description and is tested in technical interviews. It's also the foundation for understanding reasoning models like o1 and o3.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -1148,6 +1148,29 @@
         <p>Tokenizer differences explain why the same text costs different amounts across models. Understanding tokenization helps prompt engineers estimate costs, stay within context limits, and optimize prompt length.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>A tokenizer converts raw text into the numerical token IDs that a language model can process. Most modern tokenizers use subword algorithms like Byte-Pair Encoding (BPE) or SentencePiece that learn a vocabulary by finding frequently occurring character sequences in training data.</p><p>The tokenizer's vocabulary directly affects model behavior. Common English words might be single tokens, while rare words or non-English text get split into multiple subword tokens. This explains why models handle common language better than specialized jargon, and why API costs vary by language (Chinese text uses roughly 2x more tokens than English for the same content).</p><p>Each model family has its own tokenizer with a different vocabulary. GPT-4's tokenizer (cl100k_base) has 100,256 tokens. Claude and Llama use different tokenizers. This means the same text produces different token counts and costs across providers. OpenAI's tiktoken library and Hugging Face's tokenizers library let you count tokens before making API calls.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming token counts are the same across different models</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Always count tokens using the specific model's tokenizer. The same text can be 100 tokens in one model and 130 in another.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Ignoring tokenization when debugging unexpected model behavior</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">If a model struggles with specific words or patterns, check how they tokenize. Unusual tokenization (splitting a word into many pieces) often correlates with poor performance on that input.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Tokenizer understanding is important for cost optimization, debugging model behavior, and multilingual AI applications. It's a practical skill that separates experienced AI practitioners from beginners.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

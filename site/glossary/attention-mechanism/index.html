@@ -1148,6 +1148,29 @@
         <p>Attention is why modern models understand context so well. It's also why longer prompts cost more — attention computation scales quadratically with sequence length, making context window size a key cost and performance factor.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Attention mechanisms allow models to selectively focus on relevant parts of the input when generating each output token. The mechanism computes three vectors for each token: Query (what am I looking for?), Key (what do I contain?), and Value (what information do I provide?). Attention scores are computed as the dot product of Query and Key, then used to create a weighted sum of Values.</p><p>Multi-head attention runs multiple attention computations in parallel, each learning to focus on different types of relationships. One head might learn syntactic dependencies (subject-verb agreement), another might capture semantic relationships (word meaning), and another might track positional patterns.</p><p>Recent innovations include Flash Attention (memory-efficient attention computation), Multi-Query Attention (sharing keys/values across heads for faster inference), and Grouped Query Attention (a compromise between full multi-head and multi-query). These optimizations make it practical to run large models with long context windows.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Thinking attention means the model 'understands' or 'focuses' like a human</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Attention is a mathematical operation (weighted average). It computes relevance scores between tokens but doesn't involve understanding in the human sense.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Treating attention visualizations as reliable explanations of model behavior</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Attention patterns show where the model looks but not why it makes specific decisions. Use attention maps as one signal among many, not as definitive explanations.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Attention mechanism knowledge is essential for AI researchers and ML engineers working on model development. For prompt engineers, it provides useful intuition about how models process context and why techniques like placing important information at the start and end of prompts work.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

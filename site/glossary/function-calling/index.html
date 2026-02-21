@@ -1148,6 +1148,29 @@
         <p>Function calling transforms LLMs from text generators into action-takers. It's the mechanism behind AI agents, chatbot integrations, and any system where AI needs to interact with the real world.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Function calling (also called tool use) lets language models output structured requests to external functions rather than just generating text. The model receives a schema describing available functions and their parameters, then decides when to call a function and with what arguments.</p><p>The workflow follows a specific pattern: you define function schemas in the API request, the model generates a function call with arguments, your application executes the function, and you return the result to the model for further processing. This creates a clean separation between the model's reasoning and your application's capabilities.</p><p>Function calling is the foundation for AI agents, but it's also useful in simpler applications. Common uses include structured data extraction (parsing unstructured text into JSON), API integration (letting a chatbot check order status), and dynamic content generation (generating charts or formatted documents).</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Defining function schemas that are too vague, leading to incorrect parameter values</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Write detailed parameter descriptions with examples, constraints, and enum values. The schema is the model's only guide for correct usage.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not handling cases where the model calls a function incorrectly or with invalid arguments</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Always validate function arguments before executing. Return clear error messages that help the model self-correct on the next attempt.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Function calling is a core skill for AI engineers building production applications. It's the mechanism behind tool-using chatbots, AI-powered workflows, and agent systems. Listing function calling experience is increasingly standard in AI engineering job descriptions.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

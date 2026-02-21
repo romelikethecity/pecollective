@@ -1148,6 +1148,29 @@
         <p>Prompt optimization is where prompt engineering becomes engineering. Companies spending $10K+/month on API calls can cut costs 30-50% by optimizing prompt length and structure. It's the difference between hobby prompting and professional prompt engineering.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Prompt optimization is the systematic process of improving prompt performance through measurement and iteration. It treats prompts as software artifacts: version-controlled, tested against evaluation datasets, and refined based on metrics rather than intuition.</p><p>The optimization process involves: defining success metrics (accuracy, format compliance, latency, cost), building an evaluation dataset (representative inputs with expected outputs), testing prompt variations against this dataset, analyzing results to identify failure patterns, and iterating on the prompt to address weaknesses.</p><p>Advanced optimization techniques include automated prompt search (tools like DSPy that programmatically explore prompt variations), prompt compression (reducing token count while maintaining quality), and multi-objective optimization (balancing accuracy against cost or latency). The ROI of prompt optimization is often dramatic: a 20% accuracy improvement or 50% token reduction can save thousands per month at scale.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Optimizing prompts based on a handful of manual tests</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Build a systematic evaluation set with 50+ examples covering normal cases, edge cases, and adversarial inputs. Manual testing misses failure patterns that only appear at scale.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Optimizing for a single metric while ignoring trade-offs</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Track multiple metrics simultaneously. A prompt that achieves 99% accuracy but uses 10x more tokens might be worse than one with 95% accuracy at standard token counts.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Prompt optimization is where prompt engineering becomes engineering. Companies spending $10K+/month on API calls actively seek engineers who can systematically reduce costs and improve quality. It's the skill that distinguishes senior prompt engineers from juniors.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

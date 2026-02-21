@@ -1148,6 +1148,29 @@
         <p>Perplexity is the foundational metric for language model quality. While benchmarks like MMLU test specific capabilities, perplexity measures core language modeling ability. Lower perplexity generally correlates with better performance across all downstream tasks.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Perplexity quantifies how well a language model predicts a text sequence. Mathematically, it's the exponentiation of the cross-entropy loss. A perplexity of 10 means the model is, on average, as uncertain as if it were choosing uniformly among 10 options at each position.</p><p>Lower perplexity indicates better language modeling. A model with perplexity 8 on English text understands English patterns better than one with perplexity 15. However, perplexity doesn't capture everything that matters: a model could have low perplexity (predicts text well) but still be terrible at following instructions or reasoning.</p><p>Perplexity is most useful for comparing models within the same family or evaluating the impact of training changes. It's less useful for comparing across architectures (different tokenizers make perplexities non-comparable) or for predicting task-specific performance. Modern evaluation has largely shifted from perplexity to task-based benchmarks for practical model comparison.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Comparing perplexity across models with different tokenizers</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Perplexity depends on vocabulary size and tokenization. Models with different tokenizers produce non-comparable perplexity scores. Only compare perplexity within the same tokenizer.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using perplexity as the primary metric for choosing between commercial AI APIs</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">API providers rarely report perplexity. Use task-specific benchmarks and your own evaluations to compare commercial models. Perplexity is mainly useful for model training research.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Perplexity understanding is important for ML researchers and engineers involved in model training and evaluation. For prompt engineers and AI application developers, it provides foundational context but isn't a daily working metric.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

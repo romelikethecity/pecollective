@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Master chain of thought prompting with this complete tutorial. Zero-shot CoT, few-shot CoT, tree-of-thought, self-consistency, and 8+ worked examples with before/after comparisons.">
+
+  <title>Chain of Thought Prompting: Complete Tutorial with Examples | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/chain-of-thought-prompting-guide/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/chain-of-thought-prompting-guide/">
+  <meta property="og:title" content="Chain of Thought Prompting: Complete Tutorial with Examples">
+  <meta property="og:description" content="Complete chain of thought prompting tutorial. Zero-shot CoT, few-shot CoT, tree-of-thought, and 8+ worked examples with before/after prompts.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Chain of Thought Prompting: Complete Tutorial with Examples">
+  <meta name="twitter:description" content="Complete chain of thought prompting tutorial. Zero-shot CoT, few-shot CoT, tree-of-thought, and 8+ worked examples with before/after prompts.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chain of Thought Prompting",
+      "item": "https://pecollective.com/blog/chain-of-thought-prompting-guide/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chain of Thought Prompting: Complete Tutorial with Examples",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-15",
+  "description": "Master chain of thought prompting with this complete tutorial. Zero-shot CoT, few-shot CoT, tree-of-thought, self-consistency, and 8+ worked examples with before/after comparisons."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does chain-of-thought prompting work with all AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CoT works with all major large language models (GPT-4, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra does chain-of-thought cost in API calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CoT typically increases output tokens by 50 to 200%, which directly increases API costs by the same amount. For high-volume applications processing millions of requests, the cost adds up. The calculation: multiply your current output token costs by 2 to 3x and decide if the accuracy improvement justifies it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use chain of thought for creative tasks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but differently. For creative writing, asking the model to outline its approach before writing can improve structure and coherence. This is CoT applied to planning rather than reasoning. Avoid asking for step-by-step analysis in the middle of creative output. The planning-then-executing approach works well for essays, marketing copy, and structured creative work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between chain of thought and chain of thought with self-consistency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard CoT generates one reasoning chain and one answer. Self-consistency generates multiple reasoning chains (typically 5 to 10) with higher temperature, then picks the most common final answer through majority voting. Self-consistency is more accurate but costs N times more. Use standard CoT for most tasks. Use self-consistency when accuracy is critical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use chain of thought in system prompts or user prompts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Put the CoT instruction in the system prompt if you want the model to always reason step by step. Put it in the user prompt if you only need CoT for specific queries. A better approach for chatbots: include CoT as a conditional in the system prompt, activating only for complex questions."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Tutorial</span>
+          <h1 class="article-header__title">Chain of Thought Prompting: Complete Tutorial with Examples</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; February 15, 2026 &middot; 17 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>If you only learn one advanced prompting technique, make it chain of thought. It's the single biggest improvement you can make to AI output quality on complex tasks, and it works across every major model.</p>
+
+<p>This tutorial goes deeper than the usual "just add 'think step by step.'" You'll learn the different variants, when each one works best, and see real before-and-after examples that demonstrate exactly why this technique matters.</p>
+
+<h2>What Is Chain-of-Thought Prompting?</h2>
+
+<p><a href="/glossary/chain-of-thought/">Chain-of-thought</a> (CoT) prompting is a technique where you ask the model to reason through a problem step by step before giving its final answer. Instead of producing an answer directly, the model generates intermediate reasoning steps that lead to its conclusion.</p>
+
+<p>Why does this matter? Language models generate text one token at a time. Each new token is influenced by all the tokens that came before it. When a model jumps straight to an answer, it's making that answer based only on the question. When it reasons step by step, each reasoning step becomes additional context that informs the next step and the final answer.</p>
+
+<p>Think of it this way. If someone asks you "What is 347 times 28?" you don't just stare at the numbers and blurt out an answer. You break it down: 347 times 20 is 6,940. 347 times 8 is 2,776. Add them: 9,716. Each intermediate result makes the final answer more reliable. CoT prompting makes language models work the same way.</p>
+
+<h2>The Two Main Variants</h2>
+
+<h3>Zero-Shot Chain of Thought</h3>
+
+<p>Zero-shot CoT is the simplest version. You just add a phrase like "Let's think step by step" or "Think through this carefully before answering" to your prompt. No examples needed.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Example 1: Math Problem</div>
+  <p class="technique-card__description"><strong>Without CoT:</strong><br>
+A store has 45 apples. They sell 12 in the morning and receive a shipment of 30 in the afternoon. Then they sell 18 more before closing. How many apples do they have at the end of the day?<br><br>
+<strong>Model response (no CoT):</strong> 55 apples. [Incorrect]<br><br>
+<strong>With zero-shot CoT:</strong><br>
+A store has 45 apples. They sell 12 in the morning and receive a shipment of 30 in the afternoon. Then they sell 18 more before closing. How many apples do they have at the end of the day? Let's work through this step by step.<br><br>
+<strong>Model response (with CoT):</strong><br>
+Step 1: Start with 45 apples.<br>
+Step 2: Sell 12 in the morning. 45 - 12 = 33 apples.<br>
+Step 3: Receive shipment of 30. 33 + 30 = 63 apples.<br>
+Step 4: Sell 18 before closing. 63 - 18 = 45 apples.<br>
+Answer: 45 apples. [Correct]</p>
+</div>
+
+<p>The phrase "Let's think step by step" was popularized by Kojima et al. in their 2022 paper "Large Language Models are Zero-Shot Reasoners." They showed this simple addition improved accuracy by 10 to 40 percentage points on reasoning benchmarks. It's one of the highest-impact, lowest-effort techniques in prompt engineering.</p>
+
+<p>Other effective trigger phrases:</p>
+<ul>
+  <li>"Think through this step by step before answering."</li>
+  <li>"Break this problem down into parts."</li>
+  <li>"Show your reasoning, then give your final answer."</li>
+  <li>"Work through this carefully."</li>
+</ul>
+
+<h3>Few-Shot Chain of Thought</h3>
+
+<p>Few-shot CoT combines <a href="/glossary/few-shot-prompting/">few-shot prompting</a> with chain-of-thought reasoning. You provide examples that include the reasoning steps, not just the final answers. The model learns to replicate the reasoning pattern.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Example 2: Logic Puzzle with Few-Shot CoT</div>
+  <p class="technique-card__description"><strong>Few-shot CoT prompt:</strong><br><br>
+Q: Sarah is older than Tom. Tom is older than Jake. Is Sarah older than Jake?<br>
+A: Let me work through this logically.<br>
+- Sarah is older than Tom. So Sarah > Tom in age.<br>
+- Tom is older than Jake. So Tom > Jake in age.<br>
+- Since Sarah > Tom and Tom > Jake, by transitivity, Sarah > Jake.<br>
+- Therefore, yes, Sarah is older than Jake.<br><br>
+Q: All doctors are professionals. Some professionals are wealthy. Are all doctors wealthy?<br>
+A: Let me work through this logically.<br>
+- All doctors are professionals. This means every doctor belongs to the set of professionals.<br>
+- Some professionals are wealthy. This means at least one professional is wealthy, but not necessarily all.<br>
+- The fact that some professionals are wealthy doesn't guarantee that the doctor subset falls within the wealthy subset.<br>
+- Therefore, no, we cannot conclude that all doctors are wealthy.<br><br>
+Q: If it rains, the ground gets wet. The ground is wet. Did it rain?<br>
+A:</p>
+</div>
+
+<p>The model sees the pattern: analyze each premise, connect them logically, then draw a conclusion. It will follow this pattern for the new question, producing: "Let me work through this logically. If it rains, the ground gets wet. This is a conditional: rain implies wet ground. The ground is wet. But wet ground doesn't necessarily imply rain. A sprinkler could have caused it. This is the logical fallacy called 'affirming the consequent.' Therefore, no, we cannot conclude it rained just because the ground is wet."</p>
+
+<p>Few-shot CoT is more reliable than zero-shot CoT when you need the reasoning to follow a specific structure, when the task requires domain-specific logic, or when you want consistent output formatting.</p>
+
+<h2>When to Use Chain of Thought (and When Not To)</h2>
+
+<h3>CoT Works Best For</h3>
+
+<ul>
+  <li><strong>Math and arithmetic:</strong> Any task involving calculations, especially multi-step ones. CoT catches errors that occur when models try to do math "in their head."</li>
+  <li><strong>Logic and reasoning:</strong> Syllogisms, conditionals, transitive relationships. The step-by-step format prevents logical leaps.</li>
+  <li><strong>Multi-step analysis:</strong> Tasks where you need to consider multiple factors before reaching a conclusion. Diagnostic reasoning, root cause analysis, decision-making.</li>
+  <li><strong>Complex classification:</strong> When the classification depends on multiple criteria that interact. Sentiment analysis of nuanced text, compliance checking, medical coding.</li>
+  <li><strong>Word problems:</strong> Any task that requires extracting relevant information from natural language and applying it to reach an answer.</li>
+</ul>
+
+<h3>CoT Doesn't Help (and Can Hurt) For</h3>
+
+<ul>
+  <li><strong>Simple factual questions:</strong> "What year was Python released?" doesn't benefit from step-by-step reasoning. The model either knows it or doesn't.</li>
+  <li><strong>Creative writing:</strong> Asking a model to "think step by step" before writing a poem usually produces worse results. Creativity benefits from fluidity, not structure.</li>
+  <li><strong>Simple classification:</strong> Binary sentiment analysis of clear-cut text ("I love this product!" or "Worst purchase ever") doesn't need reasoning steps. CoT adds tokens and latency without improving accuracy.</li>
+  <li><strong>Speed-critical applications:</strong> CoT generates more tokens, which means higher latency and cost. If you're classifying thousands of inputs per minute, the overhead matters.</li>
+</ul>
+
+<h2>Worked Examples</h2>
+
+<p>Let's look at real-world scenarios where CoT makes a measurable difference.</p>
+
+<h3>Example 3: Multi-Step Data Analysis</h3>
+
+<div class="technique-card">
+  <div class="technique-card__title">Without CoT</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> A company had $2.4M revenue in Q1, $3.1M in Q2, $2.8M in Q3, and $3.7M in Q4. Their costs were 65% of revenue in Q1-Q3 and 70% in Q4. What was their total annual profit?<br><br>
+<strong>Response:</strong> $3.89M [Often incorrect, especially the Q4 calculation]</p>
+</div>
+
+<div class="technique-card">
+  <div class="technique-card__title">With CoT</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> A company had $2.4M revenue in Q1, $3.1M in Q2, $2.8M in Q3, and $3.7M in Q4. Their costs were 65% of revenue in Q1-Q3 and 70% in Q4. What was their total annual profit? Show your calculations for each quarter.<br><br>
+<strong>Response:</strong><br>
+Q1: Revenue $2.4M, Costs $2.4M x 0.65 = $1.56M, Profit = $0.84M<br>
+Q2: Revenue $3.1M, Costs $3.1M x 0.65 = $2.015M, Profit = $1.085M<br>
+Q3: Revenue $2.8M, Costs $2.8M x 0.65 = $1.82M, Profit = $0.98M<br>
+Q4: Revenue $3.7M, Costs $3.7M x 0.70 = $2.59M, Profit = $1.11M<br>
+Total annual profit: $0.84M + $1.085M + $0.98M + $1.11M = $4.015M [Correct]</p>
+</div>
+
+<h3>Example 4: Ethical Reasoning</h3>
+
+<div class="technique-card">
+  <div class="technique-card__title">CoT for Nuanced Analysis</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> A self-driving car's AI must choose between swerving left (hitting one pedestrian) or swerving right (hitting a concrete barrier, injuring the passenger). Going straight would hit three pedestrians. Analyze the ethical considerations step by step.<br><br>
+<strong>Response with CoT:</strong><br>
+Step 1: Identify the options and their consequences.<br>
+- Option A (swerve left): 1 pedestrian harmed<br>
+- Option B (swerve right): 1 passenger harmed<br>
+- Option C (straight): 3 pedestrians harmed<br><br>
+Step 2: Apply utilitarian analysis. Pure numbers favor Option A or B (1 person harmed vs. 3). Between A and B, the harm count is equal but the relationship differs.<br><br>
+Step 3: Consider the duty-of-care distinction. The passenger chose to ride in the vehicle and accepted some risk. Pedestrians did not consent to any risk from the vehicle. This creates an asymmetric duty of care.<br><br>
+Step 4: Consider the precedent. If self-driving cars prioritize passenger safety over pedestrian safety, public trust decreases. If they sacrifice passengers, nobody buys them.<br><br>
+Step 5: Note the framing limitations. Real-world scenarios rarely present clean choices. The car should brake, alert, and minimize total harm rather than choosing a "target."</p>
+</div>
+
+<p>Without CoT, the model would likely give a surface-level answer about the trolley problem. The step-by-step format forces it to consider multiple ethical frameworks and practical implications.</p>
+
+<h3>Example 5: Code Debugging</h3>
+
+<div class="technique-card">
+  <div class="technique-card__title">CoT for Bug Finding</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> This Python function should return the second largest number in a list, but it's buggy. Find and explain the bug step by step.<br><br>
+def second_largest(nums):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;largest = nums[0]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;second = nums[0]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for n in nums:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if n > largest:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second = largest<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = n<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return second<br><br>
+<strong>Response with CoT:</strong><br>
+Let me trace through this with an example.<br><br>
+Input: [1, 5, 3, 9, 7]<br>
+- Start: largest = 1, second = 1<br>
+- n=1: 1 > 1? No. Skip.<br>
+- n=5: 5 > 1? Yes. second = 1, largest = 5<br>
+- n=3: 3 > 5? No. Skip.<br>
+- n=9: 9 > 5? Yes. second = 5, largest = 9<br>
+- n=7: 7 > 9? No. Skip.<br>
+- Return second = 5. Correct for this case.<br><br>
+But try: [5, 5, 5]<br>
+- Start: largest = 5, second = 5<br>
+- All elements equal to largest, nothing updates.<br>
+- Return 5. Is 5 the second largest of [5, 5, 5]? Ambiguous, but probably fine.<br><br>
+Now try: [9, 5, 3, 1]<br>
+- Start: largest = 9, second = 9<br>
+- n=9: 9 > 9? No. Skip.<br>
+- n=5: 5 > 9? No. Skip.<br>
+- n=3: 3 > 9? No. Skip.<br>
+- n=1: 1 > 9? No. Skip.<br>
+- Return second = 9. Bug! The second largest is 5, not 9.<br><br>
+The bug: when the list is already sorted in descending order (or the largest element is first), the function never updates `second` because no element is greater than the initial `largest`. The fix: initialize `second` to negative infinity, or add an `elif` to handle elements larger than `second` but not larger than `largest`.</p>
+</div>
+
+<h3>Example 6: Business Decision Analysis</h3>
+
+<div class="technique-card">
+  <div class="technique-card__title">CoT for Decision Making</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> We're choosing between two vendors for our AI infrastructure. Vendor A: $0.03/1K tokens, 99.9% uptime SLA, 200ms average latency, limited to GPT-4. Vendor B: $0.05/1K tokens, 99.5% uptime SLA, 150ms average latency, supports GPT-4, Claude, and Gemini. We process 50M tokens/month. Analyze this decision step by step.<br><br>
+<strong>Response with CoT:</strong><br>
+Step 1: Cost comparison at our volume.<br>
+- Vendor A: 50M/1K x $0.03 = $1,500/month<br>
+- Vendor B: 50M/1K x $0.05 = $2,500/month<br>
+- Difference: $1,000/month, $12,000/year<br><br>
+Step 2: Uptime impact.<br>
+- 99.9% uptime = 43.8 minutes of downtime/month<br>
+- 99.5% uptime = 3.65 hours of downtime/month<br>
+- Vendor B has roughly 5x more expected downtime. Depending on our use case, this could be significant.<br><br>
+Step 3: Latency comparison.<br>
+- Vendor B is 50ms faster (150 vs 200ms). At 50M tokens, this matters for user-facing applications. For batch processing, it's negligible.<br><br>
+Step 4: Model flexibility.<br>
+- Vendor A locks us to GPT-4. If OpenAI has outages, rate limits, or price increases, we have no alternative.<br>
+- Vendor B supports three providers. This gives us failover capability and negotiating power.<br><br>
+Step 5: Risk assessment.<br>
+- Single-vendor dependency is the biggest risk factor. Model providers have had multi-hour outages. With Vendor A, an OpenAI outage means we're down. With Vendor B, we failover to Claude or Gemini.<br><br>
+Recommendation: Vendor B. The $12K/year premium buys model diversity and failover capability. The lower uptime SLA is concerning, but the multi-model support actually reduces real-world downtime risk more than the SLA difference increases it.</p>
+</div>
+
+<h2>Advanced Techniques</h2>
+
+<h3>Tree of Thought</h3>
+
+<p>Tree of thought (ToT) extends chain of thought by exploring multiple reasoning paths simultaneously. Instead of one linear chain, the model considers several approaches and evaluates which path is most promising.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Example 7: Tree of Thought for Creative Problem Solving</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> I need to reduce customer churn by 20% in 6 months. Explore three different strategic approaches, evaluate each, then recommend the strongest one.<br><br>
+Approach 1: Proactive engagement. Identify at-risk customers using usage patterns and reach out before they leave. Evaluate: How quickly can we build the prediction model? Do we have the usage data?<br><br>
+Approach 2: Pricing restructuring. Offer flexible pricing tiers that match different usage levels so customers feel they're getting fair value. Evaluate: What's the revenue impact? How do current customers react to plan changes?<br><br>
+Approach 3: Product improvement. Focus on the top 3 features customers request and ship them fast. Evaluate: Do we know what features matter most? Can engineering deliver in 6 months?<br><br>
+Compare the three approaches on: speed of impact, cost, risk, and likelihood of hitting the 20% target.</p>
+</div>
+
+<p>Tree of thought is most useful when there are multiple viable approaches and you need to compare them systematically. It prevents the model from fixating on the first solution it generates.</p>
+
+<h3>Self-Consistency</h3>
+
+<p>Self-consistency generates multiple chain-of-thought responses to the same prompt and takes the majority answer. It's essentially ensemble prompting.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Example 8: Self-Consistency for Reliability</div>
+  <p class="technique-card__description"><strong>Process:</strong><br>
+1. Send the same prompt 5 times with temperature 0.7<br>
+2. Each response reasons through the problem step by step<br>
+3. Compare the final answers<br>
+4. Take the majority answer<br><br>
+<strong>If 4 out of 5 responses say "42"</strong>, you have high confidence.<br>
+<strong>If responses split 2-2-1</strong>, the task might be ambiguous or the prompt needs refinement.<br><br>
+Self-consistency works best for tasks with definitive correct answers: math, classification, factual questions. It's less useful for creative or open-ended tasks where "correct" is subjective.</p>
+</div>
+
+<p>The tradeoff: self-consistency costs 5x more (5 API calls instead of 1). Use it selectively for high-stakes decisions where accuracy matters more than cost.</p>
+
+<h2>Practical Tips for Production CoT</h2>
+
+<h3>Separating Reasoning from Output</h3>
+
+<p>In production, you often want the reasoning but don't want to show it to the end user. Structure your prompt to produce both, then extract only what you need.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Production CoT Pattern</div>
+  <p class="technique-card__description"><strong>Prompt pattern:</strong><br>
+Analyze the following customer message and determine its category. First, think through your reasoning in a REASONING section. Then provide your final classification in an ANSWER section.<br><br>
+REASONING:<br>
+[Your step-by-step analysis here]<br><br>
+ANSWER:<br>
+[Single category label]<br><br>
+This gives you the reasoning for debugging and logging while keeping the user-facing output clean. Parse the ANSWER section for the downstream system.</p>
+</div>
+
+<h3>Controlling Reasoning Length</h3>
+
+<p>Sometimes CoT produces excessively long reasoning. You can constrain it.</p>
+
+<ul>
+  <li>"Think through this in 3 concise steps, then give your answer."</li>
+  <li>"Briefly explain your reasoning (2-3 sentences), then provide the answer."</li>
+  <li>"Identify the key factors (maximum 4) and explain how they lead to your conclusion."</li>
+</ul>
+
+<p>The goal is enough reasoning to improve accuracy without generating thousands of unnecessary tokens.</p>
+
+<h3>CoT with Different Models</h3>
+
+<p>Different models respond to CoT differently. GPT-4 and Claude 3.5 Sonnet produce structured, methodical reasoning with minimal guidance. Smaller models sometimes need more explicit instruction about what "step by step" means. When using smaller models, provide few-shot CoT examples rather than relying on zero-shot.</p>
+
+<p>Some newer models (like OpenAI's o1 series) have built-in chain-of-thought that runs internally. For these models, adding "think step by step" is redundant and can actually slow down responses without improving quality. Check the model's documentation to know whether explicit CoT is needed.</p>
+
+<h2>Combining CoT with Other Techniques</h2>
+
+<h3>CoT + Role Prompting</h3>
+
+<p>Setting a specific expert role before requesting chain-of-thought reasoning produces more domain-appropriate reasoning steps.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Combined Technique</div>
+  <p class="technique-card__description"><strong>Prompt:</strong> You are a senior financial analyst. A client asks whether they should refinance their mortgage. Current rate: 6.5%, remaining balance: $320,000, 22 years left. New rate offered: 5.1%, closing costs: $8,500, 30-year term. Analyze this step by step from a financial advisory perspective.</p>
+</div>
+
+<p>The role prompt ("senior financial analyst") ensures the reasoning steps include relevant financial concepts (break-even analysis, total interest comparison, opportunity cost) rather than generic math.</p>
+
+<h3>CoT + Output Formatting</h3>
+
+<p>You can combine chain-of-thought with strict output formatting by instructing the model to reason first, then format its final answer in a specific structure.</p>
+
+<p>"Think through the classification step by step. After your reasoning, output a JSON object with fields: category (string), confidence (high/medium/low), and reasoning_summary (one sentence)."</p>
+
+<p>This gives you the accuracy benefits of CoT with the parseable output format you need for downstream processing.</p>
+
+<h2>Measuring CoT Impact</h2>
+
+<p>Don't just assume CoT helps. Measure it.</p>
+
+<p>Build an evaluation set of 50 to 100 test cases with known correct answers. Run them through your prompt with and without CoT. Compare accuracy, latency, and cost. Document the results.</p>
+
+<p>In our community's experience, CoT typically improves accuracy by 15 to 40% on reasoning-heavy tasks, has minimal impact (under 5%) on simple tasks, adds 50 to 200% more tokens to the output, and increases latency by 30 to 100% depending on reasoning length.</p>
+
+<p>The accuracy gain is almost always worth the cost increase for tasks where getting the right answer matters. For high-volume, simple tasks, skip CoT and save the tokens.</p>
+
+<p>For more on building effective prompts, check our <a href="/blog/prompt-engineering-best-practices/">best practices guide</a>. For career guidance on putting these skills to work, see our <a href="/blog/how-to-become-prompt-engineer/">career roadmap</a> and <a href="/jobs/">job board</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+  <summary>Does chain-of-thought prompting work with all AI models?</summary>
+  <p>CoT works with all major large language models (GPT-4, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. They mimic the format without actually reasoning more carefully. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot "think step by step."</p>
+</details>
+
+<details>
+  <summary>How much extra does chain-of-thought cost in API calls?</summary>
+  <p>CoT typically increases output tokens by 50 to 200%, which directly increases API costs by the same amount. A classification that normally uses 50 output tokens might use 150 with CoT. At GPT-4 pricing, that's the difference between fractions of a cent per call. For high-volume applications processing millions of requests, the cost adds up. The calculation is simple: multiply your current output token costs by 2 to 3x and decide if the accuracy improvement justifies it.</p>
+</details>
+
+<details>
+  <summary>Can I use chain of thought for creative tasks?</summary>
+  <p>Yes, but differently. For creative writing, asking the model to outline its approach before writing can improve structure and coherence. "First, plan the narrative arc, then write the story." This is CoT applied to planning rather than reasoning. Avoid asking for step-by-step analysis in the middle of creative output, as it breaks the flow. The planning-then-executing approach works well for essays, marketing copy, and structured creative work.</p>
+</details>
+
+<details>
+  <summary>What is the difference between chain of thought and chain of thought with self-consistency?</summary>
+  <p>Standard CoT generates one reasoning chain and one answer. Self-consistency generates multiple reasoning chains (typically 5 to 10) with higher temperature, then picks the most common final answer through majority voting. Self-consistency is more accurate but costs N times more, where N is the number of samples. Use standard CoT for most tasks. Use self-consistency when accuracy is critical and you can afford the extra API calls, such as medical coding, financial calculations, or legal analysis.</p>
+</details>
+
+<details>
+  <summary>Should I use chain of thought in system prompts or user prompts?</summary>
+  <p>Put the CoT instruction in the system prompt if you want the model to always reason step by step for every user message. Put it in the user prompt if you only need CoT for specific queries. For chatbots, system-level CoT makes every response longer and more expensive, even for simple greetings. A better approach: include CoT as a conditional in the system prompt. "For questions involving math, analysis, or multi-step reasoning, think through your answer step by step before responding. For simple factual questions, answer directly."</p>
+</details>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="/glossary/chain-of-thought/">Chain of Thought Glossary Entry</a> | <a href="/glossary/few-shot-prompting/">Few-Shot Prompting Glossary Entry</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Join 1,300+ Prompt Engineers</h2>
+          <p class="cta-section__text">
+            Get job alerts, salary insights, and weekly AI tool reviews.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

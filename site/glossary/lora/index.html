@@ -1148,6 +1148,29 @@
         <p>LoRA democratized fine-tuning. A LoRA fine-tune that used to require an A100 GPU ($10K+) can now run on a consumer GPU. This is why you see so many specialized open-source models on Hugging Face.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>LoRA (Low-Rank Adaptation) makes fine-tuning large models practical by freezing the original weights and training small adapter matrices that modify the model's behavior. Instead of updating billions of parameters, LoRA typically trains only 0.1-1% of the parameters, reducing GPU memory requirements by 10-100x.</p><p>The technique works by decomposing weight updates into two small matrices (low-rank factorization). During inference, these adapter weights are merged with the original model at near-zero cost. You can even swap different LoRA adapters for different tasks without loading multiple copies of the base model.</p><p>QLoRA extends this further by quantizing the base model to 4-bit precision before applying LoRA, making it possible to fine-tune a 70B parameter model on a single consumer GPU. This democratized fine-tuning, enabling individual researchers and small teams to customize large models.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Setting LoRA rank too high, overfitting on small datasets</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Start with rank 8-16 for most tasks. Higher ranks add capacity but require more data. A rank of 64+ is rarely necessary and increases overfitting risk.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Fine-tuning all layers when targeting only specific behaviors</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Target LoRA adapters to attention layers for behavioral changes or MLP layers for knowledge updates. Selective targeting reduces compute and often improves results.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">LoRA knowledge is increasingly expected in AI engineering roles. It's the standard approach for model customization, and companies regularly need engineers who can prepare datasets and run LoRA fine-tuning jobs on their specific use cases.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

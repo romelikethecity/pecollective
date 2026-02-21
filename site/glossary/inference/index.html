@@ -1148,6 +1148,29 @@
         <p>Inference costs dominate AI budgets in production. Understanding inference optimization — batching, caching, quantization, speculative decoding — is essential for anyone building or managing AI applications at scale.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Inference is the process of running a trained model to generate predictions or outputs. For language models, inference involves feeding input tokens through the model's layers to produce output tokens one at a time (autoregressive generation). Each output token requires a full forward pass through the model.</p><p>Inference optimization is critical for production deployment. Key techniques include KV-cache (storing intermediate computations to avoid redundant work), batching (processing multiple requests simultaneously), speculative decoding (using a small model to draft tokens that a large model verifies), and continuous batching (dynamically combining requests for GPU efficiency).</p><p>Inference costs typically dominate the total cost of running AI services. Optimizing inference through quantization, caching, and batching can reduce costs by 5-10x. This is why inference infrastructure is a major area of competition among cloud providers and specialized companies like Groq, Together AI, and Fireworks.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Ignoring the difference between time-to-first-token and tokens-per-second</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">For interactive applications, time-to-first-token (latency) matters most. For batch processing, tokens-per-second (throughput) matters more. Optimize for the metric that matches your use case.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not implementing caching for repeated or similar queries</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Semantic caching (returning cached results for semantically similar queries) can reduce inference costs by 30-50% for applications with repetitive query patterns.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Inference optimization is a high-demand skill for ML engineers and MLOps professionals. Companies deploying AI at scale need engineers who can reduce inference costs and latency. It's also relevant for AI product managers who need to understand cost structures.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

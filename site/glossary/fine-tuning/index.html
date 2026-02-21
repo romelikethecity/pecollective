@@ -1148,6 +1148,33 @@
         <p>Fine-tuning lets you create specialized models when prompting alone isn't enough. But it's expensive ($500-10,000+ per run) and requires clean training data, so most teams start with prompt engineering and only fine-tune when necessary.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Fine-tuning updates a pre-trained model's weights on a task-specific dataset to improve performance on that task. Unlike prompt engineering (which changes the input) or RAG (which adds external knowledge), fine-tuning changes the model itself.</p><p>The process involves preparing a training dataset of input-output pairs, selecting hyperparameters (learning rate, epochs, batch size), and running training. Most fine-tuning today uses parameter-efficient methods like LoRA that only update a small fraction of the model's weights, dramatically reducing compute costs.</p><p>Fine-tuning is most valuable when you need consistent output formatting, domain-specific knowledge integration, or behavioral modifications that prompting alone can't achieve. Common use cases include custom classification, style matching, and teaching models proprietary terminology or workflows.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Fine-tuning when prompt engineering or RAG would solve the problem</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Try prompt engineering first, then RAG. Fine-tune only when you need consistent behavioral changes that prompting can't reliably achieve.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using a training dataset that's too small or not representative</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Aim for at least 100-500 high-quality examples. Include edge cases and diverse inputs. Quality matters far more than quantity.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not holding out a test set to evaluate fine-tuned model performance</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Always split your data: 80% training, 10% validation, 10% test. Compare the fine-tuned model against the base model on the test set.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Fine-tuning expertise commands a premium in AI engineering roles. Companies building custom AI products frequently need engineers who can prepare datasets, run fine-tuning jobs, and evaluate results. It's also increasingly relevant for prompt engineers working on model customization.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

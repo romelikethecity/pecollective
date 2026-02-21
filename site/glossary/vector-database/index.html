@@ -1148,6 +1148,29 @@
         <p>Vector databases are the backbone of RAG systems and semantic search. The vector DB market is projected to exceed $4B by 2028, with Pinecone, Weaviate, and Chroma leading adoption.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Vector databases store data as high-dimensional numerical vectors (embeddings) and enable fast similarity search across millions or billions of records. Unlike traditional databases that match exact values, vector databases find the 'closest' items in embedding space using distance metrics like cosine similarity or Euclidean distance.</p><p>The core technology behind vector databases is Approximate Nearest Neighbor (ANN) search. Algorithms like HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index) trade a small amount of accuracy for massive speed gains, making it possible to search billions of vectors in milliseconds.</p><p>Popular vector databases include Pinecone (fully managed), Weaviate (open source), Qdrant (open source, Rust-based), and Chroma (lightweight, Python-native). PostgreSQL with pgvector extension is increasingly popular for teams that want vector search without adding another database to their stack.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Choosing a standalone vector database when pgvector would work fine for your scale</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">If you're under 10 million vectors and already use PostgreSQL, pgvector avoids the complexity of managing a separate database.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not tuning ANN index parameters for your specific dataset and accuracy requirements</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Benchmark different index types (HNSW vs IVF) and parameters (ef_construction, nprobe) on your actual data. Default settings are rarely optimal.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Vector database experience is listed in most AI engineer job postings. As RAG becomes the standard architecture for AI applications, understanding vector storage and retrieval is a core technical skill. Pinecone and Weaviate are the most commonly requested specific technologies.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

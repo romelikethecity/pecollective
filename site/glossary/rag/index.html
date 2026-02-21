@@ -1148,6 +1148,33 @@
         <p>RAG solves the hallucination problem by grounding model responses in real data. It's the most common architecture for building production AI applications that need accurate, up-to-date information.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>A RAG system has three core components: the retriever, the knowledge base, and the generator. The retriever converts a user query into a vector embedding and searches the knowledge base for semantically similar content. The top results get injected into the LLM's context window alongside the original query.</p><p>Building a production RAG pipeline requires decisions at every layer. Chunking strategy determines how documents get split (by paragraph, by semantic boundary, by fixed token count). Embedding model choice affects retrieval quality. Re-ranking adds a second pass to improve relevance. Hybrid search combines keyword matching with vector similarity for better recall.</p><p>Advanced patterns include multi-hop RAG (where the model reasons across multiple retrieved documents), agentic RAG (where the model decides when and what to retrieve), and graph RAG (which uses knowledge graphs instead of flat document stores).</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Chunking documents into arbitrary 500-token blocks without considering content structure</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Chunk by semantic boundaries (sections, paragraphs, logical units). Use overlapping chunks to avoid splitting important context across boundaries.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using retrieval without re-ranking, leading to irrelevant context</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Add a cross-encoder re-ranker after initial vector search. This dramatically improves the quality of retrieved passages.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not evaluating retrieval quality separately from generation quality</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Measure retrieval precision and recall independently. A perfect LLM can't fix bad retrieval.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">RAG is the most in-demand AI architecture skill in 2025-2026. Companies building AI products almost always need RAG pipelines for their knowledge bases, customer support, and internal tools. Understanding RAG architecture is practically a prerequisite for AI engineer and prompt engineer roles at the senior level.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -1148,6 +1148,29 @@
         <p>MoE explains why some models punch above their weight class on benchmarks. GPT-4 is widely believed to use MoE architecture. Understanding MoE helps prompt engineers reason about model capabilities and cost-performance tradeoffs.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Mixture of Experts (MoE) is a model architecture where only a subset of the model's parameters are activated for each input. A router network decides which 'expert' sub-networks to activate based on the input, typically selecting 2-4 experts out of dozens. This means a model with 100B total parameters might only use 15B parameters per inference step.</p><p>MoE enables models that have massive total knowledge capacity but run at a fraction of the computational cost of equivalently-sized dense models. GPT-4 is widely believed to use MoE, and Mixtral 8x7B demonstrated that an open-source MoE model could match much larger dense models.</p><p>The trade-offs include higher total memory requirements (all expert weights must be loaded even if only some are active), potential load-balancing issues (some experts getting used much more than others), and increased complexity in distributed training.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Comparing MoE model sizes directly to dense model sizes</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">A 46.7B MoE model (Mixtral 8x7B) uses about 12.9B active parameters per token. Compare it to a 13B dense model, not a 47B dense model.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming MoE models need the same GPU memory as their active parameter count suggests</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">All expert weights must be in memory, so an 8x7B MoE needs roughly 47B parameters worth of memory, even though only 12.9B are active per token.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">MoE understanding is valuable for ML engineers making model selection decisions and for researchers working on model architecture. It explains why some models offer better price-performance ratios and helps with infrastructure planning.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -389,6 +389,42 @@ def generate_term_page(term_data, all_terms):
         <p>{term_data["why_it_matters"]}</p>
     </div>'''
 
+    # In-depth explanation (new)
+    in_depth_html = ''
+    if term_data.get('in_depth'):
+        paragraphs = term_data['in_depth'].split('\n\n')
+        p_html = ''.join(f'<p>{p.strip()}</p>' for p in paragraphs if p.strip())
+        in_depth_html = f'''
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        {p_html}
+    </div>'''
+
+    # Common mistakes (new)
+    mistakes_html = ''
+    if term_data.get('common_mistakes'):
+        mistake_items = ''
+        for m in term_data['common_mistakes']:
+            mistake_items += f'''
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: {m["mistake"]}</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">{m["correction"]}</p>
+        </div>'''
+        mistakes_html = f'''
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        {mistake_items}
+    </div>'''
+
+    # Career relevance (new)
+    career_html = ''
+    if term_data.get('career_relevance'):
+        career_html = f'''
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">{term_data["career_relevance"]}</p>
+    </div>'''
+
     # Extra FAQ details (visible on page, beyond schema)
     extra_faq_html = ''
     if term_data.get('faqs'):
@@ -426,6 +462,9 @@ def generate_term_page(term_data, all_terms):
 
                 {example_html}
                 {why_html}
+                {in_depth_html}
+                {mistakes_html}
+                {career_html}
                 {extra_faq_html}
                 {related_html}
                 {links_html}

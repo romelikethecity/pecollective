@@ -56,6 +56,51 @@ EXPERIENCE_CATEGORIES = [
 ]
 
 
+SALARY_CONTENT = {
+    'prompt-engineer': {
+        'description': 'Prompt engineers design and optimize inputs to LLMs. Demand has surged since 2024, with companies paying premium salaries for engineers who can reliably get production-quality outputs from AI models. The role combines writing skill, Python proficiency, and systematic testing methodology.',
+        'skills': ['Python', 'Claude/GPT-4', 'RAG', 'Evaluation', 'A/B Testing'],
+        'faqs': [
+            ('How much do prompt engineers make?', 'Prompt engineer salaries range from $90K at entry level to $250K+ at senior positions in major AI labs. The median sits around $145K. Remote roles typically pay 85-95% of Bay Area rates.'),
+            ('Are prompt engineering salaries increasing?', 'Yes. As companies move from experimenting with AI to shipping production features, demand for prompt engineers has grown faster than supply. Salaries have increased roughly 15-20% year-over-year since 2024.'),
+            ('What skills increase prompt engineer pay?', 'Python proficiency, RAG architecture experience, and evaluation framework development command the highest premiums. Engineers who can build end-to-end prompt pipelines (not just write prompts) earn significantly more.'),
+        ],
+    },
+    'san-francisco': {
+        'description': 'San Francisco and the Bay Area pay the highest AI salaries in the world. The concentration of AI labs (OpenAI, Anthropic, Google DeepMind) and well-funded startups creates intense competition for talent. Cost of living is high, but AI salaries more than compensate.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in San Francisco?', 'AI engineers in SF earn $180K-$350K in base salary. Total compensation at major companies (including equity) ranges from $250K to $600K+ depending on level and company.'),
+            ('How does SF AI pay compare to other cities?', 'SF AI salaries run 15-25% higher than NYC and Seattle, 40-60% higher than Austin or Denver, and roughly double most non-tech-hub cities. However, California state income tax and housing costs offset some of this advantage.'),
+        ],
+    },
+    'remote': {
+        'description': 'Remote AI positions offer competitive salaries without the geographic constraints of traditional roles. Most remote AI jobs pay 85-95% of Bay Area rates, making them financially attractive for engineers outside major tech hubs. Companies like Scale AI, Hugging Face, and numerous startups hire remote-first.',
+        'skills': [],
+        'faqs': [
+            ('Do remote AI jobs pay less than in-office roles?', 'Slightly. Most remote AI positions pay 85-95% of equivalent Bay Area salaries. Some companies (GitLab, Automattic) apply location-based adjustments, while others pay flat rates regardless of location.'),
+            ('Which companies hire remote AI engineers?', 'Major remote-friendly AI employers include Scale AI, Hugging Face, Weights & Biases, Jasper, Cohere, and many venture-backed startups. Large tech companies occasionally offer remote AI roles but tend to prefer hybrid arrangements.'),
+        ],
+    },
+    'senior': {
+        'description': 'Senior AI roles (5+ years experience) represent a significant salary jump from mid-level positions. At this level, companies expect architectural decision-making, team leadership, and the ability to translate business needs into ML solutions. Total compensation packages at major companies can exceed $400K.',
+        'skills': [],
+        'faqs': [
+            ('What is the salary premium for senior AI roles?', 'Senior AI engineers earn 30-50% more than mid-level. A mid-level engineer earning $175K can expect $230K-$280K at senior, with staff/principal roles reaching $350K-$500K in total compensation.'),
+            ('What differentiates senior from mid-level AI pay?', 'Beyond base salary, senior roles come with larger equity grants, higher bonuses, and often sign-on bonuses. The equity component becomes increasingly significant at staff level and above.'),
+        ],
+    },
+    'mid-level': {
+        'description': 'Mid-level AI positions (2-5 years experience) form the largest segment of the AI job market. These roles expect independent contribution: designing and shipping ML features without constant oversight. Companies hire heavily at this level as they scale their AI teams.',
+        'skills': [],
+        'faqs': [
+            ('What is the typical mid-level AI engineer salary?', 'Mid-level AI/ML engineers earn $150K-$220K in base salary. Total compensation at major tech companies ranges from $200K-$350K including equity and bonuses.'),
+            ('How do I get to mid-level AI?', 'Most companies consider you mid-level after 2-3 years of relevant experience. Key milestones: independently designed and shipped an ML feature, demonstrated ability to evaluate and improve model performance, and experience with production ML infrastructure.'),
+        ],
+    },
+}
+
+
 def escape_html(text):
     if pd.isna(text):
         return ''
@@ -99,12 +144,62 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
             </div>
         '''
 
+    # Get enrichment content
+    sal_content = SALARY_CONTENT.get(slug, {})
+    desc_text = sal_content.get('description', '')
+    top_skills = sal_content.get('skills', [])
+    faqs = sal_content.get('faqs', [])
+
+    # Build description HTML
+    desc_html = ''
+    if desc_text:
+        desc_html = f'''
+            <div style="margin-bottom: 32px; line-height: 1.8; color: var(--text-secondary);">
+                <p>{escape_html(desc_text)}</p>
+            </div>'''
+
+    # Build skills HTML
+    skills_html = ''
+    if top_skills:
+        skill_tags = ''.join(f'<span style="display: inline-block; padding: 6px 14px; background: var(--teal-primary); border-radius: 20px; font-size: 0.875rem; color: var(--gold); margin: 4px;">{s}</span>' for s in top_skills)
+        skills_html = f'''
+            <div style="margin-bottom: 32px;">
+                <h2 style="margin-bottom: 12px; font-size: 1.125rem;">Key Skills That Drive Higher Pay</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 4px;">{skill_tags}</div>
+            </div>'''
+
+    # Build FAQ HTML + schema
+    faq_html = ''
+    faq_schema = ''
+    if faqs:
+        faq_items = ''
+        faq_entities = []
+        for q, a in faqs:
+            faq_items += f'''
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">{escape_html(q)}</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">{escape_html(a)}</p>
+        </details>'''
+            faq_entities.append({
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {"@type": "Answer", "text": a}
+            })
+        faq_html = f'''
+            <div style="margin-top: 32px;">
+                <h2 style="margin-bottom: 16px; font-size: 1.25rem;">Frequently Asked Questions</h2>
+                {faq_items}
+            </div>'''
+        faq_schema_obj = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_entities}
+        faq_schema = f'<script type="application/ld+json">\n{json.dumps(faq_schema_obj, indent=2)}\n</script>'
+
     breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Salaries", "/salaries/"), (title, f"/salaries/{slug}/")])
+    extra_head = breadcrumbs + '\n' + faq_schema
     html = f'''{get_html_head(
         f"{title} Salary 2026 - ${avg_max//1000}K Average",
         f"{title} salary benchmarks based on {sample_size} job postings. Average ${avg_min//1000}K-${avg_max//1000}K. Median ${median//1000}K. Updated weekly with real compensation data.",
         f"salaries/{slug}/",
-        extra_head=breadcrumbs
+        extra_head=extra_head
     )}
 {get_nav_html('salaries')}
 
@@ -153,6 +248,9 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
                 .company-salary {{ color: var(--gold); font-weight: 600; }}
             </style>
 
+            {desc_html}
+            {skills_html}
+
             {'<div class="section"><h2 style="margin-bottom: 20px;">Top Paying Companies</h2>' + companies_html + '</div>' if companies_html else ''}
 
             <div class="section" style="text-align: center; padding: 24px 0;">
@@ -161,7 +259,9 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
                 <a href="/jobs/" style="color: var(--teal-light); font-weight: 600; text-decoration: none;">View AI Job Listings &rarr;</a>
             </div>
 
-            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border);">
+            {faq_html}
+
+            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border); margin-top: 32px;">
                 <h3>Methodology</h3>
                 <p style="color: var(--text-secondary); margin-top: 12px;">
                     Salary data is collected from job postings on Indeed and company career pages.
@@ -288,6 +388,10 @@ def main():
 
     <main>
         <div class="container">
+            <div style="margin-bottom: 32px; line-height: 1.8; color: var(--text-secondary);">
+                <p>AI engineering is one of the highest-paying specializations in tech. Prompt engineers, ML engineers, and AI researchers routinely earn $150K-$350K depending on experience, location, and specialization. Our salary data comes directly from job postings with disclosed compensation, so you're seeing what companies actually offer, not self-reported estimates.</p>
+                <p style="margin-top: 12px;">Browse by role type, location, or experience level to find benchmarks relevant to your situation. Each page includes top-paying companies, salary ranges, and answers to common compensation questions.</p>
+            </div>
             <style>
                 .category-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px; }}
                 .category-card {{

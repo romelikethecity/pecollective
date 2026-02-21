@@ -1148,6 +1148,29 @@
         <p>Top-P gives prompt engineers another lever for controlling output quality. The general best practice: adjust either temperature or top-P, not both simultaneously. Most APIs default to top_p=1.0.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Top-p sampling (nucleus sampling) is a text generation parameter that limits token selection to the smallest set of tokens whose cumulative probability exceeds a threshold p. At top-p 0.9, the model considers only the tokens that make up 90% of the probability mass, ignoring the long tail of unlikely tokens.</p><p>Unlike top-k (which always considers exactly k tokens), top-p adapts dynamically. For a confident prediction where one token has 95% probability, top-p 0.9 might select just that one token. For an uncertain prediction where probabilities are spread across many tokens, it might consider dozens.</p><p>Top-p and temperature interact: temperature reshapes the probability distribution first, then top-p filters it. Most practitioners set one or the other, not both. OpenAI's documentation recommends adjusting temperature OR top-p, not both simultaneously.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Setting both temperature and top-p to non-default values simultaneously</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Adjust one parameter at a time. Start with temperature for overall creativity control. Only switch to top-p if you need finer-grained control over the probability distribution.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using top-p 1.0 and assuming it has no effect</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Top-p 1.0 considers all tokens, which is the default behavior. If you want deterministic output, set temperature to 0 instead.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding sampling parameters is expected knowledge for prompt engineers and AI engineers. It demonstrates deeper model understanding beyond basic prompting and is commonly tested in technical interviews.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

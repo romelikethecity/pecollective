@@ -1148,6 +1148,29 @@
         <p>AI agents represent the next frontier beyond chatbots. The 'AI Agent Developer' is one of the fastest-growing job titles, with demand up 340% year-over-year according to PE Collective job data.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>AI agents are systems where a language model acts as the 'brain' that can perceive its environment, make decisions, and take actions through tools. Unlike chatbots that just generate text, agents can browse the web, execute code, query databases, call APIs, and interact with other software.</p><p>Agent architectures typically follow a loop: observe (read input or tool output), think (reason about what to do next), act (call a tool or generate output), then repeat. Popular frameworks include LangChain/LangGraph, CrewAI, and Anthropic's agent patterns.</p><p>Key challenges in agent design include: controlling costs (agents can make many API calls in a loop), preventing infinite loops, handling tool errors gracefully, and maintaining coherent behavior across long action sequences. Production agents need careful guardrails, logging, and human-in-the-loop checkpoints for high-stakes actions.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Building an agent when a simple prompt chain would work</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Start with prompt chaining. Only add agent autonomy when the task genuinely requires dynamic decision-making about which tools to use.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Giving agents unrestricted access to tools without guardrails</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Implement tool-level permissions, spending limits, and confirmation steps for destructive actions. An agent that can delete production data is a liability.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">AI agent development is one of the highest-paying specializations in prompt engineering and AI engineering. Roles focused on agentic systems command $150K-$250K+. Companies building AI products increasingly need engineers who can design reliable, safe agent architectures.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

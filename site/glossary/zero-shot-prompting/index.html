@@ -1148,6 +1148,29 @@
         <p>Zero-shot works well for straightforward tasks and is the baseline against which other prompting techniques are measured. When it works, it's the simplest approach.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Zero-shot prompting relies entirely on the knowledge and instruction-following capabilities baked into a model during training. The model must understand the task purely from the instruction text, with no examples to guide it.</p><p>Zero-shot performance varies dramatically by task type. Models excel at tasks similar to their training data (summarization, translation, sentiment analysis) but struggle with novel formats or domain-specific conventions. The key advantage is simplicity and token efficiency: no examples means shorter prompts, which means lower cost and more room for input data.</p><p>Modern instruction-tuned models like Claude and GPT-4 have dramatically improved zero-shot performance compared to base models. Many tasks that previously required few-shot examples now work well zero-shot with clear, specific instructions.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming zero-shot will work for highly specialized tasks with domain-specific output formats</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Use few-shot prompting when output format is non-obvious. Zero-shot is best for tasks the model has seen variations of during training.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Writing instructions that are too brief, expecting the model to 'figure it out'</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Compensate for the lack of examples with detailed, explicit instructions about what you want and don't want.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding when zero-shot works (and when it doesn't) is a core prompt engineering skill. It determines whether you can ship a feature quickly with a simple prompt or need to invest time in building few-shot example sets.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -1148,6 +1148,29 @@
         <p>Tool use transforms LLMs from knowledge bases into action-takers. It's the mechanism that makes AI agents possible and is required for building any production AI system that needs to interact with external data or services.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Tool use enables AI models to interact with external systems by generating structured function calls rather than just text. When a model has access to tools, it can decide to call a search API, execute code, query a database, or interact with any external service based on the user's request.</p><p>The tool use workflow is a cycle: the model receives a query, decides whether a tool is needed, generates a tool call with specific arguments, the application executes the tool and returns results, and the model incorporates those results into its response. A single query might involve multiple tool calls in sequence.</p><p>Tool design significantly affects model performance. Well-designed tools have clear names, detailed descriptions, precise parameter schemas, and comprehensive error handling. The model's ability to use tools effectively depends more on tool design quality than on the model's inherent capabilities.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Creating tools with ambiguous names or overlapping functionality</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Give tools specific, descriptive names and clear delineation. 'search_products_by_name' is better than 'search'. If two tools could handle the same request, the model will choose inconsistently.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not returning structured error messages from tool calls</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Return errors in a format the model can interpret and act on. Include the error type, a human-readable message, and suggested next steps so the model can retry or adjust.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Tool use design is a core competency for AI engineers building production applications. It's the bridge between AI models and real-world systems. Companies building AI-powered products specifically seek engineers with tool integration experience.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

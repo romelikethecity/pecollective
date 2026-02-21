@@ -1148,6 +1148,29 @@
         <p>Understanding transformer architecture helps prompt engineers reason about model capabilities and limitations — like why context windows have fixed sizes, why token count matters, and why models process certain tasks better than others.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>The Transformer architecture, introduced in the 2017 paper 'Attention Is All You Need,' replaced recurrent neural networks with a purely attention-based mechanism for processing sequences. Its key innovation is self-attention, which allows every token in a sequence to attend to every other token simultaneously, enabling parallel processing and capturing long-range dependencies.</p><p>A Transformer consists of encoder and decoder blocks, each containing multi-head attention layers, feed-forward networks, and layer normalization. GPT-style models use only the decoder, BERT uses only the encoder, and T5 uses both. Each attention head learns to focus on different types of relationships (syntactic, semantic, positional).</p><p>The architecture scales remarkably well. Increasing model size (more layers, wider hidden dimensions, more attention heads) consistently improves performance, which led to the current era of large language models. This scaling behavior was not predicted and remains partially unexplained.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Confusing the Transformer architecture with specific models built on it</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Transformer is the architecture. GPT, BERT, Claude, Llama, and T5 are all models built on the Transformer architecture with different training approaches and configurations.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming Transformers process text sequentially like humans read</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Transformers process all tokens in parallel during inference (for the input). They generate output tokens one at a time, but the input processing is fully parallel.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding Transformer architecture is fundamental for AI engineers and researchers. While prompt engineers don't need to implement Transformers, understanding how they work explains model behaviors and capabilities. It's a standard interview topic for any AI role.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

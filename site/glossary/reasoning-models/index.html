@@ -1148,6 +1148,29 @@
         <p>Reasoning models are changing which tasks AI can handle. They've achieved expert-level performance on PhD-level science questions and competitive programming. For prompt engineers, they require different techniques: simpler prompts often work better because the model handles the reasoning internally.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Reasoning models represent a paradigm shift in how AI handles complex problems. Instead of generating an answer in a single forward pass, these models perform extended internal 'thinking' before producing a response. This thinking process, involving chain-of-thought reasoning, self-verification, and backtracking, dramatically improves performance on math, science, and logic problems.</p><p>Key reasoning models include OpenAI's o1 and o3 series, DeepSeek R1, and Claude's extended thinking mode. These models typically trade speed for accuracy: they may take 30-60 seconds to solve a problem that a standard model would attempt in 2 seconds, but with dramatically higher accuracy on hard problems.</p><p>Prompting reasoning models requires different techniques than standard models. Complex prompt engineering often hurts rather than helps, because the model's internal reasoning process handles the step-by-step breakdown. Simple, clear problem statements tend to work better than elaborate prompt structures.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using reasoning models for simple tasks where standard models are sufficient</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Reasoning models are slower and more expensive. Use them for hard problems (complex math, multi-step logic, scientific reasoning). Standard models handle simple tasks faster and cheaper.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Applying complex prompt engineering techniques (CoT, few-shot) to reasoning models</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Reasoning models do their own chain-of-thought internally. Adding external CoT instructions can interfere with the model's reasoning process. Start with simple prompts.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Reasoning model expertise is increasingly valuable as these models become standard tools for complex problem-solving. Understanding when and how to use reasoning models vs standard models is a practical skill for AI engineers and prompt engineers.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

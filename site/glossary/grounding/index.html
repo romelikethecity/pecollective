@@ -1148,6 +1148,29 @@
         <p>Grounding is the primary defense against hallucination in production systems. Every enterprise AI deployment needs a grounding strategy, making it a key skill for prompt engineers and AI engineers alike.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Grounding connects AI outputs to verifiable sources, reducing hallucination and increasing trustworthiness. A grounded response cites specific documents, databases, or external sources rather than relying solely on the model's parametric knowledge.</p><p>Grounding techniques range from simple (instructing the model to only use provided context) to sophisticated (RAG pipelines with citation extraction, fact-checking chains, and confidence scoring). The most effective approaches combine multiple strategies: retrieval for source material, structured prompting for citation, and post-processing to verify claims against sources.</p><p>Google's Vertex AI uses 'grounding' as a specific feature that connects Gemini to Google Search results. More broadly, the concept applies to any technique that anchors model outputs to external, verifiable information.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Instructing the model to 'cite sources' without providing actual sources to cite</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Provide the source material in the context and instruct the model to reference specific passages. Models can't accurately cite from memory.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming grounded responses are always correct</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Models can still misinterpret or selectively quote source material. Verify that cited passages actually support the claims being made.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Grounding expertise is essential for building trustworthy AI systems in regulated industries (healthcare, finance, legal). Companies in these sectors pay premium salaries for engineers who can implement reliable grounding pipelines.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

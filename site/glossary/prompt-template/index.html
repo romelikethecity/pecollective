@@ -1148,6 +1148,29 @@
         <p>Prompt templates are how teams scale prompt engineering beyond one-off experiments. They version-control prompts, enable A/B testing, and make it possible for non-technical team members to use AI systems without understanding prompt design.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Prompt templates separate the fixed instruction logic from variable input data, making prompts reusable, testable, and maintainable. A template might define the role, output format, and constraints once, then fill in different user queries, documents, or parameters at runtime.</p><p>Template systems range from simple string formatting (Python f-strings, Jinja2) to sophisticated prompt management platforms (LangChain's prompt templates, Humanloop, PromptLayer). Enterprise teams typically version-control their templates, track performance metrics per template version, and A/B test template variations.</p><p>Effective templates use clear variable naming, include type hints for variables, provide default values for optional parameters, and contain inline documentation explaining the template's purpose and expected behavior. They're the building blocks of scalable AI systems.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Hardcoding prompts throughout application code instead of using templates</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Centralize prompts in template files or a prompt management system. Hardcoded prompts are impossible to update, test, or version-control effectively.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Creating templates that are too generic to be useful</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Templates should be specific enough to produce reliable results. A template so generic it works for 'any task' probably works well for none. Create task-specific templates.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Prompt template design is a practical skill for any team building AI-powered products. It's the engineering practice that makes prompt engineering scalable. Companies expect prompt engineers to deliver reusable, testable templates, not one-off prompts.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

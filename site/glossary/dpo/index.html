@@ -1148,6 +1148,29 @@
         <p>DPO has become the preferred alignment technique for open-source models because it's simpler and cheaper than RLHF. Most Llama and Mistral fine-tunes on Hugging Face use DPO. Understanding alignment methods helps prompt engineers predict model behavior.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>DPO (Direct Preference Optimization) simplifies the RLHF process by eliminating the need to train a separate reward model. Instead of the three-step RLHF pipeline (supervised fine-tuning, reward model training, RL optimization), DPO directly optimizes the language model on pairs of preferred and dispreferred responses.</p><p>The mathematical insight is that the optimal policy under the RLHF objective can be expressed in closed form, allowing preference data to be used directly as a training signal. This makes DPO simpler to implement, more stable during training, and less computationally expensive than PPO-based RLHF.</p><p>DPO and its variants (IPO, KTO, ORPO) have become the preferred approach for alignment fine-tuning in open-source models. Llama 3, Mistral, and many other models use DPO-style training. The trade-off is that DPO may be less effective than RLHF for complex preference landscapes where the reward isn't easily captured by pairwise comparisons.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming DPO completely replaces RLHF</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">DPO replaces the reward model + RL steps, but still requires supervised fine-tuning as a starting point. Some cutting-edge labs still use full RLHF for their flagship models.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using low-quality preference pairs for DPO training</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">DPO is sensitive to preference data quality. Noisy or inconsistent preferences degrade the trained model. Invest in high-quality, consistent preference annotations.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">DPO knowledge is relevant for ML engineers and researchers working on model training and alignment. For prompt engineers, understanding DPO explains why models from different providers behave differently, as their training approaches shape their response patterns.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -103,7 +103,53 @@ def parse_skills(skills_value):
     return []
 
 
-def create_job_page(job, idx):
+def _build_related_jobs_html(job, all_jobs_df):
+    """Build HTML for related jobs section"""
+    if all_jobs_df is None or len(all_jobs_df) < 2:
+        return ''
+    category = job.get('job_category', '')
+    company = str(job.get('company', job.get('company_name', '')))
+    title = str(job.get('title', ''))
+    related = all_jobs_df[
+        (all_jobs_df.get('job_category', pd.Series()) == category) |
+        (all_jobs_df.get('company', all_jobs_df.get('company_name', pd.Series())).astype(str) == company)
+    ]
+    # Exclude current job
+    related = related[related.get('title', pd.Series()).astype(str) != title].head(3)
+    if len(related) == 0:
+        related = all_jobs_df[all_jobs_df.get('title', pd.Series()).astype(str) != title].head(3)
+    if len(related) == 0:
+        return ''
+    cards = ''
+    for _, r in related.iterrows():
+        rc = escape_html(str(r.get('company', r.get('company_name', 'Unknown'))))
+        rt = escape_html(str(r.get('title', 'AI Role')))
+        rs = format_salary(r.get('salary_min', r.get('min_amount')), r.get('salary_max', r.get('max_amount')))
+        rslug = f"{make_slug(r.get('company', r.get('company_name', '')))}-{make_slug(r.get('title', ''))}"
+        rhash = hashlib.md5(f"{r.get('company', r.get('company_name', ''))}{r.get('title','')}{r.get('location','')}".encode()).hexdigest()[:6]
+        rslug = f"{rslug}-{rhash}"
+        rloc = escape_html(str(r.get('location', ''))) if pd.notna(r.get('location')) else ''
+        cards += f'''
+                <a href="/jobs/{rslug}/" class="job-card" style="display: block;">
+                    <div class="job-card__content">
+                        <div class="job-card__company">{rc}</div>
+                        <div class="job-card__title">{rt}</div>
+                        <div class="job-card__meta">
+                            {f'<span class="job-card__tag job-card__tag--salary">{rs}</span>' if rs else ''}
+                            {f'<span class="job-card__tag">{rloc}</span>' if rloc else ''}
+                        </div>
+                    </div>
+                </a>'''
+    return f'''
+            <div style="margin-top: 32px;">
+                <h2 style="margin-bottom: 16px; font-size: 1.25rem;">Similar Roles</h2>
+                <div style="display: flex; flex-direction: column; gap: 12px;">{cards}
+                </div>
+                <p style="text-align: center; margin-top: 16px;"><a href="/jobs/" style="color: var(--teal-light); font-weight: 600;">Browse All AI Jobs →</a></p>
+            </div>'''
+
+
+def create_job_page(job, idx, all_jobs_df=None):
     """Generate an individual job page with full SEO optimization"""
 
     company = str(job.get('company', job.get('company_name', 'Unknown')))
@@ -141,11 +187,13 @@ def create_job_page(job, idx):
         job_url = '#'
 
     skills = parse_skills(job.get('skills_tags'))
+    description_snippet = str(job.get('description_snippet', '')) if pd.notna(job.get('description_snippet')) else ''
 
     # Escape for HTML
     company_escaped = escape_html(company)
     title_escaped = escape_html(title)
     location_escaped = escape_html(location)
+    description_escaped = escape_html(description_snippet)
 
     # === SEO-OPTIMIZED TITLE ===
     # Keep under 60 chars total (including " | PE Collective" suffix = 17 chars)
@@ -171,10 +219,35 @@ def create_job_page(job, idx):
     # === JOBPOSTING SCHEMA ===
     schema_json = get_job_posting_schema(job)
 
-    # === SKILLS HTML ===
+    # === DESCRIPTION HTML ===
+    description_html = ""
+    if description_escaped:
+        description_html = f'''
+            <div class="job-description">
+                <h2 style="margin-bottom: 16px; font-size: 1.25rem;">About This Role</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8;">{description_escaped}</p>
+            </div>
+        '''
+
+    # === SKILLS HTML (linked to glossary) ===
     skills_html = ""
     if skills:
-        skills_badges = ''.join([f'<span class="skill-tag">{escape_html(s)}</span>' for s in skills[:10]])
+        skill_to_glossary = {
+            'Python': 'prompt-engineering', 'RAG': 'rag', 'Fine-tuning': 'fine-tuning',
+            'LangChain': 'rag', 'Claude': 'large-language-model', 'GPT-4': 'gpt',
+            'Transformers': 'transformer', 'PyTorch': 'fine-tuning', 'JAX': 'fine-tuning',
+            'Hugging Face': 'fine-tuning', 'Tool Use': 'tool-use', 'Evaluation': 'model-evaluation',
+            'Vector DBs': 'vector-database', 'AI Safety': 'ai-safety', 'Red Teaming': 'ai-safety',
+            'Embeddings': 'embeddings', 'Kubernetes': 'batch-processing',
+        }
+        skills_items = []
+        for s in skills[:10]:
+            glossary_slug = skill_to_glossary.get(s)
+            if glossary_slug:
+                skills_items.append(f'<a href="/glossary/{glossary_slug}/" class="skill-tag" style="text-decoration: none;">{escape_html(s)}</a>')
+            else:
+                skills_items.append(f'<span class="skill-tag">{escape_html(s)}</span>')
+        skills_badges = ''.join(skills_items)
         skills_html = f'''
             <div class="job-skills">
                 <h3>Skills & Technologies</h3>
@@ -316,6 +389,8 @@ def create_job_page(job, idx):
                 <a href="{job_url}" class="apply-btn" target="_blank" rel="noopener">Apply Now →</a>
             </div>
 
+            {description_html}
+
             {skills_html}
 
             <div class="job-details-table">
@@ -350,6 +425,8 @@ def create_job_page(job, idx):
                 </div>
             </div>
 
+            {_build_related_jobs_html(job, all_jobs_df)}
+
             {get_cta_box()}
         </div>
     </div>
@@ -380,7 +457,7 @@ print(f"\n Generating individual job pages...")
 job_slugs = []
 for idx, row in df.iterrows():
     if pd.notna(row.get('title')) and pd.notna(row.get('company', row.get('company_name'))):
-        slug = create_job_page(row, idx)
+        slug = create_job_page(row, idx, all_jobs_df=df)
         job_slugs.append(slug)
         if len(job_slugs) % 100 == 0:
             print(f"   Generated {len(job_slugs)} pages...")

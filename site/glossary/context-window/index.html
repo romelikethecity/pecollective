@@ -1148,6 +1148,29 @@
         <p>Context window size determines what's possible without RAG. Larger windows reduce the need for complex retrieval architectures but cost more per request. Understanding token limits is essential for production prompt engineering.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>A context window is the maximum amount of text (measured in tokens) that a language model can process in a single request. Everything the model needs to know, including system prompt, conversation history, retrieved documents, and the current question, must fit within this window.</p><p>Context window sizes have grown rapidly: GPT-3 had 4K tokens, GPT-4 launched with 8K/32K, and models now offer 128K-200K tokens (Claude 3.5 and GPT-4o) or even 1M+ tokens (Gemini 1.5). However, bigger isn't always better. Research shows most models experience degraded performance on information in the middle of long contexts (the 'lost in the middle' problem).</p><p>Effective context window management involves prioritizing the most relevant information, placing critical content at the beginning and end, and using summarization or RAG to handle information that exceeds the window.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Dumping an entire document into the context window without considering what's relevant</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Extract only the relevant sections. A focused 2K-token excerpt often produces better results than a full 50K-token document.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming models handle long contexts as well as short ones</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Test with your actual context length. Performance often degrades beyond 30-40K tokens even in models that support 128K+.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Context window management is a practical skill tested in prompt engineering interviews. Understanding context limits affects architecture decisions (when to use RAG vs stuffing context), cost optimization (longer contexts cost more), and system design.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

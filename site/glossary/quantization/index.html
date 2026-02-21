@@ -1148,6 +1148,29 @@
         <p>Quantization makes it possible to run large models locally or on affordable cloud instances. It's essential knowledge for anyone deploying open-source models in production, where compute cost is a primary concern.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Quantization reduces a model's memory footprint by representing weights with fewer bits. A standard model uses 16-bit floating point (FP16) weights. 8-bit quantization halves the memory requirement; 4-bit quantization quarters it. This makes it possible to run large models on smaller GPUs.</p><p>Common quantization methods include GPTQ (post-training quantization using calibration data), AWQ (activation-aware quantization that preserves important weights), and bitsandbytes (dynamic quantization during inference). Each method trades off between compression ratio, inference speed, and output quality.</p><p>The quality impact of quantization depends on the model size. Large models (70B+) can typically be quantized to 4-bit with minimal quality loss. Smaller models (7B-13B) show more noticeable degradation at aggressive quantization levels. The sweet spot for most deployments is 8-bit quantization, which typically preserves 99%+ of the original model's performance.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Quantizing a small model (7B) to 4-bit and expecting full quality</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Smaller models lose more quality per bit of quantization. Use 8-bit for models under 13B, and only go to 4-bit for 70B+ models where memory is the binding constraint.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not benchmarking quantized models on your specific task before deploying</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Quantization affects different capabilities unevenly. A model might retain strong reasoning but lose coding accuracy. Test on your actual use case, not just general benchmarks.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Quantization skills are essential for ML engineers deploying models in production, especially on edge devices or cost-constrained infrastructure. Understanding quantization trade-offs helps AI engineers choose the right model size and format for their deployment constraints.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

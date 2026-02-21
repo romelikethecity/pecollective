@@ -1148,6 +1148,29 @@
         <p>Streaming is a non-negotiable feature for user-facing AI products. ChatGPT's typing effect is streaming in action. Understanding server-sent events (SSE) and streaming API integration is a core skill for anyone building AI interfaces.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Streaming delivers model output token-by-token as it's generated rather than waiting for the complete response. For a response that takes 10 seconds to fully generate, streaming shows the first word in 200-500ms, giving users the perception of a fast, responsive system.</p><p>The technical implementation uses Server-Sent Events (SSE) or WebSocket connections. The client receives a stream of partial responses, each containing one or a few new tokens. The client application reconstructs the full response incrementally, typically rendering it in real-time.</p><p>Streaming introduces complexity: you need to handle partial responses, connection interruptions, and the fact that you can't validate the complete response until generation finishes. For applications that need to filter or modify output, this means building buffer-and-release logic or accepting that filtering can only happen post-completion.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not implementing reconnection logic for dropped streaming connections</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Network interruptions happen. Build retry logic that can resume from the last received token or gracefully restart the request.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Trying to parse streaming JSON responses before they're complete</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">If the model outputs JSON, buffer the stream until the closing bracket arrives before parsing. Alternatively, use streaming-compatible JSON parsers that handle partial documents.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Streaming implementation is a practical requirement for building user-facing AI applications. Understanding SSE, WebSocket protocols, and client-side rendering of streaming responses is expected for frontend and full-stack engineers working on AI products.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

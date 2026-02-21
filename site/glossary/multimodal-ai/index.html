@@ -1148,6 +1148,29 @@
         <p>Multimodal AI is expanding prompt engineering beyond text. Roles now require skills in image prompting, visual analysis, and cross-modal workflows. Job postings mentioning multimodal skills have grown 200%+ year-over-year.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Multimodal AI systems process and generate multiple types of data: text, images, audio, video, and code. Modern multimodal models like GPT-4V, Claude 3, and Gemini can analyze images, interpret charts, read handwriting, and reason about visual content alongside text.</p><p>The architectures vary: some models use separate encoders for each modality that share a common representation space, while others (like Gemini) are natively multimodal, trained from scratch on mixed-modality data. Vision-language models typically process images through a vision encoder (like ViT) that converts images into token-like embeddings the language model can attend to.</p><p>Multimodal capabilities enable new application categories: automated document processing (reading forms, invoices, and receipts), visual QA (analyzing product images for e-commerce), accessibility tools (describing images for visually impaired users), and code generation from wireframes or screenshots.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Sending high-resolution images when the model will resize them anyway</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Check the model's image processing specs. Most models resize to a fixed resolution (e.g., 1568x1568 for Claude). Sending 4K images wastes upload time and doesn't improve results.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming multimodal models can read all text in images accurately</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">OCR quality varies. Small text, unusual fonts, and handwriting are challenging. For document processing, consider using dedicated OCR tools alongside the multimodal model.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Multimodal AI skills are increasingly demanded as companies build applications that process documents, images, and mixed media. Understanding multimodal capabilities opens up roles in document AI, computer vision, and content automation.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

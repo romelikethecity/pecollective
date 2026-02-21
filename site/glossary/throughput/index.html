@@ -1148,6 +1148,29 @@
         <p>Throughput determines whether an AI feature can scale from demo to production. Many proof-of-concept AI products fail at scale because they can't achieve the throughput needed for thousands of concurrent users.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Throughput in AI systems measures how many requests or tokens a system can process per unit of time. For language models, it's typically measured in tokens per second (TPS) for a single request or requests per second (RPS) for the system overall.</p><p>Maximizing throughput requires different strategies than minimizing latency. Larger batch sizes increase throughput but add latency to individual requests. Continuous batching helps by dynamically grouping requests, reducing GPU idle time. Model parallelism across multiple GPUs can increase throughput linearly but adds complexity.</p><p>The throughput-cost equation drives infrastructure decisions. A single H100 GPU might serve 100 requests per second with a small model or 5 requests per second with a large model. Choosing the right model size, quantization level, and serving framework for your throughput requirements is a critical engineering decision.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Measuring throughput on a single request instead of under load</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Single-request throughput doesn't predict system behavior under production load. Benchmark with realistic concurrent request patterns to get meaningful numbers.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Assuming throughput scales linearly with hardware</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Doubling GPUs doesn't double throughput due to communication overhead, memory bandwidth limits, and batch size constraints. Benchmark actual scaling before purchasing hardware.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Throughput engineering is essential for ML infrastructure and MLOps roles. Companies serving millions of AI requests daily need engineers who can optimize throughput while managing costs. It's also important for capacity planning and infrastructure budgeting.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

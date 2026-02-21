@@ -724,6 +724,30 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do remote AI jobs pay less than in-office roles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Slightly. Most remote AI positions pay 85-95% of equivalent Bay Area salaries. Some companies (GitLab, Automattic) apply location-based adjustments, while others pay flat rates regardless of location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which companies hire remote AI engineers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Major remote-friendly AI employers include Scale AI, Hugging Face, Weights & Biases, Jasper, Cohere, and many venture-backed startups. Large tech companies occasionally offer remote AI roles but tend to prefer hybrid arrangements."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 
@@ -838,6 +862,12 @@
                 .company-salary { color: var(--gold); font-weight: 600; }
             </style>
 
+            
+            <div style="margin-bottom: 32px; line-height: 1.8; color: var(--text-secondary);">
+                <p>Remote AI positions offer competitive salaries without the geographic constraints of traditional roles. Most remote AI jobs pay 85-95% of Bay Area rates, making them financially attractive for engineers outside major tech hubs. Companies like Scale AI, Hugging Face, and numerous startups hire remote-first.</p>
+            </div>
+            
+
             <div class="section"><h2 style="margin-bottom: 20px;">Top Paying Companies</h2>
             <div class="company-row">
                 <span class="company-name">OpenAI</span>
@@ -871,7 +901,21 @@
                 <a href="/jobs/" style="color: var(--teal-light); font-weight: 600; text-decoration: none;">View AI Job Listings &rarr;</a>
             </div>
 
-            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border);">
+            
+            <div style="margin-top: 32px;">
+                <h2 style="margin-bottom: 16px; font-size: 1.25rem;">Frequently Asked Questions</h2>
+                
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Do remote AI jobs pay less than in-office roles?</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Slightly. Most remote AI positions pay 85-95% of equivalent Bay Area salaries. Some companies (GitLab, Automattic) apply location-based adjustments, while others pay flat rates regardless of location.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which companies hire remote AI engineers?</summary>
+            <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Major remote-friendly AI employers include Scale AI, Hugging Face, Weights &amp; Biases, Jasper, Cohere, and many venture-backed startups. Large tech companies occasionally offer remote AI roles but tend to prefer hybrid arrangements.</p>
+        </details>
+            </div>
+
+            <div class="section" style="background: var(--bg-card); border-radius: 12px; padding: 24px; border: 1px solid var(--border); margin-top: 32px;">
                 <h3>Methodology</h3>
                 <p style="color: var(--text-secondary); margin-top: 12px;">
                     Salary data is collected from job postings on Indeed and company career pages.

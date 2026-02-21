@@ -1148,6 +1148,29 @@
         <p>MCP is becoming the standard plumbing for AI applications. It eliminates the N-times-M integration problem (N models times M tools) by providing a single protocol. Job postings mentioning MCP have grown rapidly since its late 2024 release.</p>
     </div>
                 
+    <div class="glossary-section">
+        <h2>How It Works</h2>
+        <p>Model Context Protocol (MCP) is Anthropic's open standard for connecting AI models to external data sources and tools. It provides a standardized way for applications to expose capabilities (called 'tools' and 'resources') to AI models, similar to how HTTP standardized web communication.</p><p>MCP uses a client-server architecture. MCP servers expose tools (functions the model can call) and resources (data the model can read). MCP clients (like Claude Desktop or AI development environments) connect to these servers and make the tools available to the model. The protocol handles discovery, invocation, and response formatting.</p><p>The key advantage of MCP is interoperability. Instead of building custom integrations for each AI model and each tool, developers build one MCP server and it works with any MCP-compatible client. This is analogous to how USB standardized peripheral connections.</p>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Common Mistakes</h2>
+        
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Building MCP servers that expose too many tools, overwhelming the model's decision-making</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Keep tool sets focused and well-organized. Group related tools into separate MCP servers. Models perform better when choosing from 5-10 well-described tools than 50+ vague ones.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Not providing detailed tool descriptions and parameter documentation</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">The model uses tool descriptions to decide when and how to call tools. Vague descriptions like 'search stuff' lead to incorrect tool usage. Include examples and edge case handling.</p>
+        </div>
+    </div>
+                
+    <div class="glossary-section">
+        <h2>Career Relevance</h2>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">MCP is becoming the standard for AI tool integration. Early expertise in MCP development is a career differentiator, especially for roles building AI-powered development tools, productivity applications, and enterprise AI systems.</p>
+    </div>
+                
                 
     <div class="glossary-section">
         <h2>Related Terms</h2>

@@ -817,6 +817,7 @@ def get_breadcrumb_schema(breadcrumbs):
 
 def get_html_head(title, description, page_path, include_styles=True, extra_head=''):
     """Generate SEO-compliant head section"""
+    page_path = page_path.lstrip('/')
     styles = get_base_styles() if include_styles else ''
 
     return f'''<!DOCTYPE html>

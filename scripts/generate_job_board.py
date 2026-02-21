@@ -126,10 +126,20 @@ def main():
             </a>
         '''
 
-    # Category filter buttons
+    # Category filter buttons — slugs must match generate_category_pages.py
+    CATEGORY_SLUG_MAP = {
+        'AI/ML Engineer': 'ai-ml-engineer',
+        'Prompt Engineer': 'prompt-engineer',
+        'LLM Engineer': 'llm-engineer',
+        'MLOps Engineer': 'mlops-engineer',
+        'Research Engineer': 'research-engineer',
+        'AI Agent Developer': 'ai-agent-developer',
+        'Data Scientist': 'data-scientist',
+        'AI Product Manager': 'ai-product-manager',
+    }
     category_filters = ""
     for cat, count in categories.items():
-        cat_slug = make_slug(cat)
+        cat_slug = CATEGORY_SLUG_MAP.get(cat, make_slug(cat))
         category_filters += f'<a href="/jobs/{cat_slug}/" class="filter-btn">{escape_html(cat)} ({count})</a>\n'
 
     # Build ItemList schema for job listings

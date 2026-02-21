@@ -69,7 +69,7 @@ def generate_page(entry):
     head = get_html_head(
         title=entry['title'],
         description=entry['meta_description'],
-        page_path=f'/tools/{slug}/',
+        page_path=f'tools/{slug}/',
         extra_head=f'''
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">

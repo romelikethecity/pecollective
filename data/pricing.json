@@ -792,7 +792,7 @@
       },
       {
         "text": "Replit review",
-        "url": "/tools/replit/"
+        "url": "/tools/replit-agent/"
       },
       {
         "text": "AI Agent glossary",
@@ -1325,7 +1325,7 @@
       },
       {
         "text": "Embedding model glossary",
-        "url": "/glossary/embedding-model/"
+        "url": "/glossary/embeddings/"
       }
     ],
     "faqs": [

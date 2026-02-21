@@ -20,7 +20,7 @@ pages = []
 
 def add_page(path, priority, changefreq='weekly'):
     pages.append({
-        'loc': f'{BASE_URL}/{path}' if path else BASE_URL,
+        'loc': f'{BASE_URL}/{path}' if path else f'{BASE_URL}/',
         'priority': priority,
         'changefreq': changefreq,
         'lastmod': today,

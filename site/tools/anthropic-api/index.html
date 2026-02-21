@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Anthropic API review: Claude model access, pricing, features, and developer experience. How it compares to OpenAI's API for building AI applications.">
+
+  <title>Anthropic API (Claude API) Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="Anthropic API (Claude API) Review 2026">
+  <meta property="og:description" content="Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/anthropic-api/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Anthropic API (Claude API) Review 2026">
+  <meta name="twitter:description" content="Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Anthropic API",
+            "item": "https://pecollective.com/tools/anthropic-api/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much does the Anthropic API cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing varies by model. Haiku: $0.25/$1.25 per million input/output tokens. Sonnet: $3/$15 per million tokens. Opus: $15/$75 per million tokens. You get free credits when you sign up, and there's no monthly minimum."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the difference between Haiku, Sonnet, and Opus?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Haiku is the fastest and cheapest, best for simple tasks like classification and extraction. Sonnet balances speed and quality for most production workloads. Opus is the most capable, best for complex reasoning, coding, and analysis where accuracy is critical."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I use the Anthropic API with LangChain?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. LangChain has native Anthropic integration. You can use Claude models as your LLM, use tool calling with LangChain agents, and access the full 200K context window. LlamaIndex also has built-in Anthropic support."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Anthropic API vs OpenAI API: which is better?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anthropic's Claude models have an edge in reasoning quality, instruction following, and long-context tasks. OpenAI's API offers more capabilities (image generation, voice, fine-tuning) and a larger ecosystem. For most AI applications focused on text, Anthropic is the stronger choice."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the Anthropic API support streaming?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The API supports server-sent events (SSE) for streaming responses token by token. This is essential for chat applications where you want to display responses as they're generated rather than waiting for the full completion."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Anthropic API",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web API (any platform)",
+    "url": "https://docs.anthropic.com",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.8",
+            "bestRating": "5"
+        },
+        "reviewBody": "The Anthropic API gives you access to what many developers consider the best reasoning model available. Claude excels at tasks that require careful thinking: complex code generation, document analysis, nuanced writing, and following multi-step instructions precisely. The three-tier model lineup (Haiku for speed, Sonnet for balance, Opus for depth) means you're not paying Opus prices when Haiku can handle the job. Where it falls short compared to OpenAI is ecosystem breadth. OpenAI has image gene"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🔮</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">AI API</span>
+            <h1 class="tool-review__title">Anthropic API (Claude API) Review 2026</h1>
+            <p class="tool-review__subtitle">The API behind Claude. Best-in-class reasoning, a developer experience that respects your time, and the model that keeps winning benchmarks.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://docs.anthropic.com" target="_blank" rel="noopener" class="btn btn--primary">Get API Access &rarr;</a>
+              <a href="/tools/openai-api-vs-anthropic-api/" class="btn btn--secondary">Compare to OpenAI API</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is the Anthropic API?</h2>
+<p>The Anthropic API is the developer interface for accessing Claude, Anthropic's family of AI models. You send text (and optionally images) in, and Claude sends responses back. It powers everything from chatbots and code generators to document analysis pipelines and AI agents.</p>
+<p>If you've used Claude through the web interface or through tools like <a href="/tools/claude-code/">Claude Code</a>, the API is how you build those experiences into your own applications. It supports streaming, tool use (function calling), system prompts, and multi-turn conversations.</p>
+
+<h2>Key Features</h2>
+
+<h3>Model Lineup</h3>
+<p>Anthropic offers three model tiers. Haiku is the fastest and cheapest, good for classification, extraction, and high-volume tasks. Sonnet is the balanced option that handles most production workloads well. Opus is the most capable, best for complex reasoning, coding, and tasks where accuracy matters more than speed.</p>
+<p>This tiered approach is practical. You can route simple API calls to Haiku at $0.25 per million input tokens and save Opus for the complex stuff at $15 per million input tokens. Many production systems use multiple tiers in the same application.</p>
+
+<h3>200K Context Window</h3>
+<p>Claude supports up to 200,000 tokens of context, which is roughly 150,000 words or about 500 pages of text. This means you can feed entire codebases, legal contracts, or research papers into a single API call. The model maintains coherence across the full window, which isn't true of all competitors at this scale.</p>
+
+<h3>Tool Use (Function Calling)</h3>
+<p>Claude can call external tools and functions that you define. You describe available tools in your API request, and Claude decides when to call them and what parameters to pass. This is how you build AI agents that can search databases, call APIs, or interact with external systems.</p>
+<p>For developers building with <a href="/tools/langchain/">LangChain</a> or <a href="/tools/llamaindex/">LlamaIndex</a>, Claude's tool use integrates natively with both frameworks.</p>
+
+<h3>Vision</h3>
+<p>Claude can analyze images passed to the API. It handles screenshots, diagrams, charts, photos of documents, and UI mockups. The vision capabilities are strong enough for production use in document processing and UI analysis workflows.</p>
+
+<h2>Pricing Details</h2>
+<p>Anthropic uses per-token pricing with different rates for input and output tokens. Haiku: $0.25 input / $1.25 output per million tokens. Sonnet: $3 input / $15 output per million tokens. Opus: $15 input / $75 output per million tokens. There's also a prompt caching feature that reduces costs for repeated prefixes.</p>
+<p>Compared to OpenAI, Anthropic's pricing is competitive at each tier. Haiku competes with GPT-4o-mini, Sonnet with GPT-4o, and Opus occupies the premium tier.</p>
+
+<h2>Anthropic API vs OpenAI API</h2>
+<p>See our full <a href="/tools/openai-api-vs-anthropic-api/">Anthropic API vs OpenAI API comparison</a>. The short version: Anthropic wins on reasoning quality, instruction following, and developer experience. OpenAI wins on ecosystem breadth (image gen, voice, fine-tuning) and third-party integrations. Both are production-ready and well-documented.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Claude's reasoning quality is best-in-class for code, analysis, and nuanced tasks</li>
+                  <li>200K context window handles entire codebases and long documents</li>
+                  <li>Developer experience is clean with excellent docs, SDKs, and error messages</li>
+                  <li>Tiered model lineup (Haiku/Sonnet/Opus) lets you match cost to complexity</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>Rate limits can be restrictive at lower usage tiers, especially for Opus</li>
+                  <li>No real-time or streaming speech capabilities like OpenAI's Realtime API</li>
+                  <li>Smaller ecosystem of third-party integrations compared to OpenAI</li>
+                  <li>Image generation isn't available; it's text and vision only</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use Anthropic API?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>Developers building AI applications</strong> where reasoning quality and accuracy matter most</li>
+              <li><strong>Teams processing long documents</strong> that need the 200K context window for legal, medical, or research content</li>
+              <li><strong>Prompt engineers</strong> who want a model that follows complex instructions precisely</li>
+              <li><strong>Startups and SaaS builders</strong> who need a cost-effective API with Haiku for high-volume tasks and Opus for complex ones</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Projects needing image generation</strong> since Claude doesn't generate images (use OpenAI's DALL-E or Midjourney)</li>
+              <li><strong>Real-time voice applications</strong> where OpenAI's Realtime API currently has no equivalent from Anthropic</li>
+              <li><strong>Teams locked into the OpenAI ecosystem</strong> with existing fine-tuned GPT models and assistants</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>The Anthropic API gives you access to what many developers consider the best reasoning model available. Claude excels at tasks that require careful thinking: complex code generation, document analysis, nuanced writing, and following multi-step instructions precisely. The three-tier model lineup (Haiku for speed, Sonnet for balance, Opus for depth) means you're not paying Opus prices when Haiku can handle the job.</p><p>Where it falls short compared to OpenAI is ecosystem breadth. OpenAI has image generation, real-time voice, fine-tuning, and a larger universe of third-party integrations. If you need an all-in-one AI platform, OpenAI's API covers more ground. But if reasoning quality is your top priority, and for most AI application developers it should be, Anthropic's API is the one to build on.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★★</span>
+                <span class="rating__value">4.8/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Haiku</span>
+                  <span class="pricing-row__value">$0.25/$1.25 per 1M tokens</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Sonnet</span>
+                  <span class="pricing-row__value">$3/$15 per 1M tokens</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Opus</span>
+                  <span class="pricing-row__value">$15/$75 per 1M tokens</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://docs.anthropic.com" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get Anthropic API &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Models</span>
+                  <span class="pricing-row__value">Haiku, Sonnet, Opus</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Context Window</span>
+                  <span class="pricing-row__value">Up to 200K tokens</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Tool Use</span>
+                  <span class="pricing-row__value">Yes (function calling)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Free Tier</span>
+                  <span class="pricing-row__value">Free credits on signup</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/openai-api/">🟢 OpenAI API</a>
+                <a href="/tools/claude-code/">🧠 Claude Code</a>
+                <a href="/tools/langchain/">🔗 LangChain</a>
+                <a href="/tools/llamaindex/">🦙 LlamaIndex</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">How much does the Anthropic API cost?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Pricing varies by model. Haiku: $0.25/$1.25 per million input/output tokens. Sonnet: $3/$15 per million tokens. Opus: $15/$75 per million tokens. You get free credits when you sign up, and there's no monthly minimum.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What's the difference between Haiku, Sonnet, and Opus?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Haiku is the fastest and cheapest, best for simple tasks like classification and extraction. Sonnet balances speed and quality for most production workloads. Opus is the most capable, best for complex reasoning, coding, and analysis where accuracy is critical.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Can I use the Anthropic API with LangChain?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. LangChain has native Anthropic integration. You can use Claude models as your LLM, use tool calling with LangChain agents, and access the full 200K context window. LlamaIndex also has built-in Anthropic support.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Anthropic API vs OpenAI API: which is better?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Anthropic's Claude models have an edge in reasoning quality, instruction following, and long-context tasks. OpenAI's API offers more capabilities (image generation, voice, fine-tuning) and a larger ecosystem. For most AI applications focused on text, Anthropic is the stronger choice.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Does the Anthropic API support streaming?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. The API supports server-sent events (SSE) for streaming responses token by token. This is essential for chat applications where you want to display responses as they're generated rather than waiting for the full completion.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

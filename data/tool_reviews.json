@@ -1420,5 +1420,836 @@
     ],
     "date_published": "2026-02-20",
     "operating_system": "Windows, macOS, Linux"
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "icon": "⚡",
+    "url": "https://cursor.com",
+    "category": "AI Code Editor",
+    "rating": "4.7",
+    "rating_stars": "★★★★★",
+    "title": "Cursor Review 2026",
+    "meta_description": "Cursor AI code editor review: features, pricing, pros and cons. The VS Code fork that turned AI-assisted coding into the default workflow.",
+    "og_description": "Honest review of Cursor, the AI code editor that set the standard for agentic coding. Features, pricing, and how it compares.",
+    "subtitle": "The AI code editor that made everyone else play catch-up. Built on VS Code, powered by the best models available, and still the one to beat.",
+    "cta_text": "Try Cursor Free",
+    "cta_url": "https://cursor.com",
+    "comparison_cta": {
+      "text": "Compare to Windsurf",
+      "url": "/tools/cursor-vs-windsurf/"
+    },
+    "pricing": [
+      {
+        "label": "Hobby",
+        "value": "Free (limited)"
+      },
+      {
+        "label": "Pro",
+        "value": "$20/mo"
+      },
+      {
+        "label": "Business",
+        "value": "$40/mo"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Platform",
+        "value": "Mac, Win, Linux"
+      },
+      {
+        "label": "Based On",
+        "value": "VS Code Fork"
+      },
+      {
+        "label": "AI Models",
+        "value": "Claude, GPT-4o, Gemini"
+      },
+      {
+        "label": "Free Tier",
+        "value": "Yes (limited)"
+      }
+    ],
+    "pros": [
+      "Composer agent mode is the best multi-file editor available",
+      "Full model selection lets you pick Claude, GPT-4o, or Gemini per task",
+      "Autocomplete (Tab) is fast and context-aware across your project",
+      "VS Code extensions work with minimal compatibility issues"
+    ],
+    "cons": [
+      "Pro plan at $20/mo is pricier than Windsurf's $15/mo",
+      "Heavy usage on premium models can burn through your monthly allowance fast",
+      "Occasional lag on very large codebases during indexing",
+      "Free tier is too limited for real daily use"
+    ],
+    "ideal_for": [
+      "<strong>Professional developers</strong> who want the most capable AI code editor available right now",
+      "<strong>Teams that need model flexibility</strong> to switch between Claude, GPT-4o, and Gemini depending on the task",
+      "<strong>Full-stack developers</strong> doing frequent multi-file refactoring where Composer shines",
+      "<strong>VS Code users</strong> who want AI superpowers without changing their workflow"
+    ],
+    "not_for": [
+      "<strong>Developers on a tight budget</strong> since the free tier is limited and Pro costs $20/mo",
+      "<strong>Terminal-first developers</strong> who'd prefer a CLI tool like <a href=\"/tools/claude-code/\">Claude Code</a>",
+      "<strong>JetBrains loyalists</strong> because Cursor is VS Code-based only"
+    ],
+    "verdict": "<p>Cursor is the AI code editor that everyone else is trying to catch. Composer mode for multi-file editing, model choice between Claude, GPT-4o, and Gemini, and tight VS Code integration make it the most complete package for professional developers.</p><p>It's not the cheapest option. Windsurf undercuts it by $5/mo and offers a more generous free tier. And if you're a terminal person, Claude Code's reasoning depth is arguably stronger for architecture-level work. But for the developer who wants the best all-around AI coding experience inside a visual editor, Cursor is still the standard.</p>",
+    "content": "<h2>What is Cursor?</h2>\n<p>Cursor is an AI-first code editor built on a fork of VS Code. It launched in 2023 and quickly became the benchmark that every other AI code editor measures itself against. The core idea is simple: take the editor millions of developers already use and make AI a first-class citizen in every part of the workflow.</p>\n<p>What makes Cursor different from just adding Copilot to VS Code is depth. AI isn't bolted on as an extension. It's woven into autocomplete, editing, chat, and terminal. The result is a workflow where you spend less time writing boilerplate and more time directing the AI toward the outcome you want.</p>\n\n<h2>Key Features</h2>\n\n<h3>Composer (Agentic Multi-File Editing)</h3>\n<p>Composer is Cursor's headline feature and the main reason developers switch from regular VS Code. Describe a change in natural language and Composer plans and executes edits across multiple files. It understands import chains, type definitions, and test files that need updating alongside your main code.</p>\n<p>For <a href=\"/glossary/prompt-engineering/\">prompt engineers</a> building AI applications, Composer handles tasks like \"add retry logic with exponential backoff to all API calls in this project\" without you touching a single file manually.</p>\n\n<h3>Tab Autocomplete</h3>\n<p>Cursor's autocomplete predicts multi-line completions based on your project context, not just the current file. It picks up on your coding patterns and conventions, so the suggestions feel like they were written by someone who knows your codebase. The speed is comparable to Copilot and noticeably faster than cloud-only solutions.</p>\n\n<h3>Model Selection</h3>\n<p>Unlike most competitors, Cursor lets you choose your AI model per request. Use Claude for nuanced reasoning, GPT-4o for speed, or Gemini for long-context tasks. This flexibility matters because different models excel at different things, and you shouldn't be locked into one.</p>\n\n<h3>Chat and Context</h3>\n<p>Cursor's chat panel is codebase-aware. You can reference specific files, folders, or symbols using @mentions, and the AI responds with full context. It's useful for understanding unfamiliar code, debugging, or planning changes before you execute them in Composer.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The Hobby tier is free but limited to a small number of AI requests per month. It's enough to test the waters but not enough for daily use. Pro at $20/month gives you generous usage across all models. Business at $40/month adds team management, SSO, and admin controls.</p>\n<p>Compared to Windsurf's $15/month Pro tier, you're paying $5 more per month. Whether that's worth it depends on how much you value model selection and Composer's edge on complex edits.</p>\n\n<h2>Cursor vs Windsurf</h2>\n<p>Head to our full <a href=\"/tools/cursor-vs-windsurf/\">Cursor vs Windsurf comparison</a> for the detailed breakdown. The short version: Cursor wins on multi-file editing power and model flexibility. Windsurf wins on price and free tier generosity. Both are excellent editors built on VS Code.</p>\n\n<h2>Cursor vs Claude Code</h2>\n<p>These serve different workflows. Cursor is a visual editor with AI built in. <a href=\"/tools/claude-code/\">Claude Code</a> is a terminal agent with deeper reasoning capabilities. Many developers use both: Cursor for day-to-day coding and Claude Code for architecture decisions and major refactors. See our <a href=\"/tools/cursor-vs-claude-code/\">Cursor vs Claude Code comparison</a>.</p>",
+    "related_tools": [
+      {
+        "name": "Windsurf",
+        "icon": "🌊",
+        "url": "/tools/windsurf/"
+      },
+      {
+        "name": "Claude Code",
+        "icon": "🧠",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "name": "GitHub Copilot",
+        "icon": "🤖",
+        "url": "/tools/github-copilot/"
+      },
+      {
+        "name": "Cursor vs Windsurf",
+        "icon": "⚔️",
+        "url": "/tools/cursor-vs-windsurf/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Cursor free?",
+        "answer": "Cursor has a free Hobby tier with limited AI requests per month. For daily use, you'll want the Pro plan at $20/month, which gives generous usage across Claude, GPT-4o, and Gemini models."
+      },
+      {
+        "question": "Is Cursor better than VS Code with Copilot?",
+        "answer": "For AI-assisted coding, yes. Cursor's Composer mode for multi-file editing and its model selection (Claude, GPT-4o, Gemini) go well beyond what Copilot offers as an extension. The tradeoff is that Cursor costs $20/mo vs Copilot's $10/mo."
+      },
+      {
+        "question": "Can I use my VS Code extensions in Cursor?",
+        "answer": "Yes. Cursor is built on a VS Code fork, so most extensions work out of the box. You can import your VS Code settings and extensions when you first set up Cursor."
+      },
+      {
+        "question": "Cursor vs Windsurf: which should I pick?",
+        "answer": "Cursor if you want the best multi-file editing and model choice. Windsurf if you want a lower price ($15 vs $20/mo) and a more generous free tier. Both are excellent VS Code-based AI editors."
+      },
+      {
+        "question": "Does Cursor work offline?",
+        "answer": "The editor itself works offline, but all AI features require an internet connection since they rely on cloud-hosted models. You can still write and edit code without AI when offline."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "Cursor vs Windsurf",
+        "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "text": "Cursor vs Claude Code",
+        "url": "/tools/cursor-vs-claude-code/"
+      },
+      {
+        "text": "Cursor Alternatives",
+        "url": "/tools/cursor-alternatives/"
+      },
+      {
+        "text": "Windsurf Review",
+        "url": "/tools/windsurf/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Windows, macOS, Linux"
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "icon": "🤖",
+    "url": "https://github.com/features/copilot",
+    "category": "AI Code Assistant",
+    "rating": "4.3",
+    "rating_stars": "★★★★½",
+    "title": "GitHub Copilot Review 2026",
+    "meta_description": "GitHub Copilot review: features, pricing, pros and cons. The AI pair programmer from GitHub that brought AI coding to the mainstream.",
+    "og_description": "Honest review of GitHub Copilot, the AI code assistant that started the AI coding revolution. Where it still leads and where it's fallen behind.",
+    "subtitle": "The AI code assistant that started it all. Still the most widely used, deeply integrated with GitHub, and now playing catch-up on agentic features.",
+    "cta_text": "Try Copilot Free",
+    "cta_url": "https://github.com/features/copilot",
+    "comparison_cta": {
+      "text": "Compare to Cursor",
+      "url": "/tools/copilot-vs-codewhisperer/"
+    },
+    "pricing": [
+      {
+        "label": "Free",
+        "value": "Limited (students/OSS)"
+      },
+      {
+        "label": "Individual",
+        "value": "$10/mo"
+      },
+      {
+        "label": "Business",
+        "value": "$19/mo"
+      },
+      {
+        "label": "Enterprise",
+        "value": "$39/mo"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Platform",
+        "value": "VS Code, JetBrains, Neovim"
+      },
+      {
+        "label": "Type",
+        "value": "Editor Extension"
+      },
+      {
+        "label": "AI Models",
+        "value": "GPT-4o, Claude (limited)"
+      },
+      {
+        "label": "Free Tier",
+        "value": "Yes (students/OSS)"
+      }
+    ],
+    "pros": [
+      "Works in VS Code, JetBrains, Neovim, and other editors as a plugin",
+      "GitHub integration is unmatched for PR reviews, issue context, and repo search",
+      "Lowest individual price at $10/mo for solid autocomplete",
+      "Enterprise features like IP indemnity and content exclusions are mature"
+    ],
+    "cons": [
+      "Agent and multi-file editing features lag behind Cursor and Windsurf",
+      "Chat quality doesn't match Claude Code or Cursor's Composer",
+      "Limited model choice compared to Cursor's Claude/GPT-4o/Gemini options",
+      "Autocomplete suggestions can be repetitive on boilerplate-heavy projects"
+    ],
+    "ideal_for": [
+      "<strong>Developers who work across multiple editors</strong> since Copilot works in VS Code, JetBrains, and Neovim",
+      "<strong>Teams deeply invested in GitHub</strong> where Copilot's PR review and issue integration adds real value",
+      "<strong>Enterprise organizations</strong> that need IP indemnity, content exclusions, and SOC 2 compliance",
+      "<strong>Budget-conscious developers</strong> who want solid autocomplete at just $10/mo"
+    ],
+    "not_for": [
+      "<strong>Developers who need strong agentic editing</strong> since Cursor and Windsurf are significantly better at multi-file tasks",
+      "<strong>Those who want model flexibility</strong> because you can't freely switch between Claude and GPT-4 like in Cursor",
+      "<strong>Solo developers not on GitHub</strong> since many of Copilot's best features tie into the GitHub ecosystem"
+    ],
+    "verdict": "<p>GitHub Copilot deserves credit for bringing AI-assisted coding to the mainstream. Its autocomplete is solid, the $10/mo price is the lowest in the category, and the GitHub integration (PR reviews, issue context, repo-wide search) is something no competitor can match.</p><p>But the AI coding market has moved fast, and Copilot hasn't kept up on the agentic side. Cursor's Composer and Windsurf's Cascade both handle multi-file editing better. Claude Code's reasoning is deeper. Copilot is still a good tool, especially for teams that live on GitHub, but it's no longer the clear leader it was in 2023.</p>",
+    "content": "<h2>What is GitHub Copilot?</h2>\n<p>GitHub Copilot is an AI code assistant developed by GitHub (Microsoft) that works as an extension in your existing editor. Unlike Cursor and Windsurf, which are standalone editors, Copilot plugs into VS Code, JetBrains IDEs, Neovim, and other editors. It launched in 2021 and was the first AI coding tool to reach mass adoption.</p>\n<p>Copilot started as an autocomplete tool and has since expanded into chat, PR reviews, and workspace-level features. It's the most widely used AI coding tool by install count, though the competition from purpose-built AI editors has intensified since 2024.</p>\n\n<h2>Key Features</h2>\n\n<h3>Inline Autocomplete</h3>\n<p>Copilot's core feature is ghost text suggestions as you type. It predicts the next line or block of code based on your current file and open tabs. The suggestions are fast and work well for common patterns, boilerplate, and repetitive code. It's particularly strong in JavaScript, TypeScript, Python, and Go.</p>\n\n<h3>Copilot Chat</h3>\n<p>The chat panel lets you ask questions about your code, request explanations, and generate code snippets. It's context-aware of your open files and can reference specific symbols. The chat quality has improved significantly since launch, though it still doesn't match Claude Code's depth on complex questions.</p>\n\n<h3>Copilot Workspace (Agent Mode)</h3>\n<p>GitHub's answer to Cursor's Composer is Copilot Workspace, which can plan and execute multi-file changes from a natural language description. It's still newer and less polished than Composer, but it's improving with each update. The GitHub issue integration, where you can start a Workspace session directly from an issue, is a clever workflow.</p>\n\n<h3>PR Reviews and GitHub Integration</h3>\n<p>This is where Copilot has no real competition. It can review pull requests, summarize changes, suggest improvements, and generate PR descriptions. For teams that do code review on GitHub, this integration saves real time. It also searches across your GitHub repos to provide context-aware answers.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The free tier is available to students, teachers, and open-source maintainers. Individual plans cost $10/month, making Copilot the cheapest paid option in the category. Business at $19/month adds organization management and policy controls. Enterprise at $39/month includes IP indemnity and fine-tuned models on your codebase.</p>\n\n<h2>Copilot vs Cursor</h2>\n<p>Copilot is an extension that works in many editors. Cursor is a standalone editor with deeper AI integration. For autocomplete alone, they're comparable. For agentic multi-file editing, Cursor is clearly ahead. For GitHub workflow integration, Copilot wins. Price favors Copilot at $10 vs $20/mo. Check our <a href=\"/tools/copilot-vs-codewhisperer/\">full comparison</a> for details.</p>",
+    "related_tools": [
+      {
+        "name": "Cursor",
+        "icon": "⚡",
+        "url": "/tools/cursor/"
+      },
+      {
+        "name": "Windsurf",
+        "icon": "🌊",
+        "url": "/tools/windsurf/"
+      },
+      {
+        "name": "Claude Code",
+        "icon": "🧠",
+        "url": "/tools/claude-code/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does GitHub Copilot cost?",
+        "answer": "GitHub Copilot Individual costs $10/month or $100/year. Business is $19/month per seat. Enterprise is $39/month per seat. There's a free tier for students, teachers, and open-source maintainers."
+      },
+      {
+        "question": "Is GitHub Copilot better than Cursor?",
+        "answer": "It depends on your needs. Copilot is cheaper ($10 vs $20/mo), works in more editors (JetBrains, Neovim), and has better GitHub integration. Cursor is better at multi-file agentic editing and offers more model choices. For pure autocomplete they're comparable."
+      },
+      {
+        "question": "Does Copilot work in JetBrains?",
+        "answer": "Yes. GitHub Copilot has official plugins for JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.), VS Code, Neovim, and Visual Studio. This multi-editor support is a key advantage over Cursor and Windsurf, which are VS Code-based only."
+      },
+      {
+        "question": "Can Copilot review pull requests?",
+        "answer": "Yes. Copilot can review PRs on GitHub, summarize changes, suggest improvements, and generate PR descriptions. This GitHub-native integration is something no other AI coding tool offers at the same level."
+      },
+      {
+        "question": "Is GitHub Copilot free for students?",
+        "answer": "Yes. Students with a verified GitHub Education account get Copilot Individual for free. Open-source maintainers of popular projects also qualify for free access."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "Copilot vs CodeWhisperer",
+        "url": "/tools/copilot-vs-codewhisperer/"
+      },
+      {
+        "text": "Cursor Review",
+        "url": "/tools/cursor/"
+      },
+      {
+        "text": "Windsurf Review",
+        "url": "/tools/windsurf/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Windows, macOS, Linux"
+  },
+  {
+    "slug": "anthropic-api",
+    "name": "Anthropic API",
+    "icon": "🔮",
+    "url": "https://docs.anthropic.com",
+    "category": "AI API",
+    "rating": "4.8",
+    "rating_stars": "★★★★★",
+    "title": "Anthropic API (Claude API) Review 2026",
+    "meta_description": "Anthropic API review: Claude model access, pricing, features, and developer experience. How it compares to OpenAI's API for building AI applications.",
+    "og_description": "Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.",
+    "subtitle": "The API behind Claude. Best-in-class reasoning, a developer experience that respects your time, and the model that keeps winning benchmarks.",
+    "cta_text": "Get API Access",
+    "cta_url": "https://console.anthropic.com",
+    "comparison_cta": {
+      "text": "Compare to OpenAI API",
+      "url": "/tools/openai-api-vs-anthropic-api/"
+    },
+    "pricing": [
+      {
+        "label": "Haiku",
+        "value": "$0.25/$1.25 per 1M tokens"
+      },
+      {
+        "label": "Sonnet",
+        "value": "$3/$15 per 1M tokens"
+      },
+      {
+        "label": "Opus",
+        "value": "$15/$75 per 1M tokens"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Models",
+        "value": "Haiku, Sonnet, Opus"
+      },
+      {
+        "label": "Context Window",
+        "value": "Up to 200K tokens"
+      },
+      {
+        "label": "Tool Use",
+        "value": "Yes (function calling)"
+      },
+      {
+        "label": "Free Tier",
+        "value": "Free credits on signup"
+      }
+    ],
+    "pros": [
+      "Claude's reasoning quality is best-in-class for code, analysis, and nuanced tasks",
+      "200K context window handles entire codebases and long documents",
+      "Developer experience is clean with excellent docs, SDKs, and error messages",
+      "Tiered model lineup (Haiku/Sonnet/Opus) lets you match cost to complexity"
+    ],
+    "cons": [
+      "Rate limits can be restrictive at lower usage tiers, especially for Opus",
+      "No real-time or streaming speech capabilities like OpenAI's Realtime API",
+      "Smaller ecosystem of third-party integrations compared to OpenAI",
+      "Image generation isn't available; it's text and vision only"
+    ],
+    "ideal_for": [
+      "<strong>Developers building AI applications</strong> where reasoning quality and accuracy matter most",
+      "<strong>Teams processing long documents</strong> that need the 200K context window for legal, medical, or research content",
+      "<strong>Prompt engineers</strong> who want a model that follows complex instructions precisely",
+      "<strong>Startups and SaaS builders</strong> who need a cost-effective API with Haiku for high-volume tasks and Opus for complex ones"
+    ],
+    "not_for": [
+      "<strong>Projects needing image generation</strong> since Claude doesn't generate images (use OpenAI's DALL-E or Midjourney)",
+      "<strong>Real-time voice applications</strong> where OpenAI's Realtime API currently has no equivalent from Anthropic",
+      "<strong>Teams locked into the OpenAI ecosystem</strong> with existing fine-tuned GPT models and assistants"
+    ],
+    "verdict": "<p>The Anthropic API gives you access to what many developers consider the best reasoning model available. Claude excels at tasks that require careful thinking: complex code generation, document analysis, nuanced writing, and following multi-step instructions precisely. The three-tier model lineup (Haiku for speed, Sonnet for balance, Opus for depth) means you're not paying Opus prices when Haiku can handle the job.</p><p>Where it falls short compared to OpenAI is ecosystem breadth. OpenAI has image generation, real-time voice, fine-tuning, and a larger universe of third-party integrations. If you need an all-in-one AI platform, OpenAI's API covers more ground. But if reasoning quality is your top priority, and for most AI application developers it should be, Anthropic's API is the one to build on.</p>",
+    "content": "<h2>What is the Anthropic API?</h2>\n<p>The Anthropic API is the developer interface for accessing Claude, Anthropic's family of AI models. You send text (and optionally images) in, and Claude sends responses back. It powers everything from chatbots and code generators to document analysis pipelines and AI agents.</p>\n<p>If you've used Claude through the web interface or through tools like <a href=\"/tools/claude-code/\">Claude Code</a>, the API is how you build those experiences into your own applications. It supports streaming, tool use (function calling), system prompts, and multi-turn conversations.</p>\n\n<h2>Key Features</h2>\n\n<h3>Model Lineup</h3>\n<p>Anthropic offers three model tiers. Haiku is the fastest and cheapest, good for classification, extraction, and high-volume tasks. Sonnet is the balanced option that handles most production workloads well. Opus is the most capable, best for complex reasoning, coding, and tasks where accuracy matters more than speed.</p>\n<p>This tiered approach is practical. You can route simple API calls to Haiku at $0.25 per million input tokens and save Opus for the complex stuff at $15 per million input tokens. Many production systems use multiple tiers in the same application.</p>\n\n<h3>200K Context Window</h3>\n<p>Claude supports up to 200,000 tokens of context, which is roughly 150,000 words or about 500 pages of text. This means you can feed entire codebases, legal contracts, or research papers into a single API call. The model maintains coherence across the full window, which isn't true of all competitors at this scale.</p>\n\n<h3>Tool Use (Function Calling)</h3>\n<p>Claude can call external tools and functions that you define. You describe available tools in your API request, and Claude decides when to call them and what parameters to pass. This is how you build AI agents that can search databases, call APIs, or interact with external systems.</p>\n<p>For developers building with <a href=\"/tools/langchain/\">LangChain</a> or <a href=\"/tools/llamaindex/\">LlamaIndex</a>, Claude's tool use integrates natively with both frameworks.</p>\n\n<h3>Vision</h3>\n<p>Claude can analyze images passed to the API. It handles screenshots, diagrams, charts, photos of documents, and UI mockups. The vision capabilities are strong enough for production use in document processing and UI analysis workflows.</p>\n\n<h2>Pricing Details</h2>\n<p>Anthropic uses per-token pricing with different rates for input and output tokens. Haiku: $0.25 input / $1.25 output per million tokens. Sonnet: $3 input / $15 output per million tokens. Opus: $15 input / $75 output per million tokens. There's also a prompt caching feature that reduces costs for repeated prefixes.</p>\n<p>Compared to OpenAI, Anthropic's pricing is competitive at each tier. Haiku competes with GPT-4o-mini, Sonnet with GPT-4o, and Opus occupies the premium tier.</p>\n\n<h2>Anthropic API vs OpenAI API</h2>\n<p>See our full <a href=\"/tools/openai-api-vs-anthropic-api/\">Anthropic API vs OpenAI API comparison</a>. The short version: Anthropic wins on reasoning quality, instruction following, and developer experience. OpenAI wins on ecosystem breadth (image gen, voice, fine-tuning) and third-party integrations. Both are production-ready and well-documented.</p>",
+    "related_tools": [
+      {
+        "name": "OpenAI API",
+        "icon": "🟢",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "name": "Claude Code",
+        "icon": "🧠",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "name": "LangChain",
+        "icon": "🔗",
+        "url": "/tools/langchain/"
+      },
+      {
+        "name": "LlamaIndex",
+        "icon": "🦙",
+        "url": "/tools/llamaindex/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does the Anthropic API cost?",
+        "answer": "Pricing varies by model. Haiku: $0.25/$1.25 per million input/output tokens. Sonnet: $3/$15 per million tokens. Opus: $15/$75 per million tokens. You get free credits when you sign up, and there's no monthly minimum."
+      },
+      {
+        "question": "What's the difference between Haiku, Sonnet, and Opus?",
+        "answer": "Haiku is the fastest and cheapest, best for simple tasks like classification and extraction. Sonnet balances speed and quality for most production workloads. Opus is the most capable, best for complex reasoning, coding, and analysis where accuracy is critical."
+      },
+      {
+        "question": "Can I use the Anthropic API with LangChain?",
+        "answer": "Yes. LangChain has native Anthropic integration. You can use Claude models as your LLM, use tool calling with LangChain agents, and access the full 200K context window. LlamaIndex also has built-in Anthropic support."
+      },
+      {
+        "question": "Anthropic API vs OpenAI API: which is better?",
+        "answer": "Anthropic's Claude models have an edge in reasoning quality, instruction following, and long-context tasks. OpenAI's API offers more capabilities (image generation, voice, fine-tuning) and a larger ecosystem. For most AI applications focused on text, Anthropic is the stronger choice."
+      },
+      {
+        "question": "Does the Anthropic API support streaming?",
+        "answer": "Yes. The API supports server-sent events (SSE) for streaming responses token by token. This is essential for chat applications where you want to display responses as they're generated rather than waiting for the full completion."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "OpenAI API vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
+      },
+      {
+        "text": "Claude Code Review",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "text": "LangChain Review",
+        "url": "/tools/langchain/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Web API (any platform)"
+  },
+  {
+    "slug": "openai-api",
+    "name": "OpenAI API",
+    "icon": "🟢",
+    "url": "https://platform.openai.com",
+    "category": "AI API",
+    "rating": "4.6",
+    "rating_stars": "★★★★½",
+    "title": "OpenAI API Review 2026",
+    "meta_description": "OpenAI API review: GPT-4o, DALL-E, Whisper, and more. Features, pricing, and how it compares to Anthropic's Claude API for developers.",
+    "og_description": "Honest review of the OpenAI API. The broadest AI platform available, from text to images to voice. Where it leads and where it's losing ground.",
+    "subtitle": "The broadest AI API platform available. GPT-4o, DALL-E, Whisper, Realtime voice, and more. It does everything, but is it the best at anything?",
+    "cta_text": "Get API Access",
+    "cta_url": "https://platform.openai.com",
+    "comparison_cta": {
+      "text": "Compare to Anthropic API",
+      "url": "/tools/openai-api-vs-anthropic-api/"
+    },
+    "pricing": [
+      {
+        "label": "GPT-4o mini",
+        "value": "$0.15/$0.60 per 1M tokens"
+      },
+      {
+        "label": "GPT-4o",
+        "value": "$2.50/$10 per 1M tokens"
+      },
+      {
+        "label": "o1",
+        "value": "$15/$60 per 1M tokens"
+      },
+      {
+        "label": "DALL-E 3",
+        "value": "$0.04-$0.12/image"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Models",
+        "value": "GPT-4o, o1, DALL-E, Whisper"
+      },
+      {
+        "label": "Context Window",
+        "value": "Up to 128K tokens"
+      },
+      {
+        "label": "Capabilities",
+        "value": "Text, Image, Voice, Code"
+      },
+      {
+        "label": "Free Tier",
+        "value": "Free credits on signup"
+      }
+    ],
+    "pros": [
+      "Broadest capability set: text, images, voice, embeddings, and fine-tuning all in one platform",
+      "Largest ecosystem of third-party tools, libraries, and tutorials",
+      "GPT-4o mini is one of the cheapest capable models available for high-volume tasks",
+      "Fine-tuning support lets you customize models on your own data"
+    ],
+    "cons": [
+      "Reasoning quality on complex tasks has fallen behind Claude's Opus and Sonnet",
+      "API changes and deprecations happen frequently, requiring code updates",
+      "Rate limits and usage tiers can be confusing for new developers",
+      "Documentation is spread across multiple sites and can be hard to navigate"
+    ],
+    "ideal_for": [
+      "<strong>Teams building multimodal applications</strong> that need text, image generation, and voice in one API",
+      "<strong>Developers who need fine-tuning</strong> to customize model behavior on proprietary data",
+      "<strong>High-volume applications</strong> where GPT-4o mini's low cost makes it viable at scale",
+      "<strong>Projects with existing OpenAI integrations</strong> where the ecosystem and tooling are already in place"
+    ],
+    "not_for": [
+      "<strong>Applications where reasoning quality is the top priority</strong> since Claude currently outperforms GPT-4o on complex analysis",
+      "<strong>Teams that need long-context processing</strong> because Claude's 200K window is larger than GPT-4o's 128K",
+      "<strong>Developers frustrated by frequent API changes</strong> where Anthropic's API has been more stable"
+    ],
+    "verdict": "<p>OpenAI's API is the Swiss Army knife of AI platforms. No other single API gives you text generation, image creation, speech-to-text, text-to-speech, embeddings, fine-tuning, and real-time voice all under one roof. The ecosystem is the largest in the industry, with more tutorials, libraries, and third-party integrations than any competitor.</p><p>The catch is that being broad doesn't mean being best. For pure text reasoning, Claude's models have pulled ahead on benchmarks and in real-world developer experience. Anthropic's API docs are cleaner, and the developer experience feels more polished. But if you need a single API that covers text, images, and voice, OpenAI is still the only option that does it all. Choose based on what you're building.</p>",
+    "content": "<h2>What is the OpenAI API?</h2>\n<p>The OpenAI API is the developer platform for accessing GPT-4o, DALL-E, Whisper, and OpenAI's other models. It's the most widely used AI API in the world, powering everything from ChatGPT-style chatbots to image generators, code assistants, and voice applications.</p>\n<p>What sets OpenAI apart from competitors like <a href=\"/tools/anthropic-api/\">Anthropic</a> is breadth. While Anthropic focuses on text (and vision), OpenAI covers text, images, audio, embeddings, fine-tuning, and real-time voice. If you need multiple AI capabilities in one place, OpenAI is the most complete platform.</p>\n\n<h2>Key Features</h2>\n\n<h3>GPT-4o and GPT-4o mini</h3>\n<p>GPT-4o is OpenAI's flagship multimodal model. It handles text, images, and audio in a single model. It's fast, capable, and the default choice for most applications. GPT-4o mini is the budget option at $0.15 per million input tokens, making it one of the cheapest capable models for high-volume classification, extraction, and simple generation tasks.</p>\n\n<h3>o1 (Reasoning Model)</h3>\n<p>The o1 model is OpenAI's answer to the demand for deeper reasoning. It \"thinks\" before responding, spending more compute on complex problems like math, logic, and multi-step analysis. It's more expensive but significantly better than GPT-4o for tasks that require careful thought. It competes directly with Claude Opus on reasoning quality.</p>\n\n<h3>DALL-E 3 (Image Generation)</h3>\n<p>DALL-E 3 generates images from text descriptions. It's tightly integrated into the API, so you can build applications that combine text analysis with image generation. Pricing ranges from $0.04 to $0.12 per image depending on resolution and quality settings.</p>\n\n<h3>Whisper (Speech-to-Text)</h3>\n<p>Whisper transcribes audio to text with high accuracy across multiple languages. At $0.006 per minute of audio, it's cheap enough for production transcription workloads. It handles accents, background noise, and technical vocabulary well.</p>\n\n<h3>Fine-Tuning</h3>\n<p>OpenAI lets you fine-tune GPT-4o mini and GPT-3.5 on your own data. This creates a custom model that performs better on your specific use case. It's useful for tasks where prompt engineering alone doesn't get the consistency you need. Anthropic doesn't offer fine-tuning as a self-service feature.</p>\n\n<h2>Pricing Details</h2>\n<p>OpenAI uses per-token pricing for text models and per-unit pricing for other capabilities. GPT-4o mini: $0.15/$0.60 per million tokens. GPT-4o: $2.50/$10 per million tokens. o1: $15/$60 per million tokens. DALL-E 3: $0.04-$0.12 per image. Whisper: $0.006 per minute. Fine-tuning has training costs on top of inference costs.</p>\n\n<h2>OpenAI API vs Anthropic API</h2>\n<p>See our full <a href=\"/tools/openai-api-vs-anthropic-api/\">OpenAI API vs Anthropic API comparison</a>. In short: OpenAI wins on platform breadth (images, voice, fine-tuning). Anthropic wins on reasoning quality and developer experience. GPT-4o mini and Haiku are comparable for budget tasks. For complex reasoning, Claude Opus currently has an edge over o1 in most real-world tests.</p>",
+    "related_tools": [
+      {
+        "name": "Anthropic API",
+        "icon": "🔮",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "name": "LangChain",
+        "icon": "🔗",
+        "url": "/tools/langchain/"
+      },
+      {
+        "name": "LlamaIndex",
+        "icon": "🦙",
+        "url": "/tools/llamaindex/"
+      },
+      {
+        "name": "Hugging Face",
+        "icon": "🤗",
+        "url": "/tools/hugging-face/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does the OpenAI API cost?",
+        "answer": "Pricing varies by model. GPT-4o mini starts at $0.15 per million input tokens (very cheap). GPT-4o costs $2.50/$10 per million tokens. o1 costs $15/$60 per million tokens. DALL-E 3 images cost $0.04-$0.12 each. You get free credits on signup."
+      },
+      {
+        "question": "OpenAI API vs Anthropic API: which should I use?",
+        "answer": "Use OpenAI if you need image generation, voice, fine-tuning, or the broadest ecosystem. Use Anthropic if reasoning quality, long context (200K tokens), and instruction following are your priorities. Many production systems use both, routing tasks to whichever model handles them better."
+      },
+      {
+        "question": "Can I fine-tune GPT-4o?",
+        "answer": "You can fine-tune GPT-4o mini and GPT-3.5 Turbo through the OpenAI API. Fine-tuning GPT-4o itself has more limited availability. Check OpenAI's current documentation for the latest fine-tuning options and pricing."
+      },
+      {
+        "question": "What's the difference between GPT-4o and o1?",
+        "answer": "GPT-4o is faster and cheaper, good for most tasks. o1 is a reasoning model that 'thinks' before answering, spending more compute on complex problems like math, logic, and multi-step analysis. o1 is more expensive but significantly better for tasks that require careful reasoning."
+      },
+      {
+        "question": "Does the OpenAI API have a free tier?",
+        "answer": "New accounts get free credits to experiment with. After those credits are used, it's pay-per-use with no monthly minimum. There's no ongoing free tier, but GPT-4o mini at $0.15 per million input tokens is cheap enough that costs stay low for development and testing."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "OpenAI API vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
+      },
+      {
+        "text": "Anthropic API Review",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "text": "ChatGPT Alternatives",
+        "url": "/tools/chatgpt-alternatives/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Web API (any platform)"
+  },
+  {
+    "slug": "hugging-face",
+    "name": "Hugging Face",
+    "icon": "🤗",
+    "url": "https://huggingface.co",
+    "category": "AI Model Hub",
+    "rating": "4.5",
+    "rating_stars": "★★★★½",
+    "title": "Hugging Face Review 2026",
+    "meta_description": "Hugging Face review: the model hub, Inference API, Spaces, and Transformers library. The open-source AI platform that powers most of the ML community.",
+    "og_description": "Honest review of Hugging Face, the open-source AI platform. Model hub, inference API, and why it's the GitHub of machine learning.",
+    "subtitle": "The GitHub of machine learning. 500K+ models, the Transformers library, and an inference API that makes deploying AI models surprisingly easy.",
+    "cta_text": "Explore Hugging Face",
+    "cta_url": "https://huggingface.co",
+    "comparison_cta": {
+      "text": "Read AI Tools Guide",
+      "url": "/blog/ai-tools-for-developers-2026/"
+    },
+    "pricing": [
+      {
+        "label": "Free",
+        "value": "Models, Spaces, limited inference"
+      },
+      {
+        "label": "Pro",
+        "value": "$9/mo"
+      },
+      {
+        "label": "Enterprise Hub",
+        "value": "$20/user/mo"
+      },
+      {
+        "label": "Inference Endpoints",
+        "value": "From $0.06/hr (CPU)"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Models",
+        "value": "500K+ on the Hub"
+      },
+      {
+        "label": "Type",
+        "value": "Model Hub + Inference"
+      },
+      {
+        "label": "Open Source",
+        "value": "Yes (Transformers library)"
+      },
+      {
+        "label": "Free Tier",
+        "value": "Yes (generous)"
+      }
+    ],
+    "pros": [
+      "Largest collection of open-source models, datasets, and spaces in one place",
+      "Transformers library is the industry standard for working with ML models",
+      "Inference API lets you use models without managing infrastructure",
+      "Strong community with model cards, discussions, and leaderboards"
+    ],
+    "cons": [
+      "Inference API free tier is rate-limited and not suitable for production traffic",
+      "Finding the right model among 500K+ options can be overwhelming for beginners",
+      "Dedicated endpoints get expensive for GPU-heavy models",
+      "Documentation quality varies wildly between community-contributed models"
+    ],
+    "ideal_for": [
+      "<strong>ML engineers and researchers</strong> who need access to open-source models for fine-tuning, evaluation, or deployment",
+      "<strong>Teams evaluating open-source vs. proprietary models</strong> who want to test Llama, Mistral, or Gemma before committing",
+      "<strong>Developers building with the Transformers library</strong> since Hugging Face is the official home and best-documented path",
+      "<strong>Anyone who needs quick model prototyping</strong> with Spaces and the free Inference API"
+    ],
+    "not_for": [
+      "<strong>Non-technical users</strong> who just want a chat interface (use ChatGPT or Claude instead)",
+      "<strong>Teams that only need API access to frontier models</strong> like GPT-4o or Claude (use <a href=\"/tools/openai-api/\">OpenAI</a> or <a href=\"/tools/anthropic-api/\">Anthropic</a> directly)",
+      "<strong>Production applications needing guaranteed uptime</strong> unless you're on paid Inference Endpoints"
+    ],
+    "verdict": "<p>Hugging Face is indispensable for anyone working with open-source AI models. The model hub is where Llama, Mistral, Gemma, and thousands of other models live. The Transformers library is the standard way to load, fine-tune, and deploy them. And the Inference API lets you test models without setting up infrastructure.</p><p>It's not a direct competitor to the Anthropic or OpenAI APIs. Those give you access to frontier models behind a simple API call. Hugging Face gives you access to the open-source ecosystem, which means more flexibility but also more responsibility for model selection, deployment, and optimization. If you're building with open-source models, Hugging Face is essential. If you just want the best model via an API, you don't need it.</p>",
+    "content": "<h2>What is Hugging Face?</h2>\n<p>Hugging Face is an AI platform built around open-source models and tools. Think of it as the GitHub of machine learning: a place where researchers and developers publish, share, and collaborate on AI models, datasets, and applications. It started with the Transformers library for NLP and has grown into the central hub for the open-source AI community.</p>\n<p>The platform has several parts: the Model Hub (500K+ models), Datasets (100K+ datasets), Spaces (hosted ML demos), the Inference API (use models via API), and the Transformers library (the Python framework that ties it all together).</p>\n\n<h2>Key Features</h2>\n\n<h3>Model Hub</h3>\n<p>The Model Hub hosts over 500,000 models, from massive language models like Llama 3 and Mistral to specialized models for text classification, translation, image generation, and audio processing. Each model has a model card with documentation, usage examples, and performance metrics. You can filter by task, framework, language, and license.</p>\n<p>For <a href=\"/glossary/prompt-engineering/\">prompt engineers</a> exploring alternatives to proprietary APIs, the Model Hub is where you compare open-source options. Models like Llama 3, Mistral, and Gemma are competitive with GPT-4o mini for many tasks at a fraction of the cost.</p>\n\n<h3>Transformers Library</h3>\n<p>The Transformers library is Hugging Face's open-source Python framework for loading and using ML models. It supports PyTorch, TensorFlow, and JAX. You can load a model in three lines of code, run inference, fine-tune on your data, and export for deployment. It's the de facto standard for working with transformer-based models.</p>\n\n<h3>Inference API</h3>\n<p>The Inference API lets you call models hosted on Hugging Face via HTTP requests, no infrastructure setup needed. The free tier is rate-limited but works for prototyping and testing. For production, Inference Endpoints give you dedicated compute starting at $0.06/hour for CPU instances and scaling up for GPU workloads.</p>\n\n<h3>Spaces</h3>\n<p>Spaces are hosted web apps where you can build and share ML demos using Gradio or Streamlit. They're free to create and run on CPU, with paid GPU options for heavier models. It's a great way to showcase a model or let non-technical stakeholders interact with your work.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The free tier includes model downloads, dataset access, Spaces hosting (CPU), and rate-limited Inference API access. The Pro plan at $9/month gets you faster inference, private models, and early access to new features. Enterprise Hub at $20/user/month adds SSO, audit logs, and resource groups. Inference Endpoints are pay-as-you-go starting at $0.06/hour for CPU.</p>",
+    "related_tools": [
+      {
+        "name": "OpenAI API",
+        "icon": "🟢",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "name": "Anthropic API",
+        "icon": "🔮",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "name": "LangChain",
+        "icon": "🔗",
+        "url": "/tools/langchain/"
+      },
+      {
+        "name": "LlamaIndex",
+        "icon": "🦙",
+        "url": "/tools/llamaindex/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hugging Face free?",
+        "answer": "The core platform is free: model downloads, dataset access, Spaces hosting on CPU, and rate-limited Inference API access. The Pro plan at $9/month adds faster inference and private repos. Dedicated Inference Endpoints are pay-as-you-go starting at $0.06/hour."
+      },
+      {
+        "question": "What's the Hugging Face Transformers library?",
+        "answer": "Transformers is an open-source Python library for loading, fine-tuning, and deploying ML models. It supports 500K+ models from the Hugging Face Hub and works with PyTorch, TensorFlow, and JAX. It's the industry standard for working with transformer-based models."
+      },
+      {
+        "question": "Hugging Face vs OpenAI: what's the difference?",
+        "answer": "OpenAI provides proprietary models (GPT-4o, DALL-E) via API. Hugging Face is a platform for open-source models (Llama, Mistral, Gemma) that you can download, modify, and self-host. They serve different needs: OpenAI for convenience and frontier quality, Hugging Face for flexibility and cost control."
+      },
+      {
+        "question": "Can I use Hugging Face for production applications?",
+        "answer": "Yes, through Inference Endpoints, which give you dedicated compute with guaranteed uptime. The free Inference API is too rate-limited for production. Many companies use Hugging Face models in production by self-hosting them on their own infrastructure."
+      },
+      {
+        "question": "What models are available on Hugging Face?",
+        "answer": "Over 500,000 models covering text generation (Llama, Mistral), image generation (Stable Diffusion), speech (Whisper), translation, classification, and more. You can filter by task type, framework, language, and license to find what you need."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "AI Tools for Developers 2026",
+        "url": "/blog/ai-tools-for-developers-2026/"
+      },
+      {
+        "text": "LangChain Review",
+        "url": "/tools/langchain/"
+      },
+      {
+        "text": "OpenAI API Review",
+        "url": "/tools/openai-api/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Web platform (any OS)"
+  },
+  {
+    "slug": "promptfoo",
+    "name": "Promptfoo",
+    "icon": "🧪",
+    "url": "https://promptfoo.dev",
+    "category": "AI Testing & Evaluation",
+    "rating": "4.4",
+    "rating_stars": "★★★★½",
+    "title": "Promptfoo Review 2026",
+    "meta_description": "Promptfoo review: the open-source LLM testing and evaluation tool. Compare prompts, models, and catch regressions before they hit production.",
+    "og_description": "Honest review of Promptfoo, the open-source tool for testing and evaluating LLM prompts. How it helps you ship better AI features, faster.",
+    "subtitle": "The open-source tool that brings unit testing discipline to LLM prompts. Compare models, catch regressions, and stop guessing whether your prompts actually work.",
+    "cta_text": "Try Promptfoo Free",
+    "cta_url": "https://promptfoo.dev",
+    "comparison_cta": {
+      "text": "Read AI Tools Guide",
+      "url": "/blog/ai-tools-for-developers-2026/"
+    },
+    "pricing": [
+      {
+        "label": "Open Source",
+        "value": "Free (self-hosted)"
+      },
+      {
+        "label": "Cloud",
+        "value": "Free tier available"
+      },
+      {
+        "label": "Team",
+        "value": "$50/mo"
+      },
+      {
+        "label": "Enterprise",
+        "value": "Custom pricing"
+      }
+    ],
+    "quick_facts": [
+      {
+        "label": "Type",
+        "value": "LLM Testing/Eval Tool"
+      },
+      {
+        "label": "Open Source",
+        "value": "Yes (MIT License)"
+      },
+      {
+        "label": "Language",
+        "value": "TypeScript/Node.js"
+      },
+      {
+        "label": "Supports",
+        "value": "OpenAI, Anthropic, local models"
+      }
+    ],
+    "pros": [
+      "Open source and free for self-hosted use with no feature restrictions",
+      "YAML-based config makes it easy to define test cases without writing code",
+      "Side-by-side model comparison shows you exactly which model performs better for your use case",
+      "CI/CD integration lets you catch prompt regressions before they reach production"
+    ],
+    "cons": [
+      "Learning curve for setting up assertion types and custom evaluators",
+      "Web UI is functional but not polished compared to commercial alternatives",
+      "Documentation could use more real-world examples for complex evaluation setups",
+      "Requires Node.js, which may not fit every team's stack"
+    ],
+    "ideal_for": [
+      "<strong>AI engineers shipping LLM features to production</strong> who need to test prompts systematically before deploying",
+      "<strong>Teams comparing models</strong> (Claude vs GPT-4o vs Llama) for specific tasks with real data",
+      "<strong>Prompt engineers</strong> who want to iterate on prompts with measurable results instead of gut feeling",
+      "<strong>DevOps teams</strong> who want LLM evaluations in their CI/CD pipeline alongside regular tests"
+    ],
+    "not_for": [
+      "<strong>Non-technical prompt writers</strong> who need a visual no-code interface for prompt testing",
+      "<strong>Teams that only use one model and one prompt</strong> where the evaluation overhead isn't worth it",
+      "<strong>Developers not using Node.js</strong> who'd need to add it to their stack just for testing"
+    ],
+    "verdict": "<p>Promptfoo fills a gap that most AI teams don't realize they have until something breaks in production. It brings the discipline of unit testing to LLM prompts: define your test cases, set your assertions, run them against multiple models, and get a clear comparison table showing what works and what doesn't.</p><p>The YAML-based configuration is a strength. You can define hundreds of test cases without writing code, share them across the team, and run them in CI. The side-by-side model comparison alone is worth the setup time if you're deciding between Claude, GPT-4o, and open-source alternatives for a specific task. It's not the flashiest tool in the AI stack, but it might be the one that saves you from the most embarrassing production failures.</p>",
+    "content": "<h2>What is Promptfoo?</h2>\n<p>Promptfoo is an open-source tool for testing and evaluating LLM prompts. Think of it as a testing framework specifically designed for AI: you define test cases with expected outputs, run them against one or more models, and get a comparison showing how each prompt and model combination performed.</p>\n<p>If you've ever changed a prompt, deployed it, and then discovered it broke something that used to work, Promptfoo is the tool that prevents that. It's the \"write tests before you refactor\" approach applied to prompt engineering.</p>\n\n<h2>Key Features</h2>\n\n<h3>YAML-Based Test Configuration</h3>\n<p>You define your prompts, test cases, and assertions in YAML files. Each test case has an input and expected behavior, which can be an exact match, a substring check, a regex pattern, a semantic similarity threshold, or a custom function. No code required for basic setups.</p>\n<p>A simple config might test whether your prompt correctly classifies customer support tickets. You define 50 sample tickets with their expected categories, run them against your prompt, and see the pass rate. Change the prompt, re-run, and compare.</p>\n\n<h3>Side-by-Side Model Comparison</h3>\n<p>Run the same test suite against multiple models simultaneously. Promptfoo generates a comparison table showing how Claude Sonnet, GPT-4o, GPT-4o mini, and Llama perform on your specific task. This is incredibly useful when you're deciding which model to use in production, because benchmarks don't always predict real-world performance on your data.</p>\n\n<h3>Assertion Types</h3>\n<p>Promptfoo supports a wide range of assertion types: exact match, contains, regex, JSON schema validation, cost thresholds, latency limits, and LLM-graded evaluations where you use one model to judge another's output. You can also write custom assertion functions in JavaScript or Python.</p>\n\n<h3>CI/CD Integration</h3>\n<p>Promptfoo runs from the command line and outputs results in formats compatible with CI systems. You can add prompt evaluation to your GitHub Actions, GitLab CI, or Jenkins pipeline. If a prompt change causes regressions, the build fails before it reaches production.</p>\n\n<h3>Red Teaming</h3>\n<p>Promptfoo includes a red teaming module that automatically generates adversarial inputs to test your prompts for jailbreaks, prompt injection, data leakage, and other security issues. For teams building customer-facing AI features, this catches vulnerabilities before users find them.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The core tool is open source under the MIT License. You can self-host it with all features at no cost. The cloud offering has a free tier for individual use. The Team plan at $50/month adds collaboration features, shared results, and team management. Enterprise pricing is custom.</p>\n<p>Since Promptfoo calls LLM APIs during evaluation, you'll also pay for the API tokens used in your tests. Running 100 test cases against GPT-4o costs roughly $0.50-$2.00 depending on prompt length.</p>\n\n<h2>How It Fits the AI Stack</h2>\n<p>Promptfoo sits between your development workflow and production deployment. It works with any LLM provider: <a href=\"/tools/openai-api/\">OpenAI</a>, <a href=\"/tools/anthropic-api/\">Anthropic</a>, local models via Ollama, and models on <a href=\"/tools/hugging-face/\">Hugging Face</a>. If you're using <a href=\"/tools/langchain/\">LangChain</a> or <a href=\"/tools/llamaindex/\">LlamaIndex</a>, Promptfoo can test the prompts those frameworks generate.</p>",
+    "related_tools": [
+      {
+        "name": "Anthropic API",
+        "icon": "🔮",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "name": "OpenAI API",
+        "icon": "🟢",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "name": "LangChain",
+        "icon": "🔗",
+        "url": "/tools/langchain/"
+      },
+      {
+        "name": "Hugging Face",
+        "icon": "🤗",
+        "url": "/tools/hugging-face/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Promptfoo free?",
+        "answer": "The core tool is open source (MIT License) and free to self-host with no feature restrictions. The cloud platform has a free tier for individual use. Team features cost $50/month. You'll also pay for LLM API tokens used during evaluations."
+      },
+      {
+        "question": "What LLM providers does Promptfoo support?",
+        "answer": "Promptfoo supports OpenAI, Anthropic (Claude), Google (Gemini), Azure OpenAI, AWS Bedrock, local models via Ollama, and any provider with an OpenAI-compatible API. You can test the same prompts across all of these simultaneously."
+      },
+      {
+        "question": "Do I need to know how to code to use Promptfoo?",
+        "answer": "Basic usage only requires writing YAML configuration files, no programming needed. For custom assertion functions or advanced evaluation logic, you'll need JavaScript or Python. The YAML-only path covers most common testing scenarios."
+      },
+      {
+        "question": "Can I use Promptfoo in my CI/CD pipeline?",
+        "answer": "Yes. Promptfoo is a CLI tool that outputs results in machine-readable formats. You can add it to GitHub Actions, GitLab CI, Jenkins, or any CI system. If test assertions fail, it returns a non-zero exit code to fail your build."
+      },
+      {
+        "question": "How is Promptfoo different from just manually testing prompts?",
+        "answer": "Manual testing doesn't scale and doesn't catch regressions. Promptfoo lets you define hundreds of test cases, run them automatically, compare results across models, and track changes over time. It's the difference between clicking through your app and having an automated test suite."
+      }
+    ],
+    "comparison_links": [
+      {
+        "text": "AI Tools for Developers 2026",
+        "url": "/blog/ai-tools-for-developers-2026/"
+      },
+      {
+        "text": "Anthropic API Review",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "text": "OpenAI API Review",
+        "url": "/tools/openai-api/"
+      }
+    ],
+    "date_published": "2026-02-20",
+    "operating_system": "Windows, macOS, Linux"
   }
 ]

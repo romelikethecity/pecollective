@@ -1,0 +1,522 @@
+[
+  {
+    "slug": "cursor-pricing",
+    "tool_name": "Cursor",
+    "tool_slug": "cursor",
+    "title": "Cursor Pricing 2026: Plans, Costs, and What You Actually Get",
+    "meta_description": "Cursor pricing breakdown for 2026. Free tier limits, Pro at $20/mo, Business at $40/mo. What each plan includes and which one you need.",
+    "og_description": "Cursor pricing breakdown for 2026. Compare free, Pro, and Business plans. Hidden costs and what you actually need.",
+    "h1": "Cursor Pricing: What Each Plan Actually Costs",
+    "intro": "Cursor has become the default AI code editor for a lot of developers, but the pricing has gotten more complex as they've added features. Here's what each tier actually includes, what the hidden costs are, and which plan makes sense for your situation.",
+    "tiers": [
+      {
+        "name": "Free / Hobby",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "2,000 code completions per month",
+          "50 slow premium requests per month",
+          "Access to cursor-small model",
+          "Basic chat and editing features"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "billing": "per month",
+        "highlights": [
+          "Unlimited code completions",
+          "500 fast premium requests per month (Claude, GPT-4)",
+          "Unlimited slow premium requests",
+          "Full Composer (multi-file editing)",
+          "Codebase-wide context (@codebase)",
+          "Priority support"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Business",
+        "price": "$40",
+        "billing": "per user/month",
+        "highlights": [
+          "Everything in Pro",
+          "Centralized team billing",
+          "Admin dashboard and usage analytics",
+          "Enforce privacy mode across org",
+          "SAML SSO",
+          "Priority support and onboarding"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "The 500 fast premium requests on Pro run out fast if you use Composer heavily. Each Composer session can burn 5-15 requests.",
+      "Slow requests work but add 15-30 seconds of latency per response. If speed matters, you'll hit the upgrade pressure.",
+      "No annual discount currently available. It's $20/mo flat.",
+      "If you want to use your own API keys (bring-your-own-key), that's supported but you pay OpenAI/Anthropic directly on top of the subscription."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Hobby developer or student",
+        "recommendation": "Free tier is fine for light use. You'll hit the 50 premium request limit within a few days of heavy coding, but it's enough to evaluate the tool."
+      },
+      {
+        "persona": "Professional developer (individual)",
+        "recommendation": "Pro is the sweet spot. $20/mo for unlimited completions and 500 fast requests covers most workflows. You'll only feel limited during intense multi-file refactoring sessions."
+      },
+      {
+        "persona": "Team or company",
+        "recommendation": "Business at $40/user/mo makes sense if you need admin controls, SSO, or enforced privacy mode. Otherwise, individual Pro licenses are cheaper."
+      }
+    ],
+    "bottom_line": "Cursor Pro at $20/mo is good value for what you get. The unlimited completions alone justify the cost if you code daily. The main complaint: 500 fast premium requests feels tight for heavy Composer users. If you're on the fence, the free tier gives you enough to decide.",
+    "internal_links": [
+      {"text": "Cursor vs Windsurf comparison", "url": "/tools/cursor-vs-windsurf/"},
+      {"text": "Cursor vs Claude Code", "url": "/tools/cursor-vs-claude-code/"},
+      {"text": "Best Cursor Alternatives", "url": "/tools/cursor-alternatives/"},
+      {"text": "Best AI Coding Assistants", "url": "/tools/best-ai-coding-assistants/"}
+    ],
+    "faqs": [
+      {
+        "question": "Is Cursor free?",
+        "answer": "Cursor has a free tier with 2,000 completions and 50 slow premium requests per month. It's enough to try the tool but not enough for daily professional use. Most developers upgrade to Pro ($20/mo) within a week."
+      },
+      {
+        "question": "Is Cursor Pro worth $20 a month?",
+        "answer": "For most professional developers, yes. Unlimited completions and 500 fast premium requests per month cover typical daily coding workflows. If AI-assisted coding saves you even 30 minutes per day, it pays for itself many times over."
+      },
+      {
+        "question": "What happens when you run out of fast premium requests?",
+        "answer": "You switch to slow requests, which use the same models but with lower priority. Response times go from 2-5 seconds to 15-30 seconds. You can still use all features, just slower. Requests reset monthly."
+      },
+      {
+        "question": "Can I use my own API keys with Cursor?",
+        "answer": "Yes. Cursor supports bring-your-own-key for OpenAI and Anthropic APIs. You still need a Cursor subscription for the editor features, but your API usage goes through your own account. This bypasses the premium request limits."
+      }
+    ],
+    "date_updated": "2026-02-15"
+  },
+  {
+    "slug": "github-copilot-pricing",
+    "tool_name": "GitHub Copilot",
+    "tool_slug": "github-copilot",
+    "title": "GitHub Copilot Pricing 2026: Free, Pro, Business, and Enterprise Plans",
+    "meta_description": "GitHub Copilot pricing for 2026. Free tier now available, Pro at $10/mo, Business at $19/mo, Enterprise at $39/mo. Compare all plans.",
+    "og_description": "GitHub Copilot pricing for 2026. Free, Pro, Business, and Enterprise plans compared with real costs and hidden limitations.",
+    "h1": "GitHub Copilot Pricing: All Plans Compared",
+    "intro": "GitHub Copilot now has four tiers, including a free option that didn't exist a year ago. The pricing is competitive, especially compared to Cursor, but the feature differences between tiers matter. Here's what you get at each level and whether the upgrades are worth it.",
+    "tiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "2,000 code completions per month",
+          "50 chat messages per month",
+          "Access to GPT-4o and Claude 3.5 Sonnet",
+          "Works in VS Code and JetBrains",
+          "Multi-file editing (limited)"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Pro",
+        "price": "$10",
+        "billing": "per month",
+        "highlights": [
+          "Unlimited code completions",
+          "Unlimited chat messages",
+          "Access to all models (GPT-4o, Claude, Gemini)",
+          "Agent mode for multi-step tasks",
+          "Full multi-file editing",
+          "Custom instructions"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Business",
+        "price": "$19",
+        "billing": "per user/month",
+        "highlights": [
+          "Everything in Pro",
+          "Organization-wide policy management",
+          "Audit logs",
+          "IP indemnification",
+          "Exclude specific files from Copilot",
+          "SAML SSO"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Enterprise",
+        "price": "$39",
+        "billing": "per user/month",
+        "highlights": [
+          "Everything in Business",
+          "Fine-tuned models on your codebase",
+          "Knowledge bases from your docs",
+          "Advanced security features",
+          "Dedicated support"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "The free tier's 50 chat messages per month is very limiting. You'll hit it in a single day of active use.",
+      "Pro at $10/mo is half the price of Cursor Pro, but the AI capabilities (especially multi-file editing) aren't as polished.",
+      "Business tier's main value is IP indemnification and audit logs. If you don't need those, Pro is sufficient.",
+      "Enterprise requires a GitHub Enterprise Cloud subscription, which adds another $21/user/mo to the total cost."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Individual developer",
+        "recommendation": "Pro at $10/mo is the best value in AI coding tools right now. Half the price of Cursor with unlimited completions and chat. The tradeoff is slightly less capable multi-file editing."
+      },
+      {
+        "persona": "Small team (under 20)",
+        "recommendation": "Business at $19/user/mo if you need audit logs or IP indemnification. Otherwise, individual Pro licenses work fine."
+      },
+      {
+        "persona": "Enterprise",
+        "recommendation": "Enterprise at $39/user/mo only if you need fine-tuned models on your codebase. The $21/user/mo GitHub Enterprise Cloud prerequisite makes the true cost $60/user/mo."
+      }
+    ],
+    "bottom_line": "GitHub Copilot Pro at $10/mo is the best value in AI coding assistants. It's half the price of Cursor Pro with solid capabilities. Cursor still wins on multi-file editing quality, but Copilot's GitHub integration and lower price make it the right choice for many developers.",
+    "internal_links": [
+      {"text": "Copilot vs Amazon Q Developer", "url": "/tools/copilot-vs-codewhisperer/"},
+      {"text": "Best AI Coding Assistants", "url": "/tools/best-ai-coding-assistants/"},
+      {"text": "Cursor pricing comparison", "url": "/tools/cursor-pricing/"},
+      {"text": "AI Coding Assistant glossary", "url": "/glossary/ai-coding-assistant/"}
+    ],
+    "faqs": [
+      {
+        "question": "Is GitHub Copilot free?",
+        "answer": "Yes, GitHub Copilot now has a free tier with 2,000 completions and 50 chat messages per month. It's enough to try the tool but not for daily professional use. The free tier includes access to GPT-4o and Claude 3.5 Sonnet."
+      },
+      {
+        "question": "Is GitHub Copilot worth $10 a month?",
+        "answer": "For most developers, absolutely. Unlimited completions and chat at $10/mo is the cheapest unlimited AI coding plan available. If you write code daily, it'll save you hours per week."
+      },
+      {
+        "question": "What's the difference between Copilot Business and Enterprise?",
+        "answer": "Enterprise adds fine-tuned models trained on your company's codebase, knowledge bases from internal docs, and advanced security features. It costs $39/user/mo but also requires a GitHub Enterprise Cloud subscription ($21/user/mo extra)."
+      },
+      {
+        "question": "How does Copilot pricing compare to Cursor?",
+        "answer": "Copilot Pro ($10/mo) is half the price of Cursor Pro ($20/mo). Both offer unlimited completions. Cursor has better multi-file editing (Composer) and codebase-wide context. Copilot has better GitHub integration. For pure value, Copilot wins on price."
+      }
+    ],
+    "date_updated": "2026-02-15"
+  },
+  {
+    "slug": "pinecone-pricing",
+    "tool_name": "Pinecone",
+    "tool_slug": "pinecone",
+    "title": "Pinecone Pricing 2026: Free Tier, Serverless, and Enterprise Costs",
+    "meta_description": "Pinecone pricing for 2026. Free tier limits, serverless costs starting at $0.33/1M reads, and enterprise pricing. Real cost examples included.",
+    "og_description": "Pinecone pricing breakdown for 2026. Free tier, serverless costs, and what you'll actually pay at different scales.",
+    "h1": "Pinecone Pricing: What It Actually Costs at Scale",
+    "intro": "Pinecone is the most popular managed vector database, but the pricing can be confusing. They've moved to a serverless model that's cheap for small workloads but can add up fast at scale. Here's what you'll actually pay.",
+    "tiers": [
+      {
+        "name": "Free (Starter)",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "Up to 2GB storage",
+          "5 serverless indexes",
+          "100 namespaces per index",
+          "Community support only",
+          "Single cloud region"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Standard",
+        "price": "Usage-based",
+        "billing": "pay as you go",
+        "highlights": [
+          "Unlimited storage",
+          "Unlimited indexes",
+          "Unlimited namespaces",
+          "Reads: $8.25/1M read units",
+          "Writes: $2/1M write units",
+          "Storage: $0.33/GB/month",
+          "Email support"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "billing": "annual contract",
+        "highlights": [
+          "Everything in Standard",
+          "Dedicated infrastructure",
+          "99.99% SLA",
+          "SSO and RBAC",
+          "Multi-region replication",
+          "Dedicated support engineer",
+          "Custom data retention"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Read units add up fast. A single query with metadata filtering can cost 5-10 read units, not 1. At 1M queries/day, you're looking at $250-500/month in reads alone.",
+      "Storage costs are low ($0.33/GB) but dimensions matter. 1536-dimension embeddings (OpenAI default) use 4x more storage than 384-dimension models.",
+      "Namespace operations are free but creating many small indexes is less efficient than fewer larger ones.",
+      "Data transfer costs aren't listed but apply when your app and Pinecone are in different cloud regions."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Prototyping or small project",
+        "recommendation": "Free tier handles up to ~100K vectors with 1536 dimensions. Good enough for prototypes and small production apps. You'll outgrow it when you hit the 2GB storage cap."
+      },
+      {
+        "persona": "Growing production app",
+        "recommendation": "Standard serverless starts cheap but watch your read units. Budget $50-200/month for a typical app with 1M vectors and moderate query volume."
+      },
+      {
+        "persona": "Large scale / enterprise",
+        "recommendation": "Enterprise pricing is negotiable. If you're spending $1,000+/month on Standard, negotiate an annual contract for volume discounts. Consider whether self-hosted alternatives like Weaviate or pgvector make more financial sense at your scale."
+      }
+    ],
+    "bottom_line": "Pinecone's free tier is generous for prototyping. Serverless pricing is competitive for small-to-medium workloads. But costs can surprise you at scale because read units are consumed faster than you'd expect. If you're processing millions of queries, run the numbers against self-hosted alternatives like pgvector or Weaviate before committing.",
+    "internal_links": [
+      {"text": "Pinecone review", "url": "/tools/pinecone/"},
+      {"text": "Pinecone vs Weaviate comparison", "url": "/tools/pinecone-vs-weaviate/"},
+      {"text": "Best Pinecone Alternatives", "url": "/tools/pinecone-alternatives/"},
+      {"text": "Vector Database glossary", "url": "/glossary/vector-database/"}
+    ],
+    "faqs": [
+      {
+        "question": "How much does Pinecone cost?",
+        "answer": "Pinecone has a free tier (2GB storage, 5 indexes) and a usage-based Standard plan. Standard costs $8.25 per 1M read units, $2 per 1M write units, and $0.33/GB/month for storage. A typical small app costs $50-200/month."
+      },
+      {
+        "question": "Is Pinecone free tier good enough for production?",
+        "answer": "For small apps with under 100K vectors, yes. The free tier gives you 2GB storage and 5 serverless indexes. The main limitation is community-only support and single-region deployment."
+      },
+      {
+        "question": "How does Pinecone pricing compare to Weaviate?",
+        "answer": "Pinecone is cheaper for small workloads (serverless pricing starts lower). Weaviate becomes cheaper at scale because you can self-host on your own infrastructure. For medium workloads, both cost roughly $100-300/month."
+      },
+      {
+        "question": "What are Pinecone read units?",
+        "answer": "Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query."
+      }
+    ],
+    "date_updated": "2026-02-15"
+  },
+  {
+    "slug": "openai-api-pricing",
+    "tool_name": "OpenAI API",
+    "tool_slug": "openai-api",
+    "title": "OpenAI API Pricing 2026: GPT-4, GPT-4o, and o1 Model Costs",
+    "meta_description": "OpenAI API pricing for 2026. GPT-4o at $2.50/1M input tokens, o1 at $15/1M tokens. Complete cost comparison with real-world usage examples.",
+    "og_description": "OpenAI API pricing for 2026. All models compared with real-world cost examples for production applications.",
+    "h1": "OpenAI API Pricing: What Each Model Actually Costs",
+    "intro": "OpenAI's pricing has gotten significantly cheaper since 2024, but the model lineup is confusing. GPT-4o, GPT-4o-mini, o1, o1-mini, o3-mini. Here's what each model costs, when to use which, and what a typical production app actually spends.",
+    "tiers": [
+      {
+        "name": "GPT-4o-mini",
+        "price": "$0.15 / $0.60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Cheapest GPT-4 class model",
+          "Good for classification, extraction, simple chat",
+          "128K context window",
+          "Fast response times (1-3 seconds)",
+          "Best cost-per-quality ratio for simple tasks"
+        ],
+        "popular": false
+      },
+      {
+        "name": "GPT-4o",
+        "price": "$2.50 / $10",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Flagship model for most use cases",
+          "Strong coding, analysis, and creative writing",
+          "128K context window",
+          "Vision capability (analyze images)",
+          "Function calling and structured output"
+        ],
+        "popular": true
+      },
+      {
+        "name": "o1-mini",
+        "price": "$3 / $12",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Reasoning-focused model",
+          "Better than GPT-4o on math, science, coding",
+          "Chain-of-thought reasoning built in",
+          "128K context window",
+          "Good for complex multi-step problems"
+        ],
+        "popular": false
+      },
+      {
+        "name": "o1",
+        "price": "$15 / $60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Most capable reasoning model",
+          "PhD-level performance on benchmarks",
+          "200K context window",
+          "Best for research, complex analysis",
+          "Function calling supported"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Output tokens cost 4x more than input tokens. Verbose prompts that generate long responses can blow up costs. Keep output instructions tight.",
+      "The o1 models use internal reasoning tokens that you pay for but don't see. A simple-looking o1 response might consume 5-10x more tokens than the visible output.",
+      "Batch API gives you 50% off but adds latency (results within 24 hours). Worth it for non-real-time processing.",
+      "Rate limits on free tier are tight: 3 RPM for o1, 500 RPM for GPT-4o-mini. You need to pay $5+ to unlock higher limits.",
+      "Embedding models (text-embedding-3-small at $0.02/1M tokens) are very cheap. Don't overlook them for RAG pipelines."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Chatbot or simple automation",
+        "recommendation": "GPT-4o-mini at $0.15/$0.60 per 1M tokens. It's 17x cheaper than GPT-4o and handles classification, extraction, and simple conversations well. Start here and upgrade only when quality matters."
+      },
+      {
+        "persona": "Production AI application",
+        "recommendation": "GPT-4o at $2.50/$10 per 1M tokens for your main model. Route simple tasks to GPT-4o-mini to save costs. A typical app processing 10K requests/day costs $30-100/month."
+      },
+      {
+        "persona": "Research or complex reasoning",
+        "recommendation": "o1-mini for most reasoning tasks ($3/$12 per 1M). Only use full o1 ($15/$60) when you need maximum accuracy on very hard problems. The cost difference is 5x."
+      }
+    ],
+    "bottom_line": "GPT-4o-mini is the best value in AI APIs. At $0.15/1M input tokens, it's practically free for most use cases. GPT-4o hits the sweet spot for production apps that need quality. Use o1 models sparingly for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task.",
+    "internal_links": [
+      {"text": "OpenAI API vs Anthropic API", "url": "/tools/openai-api-vs-anthropic-api/"},
+      {"text": "Best LLM Frameworks", "url": "/tools/best-llm-frameworks/"},
+      {"text": "LLM glossary", "url": "/glossary/large-language-model/"},
+      {"text": "RAG architecture guide", "url": "/blog/rag-architecture-guide/"}
+    ],
+    "faqs": [
+      {
+        "question": "How much does the OpenAI API cost?",
+        "answer": "It depends on the model. GPT-4o-mini costs $0.15 per 1M input tokens (cheapest). GPT-4o costs $2.50 per 1M input tokens (most popular). o1 costs $15 per 1M input tokens (most capable). Output tokens cost 4x more than input across all models."
+      },
+      {
+        "question": "What does a typical OpenAI API app cost per month?",
+        "answer": "A small chatbot processing 1,000 conversations/day with GPT-4o-mini costs about $5-15/month. A production app with 10,000 daily requests using GPT-4o costs $30-100/month. Costs scale linearly with usage."
+      },
+      {
+        "question": "Is GPT-4o-mini good enough for production?",
+        "answer": "For many use cases, yes. It handles classification, extraction, summarization, and simple chat well. It struggles with complex reasoning, nuanced writing, and multi-step analysis. Test your specific use case before deciding."
+      },
+      {
+        "question": "How does OpenAI pricing compare to Anthropic?",
+        "answer": "Claude 3.5 Sonnet ($3/$15 per 1M tokens) is slightly more expensive than GPT-4o ($2.50/$10) but many developers find it produces better results for coding and analysis. Claude 3.5 Haiku ($0.25/$1.25) competes with GPT-4o-mini ($0.15/$0.60)."
+      }
+    ],
+    "date_updated": "2026-02-15"
+  },
+  {
+    "slug": "anthropic-api-pricing",
+    "tool_name": "Anthropic API (Claude)",
+    "tool_slug": "anthropic-api",
+    "title": "Anthropic API Pricing 2026: Claude 4, Claude 3.5, and Haiku Costs",
+    "meta_description": "Anthropic Claude API pricing for 2026. Claude 3.5 Sonnet at $3/1M input tokens, Haiku at $0.25/1M. Complete pricing breakdown with real cost examples.",
+    "og_description": "Anthropic Claude API pricing for 2026. All Claude models compared with real-world cost examples for production apps.",
+    "h1": "Anthropic API Pricing: What Claude Actually Costs",
+    "intro": "Anthropic's Claude has become the go-to model for many developers, especially for coding and analysis tasks. The pricing is straightforward compared to OpenAI's growing model lineup. Here's what each Claude model costs and how to optimize your spend.",
+    "tiers": [
+      {
+        "name": "Claude 3.5 Haiku",
+        "price": "$0.25 / $1.25",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Fastest Claude model",
+          "Good for classification and extraction",
+          "200K context window",
+          "Near-instant responses",
+          "Best for high-volume, simple tasks"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Claude 3.5 Sonnet",
+        "price": "$3 / $15",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Best balance of quality and cost",
+          "Excellent at coding, analysis, writing",
+          "200K context window",
+          "Tool use and function calling",
+          "Most popular Claude model"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Claude 3 Opus",
+        "price": "$15 / $75",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Most capable Claude model",
+          "Best for complex reasoning tasks",
+          "200K context window",
+          "Highest accuracy on benchmarks",
+          "Use for tasks where quality is paramount"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Output tokens are 5x more expensive than input tokens (compared to OpenAI's 4x). Long-form generation costs add up faster with Claude.",
+      "Prompt caching saves 90% on cached input tokens. If you're sending the same system prompt repeatedly, enable caching.",
+      "The Message Batches API gives you 50% off for non-real-time processing. Good for batch analysis jobs.",
+      "Rate limits on the free tier are strict: 5 RPM for Sonnet. The lowest paid tier ($0 minimum, pay-as-you-go) unlocks much higher limits.",
+      "Extended thinking in Claude 4 uses additional tokens for internal reasoning. Budget 2-5x your visible output tokens."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "High-volume simple tasks",
+        "recommendation": "Haiku at $0.25/$1.25 per 1M tokens. It's fast, cheap, and handles classification, extraction, and simple Q&A well. Not as smart as Sonnet but 12x cheaper."
+      },
+      {
+        "persona": "Production coding/analysis app",
+        "recommendation": "Sonnet at $3/$15 per 1M tokens. It's the default choice for most developers. Excellent at code generation, document analysis, and structured output. A typical production app costs $50-200/month."
+      },
+      {
+        "persona": "Complex reasoning or research",
+        "recommendation": "Opus at $15/$75 per 1M tokens. Only use when Sonnet isn't good enough. The 5x price premium is hard to justify unless you're working on genuinely complex analysis."
+      }
+    ],
+    "bottom_line": "Claude 3.5 Sonnet at $3/$15 per 1M tokens is the model most developers should use. It's slightly more expensive than GPT-4o but many teams find the quality worth the premium, especially for coding. Route simple tasks to Haiku to keep costs down. Use prompt caching aggressively to cut your bill.",
+    "internal_links": [
+      {"text": "OpenAI API vs Anthropic API", "url": "/tools/openai-api-vs-anthropic-api/"},
+      {"text": "ChatGPT Alternatives", "url": "/tools/chatgpt-alternatives/"},
+      {"text": "Context window glossary", "url": "/glossary/context-window/"},
+      {"text": "Fine-tuning vs RAG guide", "url": "/blog/fine-tuning-vs-rag/"}
+    ],
+    "faqs": [
+      {
+        "question": "How much does the Anthropic Claude API cost?",
+        "answer": "Claude 3.5 Haiku costs $0.25/1M input tokens (cheapest). Claude 3.5 Sonnet costs $3/1M input tokens (most popular). Claude 3 Opus costs $15/1M input tokens (most capable). Output tokens are 5x more expensive across all models."
+      },
+      {
+        "question": "Is Claude cheaper than GPT-4?",
+        "answer": "Claude 3.5 Sonnet ($3/$15) is slightly more expensive than GPT-4o ($2.50/$10) per million tokens. Claude Haiku ($0.25/$1.25) is more expensive than GPT-4o-mini ($0.15/$0.60). OpenAI wins on raw price, but many developers prefer Claude's output quality."
+      },
+      {
+        "question": "What is prompt caching and how does it save money?",
+        "answer": "Prompt caching stores your system prompt and reuses it across requests. Cached input tokens cost 90% less. If your system prompt is 2,000 tokens and you make 10,000 requests/day, caching saves roughly $50/month with Sonnet."
+      },
+      {
+        "question": "Which Claude model should I use?",
+        "answer": "Start with Sonnet for most tasks. Drop to Haiku for simple classification, extraction, or high-volume operations. Only upgrade to Opus when Sonnet consistently fails on your specific use case. Most teams use Sonnet for 80% of requests and Haiku for 20%."
+      }
+    ],
+    "date_updated": "2026-02-15"
+  }
+]

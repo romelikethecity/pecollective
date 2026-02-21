@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Hugging Face review: the model hub, Inference API, Spaces, and Transformers library. The open-source AI platform that powers most of the ML community.">
+
+  <title>Hugging Face Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="Hugging Face Review 2026">
+  <meta property="og:description" content="Honest review of Hugging Face, the open-source AI platform. Model hub, inference API, and why it's the GitHub of machine learning.">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/hugging-face/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Hugging Face Review 2026">
+  <meta name="twitter:description" content="Honest review of Hugging Face, the open-source AI platform. Model hub, inference API, and why it's the GitHub of machine learning.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hugging Face",
+            "item": "https://pecollective.com/tools/hugging-face/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is Hugging Face free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The core platform is free: model downloads, dataset access, Spaces hosting on CPU, and rate-limited Inference API access. The Pro plan at $9/month adds faster inference and private repos. Dedicated Inference Endpoints are pay-as-you-go starting at $0.06/hour."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the Hugging Face Transformers library?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Transformers is an open-source Python library for loading, fine-tuning, and deploying ML models. It supports 500K+ models from the Hugging Face Hub and works with PyTorch, TensorFlow, and JAX. It's the industry standard for working with transformer-based models."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hugging Face vs OpenAI: what's the difference?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "OpenAI provides proprietary models (GPT-4o, DALL-E) via API. Hugging Face is a platform for open-source models (Llama, Mistral, Gemma) that you can download, modify, and self-host. They serve different needs: OpenAI for convenience and frontier quality, Hugging Face for flexibility and cost control."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I use Hugging Face for production applications?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, through Inference Endpoints, which give you dedicated compute with guaranteed uptime. The free Inference API is too rate-limited for production. Many companies use Hugging Face models in production by self-hosting them on their own infrastructure."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What models are available on Hugging Face?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Over 500,000 models covering text generation (Llama, Mistral), image generation (Stable Diffusion), speech (Whisper), translation, classification, and more. You can filter by task type, framework, language, and license to find what you need."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Hugging Face",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web platform (any OS)",
+    "url": "https://huggingface.co",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Hugging Face is indispensable for anyone working with open-source AI models. The model hub is where Llama, Mistral, Gemma, and thousands of other models live. The Transformers library is the standard way to load, fine-tune, and deploy them. And the Inference API lets you test models without setting up infrastructure. It's not a direct competitor to the Anthropic or OpenAI APIs. Those give you access to frontier models behind a simple API call. Hugging Face gives you access to the open-source eco"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🤗</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">AI Model Hub</span>
+            <h1 class="tool-review__title">Hugging Face Review 2026</h1>
+            <p class="tool-review__subtitle">The GitHub of machine learning. 500K+ models, the Transformers library, and an inference API that makes deploying AI models surprisingly easy.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://huggingface.co" target="_blank" rel="noopener" class="btn btn--primary">Explore Hugging Face &rarr;</a>
+              <a href="/blog/ai-tools-for-developers-2026/" class="btn btn--secondary">Read AI Tools Guide</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is Hugging Face?</h2>
+<p>Hugging Face is an AI platform built around open-source models and tools. Think of it as the GitHub of machine learning: a place where researchers and developers publish, share, and collaborate on AI models, datasets, and applications. It started with the Transformers library for NLP and has grown into the central hub for the open-source AI community.</p>
+<p>The platform has several parts: the Model Hub (500K+ models), Datasets (100K+ datasets), Spaces (hosted ML demos), the Inference API (use models via API), and the Transformers library (the Python framework that ties it all together).</p>
+
+<h2>Key Features</h2>
+
+<h3>Model Hub</h3>
+<p>The Model Hub hosts over 500,000 models, from massive language models like Llama 3 and Mistral to specialized models for text classification, translation, image generation, and audio processing. Each model has a model card with documentation, usage examples, and performance metrics. You can filter by task, framework, language, and license.</p>
+<p>For <a href="/glossary/prompt-engineering/">prompt engineers</a> exploring alternatives to proprietary APIs, the Model Hub is where you compare open-source options. Models like Llama 3, Mistral, and Gemma are competitive with GPT-4o mini for many tasks at a fraction of the cost.</p>
+
+<h3>Transformers Library</h3>
+<p>The Transformers library is Hugging Face's open-source Python framework for loading and using ML models. It supports PyTorch, TensorFlow, and JAX. You can load a model in three lines of code, run inference, fine-tune on your data, and export for deployment. It's the de facto standard for working with transformer-based models.</p>
+
+<h3>Inference API</h3>
+<p>The Inference API lets you call models hosted on Hugging Face via HTTP requests, no infrastructure setup needed. The free tier is rate-limited but works for prototyping and testing. For production, Inference Endpoints give you dedicated compute starting at $0.06/hour for CPU instances and scaling up for GPU workloads.</p>
+
+<h3>Spaces</h3>
+<p>Spaces are hosted web apps where you can build and share ML demos using Gradio or Streamlit. They're free to create and run on CPU, with paid GPU options for heavier models. It's a great way to showcase a model or let non-technical stakeholders interact with your work.</p>
+
+<h2>Pricing Breakdown</h2>
+<p>The free tier includes model downloads, dataset access, Spaces hosting (CPU), and rate-limited Inference API access. The Pro plan at $9/month gets you faster inference, private models, and early access to new features. Enterprise Hub at $20/user/month adds SSO, audit logs, and resource groups. Inference Endpoints are pay-as-you-go starting at $0.06/hour for CPU.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Largest collection of open-source models, datasets, and spaces in one place</li>
+                  <li>Transformers library is the industry standard for working with ML models</li>
+                  <li>Inference API lets you use models without managing infrastructure</li>
+                  <li>Strong community with model cards, discussions, and leaderboards</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>Inference API free tier is rate-limited and not suitable for production traffic</li>
+                  <li>Finding the right model among 500K+ options can be overwhelming for beginners</li>
+                  <li>Dedicated endpoints get expensive for GPU-heavy models</li>
+                  <li>Documentation quality varies wildly between community-contributed models</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use Hugging Face?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>ML engineers and researchers</strong> who need access to open-source models for fine-tuning, evaluation, or deployment</li>
+              <li><strong>Teams evaluating open-source vs. proprietary models</strong> who want to test Llama, Mistral, or Gemma before committing</li>
+              <li><strong>Developers building with the Transformers library</strong> since Hugging Face is the official home and best-documented path</li>
+              <li><strong>Anyone who needs quick model prototyping</strong> with Spaces and the free Inference API</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Non-technical users</strong> who just want a chat interface (use ChatGPT or Claude instead)</li>
+              <li><strong>Teams that only need API access to frontier models</strong> like GPT-4o or Claude (use <a href="/tools/openai-api/">OpenAI</a> or <a href="/tools/anthropic-api/">Anthropic</a> directly)</li>
+              <li><strong>Production applications needing guaranteed uptime</strong> unless you're on paid Inference Endpoints</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>Hugging Face is indispensable for anyone working with open-source AI models. The model hub is where Llama, Mistral, Gemma, and thousands of other models live. The Transformers library is the standard way to load, fine-tune, and deploy them. And the Inference API lets you test models without setting up infrastructure.</p><p>It's not a direct competitor to the Anthropic or OpenAI APIs. Those give you access to frontier models behind a simple API call. Hugging Face gives you access to the open-source ecosystem, which means more flexibility but also more responsibility for model selection, deployment, and optimization. If you're building with open-source models, Hugging Face is essential. If you just want the best model via an API, you don't need it.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★½</span>
+                <span class="rating__value">4.5/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Free</span>
+                  <span class="pricing-row__value">Models, Spaces, limited inference</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Pro</span>
+                  <span class="pricing-row__value">$9/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Enterprise Hub</span>
+                  <span class="pricing-row__value">$20/user/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Inference Endpoints</span>
+                  <span class="pricing-row__value">From $0.06/hr (CPU)</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://huggingface.co" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get Hugging Face &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Models</span>
+                  <span class="pricing-row__value">500K+ on the Hub</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Type</span>
+                  <span class="pricing-row__value">Model Hub + Inference</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Open Source</span>
+                  <span class="pricing-row__value">Yes (Transformers library)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Free Tier</span>
+                  <span class="pricing-row__value">Yes (generous)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/openai-api/">🟢 OpenAI API</a>
+                <a href="/tools/anthropic-api/">🔮 Anthropic API</a>
+                <a href="/tools/langchain/">🔗 LangChain</a>
+                <a href="/tools/llamaindex/">🦙 LlamaIndex</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is Hugging Face free?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">The core platform is free: model downloads, dataset access, Spaces hosting on CPU, and rate-limited Inference API access. The Pro plan at $9/month adds faster inference and private repos. Dedicated Inference Endpoints are pay-as-you-go starting at $0.06/hour.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What's the Hugging Face Transformers library?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Transformers is an open-source Python library for loading, fine-tuning, and deploying ML models. It supports 500K+ models from the Hugging Face Hub and works with PyTorch, TensorFlow, and JAX. It's the industry standard for working with transformer-based models.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Hugging Face vs OpenAI: what's the difference?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">OpenAI provides proprietary models (GPT-4o, DALL-E) via API. Hugging Face is a platform for open-source models (Llama, Mistral, Gemma) that you can download, modify, and self-host. They serve different needs: OpenAI for convenience and frontier quality, Hugging Face for flexibility and cost control.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Can I use Hugging Face for production applications?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes, through Inference Endpoints, which give you dedicated compute with guaranteed uptime. The free Inference API is too rate-limited for production. Many companies use Hugging Face models in production by self-hosting them on their own infrastructure.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What models are available on Hugging Face?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Over 500,000 models covering text generation (Llama, Mistral), image generation (Stable Diffusion), speech (Whisper), translation, classification, and more. You can filter by task type, framework, language, and license to find what you need.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

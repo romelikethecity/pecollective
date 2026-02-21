@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Vector databases explained for AI practitioners. What they do, how embeddings work, Pinecone vs Weaviate vs Chroma vs pgvector comparison, and when regular Postgres is enough.">
+
+  <title>Vector Databases Explained: When You Need One (and When You Don't) | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/vector-database-guide/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/vector-database-guide/">
+  <meta property="og:title" content="Vector Databases Explained: When You Need One and When You Don't">
+  <meta property="og:description" content="A practical guide to vector databases. Embeddings, similarity search, Pinecone vs Weaviate vs Chroma vs pgvector, and when you don't need one at all.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Vector Databases Explained: When You Need One and When You Don't">
+  <meta name="twitter:description" content="A practical guide to vector databases. Embeddings, similarity search, Pinecone vs Weaviate vs Chroma vs pgvector, and when you don't need one at all.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vector Databases Explained",
+      "item": "https://pecollective.com/blog/vector-database-guide/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vector Databases Explained: When You Need One and When You Don't",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-15",
+  "description": "Vector databases explained for AI practitioners. What they do, how embeddings work, Pinecone vs Weaviate vs Chroma vs pgvector comparison, and when regular Postgres is enough."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a vector database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A vector database stores numerical representations (embeddings) of text, images, or other data and enables fast similarity search. Instead of exact-match queries like traditional databases, vector databases find items that are semantically similar to a query. They're the retrieval layer in RAG (retrieval-augmented generation) systems that power AI applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a vector database for RAG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. If your document corpus is under 100K documents and you already use PostgreSQL, pgvector (a free Postgres extension) handles vector similarity search well. For prototyping, Chroma runs in-process with zero setup. Dedicated vector databases like Pinecone or Weaviate become worth the added complexity at 5M+ vectors or when you need sub-10ms query latency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which vector database should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For prototyping: Chroma (simplest setup). For production with Postgres: pgvector (no new infrastructure). For managed production without Postgres: Pinecone (easiest) or Weaviate Cloud (best hybrid search). For large scale (5M+ vectors): Pinecone or Weaviate. For on-premises: self-hosted Weaviate or pgvector. Start simple and migrate if you outgrow it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do vector databases cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "pgvector is free (Postgres extension). Chroma is free and open source. Pinecone starts at $70/month (free tier available). Weaviate Cloud starts around $25/month for small workloads (free sandbox available). At scale with millions of vectors and high query volume, costs for managed services can reach $500-$2,000+/month. Self-hosting shifts costs to your own infrastructure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use PostgreSQL instead of a vector database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for most use cases. pgvector adds vector similarity search to Postgres with HNSW indexing. It handles up to 5M vectors with acceptable latency (30-80ms at 1M vectors). The advantage is keeping vectors alongside your relational data in one database. The tradeoff is slower performance at very large scale compared to purpose-built vector databases."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Technical Guide</span>
+          <h1 class="article-header__title">Vector Databases Explained: When You Need One (and When You Don't)</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; February 15, 2026 &middot; 14 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>Vector databases became the "must-have" infrastructure for AI applications in 2024. Every <a href="/glossary/rag/">RAG</a> tutorial starts with "first, set up your vector database." But here's what most tutorials won't tell you: many AI applications don't need a dedicated vector database at all.</p>
+
+<p>This guide explains what vector databases actually do, compares the major options with real pricing and performance data, and gives you a clear framework for deciding whether you need one.</p>
+
+<h2>What Vector Databases Actually Do</h2>
+
+<h3>The Problem They Solve</h3>
+
+<p>Traditional databases are built for exact matches. You search for a customer ID, a product name, or a date range, and the database returns rows that match precisely. But AI applications need similarity search: "find the documents most similar to this question."</p>
+
+<p>Similarity search works on embeddings: numerical representations of text (or images, or any data) where similar items are close together in high-dimensional space. The sentence "How do I reset my password?" and "I forgot my login credentials" have different words but similar embeddings because they mean similar things.</p>
+
+<p>A <a href="/glossary/vector-database/">vector database</a> stores these embeddings and finds the closest ones to a query vector quickly, even across millions of items. That's the core functionality. Everything else is an optimization on top.</p>
+
+<h3>How Embeddings Work</h3>
+
+<p>An embedding model (like OpenAI's text-embedding-3-small or Cohere's embed-v3) converts text into a fixed-length array of numbers (typically 384-1536 dimensions). Two pieces of text with similar meaning produce vectors that are close together when you measure distance between them.</p>
+
+<p>The most common distance metrics are:</p>
+<ul>
+  <li><strong>Cosine similarity:</strong> Measures the angle between vectors. Most popular for text similarity. Score ranges from -1 (opposite) to 1 (identical).</li>
+  <li><strong>Euclidean distance:</strong> Straight-line distance between points. Works well when vector magnitude matters.</li>
+  <li><strong>Dot product:</strong> Computationally fastest. Works well with normalized vectors (which most embedding models produce).</li>
+</ul>
+
+<p>For most text-based AI applications, cosine similarity with a standard embedding model works well. Don't overthink the distance metric choice unless you're seeing specific retrieval quality issues.</p>
+
+<h2>The Major Vector Databases Compared</h2>
+
+<h3>Pinecone</h3>
+
+<p>The most popular managed vector database. Fully hosted, no infrastructure to manage.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Pinecone</div>
+  <p class="technique-card__description">
+    <strong>Pricing:</strong> Free tier (1 index, 2GB storage). Starter at $70/month. Standard from $231/month. Enterprise custom pricing.<br>
+    <strong>Strengths:</strong> Easiest setup (5 minutes to first query). Excellent documentation. Reliable uptime. Metadata filtering built in.<br>
+    <strong>Weaknesses:</strong> Vendor lock-in. Gets expensive at scale. Limited query flexibility compared to self-hosted options.<br>
+    <strong>Best for:</strong> Teams that want zero infrastructure management. Startups and mid-size companies building RAG applications.
+  </p>
+</div>
+
+<h3>Weaviate</h3>
+
+<p>Open-source vector database with both self-hosted and managed cloud options.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Weaviate</div>
+  <p class="technique-card__description">
+    <strong>Pricing:</strong> Free (self-hosted). Weaviate Cloud: free sandbox, Standard from $25/month for small workloads. Enterprise pricing scales with usage.<br>
+    <strong>Strengths:</strong> Open source (can self-host for free). Built-in hybrid search (vector + keyword). GraphQL API. Supports multiple embedding models natively.<br>
+    <strong>Weaknesses:</strong> Self-hosting requires DevOps knowledge. Cloud pricing can surprise at scale. More complex setup than Pinecone.<br>
+    <strong>Best for:</strong> Teams that want hybrid search or need to self-host for compliance reasons.
+  </p>
+</div>
+
+<h3>Chroma</h3>
+
+<p>Lightweight, developer-friendly vector database designed for rapid prototyping.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Chroma</div>
+  <p class="technique-card__description">
+    <strong>Pricing:</strong> Free and open source. Hosted offering available with free tier.<br>
+    <strong>Strengths:</strong> Simplest API of any vector database (4 main functions). Runs in-process (no server needed for development). Great Python integration. Very fast for small-medium datasets.<br>
+    <strong>Weaknesses:</strong> Not designed for large-scale production (millions of vectors). Limited enterprise features. Less mature than Pinecone or Weaviate.<br>
+    <strong>Best for:</strong> Prototyping, small to medium applications (under 1M vectors), developers who want the simplest possible setup.
+  </p>
+</div>
+
+<h3>pgvector (PostgreSQL Extension)</h3>
+
+<p>A PostgreSQL extension that adds vector similarity search to your existing Postgres database.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">pgvector</div>
+  <p class="technique-card__description">
+    <strong>Pricing:</strong> Free (it's an extension for Postgres you already run). Managed Postgres services (Supabase, Neon, RDS) support it at their standard pricing.<br>
+    <strong>Strengths:</strong> No new infrastructure. Vectors live alongside your relational data. Full SQL for querying. ACID transactions. You already know Postgres.<br>
+    <strong>Weaknesses:</strong> Slower than dedicated vector databases at scale (10M+ vectors). IVFFlat index requires manual tuning. HNSW index is better but uses more memory.<br>
+    <strong>Best for:</strong> Teams already using Postgres. Applications under 5M vectors. Situations where you need vectors + relational data in the same query.
+  </p>
+</div>
+
+<h2>Performance Comparison</h2>
+
+<p>Here are realistic numbers for a common use case: 1M document chunks, 1536-dimension embeddings, returning top 10 results.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Query Latency (p95, 1M vectors)</div>
+  <p class="technique-card__description">
+    <strong>Pinecone:</strong> 15-30ms<br>
+    <strong>Weaviate (cloud):</strong> 20-50ms<br>
+    <strong>Chroma (in-process):</strong> 10-25ms<br>
+    <strong>pgvector (HNSW index):</strong> 30-80ms<br><br>
+    All of these are fast enough for production RAG applications where the LLM generation step takes 500-3000ms. The vector search latency is rarely your bottleneck.
+  </p>
+</div>
+
+<h2>When You Need a Dedicated Vector Database</h2>
+
+<p>You actually need a dedicated vector database when:</p>
+
+<h3>You have more than 5 million vectors</h3>
+<p>At this scale, pgvector performance degrades noticeably, and dedicated vector databases maintain consistent latency through purpose-built indexing. If your document corpus is large (millions of pages), a dedicated solution makes sense.</p>
+
+<h3>You need sub-10ms query latency</h3>
+<p>Real-time applications like autocomplete or live recommendations need the fastest possible retrieval. Dedicated vector databases with in-memory indexing deliver consistent single-digit millisecond latency that pgvector can't match.</p>
+
+<h3>You're doing heavy vector operations</h3>
+<p>If your workload is primarily vector similarity search with high query volume (thousands of queries per second), a purpose-built database handles the load more efficiently. Postgres is general-purpose, which means it's adequate at vector operations but not optimal.</p>
+
+<h2>When You Don't Need One</h2>
+
+<p>This is the section most vector database marketing materials skip. You probably don't need a dedicated vector database when:</p>
+
+<h3>Your corpus is under 100K documents</h3>
+<p>For small to medium document sets, pgvector works perfectly well. Query latency at 100K vectors is under 20ms with a properly configured HNSW index. You avoid adding a new piece of infrastructure to your stack, which means less to monitor, maintain, and pay for.</p>
+
+<h3>You already use Postgres</h3>
+<p>If your application already runs on Postgres (and most web applications do), pgvector keeps everything in one database. Your vectors join with your relational data in a single query. You don't need a separate data pipeline to sync between systems. For most startups and early-stage products, this simplicity is worth more than the performance gains of a dedicated solution.</p>
+
+<h3>You're prototyping</h3>
+<p>During prototyping and early development, use Chroma (in-process, zero setup) or pgvector (if you already have Postgres). Don't add infrastructure complexity before you've validated that your RAG approach works. You can migrate to a dedicated vector database later if you need the scale.</p>
+
+<h3>Your retrieval quality issues aren't about the database</h3>
+<p>This is the most common mistake. Teams switch vector databases hoping to improve RAG quality. But poor retrieval quality is almost always a chunking problem, an embedding model problem, or a query formulation problem. The database just stores and retrieves vectors. Switching from pgvector to Pinecone won't fix a bad chunking strategy.</p>
+
+<h2>Migration Considerations</h2>
+
+<p>Starting with pgvector and migrating later is a valid strategy. Here's what the migration involves:</p>
+
+<ul>
+  <li><strong>Re-embed your documents:</strong> You might want to use a different embedding model anyway. Budget a few dollars for the embedding API calls.</li>
+  <li><strong>Update your retrieval code:</strong> Swap the query logic from SQL to the new database's SDK. Typically 50-200 lines of code.</li>
+  <li><strong>Set up the new infrastructure:</strong> Managed services (Pinecone, Weaviate Cloud) take 30 minutes. Self-hosted takes longer.</li>
+  <li><strong>Test retrieval quality:</strong> Ensure results are equivalent. Run your eval suite against both systems.</li>
+</ul>
+
+<p>Total migration time: 1-3 days for a competent engineer. It's not a major undertaking, which is why starting simple and scaling up is usually the right call.</p>
+
+<h2>Practical Recommendations</h2>
+
+<div class="technique-card">
+  <div class="technique-card__title">Decision Guide</div>
+  <p class="technique-card__description">
+    <strong>Prototyping:</strong> Chroma (zero setup, runs in your Python process)<br>
+    <strong>Production, under 5M vectors, already on Postgres:</strong> pgvector<br>
+    <strong>Production, under 5M vectors, no existing database preference:</strong> Pinecone (managed) or Weaviate Cloud<br>
+    <strong>Production, over 5M vectors:</strong> Pinecone or Weaviate<br>
+    <strong>On-premises / compliance requirements:</strong> Weaviate (self-hosted) or pgvector<br>
+    <strong>Need hybrid search (keyword + vector):</strong> Weaviate
+  </p>
+</div>
+
+<p>The best vector database is the one that fits your current needs without adding unnecessary complexity. Start simple. Scale when you have data showing you need to.</p>
+
+<p>For more on building AI applications with retrieval, see our <a href="/blog/rag-architecture-guide/">RAG architecture guide</a> and the <a href="/glossary/vector-database/">vector database glossary entry</a>.</p>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/rag-vs-fine-tuning-cost/">RAG vs Fine-Tuning Cost Comparison</a> | <a href="/glossary/vector-database/">Vector Database Glossary Entry</a> | <a href="/blog/ai-tools-for-developers-2026/">AI Tools for Developers</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Join 1,300+ Prompt Engineers</h2>
+          <p class="cta-section__text">
+            Get job alerts, salary insights, and weekly AI tool reviews.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

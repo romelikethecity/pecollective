@@ -43,13 +43,49 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/dspy/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/cursor-alternatives/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/claude-code/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/llamaindex/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/crewai/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/openai-api-vs-anthropic-api/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/chroma/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/pinecone-alternatives/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -91,6 +127,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/pgvector/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/best-ai-testing-tools/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -109,6 +151,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/tools/pinecone/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/tools/cursor-vs-windsurf/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -122,6 +170,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/tools/cursor-vs-claude-code/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/langchain-alternatives/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -158,6 +212,18 @@
   </url>
   <url>
     <loc>https://pecollective.com/tools/best-ai-coding-assistants/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/weaviate/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/tools/chatgpt-alternatives/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -223,6 +289,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/blog/prompt-engineering-salary-guide/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/blog/ai-tools-for-developers-2026/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/blog/ai-engineer-vs-ml-engineer-vs-prompt-engineer/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -230,6 +308,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/blog/chain-of-thought-prompting-guide/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/blog/system-prompt-design-guide/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -253,7 +337,19 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/blog/fine-tuning-vs-rag/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/blog/prompt-engineering-guide/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/blog/ai-agent-frameworks-compared/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -277,6 +373,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/word-embeddings/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/openai-api/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/ai-alignment/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -284,6 +392,18 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/json-mode/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/feature-extraction/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/neural-network/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -331,6 +451,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/parameter-count/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/model-evaluation/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -356,6 +482,48 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/gpt/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/cosine-similarity/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/diffusion-models/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/output-parsing/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/in-context-learning/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/langchain/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/emergent-abilities/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/knowledge-graph/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -409,6 +577,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/transfer-learning/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/chain-of-thought/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -427,6 +601,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/model-collapse/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/rag/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,6 +620,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/perplexity-metric/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/self-attention/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -469,7 +655,37 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/classifier/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/data-augmentation/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/rlhf/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/retrieval/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/bert/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/catastrophic-forgetting/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -517,7 +733,19 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/gradient-descent/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/zero-shot-prompting/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/api-rate-limiting/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -559,6 +787,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/prompt-caching/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/large-language-model/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -578,6 +812,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/structured-output/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/edge-ai/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -614,6 +854,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/few-shot-prompting/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/hyperparameters/</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

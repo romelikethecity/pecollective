@@ -171,7 +171,29 @@
         "Codebase indexing (needs to re-index your project)"
       ],
       "time_estimate": "About 30 minutes. Install the new editor, open your project, let it index, and reconfigure your AI preferences. Your code, git history, and extensions carry over immediately."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Windsurf Full Review",
+        "url": "/tools/windsurf/"
+      },
+      {
+        "text": "Cursor vs Claude Code",
+        "url": "/tools/cursor-vs-claude-code/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "What Is an AI Coding Assistant?",
+        "url": "/glossary/ai-coding-assistant/"
+      },
+      {
+        "text": "Copilot vs Amazon Q Developer",
+        "url": "/tools/copilot-vs-codewhisperer/"
+      }
+    ]
   },
   {
     "slug": "langchain-vs-llamaindex",
@@ -341,7 +363,33 @@
         "Observability setup (LangSmith vs LlamaCloud monitoring)"
       ],
       "time_estimate": "1-3 days for a typical RAG application. The data pipeline stays the same, but you'll rewrite the orchestration layer. Budget extra time if migrating complex agent workflows."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "LangChain Full Review",
+        "url": "/tools/langchain/"
+      },
+      {
+        "text": "LlamaIndex Full Review",
+        "url": "/tools/llamaindex/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "Best RAG Tools",
+        "url": "/tools/best-rag-tools/"
+      },
+      {
+        "text": "RAG Architecture Guide",
+        "url": "/blog/rag-architecture-guide/"
+      },
+      {
+        "text": "What Is RAG?",
+        "url": "/glossary/rag/"
+      }
+    ]
   },
   {
     "slug": "pinecone-vs-weaviate",
@@ -514,7 +562,33 @@
         "Deployment infrastructure (serverless vs self-hosted considerations)"
       ],
       "time_estimate": "A few hours for re-indexing plus 1-2 days for client code changes. The vectors themselves transfer directly. Plan for re-indexing time proportional to your dataset size."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Pinecone Full Review",
+        "url": "/tools/pinecone/"
+      },
+      {
+        "text": "Weaviate Full Review",
+        "url": "/tools/weaviate/"
+      },
+      {
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
+      },
+      {
+        "text": "Best RAG Tools",
+        "url": "/tools/best-rag-tools/"
+      },
+      {
+        "text": "What Are Embeddings?",
+        "url": "/glossary/embeddings/"
+      },
+      {
+        "text": "What Is a Vector Database?",
+        "url": "/glossary/vector-database/"
+      }
+    ]
   },
   {
     "slug": "claude-vs-chatgpt-coding",
@@ -687,7 +761,29 @@
         "Token counting (different tokenizers, so budget estimates change)"
       ],
       "time_estimate": "2-4 hours for API client swaps. 1-2 days to tune prompts for optimal results on the new model, since each model responds differently to the same instructions."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Claude Code Full Review",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "text": "Cursor vs Claude Code",
+        "url": "/tools/cursor-vs-claude-code/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "OpenAI API vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
+      },
+      {
+        "text": "Prompt Engineering Guide",
+        "url": "/blog/prompt-engineering-guide/"
+      }
+    ]
   },
   {
     "slug": "copilot-vs-codewhisperer",
@@ -861,7 +957,29 @@
         "Team/organization settings (different admin consoles)"
       ],
       "time_estimate": "Under 30 minutes. Uninstall the old extension, install the new one, authenticate, and start coding. The learning curve is the bigger time investment: 1-2 weeks to get comfortable with the new tool's strengths."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Cursor vs Windsurf",
+        "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "text": "Claude vs ChatGPT for Coding",
+        "url": "/tools/claude-vs-chatgpt-coding/"
+      },
+      {
+        "text": "What Is an AI Coding Assistant?",
+        "url": "/glossary/ai-coding-assistant/"
+      },
+      {
+        "text": "AI Tools for Developers",
+        "url": "/blog/prompt-engineering-guide/"
+      }
+    ]
   },
   {
     "slug": "openai-api-vs-anthropic-api",
@@ -1053,7 +1171,33 @@
         "Error handling and retry logic (different error codes and rate limit headers)"
       ],
       "time_estimate": "1-2 days for a straightforward migration. The message format is similar enough that the core swap takes hours. The remaining time goes to adapting tool calling, streaming, and error handling. Use LiteLLM as an abstraction layer if you want to support both simultaneously."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Claude Code Full Review",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "text": "LangChain Full Review",
+        "url": "/tools/langchain/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "What Is an LLM?",
+        "url": "/glossary/large-language-model/"
+      },
+      {
+        "text": "Understanding Tokens",
+        "url": "/glossary/tokens/"
+      },
+      {
+        "text": "Prompt Engineering Guide",
+        "url": "/blog/prompt-engineering-guide/"
+      }
+    ]
   },
   {
     "slug": "cursor-vs-claude-code",
@@ -1238,6 +1382,28 @@
         "Team collaboration setup (different sharing and permissions models)"
       ],
       "time_estimate": "Under an hour to install and start using either tool. The real transition time is adapting your workflow: 1-2 weeks to get comfortable with Cursor's Composer or Claude Code's agentic approach. Since they work alongside each other, you can run both during the transition."
-    }
+    },
+    "internal_links": [
+      {
+        "text": "Claude Code Full Review",
+        "url": "/tools/claude-code/"
+      },
+      {
+        "text": "Windsurf Full Review",
+        "url": "/tools/windsurf/"
+      },
+      {
+        "text": "Cursor vs Windsurf",
+        "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "What Is an AI Coding Assistant?",
+        "url": "/glossary/ai-coding-assistant/"
+      }
+    ]
   }
 ]

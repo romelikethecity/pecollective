@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="A practical guide to choosing between fine-tuning and RAG for your AI application. Cost comparison, decision framework, and real-world examples for when to use each approach.">
+
+  <title>Fine-Tuning vs RAG: When to Use Each (and When to Use Both) | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/fine-tuning-vs-rag/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/fine-tuning-vs-rag/">
+  <meta property="og:title" content="Fine-Tuning vs RAG: When to Use Each and When to Use Both">
+  <meta property="og:description" content="Practical decision framework for fine-tuning vs RAG. Cost comparison, performance tradeoffs, and when to combine both approaches.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="Fine-Tuning vs RAG: When to Use Each and When to Use Both">
+  <meta name="twitter:description" content="Practical decision framework for fine-tuning vs RAG. Cost comparison, performance tradeoffs, and when to combine both approaches.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fine-Tuning vs RAG",
+      "item": "https://pecollective.com/blog/fine-tuning-vs-rag/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fine-Tuning vs RAG: When to Use Each and When to Use Both",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-15",
+  "description": "A practical guide to choosing between fine-tuning and RAG for your AI application. Cost comparison, decision framework, and real-world examples for when to use each approach."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is RAG better than fine-tuning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither is universally better. RAG is better when you need current information, source attribution, or frequently changing data. Fine-tuning is better when you need consistent output style, specialized behavior, or high performance on narrow tasks. Most production systems benefit from trying RAG first because it's faster to implement and easier to iterate on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does fine-tuning cost compared to RAG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RAG typically costs $50-$500/month in infrastructure (vector database, embedding generation, API calls). Fine-tuning costs $500-$5,000 per project including data preparation and multiple training runs, but per-query costs can be lower since fine-tuned models need shorter prompts. At high query volumes (10K+/day), fine-tuning often becomes cheaper per query."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use RAG and fine-tuning together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and this is often the best approach for complex applications. Fine-tune the model on your output style and task-specific behavior, then use RAG to provide current, domain-specific information at query time. The fine-tuning handles how the model responds; RAG handles what information it uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much training data do I need for fine-tuning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum 200-500 high-quality examples for meaningful improvement. 1,000+ examples for strong results. Each example should be a complete input-output pair showing exactly what you want the model to do. Quality matters more than quantity. 500 carefully curated examples will outperform 5,000 noisy ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I try prompt engineering before RAG or fine-tuning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Always start with prompt engineering. A well-crafted system prompt with few-shot examples can reach 85-90% of the quality you'd get from more complex approaches. Only invest in RAG or fine-tuning when you've confirmed that prompting alone isn't sufficient for your quality requirements."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Technical Guide</span>
+          <h1 class="article-header__title">Fine-Tuning vs RAG: When to Use Each (and When to Use Both)</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; February 15, 2026 &middot; 15 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>Every week, someone asks me: "Should I fine-tune a model or use RAG?" And every week, my answer is the same: "It depends on what problem you're solving."</p>
+
+<p>That's not a cop-out. <a href="/glossary/fine-tuning/">Fine-tuning</a> and <a href="/glossary/rag/">RAG</a> solve fundamentally different problems. Using the wrong one wastes time and money. Using the right one can be the difference between an AI system that works and one that doesn't.</p>
+
+<p>This guide gives you a clear decision framework. No hand-waving. Specific criteria, cost comparisons, and real examples.</p>
+
+<h2>The 30-Second Distinction</h2>
+
+<p><strong>Fine-tuning</strong> changes how the model behaves. It modifies the model's weights so it responds differently to inputs. Think of it as training a new employee on your company's specific way of doing things.</p>
+
+<p><strong>RAG</strong> changes what the model knows. It gives the model access to external information at query time. Think of it as giving an employee a reference manual they can look up before answering questions.</p>
+
+<p>Different problems. Different solutions. The confusion arises because both can improve AI output quality, but they do it through completely different mechanisms.</p>
+
+<h2>When to Use RAG</h2>
+
+<p>RAG is the right choice more often than fine-tuning. If you're not sure which to use, start with RAG. Here's when it's the clear winner.</p>
+
+<h3>Your data changes frequently</h3>
+<p>RAG pulls information from an external knowledge base at query time. Update the knowledge base, and the model immediately has access to the new information. No retraining required.</p>
+
+<p>If your product documentation changes weekly, your knowledge base grows daily, or your data has a shelf life, RAG is the only practical option. Fine-tuning a model every time your data changes is prohibitively expensive and slow.</p>
+
+<h3>You need source attribution</h3>
+<p>RAG can tell users where its answers came from. "According to section 3.2 of your employee handbook..." This is critical for compliance-sensitive applications in healthcare, legal, and finance. Fine-tuned models can't point to their sources because the information is baked into the weights.</p>
+
+<h3>You need factual accuracy on specific documents</h3>
+<p>When users ask questions about specific documents, policies, or datasets, RAG retrieves the actual text and uses it to generate answers. Fine-tuning teaches the model patterns, not facts. A fine-tuned model might learn to sound like your documentation, but it can still hallucinate specific details. RAG grounds the response in the actual source material.</p>
+
+<h3>You want to start fast and iterate</h3>
+<p>A basic RAG system can be up and running in a day. Load your documents into a <a href="/glossary/vector-database/">vector database</a>, connect it to an LLM, and you have a working system. Iterate on chunking strategies, retrieval methods, and prompts without touching the model itself.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">RAG Cost Breakdown</div>
+  <p class="technique-card__description">
+    <strong>Setup cost:</strong> $0-$500. Mostly engineering time. The tools are free or cheap.<br><br>
+    <strong>Vector database:</strong> $0-$100/month for most applications. Free tiers cover development. Production costs scale with data volume.<br><br>
+    <strong>Embedding generation:</strong> $0.01-$0.10 per 1,000 documents. One-time cost per document, re-run only when content changes.<br><br>
+    <strong>Per-query cost:</strong> Standard LLM API costs plus a small retrieval overhead. Roughly $0.005-$0.05 per query depending on model and context size.<br><br>
+    <strong>Total monthly cost for a typical application:</strong> $50-$500/month at moderate usage.
+  </p>
+</div>
+
+<h2>When to Use Fine-Tuning</h2>
+
+<p>Fine-tuning is the right choice when you need to change the model's behavior, style, or capabilities. Not what it knows, but how it acts.</p>
+
+<h3>You need a specific output style or format</h3>
+<p>If every response needs to follow a precise format, match a specific tone, or use domain-specific terminology consistently, fine-tuning bakes this into the model. Instead of stuffing style instructions into every prompt (which consumes <a href="/glossary/tokens/">tokens</a> and sometimes gets ignored), the model just does it by default.</p>
+
+<p>Example: a legal document generator that always uses proper legal citation format, or a customer support bot that must match your brand voice exactly across thousands of different questions.</p>
+
+<h3>You need better performance on a specific task</h3>
+<p>Fine-tuning on high-quality examples of a specific task can dramatically improve performance on that task. If you have a classification problem, a specialized extraction task, or any narrow, well-defined task where you can provide hundreds or thousands of examples, fine-tuning will outperform prompting.</p>
+
+<p>The threshold is roughly: if <a href="/glossary/few-shot-prompting/">few-shot prompting</a> with 5-10 examples in the prompt gets you to 80% quality, fine-tuning on 500+ examples can push you to 95%+.</p>
+
+<h3>You need to reduce latency or cost per query</h3>
+<p>A fine-tuned smaller model can match a larger model's performance on specific tasks at a fraction of the cost and latency. Fine-tuning GPT-4o Mini or Claude Haiku on your task might give you GPT-4o-level quality at one-tenth the cost per query. For high-volume applications, this adds up fast.</p>
+
+<p>Fine-tuning also means shorter prompts. You don't need long system prompts, examples, or instructions because the model already knows what to do. Shorter prompts mean fewer input tokens, which means lower cost and faster responses.</p>
+
+<h3>You need the model to learn new patterns</h3>
+<p>If your use case requires understanding domain-specific concepts, jargon, or reasoning patterns that general models handle poorly, fine-tuning can teach these patterns. Medical coding, legal analysis, financial modeling. These domains have specialized knowledge that benefits from training, not just retrieval.</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Fine-Tuning Cost Breakdown</div>
+  <p class="technique-card__description">
+    <strong>Data preparation:</strong> 10-40 hours of engineering time. The most overlooked cost. You need high-quality, formatted training data. Garbage in, garbage out.<br><br>
+    <strong>Training cost (OpenAI):</strong> $3-$25 per training run for GPT-4o Mini, $25-$200 for GPT-4o. Depends on dataset size and epochs.<br><br>
+    <strong>Training cost (open source on cloud):</strong> $50-$500 per training run on AWS/GCP GPU instances. More control, more complexity.<br><br>
+    <strong>Evaluation and iteration:</strong> Plan for 3-10 training runs to get it right. Multiply the training cost accordingly.<br><br>
+    <strong>Per-query cost:</strong> Same or lower than the base model. Fine-tuned models don't cost more to run. They often cost less because you need shorter prompts.<br><br>
+    <strong>Total cost for a fine-tuning project:</strong> $500-$5,000 for most applications, including engineering time. Ongoing costs are the same as regular API usage.
+  </p>
+</div>
+
+<h2>When to Use Both</h2>
+
+<p>Here's the part most guides skip. Fine-tuning and RAG aren't mutually exclusive. Some of the best production AI systems use both.</p>
+
+<h3>Pattern 1: Fine-tuned model + RAG for knowledge</h3>
+<p>Fine-tune the model on your output style and task-specific behavior, then use RAG to provide it with current, domain-specific information at query time. The fine-tuning handles the "how" (format, tone, reasoning patterns) while RAG handles the "what" (facts, data, documents).</p>
+
+<p>This is particularly effective for customer support systems. Fine-tune on your brand voice and resolution patterns. RAG retrieves the specific product documentation and account information needed to answer each query.</p>
+
+<h3>Pattern 2: RAG with a fine-tuned retriever</h3>
+<p>Use a fine-tuned <a href="/glossary/embeddings/">embedding model</a> for the retrieval step of RAG. Standard embedding models work well for general-purpose retrieval, but fine-tuning them on your domain's terminology and query patterns can improve retrieval accuracy by 10-30%. Better retrieval means better final answers.</p>
+
+<h3>Pattern 3: Fine-tuned classifier + RAG pipeline</h3>
+<p>Use a fine-tuned model to classify incoming queries (intent detection, topic classification), then route each query to the appropriate RAG pipeline. Different document collections, different retrieval strategies, different prompts. The classifier is cheap and fast. The RAG pipeline handles the heavy lifting.</p>
+
+<h2>The Decision Framework</h2>
+
+<p>Use this flowchart when evaluating your next AI feature:</p>
+
+<div class="technique-card">
+  <div class="technique-card__title">Step-by-Step Decision Process</div>
+  <p class="technique-card__description">
+    <strong>1. Can you solve it with prompting alone?</strong> Try <a href="/glossary/zero-shot-prompting/">zero-shot</a> and <a href="/glossary/few-shot-prompting/">few-shot</a> prompting first. If you can get to 90%+ quality with good prompts, you might not need either fine-tuning or RAG. Don't over-engineer.<br><br>
+    <strong>2. Is the problem about WHAT the model knows or HOW it behaves?</strong> "What" problems (facts, data, documents) point to RAG. "How" problems (style, format, specialized reasoning) point to fine-tuning.<br><br>
+    <strong>3. How often does your data change?</strong> Changes weekly or more often: RAG. Changes quarterly or less: fine-tuning is viable.<br><br>
+    <strong>4. Do you need source attribution?</strong> Yes: RAG. Fine-tuned models can't cite their sources.<br><br>
+    <strong>5. Do you have high-quality training data?</strong> 500+ examples of ideal input-output pairs: fine-tuning is feasible. Fewer than that: stick with prompting and RAG.<br><br>
+    <strong>6. Is per-query cost critical?</strong> High volume (10K+ queries/day) where cost matters: consider fine-tuning a smaller model. Low-medium volume: the operational simplicity of RAG is worth the per-query premium.
+  </p>
+</div>
+
+<h2>Common Mistakes</h2>
+
+<h3>Mistake 1: Using RAG when you need behavior change</h3>
+<p>RAG can't fix a model that writes in the wrong tone, uses the wrong format, or reasons incorrectly about your domain. If you're stuffing style guidelines into your RAG context and the model still doesn't follow them consistently, you have a fine-tuning problem, not a retrieval problem.</p>
+
+<h3>Mistake 2: Fine-tuning on facts that change</h3>
+<p>If you fine-tune a model on your product's pricing and then change the pricing, the model will confidently state the old prices. Fine-tuning is for stable patterns, not volatile data. If the information might change, it should come through RAG.</p>
+
+<h3>Mistake 3: Skipping the prompt-only baseline</h3>
+<p>Both RAG and fine-tuning add complexity. Before committing to either, spend a day seeing how far you can get with careful <a href="/glossary/prompt-engineering/">prompt engineering</a> alone. You might be surprised. A well-crafted <a href="/glossary/system-prompt/">system prompt</a> with good examples can often reach 85-90% of the quality you'd get from RAG or fine-tuning, at zero additional infrastructure cost.</p>
+
+<h3>Mistake 4: Poor RAG retrieval quality</h3>
+<p>"RAG didn't work for us" usually means "our retrieval was bad." If you're pulling irrelevant chunks, the model produces <a href="/glossary/hallucination/">hallucinated</a> answers or generic responses. Before abandoning RAG, check: Are your chunks the right size? Is your embedding model appropriate? Are you using re-ranking? Is your query preprocessing adequate? Fix retrieval before blaming the approach.</p>
+
+<h3>Mistake 5: Not enough training data for fine-tuning</h3>
+<p>Fine-tuning with 50 examples rarely works well. You need at least 200-500 high-quality examples for meaningful improvement, and 1,000+ for strong results. If you can't gather that much quality data, focus on prompting and RAG instead.</p>
+
+<h2>Real-World Examples</h2>
+
+<h3>Example 1: Internal knowledge base Q&A</h3>
+<p><strong>Approach: RAG.</strong> The company wiki has 5,000 pages that change daily. Employees ask questions about policies, processes, and project status. RAG indexes the wiki, retrieves relevant pages, and generates answers with source links. Fine-tuning would be useless here because the information changes too frequently.</p>
+
+<h3>Example 2: Medical report summarization</h3>
+<p><strong>Approach: Fine-tuning + RAG.</strong> Fine-tune on 2,000 examples of medical reports paired with ideal summaries to nail the output format and terminology. Use RAG to pull in relevant clinical guidelines and reference ranges at query time. The fine-tuning handles style; RAG handles knowledge.</p>
+
+<h3>Example 3: Customer email classification</h3>
+<p><strong>Approach: Fine-tuning.</strong> 15 categories, 10,000 labeled examples, stable category definitions. Pure classification task with well-defined patterns. Fine-tuning a small model gets 97% accuracy at pennies per classification. RAG adds nothing here because the task is about pattern recognition, not knowledge retrieval.</p>
+
+<h3>Example 4: Legal contract review</h3>
+<p><strong>Approach: RAG.</strong> Attorneys need AI to check contracts against their firm's clause library and flag deviations. The clause library is the knowledge base. RAG retrieves relevant standard clauses and compares them against the contract under review. Source attribution is critical for attorney trust. Fine-tuning can't provide this.</p>
+
+<p>For a deeper dive into building RAG systems, see our <a href="/blog/rag-architecture-guide/">RAG architecture guide</a>. For more on prompt optimization techniques that can delay or eliminate the need for either approach, check the <a href="/blog/prompt-engineering-best-practices/">prompt engineering best practices</a> guide.</p>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/glossary/fine-tuning/">Fine-Tuning Glossary Entry</a> | <a href="/glossary/rag/">RAG Glossary Entry</a> | <a href="/glossary/vector-database/">Vector Database Glossary Entry</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Join 1,300+ Prompt Engineers</h2>
+          <p class="cta-section__text">
+            Get job alerts, salary insights, and weekly AI tool reviews.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

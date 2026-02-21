@@ -204,6 +204,18 @@ def generate_comparison_page(comp):
           <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">{faq['answer']}</p>
         </details>'''
 
+    # Related resources links
+    related_links_html = ''
+    if comp.get('internal_links'):
+        link_items = ''
+        for link in comp['internal_links']:
+            link_items += f'\n            <a href="{link["url"]}" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">{link["text"]} &rarr;</a>'
+        related_links_html = f'''<div style="max-width: 800px; margin: 48px auto 0;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">{link_items}
+        </div>
+      </div>'''
+
     # Pricing table rows
     pricing_rows = f'''              <tr>
                 <td><strong>Free / Trial</strong></td>
@@ -613,6 +625,9 @@ def generate_comparison_page(comp):
         <h2>Frequently Asked Questions</h2>
         {faq_details}
       </div>
+
+      <!-- Related Resources -->
+      {related_links_html}
 
       <!-- Newsletter CTA -->
       <div class="newsletter-cta">

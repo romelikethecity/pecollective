@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="DSPy review: Stanford's framework for programming LLMs with optimizable modules instead of manual prompts. Features, pros, cons for AI developers.">
+
+  <title>DSPy Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="DSPy Review 2026">
+  <meta property="og:description" content="Honest review of DSPy, the Stanford framework that replaces prompt engineering with programming. Is the paradigm shift worth it?">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/dspy/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="DSPy Review 2026">
+  <meta name="twitter:description" content="Honest review of DSPy, the Stanford framework that replaces prompt engineering with programming. Is the paradigm shift worth it?">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DSPy",
+            "item": "https://pecollective.com/tools/dspy/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is DSPy free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. DSPy is completely free and open source under the MIT license. There's no paid tier or cloud service. You pay only for the LLM API calls your pipelines make."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I still need prompt engineering with DSPy?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not in the traditional sense. You define signatures (what the LLM should do) and modules (how it should do it), and DSPy's optimizers generate the actual prompts. You still need to understand your task well enough to define good signatures and provide evaluation data."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does DSPy compare to LangChain?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LangChain focuses on building LLM application pipelines with integrations and agents. DSPy focuses on automatically optimizing LLM calls for better performance. LangChain is broader in scope. DSPy is deeper in optimization. Some teams use both."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What LLMs work with DSPy?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "DSPy supports all major LLM providers including OpenAI, Anthropic, Google, Cohere, and local models. It also supports fine-tuning workflows with compatible models. The framework is model-agnostic by design."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is DSPy production-ready?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, for teams with ML experience. DSPy is used in production at multiple companies for classification, extraction, RAG, and multi-step reasoning tasks. The optimization step adds upfront work but produces more reliable pipelines than hand-tuned prompts."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DSPy",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "url": "https://dspy.ai",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.3",
+            "bestRating": "5"
+        },
+        "reviewBody": "DSPy represents a genuinely different approach to building with LLMs. Instead of crafting prompt strings and hoping they generalize, you define what your LLM should do (input/output signatures), pick a strategy (modules), and let the optimizer figure out the best prompt or fine-tuning approach. When it works, and it usually does, the optimized pipelines outperform hand-written prompts. The barrier is the learning curve. DSPy thinks about LLMs the way a machine learning researcher does, not the w"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🔬</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">LLM Framework</span>
+            <h1 class="tool-review__title">DSPy Review 2026</h1>
+            <p class="tool-review__subtitle">Stop writing prompts. Start writing programs. DSPy compiles your LLM logic into optimized prompts automatically, and it works better than you'd expect.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://dspy.ai" target="_blank" rel="noopener" class="btn btn--primary">Try DSPy &rarr;</a>
+              <a href="/tools/langchain/" class="btn btn--secondary">Compare to LangChain</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is DSPy?</h2>
+<p>DSPy is a framework from Stanford NLP that takes a radically different approach to building LLM applications. Instead of writing prompts, you write programs. You define what your <a href="/glossary/large-language-model/">language model</a> should do using signatures (input/output specifications), compose modules into pipelines, and then let DSPy's optimizers automatically find the best prompts, demonstrations, or <a href="/glossary/fine-tuning/">fine-tuning</a> strategies.</p>
+<p>Think of it as the difference between writing CSS by hand and using a compiler that generates optimized CSS from higher-level rules. You specify the intent, DSPy figures out the implementation.</p>
+
+<h2>Core Concepts</h2>
+
+<h3>Signatures</h3>
+<p>A signature defines what a module does: its inputs and outputs. For example, <code>"question -> answer"</code> is a simple Q&A signature. <code>"context, question -> reasoning, answer"</code> adds chain-of-thought reasoning. Signatures are declarative. You say what you want, not how to prompt for it. DSPy turns these into optimized prompts behind the scenes.</p>
+
+<h3>Modules</h3>
+<p>Modules are the building blocks. <code>dspy.Predict</code> is the simplest: it takes a signature and calls the LLM. <code>dspy.ChainOfThought</code> adds step-by-step reasoning. <code>dspy.ReAct</code> adds tool use. <code>dspy.Parallel</code> runs modules concurrently. You compose these like building blocks. A RAG pipeline might chain a retriever module with a ChainOfThought module, all defined in a few lines of Python.</p>
+
+<h3>Optimizers (formerly Teleprompters)</h3>
+<p>This is DSPy's secret weapon. Optimizers take your pipeline, a set of examples, and a metric, and they automatically improve your pipeline's performance. <code>BootstrapFewShot</code> finds the best few-shot examples. <code>MIPROv2</code> optimizes both instructions and demonstrations. <code>BootstrapFinetune</code> generates training data and fine-tunes your model.</p>
+<p>The optimizer doesn't just tweak prompts randomly. It uses systematic strategies to find configurations that score highest on your metric. For tasks like classification, extraction, and multi-hop reasoning, optimized DSPy pipelines regularly beat hand-crafted prompts by 10-20%.</p>
+
+<h3>Evaluation and Metrics</h3>
+<p>DSPy treats evaluation as a core feature, not an afterthought. You define metrics (accuracy, F1, custom scoring functions), provide evaluation datasets, and the framework tracks performance across optimization runs. This brings the rigor of traditional ML experimentation to LLM development.</p>
+
+<h2>DSPy vs LangChain</h2>
+<p><a href="/tools/langchain/">LangChain</a> is about building pipelines and connecting components. DSPy is about optimizing those pipelines automatically. LangChain gives you chains, agents, and integrations. DSPy gives you modules, optimizers, and metrics. They solve different problems.</p>
+<p>In practice, LangChain is easier to start with and has more integrations. DSPy produces better results when you have evaluation data and care about measurable performance. Some teams use LangChain for prototyping and DSPy for production optimization. Others go all-in on DSPy from the start.</p>
+
+<h2>DSPy vs Prompt Engineering</h2>
+<p>Traditional <a href="/glossary/prompt-engineering/">prompt engineering</a> is manual iteration. You write a prompt, test it, tweak it, test again. DSPy automates that loop. You define what you want, provide examples of good output, and the optimizer searches for the best approach. For complex pipelines with multiple LLM calls, this systematic approach scales far better than manual tuning.</p>
+<p>That said, DSPy doesn't eliminate the need to understand your task. You still need to define good signatures, choose appropriate modules, and provide quality evaluation data. The framework optimizes the execution, not the problem definition.</p>
+
+<h2>Getting Started</h2>
+<p>Install with <code>pip install dspy</code>. The learning curve is real, so start with the tutorials on <a href="https://dspy.ai">dspy.ai</a>. Define a simple signature, create a module, run it, then try optimizing with a small dataset. The "aha" moment usually comes when you see the optimizer produce a prompt you never would have written yourself, and it works better than your best attempt.</p>
+
+<h2>Limitations</h2>
+<p>DSPy requires labeled data for optimization. If you don't have examples of good outputs, the optimizers can't do their job. The framework also adds overhead that isn't worth it for trivial tasks. If you're building a simple summarizer, just write a prompt. DSPy shines when you have complex pipelines, care about measurable performance, and have the data to optimize against.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Eliminates manual prompt engineering with optimizable modules</li>
+                  <li>Automatic prompt optimization consistently outperforms hand-written prompts</li>
+                  <li>Modular design makes LLM pipelines testable and composable</li>
+                  <li>Works with any LLM provider, not locked to one vendor</li>
+                  <li>Academic rigor from Stanford NLP means solid theoretical foundations</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>Steep learning curve, especially the signature and optimizer concepts</li>
+                  <li>Smaller community than LangChain means fewer tutorials and examples</li>
+                  <li>Optimization runs require labeled data and compute time upfront</li>
+                  <li>Not ideal for simple one-shot LLM tasks where a prompt string works fine</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use DSPy?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>ML engineers and researchers</strong> who want systematic, reproducible LLM pipelines instead of fragile prompt strings</li>
+              <li><strong>Teams building production NLP systems</strong> where optimized prompts measurably outperform hand-tuned ones</li>
+              <li><strong><a href="/glossary/prompt-engineering/">Prompt engineers</a> hitting a ceiling</strong> with manual prompt tuning and wanting a programmatic approach to optimization</li>
+              <li><strong>Projects requiring multi-step LLM reasoning</strong> where DSPy's module composition handles chain-of-thought and retrieval patterns cleanly</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Beginners just learning LLMs</strong> because DSPy's abstractions assume familiarity with ML concepts</li>
+              <li><strong>Simple chatbot or Q&A projects</strong> where a basic API call with a prompt template is sufficient</li>
+              <li><strong>Teams without labeled evaluation data</strong> since DSPy's optimizers need examples to tune against</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>DSPy represents a genuinely different approach to building with LLMs. Instead of crafting prompt strings and hoping they generalize, you define what your LLM should do (input/output signatures), pick a strategy (modules), and let the optimizer figure out the best prompt or fine-tuning approach. When it works, and it usually does, the optimized pipelines outperform hand-written prompts.</p><p>The barrier is the learning curve. DSPy thinks about LLMs the way a machine learning researcher does, not the way a web developer does. Concepts like signatures, teleprompters (now called optimizers), and compilers require time to internalize. If your team has ML experience, DSPy will feel like a natural progression. If you're coming from prompt engineering, expect to spend a few days rewiring your mental model. The investment pays off for production systems where prompt quality directly impacts business outcomes.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★½</span>
+                <span class="rating__value">4.3/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Open Source</span>
+                  <span class="pricing-row__value">Free</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">License</span>
+                  <span class="pricing-row__value">MIT</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://dspy.ai" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get DSPy &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Language</span>
+                  <span class="pricing-row__value">Python</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Origin</span>
+                  <span class="pricing-row__value">Stanford NLP</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Open Source</span>
+                  <span class="pricing-row__value">Yes (MIT)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Cloud Option</span>
+                  <span class="pricing-row__value">No</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/langchain/">🔗 LangChain</a>
+                <a href="/tools/llamaindex/">🦙 LlamaIndex</a>
+                <a href="/tools/crewai/">👥 CrewAI</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is DSPy free?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. DSPy is completely free and open source under the MIT license. There's no paid tier or cloud service. You pay only for the LLM API calls your pipelines make.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Do I still need prompt engineering with DSPy?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Not in the traditional sense. You define signatures (what the LLM should do) and modules (how it should do it), and DSPy's optimizers generate the actual prompts. You still need to understand your task well enough to define good signatures and provide evaluation data.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">How does DSPy compare to LangChain?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">LangChain focuses on building LLM application pipelines with integrations and agents. DSPy focuses on automatically optimizing LLM calls for better performance. LangChain is broader in scope. DSPy is deeper in optimization. Some teams use both.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What LLMs work with DSPy?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">DSPy supports all major LLM providers including OpenAI, Anthropic, Google, Cohere, and local models. It also supports fine-tuning workflows with compatible models. The framework is model-agnostic by design.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is DSPy production-ready?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes, for teams with ML experience. DSPy is used in production at multiple companies for classification, extraction, RAG, and multi-step reasoning tasks. The optimization step adds upfront work but produces more reliable pipelines than hand-tuned prompts.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

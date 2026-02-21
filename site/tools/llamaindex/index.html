@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="LlamaIndex review: the data framework built for RAG and LLM applications. Features, LlamaCloud pricing, pros and cons for AI developers in 2026.">
+
+  <title>LlamaIndex Review 2026 | PE Collective</title>
+
+  <meta property="og:title" content="LlamaIndex Review 2026">
+  <meta property="og:description" content="Honest review of LlamaIndex, the RAG-first framework for LLM applications. Is it better than LangChain for your use case?">
+  <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+  <meta property="og:site_name" content="PE Collective">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pecollective.com/tools/llamaindex/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="LlamaIndex Review 2026">
+  <meta name="twitter:description" content="Honest review of LlamaIndex, the RAG-first framework for LLM applications. Is it better than LangChain for your use case?">
+  <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LlamaIndex",
+            "item": "https://pecollective.com/tools/llamaindex/"
+        }
+    ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is LlamaIndex free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The core LlamaIndex library is free and open source under the MIT license. LlamaCloud, their managed service for document parsing and hosted indexes, has a free tier with 1,000 credits per month and paid tiers for production usage."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "LlamaIndex vs LangChain: which should I use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use LlamaIndex if your primary focus is RAG and data ingestion. Use LangChain if you need complex agent workflows and tool use. Many teams use both: LlamaIndex for the data pipeline and LangChain for agent orchestration."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is LlamaParse?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LlamaParse is LlamaIndex's document parsing service. It extracts text, tables, and structured data from complex PDFs and documents that simpler parsers struggle with. It's part of LlamaCloud and uses a credit-based pricing model."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can LlamaIndex work with any vector database?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. LlamaIndex integrates with all major vector databases including Pinecone, Weaviate, Chroma, Qdrant, Milvus, and pgvector. You can also use it with simple in-memory storage for development and testing."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need LlamaCloud to use LlamaIndex?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. LlamaCloud is optional. You can run the entire LlamaIndex stack locally or on your own infrastructure. LlamaCloud adds managed parsing and hosting for teams that don't want to manage that infrastructure themselves."
+            }
+        }
+    ]
+}
+  </script>
+
+  <!-- SoftwareApplication + Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LlamaIndex",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "url": "https://www.llamaindex.ai",
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.4",
+            "bestRating": "5"
+        },
+        "reviewBody": "LlamaIndex is the best framework for building RAG applications in 2026. That's not a controversial take. While LangChain tries to be everything for everyone, LlamaIndex focuses on the data pipeline and does it exceptionally well. The data connectors, index types, and query engines are all designed around one question: how do you get the right context to your LLM? LlamaCloud and LlamaParse add a managed layer that's worth considering if you're processing lots of documents. The credit-based pricin"
+    }
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .tool-review {
+      padding: var(--space-3xl) 0;
+    }
+
+    .tool-review__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tool-review__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-review__meta {
+      flex: 1;
+    }
+
+    .tool-review__category {
+      font-size: 0.875rem;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tool-review__title {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .tool-review__actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .tool-review__content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-3xl);
+    }
+
+    @media (max-width: 900px) {
+      .tool-review__content {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-review__header {
+        flex-direction: column;
+      }
+    }
+
+    .tool-review__main h2 {
+      font-size: 1.5rem;
+      margin: var(--space-2xl) 0 var(--space-md);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tool-review__main h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .tool-review__main h3 {
+      font-size: 1.125rem;
+      margin: var(--space-lg) 0 var(--space-sm);
+    }
+
+    .tool-review__main p {
+      margin-bottom: var(--space-md);
+      line-height: 1.7;
+    }
+
+    .tool-review__main ul, .tool-review__main ol {
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-lg);
+      color: var(--color-text-secondary);
+    }
+
+    .tool-review__main li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .tool-review__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .sidebar-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .sidebar-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-row__label {
+      color: var(--color-text-secondary);
+    }
+
+    .pricing-row__value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+
+    @media (max-width: 600px) {
+      .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pros-cons__column h4 {
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .pros-cons__column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pros-cons__column li {
+      padding: var(--space-sm) 0;
+      padding-left: var(--space-lg);
+      position: relative;
+      color: var(--color-text-secondary);
+    }
+
+    .pros-cons__column--pros li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--color-success);
+      font-weight: 700;
+    }
+
+    .pros-cons__column--cons li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: var(--color-error);
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .rating__stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+    }
+
+    .rating__value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .related-tools {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .related-tools a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .related-tools a:hover {
+      background: var(--color-bg-card-hover);
+      color: var(--color-text-primary);
+    }
+
+    .verdict-box {
+      background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-bg-card) 100%);
+      border: 1px solid var(--color-teal-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+
+    .verdict-box h3 {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: var(--color-bg-darker);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-2xl);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="/jobs/">AI Jobs</a>
+          <a href="/salaries/">Salaries</a>
+          <a href="/tools/" class="active">Tools</a>
+          <a href="/blog/">Blog</a>
+          <a href="/insights/">Market Intel</a>
+          <a href="/about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="/jobs/">AI Jobs</a></li>
+      <li><a href="/salaries/">Salaries</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/insights/">Market Intel</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="tool-review">
+      <div class="container">
+        <!-- Header -->
+        <header class="tool-review__header">
+          <div class="tool-review__icon">🦙</div>
+          <div class="tool-review__meta">
+            <span class="tool-review__category">LLM Framework</span>
+            <h1 class="tool-review__title">LlamaIndex Review 2026</h1>
+            <p class="tool-review__subtitle">The framework that treats your data as a first-class citizen. If you're building RAG, LlamaIndex probably does it better than anything else.</p>
+            <div class="tool-review__actions">
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://www.llamaindex.ai" target="_blank" rel="noopener" class="btn btn--primary">Try LlamaIndex &rarr;</a>
+              <a href="/tools/langchain-vs-llamaindex/" class="btn btn--secondary">Compare to LangChain</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="tool-review__content">
+          <!-- Main Content -->
+          <div class="tool-review__main">
+<h2>What is LlamaIndex?</h2>
+<p>LlamaIndex is an open-source data framework for building applications powered by <a href="/glossary/large-language-model/">large language models</a>. While other frameworks focus on chains and agents, LlamaIndex starts with your data. It provides tools to ingest, structure, index, and query your documents so LLMs can work with them effectively.</p>
+<p>The framework started as "GPT Index" in late 2022 and has grown into the go-to solution for <a href="/glossary/rag/">retrieval-augmented generation</a> (RAG). If you're building anything that needs to answer questions about your own documents, LlamaIndex should be on your shortlist.</p>
+
+<h2>Key Features</h2>
+
+<h3>Data Connectors (LlamaHub)</h3>
+<p>LlamaIndex supports 150+ data connectors through LlamaHub. PDFs, Notion pages, Slack messages, SQL databases, Google Drive, Confluence, web pages. If your data lives somewhere, there's probably a connector for it. This matters because the hardest part of RAG isn't the retrieval algorithm. It's getting your data into a format the system can work with.</p>
+
+<h3>Index Types</h3>
+<p>Not all data is the same, and LlamaIndex reflects that. You can build vector indexes for semantic search, keyword indexes for exact matching, tree indexes for hierarchical summarization, and knowledge graph indexes for relationship-heavy data. Each index type optimizes for different query patterns. Most projects start with a <a href="/glossary/vector-database/">vector index</a> and add others as needs evolve.</p>
+
+<h3>Query Engines and Pipelines</h3>
+<p>LlamaIndex's query engine layer sits between your index and the LLM. You can configure retrieval strategies (top-k, hybrid, recursive), add re-ranking, filter by metadata, and compose multiple indexes into a single query pipeline. This is where LlamaIndex pulls ahead of building RAG from scratch. The pipeline abstraction handles the messy details of retrieval that trip up DIY implementations.</p>
+
+<h3>LlamaParse</h3>
+<p>Document parsing sounds boring until you try to extract tables from a PDF. LlamaParse is LlamaIndex's document parsing service, and it handles complex layouts, tables, images, and multi-column formats that break simpler parsers. It's part of LlamaCloud and uses a credit-based pricing model (1,000 credits = $1).</p>
+
+<h3>LlamaCloud</h3>
+<p>LlamaCloud is the managed service layer. It provides hosted parsing (LlamaParse), managed indexes, and retrieval APIs so you don't have to run your own <a href="/glossary/vector-database/">vector database</a> infrastructure. The free tier includes 1,000 credits per month. Paid tiers use a credit system where pricing varies by operation complexity.</p>
+
+<h2>LlamaIndex vs LangChain</h2>
+<p>This is the comparison that comes up constantly. Here's the short version: LlamaIndex is better for data ingestion and RAG. <a href="/tools/langchain/">LangChain</a> is better for agents and complex workflows. They're not mutually exclusive.</p>
+<p>LlamaIndex gives you more control over how your data is indexed and retrieved. LangChain gives you more flexibility in how your LLM interacts with tools and makes decisions. Many production systems use LlamaIndex for the data pipeline and LangChain (or LangGraph) for the agent logic. See our full <a href="/tools/langchain-vs-llamaindex/">LangChain vs LlamaIndex comparison</a> for a deeper breakdown.</p>
+
+<h2>Pricing</h2>
+<p>The core LlamaIndex library is free and MIT licensed. You can build and deploy RAG applications without paying anything beyond your LLM and hosting costs. LlamaCloud adds managed services with a credit-based model. The free tier gives you 1,000 credits per month, which is enough for experimenting. Production usage will require a paid plan, with pricing depending on your parsing and indexing volume.</p>
+
+<h2>Getting Started</h2>
+<p>Install with <code>pip install llama-index</code>. The quickstart builds a basic RAG pipeline in about 10 lines of code: load documents, create an index, and query it. From there, you can swap in different <a href="/glossary/embeddings/">embedding</a> models, add metadata filtering, try different index types, and build multi-step query pipelines. The documentation is solid, and the Discord community is active and helpful.</p>
+
+            <div class="pros-cons">
+              <div class="pros-cons__column pros-cons__column--pros">
+                <h4>&#10003; Pros</h4>
+                <ul>
+                  <li>Best-in-class RAG pipeline with multiple index types out of the box</li>
+                  <li>150+ data connectors for ingesting documents, APIs, databases, and more</li>
+                  <li>LlamaParse handles complex PDFs, tables, and images better than most alternatives</li>
+                  <li>Clean, intuitive API that's simpler than LangChain for data-focused tasks</li>
+                  <li>Active development with frequent releases and strong community</li>
+                </ul>
+              </div>
+              <div class="pros-cons__column pros-cons__column--cons">
+                <h4>&#10007; Cons</h4>
+                <ul>
+                  <li>Less flexible than LangChain for complex agent workflows</li>
+                  <li>LlamaCloud credit-based pricing can be confusing at first</li>
+                  <li>TypeScript version lags behind Python in features</li>
+                  <li>Smaller ecosystem of third-party tutorials compared to LangChain</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Who Should Use LlamaIndex?</h2>
+
+            <h3>Ideal For:</h3>
+            <ul>
+              <li><strong>RAG application developers</strong> who need production-grade retrieval pipelines without reinventing the wheel</li>
+              <li><strong>Teams with messy document collections</strong> where LlamaParse and data connectors save weeks of preprocessing work</li>
+              <li><strong>Python developers building search or Q&A systems</strong> who want a framework that prioritizes data quality over abstraction depth</li>
+              <li><strong><a href="/glossary/prompt-engineering/">Prompt engineers</a> focused on retrieval quality</strong> where index tuning and query pipelines matter more than agent orchestration</li>
+            </ul>
+
+            <h3>Maybe Not For:</h3>
+            <ul>
+              <li><strong>Complex multi-agent workflows</strong> where LangChain's LangGraph is a better fit</li>
+              <li><strong>Teams that need JavaScript-first support</strong> since the TypeScript version isn't at feature parity yet</li>
+              <li><strong>Simple chatbot projects</strong> where calling an LLM API directly is easier than setting up an index</li>
+            </ul>
+
+            <div class="verdict-box">
+              <h3>Our Verdict</h3>
+              <p>LlamaIndex is the best framework for building RAG applications in 2026. That's not a controversial take. While LangChain tries to be everything for everyone, LlamaIndex focuses on the data pipeline and does it exceptionally well. The data connectors, index types, and query engines are all designed around one question: how do you get the right context to your LLM?</p><p>LlamaCloud and LlamaParse add a managed layer that's worth considering if you're processing lots of documents. The credit-based pricing takes some getting used to, but it's fair for what you get. The main limitation is scope. If you need complex agent logic, tool use, or state machines, you'll want LangChain or CrewAI alongside LlamaIndex. Many production teams use both, and that's probably the right call.</p>
+            </div>
+
+            <div class="affiliate-disclosure">
+              <strong>Disclosure:</strong> This review contains affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. We only recommend tools we actually use and believe in. Our reviews are based on hands-on testing, not sponsored content.
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="tool-review__sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Our Rating</h3>
+              <div class="rating">
+                <span class="rating__stars">★★★★½</span>
+                <span class="rating__value">4.4/5</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Pricing</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LlamaIndex</span>
+                  <span class="pricing-row__value">Free (OSS)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LlamaCloud Free</span>
+                  <span class="pricing-row__value">1K credits/mo</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">LlamaCloud Starter</span>
+                  <span class="pricing-row__value">Credit-based</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Enterprise</span>
+                  <span class="pricing-row__value">Custom</span>
+                </div>
+              </div>
+              <!-- AFFILIATE LINK PLACEHOLDER -->
+              <a href="https://www.llamaindex.ai" target="_blank" rel="noopener" class="btn btn--primary btn--small mt-md" style="width: 100%;">Get LlamaIndex &rarr;</a>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Quick Facts</h3>
+              <div class="pricing-table">
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Language</span>
+                  <span class="pricing-row__value">Python, TypeScript</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">License</span>
+                  <span class="pricing-row__value">MIT (Open Source)</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Focus</span>
+                  <span class="pricing-row__value">RAG & Data</span>
+                </div>
+                <div class="pricing-row">
+                  <span class="pricing-row__label">Cloud Option</span>
+                  <span class="pricing-row__value">LlamaCloud</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">Related Tools</h3>
+              <div class="related-tools">
+                <a href="/tools/langchain/">🔗 LangChain</a>
+                <a href="/tools/pinecone/">🌲 Pinecone</a>
+                <a href="/tools/langchain-vs-llamaindex/">⚔️ LangChain vs LlamaIndex</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ Section (AEO optimized) -->
+    <section class="section">
+      <div class="container container--narrow">
+        <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Is LlamaIndex free?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. The core LlamaIndex library is free and open source under the MIT license. LlamaCloud, their managed service for document parsing and hosted indexes, has a free tier with 1,000 credits per month and paid tiers for production usage.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">LlamaIndex vs LangChain: which should I use?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Use LlamaIndex if your primary focus is RAG and data ingestion. Use LangChain if you need complex agent workflows and tool use. Many teams use both: LlamaIndex for the data pipeline and LangChain for agent orchestration.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What is LlamaParse?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">LlamaParse is LlamaIndex's document parsing service. It extracts text, tables, and structured data from complex PDFs and documents that simpler parsers struggle with. It's part of LlamaCloud and uses a credit-based pricing model.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Can LlamaIndex work with any vector database?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Yes. LlamaIndex integrates with all major vector databases including Pinecone, Weaviate, Chroma, Qdrant, Milvus, and pgvector. You can also use it with simple in-memory storage for development and testing.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Do I need LlamaCloud to use LlamaIndex?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">No. LlamaCloud is optional. You can run the entire LlamaIndex stack locally or on your own infrastructure. LlamaCloud adds managed parsing and hosting for teams that don't want to manage that infrastructure themselves.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get Tool Reviews in Your Inbox</h2>
+          <p class="cta-section__text">
+            Weekly AI tool updates, new releases, and honest comparisons.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Tools</h4>
+          <nav class="footer__links">
+            <a href="../">All Tools</a>
+            <a href="../cursor/">Cursor</a>
+            <a href="../github-copilot/">GitHub Copilot</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with &#129504; for the AI community.</span>
+        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

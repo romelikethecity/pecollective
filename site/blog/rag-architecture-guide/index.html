@@ -218,7 +218,7 @@
 
 <p>With RAG, the model has access to your specific data at query time. It doesn't need to "know" everything. It just needs to read the right documents and synthesize an answer.</p>
 
-<h3>RAG vs Fine-Tuning: When to Use Each</h3>
+<h3>RAG vs <a href="/glossary/fine-tuning/">Fine-Tuning</a>: When to Use Each</h3>
 
 <p>This is the first decision you'll face, and getting it wrong wastes months.</p>
 
@@ -247,13 +247,13 @@
 
 <h3>Stage 1: Document Processing (Chunking)</h3>
 
-<p>You can't feed entire documents to a language model for two reasons: they won't fit in the context window, and even if they did, the model would struggle to find the relevant information buried in thousands of pages. You need to break documents into smaller chunks.</p>
+<p>You can't feed entire documents to a language model for two reasons: they won't fit in the <a href="/glossary/context-window/">context window</a>, and even if they did, the model would struggle to find the relevant information buried in thousands of pages. You need to break documents into smaller chunks.</p>
 
 <p>Chunking strategy is the single most impactful decision in RAG. Get it wrong and nothing downstream can compensate.</p>
 
 <h3>Chunk Size</h3>
 
-<p>Smaller chunks (100-200 tokens) give you more precise retrieval. The retrieved chunk is more likely to be relevant to the specific question. But small chunks lose context. A sentence fragment might not make sense without the surrounding paragraph.</p>
+<p>Smaller chunks (100-200 <a href="/glossary/tokens/">tokens</a>) give you more precise retrieval. The retrieved chunk is more likely to be relevant to the specific question. But small chunks lose context. A sentence fragment might not make sense without the surrounding paragraph.</p>
 
 <p>Larger chunks (500-1,000 tokens) preserve more context. The model has enough information to generate a complete answer. But large chunks reduce retrieval precision. A chunk might contain one relevant sentence buried in nine irrelevant ones.</p>
 
@@ -279,7 +279,7 @@
 
 <h3>Stage 2: Embedding</h3>
 
-<p>Embedding converts text chunks into numerical vectors that capture semantic meaning. Similar content produces similar vectors. This is what enables semantic search: finding documents that are conceptually related to a query, not just keyword matches.</p>
+<p>Embedding converts text chunks into numerical vectors that capture semantic meaning. Similar content produces similar vectors. This is what enables <a href="/glossary/semantic-search/">semantic search</a>: finding documents that are conceptually related to a query, not just keyword matches.</p>
 
 <h3>Choosing an Embedding Model</h3>
 
@@ -288,7 +288,7 @@
 <div class="technique-card">
   <div class="technique-card__title">Embedding Model Comparison (2026)</div>
   <p class="technique-card__description"><strong>OpenAI text-embedding-3-large:</strong> Strong general-purpose performance. 3,072 dimensions. Good for most use cases. Pay-per-use pricing.<br><br>
-<strong>Cohere embed-v4:</strong> Excellent for multilingual content. Competitive with OpenAI on English benchmarks. Offers compressed embeddings for cost savings.<br><br>
+<strong>Cohere embed-v4:</strong> Excellent for multilingual content. Competitive with OpenAI on English benchmarks. Offers compressed <a href="/glossary/embeddings/">embeddings</a> for cost savings.<br><br>
 <strong>Open source (BGE, E5, GTE):</strong> Free to run. Requires your own infrastructure. Performance is competitive with commercial options. Good choice if you process high volumes and want to avoid per-query costs.<br><br>
 <strong>Domain-specific models:</strong> PubMedBERT for medical, LegalBERT for legal. Better for specialized domains but narrower applicability. Consider these if your corpus is heavily domain-specific.</p>
 </div>
@@ -362,7 +362,7 @@ CONTEXT:<br>
   <li><strong>Faithfulness instruction:</strong> "Only use information from the context" is the most important instruction. Without it, the model will fill gaps with training knowledge, which defeats the purpose of RAG.</li>
   <li><strong>Graceful failure:</strong> Tell the model what to do when it doesn't have enough information. "I don't know" is better than a hallucinated answer.</li>
   <li><strong>Source citation:</strong> Include chunk metadata in the context and instruct the model to cite sources. This builds user trust and makes it easy to verify answers.</li>
-  <li><strong>Temperature:</strong> Use low temperature (0 to 0.3) for factual Q&A RAG. Higher temperature increases the risk of the model inventing information.</li>
+  <li><strong>Temperature:</strong> Use low <a href="/glossary/temperature/">temperature</a> (0 to 0.3) for factual Q&A RAG. Higher temperature increases the risk of the model inventing information.</li>
 </ul>
 
 <h2>Evaluation</h2>
@@ -418,7 +418,7 @@ CONTEXT:<br>
 <p>A typical RAG query involves: embedding the query (50ms), vector search (20-50ms), re-ranking (50-200ms), and generation (500-2000ms). Total: 600ms to 2.3 seconds. Users expect fast responses. Identify your latency budget and optimize accordingly. Caching, pre-computation, and streaming responses all help.</p>
 
 <h3>Cost Management</h3>
-<p>RAG costs come from three sources: embedding API calls (for new documents and every query), vector database hosting, and LLM generation. At scale, embedding costs dominate. Consider open-source embedding models if you process high volumes. Cache embeddings for repeated queries. Use smaller generation models for simple queries and reserve expensive models for complex ones.</p>
+<p>RAG costs come from three sources: embedding API calls (for new documents and every query), <a href="/glossary/vector-database/">vector database</a> hosting, and <a href="/glossary/large-language-model/">LLM</a> generation. At scale, embedding costs dominate. Consider open-source embedding models if you process high volumes. Cache embeddings for repeated queries. Use smaller generation models for simple queries and reserve expensive models for complex ones.</p>
 
 <h3>Document Updates</h3>
 <p>Knowledge bases change. You need a pipeline that re-chunks, re-embeds, and re-indexes updated documents. Partial updates (only re-indexing changed sections) are more efficient than full re-indexing but harder to implement. For most teams, nightly full re-indexing is good enough.</p>
@@ -476,7 +476,7 @@ CONTEXT:<br>
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/chain-of-thought-prompting-guide/">Chain of Thought Prompting Tutorial</a> | <a href="/glossary/rag/">RAG Glossary Entry</a> | <a href="/jobs/">AI Job Board</a>
+            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/chain-of-thought-prompting-guide/">Chain of Thought Prompting Tutorial</a> | <a href="/glossary/rag/">RAG Glossary Entry</a> | <a href="/jobs/">AI Job Board</a> | <a href="/tools/best-rag-tools/">Best RAG Tools</a> | <a href="/tools/best-vector-databases/">Best Vector Databases</a>
           </p>
         </div>
       </div>

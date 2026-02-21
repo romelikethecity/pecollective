@@ -220,7 +220,7 @@
 
 <p><a href="/glossary/chain-of-thought/">Chain-of-thought</a> (CoT) prompting is a technique where you ask the model to reason through a problem step by step before giving its final answer. Instead of producing an answer directly, the model generates intermediate reasoning steps that lead to its conclusion.</p>
 
-<p>Why does this matter? Language models generate text one token at a time. Each new token is influenced by all the tokens that came before it. When a model jumps straight to an answer, it's making that answer based only on the question. When it reasons step by step, each reasoning step becomes additional context that informs the next step and the final answer.</p>
+<p>Why does this matter? Language models generate text one token at a time. Each new token is influenced by all the <a href="/glossary/tokens/">tokens</a> that came before it. When a model jumps straight to an answer, it's making that answer based only on the question. When it reasons step by step, each reasoning step becomes additional context that informs the next step and the final answer.</p>
 
 <p>Think of it this way. If someone asks you "What is 347 times 28?" you don't just stare at the numbers and blurt out an answer. You break it down: 347 times 20 is 6,940. 347 times 8 is 2,776. Add them: 9,716. Each intermediate result makes the final answer more reliable. CoT prompting makes language models work the same way.</p>
 
@@ -235,7 +235,7 @@
   <p class="technique-card__description"><strong>Without CoT:</strong><br>
 A store has 45 apples. They sell 12 in the morning and receive a shipment of 30 in the afternoon. Then they sell 18 more before closing. How many apples do they have at the end of the day?<br><br>
 <strong>Model response (no CoT):</strong> 55 apples. [Incorrect]<br><br>
-<strong>With zero-shot CoT:</strong><br>
+<strong>With <a href="/glossary/zero-shot-prompting/">zero-shot</a> CoT:</strong><br>
 A store has 45 apples. They sell 12 in the morning and receive a shipment of 30 in the afternoon. Then they sell 18 more before closing. How many apples do they have at the end of the day? Let's work through this step by step.<br><br>
 <strong>Model response (with CoT):</strong><br>
 Step 1: Start with 45 apples.<br>
@@ -245,7 +245,7 @@ Step 4: Sell 18 before closing. 63 - 18 = 45 apples.<br>
 Answer: 45 apples. [Correct]</p>
 </div>
 
-<p>The phrase "Let's think step by step" was popularized by Kojima et al. in their 2022 paper "Large Language Models are Zero-Shot Reasoners." They showed this simple addition improved accuracy by 10 to 40 percentage points on reasoning benchmarks. It's one of the highest-impact, lowest-effort techniques in prompt engineering.</p>
+<p>The phrase "Let's think step by step" was popularized by Kojima et al. in their 2022 paper "Large Language Models are Zero-Shot Reasoners." They showed this simple addition improved accuracy by 10 to 40 percentage points on reasoning benchmarks. It's one of the highest-impact, lowest-effort techniques in <a href="/glossary/prompt-engineering/">prompt engineering</a>.</p>
 
 <p>Other effective trigger phrases:</p>
 <ul>
@@ -429,7 +429,7 @@ Compare the three approaches on: speed of impact, cost, risk, and likelihood of 
 <div class="technique-card">
   <div class="technique-card__title">Example 8: Self-Consistency for Reliability</div>
   <p class="technique-card__description"><strong>Process:</strong><br>
-1. Send the same prompt 5 times with temperature 0.7<br>
+1. Send the same prompt 5 times with <a href="/glossary/temperature/">temperature</a> 0.7<br>
 2. Each response reasons through the problem step by step<br>
 3. Compare the final answers<br>
 4. Take the majority answer<br><br>
@@ -532,7 +532,7 @@ This gives you the reasoning for debugging and logging while keeping the user-fa
 
 <details>
   <summary>Should I use chain of thought in system prompts or user prompts?</summary>
-  <p>Put the CoT instruction in the system prompt if you want the model to always reason step by step for every user message. Put it in the user prompt if you only need CoT for specific queries. For chatbots, system-level CoT makes every response longer and more expensive, even for simple greetings. A better approach: include CoT as a conditional in the system prompt. "For questions involving math, analysis, or multi-step reasoning, think through your answer step by step before responding. For simple factual questions, answer directly."</p>
+  <p>Put the CoT instruction in the <a href="/glossary/system-prompt/">system prompt</a> if you want the model to always reason step by step for every user message. Put it in the user prompt if you only need CoT for specific queries. For chatbots, system-level CoT makes every response longer and more expensive, even for simple greetings. A better approach: include CoT as a conditional in the system prompt. "For questions involving math, analysis, or multi-step reasoning, think through your answer step by step before responding. For simple factual questions, answer directly."</p>
 </details>
 
           <!-- Author Bio -->
@@ -548,7 +548,7 @@ This gives you the reasoning for debugging and logging while keeping the user-fa
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="/glossary/chain-of-thought/">Chain of Thought Glossary Entry</a> | <a href="/glossary/few-shot-prompting/">Few-Shot Prompting Glossary Entry</a>
+            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="/glossary/chain-of-thought/">Chain of Thought Glossary Entry</a> | <a href="/glossary/few-shot-prompting/">Few-Shot Prompting Glossary Entry</a> | <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/prompt-engineering-interview-questions/">Prompt Engineering Interview Questions</a>
           </p>
         </div>
       </div>

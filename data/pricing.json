@@ -72,10 +72,22 @@
     ],
     "bottom_line": "Cursor Pro at $20/mo is good value for what you get. The unlimited completions alone justify the cost if you code daily. The main complaint: 500 fast premium requests feels tight for heavy Composer users. If you're on the fence, the free tier gives you enough to decide.",
     "internal_links": [
-      {"text": "Cursor vs Windsurf comparison", "url": "/tools/cursor-vs-windsurf/"},
-      {"text": "Cursor vs Claude Code", "url": "/tools/cursor-vs-claude-code/"},
-      {"text": "Best Cursor Alternatives", "url": "/tools/cursor-alternatives/"},
-      {"text": "Best AI Coding Assistants", "url": "/tools/best-ai-coding-assistants/"}
+      {
+        "text": "Cursor vs Windsurf comparison",
+        "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "text": "Cursor vs Claude Code",
+        "url": "/tools/cursor-vs-claude-code/"
+      },
+      {
+        "text": "Best Cursor Alternatives",
+        "url": "/tools/cursor-alternatives/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      }
     ],
     "faqs": [
       {
@@ -184,10 +196,22 @@
     ],
     "bottom_line": "GitHub Copilot Pro at $10/mo is the best value in AI coding assistants. It's half the price of Cursor Pro with solid capabilities. Cursor still wins on multi-file editing quality, but Copilot's GitHub integration and lower price make it the right choice for many developers.",
     "internal_links": [
-      {"text": "Copilot vs Amazon Q Developer", "url": "/tools/copilot-vs-codewhisperer/"},
-      {"text": "Best AI Coding Assistants", "url": "/tools/best-ai-coding-assistants/"},
-      {"text": "Cursor pricing comparison", "url": "/tools/cursor-pricing/"},
-      {"text": "AI Coding Assistant glossary", "url": "/glossary/ai-coding-assistant/"}
+      {
+        "text": "Copilot vs Amazon Q Developer",
+        "url": "/tools/copilot-vs-codewhisperer/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Cursor pricing comparison",
+        "url": "/tools/cursor-pricing/"
+      },
+      {
+        "text": "AI Coding Assistant glossary",
+        "url": "/glossary/ai-coding-assistant/"
+      }
     ],
     "faqs": [
       {
@@ -285,10 +309,22 @@
     ],
     "bottom_line": "Pinecone's free tier is generous for prototyping. Serverless pricing is competitive for small-to-medium workloads. But costs can surprise you at scale because read units are consumed faster than you'd expect. If you're processing millions of queries, run the numbers against self-hosted alternatives like pgvector or Weaviate before committing.",
     "internal_links": [
-      {"text": "Pinecone review", "url": "/tools/pinecone/"},
-      {"text": "Pinecone vs Weaviate comparison", "url": "/tools/pinecone-vs-weaviate/"},
-      {"text": "Best Pinecone Alternatives", "url": "/tools/pinecone-alternatives/"},
-      {"text": "Vector Database glossary", "url": "/glossary/vector-database/"}
+      {
+        "text": "Pinecone review",
+        "url": "/tools/pinecone/"
+      },
+      {
+        "text": "Pinecone vs Weaviate comparison",
+        "url": "/tools/pinecone-vs-weaviate/"
+      },
+      {
+        "text": "Best Pinecone Alternatives",
+        "url": "/tools/pinecone-alternatives/"
+      },
+      {
+        "text": "Vector Database glossary",
+        "url": "/glossary/vector-database/"
+      }
     ],
     "faqs": [
       {
@@ -396,10 +432,22 @@
     ],
     "bottom_line": "GPT-4o-mini is the best value in AI APIs. At $0.15/1M input tokens, it's practically free for most use cases. GPT-4o hits the sweet spot for production apps that need quality. Use o1 models sparingly for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task.",
     "internal_links": [
-      {"text": "OpenAI API vs Anthropic API", "url": "/tools/openai-api-vs-anthropic-api/"},
-      {"text": "Best LLM Frameworks", "url": "/tools/best-llm-frameworks/"},
-      {"text": "LLM glossary", "url": "/glossary/large-language-model/"},
-      {"text": "RAG architecture guide", "url": "/blog/rag-architecture-guide/"}
+      {
+        "text": "OpenAI API vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "LLM glossary",
+        "url": "/glossary/large-language-model/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      }
     ],
     "faqs": [
       {
@@ -494,10 +542,22 @@
     ],
     "bottom_line": "Claude 3.5 Sonnet at $3/$15 per 1M tokens is the model most developers should use. It's slightly more expensive than GPT-4o but many teams find the quality worth the premium, especially for coding. Route simple tasks to Haiku to keep costs down. Use prompt caching aggressively to cut your bill.",
     "internal_links": [
-      {"text": "OpenAI API vs Anthropic API", "url": "/tools/openai-api-vs-anthropic-api/"},
-      {"text": "ChatGPT Alternatives", "url": "/tools/chatgpt-alternatives/"},
-      {"text": "Context window glossary", "url": "/glossary/context-window/"},
-      {"text": "Fine-tuning vs RAG guide", "url": "/blog/fine-tuning-vs-rag/"}
+      {
+        "text": "OpenAI API vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
+      },
+      {
+        "text": "ChatGPT Alternatives",
+        "url": "/tools/chatgpt-alternatives/"
+      },
+      {
+        "text": "Context window glossary",
+        "url": "/glossary/context-window/"
+      },
+      {
+        "text": "Fine-tuning vs RAG guide",
+        "url": "/blog/fine-tuning-vs-rag/"
+      }
     ],
     "faqs": [
       {
@@ -518,5 +578,918 @@
       }
     ],
     "date_updated": "2026-02-15"
+  },
+  {
+    "slug": "windsurf-pricing",
+    "tool_name": "Windsurf",
+    "tool_slug": "windsurf",
+    "title": "Windsurf Pricing 2026: Free, Pro, and Team Plans for the AI Code Editor",
+    "meta_description": "Windsurf pricing for 2026. Free tier with limited flows, Pro at $15/mo, Team at $30/mo. What each plan includes and where the limits bite.",
+    "og_description": "Windsurf pricing breakdown for 2026. Free, Pro, and Team plans compared with hidden costs and real limitations.",
+    "h1": "Windsurf Pricing: What Each Plan Actually Gets You",
+    "intro": "Windsurf (formerly Codeium) has carved out a niche between GitHub Copilot and Cursor, pitching itself as the AI code editor that handles multi-file edits without burning through credits. The pricing reflects that positioning. Here's what each tier costs, where the limits show up, and which plan fits your workflow.",
+    "tiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "Unlimited basic code completions",
+          "5 User Flows (multi-step AI actions) per day",
+          "5 Cascade (multi-file edit) sessions per day",
+          "Access to base models only",
+          "Community support"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Pro",
+        "price": "$15",
+        "billing": "per month",
+        "highlights": [
+          "Unlimited code completions",
+          "Unlimited User Flows",
+          "Unlimited Cascade sessions",
+          "Access to GPT-4o, Claude 3.5 Sonnet, and Gemini",
+          "Priority model access during peak hours",
+          "Codebase-wide indexing and context"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Team",
+        "price": "$30",
+        "billing": "per user/month",
+        "highlights": [
+          "Everything in Pro",
+          "Centralized billing and seat management",
+          "Usage analytics dashboard",
+          "Admin controls and policies",
+          "SSO integration",
+          "Priority support"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "The free tier's 5 Cascade sessions per day sounds fine until you realize a single complex refactor can eat all 5 in an hour.",
+      "Pro at $15/mo is cheaper than Cursor Pro ($20/mo), but Windsurf's Cascade quality lags behind Cursor's Composer on large codebases.",
+      "There's no way to buy additional Flows or Cascade sessions a la carte. If you hit the free tier limits, you're upgrading to Pro or waiting until tomorrow.",
+      "Model selection on the free tier is limited to Windsurf's base models. You won't get Claude or GPT-4o without Pro.",
+      "Annual billing isn't discounted. It's $15/mo whether you pay monthly or yearly."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Developer evaluating AI editors",
+        "recommendation": "The free tier gives you a real taste of multi-file editing with 5 daily Cascade sessions. That's enough to compare against Cursor and Copilot over a week."
+      },
+      {
+        "persona": "Individual developer (daily use)",
+        "recommendation": "Pro at $15/mo hits a good price point. It's $5/mo cheaper than Cursor Pro and includes unlimited Cascade. Worth it if Windsurf's editing quality works for your stack."
+      },
+      {
+        "persona": "Small to mid-size team",
+        "recommendation": "Team at $30/user/mo makes sense if you need seat management and SSO. Otherwise, individual Pro licenses save you $15/user/mo."
+      },
+      {
+        "persona": "Enterprise with compliance needs",
+        "recommendation": "Windsurf doesn't have a full enterprise tier yet. If you need audit logs, data residency controls, or custom SLAs, Cursor Business or Copilot Enterprise are better options today."
+      }
+    ],
+    "bottom_line": "Windsurf Pro at $15/mo undercuts Cursor by $5 and includes unlimited multi-file editing. The quality gap has narrowed, but Cursor still handles larger codebases more reliably. If you're price-sensitive and working on small-to-medium projects, Windsurf is a strong pick. The free tier's daily limits are tight but fair for evaluation.",
+    "internal_links": [
+      {
+        "text": "Cursor vs Windsurf comparison",
+        "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Cursor pricing breakdown",
+        "url": "/tools/cursor-pricing/"
+      },
+      {
+        "text": "Windsurf review",
+        "url": "/tools/windsurf/"
+      },
+      {
+        "text": "GitHub Copilot pricing",
+        "url": "/tools/github-copilot-pricing/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Windsurf free?",
+        "answer": "Yes. Windsurf has a free tier with unlimited basic completions and 5 Cascade (multi-file edit) sessions per day. It's enough to evaluate the tool but not for heavy daily use. Most developers who stick with Windsurf upgrade to Pro within a couple of weeks."
+      },
+      {
+        "question": "How does Windsurf pricing compare to Cursor?",
+        "answer": "Windsurf Pro ($15/mo) is $5 cheaper than Cursor Pro ($20/mo). Both offer unlimited completions. Windsurf includes unlimited Cascade sessions while Cursor limits premium requests to 500/month. Cursor's Composer is generally considered more capable for large projects."
+      },
+      {
+        "question": "What is Cascade in Windsurf?",
+        "answer": "Cascade is Windsurf's multi-file editing feature, similar to Cursor's Composer. It can read your codebase, understand context across files, and make coordinated edits. Free users get 5 Cascade sessions per day. Pro users get unlimited."
+      },
+      {
+        "question": "Does Windsurf support custom API keys?",
+        "answer": "Windsurf doesn't currently support bring-your-own API keys the way Cursor does. You use their allocated model access, which is included in the subscription price. This is simpler but less flexible if you have specific model preferences."
+      },
+      {
+        "question": "Is Windsurf Pro worth upgrading from the free tier?",
+        "answer": "If you're using Windsurf daily, yes. The free tier's 5 Cascade sessions run out fast during active development. Pro removes all limits and gives you access to better models. At $15/mo, it's the cheapest unlimited AI editor plan available."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "replit-pricing",
+    "tool_name": "Replit",
+    "tool_slug": "replit",
+    "title": "Replit Pricing 2026: Free, Replit Core, and Teams Plans",
+    "meta_description": "Replit pricing for 2026. Free tier limits, Core at $25/mo with AI features, Teams starting at $40/user/mo. What you get and what you don't.",
+    "og_description": "Replit pricing breakdown for 2026. Free, Core, and Teams compared with compute costs and AI usage limits.",
+    "h1": "Replit Pricing: Plans, AI Credits, and Compute Costs",
+    "intro": "Replit has evolved from a browser-based IDE into a full AI development platform. The pricing reflects that ambition. Between the subscription tiers, compute charges, and AI credit system, the actual cost of using Replit can be hard to predict. Here's how the pricing works and what you'll actually pay.",
+    "tiers": [
+      {
+        "name": "Free (Starter)",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "Basic Repl environment",
+          "Limited compute (0.5 vCPU, 512MB RAM)",
+          "Basic AI code completion",
+          "Community deployments (public only)",
+          "No always-on capability"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Replit Core",
+        "price": "$25",
+        "billing": "per month",
+        "highlights": [
+          "Full AI Agent access (build apps from prompts)",
+          "Upgraded compute (4 vCPU, 4GB RAM)",
+          "Always-on Repls",
+          "Private Repls",
+          "Custom domains for deployments",
+          "SSH access to Repls"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Teams",
+        "price": "$40",
+        "billing": "per user/month",
+        "highlights": [
+          "Everything in Core",
+          "Multiplayer editing with team members",
+          "Shared team projects and templates",
+          "Centralized billing",
+          "Role-based permissions",
+          "Priority support"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Deployments cost extra. Hosting a small web app runs $5-20/month in compute on top of your subscription. Replit isn't free hosting.",
+      "AI Agent usage is included in Core, but heavy users report hitting soft throttling during peak hours. There's no published rate limit, which makes budgeting harder.",
+      "The free tier's 0.5 vCPU is barely enough to run a Python script. Any real development needs Core's upgraded compute.",
+      "Storage is limited. Free gets 10GB, Core gets 50GB. If you're working with datasets or large dependencies, you'll feel the squeeze.",
+      "Egress costs apply for deployments serving traffic. High-traffic apps can see surprise charges."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Student or learner",
+        "recommendation": "Free tier works for learning and small projects. You'll hit compute limits quickly on anything beyond basic scripts, but it's enough to learn Python, JavaScript, or web dev basics."
+      },
+      {
+        "persona": "Solo developer building side projects",
+        "recommendation": "Core at $25/mo gives you the AI Agent, better compute, and deployment capability. It's a good deal if you're building and hosting small apps entirely within Replit."
+      },
+      {
+        "persona": "Small team",
+        "recommendation": "Teams at $40/user/mo adds collaborative editing and shared projects. Consider whether you actually need these features or if individual Core plans plus GitHub would be cheaper."
+      },
+      {
+        "persona": "Professional developer",
+        "recommendation": "Replit's compute limits and browser-based workflow won't replace a local development setup for serious projects. It's best as a prototyping and deployment tool, not your primary IDE."
+      }
+    ],
+    "bottom_line": "Replit Core at $25/mo is a solid deal if you want an all-in-one development and deployment environment with AI built in. The AI Agent is impressive for prototyping. But costs can creep up with deployments and compute, and the browser-based experience has limits for large projects. Think of it as a prototyping and hosting platform with AI, not a replacement for your local dev setup.",
+    "internal_links": [
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Cursor pricing breakdown",
+        "url": "/tools/cursor-pricing/"
+      },
+      {
+        "text": "Replit review",
+        "url": "/tools/replit/"
+      },
+      {
+        "text": "AI Agent glossary",
+        "url": "/glossary/ai-agent/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Replit free?",
+        "answer": "Replit has a free tier with basic compute (0.5 vCPU, 512MB RAM), limited AI features, and public-only projects. It's fine for learning but not for real development. Core at $25/mo is where the useful features start."
+      },
+      {
+        "question": "What does Replit's AI Agent do?",
+        "answer": "Replit's AI Agent can build full applications from text descriptions. You describe what you want, and it writes the code, sets up the project structure, and configures deployment. It works well for simple web apps and prototypes. Complex apps still need manual intervention."
+      },
+      {
+        "question": "How much does it cost to deploy on Replit?",
+        "answer": "Deployment costs are separate from your subscription. A small web app typically costs $5-20/month in compute charges. High-traffic apps can cost more due to egress and compute scaling. Replit's pricing calculator can estimate costs for your specific workload."
+      },
+      {
+        "question": "Is Replit good for professional development?",
+        "answer": "Replit is excellent for prototyping, teaching, and small projects. For professional development on large codebases, most developers prefer local IDEs (VS Code, Cursor) with more compute power and flexibility. Replit's browser-based approach has inherent limitations for complex workflows."
+      },
+      {
+        "question": "How does Replit compare to Cursor?",
+        "answer": "They serve different needs. Cursor is a local AI code editor focused on writing and editing code. Replit is a cloud-based development and deployment platform with AI features. Cursor is better for coding in existing projects. Replit is better for building new apps from scratch and deploying them quickly."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "langchain-pricing",
+    "tool_name": "LangChain / LangSmith",
+    "tool_slug": "langchain",
+    "title": "LangChain / LangSmith Pricing 2026: Free, Plus, and Enterprise Plans",
+    "meta_description": "LangChain and LangSmith pricing for 2026. Free tier with 5K traces, Plus at $39/mo, Enterprise pricing custom. What the observability platform costs.",
+    "og_description": "LangChain / LangSmith pricing for 2026. Free tier limits, Plus plan details, and whether the observability tools are worth paying for.",
+    "h1": "LangChain / LangSmith Pricing: What the Platform Costs",
+    "intro": "LangChain the framework is free and open source. LangSmith, the observability and evaluation platform, is where the pricing kicks in. If you're building production LLM apps with LangChain, you'll eventually want LangSmith for debugging and monitoring. Here's what that costs.",
+    "tiers": [
+      {
+        "name": "Developer (Free)",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "5,000 traces per month",
+          "1 user",
+          "14-day data retention",
+          "Basic tracing and debugging",
+          "LangGraph Cloud playground"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Plus",
+        "price": "$39",
+        "billing": "per user/month",
+        "highlights": [
+          "100,000 traces per month included",
+          "Additional traces at $0.50 per 1,000",
+          "Up to 10 users",
+          "400-day data retention",
+          "Evaluation datasets and experiments",
+          "Prompt versioning and management"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "billing": "annual contract",
+        "highlights": [
+          "Unlimited traces",
+          "Unlimited users",
+          "Custom data retention",
+          "SSO and RBAC",
+          "Self-hosted deployment option",
+          "Dedicated support and SLA",
+          "SOC2 compliance"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Overage charges on Plus hit fast. If you're running 500K traces/month, you'll pay $39 base plus $200 in overage ($0.50/1K traces). That's $239/user/month.",
+      "The framework itself is free, but LangChain apps tend to use more LLM calls than simpler architectures. Chain-of-thought, retrieval, and agent loops multiply your API costs.",
+      "Data retention on the free tier is only 14 days. If you need to debug an issue from last month, that data is gone.",
+      "LangGraph Cloud (their agent deployment platform) has separate compute costs on top of LangSmith subscriptions."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Solo developer prototyping",
+        "recommendation": "Free tier with 5K traces is enough for development and testing. You won't need more until you're handling real production traffic."
+      },
+      {
+        "persona": "Small team shipping LLM features",
+        "recommendation": "Plus at $39/user/mo with 100K traces works well for teams of 2-5. Watch overage charges once you're past the initial 100K. If you don't need the observability, you can skip LangSmith entirely and just use the open-source framework."
+      },
+      {
+        "persona": "Enterprise with multiple LLM apps",
+        "recommendation": "Enterprise is worth it once you have 10+ developers or need SSO and compliance. The unlimited traces alone can save money compared to Plus overage charges at high volumes."
+      }
+    ],
+    "bottom_line": "LangChain is free. LangSmith Plus at $39/user/mo is worth it if you're debugging production LLM apps and need trace visibility. But watch the overage charges on traces. If you're building simple LLM integrations, you might not need LangSmith at all. Alternatives like Langfuse (open source) give you similar observability for free if you self-host.",
+    "internal_links": [
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "LangChain review",
+        "url": "/tools/langchain/"
+      },
+      {
+        "text": "LangChain vs LlamaIndex",
+        "url": "/tools/langchain-vs-llamaindex/"
+      },
+      {
+        "text": "OpenAI API pricing",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LangChain free?",
+        "answer": "LangChain the framework is completely free and open source. LangSmith, the observability and evaluation platform, has a free tier (5K traces/month) and paid plans starting at $39/user/month. You can use LangChain without LangSmith."
+      },
+      {
+        "question": "Do I need LangSmith to use LangChain?",
+        "answer": "No. LangChain works fine without LangSmith. LangSmith adds tracing, debugging, and evaluation tools that help in production. For prototyping and simple apps, the framework alone is sufficient."
+      },
+      {
+        "question": "How does LangSmith pricing compare to Langfuse?",
+        "answer": "Langfuse is open source and free if you self-host. Their cloud version has a free tier and paid plans that are generally cheaper than LangSmith. LangSmith has tighter integration with LangChain, but Langfuse works with any LLM framework."
+      },
+      {
+        "question": "What counts as a trace in LangSmith?",
+        "answer": "A trace represents one complete execution of your LangChain pipeline, including all the steps (LLM calls, retrieval, tool use). A single user request that triggers 5 LLM calls still counts as 1 trace. Complex agent loops with many steps are still 1 trace per top-level invocation."
+      },
+      {
+        "question": "Is LangChain worth using in production?",
+        "answer": "It depends on your use case. LangChain is great for complex chains, agents, and retrieval pipelines where you need the orchestration abstractions. For simple API calls to OpenAI or Anthropic, it adds unnecessary complexity. Many production teams start with LangChain and either stick with it or simplify to direct API calls."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "weaviate-pricing",
+    "tool_name": "Weaviate",
+    "tool_slug": "weaviate",
+    "title": "Weaviate Pricing 2026: Open Source, Serverless, and Enterprise Costs",
+    "meta_description": "Weaviate pricing for 2026. Free self-hosted option, Serverless starting free, Enterprise with SLAs. Real cost examples for vector database workloads.",
+    "og_description": "Weaviate pricing for 2026. Open source self-hosting vs managed cloud. What it actually costs at different scales.",
+    "h1": "Weaviate Pricing: Self-Hosted vs Cloud Costs",
+    "intro": "Weaviate is one of the few vector databases you can genuinely self-host for free. Their managed cloud option, Weaviate Cloud, adds convenience but also cost. Here's what each option runs you and when managed makes more sense than self-hosted.",
+    "tiers": [
+      {
+        "name": "Open Source (Self-Hosted)",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "Full-featured vector database",
+          "All search types (vector, keyword, hybrid)",
+          "Multi-tenancy support",
+          "Run on your own infrastructure",
+          "Community support via forums and Slack"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Serverless Cloud (Free Tier)",
+        "price": "$0",
+        "billing": "Free sandbox",
+        "highlights": [
+          "2 sandbox clusters",
+          "14-day expiration per sandbox",
+          "Good for prototyping and evaluation",
+          "No credit card required",
+          "Limited to small datasets"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Serverless Cloud (Paid)",
+        "price": "Usage-based",
+        "billing": "pay as you go",
+        "highlights": [
+          "Stored objects: $0.035 per 1M dimension-hours",
+          "Queries: $0.175 per 1M dimensions queried",
+          "No cluster management needed",
+          "Auto-scaling",
+          "Standard support included"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Enterprise Cloud",
+        "price": "Custom",
+        "billing": "annual contract",
+        "highlights": [
+          "Dedicated infrastructure",
+          "99.9%+ SLA",
+          "Customer-managed encryption keys",
+          "Advanced RBAC",
+          "Bring your own cloud (AWS, GCP, Azure)",
+          "Dedicated support engineer"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Self-hosting is free in license terms, but you're paying for the infrastructure. A small production setup on AWS runs $200-500/month in EC2 and EBS costs.",
+      "Serverless pricing is measured in dimension-hours, which is confusing. A collection with 1M objects of 1536 dimensions costs roughly $50-80/month just for storage.",
+      "Query costs scale with the number of dimensions queried, not the number of results. High-dimensional embeddings (1536) cost 4x more per query than low-dimensional ones (384).",
+      "The free sandbox expires after 14 days. If you forget to migrate your data, it's gone. This is for evaluation only, not persistent development."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Developer building a prototype",
+        "recommendation": "Start with the free sandbox to evaluate Weaviate's features. When you're ready for persistence, either self-host with Docker or move to Serverless Cloud."
+      },
+      {
+        "persona": "Small production workload",
+        "recommendation": "Serverless Cloud is cheapest for under 1M vectors. Expect $30-100/month depending on query volume and embedding dimensions. No infrastructure to manage."
+      },
+      {
+        "persona": "Team with DevOps capability",
+        "recommendation": "Self-host with Kubernetes or Docker Compose. You'll spend $200-500/month on infrastructure but save on the managed service markup and have full control over performance tuning."
+      },
+      {
+        "persona": "Enterprise with compliance requirements",
+        "recommendation": "Enterprise Cloud gives you dedicated infrastructure, SLAs, and bring-your-own-cloud. Negotiate pricing based on your volume. Compare against self-hosting total cost including ops time."
+      }
+    ],
+    "bottom_line": "Weaviate's self-hosted option is a real advantage if you have the ops capability. It's fully featured and free to use. The managed Serverless Cloud is reasonably priced for small workloads but the dimension-based pricing model makes costs hard to predict. At scale, compare managed costs against self-hosting on your own infrastructure. The breakeven is usually around 5M vectors.",
+    "internal_links": [
+      {
+        "text": "Pinecone vs Weaviate comparison",
+        "url": "/tools/pinecone-vs-weaviate/"
+      },
+      {
+        "text": "Best Pinecone Alternatives",
+        "url": "/tools/pinecone-alternatives/"
+      },
+      {
+        "text": "Pinecone pricing",
+        "url": "/tools/pinecone-pricing/"
+      },
+      {
+        "text": "Vector Database glossary",
+        "url": "/glossary/vector-database/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Weaviate free?",
+        "answer": "Weaviate is open source and free to self-host with no restrictions. The managed cloud service has a free sandbox tier (14-day expiration) and paid serverless plans starting with usage-based pricing. Self-hosting is genuinely free if you have your own infrastructure."
+      },
+      {
+        "question": "How much does Weaviate Cloud cost?",
+        "answer": "Serverless Cloud charges per dimension-hour for storage and per dimensions queried. A typical small workload (500K vectors, 1536 dimensions, moderate query volume) costs $30-80/month. Costs increase with vector count, dimensions, and query frequency."
+      },
+      {
+        "question": "Should I self-host Weaviate or use the cloud?",
+        "answer": "Self-host if you have DevOps capability and want full control over costs and performance. Use the cloud if you want zero infrastructure management and your workload is small-to-medium. The breakeven point is roughly 5M vectors, where self-hosting becomes cheaper."
+      },
+      {
+        "question": "How does Weaviate compare to Pinecone?",
+        "answer": "Weaviate offers self-hosting (Pinecone doesn't), hybrid search (vector + keyword), and more flexible data modeling. Pinecone has simpler serverless pricing and less operational overhead. Weaviate is cheaper at scale due to the self-host option. Pinecone is easier to start with."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "chroma-pricing",
+    "tool_name": "Chroma",
+    "tool_slug": "chroma",
+    "title": "Chroma Pricing 2026: Open Source and Chroma Cloud Costs",
+    "meta_description": "Chroma pricing for 2026. Free open-source option, Chroma Cloud free tier, and paid plans. The simplest vector database and what it costs.",
+    "og_description": "Chroma pricing for 2026. Open source self-hosting vs Chroma Cloud managed service. Simple pricing for a simple vector DB.",
+    "h1": "Chroma Pricing: What the Simplest Vector Database Costs",
+    "intro": "Chroma has become the default vector database for developers who want something that works without a PhD in infrastructure. It's open source, runs embedded in your Python app, and has a growing cloud offering. Here's what it costs across all the options.",
+    "tiers": [
+      {
+        "name": "Open Source (Self-Hosted)",
+        "price": "$0",
+        "billing": "Free forever",
+        "highlights": [
+          "Full vector database functionality",
+          "Embedded mode (runs in your Python process)",
+          "Client/server mode for production",
+          "No vendor lock-in",
+          "Community support"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Chroma Cloud (Free Tier)",
+        "price": "$0",
+        "billing": "Free to start",
+        "highlights": [
+          "Up to 1M embeddings stored",
+          "Limited queries per month",
+          "Single collection",
+          "Managed infrastructure",
+          "Good for small projects and prototyping"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Chroma Cloud (Pro)",
+        "price": "Usage-based",
+        "billing": "pay as you go",
+        "highlights": [
+          "Unlimited embeddings storage",
+          "Multiple collections",
+          "Auto-scaling",
+          "99.9% uptime SLA",
+          "Email support",
+          "Pricing approximately $0.05 per 1M embeddings stored/month (estimated)"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Chroma Cloud (Enterprise)",
+        "price": "Custom",
+        "billing": "annual contract",
+        "highlights": [
+          "Dedicated infrastructure",
+          "Custom SLA",
+          "SSO and access controls",
+          "Priority support",
+          "Deployment in your cloud account"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Embedded mode is free but shares memory with your application. For anything beyond 100K vectors, you'll want dedicated infrastructure, which means server costs.",
+      "Chroma Cloud pricing is still evolving. Early pricing has been affordable, but expect adjustments as the service matures. Lock in rates if you can.",
+      "Self-hosted Chroma doesn't include backups, monitoring, or high availability out of the box. You'll need to set those up yourself for production use.",
+      "Chroma's query performance degrades on very large datasets (10M+ vectors) compared to Pinecone or Weaviate. You may need to shard or upgrade infrastructure earlier."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Developer building a prototype or side project",
+        "recommendation": "Use embedded mode. pip install chromadb and you're running in 30 seconds. It's free, simple, and fast enough for datasets under 100K vectors."
+      },
+      {
+        "persona": "Small production app (under 1M vectors)",
+        "recommendation": "Chroma Cloud free tier covers you. If you outgrow it, the Pro tier is competitively priced. Alternatively, self-host with Docker for full control."
+      },
+      {
+        "persona": "Team building RAG applications",
+        "recommendation": "Chroma Cloud Pro for convenience, or self-host if your team has ops experience. Chroma's API simplicity is its biggest advantage here. Less time on infrastructure, more time on your actual product."
+      },
+      {
+        "persona": "Enterprise needing scale beyond 10M vectors",
+        "recommendation": "Consider Pinecone or Weaviate instead. Chroma's strength is simplicity, not raw scale. If you're past 10M vectors with high query volume, purpose-built managed services handle that workload better."
+      }
+    ],
+    "bottom_line": "Chroma's biggest selling point is simplicity. pip install, import, done. The open-source version is genuinely free and works well for prototypes and small production apps. Chroma Cloud adds managed hosting at reasonable prices. The tradeoff: Chroma isn't built for massive scale. If your vector count stays under a few million, it's hard to beat for developer experience.",
+    "internal_links": [
+      {
+        "text": "Best Pinecone Alternatives",
+        "url": "/tools/pinecone-alternatives/"
+      },
+      {
+        "text": "Pinecone pricing",
+        "url": "/tools/pinecone-pricing/"
+      },
+      {
+        "text": "Weaviate pricing",
+        "url": "/tools/weaviate-pricing/"
+      },
+      {
+        "text": "Vector Database glossary",
+        "url": "/glossary/vector-database/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Chroma free?",
+        "answer": "Chroma is open source and completely free to self-host. The embedded mode runs directly in your Python process with zero cost. Chroma Cloud has a free tier for up to 1M embeddings and paid plans beyond that."
+      },
+      {
+        "question": "How does Chroma compare to Pinecone?",
+        "answer": "Chroma is simpler to set up and free to self-host. Pinecone is a managed-only service with better performance at scale. Choose Chroma for simplicity and small-to-medium datasets. Choose Pinecone when you need managed infrastructure and scale beyond 5M vectors."
+      },
+      {
+        "question": "Can Chroma handle production workloads?",
+        "answer": "Yes, for small-to-medium workloads. Chroma runs well in client/server mode for up to a few million vectors with moderate query volume. Beyond 10M vectors or high-throughput scenarios, you'll want a more scalable solution like Pinecone or Weaviate."
+      },
+      {
+        "question": "What's embedded mode in Chroma?",
+        "answer": "Embedded mode runs Chroma directly inside your Python process. No separate server needed. You import chromadb, create a client, and start storing vectors. Data persists to disk by default. It's the fastest way to add vector search to any Python application."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "cohere-pricing",
+    "tool_name": "Cohere",
+    "tool_slug": "cohere",
+    "title": "Cohere API Pricing 2026: Command, Embed, and Rerank Model Costs",
+    "meta_description": "Cohere API pricing for 2026. Command R+ at $2.50/1M input tokens, Embed at $0.10/1M tokens, Rerank at $2/1K searches. Full pricing breakdown.",
+    "og_description": "Cohere API pricing for 2026. Command, Embed, and Rerank models compared with real-world costs for production applications.",
+    "h1": "Cohere API Pricing: What Each Model Costs",
+    "intro": "Cohere takes a different approach than OpenAI and Anthropic. Instead of one flagship model, they offer specialized models for generation (Command), embeddings (Embed), and ranking (Rerank). The pricing varies a lot by model type. Here's what each costs and where Cohere makes sense in your stack.",
+    "tiers": [
+      {
+        "name": "Trial (Free)",
+        "price": "$0",
+        "billing": "Free with rate limits",
+        "highlights": [
+          "Access to all models",
+          "100 API calls per minute",
+          "1,000 API calls per month",
+          "No production use allowed",
+          "Good for evaluation only"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Command R+",
+        "price": "$2.50 / $10",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Largest and most capable generation model",
+          "128K context window",
+          "Strong multilingual support (10+ languages)",
+          "RAG-optimized with citation generation",
+          "Tool use and function calling"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Command R",
+        "price": "$0.15 / $0.60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Smaller, faster generation model",
+          "128K context window",
+          "Good for RAG, summarization, chat",
+          "Lower latency than Command R+",
+          "Best value for high-volume generation"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Embed v3",
+        "price": "$0.10",
+        "billing": "per 1M tokens",
+        "highlights": [
+          "State-of-the-art embedding model",
+          "1024 dimensions (configurable)",
+          "Multilingual support",
+          "Search, classification, clustering use cases",
+          "Cheaper than OpenAI embeddings"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Rerank v3",
+        "price": "$2",
+        "billing": "per 1,000 searches",
+        "highlights": [
+          "Re-ranks search results by relevance",
+          "Works with any retrieval system",
+          "Dramatically improves RAG accuracy",
+          "Simple API (just pass query + documents)",
+          "Multilingual support"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "The trial tier's 1,000 calls/month limit means you'll exhaust it in a single afternoon of development. Plan to move to paid quickly if you're serious about evaluation.",
+      "Command R+ output tokens cost 4x more than input. Long-form generation tasks can cost significantly more than expected. Use Command R for drafts and R+ only for final outputs.",
+      "Rerank pricing is per search, not per token. Each search can include up to 1,000 documents. If you're re-ranking 100 documents per query, that's still just $0.002 per query.",
+      "There's no batch pricing discount like OpenAI's Batch API. High-volume users should negotiate custom contracts."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "RAG pipeline builder",
+        "recommendation": "Cohere's Embed + Rerank combo is arguably the best value in the market for retrieval. Embed at $0.10/1M tokens for indexing, Rerank at $2/1K searches for quality. Pair with any LLM for generation."
+      },
+      {
+        "persona": "Multilingual application",
+        "recommendation": "Cohere's multilingual support across all models is a standout feature. If your app serves multiple languages, Command R+ handles 10+ languages without separate models. Most competitors charge extra or perform worse on non-English text."
+      },
+      {
+        "persona": "Cost-sensitive production app",
+        "recommendation": "Command R at $0.15/$0.60 per 1M tokens is one of the cheapest capable generation models available. It's in the same price range as GPT-4o-mini but with a 128K context window and solid RAG performance."
+      },
+      {
+        "persona": "Developer comparing LLM providers",
+        "recommendation": "Use the free trial to test Cohere against OpenAI and Anthropic on your specific tasks. Cohere's sweet spot is retrieval and multilingual work. For general chat and coding, OpenAI and Anthropic typically win."
+      }
+    ],
+    "bottom_line": "Cohere isn't trying to be the best general-purpose LLM. Its strength is the Embed + Rerank stack for retrieval, multilingual support, and competitive pricing on generation models. If you're building RAG applications, Cohere's embedding and reranking models should be on your shortlist regardless of which LLM you use for generation.",
+    "internal_links": [
+      {
+        "text": "OpenAI API pricing",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "Anthropic API pricing",
+        "url": "/tools/anthropic-api-pricing/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      },
+      {
+        "text": "Embedding model glossary",
+        "url": "/glossary/embedding-model/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does Cohere cost?",
+        "answer": "It depends on the model. Command R+ (generation): $2.50/$10 per 1M tokens. Command R (cheaper generation): $0.15/$0.60 per 1M tokens. Embed v3: $0.10 per 1M tokens. Rerank v3: $2 per 1,000 searches. There's also a free trial tier with 1,000 calls/month."
+      },
+      {
+        "question": "Is Cohere cheaper than OpenAI?",
+        "answer": "For embeddings, yes. Cohere Embed v3 at $0.10/1M tokens is cheaper than OpenAI's text-embedding-3-small at $0.02/1M tokens for smaller models, but Cohere's multilingual quality is generally higher. For generation, Command R ($0.15/1M) is comparable to GPT-4o-mini ($0.15/1M). Command R+ ($2.50/1M) is similar to GPT-4o ($2.50/1M)."
+      },
+      {
+        "question": "What is Cohere Rerank?",
+        "answer": "Rerank is a model that takes a query and a list of documents and re-orders them by relevance. It dramatically improves RAG accuracy by filtering out irrelevant retrieved documents before they reach your LLM. At $2 per 1,000 searches, it's one of the cheapest ways to improve retrieval quality."
+      },
+      {
+        "question": "Should I use Cohere or OpenAI for embeddings?",
+        "answer": "Cohere Embed v3 generally produces higher quality embeddings for multilingual and retrieval use cases. OpenAI's text-embedding-3 is simpler to integrate if you're already using the OpenAI API. For English-only, the quality difference is small. For multilingual, Cohere wins."
+      },
+      {
+        "question": "Does Cohere have a free tier?",
+        "answer": "Cohere has a trial tier that's free with 1,000 API calls per month and 100 per minute. It's limited to non-production use. There's no permanent free tier for production applications. You move to pay-as-you-go pricing once you're past evaluation."
+      }
+    ],
+    "date_updated": "2026-02-20"
+  },
+  {
+    "slug": "aws-bedrock-pricing",
+    "tool_name": "AWS Bedrock",
+    "tool_slug": "aws-bedrock",
+    "title": "AWS Bedrock Pricing 2026: On-Demand, Provisioned, and Batch Costs",
+    "meta_description": "AWS Bedrock pricing for 2026. On-demand token pricing for Claude, Llama, Mistral, and Titan models. Provisioned throughput and batch pricing explained.",
+    "og_description": "AWS Bedrock pricing breakdown for 2026. On-demand, provisioned, and batch modes compared across all available models.",
+    "h1": "AWS Bedrock Pricing: What Each Model and Mode Costs",
+    "intro": "AWS Bedrock gives you access to Claude, Llama, Mistral, Titan, and other models through a single API. The appeal is keeping everything in your AWS ecosystem. But the pricing has three modes (on-demand, provisioned, batch), and it's easy to pick the wrong one. Here's how the costs break down.",
+    "tiers": [
+      {
+        "name": "On-Demand",
+        "price": "Varies by model",
+        "billing": "per 1,000 input / output tokens",
+        "highlights": [
+          "Claude 3.5 Sonnet: $3/$15 per 1M tokens",
+          "Claude 3.5 Haiku: $0.25/$1.25 per 1M tokens",
+          "Llama 3.1 70B: $2.65/$3.50 per 1M tokens",
+          "Mistral Large: $4/$12 per 1M tokens",
+          "Amazon Titan Text: $0.50/$1.50 per 1M tokens",
+          "No commitment, pay only for what you use"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Batch Inference",
+        "price": "50% off on-demand",
+        "billing": "per 1,000 input / output tokens",
+        "highlights": [
+          "Half the cost of on-demand pricing",
+          "Results returned within 24 hours",
+          "No real-time latency requirements",
+          "Good for bulk processing and analysis",
+          "Available for most models"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Provisioned Throughput",
+        "price": "Hourly rate per model unit",
+        "billing": "per hour (1-month or 6-month commitment)",
+        "highlights": [
+          "Guaranteed throughput and latency",
+          "Custom model deployments (fine-tuned)",
+          "1-month commitment: higher hourly rate",
+          "6-month commitment: approximately 40% savings",
+          "Predictable performance for production"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Knowledge Bases / Agents",
+        "price": "Usage-based",
+        "billing": "per query + storage",
+        "highlights": [
+          "Knowledge Bases: $0.01 per query (retrieval)",
+          "Agent invocations billed per LLM call",
+          "Vector storage in OpenSearch Serverless",
+          "S3 storage for source documents",
+          "Managed RAG without custom infrastructure"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      "Bedrock's on-demand model prices are the same as going directly to Anthropic or others. You're not getting a discount for using AWS as the middleman. The value is integration, not savings.",
+      "OpenSearch Serverless for Knowledge Bases has a minimum cost of roughly $700/month (4 OCUs). That's a steep floor for a small RAG project.",
+      "Provisioned Throughput has a 1-month minimum commitment. If you overprovision, you're paying for capacity you don't use. Get your traffic patterns nailed down before committing.",
+      "Data transfer charges apply when calling Bedrock from outside the same AWS region. Cross-region calls add $0.02-0.09/GB on top of token costs.",
+      "CloudWatch logging for Bedrock (which you'll want for debugging) adds another $0.50/GB of log data ingested."
+    ],
+    "who_needs_what": [
+      {
+        "persona": "AWS-native team using Claude or Llama",
+        "recommendation": "On-demand is the starting point. Prices match the model providers directly. The value is staying within your AWS VPC, using IAM for access control, and avoiding separate API key management."
+      },
+      {
+        "persona": "Batch processing or analytics workload",
+        "recommendation": "Batch inference at 50% off is hard to beat if you don't need real-time responses. Ideal for processing large document sets, classification jobs, or nightly analysis runs."
+      },
+      {
+        "persona": "High-throughput production application",
+        "recommendation": "Provisioned Throughput guarantees latency and availability. The 6-month commitment saves about 40%. Do the math: if you're spending $5K+/month on on-demand, provisioned is likely cheaper."
+      },
+      {
+        "persona": "Team building a RAG application",
+        "recommendation": "Knowledge Bases is the easiest path to managed RAG, but the OpenSearch Serverless floor ($700/month) is steep for small projects. Consider self-managed retrieval with Pinecone or Weaviate if you need lower costs."
+      }
+    ],
+    "bottom_line": "Bedrock's main value isn't cheaper models. It's keeping everything in AWS. If your team already runs on AWS, Bedrock simplifies security, compliance, and infrastructure management. The pricing matches direct API pricing for most models, so you're paying for convenience and integration. Batch inference at 50% off is the best deal. Avoid Knowledge Bases unless you're ready for the $700/month OpenSearch minimum.",
+    "internal_links": [
+      {
+        "text": "Anthropic API pricing",
+        "url": "/tools/anthropic-api-pricing/"
+      },
+      {
+        "text": "OpenAI API pricing",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "RAG architecture guide",
+        "url": "/blog/rag-architecture-guide/"
+      },
+      {
+        "text": "Vector Database glossary",
+        "url": "/glossary/vector-database/"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is AWS Bedrock cheaper than using APIs directly?",
+        "answer": "No. On-demand pricing on Bedrock matches the model providers' direct pricing (e.g., Claude on Bedrock costs the same as Claude on Anthropic's API). Batch inference is 50% cheaper, which is the same discount Anthropic offers directly. The value of Bedrock is AWS integration, not lower prices."
+      },
+      {
+        "question": "What models are available on AWS Bedrock?",
+        "answer": "Bedrock offers Claude (Anthropic), Llama (Meta), Mistral, Amazon Titan, Cohere Command, and Stability AI models. The selection is broad but model versions may lag behind the providers' direct APIs by a few weeks."
+      },
+      {
+        "question": "What is Provisioned Throughput?",
+        "answer": "Provisioned Throughput reserves dedicated model capacity for your workload. You pay an hourly rate for guaranteed throughput and latency. It requires a 1-month or 6-month commitment. Worth it for high-volume production workloads where consistent performance matters."
+      },
+      {
+        "question": "How much do Bedrock Knowledge Bases cost?",
+        "answer": "Knowledge Base queries cost $0.01 per retrieval query plus the LLM costs for generating answers. The backend uses OpenSearch Serverless, which has a minimum of roughly $700/month (4 OCUs). For small projects, this floor cost makes managed RAG expensive compared to alternatives."
+      },
+      {
+        "question": "Should I use Bedrock or call model APIs directly?",
+        "answer": "Use Bedrock if you're already on AWS and want to keep data within your VPC, use IAM for access control, and avoid managing separate API keys. Call APIs directly if you want the latest model versions immediately, lower overhead for small projects, or you're not locked into AWS."
+      },
+      {
+        "question": "Does Bedrock support fine-tuning?",
+        "answer": "Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training."
+      }
+    ],
+    "date_updated": "2026-02-20"
   }
 ]

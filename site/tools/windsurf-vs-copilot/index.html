@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Windsurf vs GitHub Copilot: Full AI Editor vs Inline Assistant | PE Collective</title>
+    <meta name="description" content="Windsurf vs GitHub Copilot: Compare a full AI code editor against the most popular inline coding assistant. Pricing, features, and real-world performance in 2026.">
+    <link rel="canonical" href="https://pecollective.com/tools/windsurf-vs-copilot/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/windsurf-vs-copilot/">
+    <meta property="og:title" content="Windsurf vs GitHub Copilot: Full AI Editor vs Inline Assistant">
+    <meta property="og:description" content="Windsurf vs GitHub Copilot: Compare a full AI code editor against the most popular inline coding assistant. Pricing, features, and real-world performance in 2026.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Windsurf vs GitHub Copilot: Full AI Editor vs Inline Assistant">
+    <meta name="twitter:description" content="Windsurf vs GitHub Copilot: Compare a full AI code editor against the most popular inline coding assistant. Pricing, features, and real-world performance in 2026.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://pecollective.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Windsurf vs GitHub Copilot",
+      "item": "https://pecollective.com/tools/windsurf-vs-copilot/"
+    }
+  ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Windsurf better than GitHub Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Windsurf is better for multi-file editing and agentic workflows. Copilot is better for fast inline suggestions and works in more editors. Your workflow style determines the winner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Windsurf and Copilot together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. Windsurf is a standalone editor, so you can't install Copilot as a plugin inside it. You'd need to use them in separate editors. Most developers pick one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is cheaper, Windsurf or Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copilot is cheaper at $10/month vs Windsurf's $15/month. Copilot is also free for open source contributors and students. Windsurf's free tier is generous but limited."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Windsurf work with JetBrains or Neovim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Windsurf is a standalone editor (VS Code fork). If you need JetBrains or Neovim support, Copilot is the better choice since it supports both as plugins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Copilot Workspace the same as Windsurf's Cascade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They're aiming at similar problems but Copilot Workspace is still in limited preview and GitHub-centric. Windsurf's Cascade is shipping today and works locally on any project. Workspace may close the gap once it's generally available."
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Windsurf -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Windsurf",
+  "url": "https://windsurf.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free tier available"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$15/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$30/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Contact sales"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: GitHub Copilot -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GitHub Copilot",
+  "url": "https://github.com/features/copilot",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free for open source"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$10/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$19/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "$39/month"
+      }
+    ]
+  }
+}
+    </script>
+    
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    
+    <style>
+    .comparison-header {
+      padding: 60px 0 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-header__tools {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .comparison-header__tool {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comparison-header__icon {
+      width: 60px;
+      height: 60px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .comparison-header__name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .comparison-header__vs {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .comparison-header h1 {
+      margin-top: 24px;
+      font-size: 2rem;
+    }
+    .comparison-header .subtitle {
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+    .quick-verdict {
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--teal-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px auto;
+      max-width: 800px;
+    }
+    .quick-verdict h2 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+    .quick-verdict p {
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .comparison-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .comparison-content h3 {
+      font-size: 1.125rem;
+      margin: 24px 0 8px;
+      color: var(--gold);
+    }
+    .comparison-content p {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table th {
+      background: var(--bg-card);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .comparison-table th:first-child { width: 35%; }
+    .comparison-table td { color: var(--text-secondary); }
+    .comparison-table tr:hover td { background: var(--bg-card); }
+    .comparison-table .winner {
+      color: var(--success);
+      font-weight: 600;
+    }
+    .section-divider {
+      margin: 48px 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .use-case-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .use-case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .use-case-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .use-case-card ul { list-style: none; padding: 0; }
+    .use-case-card li {
+      padding: 4px 0;
+      color: var(--text-secondary);
+    }
+    .cta-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .cta-comparison__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .cta-comparison__card h4 { margin-bottom: 8px; }
+    .cta-comparison__card p {
+      margin-bottom: 12px;
+      font-size: 0.9375rem;
+    }
+    .cta-comparison__card .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      background: var(--gold);
+      color: var(--bg-darker);
+      text-decoration: none;
+    }
+    .cta-comparison__card .btn:hover {
+      background: var(--gold-hover);
+    }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding: 12px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .faq-section { max-width: 800px; margin: 0 auto; }
+    .faq-section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+    .newsletter-cta {
+      max-width: 600px;
+      margin: 48px auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .newsletter-cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .newsletter-cta form {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .newsletter-cta input {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-darker);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      width: 240px;
+    }
+    .newsletter-cta button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gold);
+      color: var(--bg-darker);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 700px) {
+      .use-case-cards, .cta-comparison { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 0.875rem; }
+      .comparison-table th, .comparison-table td { padding: 8px; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+    
+
+    <main>
+      <article>
+        <div class="comparison-header">
+          <div class="comparison-header__tools">
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">🌊</span>
+              <span class="comparison-header__name">Windsurf</span>
+            </div>
+            <span class="comparison-header__vs">VS</span>
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">🤖</span>
+              <span class="comparison-header__name">GitHub Copilot</span>
+            </div>
+          </div>
+          <h1>Full AI Editor or Inline Assistant?</h1>
+          <p class="subtitle">Two very different approaches to AI-assisted coding</p>
+          <p class="comparison-header__date">Last updated: February 20, 2026</p>
+        </div>
+
+        <div class="quick-verdict">
+          <h2>Quick Verdict</h2>
+          <p><strong>Choose Windsurf if:</strong> You want an all-in-one AI editor that handles multi-file changes, agentic workflows, and full project context. Windsurf's Cascade feature can plan and execute across your entire codebase in ways Copilot can't.</p>
+          <p><strong>Choose GitHub Copilot if:</strong> You want fast inline suggestions inside your existing editor without switching tools. Copilot sits in VS Code (or JetBrains, Neovim) and stays out of your way. At $10/month, it's the cheapest option here.</p>
+        </div>
+
+        <div class="comparison-content">
+          <h2>Feature Comparison</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Windsurf</th>
+                <th>GitHub Copilot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Multi-File Editing</strong></td>
+                <td class="winner">Cascade flows</td>
+                <td>Copilot Chat only</td>
+              </tr>
+              <tr>
+                <td><strong>Autocomplete Speed</strong></td>
+                <td>Fast</td>
+                <td class="winner">Very fast</td>
+              </tr>
+              <tr>
+                <td><strong>Agentic Workflows</strong></td>
+                <td class="winner">Built-in Cascade</td>
+                <td>Limited (Copilot Workspace preview)</td>
+              </tr>
+              <tr>
+                <td><strong>IDE Flexibility</strong></td>
+                <td>Standalone editor only</td>
+                <td class="winner">VS Code, JetBrains, Neovim, more</td>
+              </tr>
+              <tr>
+                <td><strong>Codebase Context</strong></td>
+                <td class="winner">Full project indexed</td>
+                <td>Growing context window</td>
+              </tr>
+              <tr>
+                <td><strong>Price (Individual)</strong></td>
+                <td>$15/month</td>
+                <td class="winner">$10/month</td>
+              </tr>
+              <tr>
+                <td><strong>Enterprise Features</strong></td>
+                <td>Basic team management</td>
+                <td class="winner">SSO, policy controls, audit logs</td>
+              </tr>
+              <tr>
+                <td><strong>AI Models</strong></td>
+                <td>Claude + GPT-4</td>
+                <td>GPT-4 + Claude (limited)</td>
+              </tr>
+              <tr>
+                <td><strong>Learning Curve</strong></td>
+                <td>Moderate (new editor)</td>
+                <td class="winner">Minimal (plugin in your editor)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="section-divider">
+            <h2>Deep Dive: Where Each Tool Wins</h2>
+            
+          <div class="section-divider">
+            <h3>🌊 Windsurf Wins: Deep Context and Agentic Coding</h3>
+            <p>Windsurf isn't just autocomplete on steroids. It's a full development environment built around AI from the ground up. The Cascade feature plans multi-step changes, creates files, modifies existing ones, and runs commands. Ask it to add authentication to your app and it'll scaffold routes, middleware, and database migrations in sequence.</p>
+            <p>The full-project indexing matters more than most people realize. When Windsurf suggests code, it knows about your utils folder, your custom types, your existing patterns. Copilot is getting better at context, but it's still fundamentally an autocomplete tool that sees what's in front of it.</p>
+            <p>For developers doing greenfield work or large refactors, this depth of understanding saves hours. You're not copying context into a chat window. The editor already knows.</p>
+          </div>
+          <div class="section-divider">
+            <h3>🤖 Copilot Wins: Price, Reach, and Staying in Your Lane</h3>
+            <p>GitHub Copilot works everywhere. VS Code, JetBrains, Neovim, Visual Studio, even Xcode. You don't switch editors. You don't change your workflow. You install a plugin and start getting suggestions. That simplicity is wildly underrated.</p>
+            <p>At $10/month it's also the cheapest serious AI coding tool on the market. And if you contribute to open source, it's free. For teams, the enterprise features (SSO, policy controls, content exclusions) are years ahead of Windsurf's team offerings.</p>
+            <p>Copilot won't plan a multi-file refactor for you. But it will finish your function, suggest your test, and write your docstring without breaking your flow. For many developers, that's exactly the right amount of AI assistance.</p>
+          </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Use Case Recommendations</h2>
+            <div class="use-case-cards">
+              <div class="use-case-card">
+                <h4>🌊 Use Windsurf For:</h4>
+                <ul>
+                  <li>→ Multi-file refactoring and feature implementation</li>
+                  <li>→ Greenfield project scaffolding</li>
+                  <li>→ Developers who want AI to drive, not just suggest</li>
+                  <li>→ Solo developers building full-stack apps</li>
+                  <li>→ Rapid prototyping with agentic workflows</li>
+                  <li>→ Teams exploring AI-first development</li>
+                </ul>
+              </div>
+              <div class="use-case-card">
+                <h4>🤖 Use GitHub Copilot For:</h4>
+                <ul>
+                  <li>→ Inline code completion in your existing editor</li>
+                  <li>→ Enterprise teams with compliance requirements</li>
+                  <li>→ Developers who want AI to assist, not take over</li>
+                  <li>→ Budget-conscious developers or students</li>
+                  <li>→ Multi-IDE workflows (JetBrains + VS Code)</li>
+                  <li>→ Open source contributors (free access)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Pricing Breakdown</h2>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Windsurf</th>
+                  <th>GitHub Copilot</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><strong>Free / Trial</strong></td>
+                <td>Free tier available</td>
+                <td>Free for open source</td>
+              </tr>
+              <tr>
+                <td><strong>Individual</strong></td>
+                <td>$15/month</td>
+                <td>$10/month</td>
+              </tr>
+              <tr>
+                <td><strong>Business</strong></td>
+                <td>$30/month</td>
+                <td>$19/month</td>
+              </tr>
+              <tr>
+                <td><strong>Enterprise</strong></td>
+                <td>Contact sales</td>
+                <td>$39/month</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section-divider">
+            <h2>Our Recommendation</h2>
+            
+            <p><strong>For AI-First Developers:</strong> Go with Windsurf. If you want the AI to handle multi-step tasks and have full project awareness, Windsurf's Cascade is in a different league than Copilot Chat. The $5/month premium pays for itself on the first big refactor.</p>
+            <p><strong>For Pragmatic Developers:</strong> Stick with Copilot. It works in every major editor, costs less, and doesn't require you to change how you work. The autocomplete is still best-in-class for line-by-line coding.</p>
+            <p><strong>The Bottom Line:</strong> These tools solve different problems. Windsurf replaces your editor and rethinks the dev workflow around AI. Copilot augments your existing setup. If you're not sure, start with Copilot's free tier and try Windsurf when you hit its limits.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between Windsurf and GitHub Copilot</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>Your codebase and git history (unchanged)</li>
+                  <li>Most VS Code extensions (Windsurf is a VS Code fork)</li>
+                  <li>Keyboard shortcuts and editor settings</li>
+                  <li>Terminal configurations and workflows</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>AI chat history and saved prompts (not portable)</li>
+                  <li>Custom AI instructions and preferences</li>
+                  <li>Team billing and subscription (separate accounts)</li>
+                  <li>Editor-specific plugins that aren't VS Code extensions</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>About 20 minutes from Copilot to Windsurf. Install Windsurf, open your project, and let it index. Going the other direction is even faster since Copilot is just a plugin install.</p>
+            </div>
+          </div>
+
+          <div class="cta-comparison">
+            <div class="cta-comparison__card">
+              <h4>🌊 Get Windsurf Free</h4>
+              <p>Windsurf - AI-powered development</p>
+              <a href="https://windsurf.com" target="_blank" rel="noopener" class="btn">Get Windsurf Free →</a>
+            </div>
+            <div class="cta-comparison__card">
+              <h4>🤖 Try Copilot Free</h4>
+              <p>GitHub Copilot - AI-powered development</p>
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="btn">Try Copilot Free →</a>
+            </div>
+          </div>
+
+          <div class="affiliate-disclosure">
+            <strong>Disclosure:</strong> This comparison may contain affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. Our recommendations are based on real-world experience, not sponsorships.
+          </div>
+        </div>
+      </article>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Windsurf better than GitHub Copilot?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Windsurf is better for multi-file editing and agentic workflows. Copilot is better for fast inline suggestions and works in more editors. Your workflow style determines the winner.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can I use Windsurf and Copilot together?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Not directly. Windsurf is a standalone editor, so you can't install Copilot as a plugin inside it. You'd need to use them in separate editors. Most developers pick one.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which is cheaper, Windsurf or Copilot?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Copilot is cheaper at $10/month vs Windsurf's $15/month. Copilot is also free for open source contributors and students. Windsurf's free tier is generous but limited.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Does Windsurf work with JetBrains or Neovim?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">No. Windsurf is a standalone editor (VS Code fork). If you need JetBrains or Neovim support, Copilot is the better choice since it supports both as plugins.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Copilot Workspace the same as Windsurf's Cascade?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">They're aiming at similar problems but Copilot Workspace is still in limited preview and GitHub-centric. Windsurf's Cascade is shipping today and works locally on any project. Workspace may close the gap once it's generally available.</p>
+        </details>
+      </div>
+
+      <!-- Related Resources -->
+      <div style="max-width: 800px; margin: 48px auto 0;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+            <a href="/tools/cursor-vs-windsurf/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Windsurf &rarr;</a>
+            <a href="/tools/cursor-vs-copilot/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Copilot &rarr;</a>
+            <a href="/tools/copilot-vs-codewhisperer/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Copilot vs Amazon Q Developer &rarr;</a>
+            <a href="/tools/best-ai-coding-assistants/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Best AI Coding Assistants &rarr;</a>
+            <a href="/glossary/ai-coding-assistant/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">What Is an AI Coding Assistant? &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>Get Tool Comparisons in Your Inbox</h2>
+        <p>Weekly AI tool updates, new releases, and honest comparisons.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

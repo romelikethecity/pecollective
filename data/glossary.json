@@ -11,8 +11,11 @@
       "system-prompt"
     ],
     "related_links": [
+      "/tools/best-prompt-engineering-courses/",
+      "/salaries/prompt-engineer/",
       "/blog/prompt-engineering-guide/",
-      "/blog/prompt-engineering-best-practices/"
+      "/blog/prompt-engineering-best-practices/",
+      "/tools/best-prompt-engineering-certifications/"
     ],
     "example": "Instead of asking 'Summarize this article,' a prompt engineer might write: 'You are an expert editor. Summarize this article in 3 bullet points, each under 20 words, focusing on actionable insights for product managers.'",
     "why_it_matters": "As AI models become central to products and workflows, the quality of outputs depends heavily on input design. Prompt engineers bridge the gap between what models can do and what businesses need them to do.",
@@ -45,7 +48,11 @@
       "context-window"
     ],
     "related_links": [
-      "/tools/"
+      "/tools/pinecone-vs-weaviate/",
+      "/blog/rag-architecture-guide/",
+      "/tools/best-rag-tools/",
+      "/tools/",
+      "/tools/best-vector-databases/"
     ],
     "example": "A customer support chatbot uses RAG to search a company's help documentation, retrieve the 3 most relevant articles, and generate an answer that cites specific product features and troubleshooting steps.",
     "why_it_matters": "RAG solves the hallucination problem by grounding model responses in real data. It's the most common architecture for building production AI applications that need accurate, up-to-date information.",
@@ -77,6 +84,8 @@
       "zero-shot-prompting"
     ],
     "related_links": [
+      "/blog/chain-of-thought-prompting-guide/",
+      "/tools/claude-vs-chatgpt-coding/",
       "/blog/prompt-engineering-best-practices/"
     ],
     "example": "Prompt: 'Think step by step. A store has 45 apples. They sell 12 in the morning and receive a shipment of 30 in the afternoon. How many do they have?' The model responds with each calculation step before the final answer: 63.",
@@ -187,7 +196,11 @@
       "semantic-search"
     ],
     "related_links": [
-      "/tools/"
+      "/tools/pinecone-vs-weaviate/",
+      "/blog/vector-database-guide/",
+      "/tools/chroma-vs-pgvector/",
+      "/tools/",
+      "/tools/best-vector-databases/"
     ],
     "example": "Storing 10,000 product descriptions as vectors, then querying 'comfortable shoes for running' returns semantically similar products even if they don't contain those exact words \u2014 like 'lightweight athletic sneakers with cushioned soles.'",
     "why_it_matters": "Vector databases are the backbone of RAG systems and semantic search. The vector DB market is projected to exceed $4B by 2028, with Pinecone, Weaviate, and Chroma leading adoption.",
@@ -242,7 +255,11 @@
       "rlhf",
       "lora"
     ],
-    "related_links": [],
+    "related_links": [
+      "/blog/rag-vs-fine-tuning-cost/",
+      "/tools/openai-api-pricing/",
+      "/blog/fine-tuning-vs-rag/"
+    ],
     "example": "Fine-tuning GPT-4 on 10,000 customer support conversations so it learns your company's tone, product names, and common resolution patterns \u2014 producing responses that sound like your best support agents.",
     "why_it_matters": "Fine-tuning lets you create specialized models when prompting alone isn't enough. But it's expensive ($500-10,000+ per run) and requires clean training data, so most teams start with prompt engineering and only fine-tune when necessary.",
     "in_depth": "Fine-tuning updates a pre-trained model's weights on a task-specific dataset to improve performance on that task. Unlike prompt engineering (which changes the input) or RAG (which adds external knowledge), fine-tuning changes the model itself.\n\nThe process involves preparing a training dataset of input-output pairs, selecting hyperparameters (learning rate, epochs, batch size), and running training. Most fine-tuning today uses parameter-efficient methods like LoRA that only update a small fraction of the model's weights, dramatically reducing compute costs.\n\nFine-tuning is most valuable when you need consistent output formatting, domain-specific knowledge integration, or behavioral modifications that prompting alone can't achieve. Common use cases include custom classification, style matching, and teaching models proprietary terminology or workflows.",
@@ -272,7 +289,11 @@
       "rag",
       "prompt-engineering"
     ],
-    "related_links": [],
+    "related_links": [
+      "/tools/openai-api-pricing/",
+      "/tools/anthropic-api-pricing/",
+      "/tools/gpt4-vs-claude/"
+    ],
     "example": "Claude's 200K context window can process roughly 150,000 words \u2014 equivalent to a 500-page book \u2014 in a single request. GPT-4 Turbo supports 128K tokens. These limits include both your input and the model's response.",
     "why_it_matters": "Context window size determines what's possible without RAG. Larger windows reduce the need for complex retrieval architectures but cost more per request. Understanding token limits is essential for production prompt engineering.",
     "in_depth": "A context window is the maximum amount of text (measured in tokens) that a language model can process in a single request. Everything the model needs to know, including system prompt, conversation history, retrieved documents, and the current question, must fit within this window.\n\nContext window sizes have grown rapidly: GPT-3 had 4K tokens, GPT-4 launched with 8K/32K, and models now offer 128K-200K tokens (Claude 3.5 and GPT-4o) or even 1M+ tokens (Gemini 1.5). However, bigger isn't always better. Research shows most models experience degraded performance on information in the middle of long contexts (the 'lost in the middle' problem).\n\nEffective context window management involves prioritizing the most relevant information, placing critical content at the beginning and end, and using summarization or RAG to handle information that exceeds the window.",
@@ -324,6 +345,9 @@
       "prompt-engineering"
     ],
     "related_links": [
+      "/tools/best-ai-testing-tools/",
+      "/blog/rag-architecture-guide/",
+      "/blog/llm-evaluation-guide/",
       "/blog/prompt-engineering-best-practices/"
     ],
     "example": "Asking an LLM about a company's quarterly revenue and receiving a confident, specific number that is completely fabricated. The model doesn't 'know' it's making something up \u2014 it's generating the most statistically likely next tokens.",
@@ -377,7 +401,10 @@
       "function-calling"
     ],
     "related_links": [
-      "/jobs/ai-agent-developer/"
+      "/tools/langchain-vs-crewai/",
+      "/jobs/ai-agent-developer/",
+      "/tools/best-llm-frameworks/",
+      "/blog/building-ai-agents/"
     ],
     "example": "A coding agent that receives 'fix the failing test,' then reads the test file, identifies the error, checks the source code, writes a fix, runs the tests, and iterates until they pass \u2014 all autonomously.",
     "why_it_matters": "AI agents represent the next frontier beyond chatbots. The 'AI Agent Developer' is one of the fastest-growing job titles, with demand up 340% year-over-year according to PE Collective job data.",
@@ -403,7 +430,10 @@
       "ai-agent",
       "prompt-engineering"
     ],
-    "related_links": [],
+    "related_links": [
+      "/tools/openai-api-vs-anthropic-api/",
+      "/blog/building-ai-agents/"
+    ],
     "example": "You define a function get_weather(city, unit). When a user asks 'What's the weather in Tokyo?', the model outputs {\"function\": \"get_weather\", \"args\": {\"city\": \"Tokyo\", \"unit\": \"celsius\"}}. Your code executes the function and returns the result.",
     "why_it_matters": "Function calling transforms LLMs from text generators into action-takers. It's the mechanism behind AI agents, chatbot integrations, and any system where AI needs to interact with the real world.",
     "in_depth": "Function calling (also called tool use) lets language models output structured requests to external functions rather than just generating text. The model receives a schema describing available functions and their parameters, then decides when to call a function and with what arguments.\n\nThe workflow follows a specific pattern: you define function schemas in the API request, the model generates a function call with arguments, your application executes the function, and you return the result to the model for further processing. This creates a clean separation between the model's reasoning and your application's capabilities.\n\nFunction calling is the foundation for AI agents, but it's also useful in simpler applications. Common uses include structured data extraction (parsing unstructured text into JSON), API integration (letting a chatbot check order status), and dynamic content generation (generating charts or formatted documents).",
@@ -482,7 +512,10 @@
       "rag"
     ],
     "related_links": [
-      "/tools/"
+      "/blog/rag-architecture-guide/",
+      "/tools/",
+      "/tools/best-vector-databases/",
+      "/blog/vector-database-guide/"
     ],
     "example": "Searching 'how to fix a leaky pipe' also returns results about 'plumbing repair' and 'water damage prevention' \u2014 even though these documents don't contain the word 'leaky.'",
     "why_it_matters": "Semantic search is the retrieval layer that makes RAG systems work. It's replacing keyword search across enterprise applications and is a core competency for AI engineers building search and knowledge systems.",
@@ -2072,7 +2105,11 @@
       "prompt-chaining",
       "tool-use"
     ],
-    "related_links": [],
+    "related_links": [
+      "/tools/langchain-vs-crewai/",
+      "/tools/langchain-alternatives/",
+      "/tools/langchain-vs-llamaindex/"
+    ],
     "example": "Using LangChain, you build a research assistant that takes a question, searches a document database, retrieves relevant passages, passes them to an LLM with a structured prompt, and formats the response with citations. LangChain handles the retriever, prompt template, and LLM chain plumbing.",
     "why_it_matters": "LangChain is one of the most widely used frameworks for building LLM applications. Whether you love it or have frustrations with it, understanding its patterns helps you build AI applications faster and communicate with teams that use it.",
     "in_depth": "LangChain organizes LLM application development around several key abstractions. Chains compose multiple steps into a pipeline (retrieve documents, format prompt, call LLM, parse output). Agents give the model the ability to choose which tools to use and in what order. Memory modules track conversation history across interactions. Document loaders and text splitters handle data ingestion for RAG pipelines.\n\nThe framework has evolved significantly. LangChain Expression Language (LCEL) provides a declarative way to compose chains using a pipe operator syntax. LangGraph extends the framework for building stateful, multi-agent applications with cycles and branching. LangSmith provides observability and evaluation tools for debugging and monitoring production chains.\n\nLangChain has vocal critics who argue it adds unnecessary abstraction over straightforward API calls. The counterargument is that it standardizes patterns that every LLM application needs: retry logic, streaming, prompt management, and retrieval. The practical advice: use LangChain when you need its specific patterns (complex chains, agents, multi-step retrieval), but don't force it onto simple use cases where a direct API call would suffice.",
@@ -2163,7 +2200,11 @@
       "api-rate-limiting",
       "streaming"
     ],
-    "related_links": [],
+    "related_links": [
+      "/tools/openai-alternatives/",
+      "/tools/openai-api-pricing/",
+      "/tools/openai-api-vs-anthropic-api/"
+    ],
     "example": "A Python script calls the OpenAI API to analyze customer feedback:\nclient = OpenAI()\nresponse = client.chat.completions.create(\n    model='gpt-4o',\n    messages=[{'role': 'user', 'content': 'Classify this feedback as positive, neutral, or negative: ...'}],\n    temperature=0\n)",
     "why_it_matters": "The OpenAI API is the most widely used LLM API and has become the de facto standard that other providers mirror. Understanding its patterns (chat completions, function calling, structured outputs) transfers directly to working with Anthropic, Google, and other model providers.",
     "in_depth": "The OpenAI API centers around the chat completions endpoint. You send a list of messages (system, user, assistant roles) and receive a model response. Key parameters include model (which model to use), temperature (randomness), max_tokens (response length limit), and tools (function definitions the model can call).\n\nAdvanced features include structured outputs (forcing JSON schema compliance), vision (sending images alongside text), streaming (receiving responses token by token for better UX), and batch API (submitting large workloads at 50% discount with 24-hour turnaround). The assistants API adds persistent threads, file search, and code interpreter capabilities for building more complex applications.\n\nThe API has evolved toward standardization. The chat completions format (messages array with roles) has been adopted by Anthropic, Google, Mistral, and most open-source model servers. This means code written for OpenAI's API often ports to other providers with minimal changes, especially when using abstraction libraries. Understanding OpenAI's API patterns gives you a head start with any LLM provider.",

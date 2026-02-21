@@ -98,6 +98,119 @@ SALARY_CONTENT = {
             ('How do I get to mid-level AI?', 'Most companies consider you mid-level after 2-3 years of relevant experience. Key milestones: independently designed and shipped an ML feature, demonstrated ability to evaluate and improve model performance, and experience with production ML infrastructure.'),
         ],
     },
+    'ai-ml-engineer': {
+        'description': 'AI/ML engineers build the models and systems that power everything from recommendation feeds to fraud detection. It\'s the broadest category in AI hiring, and salaries reflect that range. At the junior end, you\'re training and evaluating models. At the senior end, you\'re designing entire ML architectures and leading teams. Companies like Meta, Google, Netflix, and Stripe pay top dollar for engineers who can ship production ML systems that work at scale.',
+        'skills': ['Python', 'PyTorch', 'TensorFlow', 'Distributed Training', 'Feature Engineering', 'Model Serving'],
+        'faqs': [
+            ('What do AI/ML engineers earn in 2026?', 'Base salaries range from $100K for entry-level roles to $320K+ for staff positions at top companies. The median sits around $195K. Total compensation at FAANG-tier companies often exceeds $350K at the senior level when you factor in equity.'),
+            ('What\'s the difference between an ML engineer and a data scientist?', 'ML engineers focus on building and deploying models in production. Data scientists focus on analysis, experimentation, and extracting insights from data. In practice, the lines blur, but ML engineering roles tend to require stronger software engineering skills and pay about 10-15% more on average.'),
+            ('Which companies pay the most for AI/ML engineers?', 'Meta, Google, Apple, Netflix, and Stripe consistently offer the highest total compensation packages. Startups like Anthropic, OpenAI, and Scale AI also pay competitively, with significant equity upside.'),
+        ],
+    },
+    'llm-engineer': {
+        'description': 'LLM engineers specialize in building applications on top of large language models. This is one of the fastest-growing roles in tech since 2024. Day-to-day work includes RAG system design, fine-tuning, prompt pipeline development, and integrating LLMs into production applications. Companies want engineers who understand both the capabilities and the limitations of models like GPT-4 and Claude, and can build reliable systems around them.',
+        'skills': ['Python', 'RAG', 'Fine-tuning', 'LangChain', 'Vector Databases', 'Transformers'],
+        'faqs': [
+            ('How much do LLM engineers make?', 'LLM engineer salaries range from $90K at entry level to $280K+ for senior roles. The median is around $200K. Companies building core LLM products (Anthropic, OpenAI, Cohere) tend to pay 15-20% above market for this role.'),
+            ('Is LLM engineering a long-term career?', 'Yes, though the specifics will evolve. The underlying skills (system design, evaluation methodology, retrieval architecture) transfer across model generations. Engineers who focus on building reliable AI systems rather than chasing specific model APIs will stay in demand.'),
+            ('What separates a good LLM engineer from an average one?', 'The best LLM engineers think in systems, not prompts. They build evaluation frameworks before writing prompts, design for failure modes, and understand when RAG, fine-tuning, or prompt engineering is the right approach for a given problem.'),
+        ],
+    },
+    'mlops-engineer': {
+        'description': 'MLOps engineers keep ML systems running in production. They build the infrastructure for model training, deployment, monitoring, and retraining. As companies move from ML experiments to production workloads, demand for MLOps has grown steadily. The role sits at the intersection of DevOps, data engineering, and machine learning, and it pays accordingly.',
+        'skills': ['Kubernetes', 'Docker', 'AWS/GCP', 'CI/CD', 'Model Monitoring', 'Python'],
+        'faqs': [
+            ('What is the salary range for MLOps engineers?', 'MLOps engineer salaries range from $85K at entry level to $270K for senior roles at top companies. The median is around $190K. Companies with large-scale ML systems (autonomous vehicles, ad tech, financial services) tend to pay at the higher end.'),
+            ('How is MLOps different from regular DevOps?', 'MLOps adds model-specific concerns on top of standard DevOps: data versioning, model performance monitoring, GPU cluster management, feature stores, and A/B testing infrastructure. The tooling is specialized (MLflow, Kubeflow, Weights & Biases), and you need enough ML knowledge to debug model-related issues in production.'),
+            ('What background leads to MLOps roles?', 'Most MLOps engineers come from either DevOps/SRE backgrounds (adding ML knowledge) or ML engineering backgrounds (adding infrastructure skills). Both paths work. Strong Kubernetes and Python skills are table stakes.'),
+        ],
+    },
+    'research-engineer': {
+        'description': 'Research engineers bridge the gap between academic ML research and production systems. They implement novel architectures, scale up training runs, and turn research papers into working code. Top AI labs (OpenAI, DeepMind, Anthropic, Meta FAIR) hire heavily for this role. The work is technically demanding, often requiring expertise in distributed computing, GPU programming, and deep learning frameworks at a level that goes well beyond typical ML engineering.',
+        'skills': ['PyTorch', 'CUDA', 'Distributed Training', 'Transformers', 'C++', 'Research'],
+        'faqs': [
+            ('What do research engineers earn?', 'Research engineer salaries range from $95K at entry level to $350K+ at senior positions in top labs. Median is around $230K. At companies like OpenAI and Google DeepMind, total compensation can exceed $500K for senior research engineers when equity is included.'),
+            ('Do I need a PhD to be a research engineer?', 'Not necessarily, but it helps at top labs. About 60% of research engineers at places like DeepMind and FAIR have PhDs. However, strong open-source contributions, published papers, or demonstrated ability to implement complex research can substitute for formal credentials.'),
+            ('How does research engineering differ from ML engineering?', 'Research engineers focus on advancing the state of the art and supporting researchers. ML engineers focus on building production systems with existing techniques. Research engineering involves more experimentation, novel implementations, and pushing model capabilities, while ML engineering emphasizes reliability, scaling, and business impact.'),
+        ],
+    },
+    'ai-agent-developer': {
+        'description': 'AI agent development is one of the newest and hottest specializations in AI. Agent developers build autonomous systems that can reason, plan, and execute multi-step tasks using LLMs. The role exploded in 2025 as companies like Anthropic, OpenAI, Cognition, and Microsoft shipped increasingly capable agent products. Salaries reflect the scarcity of engineers who can build reliable, safe agent systems.',
+        'skills': ['Python', 'LLMs', 'Tool Use', 'Agent Frameworks', 'Multi-Agent Systems', 'Planning'],
+        'faqs': [
+            ('How much do AI agent developers earn?', 'AI agent developer salaries range from $100K for entry-level roles to $340K+ at companies like Cognition and OpenAI. The median is around $220K. Because the field is so new, experienced agent developers can command above-market rates.'),
+            ('What skills do AI agent developers need?', 'Strong Python fundamentals, deep understanding of LLM capabilities and limitations, experience with tool use and function calling, and systems thinking. The best agent developers also understand safety and reliability concerns, because agents that fail unpredictably are worse than no agent at all.'),
+            ('Is AI agent development a stable career path?', 'The specific frameworks will change, but the core challenge of building AI systems that can take actions in the real world isn\'t going away. If anything, demand is accelerating as enterprises move from chatbots to agents that can handle real workflows.'),
+        ],
+    },
+    'ai-product-manager': {
+        'description': 'AI product managers sit between engineering teams and business stakeholders, defining what AI features to build and how they should work. The role requires enough technical depth to understand model capabilities without needing to write the code yourself. Companies are hiring AI PMs at every level as they integrate LLMs and ML into their products. The best AI PMs combine product intuition with a realistic understanding of what AI can and can\'t do today.',
+        'skills': ['Product Strategy', 'LLMs', 'User Research', 'Roadmapping', 'A/B Testing', 'Data Analysis'],
+        'faqs': [
+            ('What do AI product managers earn?', 'AI PM salaries range from $105K at the associate level to $280K+ for senior roles at companies like Google and Adobe. The median is around $200K. AI PMs typically earn 10-20% more than general product managers at the same company because of the specialized knowledge required.'),
+            ('Do AI product managers need to code?', 'You don\'t need to write production code, but you do need to understand technical concepts well enough to evaluate trade-offs. Knowing Python basics, understanding how LLMs work at a high level, and being able to read evaluation metrics are all important. PMs who can prototype with APIs tend to be more effective.'),
+            ('How do I transition from regular PM to AI PM?', 'Start by shipping AI features at your current company, even small ones. Build hands-on experience with LLM APIs. Take an ML fundamentals course. The biggest gap for most transitioning PMs isn\'t technical knowledge but understanding how to set quality bars for non-deterministic AI outputs.'),
+        ],
+    },
+    'data-scientist': {
+        'description': 'Data scientists analyze data, build models, and run experiments to drive product and business decisions. While the "data scientist" title has broadened over the years, AI-focused data science roles emphasize ML modeling, causal inference, and experimentation design. Companies like Airbnb, Lyft, DoorDash, and Etsy rely on data scientists to optimize everything from search ranking to pricing to user engagement.',
+        'skills': ['Python', 'SQL', 'Machine Learning', 'Experimentation', 'Statistical Modeling', 'A/B Testing'],
+        'faqs': [
+            ('What is the salary range for data scientists in AI?', 'Data scientist salaries in AI range from $85K at entry level to $275K for senior roles at top tech companies. The median is around $180K. Data scientists at companies where ML directly drives revenue (ad tech, fintech, marketplaces) tend to earn at the higher end.'),
+            ('How does data science differ from data analytics?', 'Data scientists build predictive models and run experiments. Data analysts create dashboards and answer business questions with existing data. In practice, most data science roles involve some analytics work, but the core expectation is that you can build and evaluate ML models independently.'),
+            ('Is data science still a good career with AI automation?', 'Yes, but the role is evolving. Routine analysis tasks are getting automated by AI tools, which means data scientists who focus on experimentation design, causal reasoning, and complex modeling will stay valuable. The ones at risk are those whose work is primarily SQL queries and dashboard building.'),
+        ],
+    },
+    'new-york': {
+        'description': 'New York City is the second-largest AI job market in the US, trailing only the San Francisco Bay Area. The city\'s strength is its diversity of industries hiring for AI: fintech (Bloomberg, Two Sigma, Citadel), media (NYT, Spotify), e-commerce (Etsy, Shopify), and big tech (Meta, Google). AI salaries in NYC run about 10-15% below SF but significantly above most other markets.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in New York?', 'AI engineers in NYC earn $150K-$310K in base salary depending on role and seniority. Total compensation at hedge funds and top tech companies can exceed $400K. The financial sector tends to pay a premium for ML talent compared to media or retail.'),
+            ('How does NYC AI pay compare to San Francisco?', 'NYC AI salaries run about 10-15% below SF on average. However, NYC has more diversity in employer types. Quant funds and fintech firms often match or exceed SF rates, while media and non-tech companies pay closer to the national average.'),
+            ('Which NYC neighborhoods have the most AI jobs?', 'Most AI roles are in Midtown (Google, Microsoft), Hudson Yards/Chelsea (Meta, Amazon), and the Flatiron/Union Square area (numerous startups). Finance AI roles cluster in Midtown and the Financial District.'),
+        ],
+    },
+    'seattle': {
+        'description': 'Seattle punches above its weight in AI hiring thanks to Amazon, Microsoft, Google, and a strong startup ecosystem. AWS and Azure both have major AI teams in Seattle, making it a hub for cloud ML infrastructure roles. The lack of state income tax makes Seattle\'s effective compensation higher than the headline numbers suggest, especially compared to California.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in Seattle?', 'AI engineers in Seattle earn $150K-$280K in base salary. Total compensation at Amazon and Microsoft ranges from $200K to $450K+ at senior levels. The no-income-tax advantage adds roughly 5-8% to take-home pay compared to California.'),
+            ('Is Seattle a good city for AI careers?', 'Absolutely. Amazon, Microsoft, and Google together employ thousands of AI engineers in the Seattle area. Apple and Meta also have growing Seattle offices. The cost of living is high but below SF, and the absence of state income tax is a real financial benefit.'),
+        ],
+    },
+    'austin': {
+        'description': 'Austin\'s AI job market has grown significantly since 2023, fueled by company relocations and remote-friendly policies. The city offers a compelling combination of growing tech presence, lower cost of living than coastal cities, and no state income tax. Companies like Tesla, Indeed, Oracle, and a wave of AI startups are building teams in Austin.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in Austin?', 'AI engineers in Austin earn $130K-$230K in base salary. Total compensation is lower than SF or NYC, but the cost of living difference more than compensates. A $180K salary in Austin stretches further than $250K in San Francisco.'),
+            ('Is Austin growing as an AI hub?', 'Yes. Austin added more AI job postings per capita than any US metro in 2025. The combination of Texas tax advantages, quality of life, and proximity to major companies makes it attractive for both companies and engineers relocating from higher-cost cities.'),
+        ],
+    },
+    'boston': {
+        'description': 'Boston\'s AI scene draws from its concentration of world-class universities (MIT, Harvard) and a deep bench of biotech and financial services companies. The city is particularly strong in healthcare AI, robotics, and quantitative finance. Salaries are competitive with NYC for senior roles, though the market is smaller.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in Boston?', 'AI engineers in Boston earn $140K-$250K in base salary. Healthcare AI and fintech roles pay at the top of this range. Total compensation at companies like Moderna, Capital One, and local quant firms can exceed $350K for senior engineers.'),
+            ('What makes Boston unique for AI careers?', 'The university pipeline is Boston\'s biggest asset. MIT and Harvard produce a steady stream of ML talent, and many graduates stay local. Healthcare AI is a particular strength, with companies like Moderna, Flagship Pioneering, and numerous hospital-affiliated research groups hiring ML engineers.'),
+        ],
+    },
+    'los-angeles': {
+        'description': 'Los Angeles is an emerging AI market with particular strength in entertainment, gaming, and creative applications. Netflix, Snap, Disney, and a growing number of AI startups are building teams in LA. Salaries trail SF and NYC but the cost of living is lower than either, and the entertainment industry creates unique AI roles you won\'t find anywhere else.',
+        'skills': [],
+        'faqs': [
+            ('What is the average AI salary in Los Angeles?', 'AI engineers in LA earn $140K-$295K in base salary. Entertainment and media AI roles (Netflix, Snap, gaming studios) pay at the higher end. The market is smaller than SF, NYC, or Seattle, but it\'s growing fast.'),
+            ('What types of AI jobs are unique to LA?', 'LA has strong demand for ML engineers working on recommendation systems (Netflix, Spotify LA office), computer vision for entertainment (VFX studios, gaming), content moderation and safety (Snap, TikTok), and generative AI for creative tools. These roles are harder to find in other markets.'),
+        ],
+    },
+    'entry-level': {
+        'description': 'Entry-level AI roles (0-2 years experience) are the hardest to land but offer the fastest salary growth in tech. Companies hiring at this level want strong fundamentals: Python, linear algebra, probability, and hands-on experience with ML frameworks. A portfolio of projects matters more than credentials. Once you\'re in, expect rapid salary growth as the gap between junior and mid-level AI pay is significant.',
+        'skills': [],
+        'faqs': [
+            ('What is the starting salary for AI engineers?', 'Entry-level AI/ML engineers earn $85K-$140K in base salary depending on company and location. At top tech companies, total compensation for new graduates can reach $180K-$200K including equity and bonuses. Entry-level roles at AI startups tend to pay slightly less in base but offer more equity upside.'),
+            ('Do I need a master\'s degree for entry-level AI roles?', 'Not always, but it helps. About 50% of entry-level AI hires have a master\'s or PhD. The other half have bachelor\'s degrees plus strong portfolios (Kaggle competitions, open-source contributions, personal projects). Bootcamp graduates can break in too, especially for prompt engineering and LLM application roles.'),
+            ('How fast do entry-level AI salaries grow?', 'Faster than almost any other tech specialization. Most AI engineers see 20-30% salary increases in their first two years as they move from entry to mid-level. The supply-demand imbalance means companies are willing to promote and pay up to retain junior AI talent.'),
+        ],
+    },
 }
 
 

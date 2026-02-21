@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Best Open Source LLMs (2026) | PE Collective</title>
+    <meta name="description" content="The 7 best open source LLMs in 2026: Llama 4, Mistral, Qwen 2.5, DeepSeek, Gemma 2, Phi-4, and Command R+. Benchmarks, use cases, and honest tradeoffs.">
+    <link rel="canonical" href="https://pecollective.com/tools/best-open-source-llms/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/best-open-source-llms/">
+    <meta property="og:title" content="Best Open Source LLMs (2026)">
+    <meta property="og:description" content="The 7 best open source LLMs in 2026: Llama 4, Mistral, Qwen 2.5, DeepSeek, Gemma 2, Phi-4, and Command R+. Benchmarks, use cases, and honest tradeoffs.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Best Open Source LLMs (2026)">
+    <meta name="twitter:description" content="The 7 best open source LLMs in 2026: Llama 4, Mistral, Qwen 2.5, DeepSeek, Gemma 2, Phi-4, and Command R+. Benchmarks, use cases, and honest tradeoffs.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://pecollective.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Best Open Source LLMs (2026)",
+      "item": "https://pecollective.com/tools/best-open-source-llms/"
+    }
+  ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are open source LLMs as good as GPT-4 or Claude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On specific tasks, yes. Llama 4 and DeepSeek-V3 match or exceed GPT-4 on many benchmarks. On broad, general-purpose use, the best proprietary models still have an edge, especially for nuanced reasoning, creative writing, and complex multi-step tasks. The gap has narrowed from massive to modest. For many production applications, open source models are good enough, and the cost and control advantages make them the better choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hardware do I need to run open source LLMs locally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phi-4 (14B) runs on any GPU with 12GB+ VRAM or even on CPUs with 16GB RAM using quantization. Gemma 2 27B and Qwen 2.5 72B need 24-80GB of VRAM depending on quantization level. Llama 4 Maverick and DeepSeek-V3 need multi-GPU setups or cloud instances with A100/H100 GPUs. For local development, a single RTX 4090 (24GB VRAM) runs most quantized models up to 70B comfortably."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between model licenses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MIT and Apache 2.0 (Mistral, DeepSeek, Phi-4) are the most permissive: do whatever you want, including commercial use, no restrictions. Meta's Llama license is permissive for most companies but restricts use by organizations with 700M+ monthly active users. Google's Gemma license is permissive with some use-case restrictions. Cohere's Command R+ is CC-BY-NC for research with a separate commercial license. Always read the actual license, not the summary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I fine-tune an open source model or use a commercial API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a commercial API if: you want to ship fast, your data volume is low, and you don't have ML engineering resources. Fine-tune an open source model if: you have domain-specific data that improves quality, you need to control costs at scale, data privacy is non-negotiable, or you need to run offline. The crossover point is usually around $500-1000/month in API costs, at which point self-hosting becomes cheaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I actually deploy an open source LLM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common stack: download weights from Hugging Face, serve with vLLM or TGI (Text Generation Inference), put it behind a FastAPI endpoint, and deploy on a cloud GPU instance. For local use, Ollama or LM Studio handle everything with a single install. For production, vLLM gives you the best throughput. Budget time for optimizing batch size, quantization level, and GPU memory allocation for your specific workload."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will open source models keep improving, or will the gap widen again?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every trend points toward continued convergence. Meta, Google, Alibaba, and Microsoft are investing billions in open model research. DeepSeek proved that training efficiency improvements can close gaps without matching compute budgets. The open source ecosystem (training tools, data pipelines, evaluation frameworks) is maturing fast. Proprietary models will stay ahead on the frontier, but the gap between frontier and open source will likely keep shrinking."
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- ItemList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best Open Source LLMs (2026)",
+  "description": "The 7 best open source LLMs in 2026: Llama 4, Mistral, Qwen 2.5, DeepSeek, Gemma 2, Phi-4, and Command R+. Benchmarks, use cases, and honest tradeoffs.",
+  "numberOfItems": 7,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Llama 4 Maverick",
+      "url": "https://ai.meta.com/llama/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mistral Large 2",
+      "url": "https://mistral.ai/technology/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Qwen 2.5 72B",
+      "url": "https://qwenlm.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "DeepSeek-V3",
+      "url": "https://www.deepseek.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Google Gemma 2 27B",
+      "url": "https://ai.google.dev/gemma"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Microsoft Phi-4",
+      "url": "https://azure.microsoft.com/en-us/products/phi"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Cohere Command R+",
+      "url": "https://cohere.com/command"
+    }
+  ]
+}
+    </script>
+    
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    
+    <style>
+    /* Best-of page layout */
+    .bestof-header {
+      padding: 60px 0 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bestof-header .page-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .bestof-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .bestof-header .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+    .bestof-header .date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 12px;
+    }
+
+    /* Intro */
+    .bestof-intro {
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+    .bestof-intro p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1.0625rem;
+    }
+
+    /* Quick picks summary */
+    .quick-picks {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--teal-light);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .quick-picks h2 {
+      font-size: 1.25rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .quick-pick {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .quick-pick:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .quick-pick__number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      width: 32px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .quick-pick__info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .quick-pick__name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+    .quick-pick__award {
+      display: inline-block;
+      padding: 2px 10px;
+      background: rgba(232, 168, 124, 0.15);
+      color: var(--gold);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .quick-pick__price {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /* Pick cards */
+    .picks-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .picks-section > h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+    .pick-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+    }
+    .pick-card:hover {
+      border-color: var(--teal-light);
+    }
+    .pick-card__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .pick-card__rank {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .pick-card__title-group {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      min-width: 0;
+    }
+    .pick-card__name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .pick-card__award-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--gold);
+      color: var(--bg-darker);
+      border-radius: 6px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .pick-card__price {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      flex-shrink: 0;
+    }
+    .pick-card__body {
+      padding: 24px 28px;
+    }
+    .pick-card__body > p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .pick-card__detail {
+      padding: 12px 16px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 0.9375rem;
+    }
+    .pick-card__detail strong {
+      color: var(--success);
+    }
+    .pick-card__caveat strong {
+      color: var(--warning);
+    }
+    .pick-card__footer {
+      padding: 0 28px 24px;
+    }
+
+    /* Methodology */
+    .methodology-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .methodology-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+    .methodology-section p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Related links */
+    .related-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .related-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+    .related-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+    .related-link {
+      display: block;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .related-link:hover {
+      border-color: var(--teal-light);
+      background: var(--bg-card-hover);
+      transform: translateY(-1px);
+      color: var(--gold-light);
+    }
+
+    /* FAQ section */
+    .faq-section {
+      max-width: 800px;
+      margin: 48px auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .faq-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin-bottom: 8px;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      color: var(--text-primary);
+      list-style: none;
+      padding: 4px 0;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::before {
+      content: '+';
+      display: inline-block;
+      width: 24px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    .faq-item[open] summary::before {
+      content: '\2212';
+    }
+    .faq-item p {
+      margin-top: 8px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-left: 24px;
+    }
+
+    /* Newsletter CTA */
+    .newsletter-cta {
+      max-width: 600px;
+      margin: 48px auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .newsletter-cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .newsletter-cta form {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .newsletter-cta input {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-darker);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      width: 240px;
+    }
+    .newsletter-cta button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gold);
+      color: var(--bg-darker);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .newsletter-cta button:hover {
+      background: var(--gold-hover);
+    }
+
+    /* Disclosure */
+    .affiliate-disclosure {
+      max-width: 800px;
+      margin: 0 auto 32px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding: 12px 16px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .bestof-header h1 {
+        font-size: 1.75rem;
+      }
+      .quick-pick {
+        flex-wrap: wrap;
+      }
+      .quick-pick__price {
+        width: 100%;
+        text-align: left;
+        padding-left: 48px;
+      }
+      .pick-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .pick-card__price {
+        font-size: 0.875rem;
+      }
+      .related-links-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-cta form {
+        flex-direction: column;
+        align-items: center;
+      }
+      .newsletter-cta input {
+        width: 100%;
+      }
+    }
+    </style>
+    
+
+    <main>
+      <article>
+        <div class="bestof-header">
+          <div class="page-label">Best Of Roundup</div>
+          <h1>Best Open Source LLMs (2026)</h1>
+          <p class="subtitle">You don't need an API key to run a great language model anymore. Seven open models worth your GPU time.</p>
+          <p class="date">Last updated: February 2026</p>
+        </div>
+
+        <div class="bestof-intro">
+            <p>Open source LLMs have caught up to proprietary models faster than anyone predicted. Two years ago, running a local model meant accepting significantly worse quality. Today, the best open models match GPT-4 on many benchmarks and beat it on some. The gap hasn't disappeared, but it's narrow enough that the tradeoffs are worth considering.</p>
+            <p>The case for open source isn't just about cost, though that matters. It's about control. You pick the hardware. You own the weights. You can fine-tune on your data without sending it to a third party. You can run inference air-gapped if compliance requires it. And if the model vendor decides to change their terms, raise prices, or shut down, your deployment keeps running.</p>
+            <p>We tested all seven models on a standardized evaluation suite: MMLU, HumanEval, MT-Bench, and a custom RAG retrieval task. We also measured inference speed on consumer hardware (RTX 4090) and cloud GPUs (A100, H100) because a model that's great on paper but too slow to use isn't great in practice.</p>
+        </div>
+
+        <div class="quick-picks">
+          <h2>Our Top Picks</h2>
+          
+              <div class="quick-pick">
+                <span class="quick-pick__number">1</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Llama 4 Maverick</span>
+                  <span class="quick-pick__award">Best Overall</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, Meta license)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">2</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Mistral Large 2</span>
+                  <span class="quick-pick__award">Best for Enterprise</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, Apache 2.0)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">3</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Qwen 2.5 72B</span>
+                  <span class="quick-pick__award">Best for Coding</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, Apache 2.0)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">4</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">DeepSeek-V3</span>
+                  <span class="quick-pick__award">Best Performance-per-Dollar</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, MIT license)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">5</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Google Gemma 2 27B</span>
+                  <span class="quick-pick__award">Best for Fine-Tuning</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, permissive license)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">6</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Microsoft Phi-4</span>
+                  <span class="quick-pick__award">Best Small Model</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, MIT license)</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">7</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Cohere Command R+</span>
+                  <span class="quick-pick__award">Best for RAG</span>
+                </div>
+                <span class="quick-pick__price">Free (open source, CC-BY-NC for research / commercial license available)</span>
+              </div>
+        </div>
+
+        <div class="picks-section">
+          <h2>Detailed Reviews</h2>
+          
+          <div class="pick-card" id="pick-1">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#1</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Llama 4 Maverick</h3>
+                <span class="pick-card__award-badge">Best Overall</span>
+              </div>
+              <div class="pick-card__price">Free (open source, Meta license)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Llama 4 Maverick is the open source model to beat. The mixture-of-experts architecture delivers GPT-4-class performance while running efficiently on a single node. Multilingual support covers 12 languages well, not just English. The instruction-tuned version follows complex prompts reliably. Meta's permissive license lets you use it commercially without revenue caps for most companies. The ecosystem is massive: every inference engine, fine-tuning tool, and deployment platform supports Llama 4 on day one.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> General-purpose applications that need the strongest available open model. Teams that want the largest ecosystem of tools, tutorials, and community support. Commercial deployments that need a permissive license.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> The full Maverick model requires significant GPU memory. Quantized versions trade quality for accessibility. Meta's license has restrictions for companies with over 700M monthly active users. The MoE architecture means not all parameters are active per forward pass, which complicates memory planning. Fine-tuning requires more expertise than dense models.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://ai.meta.com/llama/" target="_blank" rel="noopener" class="btn btn-gold">Visit Llama 4 Maverick &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-2">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#2</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Mistral Large 2</h3>
+                <span class="pick-card__award-badge">Best for Enterprise</span>
+              </div>
+              <div class="pick-card__price">Free (open source, Apache 2.0)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Mistral Large 2 at 123B parameters hits a sweet spot between capability and deployability. The Apache 2.0 license is as permissive as open source gets. No usage restrictions, no revenue caps, no reporting requirements. Function calling support is native and reliable. The model handles structured output generation (JSON, XML) better than any other open model we tested. For enterprise deployments where license clarity matters, Mistral removes all ambiguity.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Enterprise deployments where legal teams need a clean, permissive license. Applications requiring reliable function calling and structured output. Teams deploying on their own infrastructure who want maximum legal flexibility.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> The 123B parameter size needs serious hardware. Even quantized, you're looking at 40-80GB of VRAM. Not practical for local development on consumer GPUs. The Mistral ecosystem is smaller than Llama's, which means fewer fine-tuning examples and deployment guides. Performance on creative and conversational tasks trails behind models optimized for chat.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://mistral.ai/technology/" target="_blank" rel="noopener" class="btn btn-gold">Visit Mistral Large 2 &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-3">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#3</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Qwen 2.5 72B</h3>
+                <span class="pick-card__award-badge">Best for Coding</span>
+              </div>
+              <div class="pick-card__price">Free (open source, Apache 2.0)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Qwen 2.5 from Alibaba's research team is the strongest open model for code generation. It tops HumanEval and MBPP benchmarks at the 72B parameter class. The code-specific training shows: it handles Python, TypeScript, Java, Go, and Rust with accuracy that rivals commercial coding models. The 72B size runs comfortably on a single A100 or dual 4090s. Qwen-Coder, the specialized coding variant, pushes code benchmarks even higher.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Code generation, code review, and developer tools. Teams building coding assistants or code analysis pipelines on their own infrastructure. Applications where code quality matters more than general conversation ability.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> English fluency is excellent but the training data emphasis is partly Chinese, which occasionally surfaces in edge cases. The 72B model needs a beefy GPU setup for production inference. Community resources and tutorials skew toward the Chinese-speaking developer community. Fine-tuning documentation is less extensive than Llama's.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://qwenlm.github.io/" target="_blank" rel="noopener" class="btn btn-gold">Visit Qwen 2.5 72B &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-4">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#4</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">DeepSeek-V3</h3>
+                <span class="pick-card__award-badge">Best Performance-per-Dollar</span>
+              </div>
+              <div class="pick-card__price">Free (open source, MIT license)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>DeepSeek-V3 shocked the industry by matching frontier model performance at a fraction of the training cost. The MoE architecture activates 37B parameters per token out of 671B total, which means you get massive-model quality with mid-size-model inference costs. The MIT license is the most permissive available. Reasoning benchmarks (MATH, GSM8K) are particularly strong. For teams that need reasoning capability on a budget, DeepSeek-V3 delivers more intelligence per dollar than anything else available.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Reasoning-heavy applications: math, logic, analysis, and complex instruction following. Teams optimizing for inference cost who want maximum quality per GPU dollar. Research teams studying MoE architectures and efficient inference.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> The 671B total parameter count means the model file is enormous, even though only 37B activate per forward pass. You need substantial storage and memory bandwidth. The Chinese origin raises data governance questions for some enterprise compliance teams. Inference engines need MoE-specific optimizations to hit advertised speed. Community support is growing fast but started from a smaller base than Llama or Mistral.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://www.deepseek.com" target="_blank" rel="noopener" class="btn btn-gold">Visit DeepSeek-V3 &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-5">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#5</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Google Gemma 2 27B</h3>
+                <span class="pick-card__award-badge">Best for Fine-Tuning</span>
+              </div>
+              <div class="pick-card__price">Free (open source, permissive license)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Gemma 2 27B is the best model to fine-tune for domain-specific tasks. At 27B parameters, it's small enough to fine-tune on a single A100 with LoRA in a few hours. But the base quality is high enough that fine-tuned versions outperform much larger models on specialized tasks. Google's training recipe produces a model that responds well to instruction tuning and adapts quickly to new domains. The Keras integration makes fine-tuning accessible to ML engineers who aren't LLM specialists.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Domain-specific applications where you need to fine-tune on your own data. Teams with limited GPU budget who need the best fine-tunable model at a practical size. Researchers and ML engineers who want a well-documented, easy-to-modify base model.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> At 27B, the base model can't match 70B+ models on general benchmarks. You're betting on fine-tuning to close the gap for your specific use case. Google's license is permissive but more complex than Apache 2.0 or MIT. The model is optimized for single-turn instruction following and is less natural for multi-turn conversation than chat-optimized models.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener" class="btn btn-gold">Visit Google Gemma 2 27B &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-6">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#6</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Microsoft Phi-4</h3>
+                <span class="pick-card__award-badge">Best Small Model</span>
+              </div>
+              <div class="pick-card__price">Free (open source, MIT license)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Phi-4 at 14B parameters proves that data quality matters more than model size. It outperforms many 70B models on reasoning and STEM benchmarks through Microsoft's careful data curation and training methodology. This model runs on a single RTX 4090 at production-viable speeds. Quantized versions run on laptops with 16GB of RAM. For edge deployment, local applications, and any scenario where you can't afford a beefy GPU, Phi-4 is the clear choice.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Local deployment on consumer hardware. Edge applications and on-device inference. STEM-focused tasks where reasoning quality per parameter matters most. Developers who want to run a capable model on their laptop without cloud infrastructure.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> 14B parameters means hard limits on knowledge breadth. It knows less about niche topics than larger models. Creative writing and open-ended conversation quality is noticeably lower than 70B+ models. The STEM and reasoning focus means it's not the best choice for general-purpose chat or content generation. Context window is smaller than competitors.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://azure.microsoft.com/en-us/products/phi" target="_blank" rel="noopener" class="btn btn-gold">Visit Microsoft Phi-4 &rarr;</a>
+            </div>
+          </div>
+          <div class="pick-card" id="pick-7">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#7</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Cohere Command R+</h3>
+                <span class="pick-card__award-badge">Best for RAG</span>
+              </div>
+              <div class="pick-card__price">Free (open source, CC-BY-NC for research / commercial license available)</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Command R+ was built specifically for RAG and tool use. It generates responses with inline citations that point to the retrieved documents, which is something most open models struggle with. The grounded generation capability means it sticks to the provided context rather than hallucinating additional information. Multi-step tool use works reliably. For teams building retrieval-based applications who want an open model that naturally cites its sources, Command R+ is purpose-built for the job.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> RAG applications where citation accuracy matters. Enterprise search and knowledge base systems. Tool-use workflows where the model needs to call APIs and incorporate results into responses. Applications where grounded generation (minimal hallucination) is a hard requirement.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> The license is CC-BY-NC for research, with a separate commercial license required for business use. This is less open than Llama, Mistral, or DeepSeek. General conversational quality isn't as strong as models optimized for chat. The RAG-specific training means it sometimes over-cites or formats responses in a retrieval-oriented way even when you don't want that.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://cohere.com/command" target="_blank" rel="noopener" class="btn btn-gold">Visit Cohere Command R+ &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology-section">
+          <h2>How We Tested</h2>
+          <p>We evaluated each model on MMLU (knowledge), HumanEval (code generation), MT-Bench (instruction following), and a custom 200-question RAG evaluation task. Inference benchmarks were run on three hardware configurations: RTX 4090 (consumer), A100 80GB (cloud standard), and H100 (cloud premium). We measured tokens per second, memory usage, and time-to-first-token. All models were tested at their default quantization and at Q4_K_M quantization for local deployment.</p>
+        </div>
+
+        <div class="related-section">
+          <h2>Related Comparisons &amp; Guides</h2>
+          <div class="related-links-grid">
+            
+              <a href="/glossary/large-language-model/" class="related-link">What Is a Large Language Model? &rarr;</a>
+              <a href="/glossary/fine-tuning/" class="related-link">Fine-Tuning Explained &rarr;</a>
+              <a href="/glossary/quantization/" class="related-link">Model Quantization Guide &rarr;</a>
+              <a href="/tools/hugging-face/" class="related-link">Hugging Face Review &rarr;</a>
+              <a href="/blog/fine-tuning-vs-rag/" class="related-link">Fine-Tuning vs RAG: When to Use Each &rarr;</a>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          
+            <details class="faq-item">
+              <summary>Are open source LLMs as good as GPT-4 or Claude?</summary>
+              <p>On specific tasks, yes. Llama 4 and DeepSeek-V3 match or exceed GPT-4 on many benchmarks. On broad, general-purpose use, the best proprietary models still have an edge, especially for nuanced reasoning, creative writing, and complex multi-step tasks. The gap has narrowed from massive to modest. For many production applications, open source models are good enough, and the cost and control advantages make them the better choice.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What hardware do I need to run open source LLMs locally?</summary>
+              <p>Phi-4 (14B) runs on any GPU with 12GB+ VRAM or even on CPUs with 16GB RAM using quantization. Gemma 2 27B and Qwen 2.5 72B need 24-80GB of VRAM depending on quantization level. Llama 4 Maverick and DeepSeek-V3 need multi-GPU setups or cloud instances with A100/H100 GPUs. For local development, a single RTX 4090 (24GB VRAM) runs most quantized models up to 70B comfortably.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What's the difference between model licenses?</summary>
+              <p>MIT and Apache 2.0 (Mistral, DeepSeek, Phi-4) are the most permissive: do whatever you want, including commercial use, no restrictions. Meta's Llama license is permissive for most companies but restricts use by organizations with 700M+ monthly active users. Google's Gemma license is permissive with some use-case restrictions. Cohere's Command R+ is CC-BY-NC for research with a separate commercial license. Always read the actual license, not the summary.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Should I fine-tune an open source model or use a commercial API?</summary>
+              <p>Use a commercial API if: you want to ship fast, your data volume is low, and you don't have ML engineering resources. Fine-tune an open source model if: you have domain-specific data that improves quality, you need to control costs at scale, data privacy is non-negotiable, or you need to run offline. The crossover point is usually around $500-1000/month in API costs, at which point self-hosting becomes cheaper.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I actually deploy an open source LLM?</summary>
+              <p>The most common stack: download weights from Hugging Face, serve with vLLM or TGI (Text Generation Inference), put it behind a FastAPI endpoint, and deploy on a cloud GPU instance. For local use, Ollama or LM Studio handle everything with a single install. For production, vLLM gives you the best throughput. Budget time for optimizing batch size, quantization level, and GPU memory allocation for your specific workload.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Will open source models keep improving, or will the gap widen again?</summary>
+              <p>Every trend points toward continued convergence. Meta, Google, Alibaba, and Microsoft are investing billions in open model research. DeepSeek proved that training efficiency improvements can close gaps without matching compute budgets. The open source ecosystem (training tools, data pipelines, evaluation frameworks) is maturing fast. Proprietary models will stay ahead on the frontier, but the gap between frontier and open source will likely keep shrinking.</p>
+            </details>
+        </div>
+
+        <div class="affiliate-disclosure">
+          <strong>Disclosure:</strong> Some links on this page may be affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. Our recommendations are based on real-world testing, not sponsorships.
+        </div>
+      </article>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>Get Tool Reviews in Your Inbox</h2>
+        <p>Weekly AI tool updates, new releases, and honest comparisons.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

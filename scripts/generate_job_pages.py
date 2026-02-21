@@ -90,10 +90,10 @@ def escape_html(text):
 
 def parse_skills(skills_value):
     """Parse skills from string or list"""
-    if pd.isna(skills_value):
-        return []
     if isinstance(skills_value, list):
         return skills_value
+    if skills_value is None or pd.isna(skills_value):
+        return []
     if isinstance(skills_value, str):
         # Could be JSON string or comma-separated
         try:

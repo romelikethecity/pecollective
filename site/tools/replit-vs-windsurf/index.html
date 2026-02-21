@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Replit vs Windsurf: Cloud IDE vs Local AI Editor | PE Collective</title>
+    <meta name="description" content="Replit vs Windsurf: Compare a cloud-based AI IDE with a local AI code editor. Features, deployment, pricing, and developer workflows in 2026.">
+    <link rel="canonical" href="https://pecollective.com/tools/replit-vs-windsurf/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/replit-vs-windsurf/">
+    <meta property="og:title" content="Replit vs Windsurf: Cloud IDE vs Local AI Editor">
+    <meta property="og:description" content="Replit vs Windsurf: Compare a cloud-based AI IDE with a local AI code editor. Features, deployment, pricing, and developer workflows in 2026.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Replit vs Windsurf: Cloud IDE vs Local AI Editor">
+    <meta name="twitter:description" content="Replit vs Windsurf: Compare a cloud-based AI IDE with a local AI code editor. Features, deployment, pricing, and developer workflows in 2026.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://pecollective.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Replit vs Windsurf",
+      "item": "https://pecollective.com/tools/replit-vs-windsurf/"
+    }
+  ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Replit or Windsurf better for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Replit. The zero-setup browser experience means beginners can start coding immediately without installing anything. The built-in deployment and sharing features also make it easier to show your work to others."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Replit handle large codebases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your plan. Free and individual plans have resource limits that can struggle with large projects. Replit works best for small to medium applications. For large production codebases, a local editor like Windsurf is more practical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Windsurf have deployment features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Windsurf is a code editor, not a platform. You'll need to set up your own deployment pipeline (Vercel, Netlify, AWS, etc.). If built-in deployment is important to you, Replit has a significant advantage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better for team collaboration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For real-time collaboration, Replit's multiplayer editing is unmatched. For async collaboration on production code, Windsurf's git-based workflow with AI-assisted PR reviews is more practical. It depends on your collaboration style."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Replit on an iPad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Since Replit runs entirely in the browser, it works on iPads, Chromebooks, and any device with a modern browser. Windsurf requires a desktop or laptop with enough resources to run a local editor."
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Replit -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Replit",
+  "url": "https://replit.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free tier (limited)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$25/month (Replit Core)"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$40/month per seat"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Custom pricing"
+      }
+    ]
+  }
+}
+    </script>
+
+    <!-- SoftwareApplication Schema: Windsurf -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Windsurf",
+  "url": "https://windsurf.com",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0",
+    "offerCount": "4",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Free tier available"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individual",
+        "description": "$15/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business",
+        "description": "$30/month"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Contact sales"
+      }
+    ]
+  }
+}
+    </script>
+    
+</head>
+
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+    
+    <style>
+    .comparison-header {
+      padding: 60px 0 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-header__tools {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .comparison-header__tool {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comparison-header__icon {
+      width: 60px;
+      height: 60px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .comparison-header__name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .comparison-header__vs {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .comparison-header h1 {
+      margin-top: 24px;
+      font-size: 2rem;
+    }
+    .comparison-header .subtitle {
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+    .quick-verdict {
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--teal-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px auto;
+      max-width: 800px;
+    }
+    .quick-verdict h2 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+    .quick-verdict p {
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .comparison-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .comparison-content h3 {
+      font-size: 1.125rem;
+      margin: 24px 0 8px;
+      color: var(--gold);
+    }
+    .comparison-content p {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table th {
+      background: var(--bg-card);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .comparison-table th:first-child { width: 35%; }
+    .comparison-table td { color: var(--text-secondary); }
+    .comparison-table tr:hover td { background: var(--bg-card); }
+    .comparison-table .winner {
+      color: var(--success);
+      font-weight: 600;
+    }
+    .section-divider {
+      margin: 48px 0;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .use-case-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .use-case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .use-case-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .use-case-card ul { list-style: none; padding: 0; }
+    .use-case-card li {
+      padding: 4px 0;
+      color: var(--text-secondary);
+    }
+    .cta-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .cta-comparison__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .cta-comparison__card h4 { margin-bottom: 8px; }
+    .cta-comparison__card p {
+      margin-bottom: 12px;
+      font-size: 0.9375rem;
+    }
+    .cta-comparison__card .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      background: var(--gold);
+      color: var(--bg-darker);
+      text-decoration: none;
+    }
+    .cta-comparison__card .btn:hover {
+      background: var(--gold-hover);
+    }
+    .comparison-header__date {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+    .migration-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .migration-section h3 {
+      font-size: 1.125rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .migration-section ul {
+      padding-left: 1.25rem;
+      margin: 8px 0 16px;
+    }
+    .migration-section li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+    .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding: 12px;
+      background: var(--bg-darker);
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .faq-section { max-width: 800px; margin: 0 auto; }
+    .faq-section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+    .newsletter-cta {
+      max-width: 600px;
+      margin: 48px auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .newsletter-cta h2 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .newsletter-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .newsletter-cta form {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .newsletter-cta input {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-darker);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      width: 240px;
+    }
+    .newsletter-cta button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gold);
+      color: var(--bg-darker);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 700px) {
+      .use-case-cards, .cta-comparison { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 0.875rem; }
+      .comparison-table th, .comparison-table td { padding: 8px; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+    
+
+    <main>
+      <article>
+        <div class="comparison-header">
+          <div class="comparison-header__tools">
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">💻</span>
+              <span class="comparison-header__name">Replit</span>
+            </div>
+            <span class="comparison-header__vs">VS</span>
+            <div class="comparison-header__tool">
+              <span class="comparison-header__icon">🌊</span>
+              <span class="comparison-header__name">Windsurf</span>
+            </div>
+          </div>
+          <h1>Cloud IDE or Local AI Editor?</h1>
+          <p class="subtitle">Cloud-first versus local-first approaches to AI coding</p>
+          <p class="comparison-header__date">Last updated: February 20, 2026</p>
+        </div>
+
+        <div class="quick-verdict">
+          <h2>Quick Verdict</h2>
+          <p><strong>Choose Replit if:</strong> You want everything in the browser. Coding, running, deploying, sharing. All from any device. Replit Agent can build entire applications from a prompt, and one-click deployment means you go from idea to live URL without touching infrastructure. Perfect if you hate setting up dev environments.</p>
+          <p><strong>Choose Windsurf if:</strong> You want a powerful local editor with AI built into every interaction. Windsurf gives you the speed of local development, full filesystem access, and agentic Cascade workflows without depending on an internet connection for basic editing. Better for serious codebases.</p>
+        </div>
+
+        <div class="comparison-content">
+          <h2>Feature Comparison</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Replit</th>
+                <th>Windsurf</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Setup Required</strong></td>
+                <td class="winner">None (browser-based)</td>
+                <td>Local install</td>
+              </tr>
+              <tr>
+                <td><strong>Deployment</strong></td>
+                <td class="winner">One-click deploy built-in</td>
+                <td>No deployment features</td>
+              </tr>
+              <tr>
+                <td><strong>Offline Support</strong></td>
+                <td>None (cloud-only)</td>
+                <td class="winner">Full offline editing</td>
+              </tr>
+              <tr>
+                <td><strong>AI Agent</strong></td>
+                <td class="winner">Replit Agent (builds full apps)</td>
+                <td>Cascade (multi-file editing)</td>
+              </tr>
+              <tr>
+                <td><strong>Codebase Size Handling</strong></td>
+                <td>Limited by cloud resources</td>
+                <td class="winner">Limited by local hardware</td>
+              </tr>
+              <tr>
+                <td><strong>Extension Ecosystem</strong></td>
+                <td>Limited</td>
+                <td class="winner">Full VS Code extensions</td>
+              </tr>
+              <tr>
+                <td><strong>Price (Individual)</strong></td>
+                <td>$25/month</td>
+                <td class="winner">$15/month</td>
+              </tr>
+              <tr>
+                <td><strong>Collaboration</strong></td>
+                <td class="winner">Real-time multiplayer</td>
+                <td>Git-based</td>
+              </tr>
+              <tr>
+                <td><strong>Language Support</strong></td>
+                <td>Many (cloud containers)</td>
+                <td>Any (local environment)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="section-divider">
+            <h2>Deep Dive: Where Each Tool Wins</h2>
+            
+          <div class="section-divider">
+            <h3>💻 Replit Wins: Zero Setup and Built-in Deployment</h3>
+            <p>Open a browser tab. Start coding. Deploy. That's the Replit workflow, and nothing else matches it for speed to production. There's no git setup, no package manager configuration, no build pipeline to create. Your code runs in a cloud container that's ready before you finish typing your first line.</p>
+            <p>Replit Agent takes this further. Describe what you want in plain English and the agent builds it. Not just code, but the full application with file structure, dependencies, database connections, and a deploy button. For prototyping, hackathons, and MVPs, this is the fastest path from idea to working product.</p>
+            <p>Real-time collaboration is also native. Multiple people can edit the same file simultaneously, like Google Docs for code. For pair programming, teaching, or code reviews, this is dramatically better than screen sharing or async git workflows.</p>
+          </div>
+          <div class="section-divider">
+            <h3>🌊 Windsurf Wins: Local Performance and Serious Development</h3>
+            <p>Windsurf runs on your machine. That means your full filesystem, your local databases, your custom toolchains. Large codebases with thousands of files don't hit cloud resource limits. Your terminal is real, not a browser emulation.</p>
+            <p>The VS Code extension ecosystem gives you access to thousands of plugins. ESLint, Prettier, language-specific tools, debuggers, Docker extensions. Replit has a growing extension system but it's years behind VS Code's marketplace.</p>
+            <p>At $15/month versus Replit's $25/month, Windsurf is 40% cheaper. If you already have a machine capable of development (and most developers do), paying more for cloud compute you don't need is hard to justify. The savings add up across a team.</p>
+          </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Use Case Recommendations</h2>
+            <div class="use-case-cards">
+              <div class="use-case-card">
+                <h4>💻 Use Replit For:</h4>
+                <ul>
+                  <li>→ Rapid prototyping and hackathons</li>
+                  <li>→ Teaching and learning to code</li>
+                  <li>→ Building MVPs with one-click deployment</li>
+                  <li>→ Coding from any device (iPad, Chromebook)</li>
+                  <li>→ Real-time pair programming</li>
+                  <li>→ Developers who hate environment setup</li>
+                </ul>
+              </div>
+              <div class="use-case-card">
+                <h4>🌊 Use Windsurf For:</h4>
+                <ul>
+                  <li>→ Working on large production codebases</li>
+                  <li>→ Developers who need VS Code extensions</li>
+                  <li>→ Offline or low-connectivity environments</li>
+                  <li>→ Custom local toolchains and databases</li>
+                  <li>→ Budget-conscious teams</li>
+                  <li>→ Projects requiring full filesystem access</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider">
+            <h2>Pricing Breakdown</h2>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Replit</th>
+                  <th>Windsurf</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><strong>Free / Trial</strong></td>
+                <td>Free tier (limited)</td>
+                <td>Free tier available</td>
+              </tr>
+              <tr>
+                <td><strong>Individual</strong></td>
+                <td>$25/month (Replit Core)</td>
+                <td>$15/month</td>
+              </tr>
+              <tr>
+                <td><strong>Business</strong></td>
+                <td>$40/month per seat</td>
+                <td>$30/month</td>
+              </tr>
+              <tr>
+                <td><strong>Enterprise</strong></td>
+                <td>Custom pricing</td>
+                <td>Contact sales</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section-divider">
+            <h2>Our Recommendation</h2>
+            
+            <p><strong>For New Developers:</strong> Replit. Zero setup means you can focus on learning to code instead of fighting environment issues. The AI agent and instant preview loop make it the best tool for building your first projects.</p>
+            <p><strong>For Professional Developers:</strong> Windsurf. You probably already have a dev machine, preferred tools, and established workflows. Windsurf's local-first approach respects that while adding powerful AI assistance. Save $10/month too.</p>
+            <p><strong>The Bottom Line:</strong> Replit is for speed and simplicity. Windsurf is for power and control. If you're building prototypes and learning, Replit wins. If you're building production software with a real team, Windsurf is the better fit.</p>
+          </div>
+
+          
+          <div class="section-divider">
+            <h2>Switching Between Replit and Windsurf</h2>
+            <div class="migration-section">
+              <h3>What Transfers Directly</h3>
+              <ul>
+                  <li>Source code files (download from Replit, open in Windsurf)</li>
+                  <li>Git repository (if using Replit's git integration)</li>
+                  <li>Package configurations (package.json, requirements.txt, etc.)</li>
+                  <li>Environment variable names (values may differ locally)</li>
+              </ul>
+              <h3>What Needs Reconfiguration</h3>
+              <ul>
+                  <li>Local development environment setup (dependencies, runtimes)</li>
+                  <li>Deployment pipeline (Replit's built-in deploy doesn't transfer)</li>
+                  <li>Database connections (Replit's managed databases vs local/cloud)</li>
+                  <li>Collaboration workflows (real-time multiplayer to git-based)</li>
+              </ul>
+              <h3>Estimated Migration Time</h3>
+              <p>30 minutes to an hour for a typical project. Download your code, install local dependencies, and configure your local environment. Database migration is the biggest variable if you used Replit's managed database.</p>
+            </div>
+          </div>
+
+          <div class="cta-comparison">
+            <div class="cta-comparison__card">
+              <h4>💻 Try Replit Free</h4>
+              <p>Replit - AI-powered development</p>
+              <a href="https://replit.com" target="_blank" rel="noopener" class="btn">Try Replit Free →</a>
+            </div>
+            <div class="cta-comparison__card">
+              <h4>🌊 Get Windsurf Free</h4>
+              <p>Windsurf - AI-powered development</p>
+              <a href="https://windsurf.com" target="_blank" rel="noopener" class="btn">Get Windsurf Free →</a>
+            </div>
+          </div>
+
+          <div class="affiliate-disclosure">
+            <strong>Disclosure:</strong> This comparison may contain affiliate links. If you sign up through our links, we may earn a commission at no extra cost to you. Our recommendations are based on real-world experience, not sponsorships.
+          </div>
+        </div>
+      </article>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Replit or Windsurf better for beginners?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Replit. The zero-setup browser experience means beginners can start coding immediately without installing anything. The built-in deployment and sharing features also make it easier to show your work to others.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can Replit handle large codebases?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">It depends on your plan. Free and individual plans have resource limits that can struggle with large projects. Replit works best for small to medium applications. For large production codebases, a local editor like Windsurf is more practical.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Does Windsurf have deployment features?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">No. Windsurf is a code editor, not a platform. You'll need to set up your own deployment pipeline (Vercel, Netlify, AWS, etc.). If built-in deployment is important to you, Replit has a significant advantage.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which is better for team collaboration?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For real-time collaboration, Replit's multiplayer editing is unmatched. For async collaboration on production code, Windsurf's git-based workflow with AI-assisted PR reviews is more practical. It depends on your collaboration style.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can I use Replit on an iPad?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Yes. Since Replit runs entirely in the browser, it works on iPads, Chromebooks, and any device with a modern browser. Windsurf requires a desktop or laptop with enough resources to run a local editor.</p>
+        </details>
+      </div>
+
+      <!-- Related Resources -->
+      <div style="max-width: 800px; margin: 48px auto 0;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+            <a href="/tools/cursor-vs-replit/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Replit &rarr;</a>
+            <a href="/tools/cursor-vs-windsurf/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Windsurf &rarr;</a>
+            <a href="/tools/replit-agent/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Replit Agent Full Review &rarr;</a>
+            <a href="/tools/best-ai-coding-assistants/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Best AI Coding Assistants &rarr;</a>
+            <a href="/glossary/ai-coding-assistant/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">What Is an AI Coding Assistant? &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>Get Tool Comparisons in Your Inbox</h2>
+        <p>Weekly AI tool updates, new releases, and honest comparisons.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

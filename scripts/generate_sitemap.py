@@ -35,6 +35,9 @@ add_page('tools/', 0.7, 'monthly')
 add_page('about/', 0.5, 'monthly')
 add_page('join/', 0.6, 'monthly')
 
+# Paths to exclude from sitemap (redirect stubs, old WordPress URLs)
+EXCLUDE_PREFIXES = ('2023/', '2024/', 'member-competitions/')
+
 # Walk site directory for generated pages
 for root, dirs, files in os.walk(SITE_DIR):
     for fname in files:
@@ -44,6 +47,10 @@ for root, dirs, files in os.walk(SITE_DIR):
                 continue  # Skip root (already added)
 
             url_path = rel_path.replace(os.sep, '/') + '/'
+
+            # Skip redirect stubs and old WordPress paths
+            if url_path.startswith(EXCLUDE_PREFIXES):
+                continue
 
             # Skip if already added
             if any(p['loc'].endswith(url_path) for p in pages):

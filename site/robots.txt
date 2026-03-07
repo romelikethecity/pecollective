@@ -1,10 +1,4 @@
-# PE Collective - robots.txt
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /comments/
 
-# Sitemap location
 Sitemap: https://pecollective.com/sitemap.xml

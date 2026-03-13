@@ -1,9 +1,9 @@
 [
   {
     "slug": "best-ai-coding-assistants",
-    "title": "Best AI Coding Assistants (2026)",
+    "title": "Best AI Coding Assistants (2026): Cursor vs Copilot vs Claude Code & More",
     "h1": "Best AI Coding Assistants (2026)",
-    "meta_description": "We tested every major AI coding assistant. Here are the 5 best for 2026, with honest pros, cons, and pricing for Cursor, Copilot, Claude Code, Windsurf, and Amazon Q.",
+    "meta_description": "Cursor, Copilot, Claude Code, Windsurf, and Amazon Q tested side by side. Pricing, real pros/cons, and which one wins for different workflows.",
     "og_description": "The 5 best AI coding assistants in 2026, ranked. Honest reviews with real pricing, pros, and cons.",
     "subtitle": "We tested them all so you don't have to. Five picks, real tradeoffs, no fluff.",
     "date_updated": "February 2026",
@@ -316,9 +316,9 @@
   },
   {
     "slug": "best-llm-frameworks",
-    "title": "Best LLM Frameworks & Libraries (2026)",
+    "title": "Best LLM Frameworks (2026): LangChain vs LlamaIndex vs 5 Others, Ranked",
     "h1": "Best LLM Frameworks & Libraries (2026)",
-    "meta_description": "We compared the top LLM frameworks for building AI applications in 2026. LangChain, LlamaIndex, Haystack, Semantic Kernel, and DSPy ranked with honest tradeoffs and real-world testing.",
+    "meta_description": "LangChain, LlamaIndex, Haystack, Semantic Kernel, and DSPy compared. Honest tradeoffs, real-world testing, and which one to pick for your stack.",
     "og_description": "The 5 best LLM frameworks in 2026: LangChain, LlamaIndex, Haystack, Semantic Kernel, and DSPy. Honest reviews with real tradeoffs.",
     "subtitle": "Five frameworks, five different bets on how LLM apps should be built. We tested them all.",
     "date_updated": "February 2026",
@@ -850,9 +850,9 @@
   },
   {
     "slug": "best-embedding-models",
-    "title": "Best Embedding Models (2026)",
+    "title": "Best Embedding Models (2026): 6 Tested for RAG, Search & Cost",
     "h1": "Best Embedding Models (2026)",
-    "meta_description": "The 6 best embedding models for search, RAG, and similarity in 2026. OpenAI, Cohere, Voyage AI, BGE, Nomic, and Jina compared on quality, speed, and cost.",
+    "meta_description": "OpenAI, Cohere, Voyage AI, BGE, Nomic, and Jina benchmarked on retrieval quality, speed, and price. Which one to pick for your RAG pipeline.",
     "og_description": "6 best embedding models in 2026 ranked by retrieval quality, speed, and cost. OpenAI, Cohere, Voyage AI, BGE, Nomic, and Jina compared.",
     "subtitle": "Your RAG pipeline is only as good as your embeddings. We benchmarked six models on real retrieval tasks.",
     "date_updated": "February 2026",

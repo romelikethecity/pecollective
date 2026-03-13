@@ -362,94 +362,101 @@
     "slug": "openai-api-pricing",
     "tool_name": "OpenAI API",
     "tool_slug": "openai-api",
-    "title": "OpenAI API Pricing (March 2026): GPT-4o, o1 & Every Model Compared",
-    "meta_description": "GPT-4o costs $2.50/1M input tokens. o1 is $15/1M. Full model-by-model breakdown with batch discounts and real monthly cost examples.",
-    "og_description": "OpenAI API pricing for 2026. All models compared with real-world cost examples for production applications.",
-    "h1": "OpenAI API Pricing: What Each Model Actually Costs",
-    "intro": "OpenAI's pricing has gotten significantly cheaper since 2024, but the model lineup is confusing. GPT-4o, GPT-4o-mini, o1, o1-mini, o3-mini. Here's what each model costs, when to use which, and what a typical production app actually spends.",
+    "title": "OpenAI API Pricing (March 2026): GPT-5, GPT-4.1, o3, o4-mini & Every Model",
+    "meta_description": "GPT-4.1 costs $2/1M input, $8/1M output. GPT-5 is $1.25/$10. o4-mini is $1.10/$4.40. Full model-by-model breakdown with batch discounts, caching, and real cost math.",
+    "og_description": "OpenAI API pricing for March 2026. GPT-5, GPT-4.1 family, o3, o4-mini compared with batch discounts and real-world cost examples.",
+    "h1": "OpenAI API Pricing: What Every Model Actually Costs (March 2026)",
+    "intro": "OpenAI's model lineup has expanded significantly. GPT-4.1 replaced GPT-4o as the recommended production model. GPT-5 is the new flagship. The o-series reasoning models now include o3 and o4-mini. And the GPT-4.1 Nano at $0.10 per million input tokens is one of the cheapest capable models available anywhere. This page breaks down every current model's pricing, the batch and caching discounts that cut costs by 50-90%, and real cost math for production workloads. All prices verified March 2026.",
     "tiers": [
       {
-        "name": "GPT-4o-mini",
-        "price": "$0.15 / $0.60",
+        "name": "GPT-4.1 Nano",
+        "price": "$0.10 / $0.40",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Cheapest GPT-4 class model",
-          "Good for classification, extraction, simple chat",
-          "128K context window",
-          "Fast response times (1-3 seconds)",
-          "Best cost-per-quality ratio for simple tasks"
+          "Cheapest capable model in OpenAI's lineup",
+          "Good for classification, extraction, routing",
+          "1M token context window",
+          "Fast response times",
+          "Best cost-per-token ratio for simple tasks"
         ],
         "popular": false
       },
       {
-        "name": "GPT-4o",
-        "price": "$2.50 / $10",
+        "name": "GPT-4.1",
+        "price": "$2.00 / $8.00",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Flagship model for most use cases",
-          "Strong coding, analysis, and creative writing",
-          "128K context window",
-          "Vision capability (analyze images)",
-          "Function calling and structured output"
+          "Recommended production model (replaced GPT-4o)",
+          "Strong coding, instruction following, long context",
+          "1M token context window",
+          "Function calling and structured outputs",
+          "Best balance of cost, speed, and quality"
         ],
         "popular": true
       },
       {
-        "name": "o1-mini",
-        "price": "$3 / $12",
+        "name": "o4-mini",
+        "price": "$1.10 / $4.40",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Reasoning-focused model",
-          "Better than GPT-4o on math, science, coding",
+          "Best-value reasoning model",
           "Chain-of-thought reasoning built in",
-          "128K context window",
-          "Good for complex multi-step problems"
+          "200K context window",
+          "Outperforms o3-mini on most benchmarks",
+          "Good for math, science, and complex logic"
         ],
         "popular": false
       },
       {
-        "name": "o1",
-        "price": "$15 / $60",
+        "name": "GPT-5",
+        "price": "$1.25 / $10.00",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Most capable reasoning model",
-          "PhD-level performance on benchmarks",
-          "200K context window",
-          "Best for research, complex analysis",
-          "Function calling supported"
+          "Most capable model overall",
+          "Agentic workflows and complex reasoning",
+          "128K context window",
+          "Best for research and hard problems",
+          "90% cache read discount"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "Output tokens cost 4x more than input tokens. Verbose prompts that generate long responses can blow up costs. Keep output instructions tight.",
-      "The o1 models use internal reasoning tokens that you pay for but don't see. A simple-looking o1 response might consume 5-10x more tokens than the visible output.",
-      "Batch API gives you 50% off but adds latency (results within 24 hours). Worth it for non-real-time processing.",
-      "Rate limits on free tier are tight: 3 RPM for o1, 500 RPM for GPT-4o-mini. You need to pay $5+ to unlock higher limits.",
-      "Embedding models (text-embedding-3-small at $0.02/1M tokens) are very cheap. Don't overlook them for RAG pipelines."
+      "Output tokens cost 4-8x more than input tokens depending on the model. GPT-5 has the steepest ratio at 8x. Verbose responses can blow up costs fast.",
+      "Reasoning models (o3, o4-mini) use internal reasoning tokens billed as output tokens. A simple-looking o3 response might consume 5-10x more tokens than the visible output. You pay for the thinking, not just the answer.",
+      "GPT-4.1 replaced GPT-4o as the recommended model, but GPT-4o is still available. If your codebase still references GPT-4o, you're paying $2.50/$10 instead of $2/$8 for similar quality. Update your model strings.",
+      "Cache read pricing varies wildly by model family. GPT-5 family gets 90% off cached reads. GPT-4.1 family gets 75% off. GPT-4o family only gets 50% off. Pick models with better cache discounts if you send repeated context.",
+      "Rate limits on the free tier are tight: 3 RPM for reasoning models, 500 RPM for GPT-4o-mini. You need $5+ cumulative spend to unlock Tier 1 limits.",
+      "The Batch API gives 50% off but results arrive within 24 hours, not seconds. Fine for offline processing, useless for real-time apps.",
+      "Fine-tuned model pricing is separate and higher. Training costs $25/1M tokens for GPT-4o, and inference on fine-tuned models costs more than base models.",
+      "Image inputs (vision) are tokenized based on dimensions. A 1024x1024 image costs roughly 765 tokens. Sending high-res images without downscaling wastes tokens."
     ],
     "who_needs_what": [
       {
-        "persona": "Chatbot or simple automation",
-        "recommendation": "GPT-4o-mini at $0.15/$0.60 per 1M tokens. It's 17x cheaper than GPT-4o and handles classification, extraction, and simple conversations well. Start here and upgrade only when quality matters."
+        "persona": "Simple chatbot or classification pipeline",
+        "recommendation": "GPT-4.1 Nano at $0.10/$0.40 per 1M tokens. It's 20x cheaper than GPT-4.1 and handles extraction, routing, and simple conversations. At this price point, even high-volume apps cost under $50/month."
       },
       {
         "persona": "Production AI application",
-        "recommendation": "GPT-4o at $2.50/$10 per 1M tokens for your main model. Route simple tasks to GPT-4o-mini to save costs. A typical app processing 10K requests/day costs $30-100/month."
+        "recommendation": "GPT-4.1 at $2/$8 per 1M tokens. This is OpenAI's recommended production model \u2014 better instruction following and coding than GPT-4o at a lower price. Route simple tasks to GPT-4.1 Nano or GPT-4.1 Mini to save more."
       },
       {
-        "persona": "Research or complex reasoning",
-        "recommendation": "o1-mini for most reasoning tasks ($3/$12 per 1M). Only use full o1 ($15/$60) when you need maximum accuracy on very hard problems. The cost difference is 5x."
+        "persona": "Complex reasoning or research",
+        "recommendation": "o4-mini at $1.10/$4.40 for most reasoning tasks. Only upgrade to o3 ($2/$8) when o4-mini's accuracy isn't sufficient. Reserve GPT-5 ($1.25/$10) for your hardest agentic workflows."
+      },
+      {
+        "persona": "Budget-conscious startup or hobby project",
+        "recommendation": "GPT-4.1 Nano ($0.10/$0.40) for everything, upgraded to GPT-4.1 Mini ($0.40/$1.60) when Nano's quality falls short. Combined with batch processing (50% off), you can run a serious app for under $20/month."
       }
     ],
-    "bottom_line": "GPT-4o-mini is the best value in AI APIs. At $0.15/1M input tokens, it's practically free for most use cases. GPT-4o hits the sweet spot for production apps that need quality. Use o1 models sparingly for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task.",
+    "bottom_line": "GPT-4.1 Nano at $0.10 per million input tokens is the cheapest capable model in OpenAI's lineup and handles most simple tasks. GPT-4.1 is the new production workhorse \u2014 better and cheaper than GPT-4o. For reasoning, o4-mini at $1.10/$4.40 undercuts o3 while matching it on most tasks. GPT-5 is the ceiling for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task, and use batch processing for anything that doesn't need real-time responses.",
     "internal_links": [
       {
         "text": "OpenAI API Review",
         "url": "/tools/openai-api/"
       },
       {
-        "text": "Anthropic API Pricing Comparison",
+        "text": "Anthropic API Pricing",
         "url": "/tools/anthropic-api-pricing/"
       },
       {
@@ -465,98 +472,451 @@
         "url": "/tools/cohere-pricing/"
       }
     ],
+    "deep_sections": [
+      {
+        "heading": "Complete Model Pricing Table (March 2026)",
+        "body": [
+          "OpenAI now offers more than a dozen models across three families: GPT (general-purpose), o-series (reasoning), and specialized models. Here's the full breakdown of every current model worth knowing about."
+        ],
+        "table": {
+          "headers": [
+            "Model",
+            "Input / 1M tokens",
+            "Output / 1M tokens",
+            "Cached Input",
+            "Context Window",
+            "Best For"
+          ],
+          "rows": [
+            [
+              "GPT-4.1 Nano",
+              "$0.10",
+              "$0.40",
+              "$0.025",
+              "1M",
+              "Classification, routing, extraction"
+            ],
+            [
+              "GPT-4o-mini",
+              "$0.15",
+              "$0.60",
+              "$0.075",
+              "128K",
+              "Legacy simple tasks"
+            ],
+            [
+              "GPT-5 Mini",
+              "$0.25",
+              "$2.00",
+              "$0.025",
+              "128K",
+              "Budget general-purpose"
+            ],
+            [
+              "GPT-4.1 Mini",
+              "$0.40",
+              "$1.60",
+              "$0.10",
+              "1M",
+              "Mid-tier production tasks"
+            ],
+            [
+              "o4-mini",
+              "$1.10",
+              "$4.40",
+              "$0.275",
+              "200K",
+              "Budget reasoning"
+            ],
+            [
+              "o3-mini",
+              "$1.10",
+              "$4.40",
+              "$0.55",
+              "200K",
+              "Legacy reasoning"
+            ],
+            [
+              "GPT-5",
+              "$1.25",
+              "$10.00",
+              "$0.125",
+              "128K",
+              "Flagship, agentic workflows"
+            ],
+            [
+              "GPT-4.1",
+              "$2.00",
+              "$8.00",
+              "$0.50",
+              "1M",
+              "Production workhorse"
+            ],
+            [
+              "o3",
+              "$2.00",
+              "$8.00",
+              "$0.50",
+              "200K",
+              "Advanced reasoning"
+            ],
+            [
+              "GPT-4o",
+              "$2.50",
+              "$10.00",
+              "$1.25",
+              "128K",
+              "Legacy production"
+            ],
+            [
+              "o1",
+              "$15.00",
+              "$60.00",
+              "$7.50",
+              "200K",
+              "Legacy deep reasoning"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4.1 Family: The New Production Standard",
+        "body": [
+          "GPT-4.1 launched as OpenAI's recommended replacement for GPT-4o. It's cheaper ($2/$8 vs $2.50/$10), has a 1 million token context window (vs 128K), and scores better on instruction-following and coding benchmarks. If your code still references <code>gpt-4o</code>, switching to <code>gpt-4.1</code> saves money while improving quality.",
+          "The GPT-4.1 family includes three variants. GPT-4.1 ($2/$8) is the main production model \u2014 strong at coding, long-context processing, and structured outputs. GPT-4.1 Mini ($0.40/$1.60) handles mid-tier tasks at 5x lower cost. GPT-4.1 Nano ($0.10/$0.40) is the budget option, ideal for classification and extraction where you don't need sophisticated reasoning.",
+          "All three variants share the 1 million token context window. This is significant for document processing and RAG applications that previously needed to chunk documents into 128K segments. With GPT-4.1, you can process entire codebases, legal documents, or research papers in a single request.",
+          "Cache read pricing for the GPT-4.1 family is 75% off standard input pricing. GPT-4.1's cached input rate is $0.50 per million tokens (vs $2.00 standard). For applications that send the same system prompt, few-shot examples, or document context across requests, this stacks with the already-low base price to make GPT-4.1 extremely cost-effective."
+        ]
+      },
+      {
+        "heading": "GPT-5: When You Need the Ceiling",
+        "body": [
+          "GPT-5 is OpenAI's most capable general-purpose model. At $1.25 per million input tokens, it's actually cheaper than GPT-4.1 on input \u2014 but output tokens cost $10 per million (vs $8 for GPT-4.1). The higher output cost is where GPT-5 gets expensive, especially for tasks that generate long responses.",
+          "Where GPT-5 shines is agentic workflows, complex multi-step reasoning, and tasks that require broad world knowledge. It also gets the best cache discount in OpenAI's lineup: 90% off cached input reads, bringing the effective cached input rate to $0.125 per million tokens.",
+          "GPT-5 Mini ($0.25/$2.00) offers a budget path into GPT-5's capabilities. It's positioned between GPT-4.1 Nano and GPT-4.1 Mini in price but uses GPT-5's architecture. For applications that need GPT-5-class reasoning on a budget, this is worth testing.",
+          "The practical question: when should you use GPT-5 vs GPT-4.1? GPT-4.1 wins on coding tasks, instruction following, and long-context processing. GPT-5 wins on complex reasoning, agentic tool use, and tasks requiring nuanced judgment. Most production apps should default to GPT-4.1 and only route to GPT-5 for their hardest queries."
+        ]
+      },
+      {
+        "heading": "o-Series Reasoning Models: o3 and o4-mini",
+        "body": [
+          "OpenAI's o-series models use chain-of-thought reasoning \u2014 they \"think\" before answering, using internal reasoning tokens that you pay for as output tokens. This means the visible cost per request is higher than the visible output would suggest. A short o3 answer might use 2,000 visible output tokens but 10,000 reasoning tokens behind the scenes.",
+          "o4-mini ($1.10/$4.40) is the best value reasoning model. It replaced o3-mini and outperforms it on most benchmarks while costing the same. Use it for math, science, coding problems, and any task that benefits from step-by-step reasoning. The cached input rate is $0.275 per million tokens.",
+          "o3 ($2.00/$8.00) is the flagship reasoning model. It costs roughly 2x o4-mini and offers stronger performance on the hardest problems \u2014 PhD-level math, complex logic, and multi-step scientific reasoning. For most applications, o4-mini is sufficient. Save o3 for tasks where o4-mini's accuracy drops below your threshold.",
+          "One important detail: reasoning models don't support all features. As of March 2026, o-series models support function calling and structured outputs, but some parameters like temperature and top_p behave differently. Check OpenAI's docs for the latest compatibility matrix before building reasoning model pipelines.",
+          "The cost trap with reasoning models is unpredictable token usage. A query that uses 500 reasoning tokens on one request might use 5,000 on a slightly different phrasing. Set <code>max_completion_tokens</code> to cap your worst-case costs, and monitor average reasoning token usage per query type."
+        ]
+      },
+      {
+        "heading": "Batch API: 50% Off Everything",
+        "body": [
+          "OpenAI's Batch API processes requests asynchronously and returns results within 24 hours. The tradeoff for that latency is a flat 50% discount on all token costs \u2014 input and output \u2014 across every model.",
+          "At batch pricing, GPT-4.1 drops to $1/$4 per million tokens. GPT-4.1 Nano drops to $0.05/$0.20. o4-mini drops to $0.55/$2.20. These are some of the lowest prices available for capable language models.",
+          "Batch processing works by uploading a JSONL file of requests. Each line is a standard API request. You submit the batch, wait for completion (usually 1-12 hours in practice, 24-hour SLA), then download results. No code changes to your prompts \u2014 just a different submission endpoint.",
+          "Best use cases for batch: data extraction from documents, content generation, bulk classification, evaluation/grading, and dataset creation. Anything where you don't need real-time responses. If you're currently running these workloads through the standard API, switching to batch is the single biggest cost reduction available.",
+          "You can combine batch pricing with prompt caching for even deeper discounts. A cached batch request through GPT-4.1 pays $0.25 per million cached input tokens and $4 per million output tokens. That's 87.5% off standard input pricing."
+        ]
+      },
+      {
+        "heading": "Prompt Caching: Discounts by Model Family",
+        "body": [
+          "OpenAI automatically caches repeated prompt prefixes and charges a reduced rate for cache reads on subsequent requests. The discount varies significantly by model family, making this a key factor in model selection for cost-sensitive applications.",
+          "GPT-5 family models get the deepest cache discount: 90% off input tokens for cache reads. This means GPT-5's effective cached input rate is just $0.125 per million tokens \u2014 cheaper than GPT-4.1 Nano's standard input rate. If your application sends the same long context repeatedly and you're using GPT-5, caching makes it remarkably affordable.",
+          "GPT-4.1 family models get 75% off cached reads. GPT-4.1's cached rate drops to $0.50 per million, GPT-4.1 Mini to $0.10, and GPT-4.1 Nano to $0.025. For applications with stable system prompts and shared context (RAG, chatbots, document processing), these cached rates make the GPT-4.1 family extremely competitive.",
+          "GPT-4o family and o-series models get 50% off cached reads. This is the weakest discount tier. o4-mini's cached rate is $0.275, o3's is $0.50, and GPT-4o's is $1.25. If you're choosing between GPT-4.1 ($0.50 cached) and GPT-4o ($1.25 cached), the caching difference alone is 2.5x.",
+          "Cache writes happen automatically when your prompt prefix exceeds a minimum length (typically 1,024 tokens). The cache has a TTL that varies by model \u2014 check OpenAI's docs for current values. Cache hits require an exact prefix match, so structure your prompts with stable content first (system prompt, few-shot examples, shared context) and variable content last (user query)."
+        ]
+      },
+      {
+        "heading": "OpenAI vs Anthropic: Price Comparison",
+        "body": [
+          "The two leading API providers have different pricing philosophies. OpenAI offers more model tiers with a wider price range. Anthropic offers fewer models but competitive pricing on its core lineup. Here's how they compare head-to-head on comparable models."
+        ],
+        "table": {
+          "headers": [
+            "Use Case",
+            "OpenAI Model",
+            "OpenAI Price",
+            "Anthropic Model",
+            "Anthropic Price"
+          ],
+          "rows": [
+            [
+              "Budget tasks",
+              "GPT-4.1 Nano ($0.10/$0.40)",
+              "$0.10/$0.40",
+              "Haiku 4.5 ($1/$5)",
+              "$1/$5"
+            ],
+            [
+              "Production workhorse",
+              "GPT-4.1 ($2/$8)",
+              "$2/$8",
+              "Sonnet 4.6 ($3/$15)",
+              "$3/$15"
+            ],
+            [
+              "Flagship",
+              "GPT-5 ($1.25/$10)",
+              "$1.25/$10",
+              "Opus 4.6 ($5/$25)",
+              "$5/$25"
+            ],
+            [
+              "Budget reasoning",
+              "o4-mini ($1.10/$4.40)",
+              "$1.10/$4.40",
+              "\u2014",
+              "\u2014"
+            ],
+            [
+              "Advanced reasoning",
+              "o3 ($2/$8)",
+              "$2/$8",
+              "Opus Extended Thinking",
+              "$5/$25"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Real-World Cost Examples",
+        "body": [
+          "Abstract per-token pricing is hard to reason about. Here's what real applications actually cost based on typical usage patterns.",
+          "<strong>Customer support chatbot (10K conversations/day):</strong> Average conversation uses 2,000 input tokens (system prompt + history + user message) and 500 output tokens. With GPT-4.1: (10,000 \u00d7 2,000 \u00d7 $2/1M) + (10,000 \u00d7 500 \u00d7 $8/1M) = $40 + $40 = $80/day ($2,400/month). With GPT-4.1 Nano: $2 + $2 = $4/day ($120/month). With prompt caching on GPT-4.1 (assuming 75% cache hits on the system prompt): roughly $1,800/month.",
+          "<strong>Document processing pipeline (1,000 docs/day, 10K tokens each):</strong> Input-heavy workload \u2014 10M input tokens, 500K output tokens per day. With GPT-4.1: (10M \u00d7 $2/1M) + (0.5M \u00d7 $8/1M) = $20 + $4 = $24/day ($720/month). With batch processing (50% off): $12/day ($360/month). With GPT-4.1 Nano in batch mode: $0.50 + $0.10 = $0.60/day ($18/month).",
+          "<strong>AI coding assistant (500 requests/day, complex):</strong> Average request: 5,000 input tokens (code context + instructions), 2,000 output tokens. With GPT-4.1: (500 \u00d7 5,000 \u00d7 $2/1M) + (500 \u00d7 2,000 \u00d7 $8/1M) = $5 + $8 = $13/day ($390/month). With GPT-5 for hard problems: $3.13 + $10 = $13.13/day ($394/month). Surprisingly close \u2014 GPT-5's cheaper input but pricier output roughly balances out.",
+          "<strong>Reasoning-heavy analytics (200 queries/day):</strong> Average: 3,000 input tokens, 1,000 visible output tokens, 5,000 reasoning tokens. With o4-mini: (200 \u00d7 3,000 \u00d7 $1.10/1M) + (200 \u00d7 6,000 \u00d7 $4.40/1M) = $0.66 + $5.28 = $5.94/day ($178/month). With o3: $1.20 + $9.60 = $10.80/day ($324/month). The reasoning tokens are where the cost lives.",
+          "<strong>High-volume SaaS with model routing (100K requests/day):</strong> Route 70% to GPT-4.1 Nano (70K \u00d7 1,500 input \u00d7 $0.10/1M + 70K \u00d7 400 output \u00d7 $0.40/1M = $1.05 + $1.12 = $2.17/day), 25% to GPT-4.1 (25K \u00d7 3,000 \u00d7 $2/1M + 25K \u00d7 1,000 \u00d7 $8/1M = $150 + $200 = $350/day), and 5% to o4-mini (5K \u00d7 3,000 \u00d7 $1.10/1M + 5K \u00d7 6,000 \u00d7 $4.40/1M = $16.50 + $132 = $148.50/day). Total: ~$500/day ($15,000/month). Without routing (everything on GPT-4.1): ~$900/day ($27,000/month). Routing saves $12,000/month.",
+          "These examples assume standard API pricing. Apply batch discounts (50% off) to any non-real-time portion and caching discounts to repeated context for further savings. A well-optimized app typically spends 30-50% less than these baseline estimates."
+        ]
+      },
+      {
+        "heading": "Rate Limits by Spending Tier",
+        "body": [
+          "OpenAI uses a tiered rate limit system based on your cumulative API spend. Higher tiers unlock more requests per minute (RPM) and tokens per minute (TPM). This matters for production apps that need consistent throughput."
+        ],
+        "table": {
+          "headers": [
+            "Tier",
+            "Qualification",
+            "GPT-4.1 RPM",
+            "GPT-4.1 TPM",
+            "o4-mini RPM"
+          ],
+          "rows": [
+            [
+              "Free",
+              "$0 spend",
+              "3 RPM",
+              "40,000",
+              "3 RPM"
+            ],
+            [
+              "Tier 1",
+              "$5 cumulative",
+              "500 RPM",
+              "200,000",
+              "500 RPM"
+            ],
+            [
+              "Tier 2",
+              "$50 cumulative",
+              "5,000 RPM",
+              "2,000,000",
+              "5,000 RPM"
+            ],
+            [
+              "Tier 3",
+              "$100 cumulative",
+              "5,000 RPM",
+              "4,000,000",
+              "5,000 RPM"
+            ],
+            [
+              "Tier 4",
+              "$250 cumulative",
+              "10,000 RPM",
+              "10,000,000",
+              "10,000 RPM"
+            ],
+            [
+              "Tier 5",
+              "$1,000 cumulative",
+              "10,000 RPM",
+              "30,000,000",
+              "10,000 RPM"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Cost Optimization Strategies",
+        "body": [
+          "The biggest cost lever is model routing. Most production queries don't need GPT-4.1 \u2014 they can be handled by GPT-4.1 Nano at 20x lower cost. Build a simple classifier (which itself runs on Nano) that routes requests to the cheapest model that can handle each query type. This alone can cut costs by 60-80%.",
+          "Prompt caching is the second lever. If you send the same system prompt, few-shot examples, or document context on every request, you're overpaying. Structure prompts so stable content comes first (cached) and variable content comes last. GPT-4.1's 75% cache discount means your 2,000-token system prompt costs $0.001 per request instead of $0.004.",
+          "Batch processing is the third lever. Any workload that doesn't need real-time responses \u2014 data processing, content generation, evaluations, nightly reports \u2014 should use the Batch API for a flat 50% discount. Combined with caching, batch GPT-4.1 processes cached input at $0.25 per million tokens.",
+          "Output token optimization matters disproportionately because output costs 4-8x more than input. Tell the model to be concise. Set <code>max_tokens</code> to prevent runaway responses. Use structured output mode to get clean JSON instead of prose. For classification tasks, request a single word or short label instead of an explanation.",
+          "Monitor and iterate. OpenAI's API returns token usage in every response. Build a dashboard that tracks cost per request by model, endpoint, and use case. Review weekly. Common findings: a debug system prompt that inflates every request by 500 tokens, a retry loop that doubles costs on timeouts, or a model assignment that hasn't been updated since you launched.",
+          "One underused optimization: response format constraints. For classification tasks, use <code>response_format</code> with a JSON schema that only allows your label values. This prevents the model from generating explanations you don't need, saving output tokens. For a 10-class classifier, structured output typically uses 5-20 output tokens instead of 50-200 with free-form responses. At scale, this 10x reduction in output tokens translates directly to a 10x reduction in output costs."
+        ]
+      },
+      {
+        "heading": "How to Estimate Your Monthly OpenAI Bill",
+        "body": [
+          "Step 1: Count your requests per day by category. Separate simple tasks (classification, extraction, short answers) from complex tasks (reasoning, code generation, long-form content). This determines your model mix.",
+          "Step 2: Estimate average tokens per request. A typical chatbot message is 1,000-3,000 input tokens and 300-1,000 output tokens. A document processing request is 5,000-50,000 input tokens and 500-2,000 output tokens. A reasoning query is 2,000-5,000 input tokens, 500-2,000 visible output tokens, plus 3,000-10,000 reasoning tokens (billed as output).",
+          "Step 3: Calculate daily cost. For each category: (requests \u00d7 avg_input_tokens \u00d7 model_input_price/1M) + (requests \u00d7 avg_output_tokens \u00d7 model_output_price/1M). Add categories together. Multiply by 30 for monthly.",
+          "Step 4: Apply discounts. Subtract 50% if using batch processing. Subtract the cache discount percentage for the portion of input tokens that repeat across requests (system prompt, shared context). A typical chatbot with a 1,500-token system prompt gets 30-50% of its input tokens cached.",
+          "Step 5: Add a 20-30% buffer for token estimation variance, retry costs, and usage growth. Real production costs almost always exceed initial estimates because prompts grow, edge cases trigger longer responses, and usage increases after launch.",
+          "Quick reference: A startup running 5,000 requests/day through GPT-4.1 Nano for simple tasks and 1,000 requests/day through GPT-4.1 for complex tasks typically spends $200-500/month. A mid-size company running 50,000+ requests/day across multiple models typically spends $2,000-10,000/month depending on model mix and optimization."
+        ]
+      },
+      {
+        "heading": "Token Counting and How OpenAI Bills You",
+        "body": [
+          "OpenAI uses byte-pair encoding (BPE) tokenization. One token is roughly 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to 1,300-1,400 tokens. You can use OpenAI's <code>tiktoken</code> library to count tokens before sending requests.",
+          "System prompts count as input tokens on every request. A 500-token system prompt across 10,000 requests costs 5 million input tokens \u2014 $10 on GPT-4.1 before any user messages. This is why prompt caching matters: that same system prompt cached costs $2.50 instead of $10.",
+          "Function/tool definitions also count as input tokens. Defining 10 tools with detailed JSON schemas can add 2,000-5,000 tokens per request. Only include the tools each request actually needs, and keep descriptions concise.",
+          "The API response includes a <code>usage</code> object with exact <code>prompt_tokens</code>, <code>completion_tokens</code>, and (for reasoning models) <code>reasoning_tokens</code> counts. Log these for every request to build accurate cost tracking. Don't estimate \u2014 measure.",
+          "Image tokens depend on the image's dimensions and the <code>detail</code> parameter. A 1024x1024 image at high detail costs roughly 765 tokens. A low-detail image costs a fixed 85 tokens. If you're processing images that don't need pixel-level analysis, set <code>detail: low</code> to save 90% on image token costs."
+        ]
+      },
+      {
+        "heading": "Migrating from Legacy Models",
+        "body": [
+          "If your application still uses GPT-4 ($30/$60), GPT-4 Turbo ($5/$15), or GPT-3.5 Turbo ($0.50/$1.50), you're overpaying significantly. Here's the migration path for each.",
+          "<strong>GPT-4 \u2192 GPT-4.1:</strong> Drop-in replacement for most use cases. GPT-4.1 is 15x cheaper ($2/$8 vs $30/$60) with better performance. The main difference is the API endpoint name \u2014 change <code>gpt-4</code> to <code>gpt-4.1</code> in your code and test. Context window jumps from 8K to 1M tokens.",
+          "<strong>GPT-4 Turbo \u2192 GPT-4.1:</strong> Also a near-drop-in replacement. GPT-4.1 is 2.5x cheaper ($2/$8 vs $5/$15) with a larger context window (1M vs 128K). Function calling and structured outputs work the same way. JSON mode is supported.",
+          "<strong>GPT-4o \u2192 GPT-4.1:</strong> Cheapest migration \u2014 saves 20% ($2/$8 vs $2.50/$10). GPT-4.1 adds the 1M context window and better instruction following. Vision capabilities are maintained. The only potential issue: GPT-4o has slightly different behavior on some creative writing tasks, so test your specific prompts.",
+          "<strong>GPT-3.5 Turbo \u2192 GPT-4.1 Nano:</strong> GPT-4.1 Nano is 5x cheaper ($0.10/$0.40 vs $0.50/$1.50) and significantly more capable. The quality jump is substantial \u2014 GPT-4.1 Nano handles tasks that GPT-3.5 Turbo struggled with, at a fraction of the cost.",
+          "<strong>o1 \u2192 o3 or o4-mini:</strong> o1 at $15/$60 is expensive. o3 ($2/$8) is 7.5x cheaper on input and o4-mini ($1.10/$4.40) is 13.6x cheaper. Both outperform o1 on most benchmarks. The migration requires testing because reasoning behavior differs between models, but the cost savings are dramatic.",
+          "Before migrating any model, run your evaluation suite against the new model to catch behavior differences. Pricing savings mean nothing if output quality drops. Most migrations are smooth, but edge cases in creative writing, specific formatting requirements, or fine-tuned model behavior can surface during testing."
+        ]
+      }
+    ],
     "faqs": [
       {
         "question": "How much does the OpenAI API cost?",
-        "answer": "It depends on the model. GPT-4o-mini costs $0.15 per 1M input tokens (cheapest). GPT-4o costs $2.50 per 1M input tokens (most popular). o1 costs $15 per 1M input tokens (most capable). Output tokens cost 4x more than input across all models."
+        "answer": "It depends on the model. GPT-4.1 Nano is the cheapest at $0.10 per 1M input tokens. GPT-4.1 (the recommended production model) costs $2 per 1M input tokens. GPT-5 costs $1.25/$10. o4-mini costs $1.10/$4.40. Output tokens cost 4-8x more than input across all models."
       },
       {
-        "question": "What does a typical OpenAI API app cost per month?",
-        "answer": "A small chatbot processing 1,000 conversations/day with GPT-4o-mini costs about $5-15/month. A production app with 10,000 daily requests using GPT-4o costs $30-100/month. Costs scale linearly with usage."
+        "question": "What's the cheapest OpenAI model?",
+        "answer": "GPT-4.1 Nano at $0.10 per million input tokens and $0.40 per million output tokens. It's designed for classification, extraction, and simple tasks. With batch processing (50% off), it drops to $0.05/$0.20 \u2014 effectively free for most use cases."
       },
       {
-        "question": "Is GPT-4o-mini good enough for production?",
-        "answer": "For many use cases, yes. It handles classification, extraction, summarization, and simple chat well. It struggles with complex reasoning, nuanced writing, and multi-step analysis. Test your specific use case before deciding."
+        "question": "Should I use GPT-4o or GPT-4.1?",
+        "answer": "GPT-4.1. It replaced GPT-4o as OpenAI's recommended production model. It's cheaper ($2/$8 vs $2.50/$10), has a larger context window (1M vs 128K tokens), and performs better on instruction following and coding tasks. GPT-4o is still available but considered legacy."
       },
       {
-        "question": "How does OpenAI pricing compare to Anthropic?",
-        "answer": "Claude 3.5 Sonnet ($3/$15 per 1M tokens) is slightly more expensive than GPT-4o ($2.50/$10) but many developers find it produces better results for coding and analysis. Claude 3.5 Haiku ($0.25/$1.25) competes with GPT-4o-mini ($0.15/$0.60)."
+        "question": "What are reasoning tokens and why do they increase costs?",
+        "answer": "The o-series models (o3, o4-mini) use internal chain-of-thought reasoning before producing a visible answer. These reasoning tokens are billed as output tokens but aren't shown in the response. A simple o3 answer might use 500 visible output tokens but 5,000 reasoning tokens, meaning you pay for 5,500 output tokens total."
+      },
+      {
+        "question": "How does OpenAI pricing compare to Anthropic's Claude?",
+        "answer": "OpenAI is generally cheaper at the low end. GPT-4.1 Nano ($0.10/$0.40) is 10x cheaper than Claude Haiku 4.5 ($1/$5). At the production tier, GPT-4.1 ($2/$8) is cheaper than Sonnet 4.6 ($3/$15). At the flagship tier, GPT-5 ($1.25/$10) is cheaper than Opus 4.6 ($5/$25) on input but comparable on output. Quality differences vary by task."
+      },
+      {
+        "question": "What's the Batch API and when should I use it?",
+        "answer": "The Batch API processes requests asynchronously (results within 24 hours) at a 50% discount on all token costs. Use it for any workload that doesn't need real-time responses: data extraction, content generation, evaluations, nightly processing. It's the single biggest cost reduction available."
+      },
+      {
+        "question": "How does prompt caching work?",
+        "answer": "OpenAI automatically caches repeated prompt prefixes and charges a reduced rate on subsequent requests. The discount varies: GPT-5 family gets 90% off cached reads, GPT-4.1 family gets 75% off, GPT-4o/o-series get 50% off. Structure prompts with stable content first and variable content last to maximize cache hits."
+      },
+      {
+        "question": "What happened to GPT-4 and GPT-4 Turbo?",
+        "answer": "They're legacy models. GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($5/$15) are still available but deprecated. GPT-4.1 ($2/$8) and GPT-4o ($2.50/$10) replaced them at dramatically lower prices with better performance. There's no reason to use GPT-4 or GPT-4 Turbo in new projects."
+      },
+      {
+        "question": "Is the OpenAI API free?",
+        "answer": "OpenAI offers a free tier with limited rate limits (3 RPM for reasoning models, 500 RPM for GPT-4o-mini). It's enough for testing and development but not production use. Paid tiers start at $5 cumulative spend and unlock significantly higher rate limits."
+      },
+      {
+        "question": "How do I reduce my OpenAI API costs?",
+        "answer": "Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1 \u2014 20x cheaper. (2) Use the Batch API for non-real-time workloads \u2014 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first \u2014 up to 90% off repeated input tokens. Together these can cut costs by 70-85%."
       }
-    ],
-    "date_updated": "2026-02-15"
+    ]
   },
   {
     "slug": "anthropic-api-pricing",
     "tool_name": "Anthropic API (Claude)",
     "tool_slug": "anthropic-api",
     "title": "Anthropic API Pricing (March 2026): Every Claude Model, Per-Token Costs",
-    "meta_description": "Claude 3.5 Sonnet costs $3/1M input tokens. Haiku is $0.25/1M. Full tier breakdown with batch pricing, prompt caching discounts, and real monthly cost examples.",
-    "og_description": "Anthropic Claude API pricing for 2026. All Claude models compared with real-world cost examples for production apps.",
-    "h1": "Anthropic API Pricing: What Claude Actually Costs",
-    "intro": "Anthropic's Claude has become the go-to model for many developers, especially for coding and analysis tasks. The pricing is straightforward compared to OpenAI's growing model lineup. Here's what each Claude model costs and how to optimize your spend.",
+    "meta_description": "Claude Sonnet 4.6 costs $3/1M input, $15/1M output. Opus 4.6 is $5/$25. Haiku 4.5 is $1/$5. Full breakdown with batch discounts, prompt caching, and real cost examples.",
+    "og_description": "Complete Anthropic Claude API pricing for March 2026. Every model from Opus 4.6 to legacy Haiku 3, with batch discounts, caching rates, and real monthly cost examples.",
+    "h1": "Anthropic API Pricing: What Every Claude Model Costs in 2026",
+    "intro": "Anthropic has shipped a lot of models since Claude 3. The naming is confusing, the pricing tiers stack in non-obvious ways, and the gap between the cheapest and most expensive model is now 25x. This page breaks down every current Claude model's pricing, the batch and caching discounts that can cut your bill in half, and real cost math for production apps. All prices verified against Anthropic's official pricing page, March 2026.",
     "tiers": [
       {
-        "name": "Claude 3.5 Haiku",
-        "price": "$0.25 / $1.25",
+        "name": "Claude Haiku 4.5",
+        "price": "$1 / $5",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Fastest Claude model",
-          "Good for classification and extraction",
-          "200K context window",
-          "Near-instant responses",
-          "Best for high-volume, simple tasks"
+          "Fastest current Claude model",
+          "200K context window, 64K max output",
+          "Extended thinking support",
+          "Best for classification, extraction, routing",
+          "Batch API: $0.50/$2.50 per 1M tokens (50% off)"
         ],
         "popular": false
       },
       {
-        "name": "Claude 3.5 Sonnet",
+        "name": "Claude Sonnet 4.6",
         "price": "$3 / $15",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Best balance of quality and cost",
-          "Excellent at coding, analysis, writing",
-          "200K context window",
-          "Tool use and function calling",
-          "Most popular Claude model"
+          "Best speed-to-intelligence ratio",
+          "1M context window, 64K max output",
+          "Extended thinking + adaptive thinking",
+          "The default model for most production apps",
+          "Batch API: $1.50/$7.50 per 1M tokens (50% off)"
         ],
         "popular": true
       },
       {
-        "name": "Claude 3 Opus",
-        "price": "$15 / $75",
+        "name": "Claude Opus 4.6",
+        "price": "$5 / $25",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Most capable Claude model",
-          "Best for complex reasoning tasks",
-          "200K context window",
-          "Highest accuracy on benchmarks",
-          "Use for tasks where quality is paramount"
+          "Most intelligent Claude model",
+          "1M context window, 128K max output",
+          "Extended thinking + adaptive thinking",
+          "Best for agents, complex coding, research",
+          "Batch API: $2.50/$12.50 per 1M tokens (50% off)"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "Output tokens are 5x more expensive than input tokens (compared to OpenAI's 4x). Long-form generation costs add up faster with Claude.",
-      "Prompt caching saves 90% on cached input tokens. If you're sending the same system prompt repeatedly, enable caching.",
-      "The Message Batches API gives you 50% off for non-real-time processing. Good for batch analysis jobs.",
-      "Rate limits on the free tier are strict: 5 RPM for Sonnet. The lowest paid tier ($0 minimum, pay-as-you-go) unlocks much higher limits.",
-      "Extended thinking in Claude 4 uses additional tokens for internal reasoning. Budget 2-5x your visible output tokens."
+      "Output tokens cost 5x input tokens across every Claude model. A chatbot that generates long responses will spend most of its budget on output, not input. Track your output-to-input ratio.",
+      "Prompt caching slashes repeat input costs by 90%. A 5-minute cache write costs 1.25x base input, but every subsequent cache hit costs just 0.1x. If you send the same system prompt on every request, caching pays for itself after one read.",
+      "There's also a 1-hour cache at 2x base input. Worth it if your cached content stays stable across longer sessions. Pays off after two cache reads.",
+      "The Batch API gives 50% off both input and output tokens. The tradeoff: results are asynchronous (up to 24 hours). Good for data processing, evaluations, and any job that doesn't need real-time responses.",
+      "Extended thinking burns tokens you don't see in the response. The model uses internal reasoning tokens before producing output. Budget 2-5x your visible output for thinking-heavy tasks like multi-step coding or math.",
+      "US-only data residency (inference_geo parameter) adds a 10% surcharge on all token categories for Opus 4.6 and newer models. Global routing (the default) uses standard pricing.",
+      "Fast mode for Opus 4.6 costs 6x standard rates ($30/$150 per 1M tokens). You get significantly faster output but it's a research preview and can't be combined with batch processing.",
+      "Legacy models are still available but don't assume they're cheaper. Claude Opus 4.1 and Opus 4 cost $15/$75 per 1M tokens, which is 3x the price of the newer, more capable Opus 4.6 at $5/$25."
     ],
     "who_needs_what": [
       {
-        "persona": "High-volume simple tasks",
-        "recommendation": "Haiku at $0.25/$1.25 per 1M tokens. It's fast, cheap, and handles classification, extraction, and simple Q&A well. Not as smart as Sonnet but 12x cheaper."
+        "persona": "High-volume classification, routing, or extraction",
+        "recommendation": "Haiku 4.5 at $1/$5 per 1M tokens. It's fast, supports extended thinking, and handles structured tasks well. For batch jobs, the price drops to $0.50/$2.50. A pipeline processing 10M tokens/day costs about $15/day with batch pricing."
       },
       {
-        "persona": "Production coding/analysis app",
-        "recommendation": "Sonnet at $3/$15 per 1M tokens. It's the default choice for most developers. Excellent at code generation, document analysis, and structured output. A typical production app costs $50-200/month."
+        "persona": "Production apps: chatbots, coding assistants, document analysis",
+        "recommendation": "Sonnet 4.6 at $3/$15 per 1M tokens. The workhorse model. 1M context window, 64K max output, fast enough for real-time use. A typical SaaS feature processing 500 requests/day (averaging 2K input + 1K output tokens each) costs about $25/month."
       },
       {
-        "persona": "Complex reasoning or research",
-        "recommendation": "Opus at $15/$75 per 1M tokens. Only use when Sonnet isn't good enough. The 5x price premium is hard to justify unless you're working on genuinely complex analysis."
+        "persona": "Agents, complex multi-step coding, deep research",
+        "recommendation": "Opus 4.6 at $5/$25 per 1M tokens. The price gap to Sonnet has narrowed significantly (was 5x with Opus 3, now less than 2x). If your task requires extended reasoning or autonomous tool use, Opus 4.6 is worth the premium."
+      },
+      {
+        "persona": "Cost-sensitive apps that need decent quality",
+        "recommendation": "Haiku 3.5 at $0.80/$4 per 1M tokens or legacy Haiku 3 at $0.25/$1.25 (deprecated April 2026). Haiku 3 is the cheapest Claude model ever but it's being retired. Migrate to Haiku 4.5 before April 19, 2026."
       }
     ],
-    "bottom_line": "Claude 3.5 Sonnet at $3/$15 per 1M tokens is the model most developers should use. It's slightly more expensive than GPT-4o but many teams find the quality worth the premium, especially for coding. Route simple tasks to Haiku to keep costs down. Use prompt caching aggressively to cut your bill.",
+    "bottom_line": "Sonnet 4.6 at $3/$15 per 1M tokens is the default choice for most developers. It's the same price as the old Sonnet 3.5 but significantly more capable, with a 1M context window and adaptive thinking. The big pricing story in 2026 is that Opus got cheaper: Opus 4.6 costs $5/$25 versus the old Opus 3's $15/$75. That's a 3x price cut for the flagship model. Stack prompt caching (90% off repeat inputs) and batch processing (50% off everything) to push costs even lower. A well-optimized production app using Sonnet 4.6 with caching typically spends $30-100/month for moderate traffic.",
     "internal_links": [
       {
         "text": "Anthropic Claude API Review",
@@ -581,23 +941,415 @@
     ],
     "faqs": [
       {
-        "question": "How much does the Anthropic Claude API cost?",
-        "answer": "Claude 3.5 Haiku costs $0.25/1M input tokens (cheapest). Claude 3.5 Sonnet costs $3/1M input tokens (most popular). Claude 3 Opus costs $15/1M input tokens (most capable). Output tokens are 5x more expensive across all models."
+        "question": "How much does the Anthropic Claude API cost in 2026?",
+        "answer": "Haiku 4.5: $1/$5 per 1M input/output tokens. Sonnet 4.6: $3/$15. Opus 4.6: $5/$25. Output tokens cost 5x input across all models. Batch processing cuts all prices by 50%."
       },
       {
-        "question": "Is Claude cheaper than GPT-4?",
-        "answer": "Claude 3.5 Sonnet ($3/$15) is slightly more expensive than GPT-4o ($2.50/$10) per million tokens. Claude Haiku ($0.25/$1.25) is more expensive than GPT-4o-mini ($0.15/$0.60). OpenAI wins on raw price, but many developers prefer Claude's output quality."
+        "question": "Is Claude cheaper than GPT-4o in 2026?",
+        "answer": "Sonnet 4.6 ($3/$15) is more expensive than GPT-4o ($2.50/$10) on raw price. Haiku 4.5 ($1/$5) is more expensive than GPT-4o-mini ($0.15/$0.60). Claude wins on output quality for many coding and analysis tasks, so cost-per-useful-output can be lower despite higher per-token pricing."
       },
       {
-        "question": "What is prompt caching and how does it save money?",
-        "answer": "Prompt caching stores your system prompt and reuses it across requests. Cached input tokens cost 90% less. If your system prompt is 2,000 tokens and you make 10,000 requests/day, caching saves roughly $50/month with Sonnet."
+        "question": "What is prompt caching and how much does it save?",
+        "answer": "Prompt caching lets you reuse previously processed parts of your prompt across API calls. The first write costs 1.25x base input (5-minute cache) or 2x (1-hour cache). Every subsequent cache hit costs just 0.1x base input, which is a 90% discount. It pays for itself after one cache read on 5-minute caches."
       },
       {
-        "question": "Which Claude model should I use?",
-        "answer": "Start with Sonnet for most tasks. Drop to Haiku for simple classification, extraction, or high-volume operations. Only upgrade to Opus when Sonnet consistently fails on your specific use case. Most teams use Sonnet for 80% of requests and Haiku for 20%."
+        "question": "What happened to Claude 3.5 Sonnet and Claude 3 Opus?",
+        "answer": "They're legacy models. Claude 3.5 Sonnet is now called Sonnet 3.7 (deprecated). Claude 3 Opus is deprecated. The current models are Opus 4.6, Sonnet 4.6, and Haiku 4.5. Notably, Opus 4.6 at $5/$25 is 3x cheaper than the old Opus 3 at $15/$75, while being more capable."
+      },
+      {
+        "question": "What's the cheapest way to use Claude's API?",
+        "answer": "Combine three things: (1) Use Haiku 4.5 for simple tasks and Sonnet 4.6 for complex ones (model routing). (2) Enable prompt caching for any repeated context like system prompts (90% savings on cached tokens). (3) Use the Batch API for non-real-time workloads (50% off everything). A pipeline using all three optimizations can run 80-90% cheaper than naive Opus 4.6 calls."
+      },
+      {
+        "question": "What are the context window sizes for Claude models in 2026?",
+        "answer": "Opus 4.6 and Sonnet 4.6 have 1M token context windows (about 750K words) at standard pricing. Haiku 4.5 has a 200K token window. Max output tokens: Opus 4.6 gets 128K, Sonnet 4.6 and Haiku 4.5 get 64K each."
+      },
+      {
+        "question": "What is extended thinking and does it cost extra?",
+        "answer": "Extended thinking lets Claude reason internally before responding. All current models support it (Opus 4.6, Sonnet 4.6, Haiku 4.5). The thinking tokens count as output tokens and are billed at output rates. Budget 2-5x your visible output for thinking-heavy tasks."
+      },
+      {
+        "question": "How does Claude's batch API pricing work?",
+        "answer": "The Batch API gives 50% off both input and output tokens. Opus 4.6 drops from $5/$25 to $2.50/$12.50. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50. Haiku 4.5 drops from $1/$5 to $0.50/$2.50. Results are returned asynchronously within 24 hours."
+      },
+      {
+        "question": "What does Claude's fast mode cost?",
+        "answer": "Fast mode for Opus 4.6 (research preview) costs 6x standard rates: $30/1M input, $150/1M output. It provides significantly faster output. Prompt caching and data residency multipliers stack on top. Fast mode can't be used with the Batch API."
+      },
+      {
+        "question": "Are there volume discounts for Claude API usage?",
+        "answer": "Standard tier pricing is fixed. Enterprise customers can negotiate volume discounts and custom rate limits by contacting Anthropic's sales team. Rate limits increase across five usage tiers as your spending grows."
       }
     ],
-    "date_updated": "2026-02-15"
+    "deep_sections": [
+      {
+        "heading": "Complete Model Pricing Table (March 2026)",
+        "body": [
+          "Anthropic offers 12 models across four generations. The table below shows every model with base input pricing, cache pricing, and output pricing. The current flagship models (Opus 4.6, Sonnet 4.6, Haiku 4.5) are at the top. Legacy models are still available via the API but Anthropic recommends migrating.",
+          "A few things stand out. First, Opus 4.6 at $5/$25 is dramatically cheaper than the older Opus 4.1 and Opus 4 at $15/$75. Anthropic cut the flagship price by 3x while improving capability. Second, the Sonnet family has held steady at $3/$15 across four generations (Sonnet 3.7 through Sonnet 4.6). Third, Haiku 4.5 at $1/$5 is significantly more expensive than the legacy Haiku 3 at $0.25/$1.25, but the capability jump is massive."
+        ],
+        "table": {
+          "headers": [
+            "Model",
+            "Input / 1M tokens",
+            "Output / 1M tokens",
+            "Context Window",
+            "Max Output",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Opus 4.6",
+              "$5.00",
+              "$25.00",
+              "1M tokens",
+              "128K tokens",
+              "Current"
+            ],
+            [
+              "Sonnet 4.6",
+              "$3.00",
+              "$15.00",
+              "1M tokens",
+              "64K tokens",
+              "Current"
+            ],
+            [
+              "Haiku 4.5",
+              "$1.00",
+              "$5.00",
+              "200K tokens",
+              "64K tokens",
+              "Current"
+            ],
+            [
+              "Sonnet 4.5",
+              "$3.00",
+              "$15.00",
+              "200K (1M beta)",
+              "64K tokens",
+              "Legacy"
+            ],
+            [
+              "Opus 4.5",
+              "$5.00",
+              "$25.00",
+              "200K tokens",
+              "64K tokens",
+              "Legacy"
+            ],
+            [
+              "Opus 4.1",
+              "$15.00",
+              "$75.00",
+              "200K tokens",
+              "32K tokens",
+              "Legacy"
+            ],
+            [
+              "Sonnet 4",
+              "$3.00",
+              "$15.00",
+              "200K (1M beta)",
+              "64K tokens",
+              "Legacy"
+            ],
+            [
+              "Opus 4",
+              "$15.00",
+              "$75.00",
+              "200K tokens",
+              "32K tokens",
+              "Legacy"
+            ],
+            [
+              "Haiku 3.5",
+              "$0.80",
+              "$4.00",
+              "200K tokens",
+              "64K tokens",
+              "Legacy"
+            ],
+            [
+              "Haiku 3",
+              "$0.25",
+              "$1.25",
+              "200K tokens",
+              "4K tokens",
+              "Deprecated (Apr 2026)"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Batch API Pricing: 50% Off Everything",
+        "body": [
+          "The Batch API processes requests asynchronously with results returned within 24 hours. The tradeoff for giving up real-time responses is a flat 50% discount on both input and output tokens. For workloads like data processing, model evaluations, content generation, or any pipeline that doesn't need instant results, this is the single biggest cost lever available.",
+          "At batch pricing, Opus 4.6 drops from $5/$25 to $2.50/$12.50 per million tokens. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50. Haiku 4.5 drops from $1/$5 to $0.50/$2.50. The batch discount stacks with prompt caching, meaning a cached batch request can cost as little as 5% of a standard non-cached request.",
+          "Here's a concrete example. Say you're running a content moderation pipeline processing 1 million user posts per day. Each post averages 200 input tokens and 50 output tokens. At standard Haiku 4.5 rates, that's $200/day input + $250/day output = $450/day. With batch pricing: $100 + $125 = $225/day. Add prompt caching for a shared system prompt across all requests and you could push that under $150/day."
+        ],
+        "table": {
+          "headers": [
+            "Model",
+            "Standard Input",
+            "Batch Input",
+            "Standard Output",
+            "Batch Output"
+          ],
+          "rows": [
+            [
+              "Opus 4.6",
+              "$5.00/MTok",
+              "$2.50/MTok",
+              "$25.00/MTok",
+              "$12.50/MTok"
+            ],
+            [
+              "Sonnet 4.6",
+              "$3.00/MTok",
+              "$1.50/MTok",
+              "$15.00/MTok",
+              "$7.50/MTok"
+            ],
+            [
+              "Haiku 4.5",
+              "$1.00/MTok",
+              "$0.50/MTok",
+              "$5.00/MTok",
+              "$2.50/MTok"
+            ],
+            [
+              "Haiku 3.5",
+              "$0.80/MTok",
+              "$0.40/MTok",
+              "$4.00/MTok",
+              "$2.00/MTok"
+            ],
+            [
+              "Haiku 3",
+              "$0.25/MTok",
+              "$0.125/MTok",
+              "$1.25/MTok",
+              "$0.625/MTok"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Prompt Caching: How the 90% Discount Works",
+        "body": [
+          "Prompt caching is Anthropic's most powerful cost optimization feature. It stores previously processed portions of your prompt so subsequent requests can read from cache instead of reprocessing. The mechanics are straightforward: the first time you cache content, you pay a write premium. Every subsequent read costs just 10% of the base input price.",
+          "There are two cache durations. A 5-minute cache costs 1.25x the base input price to write and pays for itself after just one cache hit. A 1-hour cache costs 2x base input to write and pays for itself after two cache hits. Cache hits cost 0.1x base input regardless of duration.",
+          "For Sonnet 4.6, that means a 5-minute cache write costs $3.75/MTok, a 1-hour cache write costs $6.00/MTok, and any cache hit costs just $0.30/MTok. Compare that to the standard $3.00/MTok input price. If you're sending a 5,000-token system prompt on every request and you make 100 requests per hour, you pay for the system prompt once at 1.25x and then 99 times at 0.1x. The savings are enormous.",
+          "The best use cases for caching: system prompts that stay constant across requests, RAG contexts where the same documents get referenced repeatedly, conversation histories where earlier turns don't change, and few-shot examples that you include in every call.",
+          "One thing to watch: cache multipliers stack with other pricing modifiers. Batch API discount applies first, then caching multipliers apply on top. Long context pricing for Sonnet 4.5 and Sonnet 4 also stacks. The math can get complicated, but the general direction is always cheaper."
+        ],
+        "table": {
+          "headers": [
+            "Model",
+            "Base Input",
+            "5-min Cache Write",
+            "1-hr Cache Write",
+            "Cache Hit"
+          ],
+          "rows": [
+            [
+              "Opus 4.6",
+              "$5.00/MTok",
+              "$6.25/MTok",
+              "$10.00/MTok",
+              "$0.50/MTok"
+            ],
+            [
+              "Sonnet 4.6",
+              "$3.00/MTok",
+              "$3.75/MTok",
+              "$6.00/MTok",
+              "$0.30/MTok"
+            ],
+            [
+              "Haiku 4.5",
+              "$1.00/MTok",
+              "$1.25/MTok",
+              "$2.00/MTok",
+              "$0.10/MTok"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Real-World Cost Examples",
+        "body": [
+          "Abstract per-token pricing is hard to reason about. Here are concrete cost breakdowns for common production use cases, using current March 2026 pricing.",
+          "<strong>Customer support chatbot (Sonnet 4.6)</strong><br>Processing 10,000 support tickets per day. Average conversation: 2,000 input tokens (system prompt + user message + context), 500 output tokens. With a cached system prompt (1,500 tokens cached, 500 fresh per request): Input cost = 500 fresh tokens x 10K = 5M tokens at $3/MTok ($15) + 15M cached tokens at $0.30/MTok ($4.50). Output = 5M tokens at $15/MTok ($75). Daily total: ~$95. Monthly: ~$2,850.",
+          "<strong>Code review agent (Opus 4.6)</strong><br>Reviewing 200 pull requests per day. Average: 8,000 input tokens (code + instructions), 2,000 output tokens (review comments). No caching (each PR is different). Daily: 1.6M input at $5/MTok ($8) + 400K output at $25/MTok ($10). Daily total: ~$18. Monthly: ~$540.",
+          "<strong>Document processing pipeline (Haiku 4.5 batch)</strong><br>Classifying and extracting data from 50,000 documents per day. Average: 1,000 input tokens, 200 output tokens. Using Batch API. Daily: 50M input at $0.50/MTok ($25) + 10M output at $2.50/MTok ($25). Daily total: ~$50. Monthly: ~$1,500.",
+          "<strong>RAG-powered search (Sonnet 4.6 with caching)</strong><br>1,000 queries per day. Each query: 500-token question + 3,000-token cached context + 1,000-token response. Cached input: 3M tokens at $0.30/MTok ($0.90). Fresh input: 500K tokens at $3/MTok ($1.50). Output: 1M tokens at $15/MTok ($15). Daily total: ~$17.40. Monthly: ~$522."
+        ]
+      },
+      {
+        "heading": "Anthropic vs OpenAI: How the Pricing Compares",
+        "body": [
+          "The most common comparison. OpenAI's GPT-4o costs $2.50/$10 per million tokens versus Sonnet 4.6's $3/$15. On raw price, OpenAI wins by about 17% on input and 33% on output. But pricing alone doesn't tell the full story.",
+          "Claude's prompt caching is more aggressive than OpenAI's. A cached Sonnet 4.6 request costs $0.30/MTok for input versus GPT-4o's cached rate. The discount structures differ, and depending on your caching hit rate, Claude can be cheaper on effective cost per request.",
+          "For the flagship tier, Opus 4.6 at $5/$25 competes with GPT-4o at $2.50/$10 and o1 at $15/$60. Opus is more expensive than GPT-4o but significantly cheaper than o1, while offering comparable reasoning performance. The right comparison depends on which OpenAI model your workload actually needs.",
+          "At the budget end, Haiku 4.5 at $1/$5 is substantially more expensive than GPT-4o-mini at $0.15/$0.60. If you have price-sensitive high-volume tasks where quality doesn't matter as much, OpenAI has the edge. But Haiku 4.5 with extended thinking can handle tasks that GPT-4o-mini can't touch.",
+          "The batch API discount is identical: both providers offer 50% off for async processing. Anthropic has the edge on caching flexibility (two cache durations vs one). OpenAI has the edge on raw price for their mini model tier."
+        ],
+        "table": {
+          "headers": [
+            "Model Tier",
+            "Anthropic",
+            "Anthropic Price",
+            "OpenAI",
+            "OpenAI Price",
+            "Winner"
+          ],
+          "rows": [
+            [
+              "Budget",
+              "Haiku 4.5",
+              "$1/$5",
+              "GPT-4o-mini",
+              "$0.15/$0.60",
+              "OpenAI (6-8x cheaper)"
+            ],
+            [
+              "Workhorse",
+              "Sonnet 4.6",
+              "$3/$15",
+              "GPT-4o",
+              "$2.50/$10",
+              "OpenAI (~20-30% cheaper)"
+            ],
+            [
+              "Flagship",
+              "Opus 4.6",
+              "$5/$25",
+              "o1",
+              "$15/$60",
+              "Anthropic (3x cheaper)"
+            ],
+            [
+              "Batch (workhorse)",
+              "Sonnet 4.6 batch",
+              "$1.50/$7.50",
+              "GPT-4o batch",
+              "$1.25/$5",
+              "OpenAI (~20% cheaper)"
+            ],
+            [
+              "Cheapest ever",
+              "Haiku 3 (deprecated)",
+              "$0.25/$1.25",
+              "GPT-4o-mini",
+              "$0.15/$0.60",
+              "OpenAI"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Extended Thinking: What It Costs and When to Use It",
+        "body": [
+          "Extended thinking lets Claude reason step-by-step internally before producing a response. The thinking tokens are billed as output tokens at output rates. All three current models support it (Opus 4.6, Sonnet 4.6, Haiku 4.5), plus Opus 4.6 and Sonnet 4.6 support adaptive thinking which lets the model decide how much thinking a task needs.",
+          "The cost impact depends on your task. Simple classification might use zero thinking tokens. A complex math problem or multi-file code review might generate 3-5x more thinking tokens than visible output tokens. At Opus 4.6's $25/MTok output rate, a response with 500 visible output tokens and 2,000 thinking tokens costs $0.0625 versus $0.0125 without thinking. That's a 5x multiplier on output cost.",
+          "When is it worth it? Extended thinking makes a material difference on tasks requiring multi-step reasoning: code generation with complex logic, mathematical proofs, legal document analysis, and research synthesis. For straightforward tasks like text classification, summarization, or simple Q&A, you're paying for thinking tokens that don't improve the output.",
+          "One practical tip: use adaptive thinking when available (Opus 4.6 and Sonnet 4.6). It lets the model skip expensive reasoning for simple requests and engage deep thinking only when needed. This naturally optimizes your thinking token spend without manual intervention."
+        ]
+      },
+      {
+        "heading": "Legacy Models and Migration",
+        "body": [
+          "Anthropic has deprecated several older models. Claude Haiku 3 (the cheapest model ever at $0.25/$1.25) retires on April 19, 2026. Claude Sonnet 3.7 is also deprecated. If you're running production workloads on either, migrate now.",
+          "The upgrade path depends on your priorities. Haiku 3 users should move to Haiku 4.5 ($1/$5). Yes, it's 4x more expensive. But it's dramatically more capable: 64K max output (vs 4K), extended thinking support, and higher quality across every task type. If cost is the primary concern, Haiku 3.5 at $0.80/$4 is a middle ground that's not deprecated yet.",
+          "For Opus users, the migration is actually a price cut. Opus 4 and Opus 4.1 both cost $15/$75. Opus 4.6 costs $5/$25 and is more capable. There's no reason to stay on the older Opus models. Switch and save 67% immediately.",
+          "Sonnet users have the simplest migration. Sonnet 3.7 through Sonnet 4.6 all cost $3/$15. The pricing hasn't changed across four generations. You can upgrade to Sonnet 4.6 for better quality at the same price. The newer models also get the full 1M context window at standard pricing, while older Sonnets needed a beta header for anything over 200K tokens."
+        ]
+      },
+      {
+        "heading": "Rate Limits by Usage Tier",
+        "body": [
+          "Anthropic uses a tiered system that increases your rate limits as your spending grows. The tiers determine how many requests per minute (RPM), input tokens per minute, and output tokens per minute you can use. Understanding these limits matters for production planning because hitting a rate limit means dropped requests.",
+          "Tier 1 starts at $0 minimum spend with basic limits. Each tier roughly doubles your limits. Tier 4 offers the highest standard limits. Enterprise customers can negotiate custom limits beyond Tier 4.",
+          "If you're building a production app that needs to handle traffic spikes, pay attention to the output tokens per minute limit. That's typically the bottleneck for chatbot-style applications where every request generates a substantial response. The input token limit matters more for batch processing and document ingestion workloads.",
+          "One strategy for managing rate limits without upgrading tiers: model routing. Send simple tasks to Haiku 4.5 (which has higher rate limits per dollar) and reserve Sonnet 4.6 or Opus 4.6 for complex tasks. This spreads your load across model-specific rate limit pools."
+        ]
+      },
+      {
+        "heading": "How to Estimate Your Monthly Claude API Bill",
+        "body": [
+          "Estimating API costs before you build is tricky because token usage varies by use case. Here's a framework that works for planning purposes.",
+          "Step 1: Estimate your average request size. A typical chatbot request is 1,000-3,000 input tokens (system prompt + user message + any context) and 300-1,000 output tokens. A document processing task might be 5,000-50,000 input tokens and 500-2,000 output tokens. A code generation task is typically 2,000-10,000 input tokens and 1,000-5,000 output tokens.",
+          "Step 2: Multiply by your daily request volume. 100 requests/day is a small app. 1,000/day is moderate. 10,000+/day is when you need to think seriously about optimization.",
+          "Step 3: Apply your model choice. Sonnet 4.6 at $3/$15 per MTok is the default. Switch to Haiku 4.5 for simple tasks, Opus 4.6 for complex ones.",
+          "Step 4: Apply discounts. Prompt caching typically saves 30-60% on input costs for apps with consistent system prompts. Batch API saves 50% on everything for async workloads. Combined, an optimized pipeline can run at 20-40% of naive pricing.",
+          "Step 5: Add a 20-30% buffer for extended thinking tokens, retries, and edge cases. Token usage is never as predictable as you hope.",
+          "A concrete example: a B2B SaaS app using Sonnet 4.6 for a customer-facing AI feature. 500 requests/day, 2,000 avg input tokens (1,500 cached system prompt + 500 fresh), 800 avg output tokens. Monthly: 15M cached input at $0.30/MTok ($4.50) + 7.5M fresh input at $3/MTok ($22.50) + 12M output at $15/MTok ($180). Total: ~$207/month. With a 25% buffer: ~$260/month."
+        ]
+      },
+      {
+        "heading": "Token Counting: How Claude Measures Usage",
+        "body": [
+          "Claude uses byte-pair encoding (BPE) tokenization, similar to other large language models. One token roughly equals 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to around 1,300-1,400 tokens.",
+          "System prompts count as input tokens on every request. If your system prompt is 500 tokens and you send 100 requests, you pay for 50,000 tokens of system prompt alone. This is where prompt caching becomes valuable \u2014 cache that system prompt and pay the write cost once, then 90% less on every subsequent read.",
+          "Images are tokenized based on their dimensions. A 1024x1024 image costs roughly 1,600 tokens. Larger images get scaled down automatically, but you can resize them yourself before sending to save on token costs. PDFs are processed page by page, with each page treated similarly to an image.",
+          "Tool definitions also count as input tokens. If you define 10 tools with detailed schemas, that could add 2,000-5,000 tokens per request. Keep tool descriptions concise and only include the tools your request actually needs.",
+          "The Messages API response includes a <code>usage</code> field that reports exact input and output token counts for every request. Use this to build dashboards and track costs in real time rather than estimating after the fact.",
+          "One common mistake: assuming token counts are symmetric between input and output. Output tokens cost 5x more than input tokens across all Claude models. A request that sends 10,000 input tokens and receives 2,000 output tokens costs the same as one that sends 10,000 input tokens and receives 2,000 output tokens \u2014 but the output portion accounts for roughly half the total cost despite being only 17% of the tokens. This asymmetry makes output token optimization (concise instructions, max_tokens limits, structured output formats) disproportionately valuable."
+        ]
+      },
+      {
+        "heading": "Cost Optimization Strategies That Actually Work",
+        "body": [
+          "The biggest cost lever is model selection. Most API users default to the most capable model, but 70-80% of typical production queries can be handled by Haiku 4.5 at $1/$5 per million tokens. Use Sonnet 4.6 for tasks requiring stronger reasoning, and reserve Opus 4.6 for your hardest problems. A tiered routing approach can cut costs by 50-70% compared to running everything through Opus.",
+          "Prompt caching is the second-biggest lever. If you send the same system prompt, few-shot examples, or document context across multiple requests, enable caching. The first request pays a 25% premium to write the cache, but every subsequent request within the 5-minute TTL pays 90% less for those cached tokens. For a chatbot with a 2,000-token system prompt handling 1,000 requests per hour, caching saves roughly $4.50/hour on Sonnet 4.6.",
+          "Batch API processing offers a flat 50% discount on all token costs. The tradeoff is latency \u2014 results return within 24 hours instead of seconds. For any workload that doesn't need real-time responses (data extraction, content generation, bulk classification, evaluation), batching should be your default.",
+          "Token-level optimizations matter at scale. Shorter system prompts, compressed few-shot examples, and max_tokens limits all reduce costs. Setting max_tokens to 500 instead of 4,096 won't affect quality for short-answer tasks but prevents runaway output on edge cases. Similarly, avoid sending full conversation history when only the last few turns matter \u2014 summarize older context instead.",
+          "Monitor usage patterns weekly. The API's usage field gives exact token counts per request. Aggregate these by model, endpoint, and use case to identify where you're overspending. Common findings: a debug prompt that accidentally stayed in production, a retry loop that doubles costs on timeouts, or a document processing pipeline sending the same 50,000-token document 10 times instead of caching it."
+        ],
+        "table": {
+          "headers": [
+            "Strategy",
+            "Effort",
+            "Typical Savings",
+            "Best For"
+          ],
+          "rows": [
+            [
+              "Model routing (Haiku/Sonnet/Opus)",
+              "Medium",
+              "50-70%",
+              "Production apps with mixed query complexity"
+            ],
+            [
+              "Prompt caching",
+              "Low",
+              "30-50%",
+              "Repeated system prompts, RAG with shared context"
+            ],
+            [
+              "Batch API",
+              "Low",
+              "50%",
+              "Offline processing, evaluations, data extraction"
+            ],
+            [
+              "Token reduction (shorter prompts)",
+              "Low",
+              "10-25%",
+              "High-volume endpoints"
+            ],
+            [
+              "Max tokens limits",
+              "Minimal",
+              "5-15%",
+              "Short-answer tasks, classification"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "slug": "windsurf-pricing",

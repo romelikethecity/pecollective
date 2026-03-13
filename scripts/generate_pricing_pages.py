@@ -153,6 +153,35 @@ def generate_page(entry):
         </div>
       </div>'''
 
+    # Build deep sections HTML (long-form content sections)
+    deep_sections_html = ''
+    if entry.get('deep_sections'):
+        for section in entry['deep_sections']:
+            body_html = ''
+            for para in section.get('body', []):
+                body_html += f'\n          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">{para}</p>'
+            table_html = ''
+            if section.get('table'):
+                tbl = section['table']
+                header_row = ''.join(f'<th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">{h}</th>' for h in tbl['headers'])
+                rows_html = ''
+                for row in tbl['rows']:
+                    cells = ''.join(f'<td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">{c}</td>' for c in row)
+                    rows_html += f'<tr>{cells}</tr>'
+                table_html = f'''
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr>{header_row}</tr></thead>
+              <tbody>{rows_html}</tbody>
+            </table>
+          </div>'''
+            deep_sections_html += f'''
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">{section['heading']}</h2>
+        {body_html}
+        {table_html}
+      </div>'''
+
     # Build FAQ HTML
     faq_html = ''
     for faq in entry['faqs']:
@@ -202,6 +231,8 @@ def generate_page(entry):
       <div class="pricing-tiers">
         {tiers_html}
       </div>
+
+      {deep_sections_html}
 
       {hidden_costs_html}
 

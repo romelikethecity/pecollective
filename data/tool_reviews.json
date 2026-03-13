@@ -7,8 +7,8 @@
     "category": "AI Code Editor",
     "rating": "4.5",
     "rating_stars": "★★★★½",
-    "title": "Windsurf Review 2026",
-    "meta_description": "Windsurf (formerly Codeium) AI code editor review: features, pricing, pros and cons. How it compares to Cursor and Copilot for AI-assisted development.",
+    "title": "Windsurf Review (2026): AI Code Editor Pros, Cons & Is It Worth It?",
+    "meta_description": "Formerly Codeium. Flows, inline completions, and agentic mode tested. Where Windsurf shines, where Cursor still wins, and what the free tier gets you.",
     "og_description": "Honest review of Windsurf, the AI code editor formerly known as Codeium. Features, pricing, and real-world performance.",
     "subtitle": "The AI code editor formerly known as Codeium. It's fast, it's free to start, and it's gunning for Cursor's crown.",
     "cta_text": "Try Windsurf Free",
@@ -89,9 +89,9 @@
         "url": "/tools/github-copilot/"
       },
       {
-        "name": "Cursor vs Windsurf",
-        "icon": "⚔️",
-        "url": "/tools/cursor-vs-windsurf/"
+        "name": "Claude Code",
+        "icon": "🔧",
+        "url": "/tools/claude-code/"
       }
     ],
     "faqs": [
@@ -118,8 +118,16 @@
         "url": "/tools/cursor-vs-windsurf/"
       },
       {
-        "text": "Cursor Review",
-        "url": "/tools/cursor/"
+        "text": "Windsurf Pricing",
+        "url": "/tools/windsurf-pricing/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Windsurf vs Copilot",
+        "url": "/tools/windsurf-vs-copilot/"
       }
     ],
     "date_published": "2026-02-20",
@@ -259,8 +267,8 @@
     "category": "LLM Framework",
     "rating": "4.2",
     "rating_stars": "★★★★☆",
-    "title": "LangChain Review 2026",
-    "meta_description": "LangChain review: LLM application framework for building AI apps. Features, pricing, pros and cons. Is it still the best choice for AI developers?",
+    "title": "LangChain Review (2026): LLM Framework Pros, Cons & When to Use It",
+    "meta_description": "The most popular LLM framework. Chains, agents, and LCEL explained. Where LangChain excels, where the abstractions hurt, and the alternatives.",
     "og_description": "Honest review of LangChain, the most popular LLM application framework. Worth the complexity? Our take for AI professionals.",
     "subtitle": "The most popular framework for building LLM applications. Everyone uses it. Not everyone loves it. Here's why both things are true.",
     "cta_text": "Get Started Free",
@@ -335,19 +343,19 @@
     "content": "<h2>What is LangChain?</h2>\n<p>LangChain is an open-source framework for building applications powered by <a href=\"/glossary/large-language-model/\">large language models</a>. It provides a standardized way to chain together LLM calls, connect to data sources, and build agents that can use tools and make decisions.</p>\n<p>Think of it as the plumbing layer between your application code and LLM APIs. Instead of writing raw HTTP calls to OpenAI and parsing JSON responses, you work with higher-level abstractions like chains, retrievers, and agents. Whether that abstraction helps or hurts depends on what you're building.</p>\n\n<h2>Key Components</h2>\n\n<h3>LangChain Core</h3>\n<p>The foundation library provides the interface for working with LLMs, prompts, output parsers, and basic chains. It's been refactored significantly since early versions. The current LCEL (LangChain Expression Language) syntax is more composable than the original chain approach, though it takes some getting used to.</p>\n\n<h3>LangGraph</h3>\n<p>This is where LangChain gets interesting for complex projects. LangGraph lets you build stateful, multi-step agent workflows as directed graphs. Each node is a function, edges control the flow, and state persists across steps. It's the right abstraction for building agents that need to plan, execute, evaluate, and retry.</p>\n<p>For <a href=\"/glossary/prompt-engineering/\">prompt engineers</a> building production agents, LangGraph replaced the chaotic AgentExecutor pattern with something you can actually reason about and debug.</p>\n\n<h3>LangSmith</h3>\n<p>LangSmith is LangChain's paid observability platform. It traces every LLM call, chain execution, and tool use in your application. You can see exactly what prompts were sent, what came back, how long each step took, and how much it cost.</p>\n<p>The evaluation features let you build test datasets and run your chains against them automatically. This is critical for production AI applications where you need to catch regressions when you change a prompt or switch models.</p>\n\n<h3>Integrations</h3>\n<p>LangChain supports 150+ integrations: every major LLM provider (OpenAI, Anthropic, Google, Mistral, Cohere), <a href=\"/glossary/vector-database/\">vector databases</a> (Pinecone, Weaviate, Chroma, Qdrant), document loaders, embedding models, and tools. The breadth is unmatched by any competitor.</p>\n\n<h2>Pricing</h2>\n<p>The core LangChain library is free and MIT licensed. You can build and deploy applications without paying LangChain anything. The paid product is LangSmith, which starts at $39/month for the Developer plan (limited traces) and $99/month for Plus (more traces, team features). Enterprise pricing is custom.</p>\n<p>You don't need LangSmith to use LangChain, but debugging complex chains without it is painful. Most teams that use LangChain in production end up paying for LangSmith.</p>\n\n<h2>LangChain vs LlamaIndex</h2>\n<p>These frameworks overlap but have different strengths. LangChain is broader and better for agent workflows. LlamaIndex is more focused on RAG and data ingestion. Read our <a href=\"/tools/langchain-vs-llamaindex/\">LangChain vs LlamaIndex comparison</a> for the full breakdown.</p>",
     "related_tools": [
       {
-        "name": "LangChain vs LlamaIndex",
-        "icon": "⚔️",
-        "url": "/tools/langchain-vs-llamaindex/"
+        "name": "LlamaIndex",
+        "icon": "🦙",
+        "url": "/tools/llamaindex/"
       },
       {
-        "name": "Cursor",
-        "icon": "⚡",
-        "url": "/tools/cursor/"
+        "name": "CrewAI",
+        "icon": "👥",
+        "url": "/tools/crewai/"
       },
       {
-        "name": "Claude Code",
-        "icon": "🧠",
-        "url": "/tools/claude-code/"
+        "name": "DSPy",
+        "icon": "🧪",
+        "url": "/tools/dspy/"
       }
     ],
     "faqs": [
@@ -370,12 +378,24 @@
     ],
     "comparison_links": [
       {
+        "text": "LangChain Pricing",
+        "url": "/tools/langchain-pricing/"
+      },
+      {
         "text": "LangChain vs LlamaIndex",
         "url": "/tools/langchain-vs-llamaindex/"
       },
       {
-        "text": "Cursor Review",
-        "url": "/tools/cursor/"
+        "text": "LangChain vs CrewAI",
+        "url": "/tools/langchain-vs-crewai/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "LangChain Alternatives",
+        "url": "/tools/langchain-alternatives/"
       }
     ],
     "date_published": "2026-02-20",
@@ -389,8 +409,8 @@
     "category": "AI Development Environment",
     "rating": "4.0",
     "rating_stars": "★★★★☆",
-    "title": "Replit Agent Review 2026",
-    "meta_description": "Replit Agent review: AI-powered development environment. Build apps from plain English in your browser. Features, pricing, and honest assessment.",
+    "title": "Replit Agent Review (2026): Build Apps from English, Pros & Limits",
+    "meta_description": "Describe what you want and Replit builds it. Where Agent works (prototypes, simple apps), where it struggles (complex logic), and the pricing.",
     "og_description": "Honest review of Replit Agent, the browser-based AI development environment. Can you really build apps by describing them?",
     "subtitle": "Build apps from plain English, entirely in your browser. Replit Agent is betting that the best development environment is one where you barely need to code.",
     "cta_text": "Try Replit Free",
@@ -473,7 +493,7 @@
       },
       {
         "name": "Claude Code",
-        "icon": "🧠",
+        "icon": "🔧",
         "url": "/tools/claude-code/"
       }
     ],
@@ -497,12 +517,20 @@
     ],
     "comparison_links": [
       {
-        "text": "Cursor Review",
-        "url": "/tools/cursor/"
+        "text": "Cursor vs Replit",
+        "url": "/tools/cursor-vs-replit/"
       },
       {
-        "text": "Windsurf Review",
-        "url": "/tools/windsurf/"
+        "text": "Replit vs Windsurf",
+        "url": "/tools/replit-vs-windsurf/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "Replit Pricing",
+        "url": "/tools/replit-pricing/"
       }
     ],
     "date_published": "2026-02-20",
@@ -648,8 +676,8 @@
     "category": "AI Agent Framework",
     "rating": "4.2",
     "rating_stars": "★★★★",
-    "title": "CrewAI Review 2026",
-    "meta_description": "CrewAI review: multi-agent AI framework for building collaborative agent teams. Features, pricing, pros and cons for AI developers in 2026.",
+    "title": "CrewAI Review (2026): Multi-Agent Framework Pros, Cons & Pricing",
+    "meta_description": "Build collaborative AI agent teams with CrewAI. What works, what is still rough, how it compares to LangChain, and the free vs enterprise tiers.",
     "og_description": "Honest review of CrewAI, the multi-agent framework where AI agents work together as a crew. Worth it over LangChain?",
     "subtitle": "Give your AI agents job titles, backstories, and tasks. Then watch them collaborate. It's multi-agent orchestration that feels surprisingly natural.",
     "cta_text": "Try CrewAI",
@@ -723,14 +751,14 @@
         "url": "/tools/langchain/"
       },
       {
-        "name": "DSPy",
-        "icon": "🔬",
-        "url": "/tools/dspy/"
-      },
-      {
         "name": "LlamaIndex",
         "icon": "🦙",
         "url": "/tools/llamaindex/"
+      },
+      {
+        "name": "DSPy",
+        "icon": "🧪",
+        "url": "/tools/dspy/"
       }
     ],
     "faqs": [
@@ -757,12 +785,20 @@
     ],
     "comparison_links": [
       {
-        "text": "LangChain Review",
-        "url": "/tools/langchain/"
+        "text": "LangChain vs CrewAI",
+        "url": "/tools/langchain-vs-crewai/"
       },
       {
-        "text": "DSPy Review",
-        "url": "/tools/dspy/"
+        "text": "LlamaIndex vs CrewAI",
+        "url": "/tools/llamaindex-vs-crewai/"
+      },
+      {
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "Best RAG Tools",
+        "url": "/tools/best-rag-tools/"
       }
     ],
     "date_published": "2026-02-20",
@@ -900,8 +936,8 @@
     "category": "Vector Database",
     "rating": "4.5",
     "rating_stars": "★★★★½",
-    "title": "Pinecone Review 2026",
-    "meta_description": "Pinecone review: the managed vector database for AI applications. Serverless pricing, features, pros and cons. How it compares to Weaviate and Chroma.",
+    "title": "Pinecone Review (2026): Managed Vector DB Tested, Pros & Limits",
+    "meta_description": "Serverless, zero-ops vector search. Where Pinecone delivers, where it gets expensive, and how it compares to Chroma, pgvector, and Weaviate.",
     "og_description": "Honest review of Pinecone, the most popular managed vector database. Is the serverless pricing worth it for your AI project?",
     "subtitle": "The vector database that doesn't make you think about infrastructure. Pinecone handles the scaling so you can focus on building your AI application.",
     "cta_text": "Try Pinecone Free",
@@ -971,11 +1007,6 @@
     "content": "<h2>What is Pinecone?</h2>\n<p>Pinecone is a fully managed <a href=\"/glossary/vector-database/\">vector database</a> designed for AI applications. You store <a href=\"/glossary/embeddings/\">embedding vectors</a> alongside metadata, and Pinecone handles similarity search at scale. It's the most popular managed vector database in the AI ecosystem, used by thousands of companies for <a href=\"/glossary/rag/\">RAG</a>, recommendation systems, semantic search, and anomaly detection.</p>\n<p>The key word is \"managed.\" Pinecone runs entirely in the cloud. You don't install anything, you don't manage servers, you don't tune indexes. That's the product.</p>\n\n<h2>Key Features</h2>\n\n<h3>Serverless Architecture</h3>\n<p>Pinecone's serverless option, introduced in early 2024, is now the default. You create a serverless index, and Pinecone handles all the scaling automatically. You pay for storage ($0.33/GB/month) and operations (read and write units). There's no capacity planning. If your traffic spikes, Pinecone scales up. If it drops, you stop paying for the extra compute.</p>\n<p>This is a big deal for teams that don't want to guess how much infrastructure they'll need. Pod-based indexes (the older approach with pre-provisioned capacity) are still available for workloads that need predictable performance.</p>\n\n<h3>Namespaces and Metadata Filtering</h3>\n<p>Namespaces let you partition data within a single index. Each namespace acts like a separate collection, so you can segment by customer, environment, or data type without creating multiple indexes. Metadata filtering lets you attach key-value pairs to vectors and filter on them during queries. Search for similar vectors where <code>category = \"electronics\"</code> and <code>price < 100</code>. This combination of vector similarity and structured filtering covers most production use cases.</p>\n\n<h3>Integrations</h3>\n<p>Pinecone integrates with everything. <a href=\"/tools/langchain/\">LangChain</a>, <a href=\"/tools/llamaindex/\">LlamaIndex</a>, Haystack, Semantic Kernel, Vercel AI SDK. If you're building an AI application with a popular framework, there's a Pinecone integration ready to go. The Python and Node.js clients are well-maintained and the documentation is clear.</p>\n\n<h3>Performance at Scale</h3>\n<p>Pinecone handles billions of vectors with single-digit millisecond query latency. For most applications, query performance isn't the bottleneck. The architecture is optimized for high-throughput reads, which is the typical access pattern for RAG and search applications.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The Starter tier is free and includes enough capacity for development and small projects. You get 2GB of storage and a reasonable number of read/write operations. The Standard plan starts at $50/month minimum commitment with usage-based pricing for storage and operations. Enterprise starts at $500/month with additional features like SSO, audit logs, and dedicated support. Annual commitments (minimum $8,000/year) get discounted rates.</p>\n<p>The pricing model rewards efficient usage. If you're storing a lot of vectors but querying infrequently, costs stay low. Heavy query workloads on large datasets can add up quickly.</p>\n\n<h2>Pinecone vs Weaviate</h2>\n<p><a href=\"/tools/weaviate/\">Weaviate</a> is the most common alternative. It's open source, supports self-hosting, and includes built-in vectorization and hybrid search. Pinecone is simpler to operate but costs more at scale and lacks self-hosting. See our <a href=\"/tools/pinecone-vs-weaviate/\">Pinecone vs Weaviate comparison</a> for the full breakdown.</p>\n\n<h2>Pinecone vs Chroma</h2>\n<p><a href=\"/tools/chroma/\">Chroma</a> is lighter weight and runs in-memory, making it perfect for development and small projects. Pinecone is the better choice when you need production reliability and scale. They serve different points on the complexity spectrum.</p>\n\n<h2>Pinecone vs pgvector</h2>\n<p>If you already run PostgreSQL, <a href=\"/tools/pgvector/\">pgvector</a> lets you add vector search without a new service. Pinecone offers better performance at scale and more vector-specific features, but pgvector's zero-new-infrastructure approach is hard to beat for teams with existing Postgres deployments.</p>",
     "related_tools": [
       {
-        "name": "Weaviate",
-        "icon": "🔷",
-        "url": "/tools/weaviate/"
-      },
-      {
         "name": "Chroma",
         "icon": "🎨",
         "url": "/tools/chroma/"
@@ -984,6 +1015,11 @@
         "name": "pgvector",
         "icon": "🐘",
         "url": "/tools/pgvector/"
+      },
+      {
+        "name": "Weaviate",
+        "icon": "🔷",
+        "url": "/tools/weaviate/"
       }
     ],
     "faqs": [
@@ -1010,16 +1046,24 @@
     ],
     "comparison_links": [
       {
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
+      },
+      {
         "text": "Pinecone vs Weaviate",
         "url": "/tools/pinecone-vs-weaviate/"
       },
       {
-        "text": "Chroma Review",
-        "url": "/tools/chroma/"
+        "text": "Pinecone vs Chroma",
+        "url": "/tools/pinecone-vs-chroma/"
       },
       {
-        "text": "pgvector Review",
-        "url": "/tools/pgvector/"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
+      },
+      {
+        "text": "Best Embedding Models",
+        "url": "/tools/best-embedding-models/"
       }
     ],
     "date_published": "2026-02-20",
@@ -1169,8 +1213,8 @@
     "category": "Vector Database",
     "rating": "4.1",
     "rating_stars": "★★★★",
-    "title": "Chroma Review 2026",
-    "meta_description": "Chroma review: the lightweight, developer-friendly vector database. In-memory mode, Python-native, and dead simple to start. Features, pros, and cons.",
+    "title": "Chroma Review (2026): The Simple Vector DB, Pros, Cons & Limits",
+    "meta_description": "Python-native, runs in-memory, dead simple to start. Where Chroma works, where it breaks down at scale, and when to switch to Pinecone or pgvector.",
     "og_description": "Honest review of Chroma, the vector database that prioritizes developer experience over everything else. Perfect for prototyping, but how far does it scale?",
     "subtitle": "Four lines of Python and you have a working vector database. Chroma is the SQLite of the vector world, and that's meant as a compliment.",
     "cta_text": "Try Chroma",
@@ -1244,14 +1288,14 @@
         "url": "/tools/pinecone/"
       },
       {
-        "name": "Weaviate",
-        "icon": "🔷",
-        "url": "/tools/weaviate/"
-      },
-      {
         "name": "pgvector",
         "icon": "🐘",
         "url": "/tools/pgvector/"
+      },
+      {
+        "name": "Weaviate",
+        "icon": "🔷",
+        "url": "/tools/weaviate/"
       }
     ],
     "faqs": [
@@ -1278,16 +1322,24 @@
     ],
     "comparison_links": [
       {
-        "text": "Pinecone Review",
-        "url": "/tools/pinecone/"
+        "text": "Chroma vs pgvector",
+        "url": "/tools/chroma-vs-pgvector/"
       },
       {
-        "text": "Weaviate Review",
-        "url": "/tools/weaviate/"
+        "text": "Chroma Pricing",
+        "url": "/tools/chroma-pricing/"
       },
       {
-        "text": "pgvector Review",
-        "url": "/tools/pgvector/"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
+      },
+      {
+        "text": "Chroma Alternatives",
+        "url": "/tools/chroma-alternatives/"
+      },
+      {
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
       }
     ],
     "date_published": "2026-02-20",
@@ -1301,8 +1353,8 @@
     "category": "Vector Database",
     "rating": "4.0",
     "rating_stars": "★★★★",
-    "title": "pgvector Review 2026",
-    "meta_description": "pgvector review: vector similarity search extension for PostgreSQL. Add AI-powered search to your existing database. Features, index types, and tradeoffs.",
+    "title": "pgvector Review (2026): Vector Search in Postgres, Pros & Tradeoffs",
+    "meta_description": "Add vector similarity search to your existing Postgres database. HNSW vs IVFFlat indexes, performance limits, and when to use a dedicated vector DB instead.",
     "og_description": "Honest review of pgvector, the PostgreSQL extension that adds vector search to your existing database. No new infrastructure required.",
     "subtitle": "Already running PostgreSQL? Congrats, you're one extension away from a vector database. pgvector adds AI-powered search without adding another service to your stack.",
     "cta_text": "Get pgvector",
@@ -1406,16 +1458,20 @@
     ],
     "comparison_links": [
       {
-        "text": "Pinecone Review",
-        "url": "/tools/pinecone/"
+        "text": "Chroma vs pgvector",
+        "url": "/tools/chroma-vs-pgvector/"
       },
       {
-        "text": "Chroma Review",
-        "url": "/tools/chroma/"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
       },
       {
-        "text": "Weaviate Review",
-        "url": "/tools/weaviate/"
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
+      },
+      {
+        "text": "Best Embedding Models",
+        "url": "/tools/best-embedding-models/"
       }
     ],
     "date_published": "2026-02-20",
@@ -1429,8 +1485,8 @@
     "category": "AI Code Editor",
     "rating": "4.7",
     "rating_stars": "★★★★★",
-    "title": "Cursor Review 2026",
-    "meta_description": "Cursor AI code editor review: features, pricing, pros and cons. The VS Code fork that turned AI-assisted coding into the default workflow.",
+    "title": "Cursor Review (2026): AI Code Editor Tested, Honest Pros & Cons",
+    "meta_description": "Tab completions, Composer, and Cmd+K tested on real projects. Where Cursor excels, where it frustrates, and how it compares to Copilot and Windsurf.",
     "og_description": "Honest review of Cursor, the AI code editor that set the standard for agentic coding. Features, pricing, and how it compares.",
     "subtitle": "The AI code editor that made everyone else play catch-up. Built on VS Code, powered by the best models available, and still the one to beat.",
     "cta_text": "Try Cursor Free",
@@ -1503,19 +1559,14 @@
         "url": "/tools/windsurf/"
       },
       {
-        "name": "Claude Code",
-        "icon": "🧠",
-        "url": "/tools/claude-code/"
-      },
-      {
         "name": "GitHub Copilot",
         "icon": "🤖",
         "url": "/tools/github-copilot/"
       },
       {
-        "name": "Cursor vs Windsurf",
-        "icon": "⚔️",
-        "url": "/tools/cursor-vs-windsurf/"
+        "name": "Claude Code",
+        "icon": "⚡",
+        "url": "/tools/claude-code/"
       }
     ],
     "faqs": [
@@ -1546,16 +1597,20 @@
         "url": "/tools/cursor-vs-windsurf/"
       },
       {
-        "text": "Cursor vs Claude Code",
-        "url": "/tools/cursor-vs-claude-code/"
+        "text": "Cursor vs GitHub Copilot",
+        "url": "/tools/cursor-vs-copilot/"
+      },
+      {
+        "text": "Cursor Pricing",
+        "url": "/tools/cursor-pricing/"
+      },
+      {
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
       },
       {
         "text": "Cursor Alternatives",
         "url": "/tools/cursor-alternatives/"
-      },
-      {
-        "text": "Windsurf Review",
-        "url": "/tools/windsurf/"
       }
     ],
     "date_published": "2026-02-20",
@@ -1704,8 +1759,8 @@
     "category": "AI API",
     "rating": "4.8",
     "rating_stars": "★★★★★",
-    "title": "Anthropic API (Claude API) Review 2026",
-    "meta_description": "Anthropic API review: Claude model access, pricing, features, and developer experience. How it compares to OpenAI's API for building AI applications.",
+    "title": "Anthropic Claude API Review (2026): Developer Experience, Pricing & Limits",
+    "meta_description": "Claude 3.5 Sonnet, Haiku, and Opus via API. Rate limits, prompt caching, tool use, and how it stacks up against OpenAI's API for production apps.",
     "og_description": "Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.",
     "subtitle": "The API behind Claude. Best-in-class reasoning, a developer experience that respects your time, and the model that keeps winning benchmarks.",
     "cta_text": "Get API Access",
@@ -1774,23 +1829,18 @@
     "related_tools": [
       {
         "name": "OpenAI API",
-        "icon": "🟢",
+        "icon": "🔮",
         "url": "/tools/openai-api/"
       },
       {
         "name": "Claude Code",
-        "icon": "🧠",
+        "icon": "⚡",
         "url": "/tools/claude-code/"
       },
       {
-        "name": "LangChain",
-        "icon": "🔗",
-        "url": "/tools/langchain/"
-      },
-      {
-        "name": "LlamaIndex",
-        "icon": "🦙",
-        "url": "/tools/llamaindex/"
+        "name": "Hugging Face",
+        "icon": "🤗",
+        "url": "/tools/hugging-face/"
       }
     ],
     "faqs": [
@@ -1817,16 +1867,20 @@
     ],
     "comparison_links": [
       {
-        "text": "OpenAI API vs Anthropic API",
+        "text": "Anthropic API Pricing",
+        "url": "/tools/anthropic-api-pricing/"
+      },
+      {
+        "text": "OpenAI vs Anthropic API",
         "url": "/tools/openai-api-vs-anthropic-api/"
       },
       {
-        "text": "Claude Code Review",
-        "url": "/tools/claude-code/"
+        "text": "OpenAI API Pricing",
+        "url": "/tools/openai-api-pricing/"
       },
       {
-        "text": "LangChain Review",
-        "url": "/tools/langchain/"
+        "text": "AWS Bedrock Pricing",
+        "url": "/tools/aws-bedrock-pricing/"
       }
     ],
     "date_published": "2026-02-20",

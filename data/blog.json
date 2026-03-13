@@ -559,9 +559,9 @@
   },
   {
     "slug": "system-prompt-design-guide",
-    "title": "How to Write System Prompts That Actually Work",
+    "title": "System Prompt Design Guide: Patterns That Work in Production (2026)",
     "og_title": "How to Write System Prompts That Actually Work (2026 Guide)",
-    "meta_description": "Learn how to write effective system prompts with proven design patterns, common mistakes to avoid, and testing strategies. Practical examples for production AI systems.",
+    "meta_description": "Tested prompt patterns for Claude, GPT-4, and Gemini. Identity framing, output formatting, error handling, and the mistakes that break production systems.",
     "og_description": "Proven system prompt design patterns, common mistakes, and testing strategies for production AI systems. Practical examples included.",
     "category": "Technical Guide",
     "date_published": "2026-02-15",

@@ -73,20 +73,24 @@
     "bottom_line": "Cursor Pro at $20/mo is good value for what you get. The unlimited completions alone justify the cost if you code daily. The main complaint: 500 fast premium requests feels tight for heavy Composer users. If you're on the fence, the free tier gives you enough to decide.",
     "internal_links": [
       {
-        "text": "Cursor vs Windsurf comparison",
-        "url": "/tools/cursor-vs-windsurf/"
-      },
-      {
-        "text": "Cursor vs Claude Code",
-        "url": "/tools/cursor-vs-claude-code/"
-      },
-      {
-        "text": "Best Cursor Alternatives",
-        "url": "/tools/cursor-alternatives/"
+        "text": "Cursor Review",
+        "url": "/tools/cursor/"
       },
       {
         "text": "Best AI Coding Assistants",
         "url": "/tools/best-ai-coding-assistants/"
+      },
+      {
+        "text": "GitHub Copilot Pricing",
+        "url": "/tools/github-copilot-pricing/"
+      },
+      {
+        "text": "Windsurf Pricing Comparison",
+        "url": "/tools/windsurf-pricing/"
+      },
+      {
+        "text": "Cursor vs Windsurf",
+        "url": "/tools/cursor-vs-windsurf/"
       }
     ],
     "faqs": [
@@ -197,20 +201,24 @@
     "bottom_line": "GitHub Copilot Pro at $10/mo is the best value in AI coding assistants. It's half the price of Cursor Pro with solid capabilities. Cursor still wins on multi-file editing quality, but Copilot's GitHub integration and lower price make it the right choice for many developers.",
     "internal_links": [
       {
-        "text": "Copilot vs Amazon Q Developer",
-        "url": "/tools/copilot-vs-codewhisperer/"
+        "text": "GitHub Copilot Review",
+        "url": "/tools/github-copilot/"
       },
       {
         "text": "Best AI Coding Assistants",
         "url": "/tools/best-ai-coding-assistants/"
       },
       {
-        "text": "Cursor pricing comparison",
+        "text": "Cursor Pricing Comparison",
         "url": "/tools/cursor-pricing/"
       },
       {
-        "text": "AI Coding Assistant glossary",
-        "url": "/glossary/ai-coding-assistant/"
+        "text": "Windsurf Pricing Comparison",
+        "url": "/tools/windsurf-pricing/"
+      },
+      {
+        "text": "Cursor vs GitHub Copilot",
+        "url": "/tools/cursor-vs-copilot/"
       }
     ],
     "faqs": [
@@ -310,20 +318,24 @@
     "bottom_line": "Pinecone's free tier is generous for prototyping. Serverless pricing is competitive for small-to-medium workloads. But costs can surprise you at scale because read units are consumed faster than you'd expect. If you're processing millions of queries, run the numbers against self-hosted alternatives like pgvector or Weaviate before committing.",
     "internal_links": [
       {
-        "text": "Pinecone review",
+        "text": "Pinecone Review",
         "url": "/tools/pinecone/"
       },
       {
-        "text": "Pinecone vs Weaviate comparison",
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
+      },
+      {
+        "text": "Chroma Pricing",
+        "url": "/tools/chroma-pricing/"
+      },
+      {
+        "text": "Weaviate Pricing",
+        "url": "/tools/weaviate-pricing/"
+      },
+      {
+        "text": "Pinecone vs Weaviate",
         "url": "/tools/pinecone-vs-weaviate/"
-      },
-      {
-        "text": "Best Pinecone Alternatives",
-        "url": "/tools/pinecone-alternatives/"
-      },
-      {
-        "text": "Vector Database glossary",
-        "url": "/glossary/vector-database/"
       }
     ],
     "faqs": [
@@ -433,20 +445,24 @@
     "bottom_line": "GPT-4o-mini is the best value in AI APIs. At $0.15/1M input tokens, it's practically free for most use cases. GPT-4o hits the sweet spot for production apps that need quality. Use o1 models sparingly for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task.",
     "internal_links": [
       {
-        "text": "OpenAI API vs Anthropic API",
+        "text": "OpenAI API Review",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "text": "Anthropic API Pricing Comparison",
+        "url": "/tools/anthropic-api-pricing/"
+      },
+      {
+        "text": "OpenAI vs Anthropic API",
         "url": "/tools/openai-api-vs-anthropic-api/"
       },
       {
-        "text": "Best LLM Frameworks",
-        "url": "/tools/best-llm-frameworks/"
+        "text": "AWS Bedrock Pricing",
+        "url": "/tools/aws-bedrock-pricing/"
       },
       {
-        "text": "LLM glossary",
-        "url": "/glossary/large-language-model/"
-      },
-      {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
+        "text": "Cohere API Pricing",
+        "url": "/tools/cohere-pricing/"
       }
     ],
     "faqs": [
@@ -543,20 +559,24 @@
     "bottom_line": "Claude 3.5 Sonnet at $3/$15 per 1M tokens is the model most developers should use. It's slightly more expensive than GPT-4o but many teams find the quality worth the premium, especially for coding. Route simple tasks to Haiku to keep costs down. Use prompt caching aggressively to cut your bill.",
     "internal_links": [
       {
-        "text": "OpenAI API vs Anthropic API",
+        "text": "Anthropic Claude API Review",
+        "url": "/tools/anthropic-api/"
+      },
+      {
+        "text": "OpenAI API Pricing Comparison",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "OpenAI vs Anthropic API",
         "url": "/tools/openai-api-vs-anthropic-api/"
       },
       {
-        "text": "ChatGPT Alternatives",
-        "url": "/tools/chatgpt-alternatives/"
+        "text": "AWS Bedrock Pricing",
+        "url": "/tools/aws-bedrock-pricing/"
       },
       {
-        "text": "Context window glossary",
-        "url": "/glossary/context-window/"
-      },
-      {
-        "text": "Fine-tuning vs RAG guide",
-        "url": "/blog/fine-tuning-vs-rag/"
+        "text": "Cohere API Pricing",
+        "url": "/tools/cohere-pricing/"
       }
     ],
     "faqs": [
@@ -659,24 +679,24 @@
     "bottom_line": "Windsurf Pro at $15/mo undercuts Cursor by $5 and includes unlimited multi-file editing. The quality gap has narrowed, but Cursor still handles larger codebases more reliably. If you're price-sensitive and working on small-to-medium projects, Windsurf is a strong pick. The free tier's daily limits are tight but fair for evaluation.",
     "internal_links": [
       {
-        "text": "Cursor vs Windsurf comparison",
-        "url": "/tools/cursor-vs-windsurf/"
+        "text": "Windsurf Review",
+        "url": "/tools/windsurf/"
       },
       {
         "text": "Best AI Coding Assistants",
         "url": "/tools/best-ai-coding-assistants/"
       },
       {
-        "text": "Cursor pricing breakdown",
+        "text": "Cursor Pricing Comparison",
         "url": "/tools/cursor-pricing/"
       },
       {
-        "text": "Windsurf review",
-        "url": "/tools/windsurf/"
+        "text": "GitHub Copilot Pricing",
+        "url": "/tools/github-copilot-pricing/"
       },
       {
-        "text": "GitHub Copilot pricing",
-        "url": "/tools/github-copilot-pricing/"
+        "text": "Cursor vs Windsurf",
+        "url": "/tools/cursor-vs-windsurf/"
       }
     ],
     "faqs": [
@@ -899,24 +919,24 @@
     "bottom_line": "LangChain is free. LangSmith Plus at $39/user/mo is worth it if you're debugging production LLM apps and need trace visibility. But watch the overage charges on traces. If you're building simple LLM integrations, you might not need LangSmith at all. Alternatives like Langfuse (open source) give you similar observability for free if you self-host.",
     "internal_links": [
       {
-        "text": "Best LLM Frameworks",
-        "url": "/tools/best-llm-frameworks/"
+        "text": "LangChain Review",
+        "url": "/tools/langchain/"
       },
       {
-        "text": "LangChain review",
-        "url": "/tools/langchain/"
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
       },
       {
         "text": "LangChain vs LlamaIndex",
         "url": "/tools/langchain-vs-llamaindex/"
       },
       {
-        "text": "OpenAI API pricing",
-        "url": "/tools/openai-api-pricing/"
+        "text": "LangChain vs CrewAI",
+        "url": "/tools/langchain-vs-crewai/"
       },
       {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
+        "text": "LangChain Alternatives",
+        "url": "/tools/langchain-alternatives/"
       }
     ],
     "faqs": [
@@ -1034,24 +1054,24 @@
     "bottom_line": "Weaviate's self-hosted option is a real advantage if you have the ops capability. It's fully featured and free to use. The managed Serverless Cloud is reasonably priced for small workloads but the dimension-based pricing model makes costs hard to predict. At scale, compare managed costs against self-hosting on your own infrastructure. The breakeven is usually around 5M vectors.",
     "internal_links": [
       {
-        "text": "Pinecone vs Weaviate comparison",
-        "url": "/tools/pinecone-vs-weaviate/"
+        "text": "Weaviate Review",
+        "url": "/tools/weaviate/"
       },
       {
-        "text": "Best Pinecone Alternatives",
-        "url": "/tools/pinecone-alternatives/"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
       },
       {
-        "text": "Pinecone pricing",
+        "text": "Pinecone Pricing",
         "url": "/tools/pinecone-pricing/"
       },
       {
-        "text": "Vector Database glossary",
-        "url": "/glossary/vector-database/"
+        "text": "Chroma Pricing",
+        "url": "/tools/chroma-pricing/"
       },
       {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
+        "text": "Pinecone vs Weaviate",
+        "url": "/tools/pinecone-vs-weaviate/"
       }
     ],
     "faqs": [
@@ -1165,24 +1185,24 @@
     "bottom_line": "Chroma's biggest selling point is simplicity. pip install, import, done. The open-source version is genuinely free and works well for prototypes and small production apps. Chroma Cloud adds managed hosting at reasonable prices. The tradeoff: Chroma isn't built for massive scale. If your vector count stays under a few million, it's hard to beat for developer experience.",
     "internal_links": [
       {
-        "text": "Best Pinecone Alternatives",
-        "url": "/tools/pinecone-alternatives/"
+        "text": "Chroma Review",
+        "url": "/tools/chroma/"
       },
       {
-        "text": "Pinecone pricing",
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
+      },
+      {
+        "text": "Pinecone Pricing",
         "url": "/tools/pinecone-pricing/"
       },
       {
-        "text": "Weaviate pricing",
+        "text": "Chroma vs pgvector",
+        "url": "/tools/chroma-vs-pgvector/"
+      },
+      {
+        "text": "Weaviate Pricing",
         "url": "/tools/weaviate-pricing/"
-      },
-      {
-        "text": "Vector Database glossary",
-        "url": "/glossary/vector-database/"
-      },
-      {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
       }
     ],
     "faqs": [
@@ -1308,24 +1328,20 @@
     "bottom_line": "Cohere isn't trying to be the best general-purpose LLM. Its strength is the Embed + Rerank stack for retrieval, multilingual support, and competitive pricing on generation models. If you're building RAG applications, Cohere's embedding and reranking models should be on your shortlist regardless of which LLM you use for generation.",
     "internal_links": [
       {
-        "text": "OpenAI API pricing",
-        "url": "/tools/openai-api-pricing/"
-      },
-      {
-        "text": "Anthropic API pricing",
+        "text": "Anthropic API Pricing",
         "url": "/tools/anthropic-api-pricing/"
       },
       {
-        "text": "Best LLM Frameworks",
-        "url": "/tools/best-llm-frameworks/"
+        "text": "OpenAI API Pricing",
+        "url": "/tools/openai-api-pricing/"
       },
       {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
+        "text": "AWS Bedrock Pricing",
+        "url": "/tools/aws-bedrock-pricing/"
       },
       {
-        "text": "Embedding model glossary",
-        "url": "/glossary/embeddings/"
+        "text": "Best Embedding Models",
+        "url": "/tools/best-embedding-models/"
       }
     ],
     "faqs": [
@@ -1444,24 +1460,20 @@
     "bottom_line": "Bedrock's main value isn't cheaper models. It's keeping everything in AWS. If your team already runs on AWS, Bedrock simplifies security, compliance, and infrastructure management. The pricing matches direct API pricing for most models, so you're paying for convenience and integration. Batch inference at 50% off is the best deal. Avoid Knowledge Bases unless you're ready for the $700/month OpenSearch minimum.",
     "internal_links": [
       {
-        "text": "Anthropic API pricing",
+        "text": "Anthropic API Pricing",
         "url": "/tools/anthropic-api-pricing/"
       },
       {
-        "text": "OpenAI API pricing",
+        "text": "OpenAI API Pricing",
         "url": "/tools/openai-api-pricing/"
       },
       {
-        "text": "Best LLM Frameworks",
-        "url": "/tools/best-llm-frameworks/"
+        "text": "Cohere Pricing",
+        "url": "/tools/cohere-pricing/"
       },
       {
-        "text": "RAG architecture guide",
-        "url": "/blog/rag-architecture-guide/"
-      },
-      {
-        "text": "Vector Database glossary",
-        "url": "/glossary/vector-database/"
+        "text": "OpenAI vs Anthropic API",
+        "url": "/tools/openai-api-vs-anthropic-api/"
       }
     ],
     "faqs": [

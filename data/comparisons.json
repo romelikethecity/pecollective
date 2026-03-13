@@ -21,9 +21,9 @@
       "price_business": "$30/month",
       "price_enterprise": "Contact sales"
     },
-    "title": "Cursor vs Windsurf: Which AI Code Editor Should You Choose?",
+    "title": "Cursor vs Windsurf (2026): Two AI Code Editors Compared",
     "h1": "Which AI Code Editor Should You Use?",
-    "meta_description": "Cursor vs Windsurf: Head-to-head comparison of features, pricing, AI capabilities, and real-world performance for developers in 2026.",
+    "meta_description": "Both fork VS Code. Both have AI chat and autocomplete. The differences are in agent mode, pricing, and how they handle large codebases.",
     "og_description": "Which AI code editor is better for developers? We compare Cursor and Windsurf on features, pricing, and real-world use cases.",
     "subtitle": "A head-to-head comparison for AI-powered development workflows",
     "verdict_a": "You want the most mature AI code editor with proven multi-file editing, deep codebase indexing, and access to both Claude and GPT-4. Cursor has a larger user base and more battle-tested features.",
@@ -174,24 +174,24 @@
     },
     "internal_links": [
       {
-        "text": "Windsurf Full Review",
+        "text": "Cursor Review",
+        "url": "/tools/cursor/"
+      },
+      {
+        "text": "Windsurf Review",
         "url": "/tools/windsurf/"
       },
       {
-        "text": "Cursor vs Claude Code",
-        "url": "/tools/cursor-vs-claude-code/"
+        "text": "Cursor Pricing",
+        "url": "/tools/cursor-pricing/"
+      },
+      {
+        "text": "Windsurf Pricing",
+        "url": "/tools/windsurf-pricing/"
       },
       {
         "text": "Best AI Coding Assistants",
         "url": "/tools/best-ai-coding-assistants/"
-      },
-      {
-        "text": "What Is an AI Coding Assistant?",
-        "url": "/glossary/ai-coding-assistant/"
-      },
-      {
-        "text": "Copilot vs Amazon Q Developer",
-        "url": "/tools/copilot-vs-codewhisperer/"
       }
     ]
   },
@@ -366,12 +366,16 @@
     },
     "internal_links": [
       {
-        "text": "LangChain Full Review",
+        "text": "LangChain Review",
         "url": "/tools/langchain/"
       },
       {
-        "text": "LlamaIndex Full Review",
+        "text": "LlamaIndex Review",
         "url": "/tools/llamaindex/"
+      },
+      {
+        "text": "LangChain Pricing",
+        "url": "/tools/langchain-pricing/"
       },
       {
         "text": "Best LLM Frameworks",
@@ -380,14 +384,6 @@
       {
         "text": "Best RAG Tools",
         "url": "/tools/best-rag-tools/"
-      },
-      {
-        "text": "RAG Architecture Guide",
-        "url": "/blog/rag-architecture-guide/"
-      },
-      {
-        "text": "What Is RAG?",
-        "url": "/glossary/rag/"
       }
     ]
   },
@@ -565,28 +561,24 @@
     },
     "internal_links": [
       {
-        "text": "Pinecone Full Review",
+        "text": "Pinecone Review",
         "url": "/tools/pinecone/"
       },
       {
-        "text": "Weaviate Full Review",
+        "text": "Weaviate Review",
         "url": "/tools/weaviate/"
+      },
+      {
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
+      },
+      {
+        "text": "Weaviate Pricing",
+        "url": "/tools/weaviate-pricing/"
       },
       {
         "text": "Best Vector Databases",
         "url": "/tools/best-vector-databases/"
-      },
-      {
-        "text": "Best RAG Tools",
-        "url": "/tools/best-rag-tools/"
-      },
-      {
-        "text": "What Are Embeddings?",
-        "url": "/glossary/embeddings/"
-      },
-      {
-        "text": "What Is a Vector Database?",
-        "url": "/glossary/vector-database/"
       }
     ]
   },
@@ -1174,28 +1166,24 @@
     },
     "internal_links": [
       {
-        "text": "Claude Code Full Review",
-        "url": "/tools/claude-code/"
+        "text": "OpenAI API Pricing",
+        "url": "/tools/openai-api-pricing/"
       },
       {
-        "text": "LangChain Full Review",
-        "url": "/tools/langchain/"
+        "text": "Anthropic API Pricing",
+        "url": "/tools/anthropic-api-pricing/"
       },
       {
-        "text": "Best LLM Frameworks",
-        "url": "/tools/best-llm-frameworks/"
+        "text": "OpenAI API Review",
+        "url": "/tools/openai-api/"
       },
       {
-        "text": "What Is an LLM?",
-        "url": "/glossary/large-language-model/"
+        "text": "Anthropic API Review",
+        "url": "/tools/anthropic-api/"
       },
       {
-        "text": "Understanding Tokens",
-        "url": "/glossary/tokens/"
-      },
-      {
-        "text": "Prompt Engineering Guide",
-        "url": "/blog/prompt-engineering-guide/"
+        "text": "AWS Bedrock Pricing",
+        "url": "/tools/aws-bedrock-pricing/"
       }
     ]
   },
@@ -1574,24 +1562,24 @@
     },
     "internal_links": [
       {
-        "text": "Cursor vs Windsurf",
-        "url": "/tools/cursor-vs-windsurf/"
+        "text": "Cursor Review",
+        "url": "/tools/cursor/"
       },
       {
-        "text": "Cursor vs Claude Code",
-        "url": "/tools/cursor-vs-claude-code/"
+        "text": "GitHub Copilot Review",
+        "url": "/tools/github-copilot/"
       },
       {
-        "text": "Copilot vs Amazon Q Developer",
-        "url": "/tools/copilot-vs-codewhisperer/"
+        "text": "Cursor Pricing",
+        "url": "/tools/cursor-pricing/"
       },
       {
-        "text": "Cursor Alternatives",
-        "url": "/tools/cursor-alternatives/"
+        "text": "GitHub Copilot Pricing",
+        "url": "/tools/github-copilot-pricing/"
       },
       {
-        "text": "Claude Code Full Review",
-        "url": "/tools/claude-code/"
+        "text": "Best AI Coding Assistants",
+        "url": "/tools/best-ai-coding-assistants/"
       }
     ]
   },
@@ -1617,9 +1605,9 @@
       "price_business": "CrewAI+ from $200/mo",
       "price_enterprise": "Custom pricing"
     },
-    "title": "LangChain vs CrewAI: Framework vs Agent Builder",
+    "title": "LangChain vs CrewAI (2026): General Framework vs Agent Specialist",
     "h1": "General-Purpose Framework or Dedicated Agent Builder?",
-    "meta_description": "LangChain vs CrewAI: Compare the leading AI framework against the purpose-built multi-agent platform. Features, use cases, and real-world performance in 2026.",
+    "meta_description": "LangChain does everything. CrewAI does multi-agent. Features, learning curve, and which one to pick based on what you're building.",
     "og_description": "LangChain or CrewAI? We compare the general-purpose AI framework against the dedicated multi-agent builder for production AI systems.",
     "subtitle": "A practical comparison for teams building AI agents and LLM applications",
     "verdict_a": "You need a flexible framework that handles everything from simple chains to complex agent workflows, RAG pipelines, and tool integrations. LangChain (with LangGraph) gives you maximum control over every component in your AI system.",
@@ -1766,24 +1754,24 @@
     },
     "internal_links": [
       {
-        "text": "LangChain Full Review",
+        "text": "LangChain Review",
         "url": "/tools/langchain/"
       },
       {
-        "text": "CrewAI Full Review",
+        "text": "CrewAI Review",
         "url": "/tools/crewai/"
       },
       {
-        "text": "LangChain vs LlamaIndex",
-        "url": "/tools/langchain-vs-llamaindex/"
+        "text": "LangChain Pricing",
+        "url": "/tools/langchain-pricing/"
       },
       {
-        "text": "What Is an AI Agent?",
-        "url": "/glossary/ai-agent/"
+        "text": "Best LLM Frameworks",
+        "url": "/tools/best-llm-frameworks/"
       },
       {
-        "text": "AI Agent Frameworks Compared",
-        "url": "/blog/ai-agent-frameworks-compared/"
+        "text": "Best RAG Tools",
+        "url": "/tools/best-rag-tools/"
       }
     ]
   },
@@ -1998,9 +1986,9 @@
       "price_business": "Via managed Postgres providers",
       "price_enterprise": "Via managed Postgres providers"
     },
-    "title": "Chroma vs pgvector: Which Lightweight Vector Database Should You Use?",
+    "title": "Chroma vs pgvector (2026): Standalone DB or Postgres Extension?",
     "h1": "Which Lightweight Vector Database Should You Choose?",
-    "meta_description": "Chroma vs pgvector: Compare the developer-friendly vector database against the PostgreSQL vector extension. Features, performance, and use cases in 2026.",
+    "meta_description": "Chroma for simplicity, pgvector for staying in Postgres. Performance benchmarks, setup complexity, and which one fits your RAG stack.",
     "og_description": "Chroma or pgvector? We compare two lightweight approaches to vector search for RAG applications and AI development.",
     "subtitle": "A practical comparison for developers who don't need a heavyweight vector database",
     "verdict_a": "You want a purpose-built vector database that's dead simple to set up, works great for prototyping and small-to-medium production workloads, and has native Python/JS SDKs designed for AI workflows. Chroma gets you from zero to vector search in five minutes.",
@@ -2144,24 +2132,24 @@
     },
     "internal_links": [
       {
-        "text": "Chroma Full Review",
+        "text": "Chroma Review",
         "url": "/tools/chroma/"
       },
       {
-        "text": "pgvector Full Review",
+        "text": "pgvector Review",
         "url": "/tools/pgvector/"
       },
       {
-        "text": "Pinecone vs Weaviate",
-        "url": "/tools/pinecone-vs-weaviate/"
+        "text": "Chroma Pricing",
+        "url": "/tools/chroma-pricing/"
       },
       {
-        "text": "What Is a Vector Database?",
-        "url": "/glossary/vector-database/"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
       },
       {
-        "text": "What Are Embeddings?",
-        "url": "/glossary/embeddings/"
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
       }
     ]
   },
@@ -4108,24 +4096,24 @@
     },
     "internal_links": [
       {
-        "url": "/tools/pinecone-vs-weaviate/",
-        "text": "Pinecone vs Weaviate"
+        "text": "Pinecone Review",
+        "url": "/tools/pinecone/"
       },
       {
-        "url": "/tools/chroma-vs-pgvector/",
-        "text": "Chroma vs pgvector"
+        "text": "Chroma Review",
+        "url": "/tools/chroma/"
       },
       {
-        "url": "/tools/best-vector-databases/",
-        "text": "Best Vector Databases"
+        "text": "Pinecone Pricing",
+        "url": "/tools/pinecone-pricing/"
       },
       {
-        "url": "/glossary/vector-database/",
-        "text": "What Is a Vector Database?"
+        "text": "Chroma Pricing",
+        "url": "/tools/chroma-pricing/"
       },
       {
-        "url": "/glossary/embeddings/",
-        "text": "What Are Embeddings?"
+        "text": "Best Vector Databases",
+        "url": "/tools/best-vector-databases/"
       }
     ]
   }

@@ -3,21 +3,22 @@
     "slug": "cursor-pricing",
     "tool_name": "Cursor",
     "tool_slug": "cursor",
-    "title": "Cursor Pricing 2026: Plans, Costs, and What You Actually Get",
-    "meta_description": "Cursor pricing breakdown for 2026. Free tier limits, Pro at $20/mo, Business at $40/mo. What each plan includes and which one you need.",
+    "title": "Cursor Pricing (March 2026): Hobby, Pro, Pro+, Ultra & Teams Plans",
+    "meta_description": "Cursor Pro costs $20/mo with a $20 credit pool. Pro+ is $60/mo. Ultra is $200/mo. Teams is $40/user. Full plan comparison with credit system explained.",
     "og_description": "Cursor pricing breakdown for 2026. Compare free, Pro, and Business plans. Hidden costs and what you actually need.",
-    "h1": "Cursor Pricing: What Each Plan Actually Costs",
-    "intro": "Cursor has become the default AI code editor for a lot of developers, but the pricing has gotten more complex as they've added features. Here's what each tier actually includes, what the hidden costs are, and which plan makes sense for your situation.",
+    "h1": "Cursor Pricing: Every Plan Explained (March 2026)",
+    "intro": "Cursor overhauled its pricing in mid-2025, replacing fixed request allotments with usage-based credit pools. Every paid plan now includes a monthly credit pool that depletes based on which AI model you use. Auto mode (Cursor's default model routing) is unlimited. Manually selecting premium models like Claude Sonnet 4.6 or GPT-4.1 draws from your pool. This page breaks down every plan, what the credits actually buy, and which tier makes sense for different workflows.",
     "tiers": [
       {
-        "name": "Free / Hobby",
+        "name": "Hobby",
         "price": "$0",
         "billing": "Free forever",
         "highlights": [
-          "2,000 code completions per month",
-          "50 slow premium requests per month",
-          "Access to cursor-small model",
-          "Basic chat and editing features"
+          "Limited AI requests per month",
+          "Basic Tab autocomplete",
+          "Access to Cursor's default model",
+          "Good for trying the tool before committing",
+          "No credit pool \u2014 fixed request limits"
         ],
         "popular": false
       },
@@ -26,51 +27,80 @@
         "price": "$20",
         "billing": "per month",
         "highlights": [
-          "Unlimited code completions",
-          "500 fast premium requests per month (Claude, GPT-4)",
-          "Unlimited slow premium requests",
-          "Full Composer (multi-file editing)",
-          "Codebase-wide context (@codebase)",
-          "Priority support"
+          "$20/mo credit pool for premium model requests",
+          "Unlimited Auto mode (Cursor picks the model)",
+          "Access to Claude Sonnet 4.6, GPT-4.1, Gemini",
+          "Composer for multi-file agentic editing",
+          "MCPs, skills, hooks, and cloud agents"
         ],
         "popular": true
       },
       {
-        "name": "Business",
+        "name": "Pro+",
+        "price": "$60",
+        "billing": "per month",
+        "highlights": [
+          "$60/mo credit pool (3x Pro)",
+          "Everything in Pro with higher limits",
+          "Extended limits on Agent mode",
+          "Ideal for heavy daily AI coding use",
+          "20% discount on annual billing"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Ultra",
+        "price": "$200",
+        "billing": "per month",
+        "highlights": [
+          "$200/mo credit pool (20x Pro usage)",
+          "Priority access to new features",
+          "Maximum AI throughput available",
+          "Best for power users and AI-first workflows",
+          "20% discount on annual billing"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Teams",
         "price": "$40",
         "billing": "per user/month",
         "highlights": [
-          "Everything in Pro",
-          "Centralized team billing",
-          "Admin dashboard and usage analytics",
-          "Enforce privacy mode across org",
-          "SAML SSO",
-          "Priority support and onboarding"
+          "All Pro features per user",
+          "Centralized billing and admin controls",
+          "SSO and team management",
+          "Usage visibility across the team",
+          "Enterprise tier available (custom pricing)"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "The 500 fast premium requests on Pro run out fast if you use Composer heavily. Each Composer session can burn 5-15 requests.",
-      "Slow requests work but add 15-30 seconds of latency per response. If speed matters, you'll hit the upgrade pressure.",
-      "No annual discount currently available. It's $20/mo flat.",
-      "If you want to use your own API keys (bring-your-own-key), that's supported but you pay OpenAI/Anthropic directly on top of the subscription."
+      "The credit pool depletes based on the AI model you choose. Claude Sonnet 4.6 costs more per request than GPT-4.1 Nano. A $20 pool might cover ~225 Sonnet requests or ~550 cheaper model requests.",
+      "Auto mode is unlimited but Cursor picks the model. If you manually select a premium model for every request, your pool drains fast.",
+      "Annual billing saves 20%, but you're locked in. Monthly gives flexibility to downgrade if your usage drops.",
+      "Cloud agents and extended Composer sessions consume credits faster than simple Tab completions. Heavy agentic workflows can burn through a Pro pool in 2 weeks.",
+      "Teams plan at $40/user is 2x Pro, but you get admin controls and SSO. If your team doesn't need those, individual Pro subscriptions are cheaper."
     ],
     "who_needs_what": [
       {
-        "persona": "Hobby developer or student",
-        "recommendation": "Free tier is fine for light use. You'll hit the 50 premium request limit within a few days of heavy coding, but it's enough to evaluate the tool."
+        "persona": "Casual coder or student",
+        "recommendation": "Hobby (free). The limited AI requests are enough if you're coding a few hours per week. Upgrade to Pro when you hit the wall."
       },
       {
-        "persona": "Professional developer (individual)",
-        "recommendation": "Pro is the sweet spot. $20/mo for unlimited completions and 500 fast requests covers most workflows. You'll only feel limited during intense multi-file refactoring sessions."
+        "persona": "Full-time developer",
+        "recommendation": "Pro at $20/mo. The credit pool covers normal daily coding. Use Auto mode (unlimited) for most tasks and save manual model selection for complex problems. Most developers don't exhaust Pro."
       },
       {
-        "persona": "Team or company",
-        "recommendation": "Business at $40/user/mo makes sense if you need admin controls, SSO, or enforced privacy mode. Otherwise, individual Pro licenses are cheaper."
+        "persona": "AI-heavy developer (daily Composer/Agent use)",
+        "recommendation": "Pro+ at $60/mo. If you're running multi-file Composer edits and Agent sessions regularly, Pro's pool runs out by mid-month. Pro+ gives 3x the credits."
+      },
+      {
+        "persona": "Engineering team (3+ devs)",
+        "recommendation": "Teams at $40/user. Worth the premium over individual Pro for centralized billing, usage visibility, and SSO. Enterprise (custom) adds pooled usage across the org and dedicated support."
       }
     ],
-    "bottom_line": "Cursor Pro at $20/mo is good value for what you get. The unlimited completions alone justify the cost if you code daily. The main complaint: 500 fast premium requests feels tight for heavy Composer users. If you're on the fence, the free tier gives you enough to decide.",
+    "bottom_line": "Pro at $20/mo is the right starting point for most developers. The credit pool system means you only pay more if you're actively using premium models. Auto mode being unlimited is the key insight \u2014 let Cursor pick the model for routine tasks and manually select Claude or GPT-4.1 only when quality matters. If you're burning through credits, Pro+ at $60/mo gives 3x the pool. Ultra at $200/mo is for the small percentage of developers who live in Agent mode all day.",
     "internal_links": [
       {
         "text": "Cursor Review",
@@ -95,33 +125,153 @@
     ],
     "faqs": [
       {
-        "question": "Is Cursor free?",
-        "answer": "Cursor has a free tier with 2,000 completions and 50 slow premium requests per month. It's enough to try the tool but not enough for daily professional use. Most developers upgrade to Pro ($20/mo) within a week."
+        "question": "How much does Cursor cost?",
+        "answer": "Hobby is free with limited requests. Pro costs $20/month. Pro+ costs $60/month. Ultra costs $200/month. Teams costs $40/user/month. Enterprise is custom pricing. All paid plans include a credit pool equal to the subscription price."
       },
       {
-        "question": "Is Cursor Pro worth $20 a month?",
-        "answer": "For most professional developers, yes. Unlimited completions and 500 fast premium requests per month cover typical daily coding workflows. If AI-assisted coding saves you even 30 minutes per day, it pays for itself many times over."
+        "question": "What's the difference between Auto mode and manual model selection?",
+        "answer": "Auto mode lets Cursor pick the best model for each task automatically \u2014 it's unlimited on all paid plans and doesn't use your credit pool. Manual model selection lets you choose a specific model (like Claude Sonnet 4.6) but each request deducts from your monthly credit pool."
       },
       {
-        "question": "What happens when you run out of fast premium requests?",
-        "answer": "You switch to slow requests, which use the same models but with lower priority. Response times go from 2-5 seconds to 15-30 seconds. You can still use all features, just slower. Requests reset monthly."
+        "question": "Is Cursor Pro worth $20/month?",
+        "answer": "For full-time developers, yes. Unlimited Auto mode handles most coding tasks, and the $20 credit pool covers manual premium model requests for typical daily use. If you're coding less than 10 hours/week, the free Hobby tier might be enough."
       },
       {
-        "question": "Can I use my own API keys with Cursor?",
-        "answer": "Yes. Cursor supports bring-your-own-key for OpenAI and Anthropic APIs. You still need a Cursor subscription for the editor features, but your API usage goes through your own account. This bypasses the premium request limits."
+        "question": "How does Cursor compare to GitHub Copilot pricing?",
+        "answer": "Copilot Pro is cheaper at $10/month vs Cursor's $20/month. But Cursor includes Composer (multi-file editing), Agent mode, and model selection that Copilot doesn't match. Copilot Business at $19/user is cheaper than Cursor Teams at $40/user. The tradeoff is features vs cost."
+      },
+      {
+        "question": "Can I use Cursor for free?",
+        "answer": "Yes. The Hobby plan is free forever with limited AI requests per month. It includes basic Tab autocomplete and Chat, but no credit pool for premium models. It's enough to evaluate the tool but not for daily professional use."
+      },
+      {
+        "question": "What happens when I run out of credits?",
+        "answer": "Auto mode keeps working (it's always unlimited). You lose the ability to manually select premium models until your pool resets next month. You can also purchase additional credits to continue using premium models."
+      },
+      {
+        "question": "Should I get Pro+ or Ultra?",
+        "answer": "Start with Pro. If you consistently exhaust your credits before month-end, upgrade to Pro+ ($60/mo). Ultra ($200/mo) is only worth it if Pro+ also runs out \u2014 that means you're doing heavy Agent mode or Composer work daily. Most developers are fine on Pro or Pro+."
+      },
+      {
+        "question": "Does Cursor offer annual billing?",
+        "answer": "Yes, annual billing gives a 20% discount on all paid plans. Pro drops to $16/month, Pro+ to $48/month, Ultra to $160/month. Only commit to annual after 2-3 months of monthly usage so you know which tier fits."
       }
     ],
-    "date_updated": "2026-02-15"
+    "date_updated": "2026-02-15",
+    "deep_sections": [
+      {
+        "heading": "How the Credit Pool System Works",
+        "body": [
+          "In mid-2025, Cursor replaced its fixed 'fast request' system with usage-based credit pools. Each paid plan includes a monthly credit pool equal to the subscription price in dollars. Pro gets $20, Pro+ gets $60, Ultra gets $200.",
+          "When you use Auto mode (Cursor's default), it picks the best model for each task automatically. Auto mode requests are unlimited and don't draw from your credit pool. This is the most important detail in Cursor's pricing \u2014 most routine coding tasks work fine with Auto mode.",
+          "When you manually select a premium model like Claude Sonnet 4.6, GPT-4.1, or Gemini, each request deducts from your pool based on the actual API cost of that model. Cheaper models like GPT-4.1 Nano use less of your pool per request than expensive models like Claude Opus 4.6.",
+          "Your pool resets monthly. Unused credits don't roll over. If you exhaust your pool mid-month, you can still use Auto mode (unlimited) or purchase additional credits. This means Cursor never stops working \u2014 you just lose the ability to manually pick premium models."
+        ]
+      },
+      {
+        "heading": "Pro vs Pro+ vs Ultra: When to Upgrade",
+        "body": [
+          "The three individual paid tiers differ only in credit pool size and a few perks. All of them include the same features: Composer, Agent mode, Tab autocomplete, Chat, MCPs, skills, hooks, and cloud agents. The question is purely about usage volume.",
+          "Pro ($20/mo) works for developers who use AI assistance for a few hours each day. With Auto mode unlimited, you only consume credits when you manually select a model. A developer who does 10-20 manual premium requests per day stays well within the $20 pool.",
+          "Pro+ ($60/mo) is for developers who live in Cursor all day and frequently use Composer for multi-file edits or Agent mode for extended sessions. These features consume more credits per use than simple Tab completions or Chat queries. If you find yourself rationing Pro credits in the second half of each month, Pro+ solves that.",
+          "Ultra ($200/mo) is for a small group of power users who run Agent mode sessions constantly, use the most expensive models for every task, and treat Cursor as their primary development interface. Most developers never need Ultra \u2014 it exists for the ceiling."
+        ]
+      },
+      {
+        "heading": "Teams vs Individual Pro: The Math",
+        "body": [
+          "Teams costs $40/user/month \u2014 double the price of individual Pro at $20/month. Is it worth it? The answer depends on your team size and operational needs.",
+          "What Teams adds over individual Pro subscriptions: centralized billing (one invoice instead of expense reports from each developer), admin controls (manage seats, set policies), SSO integration, and usage visibility across the team. If your company requires SSO or centralized billing, Teams is the only option.",
+          "What Teams doesn't add: more AI features. Every developer on Teams gets the same AI capabilities as an individual Pro subscriber. The premium is purely for organizational features.",
+          "Enterprise (custom pricing) adds pooled usage across the organization, invoice billing, and dedicated support. Pooled usage is valuable when some team members are heavy users and others are light \u2014 the credits balance out across the team instead of being wasted on light users."
+        ]
+      },
+      {
+        "heading": "Cursor vs Windsurf vs GitHub Copilot: Price Comparison",
+        "body": [
+          "The three leading AI code editors have different pricing philosophies. Here's how they compare at each tier."
+        ],
+        "table": {
+          "headers": [
+            "Tier",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot"
+          ],
+          "rows": [
+            [
+              "Free",
+              "$0 (limited)",
+              "$0 (25 credits/mo)",
+              "$0 (2,000 completions + 50 premium)"
+            ],
+            [
+              "Individual Pro",
+              "$20/mo (credit pool)",
+              "$15/mo (500 credits)",
+              "$10/mo (300 premium requests)"
+            ],
+            [
+              "Individual Premium",
+              "$60/mo (Pro+) / $200/mo (Ultra)",
+              "\u2014",
+              "$39/mo (Pro+, 1,500 premium)"
+            ],
+            [
+              "Team",
+              "$40/user/mo",
+              "$30/user/mo",
+              "$19/user/mo (Business)"
+            ],
+            [
+              "Enterprise",
+              "Custom",
+              "$60/user/mo",
+              "$39/user/mo"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "What Models Are Available on Each Plan",
+        "body": [
+          "All paid Cursor plans give access to the same set of AI models. The difference is how many premium requests your credit pool covers, not which models you can use.",
+          "Available models include Claude Sonnet 4.6, Claude Opus 4.6 (highest quality, most expensive per request), GPT-4.1, GPT-4.1 Nano (cheapest per request), and Gemini models. The exact lineup changes as Cursor adds support for new models.",
+          "Auto mode uses Cursor's own model routing, selecting the best model for each task automatically. For Tab completions, it typically uses a fast, cheap model. For Composer and complex Chat queries, it routes to a more capable model. Auto mode is unlimited on all paid plans.",
+          "The Hobby (free) tier has access to fewer models and no credit pool. You get a fixed number of AI requests per month that don't carry over."
+        ]
+      },
+      {
+        "heading": "Hidden Costs and Gotchas Nobody Mentions",
+        "body": [
+          "Cursor's pricing is straightforward on paper, but a few things catch people off guard in practice.",
+          "Composer sessions are expensive. A single multi-file Composer edit might consume 5-10x more credits than a Chat question. If you're using Composer for small changes that Tab completion could handle, you're overspending. Save Composer for tasks that genuinely span multiple files.",
+          "Agent mode burns credits fast. Extended Agent sessions (where Cursor autonomously writes, tests, and iterates) can use a significant chunk of your monthly pool in a single session. Monitor your credit usage during long Agent runs.",
+          "Annual billing locks you in. The 20% discount is real, but if your usage pattern changes (seasonal projects, job change, trying a competitor), you're stuck. Monthly billing costs more but gives flexibility.",
+          "Cloud agents are a new feature that runs Cursor's AI in the cloud. These sessions consume credits and can be surprisingly expensive for long-running tasks. Check your usage dashboard after your first few cloud agent sessions to calibrate expectations."
+        ]
+      },
+      {
+        "heading": "Tips to Maximize Your Credit Pool",
+        "body": [
+          "Use Auto mode as your default. It's unlimited on all paid plans and handles 80% of coding tasks well. Only switch to manual model selection when Auto mode's output quality isn't sufficient for a specific task.",
+          "Pick the cheapest adequate model for manual requests. GPT-4.1 Nano costs a fraction of Claude Opus 4.6 per request. For simple code generation or boilerplate, Nano is fine. Save Opus for complex architecture decisions and difficult debugging.",
+          "Use Tab completion instead of Chat for simple changes. Tab is cheaper than Chat, and Chat is cheaper than Composer. Match the tool to the complexity of the task.",
+          "Review your usage dashboard weekly. Cursor shows your credit consumption by model, feature, and day. This data tells you whether you're on track to exhaust your pool or have room to spare. Adjust your model selection habits accordingly.",
+          "Consider annual billing only after 2-3 months of usage data. Don't commit to annual on day one \u2014 use monthly first to understand your actual consumption pattern, then switch to annual if Pro is consistently the right tier."
+        ]
+      }
+    ]
   },
   {
     "slug": "github-copilot-pricing",
     "tool_name": "GitHub Copilot",
     "tool_slug": "github-copilot",
-    "title": "GitHub Copilot Pricing (March 2026): Free vs Pro vs Business vs Enterprise",
-    "meta_description": "Free tier is live. Pro $10/mo, Business $19/mo, Enterprise $39/mo. What each tier unlocks, the usage limits, and which plan fits your team.",
+    "title": "GitHub Copilot Pricing (March 2026): Free, Pro, Pro+, Business & Enterprise",
+    "meta_description": "GitHub Copilot Free gives 2,000 completions + 50 premium requests. Pro is $10/mo (300 premium). Pro+ is $39/mo (1,500 premium). Full plan breakdown.",
     "og_description": "GitHub Copilot pricing for 2026. Free, Pro, Business, and Enterprise plans compared with real costs and hidden limitations.",
-    "h1": "GitHub Copilot Pricing: All Plans Compared",
-    "intro": "GitHub Copilot now has four tiers, including a free option that didn't exist a year ago. The pricing is competitive, especially compared to Cursor, but the feature differences between tiers matter. Here's what you get at each level and whether the upgrades are worth it.",
+    "h1": "GitHub Copilot Pricing: Every Plan Compared (March 2026)",
+    "intro": "GitHub Copilot now has five tiers, from a genuinely useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
     "tiers": [
       {
         "name": "Free",
@@ -129,10 +279,10 @@
         "billing": "Free forever",
         "highlights": [
           "2,000 code completions per month",
-          "50 chat messages per month",
+          "50 premium requests per month",
           "Access to Claude Sonnet 4.6 and GPT-4.1",
-          "Works in VS Code and JetBrains",
-          "Multi-file editing (limited)"
+          "Works in VS Code, JetBrains, Neovim",
+          "Good for evaluation, not daily use"
         ],
         "popular": false
       },
@@ -142,25 +292,36 @@
         "billing": "per month",
         "highlights": [
           "Unlimited code completions",
-          "Unlimited chat messages",
-          "Access to all models (Claude Sonnet 4.6, GPT-4.1, Gemini)",
-          "Agent mode for multi-step tasks",
-          "Full multi-file editing",
-          "Custom instructions"
+          "300 premium requests per month",
+          "Copilot coding agent access",
+          "All premium AI models in Chat",
+          "Best value for individual developers"
         ],
         "popular": true
+      },
+      {
+        "name": "Pro+",
+        "price": "$39",
+        "billing": "per month",
+        "highlights": [
+          "1,500 premium requests per month (5x Pro)",
+          "Access to ALL models including Claude Opus 4.6 and o3",
+          "Full Agent mode capabilities",
+          "Priority access to new features",
+          "For power users who hit Pro's limits"
+        ],
+        "popular": false
       },
       {
         "name": "Business",
         "price": "$19",
         "billing": "per user/month",
         "highlights": [
-          "Everything in Pro",
-          "Organization-wide policy management",
-          "Audit logs",
-          "IP indemnification",
-          "Exclude specific files from Copilot",
-          "SAML SSO"
+          "Everything in Pro for each user",
+          "Organization-wide policy controls",
+          "Audit logs and IP indemnity",
+          "SSO (SAML) integration",
+          "File exclusion controls"
         ],
         "popular": false
       },
@@ -169,36 +330,42 @@
         "price": "$39",
         "billing": "per user/month",
         "highlights": [
-          "Everything in Business",
-          "Fine-tuned models on your codebase",
-          "Knowledge bases from your docs",
-          "Advanced security features",
-          "Dedicated support"
+          "1,000 premium requests per user",
+          "Knowledge bases for codebase context",
+          "GitHub.com Chat integration",
+          "Custom model fine-tuning options",
+          "Requires GitHub Enterprise Cloud"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "The free tier's 50 chat messages per month is very limiting. You'll hit it in a single day of active use.",
-      "Pro at $10/mo is half the price of Cursor Pro, but the AI capabilities (especially multi-file editing) aren't as polished.",
-      "Business tier's main value is IP indemnification and audit logs. If you don't need those, Pro is sufficient.",
-      "Enterprise requires a GitHub Enterprise Cloud subscription, which adds another $21/user/mo to the total cost."
+      "Premium requests are consumed by Chat, Agent mode, code reviews, and model selection. A simple Chat question and a complex Agent session both use premium requests, but at different rates depending on the model.",
+      "Additional premium requests beyond your plan limit cost $0.04 each. A developer who blows through 300 Pro requests and uses 200 more pays $8 extra \u2014 at that point, Pro+ at $39/mo is better.",
+      "The free tier's 2,000 completions sound generous, but heavy users can hit that in a few days. Code completions on paid plans are unlimited.",
+      "Enterprise requires GitHub Enterprise Cloud ($21/user/month separately). Total cost is $60/user/month ($39 Copilot + $21 Enterprise Cloud). This catches teams off guard.",
+      "Premium request quotas reset on the 1st of each month regardless of when you subscribed. If you sign up on the 25th, you get 5 days of full quota, then it resets.",
+      "Not all models cost the same number of premium requests. Claude Opus 4.6 and o3 consume more per request than GPT-4.1. Using expensive models exclusively burns through your quota faster."
     ],
     "who_needs_what": [
       {
-        "persona": "Individual developer",
-        "recommendation": "Pro at $10/mo is the best value in AI coding tools right now. Half the price of Cursor with unlimited completions and chat. The tradeoff is slightly less capable multi-file editing."
+        "persona": "Student or hobbyist",
+        "recommendation": "Free tier. 2,000 completions + 50 premium requests is enough if you're coding a few hours per week. Upgrade to Pro when the 50 premium requests feel limiting."
       },
       {
-        "persona": "Small team (under 20)",
-        "recommendation": "Business at $19/user/mo if you need audit logs or IP indemnification. Otherwise, individual Pro licenses work fine."
+        "persona": "Full-time individual developer",
+        "recommendation": "Pro at $10/month. 300 premium requests covers typical daily use (10-15 Chat/Agent interactions per day). Unlimited completions means Tab autocomplete never stops. Best value in AI coding tools."
       },
       {
-        "persona": "Enterprise",
-        "recommendation": "Enterprise at $39/user/mo only if you need fine-tuned models on your codebase. The $21/user/mo GitHub Enterprise Cloud prerequisite makes the true cost $60/user/mo."
+        "persona": "Power user (heavy Agent/Chat use)",
+        "recommendation": "Pro+ at $39/month. 1,500 premium requests (5x Pro) plus access to Claude Opus 4.6 and o3 for the hardest problems. Worth it if you consistently exhaust Pro's 300 requests."
+      },
+      {
+        "persona": "Engineering team (5+ developers)",
+        "recommendation": "Business at $19/user. Cheaper than Cursor Teams ($40/user) with strong admin controls. Enterprise ($39/user + $21 GitHub Enterprise Cloud) only if you need knowledge bases and custom models."
       }
     ],
-    "bottom_line": "GitHub Copilot Pro at $10/mo is the best value in AI coding assistants. It's half the price of Cursor Pro with solid capabilities. Cursor still wins on multi-file editing quality, but Copilot's GitHub integration and lower price make it the right choice for many developers.",
+    "bottom_line": "Pro at $10/month is the best value in AI coding tools. 300 premium requests covers daily use for most developers, and unlimited completions means the core autocomplete experience is always on. Pro+ at $39/month is worth it only if you consistently exhaust Pro's limits or need access to the most expensive models. Business at $19/user undercuts Cursor Teams ($40/user) significantly. The free tier is a genuine product now, not a trial \u2014 2,000 completions per month is enough for light use.",
     "internal_links": [
       {
         "text": "GitHub Copilot Review",
@@ -223,99 +390,204 @@
     ],
     "faqs": [
       {
+        "question": "How much does GitHub Copilot cost?",
+        "answer": "Free ($0, 2,000 completions + 50 premium requests), Pro ($10/mo, 300 premium), Pro+ ($39/mo, 1,500 premium), Business ($19/user/mo), Enterprise ($39/user/mo + $21 Enterprise Cloud requirement)."
+      },
+      {
         "question": "Is GitHub Copilot free?",
-        "answer": "Yes, GitHub Copilot now has a free tier with 2,000 completions and 50 chat messages per month. It's enough to try the tool but not for daily professional use. The free tier includes access to Claude Sonnet 4.6 and GPT-4.1."
+        "answer": "Yes, there's a free tier with 2,000 code completions and 50 premium requests per month. It works in VS Code, JetBrains, and Neovim. It's enough for light coding but not for daily professional use."
       },
       {
-        "question": "Is GitHub Copilot worth $10 a month?",
-        "answer": "For most developers, absolutely. Unlimited completions and chat at $10/mo is the cheapest unlimited AI coding plan available. If you write code daily, it'll save you hours per week."
+        "question": "What are premium requests?",
+        "answer": "Premium requests power Chat, Agent mode, code reviews, and model selection. Each interaction consumes one or more premium requests depending on the model and feature. Free gets 50/month, Pro gets 300, Pro+ gets 1,500. Extra requests cost $0.04 each."
       },
       {
-        "question": "What's the difference between Copilot Business and Enterprise?",
-        "answer": "Enterprise adds fine-tuned models trained on your company's codebase, knowledge bases from internal docs, and advanced security features. It costs $39/user/mo but also requires a GitHub Enterprise Cloud subscription ($21/user/mo extra)."
+        "question": "Is Copilot Pro worth $10/month?",
+        "answer": "For full-time developers, yes. Unlimited code completions plus 300 premium requests per month covers typical daily use. At $10/month, it's the cheapest paid AI coding tool \u2014 Cursor Pro is $20, Windsurf Pro is $15."
       },
       {
-        "question": "How does Copilot pricing compare to Cursor?",
-        "answer": "Copilot Pro ($10/mo) is half the price of Cursor Pro ($20/mo). Both offer unlimited completions. Cursor has better multi-file editing (Composer) and codebase-wide context. Copilot has better GitHub integration. For pure value, Copilot wins on price."
+        "question": "Should I get Pro or Pro+?",
+        "answer": "Start with Pro. If you consistently use 250+ premium requests per month, upgrade to Pro+ ($39/mo) for 1,500 requests and access to all models including Claude Opus 4.6 and o3. Most developers are fine on Pro."
+      },
+      {
+        "question": "GitHub Copilot Business vs Enterprise: which do I need?",
+        "answer": "Business ($19/user) for most teams. Enterprise ($39/user + $21 Enterprise Cloud) only if you need knowledge bases, GitHub.com Chat, and custom models. Enterprise's total $60/user/month cost is 3x Business."
+      },
+      {
+        "question": "How does Copilot compare to Cursor?",
+        "answer": "Copilot Pro ($10/mo) is half the price of Cursor Pro ($20/mo). Cursor offers deeper multi-file editing via Composer and full model selection per request. Copilot is better integrated with the GitHub ecosystem. For teams, Copilot Business ($19/user) is significantly cheaper than Cursor Teams ($40/user)."
+      },
+      {
+        "question": "Can I use Copilot with JetBrains or Neovim?",
+        "answer": "Yes. All Copilot plans (including free) work in VS Code, JetBrains IDEs (IntelliJ, PyCharm, etc.), and Neovim. Cursor and Windsurf are VS Code forks and don't support other IDEs."
       }
     ],
-    "date_updated": "2026-02-15"
+    "date_updated": "2026-02-15",
+    "deep_sections": [
+      {
+        "heading": "What Are Premium Requests and How Do They Work?",
+        "body": [
+          "Premium requests are GitHub Copilot's currency for AI-powered features beyond basic code completion. Chat messages, Agent mode actions, code reviews, and manual model selection all consume premium requests.",
+          "The cost per premium request varies by feature and model. A simple Chat question using the default model costs 1 premium request. Selecting a more expensive model like Claude Opus 4.6 may cost more per request. Agent mode sessions consume multiple premium requests as the agent iterates through steps.",
+          "Your premium request quota resets on the 1st of each month. Unused requests don't roll over. If you exceed your quota, additional requests cost $0.04 each, billed to your account automatically.",
+          "Code completions (Tab autocomplete) are separate from premium requests. Free tier gets 2,000 completions per month. All paid plans get unlimited completions. This distinction matters \u2014 the core autocomplete experience works even when your premium requests are exhausted."
+        ]
+      },
+      {
+        "heading": "Free Tier: What You Actually Get",
+        "body": [
+          "GitHub Copilot's free tier launched as a way to get developers hooked before they pay. It works. 2,000 code completions per month covers light coding \u2014 maybe 1-2 hours of active development per day. 50 premium requests per month is about 2-3 Chat interactions per day.",
+          "The free tier includes access to Claude Sonnet 4.6 and GPT-4.1 in Chat. You don't get the full model lineup (no Opus 4.6 or o3), but the available models handle most coding questions well.",
+          "The limitation that bites first is usually premium requests, not completions. 50 per month means you have to be intentional about when you use Chat or Agent mode. If you're the type of developer who asks the AI a question every 10 minutes, you'll exhaust 50 requests in a single day.",
+          "The free tier works in VS Code, JetBrains, and Neovim. There's no feature lockout on IDE support \u2014 the limitation is purely on usage volume."
+        ]
+      },
+      {
+        "heading": "Pro vs Pro+: When the Upgrade Makes Sense",
+        "body": [
+          "Pro at $10/month gives 300 premium requests. Pro+ at $39/month gives 1,500. The 5x increase costs 3.9x the price, so Pro+ is better value per request if you need the volume.",
+          "The breakeven math: if you'd use more than ~725 premium requests per month on Pro (paying $0.04 each for the overage), Pro+ saves money. That's about 36 premium requests per working day \u2014 heavy but not extreme for a developer who uses Chat frequently.",
+          "Pro+ also unlocks access to all available models, including Claude Opus 4.6 and o3. Pro gives access to premium models but not the full lineup. If you specifically need Opus 4.6's reasoning quality for complex architecture questions, Pro+ is the only individual plan that provides it.",
+          "Most developers should start with Pro. Track your premium request usage for 2-3 months. If you're consistently hitting 250+ requests before month-end, the upgrade to Pro+ pays for itself."
+        ]
+      },
+      {
+        "heading": "GitHub Copilot vs Cursor vs Windsurf: Pricing Comparison",
+        "body": [
+          "The three leading AI code editors take different approaches to pricing. Here's how they compare."
+        ],
+        "table": {
+          "headers": [
+            "Feature",
+            "GitHub Copilot Pro",
+            "Cursor Pro",
+            "Windsurf Pro"
+          ],
+          "rows": [
+            [
+              "Monthly cost",
+              "$10/mo",
+              "$20/mo",
+              "$15/mo"
+            ],
+            [
+              "Free tier",
+              "2,000 completions + 50 premium",
+              "Limited requests",
+              "25 credits/mo"
+            ],
+            [
+              "Team plan",
+              "$19/user (Business)",
+              "$40/user (Teams)",
+              "$30/user"
+            ],
+            [
+              "Model selection",
+              "Multiple models in Chat",
+              "Full model choice per request",
+              "Model choice with credits"
+            ],
+            [
+              "Multi-file editing",
+              "Agent mode (premium requests)",
+              "Composer (from credit pool)",
+              "Cascade (from credits)"
+            ],
+            [
+              "IDE",
+              "VS Code, JetBrains, Neovim",
+              "VS Code fork",
+              "VS Code fork"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Business vs Enterprise: What's the Real Difference?",
+        "body": [
+          "Business ($19/user/month) and Enterprise ($39/user/month) share most features. The key differences are knowledge bases, GitHub.com Chat, custom models, and the Enterprise Cloud requirement.",
+          "Business adds organization-wide policy controls, audit logs, IP indemnity, SAML SSO, and file exclusion (prevent Copilot from accessing certain files). For most teams under 100 developers, Business has everything you need.",
+          "Enterprise adds knowledge bases \u2014 the ability to index your organization's repositories so Copilot can answer questions with full codebase context. It also includes GitHub.com Chat (use Copilot on github.com, not just in your IDE) and options for custom model fine-tuning.",
+          "The hidden cost: Enterprise requires GitHub Enterprise Cloud at $21/user/month. Total cost is $60/user/month ($39 + $21). This makes Enterprise 3x the cost of Business when you factor in the prerequisite. Only organizations that already have Enterprise Cloud should consider this tier.",
+          "Each Enterprise user gets 1,000 premium requests per month vs Business's standard allocation. For teams doing heavy Agent mode or code review work, this higher quota matters."
+        ]
+      }
+    ]
   },
   {
     "slug": "pinecone-pricing",
     "tool_name": "Pinecone",
     "tool_slug": "pinecone",
-    "title": "Pinecone Pricing (March 2026): Free Tier Limits, Serverless Costs & Gotchas",
-    "meta_description": "Free tier caps at 2GB. Serverless starts at $0.33/1M reads but scales fast. Full tier comparison with real monthly bills at 1M, 10M, and 100M vectors.",
+    "title": "Pinecone Pricing (March 2026): Free Tier, Standard ($50/mo min), Enterprise",
+    "meta_description": "Pinecone Starter is free with 2GB storage. Standard starts at $50/mo minimum. Enterprise at $500/mo. Full breakdown of storage, read/write unit costs.",
     "og_description": "Pinecone pricing breakdown for 2026. Free tier, serverless costs, and what you'll actually pay at different scales.",
-    "h1": "Pinecone Pricing: What It Actually Costs at Scale",
-    "intro": "Pinecone is the most popular managed vector database, but the pricing can be confusing. They've moved to a serverless model that's cheap for small workloads but can add up fast at scale. Here's what you'll actually pay.",
+    "h1": "Pinecone Pricing: What It Actually Costs (March 2026)",
+    "intro": "Pinecone's pricing is usage-based with monthly minimums that catch people off guard. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. This page breaks down the real costs, what the minimums actually cover, and how to estimate your monthly bill.",
     "tiers": [
       {
-        "name": "Free (Starter)",
+        "name": "Starter (Free)",
         "price": "$0",
         "billing": "Free forever",
         "highlights": [
-          "Up to 2GB storage",
-          "5 serverless indexes",
-          "100 namespaces per index",
-          "Community support only",
-          "Single cloud region"
+          "2GB index storage included",
+          "2 million write units included",
+          "1 million read units included",
+          "1 serverless index",
+          "Community support only"
         ],
         "popular": false
       },
       {
         "name": "Standard",
-        "price": "Usage-based",
-        "billing": "pay as you go",
+        "price": "$50/mo",
+        "billing": "minimum + usage",
         "highlights": [
-          "Unlimited storage",
-          "Unlimited indexes",
-          "Unlimited namespaces",
-          "Reads: $8.25/1M read units",
-          "Writes: $2/1M write units",
+          "$50/month minimum commitment",
           "Storage: $0.33/GB/month",
-          "Email support"
+          "Write units: $4 per million",
+          "Read units: $16 per million",
+          "SAML SSO, backup/restore, RBAC"
         ],
         "popular": true
       },
       {
         "name": "Enterprise",
-        "price": "Custom",
-        "billing": "annual contract",
+        "price": "$500/mo",
+        "billing": "minimum + usage",
         "highlights": [
-          "Everything in Standard",
-          "Dedicated infrastructure",
-          "99.99% SLA",
-          "SSO and RBAC",
-          "Multi-region replication",
-          "Dedicated support engineer",
-          "Custom data retention"
+          "$500/month minimum commitment",
+          "Write units: $6 per million",
+          "Read units: $24 per million",
+          "Private networking and CMK encryption",
+          "HIPAA compliance available ($190/mo add-on)"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "Read units add up fast. A single query with metadata filtering can cost 5-10 read units, not 1. At 1M queries/day, you're looking at $250-500/month in reads alone.",
-      "Storage costs are low ($0.33/GB) but dimensions matter. 1536-dimension embeddings (OpenAI default) use 4x more storage than 384-dimension models.",
-      "Namespace operations are free but creating many small indexes is less efficient than fewer larger ones.",
-      "Data transfer costs aren't listed but apply when your app and Pinecone are in different cloud regions."
+      "The $50/month minimum on Standard means you pay $50 even if you use $5 worth of resources. Your usage only matters once it exceeds $50. This catches hobbyists and small projects off guard.",
+      "Read units cost 4x more than write units ($16/M vs $4/M on Standard). Read-heavy workloads like RAG applications pay more than write-heavy indexing pipelines.",
+      "Storage costs ($0.33/GB/month) add up with high-dimensional embeddings. A million 1536-dimension vectors (OpenAI embeddings) uses roughly 6GB, costing $2/month in storage alone.",
+      "Enterprise's $500/month minimum is non-negotiable. Even light usage costs $500. The premium buys private networking, CMK encryption, and HIPAA eligibility.",
+      "HIPAA compliance is an additional $190/month add-on on Enterprise tier. Healthcare applications need to budget for the total: $500 minimum + $190 HIPAA = $690/month before usage.",
+      "Pinecone offers a $300 credit for a 3-week trial on Standard. Use this to benchmark your actual costs before committing."
     ],
     "who_needs_what": [
       {
-        "persona": "Prototyping or small project",
-        "recommendation": "Free tier handles up to ~100K vectors with 1536 dimensions. Good enough for prototypes and small production apps. You'll outgrow it when you hit the 2GB storage cap."
+        "persona": "Personal project or prototype",
+        "recommendation": "Starter (free). 2GB storage and 1 million read units is enough for prototyping RAG applications with up to ~300K vectors. Upgrade to Standard only when you outgrow the storage or need RBAC."
       },
       {
-        "persona": "Growing production app",
-        "recommendation": "Standard serverless starts cheap but watch your read units. Budget $50-200/month for a typical app with 1M vectors and moderate query volume."
+        "persona": "Production RAG application",
+        "recommendation": "Standard at $50/month minimum. Most production RAG apps with 1-10 million vectors cost $50-200/month on Standard. Use the $300 trial credit to benchmark before committing."
       },
       {
-        "persona": "Large scale / enterprise",
-        "recommendation": "Enterprise pricing is negotiable. If you're spending $1,000+/month on Standard, negotiate an annual contract for volume discounts. Consider whether self-hosted alternatives like Weaviate or pgvector make more financial sense at your scale."
+        "persona": "Enterprise with compliance needs",
+        "recommendation": "Enterprise at $500/month minimum. Required for private networking, CMK encryption, or HIPAA compliance. Budget $500-2,000/month depending on vector count and query volume."
       }
     ],
-    "bottom_line": "Pinecone's free tier is generous for prototyping. Serverless pricing is competitive for small-to-medium workloads. But costs can surprise you at scale because read units are consumed faster than you'd expect. If you're processing millions of queries, run the numbers against self-hosted alternatives like pgvector or Weaviate before committing.",
+    "bottom_line": "Pinecone's free tier is generous for prototyping. The jump to Standard ($50/month minimum) is where it gets real \u2014 most production RAG applications land between $50-200/month on Standard. Enterprise at $500/month minimum is for teams that need compliance features. Read-heavy workloads (which most RAG apps are) should budget around the read unit cost ($16/million) as the primary expense driver.",
     "internal_links": [
       {
         "text": "Pinecone Review",
@@ -356,7 +628,36 @@
         "answer": "Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query."
       }
     ],
-    "date_updated": "2026-02-15"
+    "date_updated": "2026-02-15",
+    "deep_sections": [
+      {
+        "heading": "Understanding Pinecone's Unit-Based Pricing",
+        "body": [
+          "Pinecone charges for three things: storage ($/GB/month), write units (indexing vectors), and read units (querying vectors). Your monthly bill is the greater of your minimum commitment or your actual usage.",
+          "A write unit represents writing one vector to an index. Writing 1 million vectors costs $4 on Standard. A read unit represents one vector read during a query. A single query that scans and returns 10 nearest neighbors might consume 10+ read units depending on your index configuration.",
+          "Storage is straightforward: $0.33 per GB per month on Standard. The size of your index depends on vector dimensions and metadata. OpenAI's text-embedding-3-small (1536 dimensions) produces ~6KB per vector. One million vectors takes roughly 6GB, costing $2/month in storage.",
+          "The key insight: most RAG applications are read-heavy. You index once (or incrementally), but every user query triggers a read. A chatbot handling 10,000 queries per day generates ~300,000 read units per month, costing about $5 on Standard. Storage and write costs are usually smaller than read costs for production apps."
+        ]
+      },
+      {
+        "heading": "Real-World Cost Examples",
+        "body": [
+          "<strong>Small RAG chatbot (100K vectors, 1K queries/day):</strong> Storage: 0.6GB \u00d7 $0.33 = $0.20/month. Read units: ~30K/month \u00d7 $16/1M = $0.48/month. Total usage: under $1/month. You still pay the $50 minimum. The free Starter tier would cover this easily.",
+          "<strong>Production SaaS with search (5M vectors, 50K queries/day):</strong> Storage: 30GB \u00d7 $0.33 = $9.90/month. Read units: ~1.5M/month \u00d7 $16/1M = $24/month. Write units (daily updates): ~100K/month \u00d7 $4/1M = $0.40/month. Total: ~$35/month in usage, so you pay the $50 minimum.",
+          "<strong>Large-scale recommendation engine (50M vectors, 500K queries/day):</strong> Storage: 300GB \u00d7 $0.33 = $99/month. Read units: ~15M/month \u00d7 $16/1M = $240/month. Write units: ~1M/month \u00d7 $4/1M = $4/month. Total: ~$343/month on Standard.",
+          "<strong>Enterprise healthcare app (10M vectors, HIPAA required):</strong> Standard usage might be $80/month, but you need Enterprise ($500 min) plus HIPAA ($190/month add-on). Total: $690/month minimum regardless of actual usage."
+        ]
+      },
+      {
+        "heading": "Pinecone vs Self-Hosted Alternatives",
+        "body": [
+          "Pinecone's managed service competes with self-hosted vector databases like pgvector, Weaviate, Chroma, and Qdrant. The tradeoff is operational simplicity vs cost control.",
+          "pgvector (PostgreSQL extension) is free and runs on your existing database server. No minimum commitments. But you manage scaling, backups, and performance tuning yourself. For teams already running PostgreSQL, pgvector at zero marginal cost beats Pinecone's $50/month minimum for small workloads.",
+          "Weaviate Cloud starts at $45/month (Flex plan) with a similar usage-based model. Chroma Cloud has a free tier and pay-as-you-go pricing. Both are worth evaluating alongside Pinecone.",
+          "Pinecone's advantage is zero operational overhead and strong query performance at scale. If your team doesn't want to manage vector database infrastructure, Pinecone's $50-200/month Standard tier is reasonable for the convenience. If you have a DevOps team, self-hosted options save money on larger deployments."
+        ]
+      }
+    ]
   },
   {
     "slug": "openai-api-pricing",
@@ -1355,22 +1656,22 @@
     "slug": "windsurf-pricing",
     "tool_name": "Windsurf",
     "tool_slug": "windsurf",
-    "title": "Windsurf Pricing (March 2026): Free vs Pro vs Team Compared",
-    "meta_description": "Free gets you limited flows. Pro is $15/mo. Team is $30/mo. Here's where each plan's limits bite and when you need to upgrade.",
+    "title": "Windsurf Pricing (March 2026): Free, Pro ($15/mo), Teams & Enterprise",
+    "meta_description": "Windsurf Free gives 25 credits/month. Pro is $15/mo with 500 credits. Teams is $30/user. Full credit system explained with cost comparison to Cursor.",
     "og_description": "Windsurf pricing breakdown for 2026. Free, Pro, and Team plans compared with hidden costs and real limitations.",
-    "h1": "Windsurf Pricing: What Each Plan Actually Gets You",
-    "intro": "Windsurf (formerly Codeium) has carved out a niche between GitHub Copilot and Cursor, pitching itself as the AI code editor that handles multi-file edits without burning through credits. The pricing reflects that positioning. Here's what each tier costs, where the limits show up, and which plan fits your workflow.",
+    "h1": "Windsurf Pricing: Plans, Credits & Real Costs (March 2026)",
+    "intro": "Windsurf uses a credit-based pricing model. Every AI interaction costs credits, with the amount varying by model. The free tier gives 25 credits per month \u2014 enough for a few sessions. Pro at $15/month includes 500 credits. Windsurf's own SWE-1 model has a fixed credit cost, while third-party models like Claude Sonnet 4.6 charge based on actual token usage. This page covers every plan, what credits buy, and how Windsurf compares to Cursor and Copilot.",
     "tiers": [
       {
         "name": "Free",
         "price": "$0",
         "billing": "Free forever",
         "highlights": [
-          "Unlimited basic code completions",
-          "5 User Flows (multi-step AI actions) per day",
-          "5 Cascade (multi-file edit) sessions per day",
-          "Access to base models only",
-          "Community support"
+          "25 credits per month",
+          "Unlimited Fast Tab completions",
+          "Access to AI Chat and Commands",
+          "1 App Deploy per day",
+          "Good for trying Windsurf"
         ],
         "popular": false
       },
@@ -1379,56 +1680,63 @@
         "price": "$15",
         "billing": "per month",
         "highlights": [
-          "Unlimited code completions",
-          "Unlimited User Flows",
-          "Unlimited Cascade sessions",
-          "Access to Claude Sonnet 4.6, GPT-4.1, and Gemini",
-          "Priority model access during peak hours",
-          "Codebase-wide indexing and context"
+          "500 credits per month",
+          "Unlimited Tab, Command, and App Previews",
+          "Access to Claude Sonnet 4.6, GPT-4.1, Gemini",
+          "Cascade multi-file editing",
+          "$5/mo cheaper than Cursor Pro"
         ],
         "popular": true
       },
       {
-        "name": "Team",
+        "name": "Teams",
         "price": "$30",
         "billing": "per user/month",
         "highlights": [
-          "Everything in Pro",
-          "Centralized billing and seat management",
-          "Usage analytics dashboard",
-          "Admin controls and policies",
-          "SSO integration",
-          "Priority support"
+          "500 credits per user per month",
+          "All Pro features for each user",
+          "Centralized admin and billing",
+          "Team management controls",
+          "SSO and user provisioning"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Enterprise",
+        "price": "$60",
+        "billing": "per user/month",
+        "highlights": [
+          "Custom credit allocation",
+          "Zero Data Retention (ZDR) by default",
+          "Advanced security and compliance",
+          "Dedicated support",
+          "Custom deployment options"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "The free tier's 5 Cascade sessions per day sounds fine until you realize a single complex refactor can eat all 5 in an hour.",
-      "Pro at $15/mo is cheaper than Cursor Pro ($20/mo), but Windsurf's Cascade quality lags behind Cursor's Composer on large codebases.",
-      "There's no way to buy additional Flows or Cascade sessions a la carte. If you hit the free tier limits, you're upgrading to Pro or waiting until tomorrow.",
-      "Model selection on the free tier is limited to Windsurf's base models. You won't get Claude or GPT-4o without Pro.",
-      "Annual billing isn't discounted. It's $15/mo whether you pay monthly or yearly."
+      "Credits deplete at different rates depending on the AI model. Windsurf's SWE-1 model costs a fixed amount per interaction. Premium third-party models like Claude Sonnet 4.6 charge based on token volume \u2014 long conversations drain credits faster.",
+      "Add-on credits cost $10 for 250 credits if you exhaust your monthly allocation. That's $0.04 per credit, the same effective rate as the $15/500 Pro plan.",
+      "Tab completions are unlimited on all plans, but Cascade (multi-file editing) and Chat consume credits. Heavy Cascade use burns through 500 credits faster than you expect.",
+      "Enterprise at $60/user is 2x Teams and includes ZDR (Zero Data Retention) by default. If your organization doesn't need ZDR or advanced compliance, Teams at $30/user is sufficient.",
+      "25 free credits per month is roughly 3-5 meaningful AI sessions. It's a trial, not a workflow."
     ],
     "who_needs_what": [
       {
-        "persona": "Developer evaluating AI editors",
-        "recommendation": "The free tier gives you a real taste of multi-file editing with 5 daily Cascade sessions. That's enough to compare against Cursor and Copilot over a week."
+        "persona": "Developer trying AI code editors",
+        "recommendation": "Free tier (25 credits). Enough for 3-5 sessions to evaluate Windsurf's Cascade and AI features. Compare against Cursor's Hobby tier and Copilot's free plan."
       },
       {
-        "persona": "Individual developer (daily use)",
-        "recommendation": "Pro at $15/mo hits a good price point. It's $5/mo cheaper than Cursor Pro and includes unlimited Cascade. Worth it if Windsurf's editing quality works for your stack."
+        "persona": "Individual developer",
+        "recommendation": "Pro at $15/month. 500 credits covers daily use for most developers. At $5 less than Cursor Pro, it's the cheapest full-featured AI code editor with multi-file editing."
       },
       {
-        "persona": "Small to mid-size team",
-        "recommendation": "Team at $30/user/mo makes sense if you need seat management and SSO. Otherwise, individual Pro licenses save you $15/user/mo."
-      },
-      {
-        "persona": "Enterprise with compliance needs",
-        "recommendation": "Windsurf doesn't have a full enterprise tier yet. If you need audit logs, data residency controls, or custom SLAs, Cursor Business or Copilot Enterprise are better options today."
+        "persona": "Engineering team",
+        "recommendation": "Teams at $30/user. 500 credits per user with admin controls. Cheaper than Cursor Teams ($40/user) but more than Copilot Business ($19/user)."
       }
     ],
-    "bottom_line": "Windsurf Pro at $15/mo undercuts Cursor by $5 and includes unlimited multi-file editing. The quality gap has narrowed, but Cursor still handles larger codebases more reliably. If you're price-sensitive and working on small-to-medium projects, Windsurf is a strong pick. The free tier's daily limits are tight but fair for evaluation.",
+    "bottom_line": "Windsurf Pro at $15/month is the value play in AI code editors \u2014 $5 less than Cursor Pro and $5 more than Copilot Pro, with a solid feature set including Cascade for multi-file editing. The 500-credit monthly allocation covers typical daily coding. If you're evaluating AI code editors, Windsurf is worth testing alongside Cursor and Copilot. The free tier's 25 credits is just enough to form an opinion.",
     "internal_links": [
       {
         "text": "Windsurf Review",
@@ -1473,7 +1781,75 @@
         "answer": "If you're using Windsurf daily, yes. The free tier's 5 Cascade sessions run out fast during active development. Pro removes all limits and gives you access to better models. At $15/mo, it's the cheapest unlimited AI editor plan available."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-02-20",
+    "deep_sections": [
+      {
+        "heading": "How the Credit System Works",
+        "body": [
+          "Every AI interaction in Windsurf costs credits. The exact cost depends on which model handles the request. Windsurf's built-in SWE-1 model costs a fixed number of credits per interaction. Third-party models like Claude Sonnet 4.6 or GPT-4.1 cost credits proportional to the tokens they process.",
+          "Tab completions are free on all plans \u2014 they don't consume credits. This means basic autocomplete works indefinitely. Credits are consumed by Chat, Cascade (multi-file editing), and Commands.",
+          "When you run out of credits, you can buy add-on packs at $10 for 250 credits. Your monthly allocation resets each billing cycle. Unused credits don't roll over."
+        ]
+      },
+      {
+        "heading": "Windsurf vs Cursor vs Copilot: Price and Feature Comparison",
+        "body": [
+          "All three editors offer AI-powered coding with different pricing models and strengths."
+        ],
+        "table": {
+          "headers": [
+            "",
+            "Windsurf Pro",
+            "Cursor Pro",
+            "Copilot Pro"
+          ],
+          "rows": [
+            [
+              "Price",
+              "$15/mo",
+              "$20/mo",
+              "$10/mo"
+            ],
+            [
+              "Credit/Request system",
+              "500 credits",
+              "$20 credit pool",
+              "300 premium requests"
+            ],
+            [
+              "Free tier",
+              "25 credits/mo",
+              "Limited requests",
+              "2,000 completions + 50 premium"
+            ],
+            [
+              "Multi-file editing",
+              "Cascade",
+              "Composer",
+              "Agent mode"
+            ],
+            [
+              "Tab autocomplete",
+              "Unlimited (free)",
+              "Unlimited on paid",
+              "Unlimited on paid"
+            ],
+            [
+              "Team plan",
+              "$30/user",
+              "$40/user",
+              "$19/user"
+            ],
+            [
+              "IDE base",
+              "VS Code fork",
+              "VS Code fork",
+              "VS Code, JetBrains, Neovim"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "slug": "replit-pricing",
@@ -1719,11 +2095,11 @@
     "slug": "weaviate-pricing",
     "tool_name": "Weaviate",
     "tool_slug": "weaviate",
-    "title": "Weaviate Pricing 2026: Open Source, Serverless, and Enterprise Costs",
-    "meta_description": "Weaviate pricing for 2026. Free self-hosted option, Serverless starting free, Enterprise with SLAs. Real cost examples for vector database workloads.",
+    "title": "Weaviate Pricing (March 2026): Open Source, Flex ($45/mo), Plus & Premium",
+    "meta_description": "Weaviate is open source (free self-hosted). Cloud Flex starts at $45/mo. Plus at $280/mo. Premium is custom. Full breakdown of storage and dimension pricing.",
     "og_description": "Weaviate pricing for 2026. Open source self-hosting vs managed cloud. What it actually costs at different scales.",
-    "h1": "Weaviate Pricing: Self-Hosted vs Cloud Costs",
-    "intro": "Weaviate is one of the few vector databases you can genuinely self-host for free. Their managed cloud option, Weaviate Cloud, adds convenience but also cost. Here's what each option runs you and when managed makes more sense than self-hosted.",
+    "h1": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium (March 2026)",
+    "intro": "Weaviate updated its cloud pricing in late 2025, replacing the old Serverless/Enterprise tiers with Flex, Plus, and Premium plans. Self-hosted Weaviate is still free and open source. The cloud plans start at $45/month for Flex (pay-as-you-go) and go up to Premium for enterprise deployments. There's also a free 14-day sandbox for testing. This page covers every option and helps you choose between self-hosted and managed cloud.",
     "tiers": [
       {
         "name": "Open Source (Self-Hosted)",
@@ -1731,79 +2107,75 @@
         "billing": "Free forever",
         "highlights": [
           "Full-featured vector database",
-          "All search types (vector, keyword, hybrid)",
-          "Multi-tenancy support",
           "Run on your own infrastructure",
-          "Community support via forums and Slack"
+          "No limits on storage or queries",
+          "Community support",
+          "Docker, Kubernetes, or bare metal"
         ],
         "popular": false
       },
       {
-        "name": "Serverless Cloud (Free Tier)",
-        "price": "$0",
-        "billing": "Free sandbox",
+        "name": "Cloud Flex",
+        "price": "$45/mo",
+        "billing": "minimum + usage",
         "highlights": [
-          "2 sandbox clusters",
-          "14-day expiration per sandbox",
-          "Good for prototyping and evaluation",
-          "No credit card required",
-          "Limited to small datasets"
-        ],
-        "popular": false
-      },
-      {
-        "name": "Serverless Cloud (Paid)",
-        "price": "Usage-based",
-        "billing": "pay as you go",
-        "highlights": [
-          "Stored objects: $0.035 per 1M dimension-hours",
-          "Queries: $0.175 per 1M dimensions queried",
-          "No cluster management needed",
-          "Auto-scaling",
-          "Standard support included"
+          "Pay-as-you-go cloud hosting",
+          "Built-in RBAC and AI-native services",
+          "Embeddings and Agents included",
+          "Automated upgrades",
+          "99.5% uptime SLA (Shared Cloud)"
         ],
         "popular": true
       },
       {
-        "name": "Enterprise Cloud",
+        "name": "Cloud Plus",
+        "price": "$280/mo",
+        "billing": "minimum + usage",
+        "highlights": [
+          "Annual commitment options",
+          "Enhanced security features",
+          "Shared or Dedicated deployments",
+          "99.9% uptime SLA",
+          "Stronger support included"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Cloud Premium",
         "price": "Custom",
-        "billing": "annual contract",
+        "billing": "per configuration",
         "highlights": [
           "Dedicated infrastructure",
-          "99.9%+ SLA",
-          "Customer-managed encryption keys",
-          "Advanced RBAC",
-          "Bring your own cloud (AWS, GCP, Azure)",
-          "Dedicated support engineer"
+          "Business-critical SLA (99.95%)",
+          "Priority support with faster response",
+          "Advanced compliance features",
+          "BYOC (Bring Your Own Cloud) option"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "Self-hosting is free in license terms, but you're paying for the infrastructure. A small production setup on AWS runs $200-500/month in EC2 and EBS costs.",
-      "Serverless pricing is measured in dimension-hours, which is confusing. A collection with 1M objects of 1536 dimensions costs roughly $50-80/month just for storage.",
-      "Query costs scale with the number of dimensions queried, not the number of results. High-dimensional embeddings (1536) cost 4x more per query than low-dimensional ones (384).",
-      "The free sandbox expires after 14 days. If you forget to migrate your data, it's gone. This is for evaluation only, not persistent development."
+      "The 14-day free sandbox expires automatically. You can't extend it. If you need more evaluation time, spin up a new sandbox or self-host locally.",
+      "Flex at $45/month is a minimum, not a flat rate. Actual costs depend on storage volume, vector dimensions, and query volume. Heavy usage can exceed the minimum.",
+      "Plus at $280/month requires annual commitment options. Monthly flexibility costs more. If your usage is unpredictable, Flex's pay-as-you-go model is safer.",
+      "Self-hosted is free but not zero-cost. You pay for compute, storage, and the engineering time to manage Weaviate yourself. For small deployments, self-hosted on a $20/month VPS is cheaper than any cloud plan.",
+      "BYOC (Bring Your Own Cloud) on Premium lets Weaviate manage the database inside your AWS/GCP/Azure account. This solves data residency requirements but adds complexity to your cloud bill."
     ],
     "who_needs_what": [
       {
-        "persona": "Developer building a prototype",
-        "recommendation": "Start with the free sandbox to evaluate Weaviate's features. When you're ready for persistence, either self-host with Docker or move to Serverless Cloud."
+        "persona": "Individual developer or prototype",
+        "recommendation": "Self-hosted (free). Run Weaviate in Docker locally or on a small VPS. The 14-day sandbox is good for quick tests but not for sustained development."
       },
       {
-        "persona": "Small production workload",
-        "recommendation": "Serverless Cloud is cheapest for under 1M vectors. Expect $30-100/month depending on query volume and embedding dimensions. No infrastructure to manage."
+        "persona": "Startup or small production app",
+        "recommendation": "Cloud Flex at $45/month. Pay-as-you-go pricing with no annual commitment. Good enough for most production RAG and search workloads."
       },
       {
-        "persona": "Team with DevOps capability",
-        "recommendation": "Self-host with Kubernetes or Docker Compose. You'll spend $200-500/month on infrastructure but save on the managed service markup and have full control over performance tuning."
-      },
-      {
-        "persona": "Enterprise with compliance requirements",
-        "recommendation": "Enterprise Cloud gives you dedicated infrastructure, SLAs, and bring-your-own-cloud. Negotiate pricing based on your volume. Compare against self-hosting total cost including ops time."
+        "persona": "Enterprise with compliance needs",
+        "recommendation": "Cloud Plus ($280/month) or Premium (custom). Plus gets you dedicated infrastructure and 99.9% SLA. Premium adds BYOC for data residency requirements."
       }
     ],
-    "bottom_line": "Weaviate's self-hosted option is a real advantage if you have the ops capability. It's fully featured and free to use. The managed Serverless Cloud is reasonably priced for small workloads but the dimension-based pricing model makes costs hard to predict. At scale, compare managed costs against self-hosting on your own infrastructure. The breakeven is usually around 5M vectors.",
+    "bottom_line": "Self-hosted Weaviate is the best deal in vector databases \u2014 full-featured and free. Cloud Flex at $45/month is competitive with Pinecone Standard ($50/month) for teams that want managed infrastructure. The Plus and Premium tiers make sense for enterprises that need SLAs and compliance. If you have a DevOps team, self-hosted saves significant money at any scale.",
     "internal_links": [
       {
         "text": "Weaviate Review",
@@ -1844,7 +2216,63 @@
         "answer": "Weaviate offers self-hosting (Pinecone doesn't), hybrid search (vector + keyword), and more flexible data modeling. Pinecone has simpler serverless pricing and less operational overhead. Weaviate is cheaper at scale due to the self-host option. Pinecone is easier to start with."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-02-20",
+    "deep_sections": [
+      {
+        "heading": "Self-Hosted vs Cloud: The Real Tradeoff",
+        "body": [
+          "Self-hosted Weaviate is free, but it's not zero-effort. You need to provision infrastructure, configure backups, handle upgrades, and monitor performance. For a small RAG application, a $20/month VPS running Docker is all you need. For a large production deployment, you're looking at Kubernetes orchestration and potentially $200-1,000/month in compute costs.",
+          "Cloud Flex eliminates operational overhead. Weaviate handles scaling, backups, upgrades, and monitoring. The $45/month minimum is the price of that convenience. For teams without dedicated DevOps, cloud is usually worth the premium.",
+          "The breakpoint: if your self-hosted infrastructure costs exceed $100-200/month and you're spending significant engineering time on maintenance, Cloud Flex is comparable in total cost and saves engineering hours."
+        ]
+      },
+      {
+        "heading": "Weaviate vs Pinecone vs Chroma: Price Comparison",
+        "body": [
+          "The three most popular managed vector databases have different pricing models."
+        ],
+        "table": {
+          "headers": [
+            "Feature",
+            "Weaviate Cloud Flex",
+            "Pinecone Standard",
+            "Chroma Cloud"
+          ],
+          "rows": [
+            [
+              "Starting price",
+              "$45/month",
+              "$50/month",
+              "Free tier available"
+            ],
+            [
+              "Free tier",
+              "14-day sandbox",
+              "2GB storage (permanent)",
+              "Yes (limited)"
+            ],
+            [
+              "Self-hosted option",
+              "Yes (open source)",
+              "No",
+              "Yes (open source)"
+            ],
+            [
+              "Pricing model",
+              "Storage + dimensions + backups",
+              "Read/write units + storage",
+              "Usage-based"
+            ],
+            [
+              "Enterprise minimum",
+              "$280/month (Plus)",
+              "$500/month",
+              "Contact sales"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "slug": "chroma-pricing",
@@ -1981,22 +2409,22 @@
     "slug": "cohere-pricing",
     "tool_name": "Cohere",
     "tool_slug": "cohere",
-    "title": "Cohere API Pricing 2026: Command, Embed, and Rerank Model Costs",
-    "meta_description": "Cohere API pricing for 2026. Command R+ at $2.50/1M input tokens, Embed at $0.10/1M tokens, Rerank at $2/1K searches. Full pricing breakdown.",
+    "title": "Cohere API Pricing (March 2026): Command R+, Embed, and Rerank Costs",
+    "meta_description": "Command R+ costs $2.50/1M input, $10/1M output. Embed v3 is $0.10/1M tokens. Rerank 3.5 is $2/1K searches. Full model breakdown with trial info.",
     "og_description": "Cohere API pricing for 2026. Command, Embed, and Rerank models compared with real-world costs for production applications.",
-    "h1": "Cohere API Pricing: What Each Model Costs",
-    "intro": "Cohere takes a different approach than OpenAI and Anthropic. Instead of one flagship model, they offer specialized models for generation (Command), embeddings (Embed), and ranking (Rerank). The pricing varies a lot by model type. Here's what each costs and where Cohere makes sense in your stack.",
+    "h1": "Cohere API Pricing: Every Model Compared (March 2026)",
+    "intro": "Cohere offers three product lines: Command (text generation), Embed (vector embeddings), and Rerank (search result reranking). Unlike OpenAI and Anthropic, Cohere has a meaningful free trial tier with 100 API calls per minute and 1,000 per month. The paid models are competitively priced \u2014 Command R+ at $2.50/$10 per million tokens is cheaper than Claude Sonnet 4.6 and GPT-4.1 for text generation. This page covers every model's pricing.",
     "tiers": [
       {
         "name": "Trial (Free)",
         "price": "$0",
-        "billing": "Free with rate limits",
+        "billing": "Rate-limited",
         "highlights": [
-          "Access to all models",
           "100 API calls per minute",
-          "1,000 API calls per month",
-          "No production use allowed",
-          "Good for evaluation only"
+          "1,000 calls per month",
+          "Access to all models",
+          "No credit card required",
+          "Enough for prototyping and evaluation"
         ],
         "popular": false
       },
@@ -2005,11 +2433,11 @@
         "price": "$2.50 / $10",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Largest and most capable generation model",
+          "Most capable text generation model",
+          "Strong at RAG and tool use",
           "128K context window",
-          "Strong multilingual support (10+ languages)",
-          "RAG-optimized with citation generation",
-          "Tool use and function calling"
+          "Multilingual support (10+ languages)",
+          "Cheaper than Sonnet 4.6 and GPT-4.1"
         ],
         "popular": true
       },
@@ -2018,11 +2446,11 @@
         "price": "$0.15 / $0.60",
         "billing": "per 1M input / output tokens",
         "highlights": [
-          "Smaller, faster generation model",
+          "Budget text generation model",
+          "Good for classification and extraction",
           "128K context window",
-          "Good for RAG, summarization, chat",
-          "Lower latency than Command R+",
-          "Best value for high-volume generation"
+          "Comparable to GPT-4.1 Nano on simple tasks",
+          "Extremely cost-effective at scale"
         ],
         "popular": false
       },
@@ -2031,53 +2459,50 @@
         "price": "$0.10",
         "billing": "per 1M tokens",
         "highlights": [
-          "State-of-the-art embedding model",
+          "High-quality text embeddings",
           "1024 dimensions (configurable)",
           "Multilingual support",
-          "Search, classification, clustering use cases",
-          "Cheaper than OpenAI embeddings"
+          "Comparable to OpenAI text-embedding-3-small",
+          "Best-in-class for search and RAG"
         ],
         "popular": false
       },
       {
-        "name": "Rerank v3",
-        "price": "$2",
+        "name": "Rerank 3.5",
+        "price": "$2.00",
         "billing": "per 1,000 searches",
         "highlights": [
-          "Re-ranks search results by relevance",
-          "Works with any retrieval system",
+          "Reranks up to 100 docs per search",
           "Dramatically improves RAG accuracy",
-          "Simple API (just pass query + documents)",
-          "Multilingual support"
+          "Works with any vector database",
+          "Simple API \u2014 just send query + documents",
+          "Documents >500 tokens split into chunks"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "The trial tier's 1,000 calls/month limit means you'll exhaust it in a single afternoon of development. Plan to move to paid quickly if you're serious about evaluation.",
-      "Command R+ output tokens cost 4x more than input. Long-form generation tasks can cost significantly more than expected. Use Command R for drafts and R+ only for final outputs.",
-      "Rerank pricing is per search, not per token. Each search can include up to 1,000 documents. If you're re-ranking 100 documents per query, that's still just $0.002 per query.",
-      "There's no batch pricing discount like OpenAI's Batch API. High-volume users should negotiate custom contracts."
+      "Rerank charges per search, not per document. One search with 100 documents costs the same as one search with 10 documents (if all docs are under 500 tokens). But documents over 500 tokens get split into chunks, and each chunk counts separately.",
+      "Command R+ output tokens cost 4x input tokens. Long generative responses get expensive. Use Command R ($0.15/$0.60) for tasks that don't need R+ quality.",
+      "The free trial's 1,000 calls/month is generous for prototyping but not for production. There's no pay-as-you-go middle ground \u2014 you go from free to production pricing.",
+      "Embed v3 at $0.10/1M tokens is cheap, but embedding large document collections adds up. A million 500-word documents is roughly 650M tokens, costing $65 to embed.",
+      "Cohere's pricing is competitive with OpenAI and Anthropic, but the model quality gap matters. Command R+ is strong at RAG but may lag behind Sonnet 4.6 or GPT-4.1 on general reasoning and coding tasks."
     ],
     "who_needs_what": [
       {
         "persona": "RAG pipeline builder",
-        "recommendation": "Cohere's Embed + Rerank combo is arguably the best value in the market for retrieval. Embed at $0.10/1M tokens for indexing, Rerank at $2/1K searches for quality. Pair with any LLM for generation."
+        "recommendation": "Embed v3 ($0.10/1M tokens) for embeddings + Rerank 3.5 ($2/1K searches) for result quality. This combo is Cohere's strongest use case and competitive with any alternative."
       },
       {
-        "persona": "Multilingual application",
-        "recommendation": "Cohere's multilingual support across all models is a standout feature. If your app serves multiple languages, Command R+ handles 10+ languages without separate models. Most competitors charge extra or perform worse on non-English text."
+        "persona": "Text generation at scale",
+        "recommendation": "Command R ($0.15/$0.60) for high-volume simple tasks. Command R+ ($2.50/$10) when you need stronger reasoning. Both are cheaper than Anthropic and OpenAI equivalents."
       },
       {
-        "persona": "Cost-sensitive production app",
-        "recommendation": "Command R at $0.15/$0.60 per 1M tokens is one of the cheapest capable generation models available. It's in the same price range as GPT-4o-mini but with a 128K context window and solid RAG performance."
-      },
-      {
-        "persona": "Developer comparing LLM providers",
-        "recommendation": "Use the free trial to test Cohere against OpenAI and Anthropic on your specific tasks. Cohere's sweet spot is retrieval and multilingual work. For general chat and coding, OpenAI and Anthropic typically win."
+        "persona": "Enterprise with compliance needs",
+        "recommendation": "Cohere offers deployment on your own cloud (VPC) and on-premises options. Contact sales for enterprise pricing. This is a differentiator vs OpenAI and Anthropic, which are API-only."
       }
     ],
-    "bottom_line": "Cohere isn't trying to be the best general-purpose LLM. Its strength is the Embed + Rerank stack for retrieval, multilingual support, and competitive pricing on generation models. If you're building RAG applications, Cohere's embedding and reranking models should be on your shortlist regardless of which LLM you use for generation.",
+    "bottom_line": "Cohere's sweet spot is RAG pipelines. Embed v3 for creating embeddings plus Rerank 3.5 for improving search results is a best-in-class combination at competitive prices. For text generation, Command R+ at $2.50/$10 is cheaper than Sonnet 4.6 ($3/$15) and GPT-4.1 ($2/$8 on output), though model quality varies by task. The free trial with 1,000 calls/month is the most generous free tier among major API providers.",
     "internal_links": [
       {
         "text": "Anthropic API Pricing",
@@ -2118,55 +2543,102 @@
         "answer": "Cohere has a trial tier that's free with 1,000 API calls per month and 100 per minute. It's limited to non-production use. There's no permanent free tier for production applications. You move to pay-as-you-go pricing once you're past evaluation."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-02-20",
+    "deep_sections": [
+      {
+        "heading": "Cohere vs OpenAI vs Anthropic: Pricing Comparison",
+        "body": [
+          "Here's how Cohere's models stack up against the competition on price."
+        ],
+        "table": {
+          "headers": [
+            "Use Case",
+            "Cohere",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "rows": [
+            [
+              "Budget generation",
+              "Command R: $0.15/$0.60",
+              "GPT-4.1 Nano: $0.10/$0.40",
+              "Haiku 4.5: $1/$5"
+            ],
+            [
+              "Production generation",
+              "Command R+: $2.50/$10",
+              "GPT-4.1: $2/$8",
+              "Sonnet 4.6: $3/$15"
+            ],
+            [
+              "Embeddings",
+              "Embed v3: $0.10/1M",
+              "text-embedding-3-small: $0.02/1M",
+              "\u2014"
+            ],
+            [
+              "Reranking",
+              "Rerank 3.5: $2/1K searches",
+              "\u2014",
+              "\u2014"
+            ],
+            [
+              "Free tier",
+              "1,000 calls/month",
+              "Limited credits",
+              "Limited credits"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "slug": "aws-bedrock-pricing",
     "tool_name": "AWS Bedrock",
     "tool_slug": "aws-bedrock",
-    "title": "AWS Bedrock Pricing 2026: On-Demand, Provisioned, and Batch Costs",
-    "meta_description": "AWS Bedrock pricing for 2026. On-demand token pricing for Claude, Llama, Mistral, and Titan models. Provisioned throughput and batch pricing explained.",
+    "title": "AWS Bedrock Pricing (March 2026): Claude, Llama, Mistral & All Models",
+    "meta_description": "Claude Sonnet 4.6 on Bedrock costs $3/$15 per 1M tokens. Llama 3.1 70B is $2.65/$3.50. Full model pricing with batch, provisioned, and on-demand rates.",
     "og_description": "AWS Bedrock pricing breakdown for 2026. On-demand, provisioned, and batch modes compared across all available models.",
-    "h1": "AWS Bedrock Pricing: What Each Model and Mode Costs",
-    "intro": "AWS Bedrock gives you access to Claude, Llama, Mistral, Titan, and other models through a single API. The appeal is keeping everything in your AWS ecosystem. But the pricing has three modes (on-demand, provisioned, batch), and it's easy to pick the wrong one. Here's how the costs break down.",
+    "h1": "AWS Bedrock Pricing: Every Model's Real Cost (March 2026)",
+    "intro": "AWS Bedrock gives you API access to models from Anthropic, Meta, Mistral, Cohere, and others \u2014 all through a single AWS endpoint. The pricing varies by model, with the same per-token rates as the providers' direct APIs in most cases. Bedrock adds its own pricing dimensions: on-demand (pay per token), batch (50% off), and provisioned throughput (reserved capacity). This page covers every major model's pricing on Bedrock and when each billing option makes sense.",
     "tiers": [
       {
         "name": "On-Demand",
-        "price": "Varies by model",
-        "billing": "per 1,000 input / output tokens",
+        "price": "Per-token",
+        "billing": "Pay per use, no commitment",
         "highlights": [
           "Claude Sonnet 4.6: $3/$15 per 1M tokens",
-          "Claude Haiku 4.5: $1/$5 per 1M tokens",
           "Llama 3.1 70B: $2.65/$3.50 per 1M tokens",
           "Mistral Large: $4/$12 per 1M tokens",
-          "Amazon Titan Text: $0.50/$1.50 per 1M tokens",
-          "No commitment, pay only for what you use"
+          "No minimum spend or commitment",
+          "Best for variable or unpredictable workloads"
         ],
         "popular": true
       },
       {
         "name": "Batch Inference",
-        "price": "50% off on-demand",
-        "billing": "per 1,000 input / output tokens",
+        "price": "50% off",
+        "billing": "on-demand rates",
         "highlights": [
-          "Half the cost of on-demand pricing",
-          "Results returned within 24 hours",
-          "No real-time latency requirements",
-          "Good for bulk processing and analysis",
-          "Available for most models"
+          "Half the cost of on-demand",
+          "Results within 24 hours",
+          "Same models and quality",
+          "Best for offline processing",
+          "Submit via S3 bucket"
         ],
         "popular": false
       },
       {
         "name": "Provisioned Throughput",
-        "price": "Hourly rate per model unit",
-        "billing": "per hour (1-month or 6-month commitment)",
+        "price": "Hourly rate",
+        "billing": "reserved capacity",
         "highlights": [
-          "Guaranteed throughput and latency",
-          "Custom model deployments (fine-tuned)",
-          "1-month commitment: higher hourly rate",
-          "6-month commitment: approximately 40% savings",
-          "Predictable performance for production"
+          "Guaranteed throughput for production",
+          "1-month or 6-month commitments",
+          "No per-token charges",
+          "Best for steady high-volume workloads",
+          "Custom model hosting available"
         ],
         "popular": false
       },
@@ -2175,41 +2647,43 @@
         "price": "Usage-based",
         "billing": "per query + storage",
         "highlights": [
-          "Knowledge Bases: $0.01 per query (retrieval)",
-          "Agent invocations billed per LLM call",
-          "Vector storage in OpenSearch Serverless",
-          "S3 storage for source documents",
-          "Managed RAG without custom infrastructure"
+          "Managed RAG pipeline",
+          "Vector storage included",
+          "Automatic document chunking",
+          "Agent orchestration built in",
+          "Additional charges on top of model costs"
         ],
         "popular": false
       }
     ],
     "hidden_costs": [
-      "Bedrock's on-demand model prices are the same as going directly to Anthropic or others. You're not getting a discount for using AWS as the middleman. The value is integration, not savings.",
-      "OpenSearch Serverless for Knowledge Bases has a minimum cost of roughly $700/month (4 OCUs). That's a steep floor for a small RAG project.",
-      "Provisioned Throughput has a 1-month minimum commitment. If you overprovision, you're paying for capacity you don't use. Get your traffic patterns nailed down before committing.",
-      "Data transfer charges apply when calling Bedrock from outside the same AWS region. Cross-region calls add $0.02-0.09/GB on top of token costs.",
-      "CloudWatch logging for Bedrock (which you'll want for debugging) adds another $0.50/GB of log data ingested."
+      "Bedrock's on-demand pricing for Claude matches Anthropic's direct API pricing. You're not paying a premium for the AWS wrapper \u2014 but you're also not getting a discount.",
+      "Legacy Claude models (3.5 Sonnet in Public Extended Access) now cost $6/$30 per 1M tokens \u2014 double the current Sonnet 4.6 price. If your code references old model IDs, you're overpaying.",
+      "Knowledge Bases adds charges for vector storage, document processing, and retrieval on top of the model inference cost. A simple RAG setup can cost $50-200/month in Bedrock-specific charges.",
+      "Provisioned throughput requires 1-month minimum commitments. If your traffic drops, you still pay for reserved capacity. Only commit after you have stable baseline traffic data.",
+      "Data transfer costs apply when moving data between AWS regions or out of AWS. These are standard AWS charges but easy to overlook when budgeting for AI.",
+      "Bedrock Agents adds orchestration charges per step. A multi-step agent workflow costs more than a single model invocation for the same output.",
+      "Model availability varies by AWS region. Not all models are available in all regions. Check your region before building a pipeline."
     ],
     "who_needs_what": [
       {
-        "persona": "AWS-native team using Claude or Llama",
-        "recommendation": "On-demand is the starting point. Prices match the model providers directly. The value is staying within your AWS VPC, using IAM for access control, and avoiding separate API key management."
+        "persona": "AWS-native team",
+        "recommendation": "On-demand Bedrock. If your infrastructure is already on AWS, Bedrock keeps everything in one ecosystem. IAM auth, CloudWatch metrics, and VPC endpoints work out of the box."
       },
       {
-        "persona": "Batch processing or analytics workload",
-        "recommendation": "Batch inference at 50% off is hard to beat if you don't need real-time responses. Ideal for processing large document sets, classification jobs, or nightly analysis runs."
+        "persona": "Multi-model application",
+        "recommendation": "On-demand Bedrock gives you Claude, Llama, Mistral, and Cohere through a single API endpoint. No need for separate API keys and billing from each provider."
       },
       {
-        "persona": "High-throughput production application",
-        "recommendation": "Provisioned Throughput guarantees latency and availability. The 6-month commitment saves about 40%. Do the math: if you're spending $5K+/month on on-demand, provisioned is likely cheaper."
+        "persona": "High-volume production workload",
+        "recommendation": "Provisioned throughput. If you need guaranteed latency and throughput for a steady workload, provisioned capacity eliminates throttling risk at a predictable cost."
       },
       {
-        "persona": "Team building a RAG application",
-        "recommendation": "Knowledge Bases is the easiest path to managed RAG, but the OpenSearch Serverless floor ($700/month) is steep for small projects. Consider self-managed retrieval with Pinecone or Weaviate if you need lower costs."
+        "persona": "Cost-sensitive team",
+        "recommendation": "Consider the providers' direct APIs. Anthropic and OpenAI offer the same models at the same price, and some offer additional discounts (prompt caching, batch API) that may not be available on Bedrock."
       }
     ],
-    "bottom_line": "Bedrock's main value isn't cheaper models. It's keeping everything in AWS. If your team already runs on AWS, Bedrock simplifies security, compliance, and infrastructure management. The pricing matches direct API pricing for most models, so you're paying for convenience and integration. Batch inference at 50% off is the best deal. Avoid Knowledge Bases unless you're ready for the $700/month OpenSearch minimum.",
+    "bottom_line": "Bedrock makes sense for teams already on AWS who want one API endpoint for multiple model providers. The pricing matches direct API costs for on-demand usage, and batch inference at 50% off is the same deal you'd get from the providers directly. The value-add is operational: IAM auth, CloudWatch, VPC endpoints, and managed RAG via Knowledge Bases. If you're not on AWS, there's no pricing reason to choose Bedrock over direct API access.",
     "internal_links": [
       {
         "text": "Anthropic API Pricing",
@@ -2254,6 +2728,87 @@
         "answer": "Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-02-20",
+    "deep_sections": [
+      {
+        "heading": "On-Demand Model Pricing Table",
+        "body": [
+          "Here's what every major model costs on Bedrock's on-demand tier. These prices match (or are very close to) the providers' direct API pricing."
+        ],
+        "table": {
+          "headers": [
+            "Model",
+            "Input / 1M tokens",
+            "Output / 1M tokens",
+            "Context Window"
+          ],
+          "rows": [
+            [
+              "Claude Haiku 4.5",
+              "$1.00",
+              "$5.00",
+              "200K"
+            ],
+            [
+              "Claude Sonnet 4.6",
+              "$3.00",
+              "$15.00",
+              "200K"
+            ],
+            [
+              "Claude Opus 4.6",
+              "$5.00",
+              "$25.00",
+              "200K"
+            ],
+            [
+              "Llama 3.1 8B",
+              "$0.30",
+              "$0.60",
+              "128K"
+            ],
+            [
+              "Llama 3.1 70B",
+              "$2.65",
+              "$3.50",
+              "128K"
+            ],
+            [
+              "Llama 3.1 405B",
+              "$5.32",
+              "$16.00",
+              "128K"
+            ],
+            [
+              "Mistral Large",
+              "$4.00",
+              "$12.00",
+              "128K"
+            ],
+            [
+              "Cohere Command R+",
+              "$2.50",
+              "$10.00",
+              "128K"
+            ],
+            [
+              "Cohere Embed v3",
+              "$0.10",
+              "\u2014",
+              "512"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Bedrock vs Direct API Access: When Bedrock Wins",
+        "body": [
+          "Bedrock's pricing matches direct API pricing, so the decision comes down to operational benefits, not cost savings.",
+          "Bedrock wins when your team is already AWS-native. IAM authentication means no API key management. CloudWatch gives you usage metrics alongside your other AWS monitoring. VPC endpoints keep traffic off the public internet. These are significant operational advantages for enterprise teams.",
+          "Bedrock also wins for multi-model architectures. Instead of managing API keys, billing, and SDKs for Anthropic, Meta, Mistral, and Cohere separately, Bedrock gives you one endpoint. Model switching is a config change, not an integration project.",
+          "Direct APIs win when you need the providers' latest features fastest. New models and capabilities (like Anthropic's prompt caching or OpenAI's batch API improvements) often hit the direct API before they're available on Bedrock. If being on the latest version matters, direct access has less lag."
+        ]
+      }
+    ]
   }
 ]

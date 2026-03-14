@@ -14,15 +14,15 @@
       gtag('config', 'G-WMWEZTSWM0');
     </script>
 
-    <title>Pinecone Pricing (March 2026): Free Tier Limits, Serverless Costs & Gotchas | PE Collective</title>
-    <meta name="description" content="Free tier caps at 2GB. Serverless starts at $0.33/1M reads but scales fast. Full tier comparison with real monthly bills at 1M, 10M, and 100M vectors.">
+    <title>Pinecone Pricing (March 2026): Free Tier, Standard ($50/mo min), Enterprise | PE Collective</title>
+    <meta name="description" content="Pinecone Starter is free with 2GB storage. Standard starts at $50/mo minimum. Enterprise at $500/mo. Full breakdown of storage, read/write unit costs.">
     <link rel="canonical" href="https://pecollective.com/tools/pinecone-pricing/">
 
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pecollective.com/tools/pinecone-pricing/">
-    <meta property="og:title" content="Pinecone Pricing (March 2026): Free Tier Limits, Serverless Costs & Gotchas">
-    <meta property="og:description" content="Free tier caps at 2GB. Serverless starts at $0.33/1M reads but scales fast. Full tier comparison with real monthly bills at 1M, 10M, and 100M vectors.">
+    <meta property="og:title" content="Pinecone Pricing (March 2026): Free Tier, Standard ($50/mo min), Enterprise">
+    <meta property="og:description" content="Pinecone Starter is free with 2GB storage. Standard starts at $50/mo minimum. Enterprise at $500/mo. Full breakdown of storage, read/write unit costs.">
     <meta property="og:site_name" content="PE Collective">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
@@ -33,8 +33,8 @@
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@pe_collective">
-    <meta name="twitter:title" content="Pinecone Pricing (March 2026): Free Tier Limits, Serverless Costs & Gotchas">
-    <meta name="twitter:description" content="Free tier caps at 2GB. Serverless starts at $0.33/1M reads but scales fast. Full tier comparison with real monthly bills at 1M, 10M, and 100M vectors.">
+    <meta name="twitter:title" content="Pinecone Pricing (March 2026): Free Tier, Standard ($50/mo min), Enterprise">
+    <meta name="twitter:description" content="Pinecone Starter is free with 2GB storage. Standard starts at $50/mo minimum. Enterprise at $500/mo. Full breakdown of storage, read/write unit costs.">
     <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
     <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
@@ -720,7 +720,7 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Pinecone Pricing (March 2026): Free Tier Limits, Serverless Costs & Gotchas",
+            "name": "Pinecone Pricing (March 2026): Free Tier, Standard ($50/mo min), Enterprise",
             "item": "https://pecollective.com/tools/pinecone-pricing/"
         }
     ]
@@ -866,73 +866,98 @@
 
   <main>
     <div class="pricing-page">
-      <h1>Pinecone Pricing: What It Actually Costs at Scale</h1>
-      <p class="subtitle">Pinecone is the most popular managed vector database, but the pricing can be confusing. They've moved to a serverless model that's cheap for small workloads but can add up fast at scale. Here's what you'll actually pay.</p>
+      <h1>Pinecone Pricing: What It Actually Costs (March 2026)</h1>
+      <p class="subtitle">Pinecone's pricing is usage-based with monthly minimums that catch people off guard. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. This page breaks down the real costs, what the minimums actually cover, and how to estimate your monthly bill.</p>
 
       <div class="pricing-tiers">
         
         <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
           
-          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Free (Starter)</h3>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Starter (Free)</h3>
           <div style="margin-bottom: 16px;">
             <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$0</span>
             <span style="color: var(--text-muted); font-size: 0.875rem;"> Free forever</span>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Up to 2GB storage</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 5 serverless indexes</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 100 namespaces per index</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 2GB index storage included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 2 million write units included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1 million read units included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1 serverless index</li>
               <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Community support only</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Single cloud region</li>
           </ul>
         </div>
         <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-color: var(--gold) !important;">
           <span style="position: absolute; top: -12px; right: 16px; background: var(--gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
           <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Standard</h3>
           <div style="margin-bottom: 16px;">
-            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">Usage-based</span>
-            <span style="color: var(--text-muted); font-size: 0.875rem;"> pay as you go</span>
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$50/mo</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> minimum + usage</span>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Unlimited storage</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Unlimited indexes</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Unlimited namespaces</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Reads: $8.25/1M read units</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Writes: $2/1M write units</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> $50/month minimum commitment</li>
               <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Storage: $0.33/GB/month</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Email support</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Write units: $4 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Read units: $16 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> SAML SSO, backup/restore, RBAC</li>
           </ul>
         </div>
         <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
           
           <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Enterprise</h3>
           <div style="margin-bottom: 16px;">
-            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">Custom</span>
-            <span style="color: var(--text-muted); font-size: 0.875rem;"> annual contract</span>
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$500/mo</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> minimum + usage</span>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Everything in Standard</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Dedicated infrastructure</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 99.99% SLA</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> SSO and RBAC</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Multi-region replication</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Dedicated support engineer</li>
-              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Custom data retention</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> $500/month minimum commitment</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Write units: $6 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Read units: $24 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Private networking and CMK encryption</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> HIPAA compliance available ($190/mo add-on)</li>
           </ul>
         </div>
       </div>
 
       
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Understanding Pinecone's Unit-Based Pricing</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone charges for three things: storage ($/GB/month), write units (indexing vectors), and read units (querying vectors). Your monthly bill is the greater of your minimum commitment or your actual usage.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">A write unit represents writing one vector to an index. Writing 1 million vectors costs $4 on Standard. A read unit represents one vector read during a query. A single query that scans and returns 10 nearest neighbors might consume 10+ read units depending on your index configuration.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Storage is straightforward: $0.33 per GB per month on Standard. The size of your index depends on vector dimensions and metadata. OpenAI's text-embedding-3-small (1536 dimensions) produces ~6KB per vector. One million vectors takes roughly 6GB, costing $2/month in storage.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The key insight: most RAG applications are read-heavy. You index once (or incrementally), but every user query triggers a read. A chatbot handling 10,000 queries per day generates ~300,000 read units per month, costing about $5 on Standard. Storage and write costs are usually smaller than read costs for production apps.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Real-World Cost Examples</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Small RAG chatbot (100K vectors, 1K queries/day):</strong> Storage: 0.6GB × $0.33 = $0.20/month. Read units: ~30K/month × $16/1M = $0.48/month. Total usage: under $1/month. You still pay the $50 minimum. The free Starter tier would cover this easily.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Production SaaS with search (5M vectors, 50K queries/day):</strong> Storage: 30GB × $0.33 = $9.90/month. Read units: ~1.5M/month × $16/1M = $24/month. Write units (daily updates): ~100K/month × $4/1M = $0.40/month. Total: ~$35/month in usage, so you pay the $50 minimum.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Large-scale recommendation engine (50M vectors, 500K queries/day):</strong> Storage: 300GB × $0.33 = $99/month. Read units: ~15M/month × $16/1M = $240/month. Write units: ~1M/month × $4/1M = $4/month. Total: ~$343/month on Standard.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Enterprise healthcare app (10M vectors, HIPAA required):</strong> Standard usage might be $80/month, but you need Enterprise ($500 min) plus HIPAA ($190/month add-on). Total: $690/month minimum regardless of actual usage.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Pinecone vs Self-Hosted Alternatives</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone's managed service competes with self-hosted vector databases like pgvector, Weaviate, Chroma, and Qdrant. The tradeoff is operational simplicity vs cost control.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">pgvector (PostgreSQL extension) is free and runs on your existing database server. No minimum commitments. But you manage scaling, backups, and performance tuning yourself. For teams already running PostgreSQL, pgvector at zero marginal cost beats Pinecone's $50/month minimum for small workloads.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Weaviate Cloud starts at $45/month (Flex plan) with a similar usage-based model. Chroma Cloud has a free tier and pay-as-you-go pricing. Both are worth evaluating alongside Pinecone.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone's advantage is zero operational overhead and strong query performance at scale. If your team doesn't want to manage vector database infrastructure, Pinecone's $50-200/month Standard tier is reasonable for the convenience. If you have a DevOps team, self-hosted options save money on larger deployments.</p>
+        
+      </div>
 
       
       <div style="margin-top: 48px;">
         <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Hidden Costs &amp; Gotchas</h2>
         <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
           <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Read units add up fast. A single query with metadata filtering can cost 5-10 read units, not 1. At 1M queries/day, you're looking at $250-500/month in reads alone.</li>
-          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Storage costs are low ($0.33/GB) but dimensions matter. 1536-dimension embeddings (OpenAI default) use 4x more storage than 384-dimension models.</li>
-          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Namespace operations are free but creating many small indexes is less efficient than fewer larger ones.</li>
-          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Data transfer costs aren't listed but apply when your app and Pinecone are in different cloud regions.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> The $50/month minimum on Standard means you pay $50 even if you use $5 worth of resources. Your usage only matters once it exceeds $50. This catches hobbyists and small projects off guard.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Read units cost 4x more than write units ($16/M vs $4/M on Standard). Read-heavy workloads like RAG applications pay more than write-heavy indexing pipelines.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Storage costs ($0.33/GB/month) add up with high-dimensional embeddings. A million 1536-dimension vectors (OpenAI embeddings) uses roughly 6GB, costing $2/month in storage alone.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Enterprise's $500/month minimum is non-negotiable. Even light usage costs $500. The premium buys private networking, CMK encryption, and HIPAA eligibility.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> HIPAA compliance is an additional $190/month add-on on Enterprise tier. Healthcare applications need to budget for the total: $500 minimum + $190 HIPAA = $690/month before usage.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Pinecone offers a $300 credit for a 3-week trial on Standard. Use this to benchmark your actual costs before committing.</li>
           </ul>
         </div>
       </div>
@@ -942,22 +967,22 @@
         <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Plan Do You Need?</h2>
         
           <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
-            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Prototyping or small project</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Free tier handles up to ~100K vectors with 1536 dimensions. Good enough for prototypes and small production apps. You'll outgrow it when you hit the 2GB storage cap.</p>
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Personal project or prototype</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Starter (free). 2GB storage and 1 million read units is enough for prototyping RAG applications with up to ~300K vectors. Upgrade to Standard only when you outgrow the storage or need RBAC.</p>
           </div>
           <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
-            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Growing production app</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Standard serverless starts cheap but watch your read units. Budget $50-200/month for a typical app with 1M vectors and moderate query volume.</p>
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Production RAG application</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Standard at $50/month minimum. Most production RAG apps with 1-10 million vectors cost $50-200/month on Standard. Use the $300 trial credit to benchmark before committing.</p>
           </div>
           <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
-            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Large scale / enterprise</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Enterprise pricing is negotiable. If you're spending $1,000+/month on Standard, negotiate an annual contract for volume discounts. Consider whether self-hosted alternatives like Weaviate or pgvector make more financial sense at your scale.</p>
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Enterprise with compliance needs</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Enterprise at $500/month minimum. Required for private networking, CMK encryption, or HIPAA compliance. Budget $500-2,000/month depending on vector count and query volume.</p>
           </div>
       </div>
 
       <div class="bottom-line">
         <h3>The Bottom Line</h3>
-        <p>Pinecone's free tier is generous for prototyping. Serverless pricing is competitive for small-to-medium workloads. But costs can surprise you at scale because read units are consumed faster than you'd expect. If you're processing millions of queries, run the numbers against self-hosted alternatives like pgvector or Weaviate before committing.</p>
+        <p>Pinecone's free tier is generous for prototyping. The jump to Standard ($50/month minimum) is where it gets real — most production RAG applications land between $50-200/month on Standard. Enterprise at $500/month minimum is for teams that need compliance features. Read-heavy workloads (which most RAG apps are) should budget around the read unit cost ($16/million) as the primary expense driver.</p>
       </div>
 
       <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">

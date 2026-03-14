@@ -130,7 +130,7 @@
         "highlights": [
           "2,000 code completions per month",
           "50 chat messages per month",
-          "Access to GPT-4o and Claude 3.5 Sonnet",
+          "Access to Claude Sonnet 4.6 and GPT-4.1",
           "Works in VS Code and JetBrains",
           "Multi-file editing (limited)"
         ],
@@ -143,7 +143,7 @@
         "highlights": [
           "Unlimited code completions",
           "Unlimited chat messages",
-          "Access to all models (GPT-4o, Claude, Gemini)",
+          "Access to all models (Claude Sonnet 4.6, GPT-4.1, Gemini)",
           "Agent mode for multi-step tasks",
           "Full multi-file editing",
           "Custom instructions"
@@ -224,7 +224,7 @@
     "faqs": [
       {
         "question": "Is GitHub Copilot free?",
-        "answer": "Yes, GitHub Copilot now has a free tier with 2,000 completions and 50 chat messages per month. It's enough to try the tool but not for daily professional use. The free tier includes access to GPT-4o and Claude 3.5 Sonnet."
+        "answer": "Yes, GitHub Copilot now has a free tier with 2,000 completions and 50 chat messages per month. It's enough to try the tool but not for daily professional use. The free tier includes access to Claude Sonnet 4.6 and GPT-4.1."
       },
       {
         "question": "Is GitHub Copilot worth $10 a month?",
@@ -1382,7 +1382,7 @@
           "Unlimited code completions",
           "Unlimited User Flows",
           "Unlimited Cascade sessions",
-          "Access to GPT-4o, Claude 3.5 Sonnet, and Gemini",
+          "Access to Claude Sonnet 4.6, GPT-4.1, and Gemini",
           "Priority model access during peak hours",
           "Codebase-wide indexing and context"
         ],
@@ -2135,8 +2135,8 @@
         "price": "Varies by model",
         "billing": "per 1,000 input / output tokens",
         "highlights": [
-          "Claude 3.5 Sonnet: $3/$15 per 1M tokens",
-          "Claude 3.5 Haiku: $0.25/$1.25 per 1M tokens",
+          "Claude Sonnet 4.6: $3/$15 per 1M tokens",
+          "Claude Haiku 4.5: $1/$5 per 1M tokens",
           "Llama 3.1 70B: $2.65/$3.50 per 1M tokens",
           "Mistral Large: $4/$12 per 1M tokens",
           "Amazon Titan Text: $0.50/$1.50 per 1M tokens",

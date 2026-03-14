@@ -738,7 +738,7 @@
       "name": "Is the Anthropic API better than the OpenAI API?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For text generation, code, and instruction following, Claude models outperform GPT-4o on most benchmarks. OpenAI's API covers more ground with image generation, speech, and real-time audio. The 'better' API depends entirely on what you're building."
+        "text": "For text generation, code, and instruction following, Claude models outperform GPT-4.1 on most benchmarks. OpenAI's API covers more ground with image generation, speech, and real-time audio. The 'better' API depends entirely on what you're building."
       }
     },
     {
@@ -1192,7 +1192,7 @@
 
         <div class="quick-verdict">
           <h2>Quick Verdict</h2>
-          <p><strong>Choose OpenAI API if:</strong> You need the broadest model lineup with GPT-4o, o3 reasoning, DALL-E image generation, Whisper transcription, and TTS all under one roof. OpenAI's ecosystem covers more modalities and has the largest third-party integration library.</p>
+          <p><strong>Choose OpenAI API if:</strong> You need the broadest model lineup with GPT-4.1, o3 reasoning, DALL-E image generation, Whisper transcription, and TTS all under one roof. OpenAI's ecosystem covers more modalities and has the largest third-party integration library.</p>
           <p><strong>Choose Anthropic API if:</strong> You need the best code generation, longest context window, and most reliable instruction following for production applications. Anthropic's Claude models lead on SWE-bench and offer 200K token context with prompt caching that cuts costs by up to 90%.</p>
         </div>
 
@@ -1209,13 +1209,13 @@
             <tbody>
               <tr>
                 <td><strong>Flagship Model Quality</strong></td>
-                <td>GPT-4o (strong all-around)</td>
-                <td class="winner">Claude Opus 4 (top code/reasoning)</td>
+                <td>GPT-4.1 (strong all-around)</td>
+                <td class="winner">Claude Opus 4.6 (top code/reasoning)</td>
               </tr>
               <tr>
                 <td><strong>Fast Model Quality</strong></td>
-                <td class="winner">GPT-4o mini ($0.15/1M in)</td>
-                <td>Claude Sonnet 4 ($3/1M in)</td>
+                <td class="winner">GPT-4.1 Nano ($0.15/1M in)</td>
+                <td>Claude Sonnet 4.6 ($3/1M in)</td>
               </tr>
               <tr>
                 <td><strong>Context Window</strong></td>
@@ -1229,7 +1229,7 @@
               </tr>
               <tr>
                 <td><strong>Image Generation</strong></td>
-                <td class="winner">✓ DALL-E 3, GPT-4o image</td>
+                <td class="winner">✓ DALL-E 3, GPT-4.1 image</td>
                 <td>Not available</td>
               </tr>
               <tr>
@@ -1275,13 +1275,13 @@
             
           <div class="section-divider">
             <h3>🟢 OpenAI Wins: Breadth and Ecosystem</h3>
-            <p>OpenAI's API covers territory that Anthropic doesn't touch. Need image generation? DALL-E 3 and GPT-4o's native image output are right there. Need speech-to-text? Whisper. Text-to-speech? Their TTS models sound natural. Real-time voice conversations? The Realtime API handles that too. If you're building a product that spans multiple modalities, OpenAI lets you consolidate on a single provider.</p>
+            <p>OpenAI's API covers territory that Anthropic doesn't touch. Need image generation? DALL-E 3 and GPT-4.1's native image output are right there. Need speech-to-text? Whisper. Text-to-speech? Their TTS models sound natural. Real-time voice conversations? The Realtime API handles that too. If you're building a product that spans multiple modalities, OpenAI lets you consolidate on a single provider.</p>
             <p>The third-party ecosystem is also larger. Every AI framework, every no-code tool, every SaaS platform supports OpenAI first. LangChain, LlamaIndex, Vercel AI SDK, Zapier, Make, Retool... the list goes on. When your stack needs to talk to an LLM, OpenAI compatibility is table stakes. Anthropic support is growing fast but hasn't reached that same ubiquity.</p>
             <p>Rate limits are more generous at entry tiers. OpenAI starts you at 500 requests per minute on Tier 1. Anthropic starts at 50 RPM. For applications with bursty traffic patterns or lots of concurrent users, this gap matters early on. Both providers increase limits as you spend more, but the starting point favors OpenAI.</p>
           </div>
           <div class="section-divider">
             <h3>🟠 Anthropic Wins: Quality and Cost Efficiency</h3>
-            <p>Claude models produce better code. That's not a subjective opinion; it's backed by SWE-bench scores where Claude consistently resolves more real GitHub issues than GPT-4o. If your application generates, reviews, or transforms code, Anthropic's models give you measurably better output. Claude also follows complex system prompts more faithfully, which reduces the prompt engineering iteration cycles that eat up development time.</p>
+            <p>Claude models produce better code. That's not a subjective opinion; it's backed by SWE-bench scores where Claude consistently resolves more real GitHub issues than GPT-4.1. If your application generates, reviews, or transforms code, Anthropic's models give you measurably better output. Claude also follows complex system prompts more faithfully, which reduces the prompt engineering iteration cycles that eat up development time.</p>
             <p>The 200K token context window is 56% larger than OpenAI's 128K. For RAG applications, document analysis, or any use case involving long inputs, that extra capacity changes what's possible in a single call. Combine it with Anthropic's prompt caching at 90% discount (vs OpenAI's 50% automatic cache discount), and high-context workloads become dramatically cheaper on Anthropic.</p>
             <p>Extended thinking is Anthropic's answer to o1/o3 reasoning models, and it's integrated directly into the standard API rather than being a separate model. You don't need to choose between a 'fast' model and a 'reasoning' model. You ask Claude to think harder on a specific request and it does, within the same conversation. It's a cleaner developer experience for applications that need variable reasoning depth.</p>
           </div>
@@ -1407,7 +1407,7 @@
         
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is the Anthropic API better than the OpenAI API?</summary>
-          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For text generation, code, and instruction following, Claude models outperform GPT-4o on most benchmarks. OpenAI's API covers more ground with image generation, speech, and real-time audio. The 'better' API depends entirely on what you're building.</p>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For text generation, code, and instruction following, Claude models outperform GPT-4.1 on most benchmarks. OpenAI's API covers more ground with image generation, speech, and real-time audio. The 'better' API depends entirely on what you're building.</p>
         </details>
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How do the costs compare?</summary>

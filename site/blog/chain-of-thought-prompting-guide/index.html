@@ -104,7 +104,7 @@
       "name": "Does chain-of-thought prompting work with all AI models?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CoT works with all major large language models (GPT-4, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot."
+        "text": "CoT works with all major large language models (GPT-4.1, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot."
       }
     },
     {
@@ -385,7 +385,7 @@ The bug: when the list is already sorted in descending order (or the largest ele
 
 <div class="technique-card">
   <div class="technique-card__title">CoT for Decision Making</div>
-  <p class="technique-card__description"><strong>Prompt:</strong> We're choosing between two vendors for our AI infrastructure. Vendor A: $0.03/1K tokens, 99.9% uptime SLA, 200ms average latency, limited to GPT-4. Vendor B: $0.05/1K tokens, 99.5% uptime SLA, 150ms average latency, supports GPT-4, Claude, and Gemini. We process 50M tokens/month. Analyze this decision step by step.<br><br>
+  <p class="technique-card__description"><strong>Prompt:</strong> We're choosing between two vendors for our AI infrastructure. Vendor A: $0.03/1K tokens, 99.9% uptime SLA, 200ms average latency, limited to GPT-4.1. Vendor B: $0.05/1K tokens, 99.5% uptime SLA, 150ms average latency, supports GPT-4.1, Claude, and Gemini. We process 50M tokens/month. Analyze this decision step by step.<br><br>
 <strong>Response with CoT:</strong><br>
 Step 1: Cost comparison at our volume.<br>
 - Vendor A: 50M/1K x $0.03 = $1,500/month<br>
@@ -398,7 +398,7 @@ Step 2: Uptime impact.<br>
 Step 3: Latency comparison.<br>
 - Vendor B is 50ms faster (150 vs 200ms). At 50M tokens, this matters for user-facing applications. For batch processing, it's negligible.<br><br>
 Step 4: Model flexibility.<br>
-- Vendor A locks us to GPT-4. If OpenAI has outages, rate limits, or price increases, we have no alternative.<br>
+- Vendor A locks us to GPT-4.1. If OpenAI has outages, rate limits, or price increases, we have no alternative.<br>
 - Vendor B supports three providers. This gives us failover capability and negotiating power.<br><br>
 Step 5: Risk assessment.<br>
 - Single-vendor dependency is the biggest risk factor. Model providers have had multi-hour outages. With Vendor A, an OpenAI outage means we're down. With Vendor B, we failover to Claude or Gemini.<br><br>
@@ -471,7 +471,7 @@ This gives you the reasoning for debugging and logging while keeping the user-fa
 
 <h3>CoT with Different Models</h3>
 
-<p>Different models respond to CoT differently. GPT-4 and Claude 3.5 Sonnet produce structured, methodical reasoning with minimal guidance. Smaller models sometimes need more explicit instruction about what "step by step" means. When using smaller models, provide few-shot CoT examples rather than relying on zero-shot.</p>
+<p>Different models respond to CoT differently. GPT-4.1 and Claude Sonnet 4.6 produce structured, methodical reasoning with minimal guidance. Smaller models sometimes need more explicit instruction about what "step by step" means. When using smaller models, provide few-shot CoT examples rather than relying on zero-shot.</p>
 
 <p>Some newer models (like OpenAI's o1 series) have built-in chain-of-thought that runs internally. For these models, adding "think step by step" is redundant and can actually slow down responses without improving quality. Check the model's documentation to know whether explicit CoT is needed.</p>
 
@@ -512,12 +512,12 @@ This gives you the reasoning for debugging and logging while keeping the user-fa
 
 <details>
   <summary>Does chain-of-thought prompting work with all AI models?</summary>
-  <p>CoT works with all major large language models (GPT-4, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. They mimic the format without actually reasoning more carefully. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot "think step by step."</p>
+  <p>CoT works with all major large language models (GPT-4.1, Claude, Gemini, Llama), but effectiveness varies with model size. Large models (70B+ parameters) show the biggest improvements. Smaller models sometimes produce reasoning steps that look right but contain errors. They mimic the format without actually reasoning more carefully. For smaller models, few-shot CoT with explicit examples tends to work better than zero-shot "think step by step."</p>
 </details>
 
 <details>
   <summary>How much extra does chain-of-thought cost in API calls?</summary>
-  <p>CoT typically increases output tokens by 50 to 200%, which directly increases API costs by the same amount. A classification that normally uses 50 output tokens might use 150 with CoT. At GPT-4 pricing, that's the difference between fractions of a cent per call. For high-volume applications processing millions of requests, the cost adds up. The calculation is simple: multiply your current output token costs by 2 to 3x and decide if the accuracy improvement justifies it.</p>
+  <p>CoT typically increases output tokens by 50 to 200%, which directly increases API costs by the same amount. A classification that normally uses 50 output tokens might use 150 with CoT. At GPT-4.1 pricing, that's the difference between fractions of a cent per call. For high-volume applications processing millions of requests, the cost adds up. The calculation is simple: multiply your current output token costs by 2 to 3x and decide if the accuracy improvement justifies it.</p>
 </details>
 
 <details>
@@ -548,7 +548,7 @@ This gives you the reasoning for debugging and logging while keeping the user-fa
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="/glossary/chain-of-thought/">Chain of Thought Glossary Entry</a> | <a href="/glossary/few-shot-prompting/">Few-Shot Prompting Glossary Entry</a> | <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/prompt-engineering-interview-questions/">Prompt Engineering Interview Questions</a> | <a href="/tools/claude-vs-chatgpt-coding/">Claude vs ChatGPT for Coding</a> | <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/gpt4-vs-claude/">GPT-4 vs Claude</a>
+            Related: <a href="/blog/prompt-engineering-guide/">Complete Prompt Engineering Guide</a> | <a href="/blog/prompt-engineering-best-practices/">Prompt Engineering Best Practices</a> | <a href="/glossary/chain-of-thought/">Chain of Thought Glossary Entry</a> | <a href="/glossary/few-shot-prompting/">Few-Shot Prompting Glossary Entry</a> | <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/prompt-engineering-interview-questions/">Prompt Engineering Interview Questions</a> | <a href="/tools/claude-vs-chatgpt-coding/">Claude vs ChatGPT for Coding</a> | <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/gpt4-vs-claude/">GPT-4.1 vs Claude</a>
           </p>
         </div>
       </div>

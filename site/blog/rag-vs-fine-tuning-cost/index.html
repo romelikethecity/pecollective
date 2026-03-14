@@ -128,7 +128,7 @@
       "name": "How often do you need to retrain a fine-tuned model?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every time your underlying knowledge changes significantly or when a new base model is released. For most companies, this means retraining quarterly to annually. Each retraining cycle costs $500-$5,000 in compute plus engineering time for data preparation and evaluation. Base model upgrades (like GPT-4 to GPT-5) require starting the fine-tuning process from scratch."
+        "text": "Every time your underlying knowledge changes significantly or when a new base model is released. For most companies, this means retraining quarterly to annually. Each retraining cycle costs $500-$5,000 in compute plus engineering time for data preparation and evaluation. Base model upgrades (like GPT-4.1 to GPT-5) require starting the fine-tuning process from scratch."
       }
     }
   ]
@@ -221,7 +221,7 @@
   <p class="technique-card__description">
     <strong>Vector database:</strong> $70-$500/month (Pinecone Starter to Standard, or equivalent)<br>
     <strong>Embedding API calls:</strong> $10-$50/month for initial indexing, then $5-$20/month ongoing<br>
-    <strong>LLM API calls:</strong> $200-$2,000/month depending on volume (GPT-4o or Claude at ~$3-15 per million tokens)<br>
+    <strong>LLM API calls:</strong> $200-$2,000/month depending on volume (GPT-4.1 or Claude at ~$3-15 per million tokens)<br>
     <strong>Document processing:</strong> $20-$100/month (parsing, chunking, metadata extraction)<br>
     <strong>Hosting/compute:</strong> $50-$200/month for the orchestration layer<br>
     <strong>Total monthly:</strong> $350-$2,850
@@ -257,7 +257,7 @@
 <ul>
   <li><strong>Adding new documents:</strong> Your knowledge base changes. New products, updated policies, revised documentation. With RAG, you just ingest the new documents. A well-built pipeline handles this automatically or with minimal manual effort.</li>
   <li><strong>Chunking optimization:</strong> You'll periodically adjust chunk sizes and overlap settings as you find retrieval gaps. Maybe once a quarter.</li>
-  <li><strong>Prompt updates:</strong> When the base model gets updated (GPT-4o to GPT-5, Claude 3 to Claude 4), you may need to adjust your retrieval prompts. Usually a few hours of work.</li>
+  <li><strong>Prompt updates:</strong> When the base model gets updated (GPT-4.1 to GPT-5, Claude 3 to Claude 4), you may need to adjust your retrieval prompts. Usually a few hours of work.</li>
   <li><strong>Monitoring:</strong> Tracking retrieval relevance scores and answer quality. Semi-automated with alerting.</li>
 </ul>
 
@@ -269,7 +269,7 @@
 <ul>
   <li><strong>Knowledge updates:</strong> When your information changes, you need to retrain. That means new training data, new training runs, new evaluations. Each update cycle costs $500-$5,000+ and takes days.</li>
   <li><strong>Model drift:</strong> Fine-tuned models can degrade over time as the base model gets updated or as the distribution of user queries shifts. You need ongoing evaluation to catch this.</li>
-  <li><strong>Base model upgrades:</strong> When a new base model comes out, your fine-tuning doesn't transfer. You start the training process over from scratch. This happened to every team when GPT-4 replaced GPT-3.5, and it'll happen again.</li>
+  <li><strong>Base model upgrades:</strong> When a new base model comes out, your fine-tuning doesn't transfer. You start the training process over from scratch. This happened to every team when GPT-4.1 replaced GPT-3.5, and it'll happen again.</li>
   <li><strong>Data pipeline:</strong> You need a continuous pipeline for collecting, labeling, and validating training examples. This is a permanent engineering commitment.</li>
 </ul>
 

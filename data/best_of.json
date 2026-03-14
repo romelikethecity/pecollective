@@ -20,7 +20,7 @@
         "price": "$20/mo (Pro) / Free tier available",
         "icon": "cursor-icon",
         "url": "https://www.cursor.com",
-        "summary": "Cursor is the most complete AI coding assistant you can buy right now. It's a VS Code fork, so your extensions and keybindings carry over. The Composer feature handles multi-file edits better than anything else we tested. Codebase indexing means it actually understands your project structure, not just the file you have open. Model selection lets you switch between Claude, GPT-4, and others depending on the task.",
+        "summary": "Cursor is the most complete AI coding assistant you can buy right now. It's a VS Code fork, so your extensions and keybindings carry over. The Composer feature handles multi-file edits better than anything else we tested. Codebase indexing means it actually understands your project structure, not just the file you have open. Model selection lets you switch between Claude, GPT-4.1, and others depending on the task.",
         "best_for": "Developers who want a single, all-in-one AI editor with the deepest feature set. Especially strong for large refactors and multi-file changes.",
         "caveat": "At $20/mo it's the most expensive option after usage-based tools. The free tier is restrictive. And because it's a VS Code fork, you're locked out of some extensions that check for the official VS Code build."
       },
@@ -823,7 +823,7 @@
         "price": "Free SDK / OpenAI API usage costs apply",
         "icon": "openai-icon",
         "url": "https://openai.com/index/new-tools-for-building-agents/",
-        "summary": "OpenAI's Agents SDK (the successor to Swarm) is purpose-built for GPT models and it shows. Tool calling, handoffs between agents, and guardrails are all first-class concepts. The integration with OpenAI's function calling is tighter than any third-party framework can achieve. Tracing and debugging come built in. If your stack is GPT-4o or o3 and you don't plan to switch, this gives you the shortest path from idea to working agent.",
+        "summary": "OpenAI's Agents SDK (the successor to Swarm) is purpose-built for GPT models and it shows. Tool calling, handoffs between agents, and guardrails are all first-class concepts. The integration with OpenAI's function calling is tighter than any third-party framework can achieve. Tracing and debugging come built in. If your stack is GPT-4.1 or o3 and you don't plan to switch, this gives you the shortest path from idea to working agent.",
         "best_for": "Teams committed to OpenAI's model ecosystem. Applications where tight integration with GPT function calling and structured outputs matters more than model flexibility. Prototyping agents quickly with minimal boilerplate.",
         "caveat": "Locked to OpenAI models. If you want to use Claude, Gemini, or open-source models, you'll need a different framework. The SDK is relatively new and the API surface is still evolving. Community resources and third-party tutorials are thin compared to LangGraph or CrewAI. No self-hosted option for the orchestration layer."
       },
@@ -1037,9 +1037,9 @@
         "price": "$20/mo (Plus) / Free tier available",
         "icon": "openai-icon",
         "url": "https://chatgpt.com",
-        "summary": "ChatGPT with GPT-4o is the fastest path from blank page to working draft. It excels at the kind of writing developers do most often: commit messages, PR descriptions, email responses, and short documentation snippets. The Canvas feature lets you edit AI-generated text collaboratively, which is closer to a real writing workflow than any competitor. Custom GPTs let you create specialized writing assistants for your team's documentation style.",
+        "summary": "ChatGPT with GPT-4.1 is the fastest path from blank page to working draft. It excels at the kind of writing developers do most often: commit messages, PR descriptions, email responses, and short documentation snippets. The Canvas feature lets you edit AI-generated text collaboratively, which is closer to a real writing workflow than any competitor. Custom GPTs let you create specialized writing assistants for your team's documentation style.",
         "best_for": "Quick, short-form writing tasks. Developers who need a fast draft they can refine. Teams that want to build custom writing assistants with specific style guidelines using Custom GPTs.",
-        "caveat": "GPT-4o has a tendency to be verbose and add qualifiers that technical writing doesn't need. You'll spend time trimming filler phrases. Technical accuracy is slightly lower than Claude on code-related writing. The free tier restricts access to the best models during peak hours."
+        "caveat": "GPT-4.1 has a tendency to be verbose and add qualifiers that technical writing doesn't need. You'll spend time trimming filler phrases. Technical accuracy is slightly lower than Claude on code-related writing. The free tier restricts access to the best models during peak hours."
       },
       {
         "name": "Notion AI",
@@ -1049,7 +1049,7 @@
         "url": "https://www.notion.so/product/ai",
         "summary": "Notion AI is the only tool on this list that lives inside your documentation platform. You write, edit, and publish without leaving Notion. It can summarize meeting notes, generate action items, translate documents, and rewrite technical content for different audiences. The Q&A feature searches your entire Notion workspace and generates answers with citations to your own docs. For teams that already use Notion for documentation, this eliminates context-switching entirely.",
         "best_for": "Engineering teams that use Notion as their documentation hub. Internal documentation, meeting notes, project specs, and knowledge base articles. Teams where multiple people collaborate on the same documents.",
-        "caveat": "Locked to Notion. If you don't use Notion, this isn't an option. The AI quality is good but not as strong as Claude or GPT-4o for complex technical writing. Per-member pricing adds up for larger teams. Limited control over which AI model powers the features."
+        "caveat": "Locked to Notion. If you don't use Notion, this isn't an option. The AI quality is good but not as strong as Claude or GPT-4.1 for complex technical writing. Per-member pricing adds up for larger teams. Limited control over which AI model powers the features."
       },
       {
         "name": "Mintlify",
@@ -1090,7 +1090,7 @@
       },
       {
         "url": "/tools/gpt4-vs-claude/",
-        "text": "GPT-4 vs Claude Comparison"
+        "text": "GPT-4.1 vs Claude Comparison"
       },
       {
         "url": "/glossary/prompt-engineering/",
@@ -1108,7 +1108,7 @@
       },
       {
         "question": "Which AI writes the most accurate technical content?",
-        "answer": "Claude. In our testing, Claude produced fewer factual errors in code documentation, had better understanding of function signatures and type systems, and was more likely to flag when it wasn't confident about a technical detail. GPT-4o is close behind. Both are significantly better than smaller or older models for technical accuracy."
+        "answer": "Claude. In our testing, Claude produced fewer factual errors in code documentation, had better understanding of function signatures and type systems, and was more likely to flag when it wasn't confident about a technical detail. GPT-4.1 is close behind. Both are significantly better than smaller or older models for technical accuracy."
       },
       {
         "question": "Should I use AI to write my README files?",
@@ -1133,7 +1133,7 @@
     "subtitle": "You don't need an API key to run a great language model anymore. Seven open models worth your GPU time.",
     "date_updated": "February 2026",
     "intro": [
-      "Open source LLMs have caught up to proprietary models faster than anyone predicted. Two years ago, running a local model meant accepting significantly worse quality. Today, the best open models match GPT-4 on many benchmarks and beat it on some. The gap hasn't disappeared, but it's narrow enough that the tradeoffs are worth considering.",
+      "Open source LLMs have caught up to proprietary models faster than anyone predicted. Two years ago, running a local model meant accepting significantly worse quality. Today, the best open models match GPT-4.1 on many benchmarks and beat it on some. The gap hasn't disappeared, but it's narrow enough that the tradeoffs are worth considering.",
       "The case for open source isn't just about cost, though that matters. It's about control. You pick the hardware. You own the weights. You can fine-tune on your data without sending it to a third party. You can run inference air-gapped if compliance requires it. And if the model vendor decides to change their terms, raise prices, or shut down, your deployment keeps running.",
       "We tested all seven models on a standardized evaluation suite: MMLU, HumanEval, MT-Bench, and a custom RAG retrieval task. We also measured inference speed on consumer hardware (RTX 4090) and cloud GPUs (A100, H100) because a model that's great on paper but too slow to use isn't great in practice."
     ],
@@ -1145,7 +1145,7 @@
         "price": "Free (open source, Meta license)",
         "icon": "meta-icon",
         "url": "https://ai.meta.com/llama/",
-        "summary": "Llama 4 Maverick is the open source model to beat. The mixture-of-experts architecture delivers GPT-4-class performance while running efficiently on a single node. Multilingual support covers 12 languages well, not just English. The instruction-tuned version follows complex prompts reliably. Meta's permissive license lets you use it commercially without revenue caps for most companies. The ecosystem is massive: every inference engine, fine-tuning tool, and deployment platform supports Llama 4 on day one.",
+        "summary": "Llama 4 Maverick is the open source model to beat. The mixture-of-experts architecture delivers GPT-4.1-class performance while running efficiently on a single node. Multilingual support covers 12 languages well, not just English. The instruction-tuned version follows complex prompts reliably. Meta's permissive license lets you use it commercially without revenue caps for most companies. The ecosystem is massive: every inference engine, fine-tuning tool, and deployment platform supports Llama 4 on day one.",
         "best_for": "General-purpose applications that need the strongest available open model. Teams that want the largest ecosystem of tools, tutorials, and community support. Commercial deployments that need a permissive license.",
         "caveat": "The full Maverick model requires significant GPU memory. Quantized versions trade quality for accessibility. Meta's license has restrictions for companies with over 700M monthly active users. The MoE architecture means not all parameters are active per forward pass, which complicates memory planning. Fine-tuning requires more expertise than dense models."
       },
@@ -1235,8 +1235,8 @@
     ],
     "faqs": [
       {
-        "question": "Are open source LLMs as good as GPT-4 or Claude?",
-        "answer": "On specific tasks, yes. Llama 4 and DeepSeek-V3 match or exceed GPT-4 on many benchmarks. On broad, general-purpose use, the best proprietary models still have an edge, especially for nuanced reasoning, creative writing, and complex multi-step tasks. The gap has narrowed from massive to modest. For many production applications, open source models are good enough, and the cost and control advantages make them the better choice."
+        "question": "Are open source LLMs as good as GPT-4.1 or Claude?",
+        "answer": "On specific tasks, yes. Llama 4 and DeepSeek-V3 match or exceed GPT-4.1 on many benchmarks. On broad, general-purpose use, the best proprietary models still have an edge, especially for nuanced reasoning, creative writing, and complex multi-step tasks. The gap has narrowed from massive to modest. For many production applications, open source models are good enough, and the cost and control advantages make them the better choice."
       },
       {
         "question": "What hardware do I need to run open source LLMs locally?",

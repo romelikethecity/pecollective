@@ -495,7 +495,7 @@
 <p>A simple config might test whether your prompt correctly classifies customer support tickets. You define 50 sample tickets with their expected categories, run them against your prompt, and see the pass rate. Change the prompt, re-run, and compare.</p>
 
 <h3>Side-by-Side Model Comparison</h3>
-<p>Run the same test suite against multiple models simultaneously. Promptfoo generates a comparison table showing how Claude Sonnet, GPT-4o, GPT-4o mini, and Llama perform on your specific task. This is incredibly useful when you're deciding which model to use in production, because benchmarks don't always predict real-world performance on your data.</p>
+<p>Run the same test suite against multiple models simultaneously. Promptfoo generates a comparison table showing how Claude Sonnet, GPT-4.1, GPT-4.1 Nano, and Llama perform on your specific task. This is incredibly useful when you're deciding which model to use in production, because benchmarks don't always predict real-world performance on your data.</p>
 
 <h3>Assertion Types</h3>
 <p>Promptfoo supports a wide range of assertion types: exact match, contains, regex, JSON schema validation, cost thresholds, latency limits, and LLM-graded evaluations where you use one model to judge another's output. You can also write custom assertion functions in JavaScript or Python.</p>
@@ -508,7 +508,7 @@
 
 <h2>Pricing Breakdown</h2>
 <p>The core tool is open source under the MIT License. You can self-host it with all features at no cost. The cloud offering has a free tier for individual use. The Team plan at $50/month adds collaboration features, shared results, and team management. Enterprise pricing is custom.</p>
-<p>Since Promptfoo calls LLM APIs during evaluation, you'll also pay for the API tokens used in your tests. Running 100 test cases against GPT-4o costs roughly $0.50-$2.00 depending on prompt length.</p>
+<p>Since Promptfoo calls LLM APIs during evaluation, you'll also pay for the API tokens used in your tests. Running 100 test cases against GPT-4.1 costs roughly $0.50-$2.00 depending on prompt length.</p>
 
 <h2>How It Fits the AI Stack</h2>
 <p>Promptfoo sits between your development workflow and production deployment. It works with any LLM provider: <a href="/tools/openai-api/">OpenAI</a>, <a href="/tools/anthropic-api/">Anthropic</a>, local models via Ollama, and models on <a href="/tools/hugging-face/">Hugging Face</a>. If you're using <a href="/tools/langchain/">LangChain</a> or <a href="/tools/llamaindex/">LlamaIndex</a>, Promptfoo can test the prompts those frameworks generate.</p>
@@ -539,7 +539,7 @@
             <h3>Ideal For:</h3>
             <ul>
               <li><strong>AI engineers shipping LLM features to production</strong> who need to test prompts systematically before deploying</li>
-              <li><strong>Teams comparing models</strong> (Claude vs GPT-4o vs Llama) for specific tasks with real data</li>
+              <li><strong>Teams comparing models</strong> (Claude vs GPT-4.1 vs Llama) for specific tasks with real data</li>
               <li><strong>Prompt engineers</strong> who want to iterate on prompts with measurable results instead of gut feeling</li>
               <li><strong>DevOps teams</strong> who want LLM evaluations in their CI/CD pipeline alongside regular tests</li>
             </ul>
@@ -553,7 +553,7 @@
 
             <div class="verdict-box">
               <h3>Our Verdict</h3>
-              <p>Promptfoo fills a gap that most AI teams don't realize they have until something breaks in production. It brings the discipline of unit testing to LLM prompts: define your test cases, set your assertions, run them against multiple models, and get a clear comparison table showing what works and what doesn't.</p><p>The YAML-based configuration is a strength. You can define hundreds of test cases without writing code, share them across the team, and run them in CI. The side-by-side model comparison alone is worth the setup time if you're deciding between Claude, GPT-4o, and open-source alternatives for a specific task. It's not the flashiest tool in the AI stack, but it might be the one that saves you from the most embarrassing production failures.</p>
+              <p>Promptfoo fills a gap that most AI teams don't realize they have until something breaks in production. It brings the discipline of unit testing to LLM prompts: define your test cases, set your assertions, run them against multiple models, and get a clear comparison table showing what works and what doesn't.</p><p>The YAML-based configuration is a strength. You can define hundreds of test cases without writing code, share them across the team, and run them in CI. The side-by-side model comparison alone is worth the setup time if you're deciding between Claude, GPT-4.1, and open-source alternatives for a specific task. It's not the flashiest tool in the AI stack, but it might be the one that saves you from the most embarrassing production failures.</p>
             </div>
 
             <div class="affiliate-disclosure">

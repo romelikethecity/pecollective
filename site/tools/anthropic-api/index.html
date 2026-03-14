@@ -14,7 +14,7 @@
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="Claude 3.5 Sonnet, Haiku, and Opus via API. Rate limits, prompt caching, tool use, and how it stacks up against OpenAI's API for production apps.">
+  <meta name="description" content="Claude Sonnet 4.6, Haiku, and Opus via API. Rate limits, prompt caching, tool use, and how it stacks up against OpenAI's API for production apps.">
 
   <title>Anthropic Claude API Review (2026): Developer Experience, Pricing & Limits | PE Collective</title>
 
@@ -491,8 +491,8 @@
 <h2>Key Features</h2>
 
 <h3>Model Lineup</h3>
-<p>Anthropic offers three model tiers. Haiku is the fastest and cheapest, good for classification, extraction, and high-volume tasks. Sonnet is the balanced option that handles most production workloads well. Opus is the most capable, best for complex reasoning, coding, and tasks where accuracy matters more than speed.</p>
-<p>This tiered approach is practical. You can route simple API calls to Haiku at $0.25 per million input tokens and save Opus for the complex stuff at $15 per million input tokens. Many production systems use multiple tiers in the same application.</p>
+<p>Anthropic offers three model tiers. Anthropic offers three model tiers as of March 2026. Haiku 4.5 ($1/$5 per 1M tokens) is the fastest and cheapest, good for classification, extraction, and high-volume tasks. Sonnet 4.6 ($3/$15) is the balanced production workhorse. Opus 4.6 ($5/$25) is the most capable, best for complex reasoning, coding, and architecture decisions.</p>
+<p>This tiered approach is practical. You can route simple API calls to Haiku 4.5 at $1 per million input tokens and save Opus 4.6 for the complex stuff at $5 per million input tokens. Many production systems use multiple tiers in the same application.</p>
 
 <h3>200K Context Window</h3>
 <p>Claude supports up to 200,000 tokens of context, which is roughly 150,000 words or about 500 pages of text. This means you can feed entire codebases, legal contracts, or research papers into a single API call. The model maintains coherence across the full window, which isn't true of all competitors at this scale.</p>
@@ -505,8 +505,8 @@
 <p>Claude can analyze images passed to the API. It handles screenshots, diagrams, charts, photos of documents, and UI mockups. The vision capabilities are strong enough for production use in document processing and UI analysis workflows.</p>
 
 <h2>Pricing Details</h2>
-<p>Anthropic uses per-token pricing with different rates for input and output tokens. Haiku: $0.25 input / $1.25 output per million tokens. Sonnet: $3 input / $15 output per million tokens. Opus: $15 input / $75 output per million tokens. There's also a prompt caching feature that reduces costs for repeated prefixes.</p>
-<p>Compared to OpenAI, Anthropic's pricing is competitive at each tier. Haiku competes with GPT-4o-mini, Sonnet with GPT-4o, and Opus occupies the premium tier.</p>
+<p>Anthropic uses per-token pricing with different rates for input and output tokens. Haiku 4.5: $1 input / $5 output per million tokens. Sonnet 4.6: $3 input / $15 output per million tokens. Opus 4.6: $5 input / $25 output per million tokens. There's also a prompt caching feature that reduces costs for repeated prefixes.</p>
+<p>Compared to OpenAI, Anthropic's pricing is competitive at each tier. Haiku 4.5 competes with GPT-4.1 Nano, Sonnet 4.6 with GPT-4.1, and Opus 4.6 competes with GPT-5.</p>
 
 <h2>Anthropic API vs OpenAI API</h2>
 <p>See our full <a href="/tools/openai-api-vs-anthropic-api/">Anthropic API vs OpenAI API comparison</a>. The short version: Anthropic wins on reasoning quality, instruction following, and developer experience. OpenAI wins on ecosystem breadth (image gen, voice, fine-tuning) and third-party integrations. Both are production-ready and well-documented.</p>

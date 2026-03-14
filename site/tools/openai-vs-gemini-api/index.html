@@ -735,10 +735,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is Gemini better than GPT-4?",
+      "name": "Is Gemini better than GPT-4.1?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gemini 2.5 Pro is competitive with GPT-4 on most benchmarks and beats it on long-context tasks thanks to the 1M token window. GPT-4 has better function calling and a more mature ecosystem. Neither is strictly better across all use cases."
+        "text": "Gemini 2.5 Pro is competitive with GPT-4.1 on most benchmarks and beats it on long-context tasks thanks to the 1M token window. GPT-4.1 has better function calling and a more mature ecosystem. Neither is strictly better across all use cases."
       }
     },
     {
@@ -746,7 +746,7 @@
       "name": "Which API is cheaper?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gemini, especially at the Flash tier. Gemini Flash input tokens cost roughly half of GPT-4o Mini. For high-volume applications, the savings are significant. OpenAI's free credits expire; Gemini's free tier is ongoing."
+        "text": "Gemini, especially at the Flash tier. Gemini Flash input tokens cost roughly half of GPT-4.1 Mini. For high-volume applications, the savings are significant. OpenAI's free credits expire; Gemini's free tier is ongoing."
       }
     },
     {
@@ -762,7 +762,7 @@
       "name": "Which has better fine-tuning support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "OpenAI. Fine-tuning GPT-4o Mini and GPT-3.5 is well-documented and production-ready. Gemini fine-tuning is available but newer and has more restrictions. If fine-tuning is critical to your application, OpenAI is the safer choice today."
+        "text": "OpenAI. Fine-tuning GPT-4.1 Mini and GPT-3.5 is well-documented and production-ready. Gemini fine-tuning is available but newer and has more restrictions. If fine-tuning is critical to your application, OpenAI is the safer choice today."
       }
     },
     {
@@ -770,7 +770,7 @@
       "name": "Should I use both APIs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If you can afford the engineering overhead, yes. Route long-context tasks to Gemini, complex reasoning to GPT-4, and high-volume simple tasks to Gemini Flash. Libraries like LiteLLM make multi-provider routing straightforward."
+        "text": "If you can afford the engineering overhead, yes. Route long-context tasks to Gemini, complex reasoning to GPT-4.1, and high-volume simple tasks to Gemini Flash. Libraries like LiteLLM make multi-provider routing straightforward."
       }
     }
   ]
@@ -1200,7 +1200,7 @@
 
         <div class="quick-verdict">
           <h2>Quick Verdict</h2>
-          <p><strong>Choose OpenAI API if:</strong> You want the most battle-tested API with the largest ecosystem of tools, tutorials, and community support. GPT-4 and GPT-5 set the standard. The Assistants API and function calling are mature. If your team already knows OpenAI, there's little reason to switch.</p>
+          <p><strong>Choose OpenAI API if:</strong> You want the most battle-tested API with the largest ecosystem of tools, tutorials, and community support. GPT-4.1 and GPT-5 set the standard. The Assistants API and function calling are mature. If your team already knows OpenAI, there's little reason to switch.</p>
           <p><strong>Choose Google Gemini API if:</strong> You want a larger context window, competitive pricing on the Flash tier, and native integration with Google Cloud services. Gemini 2.5 Pro offers a 1M token context window. Flash models give you speed at a fraction of the cost. For high-volume or long-context applications, the math often favors Google.</p>
         </div>
 
@@ -1227,7 +1227,7 @@
               </tr>
               <tr>
                 <td><strong>Fast/Cheap Model</strong></td>
-                <td>GPT-4o Mini ($0.15/1M input)</td>
+                <td>GPT-4.1 Mini ($0.15/1M input)</td>
                 <td class="winner">Gemini Flash ($0.075/1M input)</td>
               </tr>
               <tr>
@@ -1242,7 +1242,7 @@
               </tr>
               <tr>
                 <td><strong>Multimodal (Vision)</strong></td>
-                <td>GPT-4 Vision</td>
+                <td>GPT-4.1 Vision</td>
                 <td>Native multimodal</td>
               </tr>
               <tr>
@@ -1262,7 +1262,7 @@
               </tr>
               <tr>
                 <td><strong>Fine-Tuning</strong></td>
-                <td class="winner">GPT-4o Mini, GPT-3.5</td>
+                <td class="winner">GPT-4.1 Mini, GPT-3.5</td>
                 <td>Gemini Flash, Pro (preview)</td>
               </tr>
             </tbody>
@@ -1273,14 +1273,14 @@
             
           <div class="section-divider">
             <h3>🟢 OpenAI Wins: Ecosystem and Maturity</h3>
-            <p>OpenAI's developer ecosystem is unmatched. Every framework, tutorial, and LLM tool supports OpenAI first. LangChain, LlamaIndex, Vercel AI SDK, Semantic Kernel. The default LLM in almost every AI tutorial is GPT-4. That network effect matters when you hit a problem at 2 AM and need a Stack Overflow answer.</p>
+            <p>OpenAI's developer ecosystem is unmatched. Every framework, tutorial, and LLM tool supports OpenAI first. LangChain, LlamaIndex, Vercel AI SDK, Semantic Kernel. The default LLM in almost every AI tutorial is GPT-4.1. That network effect matters when you hit a problem at 2 AM and need a Stack Overflow answer.</p>
             <p>The Assistants API is more mature than anything Google offers for agent-like workflows. Threads, tool use, code interpreter, file search. It's a managed agent runtime. Gemini's equivalent features exist but are newer and less battle-tested.</p>
             <p>Function calling is also more polished. OpenAI's structured output mode (JSON mode with schema enforcement) is reliable in production. Gemini's function calling works but has more edge cases. When you're building production toolchains, reliability matters more than benchmarks.</p>
           </div>
           <div class="section-divider">
             <h3>✨ Gemini Wins: Context Window and Cost Efficiency</h3>
             <p>A 1M token context window changes what's possible. Feed in an entire codebase. Process a 300-page document in one call. Analyze hours of meeting transcripts without chunking. GPT-4 Turbo's 128K tokens is large, but it's not in the same category as 1M. For long-context applications, Gemini eliminates the need for complex chunking and retrieval pipelines.</p>
-            <p>On pricing, Gemini Flash is hard to beat. At roughly half the cost of GPT-4o Mini for input tokens, high-volume applications save real money. If you're processing millions of documents or running thousands of daily API calls, the cost difference compounds fast.</p>
+            <p>On pricing, Gemini Flash is hard to beat. At roughly half the cost of GPT-4.1 Mini for input tokens, high-volume applications save real money. If you're processing millions of documents or running thousands of daily API calls, the cost difference compounds fast.</p>
             <p>Google Cloud integration is also a factor for enterprise teams already on GCP. Vertex AI gives you Gemini with the same IAM, logging, and compliance infrastructure you already use. No separate vendor relationship needed.</p>
           </div>
           </div>
@@ -1353,7 +1353,7 @@
             
             <p><strong>For Startup Developers:</strong> Start with Gemini's free tier for prototyping, then use Flash for production if cost is a concern. Switch to OpenAI if you need the Assistants API or hit Gemini limitations in function calling.</p>
             <p><strong>For Enterprise Teams:</strong> Use whichever API integrates with your existing cloud provider. Azure shops should use Azure OpenAI. GCP shops should use Vertex AI. The cloud integration benefits outweigh model differences for most enterprise use cases.</p>
-            <p><strong>The Bottom Line:</strong> OpenAI has the better ecosystem and more mature APIs. Gemini has the bigger context window and lower prices. Most serious applications should support both and route requests based on the task. Use Gemini Flash for high-volume, long-context work. Use GPT-4 for complex reasoning and tool use.</p>
+            <p><strong>The Bottom Line:</strong> OpenAI has the better ecosystem and more mature APIs. Gemini has the bigger context window and lower prices. Most serious applications should support both and route requests based on the task. Use Gemini Flash for high-volume, long-context work. Use GPT-4.1 for complex reasoning and tool use.</p>
           </div>
 
           
@@ -1404,12 +1404,12 @@
         <h2>Frequently Asked Questions</h2>
         
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
-          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Gemini better than GPT-4?</summary>
-          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Gemini 2.5 Pro is competitive with GPT-4 on most benchmarks and beats it on long-context tasks thanks to the 1M token window. GPT-4 has better function calling and a more mature ecosystem. Neither is strictly better across all use cases.</p>
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Gemini better than GPT-4.1?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Gemini 2.5 Pro is competitive with GPT-4.1 on most benchmarks and beats it on long-context tasks thanks to the 1M token window. GPT-4.1 has better function calling and a more mature ecosystem. Neither is strictly better across all use cases.</p>
         </details>
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which API is cheaper?</summary>
-          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Gemini, especially at the Flash tier. Gemini Flash input tokens cost roughly half of GPT-4o Mini. For high-volume applications, the savings are significant. OpenAI's free credits expire; Gemini's free tier is ongoing.</p>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Gemini, especially at the Flash tier. Gemini Flash input tokens cost roughly half of GPT-4.1 Mini. For high-volume applications, the savings are significant. OpenAI's free credits expire; Gemini's free tier is ongoing.</p>
         </details>
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can I switch between OpenAI and Gemini easily?</summary>
@@ -1417,11 +1417,11 @@
         </details>
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which has better fine-tuning support?</summary>
-          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">OpenAI. Fine-tuning GPT-4o Mini and GPT-3.5 is well-documented and production-ready. Gemini fine-tuning is available but newer and has more restrictions. If fine-tuning is critical to your application, OpenAI is the safer choice today.</p>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">OpenAI. Fine-tuning GPT-4.1 Mini and GPT-3.5 is well-documented and production-ready. Gemini fine-tuning is available but newer and has more restrictions. If fine-tuning is critical to your application, OpenAI is the safer choice today.</p>
         </details>
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Should I use both APIs?</summary>
-          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">If you can afford the engineering overhead, yes. Route long-context tasks to Gemini, complex reasoning to GPT-4, and high-volume simple tasks to Gemini Flash. Libraries like LiteLLM make multi-provider routing straightforward.</p>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">If you can afford the engineering overhead, yes. Route long-context tasks to Gemini, complex reasoning to GPT-4.1, and high-volume simple tasks to Gemini Flash. Libraries like LiteLLM make multi-provider routing straightforward.</p>
         </details>
       </div>
 
@@ -1431,7 +1431,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
             <a href="/tools/openai-api-vs-anthropic-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI API vs Anthropic API &rarr;</a>
             <a href="/tools/claude-vs-gemini/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Claude vs Gemini &rarr;</a>
-            <a href="/tools/gpt4-vs-claude/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">GPT-4 vs Claude &rarr;</a>
+            <a href="/tools/gpt4-vs-claude/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">GPT-4.1 vs Claude &rarr;</a>
             <a href="/glossary/large-language-model/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">What Is a Large Language Model? &rarr;</a>
             <a href="/glossary/tokens/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Understanding Tokens &rarr;</a>
         </div>

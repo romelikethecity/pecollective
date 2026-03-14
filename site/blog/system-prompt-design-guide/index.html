@@ -14,7 +14,7 @@
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="Tested prompt patterns for Claude, GPT-4, and Gemini. Identity framing, output formatting, error handling, and the mistakes that break production systems.">
+  <meta name="description" content="Tested prompt patterns for Claude, GPT-4.1, and Gemini. Identity framing, output formatting, error handling, and the mistakes that break production systems.">
 
   <title>System Prompt Design Guide: Patterns That Work in Production (2026) | PE Collective</title>
 
@@ -89,7 +89,7 @@
   },
   "datePublished": "2026-02-15",
   "dateModified": "2026-02-15",
-  "description": "Tested prompt patterns for Claude, GPT-4, and Gemini. Identity framing, output formatting, error handling, and the mistakes that break production systems."
+  "description": "Tested prompt patterns for Claude, GPT-4.1, and Gemini. Identity framing, output formatting, error handling, and the mistakes that break production systems."
 }
   </script>
 
@@ -136,7 +136,7 @@
       "name": "Can I use the same system prompt across different AI models?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can start with the same base prompt, but expect to maintain model-specific variants. GPT, Claude, and Gemini interpret instructions differently. A prompt that scores 95% on Claude might only hit 80% on GPT-4o. Test each model separately and adjust wording where needed. The core logic stays the same; the phrasing adapts."
+        "text": "You can start with the same base prompt, but expect to maintain model-specific variants. GPT, Claude, and Gemini interpret instructions differently. A prompt that scores 95% on Claude might only hit 80% on GPT-4.1. Test each model separately and adjust wording where needed. The core logic stays the same; the phrasing adapts."
       }
     }
   ]
@@ -328,7 +328,7 @@
 <p>Your prompt works when users ask polite, well-formed questions. What about typos? Incomplete sentences? Multiple questions in one message? Sarcasm? Test with at least 50 diverse inputs, including adversarial ones, before calling a system prompt production-ready.</p>
 
 <h3>Mistake: Ignoring model differences</h3>
-<p>A system prompt optimized for GPT-4o won't work identically on Claude or Gemini. Each model family has different strengths and different ways of interpreting instructions. If you're deploying across models, test each one separately and maintain model-specific prompt variants where needed.</p>
+<p>A system prompt optimized for GPT-4.1 won't work identically on Claude or Gemini. Each model family has different strengths and different ways of interpreting instructions. If you're deploying across models, test each one separately and maintain model-specific prompt variants where needed.</p>
 
 <h2>Testing Your System Prompts</h2>
 

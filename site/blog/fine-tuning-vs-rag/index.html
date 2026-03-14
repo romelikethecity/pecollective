@@ -270,7 +270,7 @@
 <p>The threshold is roughly: if <a href="/glossary/few-shot-prompting/">few-shot prompting</a> with 5-10 examples in the prompt gets you to 80% quality, fine-tuning on 500+ examples can push you to 95%+.</p>
 
 <h3>You need to reduce latency or cost per query</h3>
-<p>A fine-tuned smaller model can match a larger model's performance on specific tasks at a fraction of the cost and latency. Fine-tuning GPT-4o Mini or Claude Haiku on your task might give you GPT-4o-level quality at one-tenth the cost per query. For high-volume applications, this adds up fast.</p>
+<p>A fine-tuned smaller model can match a larger model's performance on specific tasks at a fraction of the cost and latency. Fine-tuning GPT-4.1 Mini or Claude Haiku on your task might give you GPT-4.1-level quality at one-tenth the cost per query. For high-volume applications, this adds up fast.</p>
 
 <p>Fine-tuning also means shorter prompts. You don't need long system prompts, examples, or instructions because the model already knows what to do. Shorter prompts mean fewer input tokens, which means lower cost and faster responses.</p>
 
@@ -281,7 +281,7 @@
   <div class="technique-card__title">Fine-Tuning Cost Breakdown</div>
   <p class="technique-card__description">
     <strong>Data preparation:</strong> 10-40 hours of engineering time. The most overlooked cost. You need high-quality, formatted training data. Garbage in, garbage out.<br><br>
-    <strong>Training cost (OpenAI):</strong> $3-$25 per training run for GPT-4o Mini, $25-$200 for GPT-4o. Depends on dataset size and epochs.<br><br>
+    <strong>Training cost (OpenAI):</strong> $3-$25 per training run for GPT-4.1 Mini, $25-$200 for GPT-4.1. Depends on dataset size and epochs.<br><br>
     <strong>Training cost (open source on cloud):</strong> $50-$500 per training run on AWS/GCP GPU instances. More control, more complexity.<br><br>
     <strong>Evaluation and iteration:</strong> Plan for 3-10 training runs to get it right. Multiply the training cost accordingly.<br><br>
     <strong>Per-query cost:</strong> Same or lower than the base model. Fine-tuned models don't cost more to run. They often cost less because you need shorter prompts.<br><br>

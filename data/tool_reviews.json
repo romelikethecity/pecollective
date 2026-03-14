@@ -1846,7 +1846,7 @@
     "faqs": [
       {
         "question": "How much does the Anthropic API cost?",
-        "answer": "Pricing varies by model. Haiku: $0.25/$1.25 per million input/output tokens. Sonnet: $3/$15 per million tokens. Opus: $15/$75 per million tokens. You get free credits when you sign up, and there's no monthly minimum."
+        "answer": "Pricing varies by model. Haiku 4.5: $1/$5 per million input/output tokens. Sonnet 4.6: $3/$15 per million tokens. Opus 4.6: $5/$25 per million tokens. You get free credits when you sign up, and there's no monthly minimum."
       },
       {
         "question": "What's the difference between Haiku, Sonnet, and Opus?",

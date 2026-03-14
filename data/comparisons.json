@@ -3772,7 +3772,7 @@
       },
       {
         "feature": "Fast/Cheap Model",
-        "a": "Claude Haiku ($0.25/1M input)",
+        "a": "Claude Haiku 4.5 ($1/1M input)",
         "b": "Gemini Flash ($0.075/1M input)",
         "winner": "b"
       },

@@ -599,10 +599,10 @@ def generate_page(review):
   {generate_breadcrumb_schema(name, slug)}
   </script>
 
-  <!-- FAQPage Schema -->
+  {f"""<!-- FAQPage Schema -->
   <script type="application/ld+json">
-  {generate_faq_schema(review['faqs'])}
-  </script>
+  {generate_faq_schema(review.get('faqs', []))}
+  </script>""" if review.get('faqs') else ""}
 
   <!-- SoftwareApplication + Review Schema -->
   <script type="application/ld+json">
@@ -722,7 +722,7 @@ def generate_page(review):
       <div class="container container--narrow">
         <h2 style="color: var(--color-gold); margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
         <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-{generate_faq_html(review['faqs'])}
+{generate_faq_html(review.get('faqs', []))}
         </div>
       </div>
     </section>

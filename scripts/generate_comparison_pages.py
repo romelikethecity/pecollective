@@ -122,21 +122,26 @@ def generate_comparison_page(comp):
     # Schema markup
     breadcrumb_name = f"{tool_a['name']} vs {tool_b['name']}"
     breadcrumb_schema = generate_breadcrumb_schema(slug, breadcrumb_name)
-    faq_schema = generate_faq_schema(comp['faqs'])
     software_schema_a = generate_software_schema(tool_a, BASE_URL)
     software_schema_b = generate_software_schema(tool_b, BASE_URL)
+
+    # FAQ schema (only if FAQs exist)
+    faqs = comp.get('faqs', [])
+    faq_schema_block = ''
+    if faqs:
+        faq_schema_block = f'''
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {generate_faq_schema(faqs)}
+    </script>
+'''
 
     extra_head = f'''
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {breadcrumb_schema}
     </script>
-
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {faq_schema}
-    </script>
-
+{faq_schema_block}
     <!-- SoftwareApplication Schema: {tool_a['name']} -->
     <script type="application/ld+json">
     {software_schema_a}
@@ -197,7 +202,7 @@ def generate_comparison_page(comp):
 
     # FAQ details
     faq_details = ''
-    for faq in comp['faqs']:
+    for faq in faqs:
         faq_details += f'''
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">{faq['question']}</summary>

@@ -88,7 +88,7 @@
     "url": "https://pecollective.com"
   },
   "datePublished": "2026-02-15",
-  "dateModified": "2026-02-15",
+  "dateModified": "2026-03-19",
   "description": "Master chain of thought prompting with this complete tutorial. Zero-shot CoT, few-shot CoT, tree-of-thought, self-consistency, and 8+ worked examples with before/after comparisons."
 }
   </script>
@@ -214,7 +214,7 @@
         <div class="article-content">
           <p>If you only learn one advanced prompting technique, make it chain of thought. It's the single biggest improvement you can make to AI output quality on complex tasks, and it works across every major model.</p>
 
-<p>This tutorial goes deeper than the usual "just add 'think step by step.'" You'll learn the different variants, when each one works best, and see real before-and-after examples that demonstrate exactly why this technique matters.</p>
+<p>The technique was first formalized by Wei et al. in their <a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener">2022 paper at Google Research</a>. This tutorial goes deeper than the usual "just add 'think step by step.'" You'll learn the different variants, when each one works best, and see real before-and-after examples that demonstrate exactly why this technique matters.</p>
 
 <h2>What Is Chain-of-Thought Prompting?</h2>
 
@@ -245,7 +245,7 @@ Step 4: Sell 18 before closing. 63 - 18 = 45 apples.<br>
 Answer: 45 apples. [Correct]</p>
 </div>
 
-<p>The phrase "Let's think step by step" was popularized by Kojima et al. in their 2022 paper "Large Language Models are Zero-Shot Reasoners." They showed this simple addition improved accuracy by 10 to 40 percentage points on reasoning benchmarks. It's one of the highest-impact, lowest-effort techniques in <a href="/glossary/prompt-engineering/">prompt engineering</a>.</p>
+<p>The phrase "Let's think step by step" was popularized by Kojima et al. in their 2022 paper <a href="https://arxiv.org/abs/2205.11916" target="_blank" rel="noopener">"Large Language Models are Zero-Shot Reasoners"</a>. They showed this simple addition improved accuracy by 10 to 40 percentage points on reasoning benchmarks. It's one of the highest-impact, lowest-effort techniques in <a href="/glossary/prompt-engineering/">prompt engineering</a>.</p>
 
 <p>Other effective trigger phrases:</p>
 <ul>
@@ -281,6 +281,159 @@ A:</p>
 <p>The model sees the pattern: analyze each premise, connect them logically, then draw a conclusion. It will follow this pattern for the new question, producing: "Let me work through this logically. If it rains, the ground gets wet. This is a conditional: rain implies wet ground. The ground is wet. But wet ground doesn't necessarily imply rain. A sprinkler could have caused it. This is the logical fallacy called 'affirming the consequent.' Therefore, no, we cannot conclude it rained just because the ground is wet."</p>
 
 <p>Few-shot CoT is more reliable than zero-shot CoT when you need the reasoning to follow a specific structure, when the task requires domain-specific logic, or when you want consistent output formatting.</p>
+
+<h2>Code Examples: Implementing CoT via APIs</h2>
+
+<p>Here's how to implement chain-of-thought prompting programmatically. These examples use the OpenAI and Anthropic APIs, but the pattern works with any provider.</p>
+
+<h3>Basic CoT with OpenAI</h3>
+
+<pre><code>from openai import OpenAI
+
+client = OpenAI()
+
+def solve_with_cot(problem: str) -> dict:
+    """Solve a problem using chain-of-thought prompting."""
+    response = client.chat.completions.create(
+        model="gpt-4.1",
+        temperature=0.1,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a precise analytical assistant. "
+                    "For every question, reason through the problem "
+                    "step by step before giving your final answer. "
+                    "Format: show numbered steps, then state "
+                    "'ANSWER: [your answer]' on the last line."
+                )
+            },
+            {"role": "user", "content": problem}
+        ]
+    )
+    text = response.choices[0].message.content
+    # Extract reasoning and final answer
+    parts = text.rsplit("ANSWER:", 1)
+    return {
+        "reasoning": parts[0].strip(),
+        "answer": parts[1].strip() if len(parts) > 1 else text
+    }
+
+result = solve_with_cot(
+    "A company has 3 warehouses. Warehouse A ships 340 "
+    "orders/day, B ships 275, C ships 190. If A increases "
+    "by 15%, B decreases by 8%, and C stays flat, what is "
+    "the new daily total?"
+)
+print(result["reasoning"])
+print(f"Final answer: {result['answer']}")</code></pre>
+
+<h3>CoT with Self-Consistency (Multiple Samples)</h3>
+
+<pre><code>from collections import Counter
+from openai import OpenAI
+
+client = OpenAI()
+
+def solve_with_self_consistency(
+    problem: str,
+    samples: int = 5,
+    temperature: float = 0.7
+) -> dict:
+    """Run CoT multiple times, return majority answer."""
+    answers = []
+    reasoning_chains = []
+
+    for _ in range(samples):
+        response = client.chat.completions.create(
+            model="gpt-4.1",
+            temperature=temperature,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Reason step by step, then end with "
+                        "'ANSWER: [answer]' on the final line."
+                    )
+                },
+                {"role": "user", "content": problem}
+            ]
+        )
+        text = response.choices[0].message.content
+        parts = text.rsplit("ANSWER:", 1)
+
+        if len(parts) > 1:
+            answer = parts[1].strip()
+            answers.append(answer)
+            reasoning_chains.append(parts[0].strip())
+
+    # Majority vote
+    counts = Counter(answers)
+    best_answer = counts.most_common(1)[0][0]
+    confidence = counts[best_answer] / len(answers)
+
+    return {
+        "answer": best_answer,
+        "confidence": confidence,
+        "vote_distribution": dict(counts),
+        "sample_count": len(answers)
+    }
+
+result = solve_with_self_consistency(
+    "If a train leaves at 2:15 PM traveling at 80 mph, "
+    "and another leaves the same station at 2:45 PM "
+    "traveling at 100 mph in the same direction, at what "
+    "time does the second train catch the first?",
+    samples=5
+)
+print(f"Answer: {result['answer']}")
+print(f"Confidence: {result['confidence']:.0%}")
+print(f"Votes: {result['vote_distribution']}")</code></pre>
+
+<h3>CoT with Anthropic Claude</h3>
+
+<pre><code>import anthropic
+
+client = anthropic.Anthropic()
+
+def classify_with_cot(text: str, categories: list) -> dict:
+    """Classify text using CoT for better accuracy."""
+    cats = ", ".join(categories)
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=1024,
+        temperature=0.0,
+        system=(
+            "You are a text classifier. Analyze the input "
+            "carefully before classifying. First explain your "
+            "reasoning in 2-3 sentences, then output your "
+            "classification on a new line as: "
+            "CATEGORY: [category name]"
+        ),
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Classify this text into one of: {cats}\n\n"
+                f"Text: \"{text}\""
+            )
+        }]
+    )
+    output = response.content[0].text
+    parts = output.rsplit("CATEGORY:", 1)
+    return {
+        "reasoning": parts[0].strip(),
+        "category": parts[1].strip() if len(parts) > 1 else "unknown"
+    }
+
+result = classify_with_cot(
+    "The quarterly earnings beat expectations but the CEO "
+    "announced layoffs affecting 12% of the workforce",
+    ["positive", "negative", "mixed", "neutral"]
+)
+print(f"Reasoning: {result['reasoning']}")
+print(f"Category: {result['category']}")</code></pre>
+
+<p>Notice the pattern in all three examples: you structure the system prompt to request reasoning first, then extract the final answer from the output. The <code>temperature</code> setting matters here. Use low temperature (0 to 0.2) for standard CoT where you want consistency. Use higher temperature (0.5 to 0.8) for self-consistency where you want diverse reasoning paths.</p>
 
 <h2>When to Use Chain of Thought (and When Not To)</h2>
 

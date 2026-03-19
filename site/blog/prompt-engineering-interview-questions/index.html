@@ -88,7 +88,7 @@
     "url": "https://pecollective.com"
   },
   "datePublished": "2026-02-15",
-  "dateModified": "2026-02-15",
+  "dateModified": "2026-03-19",
   "description": "20 real prompt engineering interview questions with detailed answers. Technical, system design, scenario, and behavioral questions with example prompts included."
 }
   </script>
@@ -237,7 +237,7 @@ Ticket: "I can't log in to my dashboard since the update" → ?</p>
 
 <h3>2. Explain chain-of-thought prompting. Why does it improve model performance on reasoning tasks?</h3>
 
-<p><strong>Strong answer:</strong> <a href="/glossary/chain-of-thought/">Chain-of-thought prompting</a> asks the model to show its reasoning steps before arriving at an answer. Instead of jumping directly from question to conclusion, the model works through the problem incrementally.</p>
+<p><strong>Strong answer:</strong> <a href="/glossary/chain-of-thought/">Chain-of-thought prompting</a> asks the model to show its reasoning steps before arriving at an answer. The technique was formalized in Wei et al.'s <a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener">"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"</a> (2022). Instead of jumping directly from question to conclusion, the model works through the problem incrementally.</p>
 
 <p>It improves performance because language models generate <a href="/glossary/tokens/">tokens</a> sequentially. Each token is conditioned on everything that came before it. When you force the model to generate intermediate reasoning steps, those steps become part of the context for the final answer. The model literally has more relevant information available when it produces its conclusion.</p>
 
@@ -522,7 +522,7 @@ Cite which document sections you're drawing from in your answer.</p>
 <p>System design questions require you to think and talk simultaneously. Practice walking through a design verbally. Explain your reasoning. Call out tradeoffs explicitly. "I'd use approach A because of X, even though approach B would be better for Y, because in this context X matters more."</p>
 
 <h3>Stay current on model capabilities</h3>
-<p>Know what current models can and can't do. An interviewer might ask about a model released last month. Follow the major AI labs' announcements and test new features yourself.</p>
+<p>Bookmark the official documentation: <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">Anthropic's prompt engineering guide</a> and <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener">OpenAI's prompt engineering guide</a> are both excellent and regularly updated. Know what current models can and can't do. An interviewer might ask about a model released last month. Follow the major AI labs' announcements and test new features yourself.</p>
 
 <p>Check our <a href="/jobs/">job board</a> for current openings and our <a href="/salaries/">salary data</a> to calibrate your expectations. And review our <a href="/blog/how-to-become-prompt-engineer/">career roadmap</a> if you're still in the preparation phase.</p>
 

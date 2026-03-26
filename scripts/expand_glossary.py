@@ -3,7 +3,7 @@
 
 import json
 
-GLOSSARY_PATH = "/Users/rome/Documents/projects/pecollective/data/glossary.json"
+GLOSSARY_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "glossary.json")
 
 # Map slug -> {in_depth, common_mistakes, career_relevance}
 EXPANSIONS = {

@@ -3119,5 +3119,290 @@
       }
     ],
     "career_relevance": "VAE knowledge is valuable for generative AI roles, especially those involving image generation, drug discovery, and representation learning. Understanding VAEs gives you a foundation for comprehending diffusion models and modern generative architectures. It's relevant for ML engineers and AI researchers."
+  },
+  {
+    "term": "Retrieval Augmented Generation",
+    "slug": "retrieval-augmented-generation",
+    "full_name": "Retrieval Augmented Generation (RAG)",
+    "definition": "An architecture pattern that enhances language model responses by first retrieving relevant documents from an external knowledge base, then passing those documents as context to the model for answer generation. RAG grounds model outputs in real, verifiable data rather than relying solely on trained knowledge.",
+    "category": "Architecture Patterns",
+    "related_terms": [
+      "rag",
+      "vector-database",
+      "embeddings",
+      "semantic-search"
+    ],
+    "related_links": [
+      "/glossary/rag/",
+      "/tools/pinecone-vs-weaviate/",
+      "/glossary/vector-database/",
+      "/glossary/embeddings/"
+    ],
+    "example": "A legal research tool receives the question 'What are the filing requirements for a 10-K?' The RAG system searches a database of SEC filings and legal documents, retrieves the 5 most relevant passages, and passes them to Claude alongside the question. The model generates an answer citing specific SEC rules, grounded in the retrieved documents rather than its training data.",
+    "why_it_matters": "RAG is the dominant architecture for production AI applications that need factual accuracy. It solves the hallucination problem by giving models access to verified, up-to-date information. Nearly every enterprise AI chatbot, knowledge base, and research tool uses some form of RAG.",
+    "in_depth": "A RAG pipeline has three core stages: indexing, retrieval, and generation.\n\nDuring indexing, your documents are split into chunks (by paragraph, section, or semantic boundary), converted into vector embeddings, and stored in a vector database like Pinecone or Weaviate. This is a one-time process that runs when documents change.\n\nAt query time, the user's question is converted into the same embedding format and compared against stored vectors using similarity search. The top 3-10 most relevant chunks are retrieved.\n\nFinally, the retrieved chunks are inserted into the LLM's prompt alongside the original question. The model generates a response grounded in the provided context, reducing hallucination and enabling citation.\n\nAdvanced RAG patterns include hybrid search (combining vector and keyword matching), re-ranking (using a second model to improve retrieval quality), and multi-hop RAG (iterative retrieval for complex questions that span multiple documents).",
+    "common_mistakes": [
+      {
+        "mistake": "Using fixed-size token chunks without considering document structure",
+        "correction": "Chunk by semantic boundaries (headings, paragraphs, logical sections). Use overlapping windows to prevent splitting critical information across chunks."
+      },
+      {
+        "mistake": "Skipping evaluation of retrieval quality independently from generation quality",
+        "correction": "Measure retrieval precision and recall separately. A perfect LLM cannot fix poor retrieval. If the relevant document is not retrieved, the answer will be wrong."
+      },
+      {
+        "mistake": "Indexing entire documents without metadata filtering",
+        "correction": "Add metadata (date, source, category, author) to chunks so retrieval can be filtered. This dramatically improves relevance for multi-topic knowledge bases."
+      }
+    ],
+    "career_relevance": "RAG engineering is the most in-demand AI architecture skill in 2026. Companies building AI products need engineers who can design chunking strategies, optimize retrieval pipelines, and evaluate RAG system quality. RAG-specific roles pay $150K-$250K at the senior level.",
+    "faqs": [
+      {
+        "question": "What is the difference between RAG and fine-tuning?",
+        "answer": "RAG adds external knowledge at query time without changing the model. Fine-tuning changes the model's weights to encode knowledge permanently. RAG is better for frequently changing data (knowledge bases, documentation). Fine-tuning is better for teaching the model new behaviors or domain-specific language."
+      },
+      {
+        "question": "Do I need a vector database for RAG?",
+        "answer": "For production systems, yes. Vector databases (Pinecone, Weaviate, Chroma) handle indexing, similarity search, and metadata filtering at scale. For prototypes with small document sets, you can use in-memory vectors, but this does not scale beyond a few thousand documents."
+      }
+    ]
+  },
+  {
+    "term": "Function Calling in LLMs",
+    "slug": "function-calling-llms",
+    "full_name": "Function Calling in Large Language Models",
+    "definition": "A capability that allows language models to generate structured JSON output that maps to predefined function signatures, enabling the model to interact with external tools, APIs, and databases. Instead of generating free-form text, the model outputs a function name and arguments that application code can execute.",
+    "category": "Architecture Patterns",
+    "related_terms": [
+      "function-calling",
+      "tool-use",
+      "ai-agent",
+      "model-context-protocol",
+      "structured-output"
+    ],
+    "related_links": [
+      "/glossary/function-calling/",
+      "/glossary/tool-use/",
+      "/glossary/ai-agent/",
+      "/glossary/model-context-protocol/"
+    ],
+    "example": "You define a function get_weather(city: str, unit: str). When a user asks 'What is the weather in Paris?', the model does not hallucinate a weather report. Instead, it outputs: {\"function\": \"get_weather\", \"arguments\": {\"city\": \"Paris\", \"unit\": \"celsius\"}}. Your application executes the actual API call and returns real weather data to the model for its response.",
+    "why_it_matters": "Function calling transforms LLMs from text generators into action-taking agents. It is the technical foundation for AI assistants that can book flights, query databases, send emails, and interact with any system that has an API. Without function calling, AI agents would not exist.",
+    "in_depth": "Function calling works through a structured protocol between your application and the model.\n\nFirst, you define available functions as JSON schemas (name, description, parameters with types). These schemas are sent to the model alongside the user's message.\n\nThe model then decides whether to respond with text or call a function. If a function call is appropriate, it outputs the function name and arguments as structured JSON. Your application parses this JSON, executes the real function, and sends the result back to the model.\n\nThe model can chain multiple function calls in a single conversation turn, enabling complex workflows like: search for flights, filter by price, then book the cheapest option.\n\nOpenAI, Anthropic, and Google all support function calling (Anthropic calls it 'tool use'). The implementations differ slightly but the core concept is the same: the model generates structured output that maps to real code execution.",
+    "common_mistakes": [
+      {
+        "mistake": "Writing vague function descriptions that confuse the model about when to use each function",
+        "correction": "Write clear, specific descriptions with usage examples. Describe not just what the function does, but when the model should choose it over alternatives."
+      },
+      {
+        "mistake": "Not handling cases where the model calls the wrong function or provides invalid arguments",
+        "correction": "Always validate function arguments before execution. Implement fallback logic for incorrect function calls. The model will occasionally make mistakes."
+      },
+      {
+        "mistake": "Defining too many functions in a single request, which increases latency and confusion",
+        "correction": "Keep function sets focused. Use 5-15 functions maximum per request. Group related functions and only expose the relevant set based on conversation context."
+      }
+    ],
+    "career_relevance": "Function calling is a required skill for AI agent developers and AI engineers. Every production AI assistant (customer support bots, coding agents, data analysts) relies on function calling to interact with external systems. Understanding this pattern is essential for building anything beyond a simple chatbot.",
+    "faqs": [
+      {
+        "question": "What is the difference between function calling and tool use?",
+        "answer": "They refer to the same concept. OpenAI uses 'function calling,' Anthropic uses 'tool use,' and Google uses 'function declarations.' The underlying mechanism is identical: the model generates structured output that maps to executable code."
+      },
+      {
+        "question": "Can function calling replace traditional API integrations?",
+        "answer": "Function calling does not replace APIs. It adds an AI layer on top. The model decides which API to call and with what parameters, but your application still makes the actual API requests. Function calling is the decision layer, not the execution layer."
+      }
+    ]
+  },
+  {
+    "term": "AI Agent",
+    "slug": "what-is-ai-agent",
+    "full_name": "AI Agent (Autonomous Agent)",
+    "definition": "An AI system that can independently plan, execute, and iterate on tasks by combining language model reasoning with tool use, memory, and feedback loops. Unlike a chatbot that responds to one prompt at a time, an AI agent pursues a goal autonomously, deciding which actions to take, executing them, evaluating results, and adjusting its approach.",
+    "category": "Core Concepts",
+    "related_terms": [
+      "ai-agent",
+      "agentic-ai",
+      "function-calling",
+      "tool-use",
+      "model-context-protocol"
+    ],
+    "related_links": [
+      "/glossary/ai-agent/",
+      "/glossary/agentic-ai/",
+      "/glossary/tool-use/",
+      "/glossary/function-calling/"
+    ],
+    "example": "You tell a coding agent: 'Add user authentication to this Flask app.' The agent reads the codebase, identifies the relevant files, plans the implementation (routes, database schema, middleware), writes the code across multiple files, runs the test suite, identifies a failing test, debugs the issue, fixes it, and re-runs tests until they all pass. You supervise rather than dictate each step.",
+    "why_it_matters": "AI agents represent the next evolution of AI applications. While chatbots answer questions, agents complete tasks. The shift from 'AI that talks' to 'AI that does' is driving massive investment from every major AI company. Agent-related job postings grew over 300% in 2025.",
+    "in_depth": "An AI agent operates through a loop: observe, think, act, evaluate.\n\nIn the observe phase, the agent gathers information about its current state. It might read files, check database values, or process user input.\n\nIn the think phase, the language model reasons about what to do next. This is where chain-of-thought prompting and planning happen. The model considers available tools, prior results, and the overall goal.\n\nIn the act phase, the agent executes a tool call: running code, calling an API, writing a file, or searching the web. Function calling is the mechanism that enables this.\n\nIn the evaluate phase, the agent assesses the result. Did the action succeed? Is the goal met? Should the approach change? This feedback loop continues until the task is complete or the agent determines it cannot proceed.\n\nModern agent frameworks include LangGraph, CrewAI, and AutoGen. Each provides different abstractions for building multi-step, tool-using AI systems.",
+    "common_mistakes": [
+      {
+        "mistake": "Giving agents too much autonomy without human checkpoints",
+        "correction": "Implement approval gates for high-impact actions (sending emails, modifying production data, making purchases). Start with human-in-the-loop and relax as you build trust."
+      },
+      {
+        "mistake": "Building agents that cannot recover from failures",
+        "correction": "Design agents with explicit error handling and retry logic. The model should recognize when an action failed and try an alternative approach rather than repeating the same failing action."
+      },
+      {
+        "mistake": "Using agents for tasks that a simple prompt chain would handle",
+        "correction": "Agents add complexity and cost. If a task has a predictable 3-step workflow, use prompt chaining instead. Reserve agents for tasks where the steps depend on intermediate results."
+      }
+    ],
+    "career_relevance": "AI agent development is one of the fastest-growing roles in tech. Companies need engineers who can design agent architectures, implement tool integrations, build evaluation frameworks, and manage the reliability challenges of autonomous systems. Salaries for senior agent developers range from $180K-$300K.",
+    "faqs": [
+      {
+        "question": "What is the difference between a chatbot and an AI agent?",
+        "answer": "A chatbot responds to individual messages. An AI agent pursues goals autonomously across multiple steps. A chatbot answers 'How do I deploy to AWS?' An agent actually deploys your code to AWS, handling configuration, testing, and troubleshooting along the way."
+      },
+      {
+        "question": "Are AI agents reliable enough for production?",
+        "answer": "For well-defined tasks with good guardrails, yes. Coding agents, customer support agents, and data analysis agents are in production at major companies. For open-ended tasks with high stakes, they still need human oversight. Reliability improves as models improve."
+      }
+    ]
+  },
+  {
+    "term": "Chain of Thought Prompting",
+    "slug": "what-is-chain-of-thought",
+    "full_name": "Chain of Thought (CoT) Prompting",
+    "definition": "A prompting technique that instructs the language model to show its reasoning process step by step before reaching a final answer. By generating intermediate reasoning steps, the model produces significantly more accurate results on math, logic, coding, and multi-step reasoning tasks.",
+    "category": "Prompting Techniques",
+    "related_terms": [
+      "chain-of-thought",
+      "prompt-engineering",
+      "reasoning-models",
+      "few-shot-prompting"
+    ],
+    "related_links": [
+      "/glossary/chain-of-thought/",
+      "/glossary/prompt-engineering/",
+      "/glossary/reasoning-models/",
+      "/blog/prompt-engineering-best-practices/"
+    ],
+    "example": "Without CoT: 'A store has 45 apples. They sell 12 and receive 30. How many?' Model might answer incorrectly.\n\nWith CoT: 'Think step by step. A store has 45 apples. They sell 12 and receive 30. How many?'\nModel: 'Starting: 45 apples. After selling 12: 45 - 12 = 33. After receiving 30: 33 + 30 = 63. Answer: 63 apples.'",
+    "why_it_matters": "Chain of thought prompting improves accuracy by 20-40% on reasoning tasks according to research from Google. It is one of the most impactful prompt engineering techniques and forms the basis of modern reasoning models like o1 and o3. Understanding when and how to use CoT is a core prompt engineering skill.",
+    "in_depth": "Chain of thought works because language models process text sequentially. Each generated token serves as additional context for the next token. When the model writes out intermediate steps, each step provides context that improves the accuracy of subsequent steps.\n\nThere are several CoT variants with different applications:\n\nZero-shot CoT: Simply add 'Let's think step by step' to your prompt. This triggers step-by-step reasoning without examples. It is the simplest approach and works surprisingly well on most reasoning tasks.\n\nFew-shot CoT: Provide 2-3 example problems with worked-out solutions before your actual question. The examples teach the model the expected reasoning format. This produces more reliable output than zero-shot CoT.\n\nSelf-consistency: Generate multiple CoT reasoning paths for the same question, then take a majority vote on the final answer. If 4 out of 5 reasoning paths arrive at the same answer, that answer is likely correct.\n\nTree of Thought: Explore multiple reasoning branches at each step, evaluate which branches look most promising, and follow the best path. This is slower and more expensive but handles complex problems where the first approach may be a dead end.",
+    "common_mistakes": [
+      {
+        "mistake": "Using chain of thought for simple factual lookups where it adds unnecessary cost and latency",
+        "correction": "Reserve CoT for multi-step reasoning: math, logic, code debugging, multi-part analysis. For simple questions like 'What is the capital of France?' direct prompting is faster and cheaper."
+      },
+      {
+        "mistake": "Providing chain of thought examples with flawed reasoning steps",
+        "correction": "Double-check the logic in your few-shot examples. Models learn from your examples, including your mistakes. One error in a CoT example can systematically bias all subsequent answers."
+      },
+      {
+        "mistake": "Assuming CoT always helps with smaller models",
+        "correction": "Research shows CoT provides the biggest gains with larger models (70B+ parameters). Smaller models sometimes perform worse with CoT because they struggle to maintain coherent multi-step reasoning. Test before committing."
+      }
+    ],
+    "career_relevance": "Chain of thought is the most widely applicable prompt engineering technique. It appears in nearly every prompt engineering interview and is a requirement for building reliable AI applications that handle reasoning tasks. Mastering CoT variants is a baseline expectation for prompt engineer roles.",
+    "faqs": [
+      {
+        "question": "Does chain of thought cost more?",
+        "answer": "Yes. CoT prompts generate more output tokens (the reasoning steps), which increases cost. However, the accuracy improvement often reduces the need for retries, which can offset the higher per-call cost. For critical tasks, the accuracy gain is usually worth the extra tokens."
+      },
+      {
+        "question": "How is CoT different from reasoning models like o1?",
+        "answer": "Traditional CoT is a prompting technique that you apply manually. Reasoning models like o1 and o3 perform chain of thought internally as part of their architecture. You do not need to ask o1 to 'think step by step' because it already does. Traditional CoT is for standard models; reasoning models have it built in."
+      }
+    ]
+  },
+  {
+    "term": "Model Distillation",
+    "slug": "model-distillation",
+    "full_name": "Model Distillation (Knowledge Distillation)",
+    "definition": "A training technique where a smaller 'student' model learns to replicate the behavior of a larger 'teacher' model. The student model is trained on the teacher's outputs rather than raw data, capturing the larger model's knowledge in a more compact, faster, and cheaper form factor.",
+    "category": "Model Training",
+    "related_terms": [
+      "knowledge-distillation",
+      "fine-tuning",
+      "quantization",
+      "inference"
+    ],
+    "related_links": [
+      "/glossary/knowledge-distillation/",
+      "/glossary/fine-tuning/",
+      "/glossary/quantization/",
+      "/glossary/inference/"
+    ],
+    "example": "A company uses GPT-4 to classify 100,000 customer support tickets into 15 categories with 95% accuracy. They then fine-tune a small open-source model (Llama 8B) on GPT-4's classifications. The distilled model achieves 92% accuracy at 1/100th the inference cost and 10x the speed, suitable for real-time classification.",
+    "why_it_matters": "Distillation is how companies move from expensive prototype to affordable production. Most AI applications prototype with a large model (GPT-4, Claude Opus) then distill into a smaller, faster model for deployment. This pattern reduces inference costs by 90-99% while retaining most of the quality.",
+    "in_depth": "Distillation works on a simple insight: the probability distributions generated by a large model contain richer information than raw labels alone.\n\nWhen GPT-4 classifies a support ticket as 'billing issue,' it also assigns lower probabilities to related categories like 'account access' and 'payment failure.' These soft probability distributions, called 'soft labels' or 'dark knowledge,' capture nuanced relationships between categories that binary labels miss.\n\nThe distillation process involves three steps:\n\nFirst, generate training data using the teacher model. Run your inputs through GPT-4 or Claude Opus and collect both the outputs and (if available) the probability distributions.\n\nSecond, train the student model on this data. The student learns to mimic the teacher's behavior, including the subtle probability patterns, not just the final answers.\n\nThird, evaluate the student against a held-out test set. The quality gap between teacher and student is called the 'distillation gap.' A well-executed distillation achieves 85-95% of the teacher's quality.\n\nCommon distillation targets include moving from GPT-4 to GPT-4o-mini, from Claude Opus to a fine-tuned Haiku, or from any large model to an open-source model you can self-host.",
+    "common_mistakes": [
+      {
+        "mistake": "Distilling on too little data, producing a student that memorizes examples rather than learning patterns",
+        "correction": "Use at least 10,000-50,000 examples for distillation. More data produces better students. Quality matters too: ensure the teacher's outputs are diverse and representative."
+      },
+      {
+        "mistake": "Comparing the student model to human performance rather than to the teacher model",
+        "correction": "The student's ceiling is the teacher's performance. If GPT-4 achieves 93% accuracy on your task, a distilled model achieving 90% is excellent. Expecting it to exceed the teacher is unrealistic."
+      },
+      {
+        "mistake": "Ignoring the tradeoff between model size and quality for your latency requirements",
+        "correction": "Benchmark multiple student sizes. Sometimes a 3B model at 88% accuracy with 50ms latency beats a 7B model at 91% accuracy with 120ms latency. Let your application's latency budget guide the choice."
+      }
+    ],
+    "career_relevance": "Distillation is a core MLOps and AI engineering skill. Companies hiring AI engineers expect candidates to understand when and how to distill large models into production-ready smaller models. It is the bridge between prototyping with expensive APIs and deploying cost-effective AI at scale.",
+    "faqs": [
+      {
+        "question": "What is the difference between distillation and fine-tuning?",
+        "answer": "Fine-tuning trains a model on task-specific data (human-labeled examples). Distillation trains a smaller model on a larger model's outputs. Distillation is a form of fine-tuning, but the training data comes from a model rather than from humans. You can combine both: fine-tune with human data, then distill."
+      },
+      {
+        "question": "Is it legal to distill from commercial APIs like GPT-4?",
+        "answer": "This depends on the provider's terms of service. As of 2026, OpenAI's terms restrict using API outputs to train competing models. Anthropic has similar restrictions. Always check current terms before distilling. Using outputs to train models for your own internal use is generally permitted."
+      }
+    ]
+  },
+  {
+    "term": "RLHF",
+    "slug": "what-is-rlhf",
+    "full_name": "Reinforcement Learning from Human Feedback",
+    "definition": "A training technique that improves language models by incorporating human preferences into the learning process. Humans rank model outputs from best to worst, a reward model learns these preferences, and then reinforcement learning adjusts the base model to generate outputs that align with what humans prefer.",
+    "category": "Model Training",
+    "related_terms": [
+      "rlhf",
+      "dpo",
+      "fine-tuning",
+      "ai-alignment",
+      "instruction-tuning"
+    ],
+    "related_links": [
+      "/glossary/rlhf/",
+      "/glossary/dpo/",
+      "/glossary/fine-tuning/",
+      "/glossary/ai-alignment/"
+    ],
+    "example": "A model generates two responses to 'Explain quantum computing.' Response A is technically accurate but dense and jargon-heavy. Response B is accurate and written clearly for a general audience. A human annotator ranks B above A. Thousands of such comparisons train a reward model, which then guides the base model to produce more responses like B.",
+    "why_it_matters": "RLHF is the technique that transformed raw text-completion models into the helpful AI assistants we use today. ChatGPT, Claude, and Gemini all use RLHF (or its variants) to produce responses that are helpful, harmless, and honest. Without RLHF, language models would generate text that is statistically likely but not necessarily useful or safe.",
+    "in_depth": "RLHF has three distinct stages:\n\nStage 1: Supervised Fine-Tuning (SFT). The base model is fine-tuned on a dataset of high-quality instruction-response pairs. This teaches the model to follow instructions rather than just complete text. The result is a model that can answer questions but without consistent quality or safety.\n\nStage 2: Reward Model Training. Human annotators compare pairs of model outputs and select which response is better. These preference pairs train a separate reward model that scores any model output on a quality scale. The reward model learns patterns like 'clear explanations score higher than jargon' and 'polite refusals score higher than harmful content.'\n\nStage 3: Reinforcement Learning. The SFT model generates responses, the reward model scores them, and Proximal Policy Optimization (PPO) adjusts the model's weights to maximize the reward score. Over millions of iterations, the model learns to produce responses that score highly according to human preferences.\n\nAlternatives to RLHF have emerged, notably Direct Preference Optimization (DPO), which skips the reward model entirely and optimizes preferences directly. DPO is simpler to implement but RLHF remains the most proven approach for flagship models.",
+    "common_mistakes": [
+      {
+        "mistake": "Confusing RLHF with basic fine-tuning",
+        "correction": "Fine-tuning teaches a model what to say. RLHF teaches a model how humans prefer it to say things. Fine-tuning uses labeled examples. RLHF uses human preference rankings over paired outputs."
+      },
+      {
+        "mistake": "Assuming RLHF makes models factually accurate",
+        "correction": "RLHF optimizes for human preference, not factual accuracy. A model can learn to produce confident, well-written, but factually wrong answers if annotators prefer confident tone. Grounding and RAG address accuracy separately."
+      },
+      {
+        "mistake": "Thinking RLHF is a one-time training step",
+        "correction": "Leading AI labs run RLHF continuously as they discover new failure modes and as user expectations evolve. It is an ongoing process of alignment, not a single training phase."
+      }
+    ],
+    "career_relevance": "RLHF knowledge is essential for anyone working in AI alignment, model training, or AI safety. While few practitioners implement RLHF from scratch, understanding the process helps prompt engineers and AI product managers work with model behavior, predict failure modes, and design better evaluation criteria.",
+    "faqs": [
+      {
+        "question": "What is the difference between RLHF and DPO?",
+        "answer": "RLHF uses a three-stage process: SFT, reward model training, and reinforcement learning. DPO (Direct Preference Optimization) simplifies this to two stages by skipping the reward model and optimizing preferences directly. DPO is simpler and cheaper to implement. RLHF is more established and used by OpenAI and Anthropic for their flagship models."
+      },
+      {
+        "question": "How many human annotators does RLHF require?",
+        "answer": "Large-scale RLHF at companies like OpenAI and Anthropic uses hundreds to thousands of annotators. Smaller teams can use RLHF with as few as 5-10 annotators for domain-specific applications. The quality and consistency of annotations matters more than the quantity of annotators."
+      }
+    ]
   }
 ]

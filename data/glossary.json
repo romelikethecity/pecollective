@@ -156,7 +156,9 @@
         "correction": "Compensate for the lack of examples with detailed, explicit instructions about what you want and don't want."
       }
     ],
-    "career_relevance": "Understanding when zero-shot works (and when it doesn't) is a core prompt engineering skill. It determines whether you can ship a feature quickly with a simple prompt or need to invest time in building few-shot example sets."
+    "career_relevance": "Understanding when zero-shot works (and when it doesn't) is a core prompt engineering skill. It determines whether you can ship a feature quickly with a simple prompt or need to invest time in building few-shot example sets.",
+    "title": "Zero-Shot Prompting Explained - When & How to Use It",
+    "meta_description": "Zero-shot prompting sends a task to an LLM with no examples. When it works, when to use few-shot instead, and techniques to improve zero-shot results."
   },
   {
     "term": "System Prompt",
@@ -1670,7 +1672,9 @@
         "correction": "AI assistants are force multipliers, not replacements for engineering knowledge. Developers who understand their codebase use AI tools more effectively than those who blindly accept suggestions."
       }
     ],
-    "career_relevance": "AI coding assistant proficiency is becoming a baseline expectation for software engineers. Companies increasingly look for developers who can effectively leverage these tools. Understanding the landscape (Cursor vs Copilot vs Claude Code) helps engineers choose the right tool for their workflow."
+    "career_relevance": "AI coding assistant proficiency is becoming a baseline expectation for software engineers. Companies increasingly look for developers who can effectively leverage these tools. Understanding the landscape (Cursor vs Copilot vs Claude Code) helps engineers choose the right tool for their workflow.",
+    "title": "AI Coding Assistants Explained - How They Work in 2026",
+    "meta_description": "AI coding assistants use LLMs for autocomplete, code generation, and debugging. How they work, top tools (Cursor, Copilot, Claude Code), and limitations."
   },
   {
     "term": "API Rate Limiting",

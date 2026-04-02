@@ -30,7 +30,8 @@ try:
     from templates import (
         get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema,
         get_job_posting_schema, slugify, format_salary, is_remote,
-        BASE_URL, SITE_NAME, CSS_VARIABLES, CSS_NAV, CSS_LAYOUT, CSS_CARDS, CSS_CTA, CSS_FOOTER, CSS_JOB_PAGE
+        BASE_URL, SITE_NAME, CSS_VARIABLES, CSS_NAV, CSS_LAYOUT, CSS_CARDS, CSS_CTA, CSS_FOOTER, CSS_JOB_PAGE,
+        get_newsletter_cta_css, get_newsletter_cta_html
     )
     from nav_config import NAV_ITEMS, FOOTER_ITEMS, SUBSCRIBE_LINK, SUBSCRIBE_LABEL, NEWSLETTER_LINK
     from content_generator import generate_enrichment_sections, detect_role_from_slug
@@ -365,6 +366,7 @@ def create_job_page(job, idx, all_jobs_df=None):
             flex-wrap: wrap;
             gap: 8px;
         }}
+        {get_newsletter_cta_css()}
     </style>
 </head>
 {get_nav_html('jobs').replace('<body>', '<body>')}
@@ -427,6 +429,8 @@ def create_job_page(job, idx, all_jobs_df=None):
             </div>
 
             {_build_related_jobs_html(job, all_jobs_df)}
+
+            {get_newsletter_cta_html("Get AI job alerts in your inbox.", "<strong>AI Pulse</strong> covers job market trends, salary data, and career moves for AI professionals. Free, weekly.")}
 
             {get_cta_box()}
         </div>
@@ -683,6 +687,7 @@ def create_stale_job_page(stale_slug, similar_jobs):
             display: grid;
             gap: 16px;
         }}
+        {get_newsletter_cta_css()}
     </style>
 </head>
 {get_nav_html('jobs').replace('<body>', '<body>')}
@@ -712,6 +717,8 @@ def create_stale_job_page(stale_slug, similar_jobs):
                     {similar_jobs_html}
                 </div>
             </div>
+
+            {get_newsletter_cta_html("Get AI job alerts in your inbox.", "<strong>AI Pulse</strong> covers job market trends, salary data, and career moves for AI professionals. Free, weekly.")}
 
             {get_cta_box()}
         </div>

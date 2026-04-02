@@ -814,6 +814,18 @@
                 .category-card:hover { border-color: var(--teal-light); transform: translateY(-2px); }
                 .category-card h3 { color: var(--text-primary); margin-bottom: 8px; }
                 .category-card p { color: var(--text-secondary); font-size: 0.9rem; }
+                
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
             </style>
 
             <h2 style="margin-bottom: 20px;">By Role</h2><div class="category-grid"><a href="/salaries/ai-ml-engineer/" class="category-card"><h3>AI/ML Engineer</h3><p>View salary data</p></a><a href="/salaries/prompt-engineer/" class="category-card"><h3>Prompt Engineer</h3><p>View salary data</p></a><a href="/salaries/llm-engineer/" class="category-card"><h3>LLM Engineer</h3><p>View salary data</p></a><a href="/salaries/mlops-engineer/" class="category-card"><h3>MLOps Engineer</h3><p>View salary data</p></a><a href="/salaries/research-engineer/" class="category-card"><h3>Research Engineer</h3><p>View salary data</p></a><a href="/salaries/ai-agent-developer/" class="category-card"><h3>AI Agent Developer</h3><p>View salary data</p></a><a href="/salaries/ai-product-manager/" class="category-card"><h3>AI Product Manager</h3><p>View salary data</p></a><a href="/salaries/data-scientist/" class="category-card"><h3>Data Scientist</h3><p>View salary data</p></a></div>
@@ -821,6 +833,17 @@
             <h2 style="margin-bottom: 20px;">By Location</h2><div class="category-grid"><a href="/salaries/san-francisco/" class="category-card"><h3>San Francisco</h3><p>View salary data</p></a><a href="/salaries/new-york/" class="category-card"><h3>New York</h3><p>View salary data</p></a><a href="/salaries/seattle/" class="category-card"><h3>Seattle</h3><p>View salary data</p></a><a href="/salaries/austin/" class="category-card"><h3>Austin</h3><p>View salary data</p></a><a href="/salaries/boston/" class="category-card"><h3>Boston</h3><p>View salary data</p></a><a href="/salaries/los-angeles/" class="category-card"><h3>Los Angeles</h3><p>View salary data</p></a><a href="/salaries/remote/" class="category-card"><h3>Remote</h3><p>View salary data</p></a></div>
 
             <h2 style="margin-bottom: 20px;">By Experience</h2><div class="category-grid"><a href="/salaries/senior/" class="category-card"><h3>Senior</h3><p>View salary data</p></a><a href="/salaries/mid-level/" class="category-card"><h3>Mid-Level</h3><p>View salary data</p></a><a href="/salaries/entry-level/" class="category-card"><h3>Entry-Level</h3><p>View salary data</p></a></div>
+
+            
+      <div class="newsletter-cta">
+        <h2>Get salary data and career intel in your inbox.</h2>
+        <p><strong>AI Pulse</strong> covers salary trends, career strategy, and market shifts for AI professionals. Free, weekly.</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
 
             
     <div class="cta-box">

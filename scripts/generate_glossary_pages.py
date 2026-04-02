@@ -13,7 +13,7 @@ import sys
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
-from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, BASE_URL, SITE_NAME, CSS_VARIABLES
+from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, BASE_URL, SITE_NAME, CSS_VARIABLES, get_newsletter_cta_css, get_newsletter_cta_html
 
 DATA_FILE = 'data/glossary.json'
 SITE_DIR = 'site'
@@ -471,6 +471,8 @@ def generate_term_page(term_data, all_terms):
             </div>
         </div>
 
+        {get_newsletter_cta_html("Level up your AI vocabulary.", "<strong>AI News Digest</strong> covers new tools, industry moves, and technical concepts. <strong>AI Pulse</strong> covers career strategy. Both free.")}
+
         {get_cta_box(
             title="Stay Ahead in AI",
             description="Join 1,300+ prompt engineers getting weekly insights on tools, techniques, and career opportunities.",
@@ -575,6 +577,8 @@ def generate_hub_page(terms):
                 {categories_html}
             </div>
         </div>
+
+        {get_newsletter_cta_html("Level up your AI vocabulary.", "<strong>AI News Digest</strong> covers new tools, industry moves, and technical concepts. <strong>AI Pulse</strong> covers career strategy. Both free.")}
 
         {get_cta_box(
             title="Go Deeper",

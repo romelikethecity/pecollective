@@ -17,7 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 try:
-    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, BASE_URL, SITE_NAME
+    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, get_newsletter_cta_css, get_newsletter_cta_html, BASE_URL, SITE_NAME
 except Exception as e:
     print(f"ERROR importing templates: {e}")
     traceback.print_exc()
@@ -359,6 +359,7 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
                 }}
                 .company-name {{ color: var(--text-primary); font-weight: 500; }}
                 .company-salary {{ color: var(--gold); font-weight: 600; }}
+                {get_newsletter_cta_css()}
             </style>
 
             {desc_html}
@@ -381,6 +382,11 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
                     Only jobs with disclosed compensation are included. Data is updated weekly.
                 </p>
             </div>
+
+            {get_newsletter_cta_html(
+                headline="Get salary data and career intel in your inbox.",
+                subtext='<strong>AI Pulse</strong> covers salary trends, career strategy, and market shifts for AI professionals. Free, weekly.'
+            )}
 
             {get_cta_box()}
         </div>
@@ -519,6 +525,7 @@ def main():
                 .category-card:hover {{ border-color: var(--teal-light); transform: translateY(-2px); }}
                 .category-card h3 {{ color: var(--text-primary); margin-bottom: 8px; }}
                 .category-card p {{ color: var(--text-secondary); font-size: 0.9rem; }}
+                {get_newsletter_cta_css()}
             </style>
 
             {role_section}
@@ -526,6 +533,11 @@ def main():
             {metro_section}
 
             {exp_section}
+
+            {get_newsletter_cta_html(
+                headline="Get salary data and career intel in your inbox.",
+                subtext='<strong>AI Pulse</strong> covers salary trends, career strategy, and market shifts for AI professionals. Free, weekly.'
+            )}
 
             {get_cta_box()}
         </div>

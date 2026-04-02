@@ -19,7 +19,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 try:
-    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, format_salary, is_remote, BASE_URL, SITE_NAME
+    from templates import get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema, format_salary, is_remote, BASE_URL, SITE_NAME, get_newsletter_cta_css, get_newsletter_cta_html
 except Exception as e:
     print(f"ERROR importing templates: {e}")
     traceback.print_exc()
@@ -294,6 +294,7 @@ def generate_category_page(filtered_df, slug, title, description):
             <h2 style="margin: 32px 0 16px; font-size: 1.25rem;">Open Positions</h2>
             <div class="jobs-grid">{job_cards}</div>
             {faq_html}
+            {get_newsletter_cta_html("Stay ahead of AI hiring trends.", "<strong>AI Pulse</strong> covers salary data, job market shifts, and career strategy for AI professionals. Free, weekly.")}
             {get_cta_box()}
         </div>
     </main>

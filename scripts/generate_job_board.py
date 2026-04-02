@@ -20,7 +20,8 @@ sys.path.insert(0, script_dir)
 try:
     from templates import (
         get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema,
-        slugify, format_salary, is_remote, BASE_URL, SITE_NAME
+        slugify, format_salary, is_remote, BASE_URL, SITE_NAME,
+        get_newsletter_cta_css, get_newsletter_cta_html
     )
 except Exception as e:
     print(f"ERROR importing templates: {e}")
@@ -234,11 +235,14 @@ def main():
                     flex-direction: column;
                     gap: 12px;
                 }}
+                {get_newsletter_cta_css()}
             </style>
 
             <div class="jobs-grid">
                 {job_cards_html}
             </div>
+
+            {get_newsletter_cta_html("Get AI job alerts in your inbox.", "<strong>AI Pulse</strong> covers job market trends, salary data, and career moves for AI professionals. Free, weekly.")}
 
             {get_cta_box()}
         </div>

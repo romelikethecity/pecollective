@@ -995,6 +995,37 @@ def get_cta_box(title="Join the AI Community",
 '''
 
 
+def get_newsletter_cta_css():
+    """Newsletter CTA inline styles — add to page <style> block"""
+    return """
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }"""
+
+
+def get_newsletter_cta_html(headline="New tools ship every week. We test them so you don't have to.",
+                            subtext='<strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.'):
+    """Newsletter email capture CTA — add before closing </main> or after FAQ section"""
+    return f'''
+      <div class="newsletter-cta">
+        <h2>{headline}</h2>
+        <p>{subtext}</p>
+        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>'''
+
+
 def get_job_posting_schema(job_data):
     """Generate JobPosting JSON-LD schema for a job"""
     import json

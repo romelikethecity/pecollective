@@ -33,6 +33,7 @@ try:
         BASE_URL, SITE_NAME, CSS_VARIABLES, CSS_NAV, CSS_LAYOUT, CSS_CARDS, CSS_CTA, CSS_FOOTER, CSS_JOB_PAGE
     )
     from nav_config import NAV_ITEMS, FOOTER_ITEMS, SUBSCRIBE_LINK, SUBSCRIBE_LABEL, NEWSLETTER_LINK
+    from content_generator import generate_enrichment_sections, detect_role_from_slug
 except Exception as e:
     print(f"ERROR importing modules: {e}")
     traceback.print_exc()
@@ -553,6 +554,14 @@ def create_stale_job_page(stale_slug, similar_jobs):
         company_display = 'This Company'
         title_display = 'AI Engineer'
 
+    # Generate enrichment content
+    role_type = detect_role_from_slug(stale_slug)
+    enrichment = generate_enrichment_sections(role_type, title_display, company_display)
+    enrichment_sections = enrichment.get('sections_html', '')
+    enrichment_faq = enrichment.get('faq_html', '')
+    enrichment_faq_schema = enrichment.get('faq_schema', '')
+    enrichment_css = enrichment.get('css', '')
+
     # Build similar jobs HTML
     similar_jobs_html = ""
     for job in similar_jobs:
@@ -593,6 +602,8 @@ def create_stale_job_page(stale_slug, similar_jobs):
     <link rel="canonical" href="{BASE_URL}/jobs/{stale_slug}/">
     <meta name="robots" content="index, follow">
 
+    {enrichment_faq_schema}
+
     <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -604,6 +615,7 @@ def create_stale_job_page(stale_slug, similar_jobs):
         {CSS_CARDS}
         {CSS_CTA}
         {CSS_FOOTER}
+        {enrichment_css}
 
         .expired-header {{
             background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
@@ -691,8 +703,11 @@ def create_stale_job_page(stale_slug, similar_jobs):
                 <a href="/jobs/" class="browse-all-btn">Browse All AI Jobs →</a>
             </div>
 
+            {enrichment_sections}
+            {enrichment_faq}
+
             <div class="similar-section">
-                <h2>Similar Opportunities</h2>
+                <h2>Similar Open Positions</h2>
                 <div class="similar-jobs-grid">
                     {similar_jobs_html}
                 </div>

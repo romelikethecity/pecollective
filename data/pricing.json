@@ -2810,5 +2810,1017 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "gpt-4o-pricing",
+    "tool_name": "GPT-4o",
+    "tool_slug": "openai-api",
+    "title": "GPT-4o Pricing 2026 - Per Token Costs & Plan Comparison",
+    "meta_description": "GPT-4o costs $2.50 input / $10 output per 1M tokens. GPT-4o Mini is $0.15 / $0.60. See how 4o compares to GPT-4.1 and when to migrate.",
+    "og_description": "GPT-4o pricing breakdown for April 2026. Per-token costs, batch discounts, caching, and how it compares to GPT-4.1.",
+    "h1": "GPT-4o Pricing: What It Costs Per Token (April 2026)",
+    "intro": "GPT-4o launched in May 2024 at $5/$15 per million tokens and got a 50% price cut in October 2024. It now costs $2.50 input and $10 output per million tokens. OpenAI has since released GPT-4.1 as the recommended production replacement, but GPT-4o remains available and widely used. If you are running GPT-4o in production or evaluating whether to switch, this page covers everything: current per-token pricing, batch and caching discounts, comparison to GPT-4.1, and real-world cost estimates.",
+    "tiers": [
+      {
+        "name": "GPT-4o",
+        "price": "$2.50 / $10.00",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Multimodal: text, image, and audio input",
+          "128K context window",
+          "Function calling and structured outputs",
+          "Vision capabilities included at no extra charge",
+          "50% cached input discount ($1.25/1M)"
+        ],
+        "popular": false
+      },
+      {
+        "name": "GPT-4o Mini",
+        "price": "$0.15 / $0.60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Cheapest GPT-4o variant",
+          "128K context window",
+          "Good for classification, extraction, simple tasks",
+          "Function calling supported",
+          "50% cached input discount ($0.075/1M)"
+        ],
+        "popular": true
+      },
+      {
+        "name": "GPT-4o Audio",
+        "price": "$40.00 / $80.00",
+        "billing": "per 1M audio tokens",
+        "highlights": [
+          "Native audio input and output",
+          "Text tokens still at standard GPT-4o rates",
+          "Audio tokens are significantly more expensive",
+          "Best for voice-first applications"
+        ],
+        "popular": false
+      },
+      {
+        "name": "GPT-4o (Batch)",
+        "price": "$1.25 / $5.00",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "50% discount on standard pricing",
+          "24-hour turnaround SLA",
+          "Same quality as synchronous API",
+          "Best for bulk processing and evaluation"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      {
+        "title": "GPT-4.1 is cheaper for most use cases",
+        "detail": "GPT-4.1 costs $2.00/$8.00 per 1M tokens versus GPT-4o's $2.50/$10.00. That's 20% cheaper on input and output. Unless you need vision or audio specifically, GPT-4.1 is the better deal with stronger benchmark performance."
+      },
+      {
+        "title": "Output tokens cost 4x input tokens",
+        "detail": "GPT-4o charges $2.50 per 1M input tokens but $10.00 per 1M output tokens. Applications that generate long responses (summaries, articles, code) will see output dominate the bill. Budget based on your output-to-input ratio."
+      },
+      {
+        "title": "Vision queries use image tokens",
+        "detail": "Sending images to GPT-4o converts them to tokens based on resolution. A 1024x1024 image uses roughly 765 tokens. High-res mode can use 2-3x more. Vision is included in the base price, but the token count adds up fast."
+      },
+      {
+        "title": "Audio tokens are 16x more expensive",
+        "detail": "GPT-4o audio input costs $40 per 1M tokens and output costs $80 per 1M tokens. That's 16x and 8x the text token prices respectively. For voice applications, calculate audio token costs separately."
+      },
+      {
+        "title": "Prompt caching only helps on repeated prefixes",
+        "detail": "The 50% cached input discount applies only when the beginning of your prompt matches a recent request exactly. System prompts and few-shot examples benefit most. Dynamic user inputs typically do not get cached."
+      },
+      {
+        "title": "Rate limits depend on your spending tier",
+        "detail": "Free tier users get 500 RPM. Tier 1 (\\ spent) gets 500 RPM and 30K TPM. Tier 5 (\\+ spent) gets 10K RPM and 30M TPM. Your effective throughput depends on your account's spending history."
+      }
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Prototyping or light usage",
+        "recommendation": "GPT-4o Mini at $0.15/$0.60 per 1M tokens. 97% cheaper than standard GPT-4o for simple tasks. Use this for classification, extraction, routing, and early-stage development."
+      },
+      {
+        "persona": "Production text applications",
+        "recommendation": "Migrate to GPT-4.1 ($2.00/$8.00). It's 20% cheaper than GPT-4o, benchmarks higher on coding and instruction following, and has a 1M token context window. GPT-4o is no longer the recommended production model."
+      },
+      {
+        "persona": "Vision and multimodal workflows",
+        "recommendation": "GPT-4o is still the go-to for image understanding. GPT-4.1 does not support vision input. If your application sends images, stay on GPT-4o or evaluate o4-mini for reasoning-heavy vision tasks."
+      },
+      {
+        "persona": "Bulk processing and evaluation",
+        "recommendation": "Batch API at $1.25/$5.00 per 1M tokens. Half the cost of synchronous GPT-4o, with 24-hour turnaround. Ideal for data labeling, content generation, and test suite evaluation."
+      }
+    ],
+    "bottom_line": "GPT-4o at $2.50/$10.00 per million tokens is no longer OpenAI's best value for text-only applications \u2014 GPT-4.1 is 20% cheaper and performs better on most benchmarks. But GPT-4o remains the right choice for vision and multimodal workflows where GPT-4.1 has no support. If you're starting fresh, default to GPT-4.1 for text and GPT-4o for images. If you're already running GPT-4o, the migration is straightforward since they share the same API format.",
+    "internal_links": [
+      {
+        "text": "Full OpenAI API pricing for all models",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "OpenAI API review and features",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "text": "OpenAI vs Anthropic API pricing comparison",
+        "url": "/tools/openai-api-vs-anthropic-api-pricing/"
+      },
+      {
+        "text": "Best LLM frameworks for building with GPT-4o",
+        "url": "/tools/best-llm-frameworks/"
+      },
+      {
+        "text": "Anthropic API pricing (Claude models)",
+        "url": "/tools/anthropic-api-pricing/"
+      }
+    ],
+    "deep_sections": [
+      {
+        "heading": "GPT-4o Pricing Table (April 2026)",
+        "body": "Here is every GPT-4o variant with current per-token pricing. All prices are per 1 million tokens unless noted otherwise.",
+        "table": {
+          "headers": [
+            "Model",
+            "Input",
+            "Cached Input",
+            "Output",
+            "Context"
+          ],
+          "rows": [
+            [
+              "GPT-4o",
+              "$2.50",
+              "$1.25",
+              "$10.00",
+              "128K"
+            ],
+            [
+              "GPT-4o Mini",
+              "$0.15",
+              "$0.075",
+              "$0.60",
+              "128K"
+            ],
+            [
+              "GPT-4o Audio (text)",
+              "$2.50",
+              "$1.25",
+              "$10.00",
+              "128K"
+            ],
+            [
+              "GPT-4o Audio (audio)",
+              "$40.00",
+              "-",
+              "$80.00",
+              "128K"
+            ],
+            [
+              "GPT-4o (Batch)",
+              "$1.25",
+              "-",
+              "$5.00",
+              "128K"
+            ],
+            [
+              "GPT-4o Mini (Batch)",
+              "$0.075",
+              "-",
+              "$0.30",
+              "128K"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4o Price History",
+        "body": "GPT-4o launched in May 2024 at $5.00 input and $15.00 output per million tokens. In October 2024, OpenAI cut prices by 50% to the current $2.50/$10.00. GPT-4o Mini launched in July 2024 at $0.15/$0.60 and has not changed since. The price cuts made GPT-4o competitive with Claude 3.5 Sonnet at the time, though both providers have since released newer models.",
+        "table": {
+          "headers": [
+            "Date",
+            "Model",
+            "Input/1M",
+            "Output/1M",
+            "Change"
+          ],
+          "rows": [
+            [
+              "May 2024",
+              "GPT-4o",
+              "$5.00",
+              "$15.00",
+              "Launch price"
+            ],
+            [
+              "Jul 2024",
+              "GPT-4o Mini",
+              "$0.15",
+              "$0.60",
+              "New model"
+            ],
+            [
+              "Oct 2024",
+              "GPT-4o",
+              "$2.50",
+              "$10.00",
+              "-50%"
+            ],
+            [
+              "Jan 2025",
+              "GPT-4.1",
+              "$2.00",
+              "$8.00",
+              "New (replaced 4o)"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4o vs GPT-4.1: Which Should You Use?",
+        "body": "GPT-4.1 replaced GPT-4o as OpenAI's recommended production model in January 2025. It is cheaper ($2.00/$8.00 vs $2.50/$10.00), scores higher on coding benchmarks (SWE-bench), handles instruction following better, and supports a 1 million token context window versus GPT-4o's 128K. The main reason to stay on GPT-4o is vision support \u2014 GPT-4.1 does not accept image inputs. For text-only applications, GPT-4.1 is strictly better on price and performance. The API interface is identical, so migration requires only changing the model parameter from gpt-4o to gpt-4.1.",
+        "table": {
+          "headers": [
+            "Feature",
+            "GPT-4o",
+            "GPT-4.1"
+          ],
+          "rows": [
+            [
+              "Input price",
+              "$2.50/1M",
+              "$2.00/1M"
+            ],
+            [
+              "Output price",
+              "$10.00/1M",
+              "$8.00/1M"
+            ],
+            [
+              "Context window",
+              "128K tokens",
+              "1M tokens"
+            ],
+            [
+              "Vision support",
+              "Yes",
+              "No"
+            ],
+            [
+              "Recommended for",
+              "Multimodal",
+              "Production text"
+            ],
+            [
+              "Batch discount",
+              "50%",
+              "50%"
+            ],
+            [
+              "Cache discount",
+              "50%",
+              "75%"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4o vs GPT-4o Mini: When to Use Each",
+        "body": "GPT-4o Mini costs 94% less than GPT-4o on input tokens and 94% less on output tokens. For tasks that do not require GPT-4o's full capabilities \u2014 classification, entity extraction, simple Q&A, content routing \u2014 Mini delivers comparable results at a fraction of the cost. The quality gap shows up on complex reasoning, nuanced writing, and multi-step tool use. A common pattern is to use Mini for initial filtering or classification and route only complex requests to the full GPT-4o or GPT-4.1 model. This hybrid approach can cut API costs by 80% or more depending on your traffic mix."
+      },
+      {
+        "heading": "Batch API: Half-Price GPT-4o",
+        "body": "OpenAI's Batch API processes requests asynchronously at 50% off. GPT-4o Batch pricing is $1.25 input and $5.00 output per million tokens. Jobs complete within 24 hours. The Batch API accepts the same request format as the synchronous Chat Completions API, making integration straightforward. Best for: bulk content generation, large-scale data labeling, evaluation pipelines, and any workload where latency is not critical. You submit a JSONL file of requests and poll for results.",
+        "table": {
+          "headers": [
+            "Model",
+            "Sync Input",
+            "Batch Input",
+            "Sync Output",
+            "Batch Output"
+          ],
+          "rows": [
+            [
+              "GPT-4o",
+              "$2.50",
+              "$1.25",
+              "$10.00",
+              "$5.00"
+            ],
+            [
+              "GPT-4o Mini",
+              "$0.15",
+              "$0.075",
+              "$0.60",
+              "$0.30"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Prompt Caching and How It Reduces GPT-4o Costs",
+        "body": "OpenAI automatically caches the prefix of your prompt. When a subsequent request starts with the same tokens, cached input tokens are billed at 50% off ($1.25/1M instead of $2.50/1M for GPT-4o). Caching works best with long, stable system prompts and few-shot examples. The cache has a short TTL \u2014 typically a few minutes \u2014 so it helps most with high-throughput applications making frequent similar requests. Structure your prompts with static content first and dynamic content last to maximize cache hits."
+      },
+      {
+        "heading": "Real-World Cost Examples",
+        "body": "Here is what GPT-4o actually costs for common use cases, assuming average token counts per request.",
+        "table": {
+          "headers": [
+            "Use Case",
+            "Input Tokens",
+            "Output Tokens",
+            "Cost per Request",
+            "Cost per 1K Requests"
+          ],
+          "rows": [
+            [
+              "Chatbot reply",
+              "~500",
+              "~200",
+              "$0.0033",
+              "$3.25"
+            ],
+            [
+              "Document summary (5 pages)",
+              "~3,000",
+              "~500",
+              "$0.0125",
+              "$12.50"
+            ],
+            [
+              "Code generation",
+              "~1,000",
+              "~800",
+              "$0.0105",
+              "$10.50"
+            ],
+            [
+              "Image analysis",
+              "~1,500",
+              "~300",
+              "$0.0068",
+              "$6.75"
+            ],
+            [
+              "RAG with 10K context",
+              "~10,000",
+              "~500",
+              "$0.0300",
+              "$30.00"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Rate Limits by Spending Tier",
+        "body": "OpenAI sets rate limits based on your total API spending. New accounts start at the free tier with modest limits. As you spend more, limits increase automatically. For GPT-4o specifically:",
+        "table": {
+          "headers": [
+            "Tier",
+            "Requirement",
+            "RPM",
+            "TPM",
+            "RPD"
+          ],
+          "rows": [
+            [
+              "Free",
+              "Verified account",
+              "500",
+              "30K",
+              "500"
+            ],
+            [
+              "Tier 1",
+              "$5+ spent",
+              "500",
+              "30K",
+              "10K"
+            ],
+            [
+              "Tier 2",
+              "$50+ spent",
+              "5K",
+              "450K",
+              "\u2014"
+            ],
+            [
+              "Tier 3",
+              "$100+ spent",
+              "5K",
+              "800K",
+              "\u2014"
+            ],
+            [
+              "Tier 4",
+              "$250+ spent",
+              "10K",
+              "2M",
+              "\u2014"
+            ],
+            [
+              "Tier 5",
+              "$1,000+ spent",
+              "10K",
+              "30M",
+              "\u2014"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "How to Estimate Your Monthly GPT-4o Bill",
+        "body": "Multiply your average input tokens per request by your request volume, then divide by 1 million and multiply by $2.50. Do the same for output tokens at $10.00 per million. Example: 10,000 requests/day averaging 1,000 input and 300 output tokens each = 10M input tokens + 3M output tokens per day. Monthly: 300M input ($750) + 90M output ($900) = $1,650/month at standard rates, or $825/month with Batch API. Add caching if your prompts have stable prefixes."
+      },
+      {
+        "heading": "GPT-4o vs Claude Sonnet 4.6: Cross-Provider Comparison",
+        "body": "Anthropic's Claude Sonnet 4.6 is the closest competitor to GPT-4o. Claude Sonnet 4.6 costs $3.00 input and $15.00 output per million tokens \u2014 more expensive than GPT-4o on both dimensions. Claude offers a 200K context window versus GPT-4o's 128K. Performance is comparable on most benchmarks, with Claude generally stronger on long-form writing and analysis, and GPT-4o stronger on structured output and tool use. For cost-sensitive applications, GPT-4o (or better yet, GPT-4.1) has the edge.",
+        "table": {
+          "headers": [
+            "Model",
+            "Input/1M",
+            "Output/1M",
+            "Context",
+            "Vision"
+          ],
+          "rows": [
+            [
+              "GPT-4o",
+              "$2.50",
+              "$10.00",
+              "128K",
+              "Yes"
+            ],
+            [
+              "GPT-4.1",
+              "$2.00",
+              "$8.00",
+              "1M",
+              "No"
+            ],
+            [
+              "Claude Sonnet 4.6",
+              "$3.00",
+              "$15.00",
+              "200K",
+              "Yes"
+            ],
+            [
+              "Claude Haiku 4.5",
+              "$0.80",
+              "$4.00",
+              "200K",
+              "Yes"
+            ],
+            [
+              "Gemini 2.0 Flash",
+              "$0.10",
+              "$0.40",
+              "1M",
+              "Yes"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Migration Guide: GPT-4o to GPT-4.1",
+        "body": "If you are running GPT-4o for text-only applications, switching to GPT-4.1 saves 20% on every API call with no quality loss. The migration is simple: change the model parameter from \"gpt-4o\" to \"gpt-4.1\" in your API calls. Both models use the same Chat Completions API format, support the same tools (function calling, structured outputs, JSON mode), and accept the same parameters. Test with a small sample first to verify output quality meets your requirements, then switch over. The only blocker is if you rely on vision input \u2014 GPT-4.1 does not support images."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does GPT-4o cost per token?",
+        "answer": "GPT-4o costs $2.50 per 1 million input tokens and $10.00 per 1 million output tokens. With prompt caching, input tokens drop to $1.25 per million. Batch API pricing is $1.25 input and $5.00 output per million tokens."
+      },
+      {
+        "question": "Is GPT-4o cheaper than GPT-4?",
+        "answer": "Yes. GPT-4o is significantly cheaper than the original GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($10/$30 per 1M tokens). GPT-4o costs $2.50/$10.00 \u2014 roughly 75% cheaper than GPT-4 Turbo."
+      },
+      {
+        "question": "Should I use GPT-4o or GPT-4.1?",
+        "answer": "Use GPT-4.1 for text-only applications \u2014 it is 20% cheaper and benchmarks higher. Use GPT-4o only if you need vision (image input) or audio capabilities, which GPT-4.1 does not support."
+      },
+      {
+        "question": "What is GPT-4o Mini and when should I use it?",
+        "answer": "GPT-4o Mini costs $0.15/$0.60 per million tokens \u2014 94% cheaper than GPT-4o. Use it for simple tasks like classification, extraction, routing, and early-stage development. Switch to GPT-4o or GPT-4.1 for complex reasoning and nuanced generation."
+      },
+      {
+        "question": "Does GPT-4o have a free tier?",
+        "answer": "The OpenAI API does not have a free tier for GPT-4o. New accounts get $5 in credits. ChatGPT Free includes limited GPT-4o access, but that is the consumer product, not the API."
+      },
+      {
+        "question": "How does GPT-4o batch pricing work?",
+        "answer": "Submit a JSONL file of requests to the Batch API endpoint. Processing completes within 24 hours. Pricing is 50% off standard rates: $1.25 input and $5.00 output per million tokens. Same quality as synchronous calls."
+      },
+      {
+        "question": "Is GPT-4o being deprecated?",
+        "answer": "OpenAI has not announced a deprecation date for GPT-4o. It is no longer the recommended production model (GPT-4.1 replaced it), but it remains available. OpenAI typically gives at least 6 months notice before deprecating models."
+      },
+      {
+        "question": "How much does it cost to analyze an image with GPT-4o?",
+        "answer": "Image analysis uses GPT-4o's standard text token pricing plus additional tokens for the image. A 1024x1024 image uses roughly 765 tokens ($0.002). High-res images use more tokens. There is no separate per-image charge."
+      },
+      {
+        "question": "What is the context window for GPT-4o?",
+        "answer": "GPT-4o supports 128K tokens of context (roughly 96K words). Both GPT-4o and GPT-4o Mini share this 128K limit. If you need more context, GPT-4.1 supports 1 million tokens."
+      },
+      {
+        "question": "How does GPT-4o pricing compare to Claude?",
+        "answer": "GPT-4o ($2.50/$10.00) is cheaper than Claude Sonnet 4.6 ($3.00/$15.00) on both input and output. Claude Haiku 4.5 ($0.80/$4.00) is cheaper than GPT-4o but more expensive than GPT-4o Mini ($0.15/$0.60)."
+      }
+    ],
+    "date_updated": "April 2026"
+  },
+  {
+    "slug": "gpt-4o-mini-pricing",
+    "tool_name": "GPT-4o Mini",
+    "tool_slug": "openai-api",
+    "title": "GPT-4o Mini Pricing 2026 - Cheapest OpenAI Model",
+    "meta_description": "GPT-4o Mini costs $0.15 input / $0.60 output per 1M tokens. 94% cheaper than GPT-4o. See limits, batch pricing, and when Mini is enough.",
+    "og_description": "GPT-4o Mini pricing breakdown. Per-token costs, batch discounts, and where Mini falls short versus GPT-4o and GPT-4.1 Nano.",
+    "h1": "GPT-4o Mini Pricing: The Cheapest Way to Use OpenAI (April 2026)",
+    "intro": "GPT-4o Mini is OpenAI's cheapest model in the GPT-4 family at $0.15/$0.60 per million tokens. Launched July 2024, it handles classification, extraction, routing, and simple generation at 94% less than GPT-4o. Now competes with GPT-4.1 Nano ($0.10/$0.40) for the budget tier.",
+    "tiers": [
+      {
+        "name": "GPT-4o Mini",
+        "price": "$0.15 / $0.60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Cheapest GPT-4 family model from OpenAI",
+          "128K context window",
+          "Function calling and structured outputs",
+          "Vision support for image inputs"
+        ],
+        "popular": true
+      },
+      {
+        "name": "GPT-4o Mini (Cached)",
+        "price": "$0.075 / $0.60",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "50% discount on input tokens with prompt caching",
+          "Output tokens remain at standard rate",
+          "Best for apps with repeated system prompts",
+          "Cache hits automatic — no code changes needed"
+        ],
+        "popular": false
+      },
+      {
+        "name": "GPT-4o Mini (Batch)",
+        "price": "$0.075 / $0.30",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "50% off both input and output tokens",
+          "24-hour turnaround SLA",
+          "Same quality as synchronous API",
+          "Best for bulk classification and labeling"
+        ],
+        "popular": false
+      },
+      {
+        "name": "GPT-4o Mini (Fine-tuned)",
+        "price": "$0.30 / $1.20",
+        "billing": "per 1M input / output tokens",
+        "highlights": [
+          "Double base price for custom fine-tuned models",
+          "Training costs $0.30 per 1M tokens on top of inference",
+          "Best for domain-specific classification tasks",
+          "Requires at least 10 training examples"
+        ],
+        "popular": false
+      }
+    ],
+    "hidden_costs": [
+      {
+        "title": "GPT-4.1 Nano is now cheaper",
+        "detail": "GPT-4.1 Nano costs $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. That is 33% cheaper on input and output. For simple classification and routing, Nano may be the better budget pick — benchmark your specific task before choosing."
+      },
+      {
+        "title": "Output tokens cost 4x input tokens",
+        "detail": "GPT-4o Mini charges $0.15 per 1M input tokens but $0.60 per 1M output tokens. Generation-heavy tasks like summarization, content writing, or code generation cost more than you expect if you budget only on input. Always estimate your output-to-input ratio."
+      },
+      {
+        "title": "Fine-tuning training costs add up",
+        "detail": "Fine-tuning training costs $0.30 per 1M tokens, and inference on fine-tuned models is 2x the base rate ($0.30/$1.20). A training run on 10M tokens costs $3.00 before you make a single inference call. Multiple training iterations multiply that cost."
+      },
+      {
+        "title": "128K context does not mean 128K quality",
+        "detail": "GPT-4o Mini accepts 128K tokens of context, but quality degrades noticeably past 32K tokens. Long-context tasks like document Q&A over large files may produce worse results than splitting into smaller chunks. Test with your actual data before relying on full context length."
+      },
+      {
+        "title": "Vision adds image token costs",
+        "detail": "Sending images to GPT-4o Mini converts them to tokens based on resolution. A low-res image costs roughly $0.002 and a high-res image costs $0.004-0.006 depending on dimensions. If you process thousands of images, these costs add up fast even at Mini pricing."
+      },
+      {
+        "title": "Rate limits start low on free tier",
+        "detail": "Free tier accounts get 500 RPM for GPT-4o Mini. Tier 1 ($5+ spent) stays at 500 RPM with 30K TPM. You need to reach Tier 2 ($50+ spent) for 5K RPM. Production applications often hit rate limits before they hit cost ceilings."
+      }
+    ],
+    "who_needs_what": [
+      {
+        "persona": "Prototyping and hobby projects",
+        "recommendation": "GPT-4o Mini at standard rates ($0.15/$0.60). Cheap enough to iterate without worrying about cost. 1,000 requests with 500 input and 200 output tokens each costs about $0.20."
+      },
+      {
+        "persona": "Classification and routing at scale",
+        "recommendation": "GPT-4o Mini Batch at $0.075/$0.30. If latency does not matter, the Batch API cuts costs in half. Ideal for labeling datasets, content moderation, and intent classification on bulk data."
+      },
+      {
+        "persona": "Production with quality requirements",
+        "recommendation": "Upgrade to GPT-4.1 ($2/$8) or GPT-4o ($2.50/$10). Mini struggles with complex reasoning, nuanced writing, and multi-step tool use. If accuracy matters more than cost, step up to a full-size model."
+      },
+      {
+        "persona": "Budget production workloads",
+        "recommendation": "Compare GPT-4.1 Nano ($0.10/$0.40) versus GPT-4o Mini ($0.15/$0.60). Nano is 33% cheaper. Run both on your actual prompts and pick whichever scores higher — the cost difference is small but compounds at scale."
+      }
+    ],
+    "bottom_line": "GPT-4o Mini at $0.15/$0.60 is excellent for simple tasks but now faces competition from GPT-4.1 Nano ($0.10/$0.40). For classification and routing, both are fine — pick based on benchmark performance for your specific task. For anything requiring reasoning or nuance, step up to GPT-4.1 or GPT-4o.",
+    "internal_links": [
+      {
+        "text": "Full OpenAI API pricing for all models",
+        "url": "/tools/openai-api-pricing/"
+      },
+      {
+        "text": "GPT-4o pricing and comparison",
+        "url": "/tools/gpt-4o-pricing/"
+      },
+      {
+        "text": "OpenAI API review and features",
+        "url": "/tools/openai-api/"
+      },
+      {
+        "text": "Anthropic API pricing (Claude models)",
+        "url": "/tools/anthropic-api-pricing/"
+      },
+      {
+        "text": "Best LLM frameworks for building apps",
+        "url": "/tools/best-llm-frameworks/"
+      }
+    ],
+    "deep_sections": [
+      {
+        "heading": "GPT-4o Mini Pricing Table (April 2026)",
+        "body": "Every GPT-4o Mini pricing variant in one table. All prices are per 1 million tokens.",
+        "table": {
+          "headers": [
+            "Variant",
+            "Input",
+            "Cached Input",
+            "Output",
+            "Context"
+          ],
+          "rows": [
+            [
+              "GPT-4o Mini",
+              "$0.15",
+              "$0.075",
+              "$0.60",
+              "128K"
+            ],
+            [
+              "GPT-4o Mini (Batch)",
+              "$0.075",
+              "-",
+              "$0.30",
+              "128K"
+            ],
+            [
+              "GPT-4o Mini (Fine-tuned)",
+              "$0.30",
+              "$0.15",
+              "$1.20",
+              "128K"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4o Mini vs GPT-4.1 Nano: Which Budget Model Wins?",
+        "body": "GPT-4.1 Nano launched as OpenAI's new ultra-cheap option and directly competes with GPT-4o Mini. Nano is 33% cheaper on both input and output tokens. Both models target the same use cases: classification, extraction, routing, and simple generation. The key differences are context window size (Nano supports 1M tokens versus Mini's 128K) and recency (Nano benefits from newer training data and architecture improvements). For most simple tasks, Nano is the better default. Mini still wins if you have fine-tuned models you do not want to retrain, or if your specific task benchmarks higher on Mini.",
+        "table": {
+          "headers": [
+            "Feature",
+            "GPT-4o Mini",
+            "GPT-4.1 Nano"
+          ],
+          "rows": [
+            [
+              "Input price",
+              "$0.15/1M",
+              "$0.10/1M"
+            ],
+            [
+              "Output price",
+              "$0.60/1M",
+              "$0.40/1M"
+            ],
+            [
+              "Context window",
+              "128K tokens",
+              "1M tokens"
+            ],
+            [
+              "Batch input",
+              "$0.075/1M",
+              "$0.05/1M"
+            ],
+            [
+              "Batch output",
+              "$0.30/1M",
+              "$0.20/1M"
+            ],
+            [
+              "Fine-tuning",
+              "Available",
+              "Available"
+            ],
+            [
+              "Vision",
+              "Yes",
+              "No"
+            ],
+            [
+              "Best for",
+              "Legacy fine-tunes, vision",
+              "New projects, budget default"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "GPT-4o Mini vs GPT-4o: When to Upgrade",
+        "body": "GPT-4o costs $2.50/$10.00 per million tokens — roughly 17x more than Mini on input and output. The quality gap matters most on complex reasoning, nuanced writing, multi-step tool use, and long-form content generation. Mini matches GPT-4o closely on simple classification (90%+ agreement on binary tasks) but falls behind on anything requiring chain-of-thought reasoning or subtle distinctions. A common architecture uses Mini for initial triage and routes only complex requests to GPT-4o or GPT-4.1, cutting costs by 70-80%.",
+        "table": {
+          "headers": [
+            "Feature",
+            "GPT-4o Mini",
+            "GPT-4o"
+          ],
+          "rows": [
+            [
+              "Input price",
+              "$0.15/1M",
+              "$2.50/1M"
+            ],
+            [
+              "Output price",
+              "$0.60/1M",
+              "$10.00/1M"
+            ],
+            [
+              "Context window",
+              "128K",
+              "128K"
+            ],
+            [
+              "Complex reasoning",
+              "Weak",
+              "Strong"
+            ],
+            [
+              "Classification",
+              "Strong",
+              "Strong"
+            ],
+            [
+              "Vision",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Audio",
+              "No",
+              "Yes"
+            ],
+            [
+              "Function calling",
+              "Yes",
+              "Yes"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Batch API Pricing for GPT-4o Mini",
+        "body": "The Batch API processes requests asynchronously at 50% off both input and output tokens. GPT-4o Mini Batch pricing is $0.075 input and $0.30 output per million tokens. Jobs complete within 24 hours. Submit a JSONL file of Chat Completions requests and poll for results. Best for: dataset labeling, content classification, bulk extraction, and evaluation pipelines where latency is not critical.",
+        "table": {
+          "headers": [
+            "Pricing Mode",
+            "Input/1M",
+            "Output/1M",
+            "Latency"
+          ],
+          "rows": [
+            [
+              "Synchronous",
+              "$0.15",
+              "$0.60",
+              "Real-time"
+            ],
+            [
+              "Batch",
+              "$0.075",
+              "$0.30",
+              "Up to 24 hours"
+            ],
+            [
+              "Cached + Batch",
+              "$0.075",
+              "$0.30",
+              "Up to 24 hours"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Fine-Tuning Costs for GPT-4o Mini",
+        "body": "Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Once trained, inference costs double: $0.30 input and $1.20 output per million tokens. A typical fine-tuning job on 100K training tokens costs about $0.03 for training alone. The real cost is inference — if you run 1M requests per month, the 2x inference premium adds up fast. Consider whether prompt engineering or few-shot examples can achieve the same quality before committing to fine-tuning. Fine-tuned Mini models still cannot match the reasoning ability of base GPT-4.1 or GPT-4o.",
+        "table": {
+          "headers": [
+            "Cost Component",
+            "Base Mini",
+            "Fine-tuned Mini"
+          ],
+          "rows": [
+            [
+              "Training",
+              "-",
+              "$0.30/1M tokens"
+            ],
+            [
+              "Input inference",
+              "$0.15/1M",
+              "$0.30/1M"
+            ],
+            [
+              "Output inference",
+              "$0.60/1M",
+              "$1.20/1M"
+            ],
+            [
+              "Cached input",
+              "$0.075/1M",
+              "$0.15/1M"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Real-World Cost Examples",
+        "body": "What GPT-4o Mini actually costs for common workloads at different scales. All estimates assume average token counts per request.",
+        "table": {
+          "headers": [
+            "Use Case",
+            "Input Tokens",
+            "Output Tokens",
+            "Cost per Request",
+            "Cost per 1K Requests",
+            "Cost per 100K Requests"
+          ],
+          "rows": [
+            [
+              "Chatbot reply",
+              "~500",
+              "~200",
+              "$0.0002",
+              "$0.20",
+              "$19.50"
+            ],
+            [
+              "Text classification",
+              "~300",
+              "~20",
+              "$0.0001",
+              "$0.06",
+              "$5.70"
+            ],
+            [
+              "Entity extraction",
+              "~800",
+              "~100",
+              "$0.0002",
+              "$0.18",
+              "$18.00"
+            ],
+            [
+              "Content routing",
+              "~200",
+              "~10",
+              "$0.00004",
+              "$0.04",
+              "$3.60"
+            ],
+            [
+              "Summarization (short doc)",
+              "~2,000",
+              "~300",
+              "$0.0005",
+              "$0.48",
+              "$48.00"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Rate Limits for GPT-4o Mini",
+        "body": "OpenAI sets rate limits based on your cumulative API spending. GPT-4o Mini shares the same tier system as other models but typically has higher token-per-minute allowances due to its lower cost. New accounts start at the free tier.",
+        "table": {
+          "headers": [
+            "Tier",
+            "Requirement",
+            "RPM",
+            "TPM",
+            "RPD"
+          ],
+          "rows": [
+            [
+              "Free",
+              "Verified account",
+              "500",
+              "200K",
+              "500"
+            ],
+            [
+              "Tier 1",
+              "$5+ spent",
+              "500",
+              "200K",
+              "10K"
+            ],
+            [
+              "Tier 2",
+              "$50+ spent",
+              "5K",
+              "2M",
+              "-"
+            ],
+            [
+              "Tier 3",
+              "$100+ spent",
+              "5K",
+              "4M",
+              "-"
+            ],
+            [
+              "Tier 4",
+              "$250+ spent",
+              "10K",
+              "10M",
+              "-"
+            ],
+            [
+              "Tier 5",
+              "$1,000+ spent",
+              "30K",
+              "150M",
+              "-"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "When GPT-4o Mini Is NOT Enough",
+        "body": "GPT-4o Mini fails or underperforms on several task categories. Complex multi-step reasoning consistently produces errors that GPT-4.1 or GPT-4o handle correctly. Nuanced writing tasks (tone matching, persuasive copy, creative fiction) show a clear quality gap. Long-context retrieval degrades past 32K tokens even though the 128K window technically accepts more. Multi-turn agent workflows with tool use produce more hallucinated function calls. Code generation for non-trivial tasks (refactoring, architecture changes, multi-file edits) misses edge cases. If your application falls into any of these categories, budget for a bigger model and use Mini only for the simple subtasks."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does GPT-4o Mini cost?",
+        "answer": "GPT-4o Mini costs $0.15 per 1 million input tokens and $0.60 per 1 million output tokens. With prompt caching, input drops to $0.075/1M. Batch API pricing is $0.075 input and $0.30 output per million tokens."
+      },
+      {
+        "question": "Is GPT-4o Mini free?",
+        "answer": "No. GPT-4o Mini is not free through the API. New OpenAI accounts get $5 in credits which can be used for Mini. ChatGPT Free includes limited Mini access in the consumer product, but API usage always costs money."
+      },
+      {
+        "question": "GPT-4o Mini vs GPT-4.1 Nano — which is cheaper?",
+        "answer": "GPT-4.1 Nano is cheaper at $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. Nano is 33% less on both input and output. For new projects, benchmark both on your task — Nano is the better default unless Mini specifically outperforms."
+      },
+      {
+        "question": "Can I fine-tune GPT-4o Mini?",
+        "answer": "Yes. Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Inference on fine-tuned models costs $0.30 input and $1.20 output per million tokens — double the base rate. You need at least 10 training examples, though 50-100 examples typically produce better results."
+      },
+      {
+        "question": "What is GPT-4o Mini good for?",
+        "answer": "GPT-4o Mini excels at classification, entity extraction, content routing, simple Q&A, and any task where the output is short and structured. It matches GPT-4o closely on binary classification tasks while costing 94% less."
+      },
+      {
+        "question": "What is the GPT-4o Mini context window?",
+        "answer": "GPT-4o Mini supports 128K tokens of context (roughly 96K words). However, quality degrades past 32K tokens for most tasks. If you need reliable long-context performance, GPT-4.1 Nano offers 1M tokens."
+      },
+      {
+        "question": "Is GPT-4o Mini good for coding?",
+        "answer": "GPT-4o Mini handles simple code tasks like boilerplate generation, syntax fixes, and code explanation. It struggles with complex refactoring, multi-file changes, and architectural decisions. For serious coding, use GPT-4.1 or Claude Sonnet 4.6."
+      },
+      {
+        "question": "How does GPT-4o Mini compare to Claude Haiku?",
+        "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens — significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
+      }
+    ],
+    "date_updated": "April 2026"
   }
 ]

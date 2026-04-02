@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Compare LLM API pricing per 1M tokens. GPT-4.1 $2/$8, Claude Sonnet 4.6 $3/$15, Gemini Flash $0.10/$0.40. Updated April 2026 with batch discounts.">
+
+  <title>LLM API Pricing Comparison 2026 - Every Model Cost Per Token | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/llm-api-pricing-comparison/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/llm-api-pricing-comparison/">
+  <meta property="og:title" content="LLM API Pricing Comparison 2026 - GPT, Claude, Gemini, Mistral Per Token Costs">
+  <meta property="og:description" content="LLM API pricing per million tokens for April 2026. Every major model from OpenAI, Anthropic, Google, Mistral, and Cohere compared.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="LLM API Pricing Comparison 2026 - GPT, Claude, Gemini, Mistral Per Token Costs">
+  <meta name="twitter:description" content="LLM API pricing per million tokens for April 2026. Every major model from OpenAI, Anthropic, Google, Mistral, and Cohere compared.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLM API Pricing Comparison 2026 - Every Model Cost Per Token",
+      "item": "https://pecollective.com/blog/llm-api-pricing-comparison/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM API Pricing Comparison 2026 - GPT, Claude, Gemini, Mistral Per Token Costs",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "description": "Compare LLM API pricing per 1M tokens. GPT-4.1 $2/$8, Claude Sonnet 4.6 $3/$15, Gemini Flash $0.10/$0.40. Updated April 2026 with batch discounts."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the cheapest LLM API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of April 2026, the cheapest LLM APIs are GPT-4.1 Nano, Gemini 2.0 Flash, and Mistral Small, all at $0.10 per million input tokens. Mistral Small edges ahead on output cost at $0.30/1M vs $0.40/1M for the other two. For batch workloads, GPT-4.1 Nano with the 50% batch discount drops to $0.05/$0.20 per million tokens, making it the absolute cheapest option for asynchronous processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does GPT-4.1 cost per token?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-4.1 costs $2.00 per million input tokens and $8.00 per million output tokens. That works out to $0.000002 per input token and $0.000008 per output token. With the OpenAI Batch API (50% discount), those drop to $1.00/$4.00 per million. With prompt caching (automatic, 50% off cached tokens), repeated system prompts cost $1.00 per million cached input tokens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do LLM API prices compare to self-hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Self-hosting open-source models (Llama 3, Mistral, etc.) on your own GPUs costs roughly $1-3 per GPU-hour on cloud providers. At high volume (millions of tokens per day), self-hosting can be 50-80% cheaper than API pricing. At low to moderate volume, APIs are almost always cheaper because you avoid idle GPU costs, infrastructure management, and the engineering overhead of running inference servers. The break-even point is typically around 10-50 million tokens per day, depending on the model size and hardware choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between input and output token pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Input tokens are what you send to the model: your system prompt, user message, uploaded documents, and any context. Output tokens are what the model generates in response. Output tokens cost 2-5x more than input tokens because generating each output token requires a full forward pass through the model, while input tokens can be processed in parallel. This is why long system prompts with short responses are relatively cheap, while asking a model to write a 5,000-word essay gets expensive fast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which LLM API has the best free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google offers the most generous free tier through Google AI Studio: Gemini 2.0 Flash is free up to 15 requests per minute with generous daily limits. OpenAI offers limited free credits for new accounts. Anthropic provides free access through claude.ai but no free API tier. Mistral offers a free tier on La Plateforme with rate limits. For serious development and testing, Google's free Gemini access is the clear winner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do LLM API prices change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prices have been trending down 30-50% per year since 2023. Major price drops usually happen when providers release new model generations (the old model gets cheaper or the new model matches performance at lower cost). OpenAI and Google have been the most aggressive on price cuts. Anthropic tends to hold pricing longer but offers batch and caching discounts. Expect at least 2-3 significant pricing changes per provider per year."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Pricing Guide</span>
+          <h1 class="article-header__title">LLM API Pricing Comparison 2026 - Every Model Cost Per Token</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 2, 2026 &middot; 12 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>LLM API pricing changes constantly. New models launch, old ones get cheaper, and providers quietly adjust rates between announcements. This page tracks every major model's cost per million tokens, updated for April 2026.</p>
+
+<p>Whether you're picking a model for a new project, budgeting compute costs, or comparing providers for a procurement decision, the tables below give you the numbers you need without digging through five different pricing pages.</p>
+
+<h2>Master Pricing Table: All Major LLM APIs (April 2026)</h2>
+
+<p>Prices are per 1 million tokens. Input is what you send to the model. Output is what the model generates back. Every model charges differently for each direction because output tokens require more compute.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Provider</th>
+      <th>Model</th>
+      <th>Input / 1M Tokens</th>
+      <th>Output / 1M Tokens</th>
+      <th>Context Window</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="5"><strong>OpenAI</strong></td></tr>
+    <tr><td>OpenAI</td><td>GPT-5</td><td>$1.25</td><td>$10.00</td><td>128K</td></tr>
+    <tr><td>OpenAI</td><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>1M</td></tr>
+    <tr><td>OpenAI</td><td>GPT-4.1 Mini</td><td>$0.40</td><td>$1.60</td><td>1M</td></tr>
+    <tr><td>OpenAI</td><td>GPT-4.1 Nano</td><td>$0.10</td><td>$0.40</td><td>1M</td></tr>
+    <tr><td>OpenAI</td><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>128K</td></tr>
+    <tr><td>OpenAI</td><td>GPT-4o Mini</td><td>$0.15</td><td>$0.60</td><td>128K</td></tr>
+    <tr><td>OpenAI</td><td>o3</td><td>$10.00</td><td>$40.00</td><td>200K</td></tr>
+    <tr><td>OpenAI</td><td>o4-mini</td><td>$1.10</td><td>$4.40</td><td>200K</td></tr>
+    <tr><td colspan="5"><strong>Anthropic</strong></td></tr>
+    <tr><td>Anthropic</td><td>Claude Opus 4.6</td><td>$15.00</td><td>$75.00</td><td>1M</td></tr>
+    <tr><td>Anthropic</td><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>1M</td></tr>
+    <tr><td>Anthropic</td><td>Claude Haiku 4.5</td><td>$0.80</td><td>$4.00</td><td>200K</td></tr>
+    <tr><td colspan="5"><strong>Google</strong></td></tr>
+    <tr><td>Google</td><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>1M</td></tr>
+    <tr><td>Google</td><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>1M</td></tr>
+    <tr><td colspan="5"><strong>Mistral</strong></td></tr>
+    <tr><td>Mistral</td><td>Mistral Large</td><td>$2.00</td><td>$6.00</td><td>128K</td></tr>
+    <tr><td>Mistral</td><td>Mistral Small</td><td>$0.10</td><td>$0.30</td><td>128K</td></tr>
+    <tr><td colspan="5"><strong>Cohere</strong></td></tr>
+    <tr><td>Cohere</td><td>Command R+</td><td>$2.50</td><td>$10.00</td><td>128K</td></tr>
+    <tr><td>Cohere</td><td>Command R</td><td>$0.15</td><td>$0.60</td><td>128K</td></tr>
+  </tbody>
+</table>
+
+<p>Note on Gemini 2.5 Pro: Google charges $1.25/$10 for prompts over 200K tokens. Under 200K, input drops to $0.625 and output to $5.00. The table shows the higher tier since most production use cases hit the 200K+ range with system prompts and context.</p>
+
+<h2>Models by Budget Tier</h2>
+
+<p>Not every project needs a frontier model. Here is how models break down by cost, so you can match your budget to the right capability level.</p>
+
+<h3>Under $1 per 1M Input Tokens (Budget Tier)</h3>
+
+<p>These models handle classification, extraction, summarization, and simple chat at rock-bottom prices.</p>
+
+<table>
+  <thead>
+    <tr><th>Model</th><th>Input / 1M</th><th>Output / 1M</th><th>Best For</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>GPT-4.1 Nano</td><td>$0.10</td><td>$0.40</td><td>High-volume classification, simple extraction</td></tr>
+    <tr><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>Fast inference, multimodal on a budget</td></tr>
+    <tr><td>Mistral Small</td><td>$0.10</td><td>$0.30</td><td>Lightweight European-hosted tasks</td></tr>
+    <tr><td>GPT-4o Mini</td><td>$0.15</td><td>$0.60</td><td>General-purpose cheap model</td></tr>
+    <tr><td>Command R</td><td>$0.15</td><td>$0.60</td><td>RAG-optimized retrieval tasks</td></tr>
+    <tr><td>GPT-4.1 Mini</td><td>$0.40</td><td>$1.60</td><td>Coding and instruction following on a budget</td></tr>
+    <tr><td>Claude Haiku 4.5</td><td>$0.80</td><td>$4.00</td><td>Fast responses, customer-facing chat</td></tr>
+  </tbody>
+</table>
+
+<h3>$1 to $5 per 1M Input Tokens (Mid-Range)</h3>
+
+<p>The sweet spot for most production applications. These models handle complex reasoning, coding, and multi-step tasks reliably.</p>
+
+<table>
+  <thead>
+    <tr><th>Model</th><th>Input / 1M</th><th>Output / 1M</th><th>Best For</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>o4-mini</td><td>$1.10</td><td>$4.40</td><td>Reasoning tasks at mid-range cost</td></tr>
+    <tr><td>GPT-5</td><td>$1.25</td><td>$10.00</td><td>Frontier general intelligence</td></tr>
+    <tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>Long-context analysis, multimodal</td></tr>
+    <tr><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>Coding, long-context, instruction following</td></tr>
+    <tr><td>Mistral Large</td><td>$2.00</td><td>$6.00</td><td>European data residency, multilingual</td></tr>
+    <tr><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>Multimodal (vision + text)</td></tr>
+    <tr><td>Command R+</td><td>$2.50</td><td>$10.00</td><td>Enterprise RAG, grounded generation</td></tr>
+    <tr><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>Coding, analysis, agentic workflows</td></tr>
+  </tbody>
+</table>
+
+<h3>$5+ per 1M Input Tokens (Premium)</h3>
+
+<table>
+  <thead>
+    <tr><th>Model</th><th>Input / 1M</th><th>Output / 1M</th><th>Best For</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>o3</td><td>$10.00</td><td>$40.00</td><td>Hard reasoning, math, science problems</td></tr>
+    <tr><td>Claude Opus 4.6</td><td>$15.00</td><td>$75.00</td><td>Complex agentic tasks, deep analysis</td></tr>
+  </tbody>
+</table>
+
+<p>Premium models are rarely needed for production workloads. Use them for difficult reasoning tasks, complex code generation, or when accuracy on edge cases justifies the 10-50x cost increase over mid-range options.</p>
+
+<h2>Batch API Discounts</h2>
+
+<p>If your workload can tolerate latency (minutes to hours instead of seconds), batch APIs cut costs significantly.</p>
+
+<table>
+  <thead>
+    <tr><th>Provider</th><th>Batch Discount</th><th>Typical Latency</th><th>How It Works</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>OpenAI</td><td>50% off all models</td><td>Up to 24 hours</td><td>Submit JSONL file, results returned asynchronously. Available for all GPT and o-series models.</td></tr>
+    <tr><td>Anthropic</td><td>50% off all models</td><td>Up to 24 hours</td><td>Message Batches API. Submit up to 100,000 requests per batch. Results within 24 hours.</td></tr>
+    <tr><td>Google</td><td>50% off Gemini models</td><td>Up to 24 hours</td><td>BatchGenerateContent API. Minimum 2x discount on all Gemini models through Vertex AI.</td></tr>
+    <tr><td>Mistral</td><td>Variable</td><td>Varies</td><td>Batch inference available through La Plateforme. Discount varies by volume commitment.</td></tr>
+  </tbody>
+</table>
+
+<p>With batch pricing, GPT-4.1 drops to $1.00 input / $4.00 output per million tokens. Claude Sonnet 4.6 drops to $1.50 / $7.50. These are significant savings for data processing pipelines, evaluation runs, and content generation at scale.</p>
+
+<h2>Prompt Caching</h2>
+
+<p>Prompt caching reduces costs when you send the same system prompt or context prefix repeatedly. Instead of reprocessing identical tokens every call, the provider caches them and charges a reduced rate.</p>
+
+<table>
+  <thead>
+    <tr><th>Provider</th><th>Cache Write Cost</th><th>Cache Read Discount</th><th>TTL</th><th>Min Tokens</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>OpenAI</td><td>Free (automatic)</td><td>50% off input</td><td>5-10 min</td><td>1,024</td></tr>
+    <tr><td>Anthropic</td><td>25% surcharge on first write</td><td>90% off input</td><td>5 min (refreshes on hit)</td><td>1,024 (Haiku), 2,048 (Sonnet/Opus)</td></tr>
+    <tr><td>Google</td><td>Same as input</td><td>75% off input</td><td>Configurable</td><td>32,768</td></tr>
+  </tbody>
+</table>
+
+<p>Anthropic's caching is the most aggressive: 90% off cached input tokens means a long system prompt that costs $3.00/1M on Sonnet 4.6 drops to $0.30/1M on cache hits. The 25% write surcharge pays for itself after just a few requests. OpenAI's caching is automatic (no code changes needed) but gives a smaller discount. Google requires the most tokens before caching kicks in but offers configurable TTL.</p>
+
+<h2>Cost Per 1K Tokens (Conversion Table)</h2>
+
+<p>Some documentation and older pricing pages still reference cost per 1,000 tokens. To convert: divide the per-1M price by 1,000.</p>
+
+<table>
+  <thead>
+    <tr><th>Model</th><th>Input / 1K Tokens</th><th>Output / 1K Tokens</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>GPT-4.1 Nano</td><td>$0.0001</td><td>$0.0004</td></tr>
+    <tr><td>Gemini 2.0 Flash</td><td>$0.0001</td><td>$0.0004</td></tr>
+    <tr><td>GPT-4o Mini</td><td>$0.00015</td><td>$0.0006</td></tr>
+    <tr><td>GPT-4.1 Mini</td><td>$0.0004</td><td>$0.0016</td></tr>
+    <tr><td>Claude Haiku 4.5</td><td>$0.0008</td><td>$0.004</td></tr>
+    <tr><td>GPT-5</td><td>$0.00125</td><td>$0.01</td></tr>
+    <tr><td>GPT-4.1</td><td>$0.002</td><td>$0.008</td></tr>
+    <tr><td>Claude Sonnet 4.6</td><td>$0.003</td><td>$0.015</td></tr>
+    <tr><td>GPT-4o</td><td>$0.0025</td><td>$0.01</td></tr>
+    <tr><td>o3</td><td>$0.01</td><td>$0.04</td></tr>
+    <tr><td>Claude Opus 4.6</td><td>$0.015</td><td>$0.075</td></tr>
+  </tbody>
+</table>
+
+<p>Per-1K pricing looks deceptively cheap. Always multiply by 1,000 to understand real costs at scale. A chatbot handling 1 million tokens per day at $0.002/1K input costs $2/day or $60/month just for input tokens.</p>
+
+<h2>How to Estimate Your Monthly API Costs</h2>
+
+<p>Use this formula to budget your LLM spend before committing to a provider.</p>
+
+<p><strong>Monthly Cost = (Daily Requests x Avg Input Tokens x Input Price/1M) + (Daily Requests x Avg Output Tokens x Output Price/1M) x 30</strong></p>
+
+<h3>Example 1: Customer Support Chatbot</h3>
+<ul>
+  <li>500 conversations/day, 800 input tokens avg (system prompt + user message), 400 output tokens avg</li>
+  <li>Using Claude Sonnet 4.6 ($3/$15 per 1M)</li>
+  <li>Input: 500 x 800 = 400,000 tokens/day = $1.20/day</li>
+  <li>Output: 500 x 400 = 200,000 tokens/day = $3.00/day</li>
+  <li>Monthly: ($1.20 + $3.00) x 30 = <strong>$126/month</strong></li>
+</ul>
+
+<h3>Example 2: Document Processing Pipeline</h3>
+<ul>
+  <li>200 documents/day, 5,000 input tokens avg (document + extraction prompt), 500 output tokens avg</li>
+  <li>Using GPT-4.1 Mini ($0.40/$1.60 per 1M)</li>
+  <li>Input: 200 x 5,000 = 1,000,000 tokens/day = $0.40/day</li>
+  <li>Output: 200 x 500 = 100,000 tokens/day = $0.16/day</li>
+  <li>Monthly: ($0.40 + $0.16) x 30 = <strong>$16.80/month</strong></li>
+</ul>
+
+<h3>Example 3: High-Volume Classification</h3>
+<ul>
+  <li>50,000 items/day, 200 input tokens avg, 50 output tokens avg</li>
+  <li>Using GPT-4.1 Nano ($0.10/$0.40 per 1M)</li>
+  <li>Input: 50,000 x 200 = 10,000,000 tokens/day = $1.00/day</li>
+  <li>Output: 50,000 x 50 = 2,500,000 tokens/day = $1.00/day</li>
+  <li>Monthly: ($1.00 + $1.00) x 30 = <strong>$60/month</strong></li>
+</ul>
+
+<p>These estimates assume no caching or batching. With prompt caching on a chatbot (where the system prompt repeats), expect 30-60% lower input costs. With batch API, cut both input and output costs in half.</p>
+
+<h2>Provider Comparison by Use Case</h2>
+
+<h3>Cheapest for High-Volume Chatbots</h3>
+<p><strong>Winner: GPT-4.1 Nano ($0.10/$0.40)</strong> or <strong>Gemini 2.0 Flash ($0.10/$0.40)</strong>. Both cost the same and handle conversational tasks well. Gemini Flash has the edge for multimodal inputs (images in chat). GPT-4.1 Nano has stronger instruction following for structured system prompts. Mistral Small ($0.10/$0.30) is cheapest on output if you need European data residency.</p>
+
+<h3>Best for Coding Assistants</h3>
+<p><strong>Winner: Claude Sonnet 4.6 ($3/$15)</strong>. Consistently top-ranked on coding benchmarks. GPT-4.1 ($2/$8) is a strong alternative at lower cost, especially for its 1M context window that fits entire codebases. For budget coding, GPT-4.1 Mini ($0.40/$1.60) punches well above its price.</p>
+
+<h3>Best for Complex Reasoning</h3>
+<p><strong>Winner: o3 ($10/$40)</strong> for math-heavy and scientific reasoning. <strong>Claude Opus 4.6 ($15/$75)</strong> for nuanced analysis and agentic multi-step tasks. These are premium models for premium problems. For most reasoning tasks, Claude Sonnet 4.6 or GPT-5 at a fraction of the cost will be sufficient.</p>
+
+<h3>Best for RAG and Retrieval</h3>
+<p><strong>Winner: Command R+ ($2.50/$10)</strong>. Cohere built Command R+ specifically for retrieval-augmented generation with built-in citation support. Google Gemini 2.5 Pro is the alternative when you need a massive context window (1M tokens) to stuff retrieved documents into a single prompt.</p>
+
+<h3>Best for Enterprise with Data Residency Requirements</h3>
+<p><strong>Winner: Mistral Large ($2/$6)</strong>. Hosted in Europe, strong multilingual performance, and competitive pricing. Mistral is the default choice when GDPR compliance and data residency are non-negotiable.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+  <summary>What is the cheapest LLM API?</summary>
+  <p>As of April 2026, the cheapest LLM APIs are GPT-4.1 Nano, Gemini 2.0 Flash, and Mistral Small, all at $0.10 per million input tokens. Mistral Small edges ahead on output cost at $0.30/1M vs $0.40/1M for the other two. For batch workloads, GPT-4.1 Nano with the 50% batch discount drops to $0.05/$0.20 per million tokens, making it the absolute cheapest option for asynchronous processing.</p>
+</details>
+
+<details>
+  <summary>How much does GPT-4.1 cost per token?</summary>
+  <p>GPT-4.1 costs $2.00 per million input tokens and $8.00 per million output tokens. That works out to $0.000002 per input token and $0.000008 per output token. With the OpenAI Batch API (50% discount), those drop to $1.00/$4.00 per million. With prompt caching (automatic, 50% off cached tokens), repeated system prompts cost $1.00 per million cached input tokens.</p>
+</details>
+
+<details>
+  <summary>How do LLM API prices compare to self-hosting?</summary>
+  <p>Self-hosting open-source models (Llama 3, Mistral, etc.) on your own GPUs costs roughly $1-3 per GPU-hour on cloud providers. At high volume (millions of tokens per day), self-hosting can be 50-80% cheaper than API pricing. At low to moderate volume, APIs are almost always cheaper because you avoid idle GPU costs, infrastructure management, and the engineering overhead of running inference servers. The break-even point is typically around 10-50 million tokens per day, depending on the model size and hardware choice.</p>
+</details>
+
+<details>
+  <summary>What's the difference between input and output token pricing?</summary>
+  <p>Input tokens are what you send to the model: your system prompt, user message, uploaded documents, and any context. Output tokens are what the model generates in response. Output tokens cost 2-5x more than input tokens because generating each output token requires a full forward pass through the model, while input tokens can be processed in parallel. This is why long system prompts with short responses are relatively cheap, while asking a model to write a 5,000-word essay gets expensive fast.</p>
+</details>
+
+<details>
+  <summary>Which LLM API has the best free tier?</summary>
+  <p>Google offers the most generous free tier through Google AI Studio: Gemini 2.0 Flash is free up to 15 requests per minute with generous daily limits. OpenAI offers limited free credits for new accounts. Anthropic provides free access through claude.ai but no free API tier. Mistral offers a free tier on La Plateforme with rate limits. For serious development and testing, Google's free Gemini access is the clear winner.</p>
+</details>
+
+<details>
+  <summary>How often do LLM API prices change?</summary>
+  <p>Prices have been trending down 30-50% per year since 2023. Major price drops usually happen when providers release new model generations (the old model gets cheaper or the new model matches performance at lower cost). OpenAI and Google have been the most aggressive on price cuts. Anthropic tends to hold pricing longer but offers batch and caching discounts. Expect at least 2-3 significant pricing changes per provider per year.</p>
+</details>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/anthropic-api-pricing/">Anthropic API Pricing</a> | <a href="/tools/gpt-4o-pricing/">GPT-4o Pricing</a> | <a href="/tools/openai-api-vs-anthropic-api-pricing/">OpenAI vs Anthropic API Pricing</a> | <a href="/tools/aws-bedrock-pricing/">AWS Bedrock Pricing</a> | <a href="/tools/cohere-pricing/">Cohere Pricing</a> | <a href="/tools/best-llm-frameworks/">Best LLM Frameworks</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get smarter about AI tools, careers &amp; strategy. Every week.</h2>
+          <p class="cta-section__text">
+            <strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

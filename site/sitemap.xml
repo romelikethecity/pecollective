@@ -553,6 +553,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/blog/prompt-management-at-scale/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/blog/prompt-engineering-freelance-rates/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1057,6 +1063,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pecollective.com/glossary/prompt-versioning/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pecollective.com/glossary/chain-of-thought/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1184,6 +1196,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/gpt/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/prompt-drift/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1520,6 +1538,12 @@
   </url>
   <url>
     <loc>https://pecollective.com/glossary/dimensionality-reduction/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pecollective.com/glossary/prompt-ops/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -309,8 +309,8 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
     breadcrumbs = get_breadcrumb_schema([("Home", "/"), ("Salaries", "/salaries/"), (title, f"/salaries/{slug}/")])
     extra_head = breadcrumbs + '\n' + faq_schema
     html = f'''{get_html_head(
-        f"{title} Salary 2026 - ${avg_max//1000}K Average",
-        f"{title} salary benchmarks based on {sample_size} job postings. Average ${avg_min//1000}K-${avg_max//1000}K. Median ${median//1000}K. Updated weekly with real compensation data.",
+        f"{title} Salary 2026 - ${avg_min//1000}K to ${avg_max//1000}K Range",
+        f"{title} earns ${avg_min//1000}K-${avg_max//1000}K on average. Median ${median//1000}K. Based on {sample_size} job postings with disclosed pay. Breakdown by level and location.",
         f"salaries/{slug}/",
         extra_head=extra_head
     )}

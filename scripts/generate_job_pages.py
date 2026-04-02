@@ -591,7 +591,7 @@ def create_stale_job_page(stale_slug, similar_jobs):
     <title>{title_display} at {company_display} - Position Filled | {SITE_NAME}</title>
     <meta name="description" content="This {title_display} position at {company_display} is no longer available. Browse similar AI and ML engineering opportunities.">
     <link rel="canonical" href="{BASE_URL}/jobs/{stale_slug}/">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
 
     <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">

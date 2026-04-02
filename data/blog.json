@@ -684,6 +684,18 @@
       {
         "text": "GitHub Copilot Pricing",
         "url": "/tools/github-copilot-pricing/"
+      },
+      {
+        "url": "/tools/replit-alternatives/",
+        "text": "Best Replit Alternatives"
+      },
+      {
+        "url": "/tools/best-ai-testing-tools/",
+        "text": "Best AI Testing Tools"
+      },
+      {
+        "url": "/tools/langchain-alternatives/",
+        "text": "Best LangChain Alternatives"
       }
     ]
   },
@@ -879,6 +891,10 @@
       {
         "text": "LangChain Alternatives",
         "url": "/tools/langchain-alternatives/"
+      },
+      {
+        "url": "/tools/best-ai-testing-tools/",
+        "text": "Best AI Testing Tools"
       }
     ]
   },

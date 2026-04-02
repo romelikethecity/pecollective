@@ -89,6 +89,14 @@
       {
         "text": "Cursor vs Windsurf",
         "url": "/tools/cursor-vs-windsurf/"
+      },
+      {
+        "url": "/tools/replit-alternatives/",
+        "text": "Best Replit Alternatives"
+      },
+      {
+        "url": "/tools/best-ai-testing-tools/",
+        "text": "Best AI Testing Tools"
       }
     ],
     "faqs": [
@@ -424,6 +432,14 @@
       {
         "text": "LangChain vs CrewAI",
         "url": "/tools/langchain-vs-crewai/"
+      },
+      {
+        "url": "/tools/langchain-alternatives/",
+        "text": "Best LangChain Alternatives"
+      },
+      {
+        "url": "/tools/best-ai-testing-tools/",
+        "text": "Best AI Testing Tools"
       }
     ],
     "faqs": [
@@ -859,6 +875,10 @@
       {
         "url": "/tools/langchain-vs-crewai/",
         "text": "LangChain vs CrewAI"
+      },
+      {
+        "url": "/tools/langchain-alternatives/",
+        "text": "Best LangChain Alternatives"
       }
     ],
     "faqs": [
@@ -981,6 +1001,10 @@
       {
         "text": "Chroma vs pgvector",
         "url": "/tools/chroma-vs-pgvector/"
+      },
+      {
+        "url": "/glossary/contrastive-learning/",
+        "text": "What Is Contrastive Learning?"
       }
     ],
     "faqs": [

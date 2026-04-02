@@ -267,9 +267,9 @@
     "slug": "github-copilot-pricing",
     "tool_name": "GitHub Copilot",
     "tool_slug": "github-copilot",
-    "title": "GitHub Copilot Pricing 2026 - Free, Pro & Business",
-    "meta_description": "Copilot Free gives 2K completions + 50 premium requests. Pro is $10/mo. Business $19/user. What each plan includes and credit costs explained.",
-    "og_description": "GitHub Copilot pricing for 2026. Free, Pro, Business, and Enterprise plans compared with real costs and hidden limitations.",
+    "title": "GitHub Copilot Pricing 2026 - Is Pro Worth $10/mo?",
+    "meta_description": "Copilot Free: 2K completions + 50 premium requests. Pro: $10/mo unlimited. Business: $19/user. Plan comparison with credit costs and upgrade triggers.",
+    "og_description": "GitHub Copilot plan comparison for 2026. Free vs Pro vs Business vs Enterprise with real usage limits and credit costs.",
     "h1": "GitHub Copilot Pricing: Every Plan Compared (March 2026)",
     "intro": "GitHub Copilot now has five tiers, from a genuinely useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
     "tiers": [
@@ -663,9 +663,9 @@
     "slug": "openai-api-pricing",
     "tool_name": "OpenAI API",
     "tool_slug": "openai-api",
-    "title": "OpenAI API Pricing 2026 - Every Model Cost Compared",
-    "meta_description": "GPT-4.1 is $2/$8 per 1M tokens. GPT-5 is $1.25/$10. o4-mini is $1.10/$4.40. Full model-by-model pricing with batch discounts and real cost examples.",
-    "og_description": "OpenAI API pricing for March 2026. GPT-5, GPT-4.1 family, o3, o4-mini compared with batch discounts and real-world cost examples.",
+    "title": "OpenAI API Pricing 2026 - Real Costs & Hidden Fees Explained",
+    "meta_description": "GPT-4.1 costs $2/$8 per 1M tokens. GPT-5 is $1.25/$10. Full model-by-model breakdown with batch discounts, caching savings, and monthly cost calculator.",
+    "og_description": "Every OpenAI model priced per million tokens. Batch discounts, prompt caching, and real monthly cost examples for April 2026.",
     "h1": "OpenAI API Pricing: What Every Model Actually Costs (March 2026)",
     "intro": "OpenAI's model lineup has expanded significantly. GPT-4.1 replaced GPT-4o as the recommended production model. GPT-5 is the new flagship. The o-series reasoning models now include o3 and o4-mini. And the GPT-4.1 Nano at $0.10 per million input tokens is one of the cheapest capable models available anywhere. This page breaks down every current model's pricing, the batch and caching discounts that cut costs by 50-90%, and real cost math for production workloads. All prices verified March 2026.",
     "tiers": [
@@ -1143,9 +1143,9 @@
     "slug": "anthropic-api-pricing",
     "tool_name": "Anthropic API (Claude)",
     "tool_slug": "anthropic-api",
-    "title": "Anthropic API Pricing 2026 - Claude Model Costs Compared",
-    "meta_description": "Claude Sonnet 4.6 is $3/$15 per 1M tokens. Opus 4.6 is $5/$25. Haiku 4.5 is $1/$5. Batch discounts, prompt caching savings, and real monthly cost examples included.",
-    "og_description": "Every Claude model priced side by side. Per-token costs, batch discounts, caching rates, and what a real project actually costs per month.",
+    "title": "Claude API Pricing 2026 - Sonnet, Opus & Haiku Per Token",
+    "meta_description": "Claude Sonnet 4.6: $3/$15 per 1M tokens. Opus 4.6: $5/$25. Haiku 4.5: $1/$5. Batch discounts, prompt caching, and real monthly cost breakdowns.",
+    "og_description": "Anthropic Claude API pricing for April 2026. Every model compared with batch discounts and caching savings.",
     "h1": "Anthropic API Pricing: What Every Claude Model Costs in 2026",
     "intro": "Anthropic has shipped a lot of models since Claude 3. The naming is confusing, the pricing tiers stack in non-obvious ways, and the gap between the cheapest and most expensive model is now 25x. This page breaks down every current Claude model's pricing, the batch and caching discounts that can cut your bill in half, and real cost math for production apps. All prices verified against Anthropic's official pricing page, March 2026.",
     "tiers": [
@@ -3365,7 +3365,7 @@
           "50% discount on input tokens with prompt caching",
           "Output tokens remain at standard rate",
           "Best for apps with repeated system prompts",
-          "Cache hits automatic — no code changes needed"
+          "Cache hits automatic \u2014 no code changes needed"
         ],
         "popular": false
       },
@@ -3397,7 +3397,7 @@
     "hidden_costs": [
       {
         "title": "GPT-4.1 Nano is now cheaper",
-        "detail": "GPT-4.1 Nano costs $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. That is 33% cheaper on input and output. For simple classification and routing, Nano may be the better budget pick — benchmark your specific task before choosing."
+        "detail": "GPT-4.1 Nano costs $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. That is 33% cheaper on input and output. For simple classification and routing, Nano may be the better budget pick \u2014 benchmark your specific task before choosing."
       },
       {
         "title": "Output tokens cost 4x input tokens",
@@ -3435,10 +3435,10 @@
       },
       {
         "persona": "Budget production workloads",
-        "recommendation": "Compare GPT-4.1 Nano ($0.10/$0.40) versus GPT-4o Mini ($0.15/$0.60). Nano is 33% cheaper. Run both on your actual prompts and pick whichever scores higher — the cost difference is small but compounds at scale."
+        "recommendation": "Compare GPT-4.1 Nano ($0.10/$0.40) versus GPT-4o Mini ($0.15/$0.60). Nano is 33% cheaper. Run both on your actual prompts and pick whichever scores higher \u2014 the cost difference is small but compounds at scale."
       }
     ],
-    "bottom_line": "GPT-4o Mini at $0.15/$0.60 is excellent for simple tasks but now faces competition from GPT-4.1 Nano ($0.10/$0.40). For classification and routing, both are fine — pick based on benchmark performance for your specific task. For anything requiring reasoning or nuance, step up to GPT-4.1 or GPT-4o.",
+    "bottom_line": "GPT-4o Mini at $0.15/$0.60 is excellent for simple tasks but now faces competition from GPT-4.1 Nano ($0.10/$0.40). For classification and routing, both are fine \u2014 pick based on benchmark performance for your specific task. For anything requiring reasoning or nuance, step up to GPT-4.1 or GPT-4o.",
     "internal_links": [
       {
         "text": "Full OpenAI API pricing for all models",
@@ -3553,7 +3553,7 @@
       },
       {
         "heading": "GPT-4o Mini vs GPT-4o: When to Upgrade",
-        "body": "GPT-4o costs $2.50/$10.00 per million tokens — roughly 17x more than Mini on input and output. The quality gap matters most on complex reasoning, nuanced writing, multi-step tool use, and long-form content generation. Mini matches GPT-4o closely on simple classification (90%+ agreement on binary tasks) but falls behind on anything requiring chain-of-thought reasoning or subtle distinctions. A common architecture uses Mini for initial triage and routes only complex requests to GPT-4o or GPT-4.1, cutting costs by 70-80%.",
+        "body": "GPT-4o costs $2.50/$10.00 per million tokens \u2014 roughly 17x more than Mini on input and output. The quality gap matters most on complex reasoning, nuanced writing, multi-step tool use, and long-form content generation. Mini matches GPT-4o closely on simple classification (90%+ agreement on binary tasks) but falls behind on anything requiring chain-of-thought reasoning or subtle distinctions. A common architecture uses Mini for initial triage and routes only complex requests to GPT-4o or GPT-4.1, cutting costs by 70-80%.",
         "table": {
           "headers": [
             "Feature",
@@ -3638,7 +3638,7 @@
       },
       {
         "heading": "Fine-Tuning Costs for GPT-4o Mini",
-        "body": "Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Once trained, inference costs double: $0.30 input and $1.20 output per million tokens. A typical fine-tuning job on 100K training tokens costs about $0.03 for training alone. The real cost is inference — if you run 1M requests per month, the 2x inference premium adds up fast. Consider whether prompt engineering or few-shot examples can achieve the same quality before committing to fine-tuning. Fine-tuned Mini models still cannot match the reasoning ability of base GPT-4.1 or GPT-4o.",
+        "body": "Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Once trained, inference costs double: $0.30 input and $1.20 output per million tokens. A typical fine-tuning job on 100K training tokens costs about $0.03 for training alone. The real cost is inference \u2014 if you run 1M requests per month, the 2x inference premium adds up fast. Consider whether prompt engineering or few-shot examples can achieve the same quality before committing to fine-tuning. Fine-tuned Mini models still cannot match the reasoning ability of base GPT-4.1 or GPT-4o.",
         "table": {
           "headers": [
             "Cost Component",
@@ -3797,12 +3797,12 @@
         "answer": "No. GPT-4o Mini is not free through the API. New OpenAI accounts get $5 in credits which can be used for Mini. ChatGPT Free includes limited Mini access in the consumer product, but API usage always costs money."
       },
       {
-        "question": "GPT-4o Mini vs GPT-4.1 Nano — which is cheaper?",
-        "answer": "GPT-4.1 Nano is cheaper at $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. Nano is 33% less on both input and output. For new projects, benchmark both on your task — Nano is the better default unless Mini specifically outperforms."
+        "question": "GPT-4o Mini vs GPT-4.1 Nano \u2014 which is cheaper?",
+        "answer": "GPT-4.1 Nano is cheaper at $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. Nano is 33% less on both input and output. For new projects, benchmark both on your task \u2014 Nano is the better default unless Mini specifically outperforms."
       },
       {
         "question": "Can I fine-tune GPT-4o Mini?",
-        "answer": "Yes. Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Inference on fine-tuned models costs $0.30 input and $1.20 output per million tokens — double the base rate. You need at least 10 training examples, though 50-100 examples typically produce better results."
+        "answer": "Yes. Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Inference on fine-tuned models costs $0.30 input and $1.20 output per million tokens \u2014 double the base rate. You need at least 10 training examples, though 50-100 examples typically produce better results."
       },
       {
         "question": "What is GPT-4o Mini good for?",
@@ -3818,7 +3818,7 @@
       },
       {
         "question": "How does GPT-4o Mini compare to Claude Haiku?",
-        "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens — significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
+        "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens \u2014 significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
       }
     ],
     "date_updated": "April 2026"

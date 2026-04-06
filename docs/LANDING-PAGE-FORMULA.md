@@ -33,7 +33,7 @@ GSC data shows 155 impressions/week for "prompt engineering guide" with **0 clic
 Three options (Harry Dry):
 
 **Option A: Explain what you do**
-- ONLY works when your product is genuinely unique/differentiated
+- ONLY works when your product is unique/differentiated
 - The differentiation must be visible IN the title itself
 - If you could swap in a competitor's name and the title still works, you're not differentiated enough
 
@@ -41,7 +41,7 @@ Three options (Harry Dry):
 - "Coffee-Infused Energy Bars" (Quantum — the product itself is unique)
 - "Silence embarrassing notifications while screensharing" (Muzzle — unique problem solved)
 
-**PE Collective problem:** "Prompt Engineering Guide, Jobs & Community" describes a category, not a differentiator. Any competitor could use this title. This approach only works if we can name what makes us genuinely different IN the title.
+**PE Collective problem:** "Prompt Engineering Guide, Jobs & Community" describes a category, not a differentiator. Any competitor could use this title. This approach only works if we can name what makes us different IN the title.
 
 **Option B: Use a hook (VALUE + OBJECTION)**
 - Most products aren't unique, so a hook adds oomph
@@ -224,7 +224,7 @@ Currently missing. Could add a brief note from Rome that humanizes the site and 
 - Em-dashes (heavily flagged as AI)
 - Performative interjections ("That's not a typo")
 - Commentary after stats ("Let that sink in")
-- Hollow phrases ("cutting-edge", "revolutionary", "leverage")
+- Hollow phrases ("advanced", "revolutionary", "leverage")
 - Overly parallel structure in lists
 - Rhetorical questions with immediate answers
 - "Unlock", "Unleash", "Empower", "Supercharge"

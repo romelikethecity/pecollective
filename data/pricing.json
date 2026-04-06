@@ -245,7 +245,7 @@
         "heading": "Hidden Costs and Gotchas Nobody Mentions",
         "body": [
           "Cursor's pricing is straightforward on paper, but a few things catch people off guard in practice.",
-          "Composer sessions are expensive. A single multi-file Composer edit might consume 5-10x more credits than a Chat question. If you're using Composer for small changes that Tab completion could handle, you're overspending. Save Composer for tasks that genuinely span multiple files.",
+          "Composer sessions are expensive. A single multi-file Composer edit might consume 5-10x more credits than a Chat question. If you're using Composer for small changes that Tab completion could handle, you're overspending. Save Composer for tasks that span multiple files.",
           "Agent mode burns credits fast. Extended Agent sessions (where Cursor autonomously writes, tests, and iterates) can use a significant chunk of your monthly pool in a single session. Monitor your credit usage during long Agent runs.",
           "Annual billing locks you in. The 20% discount is real, but if your usage pattern changes (seasonal projects, job change, trying a competitor), you're stuck. Monthly billing costs more but gives flexibility.",
           "Cloud agents are a new feature that runs Cursor's AI in the cloud. These sessions consume credits and can be surprisingly expensive for long-running tasks. Check your usage dashboard after your first few cloud agent sessions to calibrate expectations."
@@ -271,7 +271,7 @@
     "meta_description": "Copilot Free: 2K completions + 50 premium requests. Pro: $10/mo unlimited. Business: $19/user. Plan comparison with credit costs and upgrade triggers.",
     "og_description": "GitHub Copilot plan comparison for 2026. Free vs Pro vs Business vs Enterprise with real usage limits and credit costs.",
     "h1": "GitHub Copilot Pricing: Every Plan Compared (March 2026)",
-    "intro": "GitHub Copilot now has five tiers, from a genuinely useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
+    "intro": "GitHub Copilot now has five tiers, from a useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
     "tiers": [
       {
         "name": "Free",
@@ -2201,7 +2201,7 @@
     "faqs": [
       {
         "question": "Is Weaviate free?",
-        "answer": "Weaviate is open source and free to self-host with no restrictions. The managed cloud service has a free sandbox tier (14-day expiration) and paid serverless plans starting with usage-based pricing. Self-hosting is genuinely free if you have your own infrastructure."
+        "answer": "Weaviate is open source and free to self-host with no restrictions. The managed cloud service has a free sandbox tier (14-day expiration) and paid serverless plans starting with usage-based pricing. Self-hosting is free if you have your own infrastructure."
       },
       {
         "question": "How much does Weaviate Cloud cost?",
@@ -2362,7 +2362,7 @@
         "recommendation": "Consider Pinecone or Weaviate instead. Chroma's strength is simplicity, not raw scale. If you're past 10M vectors with high query volume, purpose-built managed services handle that workload better."
       }
     ],
-    "bottom_line": "Chroma's biggest selling point is simplicity. pip install, import, done. The open-source version is genuinely free and works well for prototypes and small production apps. Chroma Cloud adds managed hosting at reasonable prices. The tradeoff: Chroma isn't built for massive scale. If your vector count stays under a few million, it's hard to beat for developer experience.",
+    "bottom_line": "Chroma's biggest selling point is simplicity. pip install, import, done. The open-source version is free and works well for prototypes and small production apps. Chroma Cloud adds managed hosting at reasonable prices. The tradeoff: Chroma isn't built for massive scale. If your vector count stays under a few million, it's hard to beat for developer experience.",
     "internal_links": [
       {
         "text": "Chroma Review",

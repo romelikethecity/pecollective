@@ -167,7 +167,7 @@ NEW_COMPARISONS = [
         "og_description": "Copilot or Codeium? We compare the two most popular AI code completion tools on quality, speed, and pricing.",
         "subtitle": "The industry standard vs the free alternative for AI-powered code completion",
         "verdict_a": "You want the most accurate and context-aware code completions backed by OpenAI and GitHub's ecosystem. Copilot's quality leads the market, and it integrates deeply with GitHub workflows, PR reviews, and documentation.",
-        "verdict_b": "You want a genuinely free code completion tool with no usage caps for individual developers. Codeium (now also powering Windsurf IDE) delivers solid completions across 70+ languages and over 40 IDE integrations without costing anything.",
+        "verdict_b": "You want a free code completion tool with no usage caps for individual developers. Codeium (now also powering Windsurf IDE) delivers solid completions across 70+ languages and over 40 IDE integrations without costing anything.",
         "features": [
             {"feature": "Completion Quality", "a": "Best in class", "b": "Very good", "winner": "a", "a_check": True},
             {"feature": "Free Tier", "a": "Limited (2K completions/mo)", "b": "Unlimited for individuals", "winner": "b", "b_check": True},
@@ -193,7 +193,7 @@ NEW_COMPARISONS = [
                 "heading": "Codeium Wins: Pricing and Accessibility",
                 "icon": "🌊",
                 "paragraphs": [
-                    "Codeium's free tier is genuinely unlimited for individual developers. No completion caps, no feature restrictions, no trial countdown. For students, open-source contributors, and developers at companies without tool budgets, this removes the biggest barrier to AI-assisted coding entirely.",
+                    "Codeium's free tier is unlimited for individual developers. No completion caps, no feature restrictions, no trial countdown. For students, open-source contributors, and developers at companies without tool budgets, this removes the biggest barrier to AI-assisted coding entirely.",
                     "IDE breadth is a real differentiator. Codeium supports over 40 editors including Vim, Emacs, Eclipse, and even web-based IDEs that Copilot does not support. If you use anything outside VS Code or JetBrains, Codeium may be your only option for AI code completion.",
                     "Codeium also offers a local model option for privacy-sensitive environments. Organizations that cannot send code to external servers can run Codeium's models on their own infrastructure. Copilot requires sending code to GitHub's servers (with enterprise privacy controls, but still external)."
                 ]

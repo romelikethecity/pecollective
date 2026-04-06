@@ -171,7 +171,7 @@ NEW_COMPARISONS = [
                 "icon": "🟢",
                 "paragraphs": [
                     "ChatGPT's ecosystem is unmatched. Custom GPTs, plugins, web browsing, DALL-E for generating architecture diagrams, and a community that shares thousands of coding-specific GPTs. If you want a single tool that handles coding, research, image generation, and data analysis, ChatGPT covers more ground.",
-                    "The o1 and o3 reasoning models are genuinely powerful for hard algorithmic problems. When you need to solve a complex dynamic programming challenge or debug a subtle concurrency issue, the reasoning models take extra time to think through the problem step by step. Both Claude and ChatGPT offer reasoning modes, but OpenAI's have been available longer with more refinement.",
+                    "The o1 and o3 reasoning models are powerful for hard algorithmic problems. When you need to solve a complex dynamic programming challenge or debug a subtle concurrency issue, the reasoning models take extra time to think through the problem step by step. Both Claude and ChatGPT offer reasoning modes, but OpenAI's have been available longer with more refinement.",
                     "Web browsing integration means ChatGPT can look up current documentation, check package versions, and reference Stack Overflow answers during your conversation. Claude's web access is more limited, which sometimes means you need to paste documentation into the conversation yourself."
                 ]
             }

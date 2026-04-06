@@ -77,10 +77,10 @@ Em dashes are longer than hyphens (-) and are used for emphasis, interruptions, 
 | crucial | important, key, essential, critical |
 | vital | important, essential, necessary |
 | transformative | significant, important, major |
-| cutting-edge | new, advanced, recent, modern |
+| advanced | new, advanced, recent, modern |
 | groundbreaking | new, original, significant |
 | innovative | new, original, creative |
-| seamless | smooth, easy, effortless |
+| smooth | smooth, easy, effortless |
 | intricate | complex, detailed, complicated |
 | nuanced | subtle, complex, detailed |
 | multifaceted | complex, varied, diverse |
@@ -164,8 +164,7 @@ These words often add nothing to meaning. Remove them or find specific alternati
 - significantly
 - simply
 - surely
-- truly
-- ultimately
+- - ultimately
 - undoubtedly
 - very
 

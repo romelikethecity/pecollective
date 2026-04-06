@@ -62,7 +62,7 @@ Each section should advance one argument. Build a logical flow down the page.
 
 ### Core Principles
 
-1. **Simple over complex** — "Use" not "utilize," "help" not "facilitate"
+1. **Simple over complex** — "Use" not "use," "help" not "facilitate"
 2. **Specific over vague** — Avoid "streamline," "optimize," "innovative"
 3. **Active over passive** — "We generate reports" not "Reports are generated"
 4. **Confident over qualified** — Remove "almost," "very," "really"

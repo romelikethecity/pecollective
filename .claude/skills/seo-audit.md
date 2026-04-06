@@ -213,7 +213,7 @@ grep -rL "analytics\|clarity\|gtag" site/ --include="*.html" | head -20
   - "Unlock", "Unleash", "Empower", "Supercharge", "Revolutionize"
   - Overly parallel list structures
   - Rhetorical questions with immediate answers
-  - "cutting-edge", "revolutionary", "leverage"
+  - "advanced", "revolutionary", "leverage"
 
 ### 10. Cross-Page Consistency
 

@@ -301,7 +301,7 @@
         "icon": "learnprompting-icon",
         "url": "https://learnprompting.org",
         "summary": "LearnPrompting is an open-source curriculum maintained by the community. It covers everything from basic prompting to advanced research techniques like Constitutional AI and RLHF. The breadth is unmatched: no single course covers as many techniques. New patterns and research findings get added regularly. The written format with embedded examples makes it easy to skim or deep-dive as needed.",
-        "best_for": "Self-directed learners who want comprehensive coverage of every prompting technique. Researchers and advanced practitioners exploring cutting-edge methods. Anyone who wants a free, always-updated resource they can reference long-term.",
+        "best_for": "Self-directed learners who want comprehensive coverage of every prompting technique. Researchers and advanced practitioners exploring advanced methods. Anyone who wants a free, always-updated resource they can reference long-term.",
         "caveat": "Community-maintained means inconsistent quality across sections. Some pages are excellent, others are thin. No video content. The site can feel overwhelming since it tries to cover everything. Lacks the polish of professionally produced courses."
       }
     ],
@@ -888,7 +888,7 @@
       },
       {
         "question": "Do I need a multi-agent framework, or is a single agent enough?",
-        "answer": "Most applications work fine with a single agent. Multi-agent patterns add value when you have genuinely distinct roles with different tool access or expertise. A research agent that also writes reports is fine as one agent. A system where a planner coordinates a researcher, a coder, and a reviewer benefits from multiple agents. Don't add agents for the sake of architecture."
+        "answer": "Most applications work fine with a single agent. Multi-agent patterns add value when you have distinct roles with different tool access or expertise. A research agent that also writes reports is fine as one agent. A system where a planner coordinates a researcher, a coder, and a reviewer benefits from multiple agents. Don't add agents for the sake of architecture."
       },
       {
         "question": "Which framework is best for production agent systems?",

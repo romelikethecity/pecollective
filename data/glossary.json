@@ -414,7 +414,7 @@
     "common_mistakes": [
       {
         "mistake": "Building an agent when a simple prompt chain would work",
-        "correction": "Start with prompt chaining. Only add agent autonomy when the task genuinely requires dynamic decision-making about which tools to use."
+        "correction": "Start with prompt chaining. Only add agent autonomy when the task requires dynamic decision-making about which tools to use."
       },
       {
         "mistake": "Giving agents unrestricted access to tools without guardrails",
@@ -711,7 +711,7 @@
     "common_mistakes": [
       {
         "mistake": "Building agentic systems before establishing reliable non-agentic baselines",
-        "correction": "Start with deterministic pipelines using prompt chaining. Only add agentic autonomy for sub-tasks that genuinely require dynamic decision-making."
+        "correction": "Start with deterministic pipelines using prompt chaining. Only add agentic autonomy for sub-tasks that require dynamic decision-making."
       },
       {
         "mistake": "Not implementing cost controls and circuit breakers",
@@ -790,7 +790,7 @@
     "common_mistakes": [
       {
         "mistake": "Assuming DPO completely replaces RLHF",
-        "correction": "DPO replaces the reward model + RL steps, but still requires supervised fine-tuning as a starting point. Some cutting-edge labs still use full RLHF for their flagship models."
+        "correction": "DPO replaces the reward model + RL steps, but still requires supervised fine-tuning as a starting point. Some advanced labs still use full RLHF for their flagship models."
       },
       {
         "mistake": "Using low-quality preference pairs for DPO training",
@@ -1527,7 +1527,7 @@
     "common_mistakes": [
       {
         "mistake": "Equating alignment with content filtering or censorship",
-        "correction": "Alignment is about making models genuinely helpful and honest, not about restricting output. A well-aligned model can discuss sensitive topics thoughtfully while an unaligned model might cause harm through overconfident incorrect advice."
+        "correction": "Alignment is about making models helpful and honest, not about restricting output. A well-aligned model can discuss sensitive topics thoughtfully while an unaligned model might cause harm through overconfident incorrect advice."
       },
       {
         "mistake": "Assuming alignment is a solved problem because current models seem well-behaved",

@@ -523,7 +523,7 @@
     "meta_description": "Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.",
     "og_description": "Pinecone pricing breakdown for 2026. Free tier, serverless costs, and what you'll actually pay at different scales.",
     "h1": "Pinecone Pricing: What It Actually Costs (April 2026)",
-    "intro": "Pinecone's pricing is usage-based with monthly minimums that catch people off guard. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. This page breaks down the real costs, what the minimums actually cover, and how to estimate your monthly bill.",
+    "intro": "Pinecone overhauled its pricing in late 2025, fully committing to serverless as the default architecture and retiring pod-based indexes for new projects. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. With serverless now handling auto-scaling and per-query billing, the cost model is simpler than the old pod system but the minimums still catch people off guard. This page breaks down the real costs at each tier, what changed in the serverless transition, and how to estimate your monthly bill for RAG and search workloads.",
     "tiers": [
       {
         "name": "Starter (Free)",
@@ -628,8 +628,18 @@
         "answer": "Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query."
       }
     ],
-    "date_updated": "2026-04-06",
+    "date_updated": "2026-04-07",
     "deep_sections": [
+      {
+        "heading": "Serverless vs Pods: Which Architecture Costs Less in April 2026",
+        "body": [
+          "Pinecone now defaults every new index to serverless. Pod-based indexes still exist for legacy workloads, but new sign-ups land on serverless unless they explicitly request pods through Enterprise. This is the biggest pricing shift in Pinecone's history, and it changes how you think about costs.",
+          "Serverless pricing is pure usage: you pay for read units, write units, and storage. There is no idle compute charge. If nobody queries your index overnight, your bill is just storage. Pod-based pricing charged per pod-hour regardless of usage. An s1.x1 pod cost roughly $0.096/hour ($70/month) even if it sat idle. For bursty workloads with quiet periods, serverless saves 40-60% over equivalent pod configurations.",
+          "Where pods can still win: steady high-throughput workloads. If you are serving 50,000+ queries per minute around the clock, pod-based pricing with provisioned capacity is more predictable and can be cheaper per query than serverless at sustained volume. Pinecone's Enterprise tier offers pod access with committed use discounts for exactly this scenario.",
+          "For most RAG applications doing fewer than 10,000 queries per day, serverless on the Standard tier is the clear winner. You stay on the $50/month minimum for months before actual usage charges exceed it. The key metric to watch is read units: at $16 per million on Standard, a chatbot handling 50,000 queries/day generates roughly 1.5 million read units/month, costing about $24 in reads alone, well under the $50 minimum.",
+          "One operational difference: serverless indexes cold-start after periods of inactivity. The first query after a quiet period may take 2-5 seconds instead of the usual sub-100ms. Pod-based indexes maintain warm capacity and respond consistently. If your application needs guaranteed sub-100ms latency at all times, factor cold starts into the serverless vs pods decision."
+        ]
+      },
       {
         "heading": "Understanding Pinecone's Unit-Based Pricing",
         "body": [
@@ -1783,14 +1793,24 @@
         "answer": "If you're using Windsurf daily, yes. The free tier's 5 Cascade sessions run out fast during active development. Pro removes all limits and gives you access to better models. At $15/mo, it's the cheapest unlimited AI editor plan available."
       }
     ],
-    "date_updated": "2026-04-06",
+    "date_updated": "2026-04-07",
     "deep_sections": [
       {
         "heading": "How the Credit System Works",
         "body": [
           "Every AI interaction in Windsurf costs credits. The exact cost depends on which model handles the request. Windsurf's built-in SWE-1 model costs a fixed number of credits per interaction. Third-party models like Claude Sonnet 4.6 or GPT-4.1 cost credits proportional to the tokens they process.",
-          "Tab completions are free on all plans \u2014 they don't consume credits. This means basic autocomplete works indefinitely. Credits are consumed by Chat, Cascade (multi-file editing), and Commands.",
+          "Tab completions are free on all plans. This means basic autocomplete works indefinitely. Credits are consumed by Chat, Cascade (multi-file editing), and Commands.",
           "When you run out of credits, you can buy add-on packs at $10 for 250 credits. Your monthly allocation resets each billing cycle. Unused credits don't roll over."
+        ]
+      },
+      {
+        "heading": "Windsurf Credits vs Cursor Credits: How They Actually Compare",
+        "body": [
+          "Both Windsurf and Cursor moved to credit-based systems, but they work differently under the hood. Understanding the mechanics helps you predict which tool costs less for your workflow.",
+          "Cursor gives you a dollar-denominated credit pool: $20 on Pro, $60 on Pro+, $200 on Ultra. Each request deducts from the pool based on the actual API cost of the model you select. Claude Sonnet 4.6 costs more per request than GPT-4.1 Nano. Cursor's Auto mode is unlimited and does not draw from the pool, which means most routine coding tasks are effectively free. The key optimization is using Auto mode by default and only switching to manual model selection when quality matters.",
+          "Windsurf gives you a fixed credit count: 500 on Pro. Credits are consumed by Chat, Cascade, and Commands at rates that depend on the model and the length of the interaction. The SWE-1 model costs a predictable number of credits per interaction. Third-party models like Claude Sonnet 4.6 cost credits proportional to tokens processed, meaning long Cascade sessions with complex context can burn through 20-30 credits in a single workflow.",
+          "In practice, a developer doing 15-20 AI interactions per day (a mix of Chat questions and Cascade edits) will typically consume 300-400 Windsurf credits per month. That keeps you within the 500-credit Pro allocation most months. The same developer on Cursor Pro would use Auto mode for most requests (free) and dip into the $20 credit pool only for manual model selections, likely spending $8-12 of the pool per month.",
+          "The bottom line: light to moderate users spend less on Windsurf ($15/month covers usage). Heavy users who need premium models for every request spend less on Cursor because Auto mode absorbs the routine workload for free. If you are unsure, start with Windsurf's lower price point and monitor your credit consumption for a month before deciding."
         ]
       },
       {
@@ -2030,7 +2050,8 @@
       "Overage charges on Plus hit fast. If you're running 500K traces/month, you'll pay $39 base plus $200 in overage ($0.50/1K traces). That's $239/user/month.",
       "The framework itself is free, but LangChain apps tend to use more LLM calls than simpler architectures. Chain-of-thought, retrieval, and agent loops multiply your API costs.",
       "Data retention on the free tier is only 14 days. If you need to debug an issue from last month, that data is gone.",
-      "LangGraph Cloud (their agent deployment platform) has separate compute costs on top of LangSmith subscriptions."
+      "LangGraph Cloud charges separately for agent compute. The Platform plan starts at $35/month for cloud-hosted LangGraph agents. Production deployments with high concurrency can run $200-500/month in LangGraph Cloud compute on top of your LangSmith subscription and LLM API costs.",
+      "LangGraph Platform pricing includes a Developer tier (free, single assistant, limited runs) and a Plus tier ($35/month) with more assistants and higher concurrency. Enterprise pricing is custom and includes dedicated infrastructure and SLA guarantees."
     ],
     "who_needs_what": [
       {
@@ -2091,7 +2112,26 @@
         "answer": "It depends on your use case. LangChain is great for complex chains, agents, and retrieval pipelines where you need the orchestration abstractions. For simple API calls to OpenAI or Anthropic, it adds unnecessary complexity. Many production teams start with LangChain and either stick with it or simplify to direct API calls."
       }
     ],
-    "date_updated": "2026-04-06"
+    "date_updated": "2026-04-07",
+    "deep_sections": [
+      {
+        "heading": "LangSmith Pricing Tiers Explained",
+        "body": [
+          "LangSmith's Developer tier is free and includes 5,000 traces per month, 1 user, and 14-day data retention. It is enough for local development and testing but not for production monitoring. The LangGraph Cloud playground is included, letting you test agent workflows visually before deploying.",
+          "The Plus tier at $39/user/month is where most teams land. You get 100,000 traces per month included, up to 10 users, 400-day data retention, evaluation datasets, and prompt versioning. The overage rate of $0.50 per 1,000 traces means a team running 500K traces/month pays $39 + $200 = $239/user/month. Watch this number closely once you hit production traffic.",
+          "Enterprise pricing is custom and includes unlimited traces, unlimited users, SSO, RBAC, SOC2 compliance, self-hosted deployment options, and dedicated support with SLA guarantees. If your trace volume exceeds 1 million per month across a team, Enterprise pricing typically becomes cheaper than Plus overage charges."
+        ]
+      },
+      {
+        "heading": "LangGraph Cloud: What Agent Hosting Costs",
+        "body": [
+          "LangGraph Cloud is LangChain's managed hosting platform for LangGraph agents. It is separate from LangSmith and has its own pricing. The Developer tier is free and gives you one assistant with limited concurrent runs, enough for testing agent workflows.",
+          "The Plus tier at $35/month supports multiple assistants, higher concurrency, and longer-running agent executions. For production applications where agents run complex multi-step workflows (retrieval, tool calls, human-in-the-loop approvals), the $35/month covers moderate traffic.",
+          "At scale, LangGraph Cloud compute charges are the hidden multiplier in your LangChain bill. Each agent run consumes compute based on execution time and the number of steps. A simple two-step retrieval agent is cheap. A complex agent that loops through 15 tool calls, waits for human approval, and branches based on results can cost 10-20x more per run. The LLM API costs (from OpenAI, Anthropic, etc.) are on top of the LangGraph Cloud compute charges.",
+          "For teams evaluating total cost: a typical production setup with LangSmith Plus ($39/user/month), LangGraph Cloud Plus ($35/month), and moderate LLM API usage ($100-300/month) runs $175-375/month total. Compare this to building the same agent infrastructure yourself on AWS Lambda or Cloud Run, factoring in engineering time for deployment, scaling, monitoring, and error handling."
+        ]
+      }
+    ]
   },
   {
     "slug": "weaviate-pricing",
@@ -2603,7 +2643,7 @@
     "meta_description": "Run Claude, Llama, and Mistral through AWS Bedrock. On-demand, provisioned, and batch pricing compared. Calculate actual monthly costs.",
     "og_description": "AWS Bedrock pricing breakdown for 2026. On-demand, provisioned, and batch modes compared across all available models.",
     "h1": "AWS Bedrock Pricing: Every Model's Real Cost (April 2026)",
-    "intro": "AWS Bedrock gives you API access to models from Anthropic, Meta, Mistral, Cohere, and others \u2014 all through a single AWS endpoint. The pricing varies by model, with the same per-token rates as the providers' direct APIs in most cases. Bedrock adds its own pricing dimensions: on-demand (pay per token), batch (50% off), and provisioned throughput (reserved capacity). This page covers every major model's pricing on Bedrock and when each billing option makes sense.",
+    "intro": "AWS Bedrock gives you API access to models from Anthropic, Meta, Mistral, Cohere, and others through a single AWS endpoint. The model lineup expanded significantly in early 2026 with Claude Opus 4.6, Llama 4 Scout and Maverick, and Mistral Large 2. Bedrock's pricing matches the providers' direct API rates in most cases. The three billing modes remain: on-demand (pay per token), batch (50% off), and provisioned throughput (reserved capacity). This page covers every major model's current pricing on Bedrock, the new 2026 additions, and when each billing option makes sense.",
     "tiers": [
       {
         "name": "On-Demand",
@@ -2730,7 +2770,7 @@
         "answer": "Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training."
       }
     ],
-    "date_updated": "2026-04-06",
+    "date_updated": "2026-04-07",
     "deep_sections": [
       {
         "heading": "On-Demand Model Pricing Table",
@@ -2798,9 +2838,36 @@
               "$0.10",
               "\u2014",
               "512"
+            ],
+            [
+              "Llama 4 Scout (109B MoE)",
+              "$0.27",
+              "$0.36",
+              "10M"
+            ],
+            [
+              "Llama 4 Maverick (402B MoE)",
+              "$0.50",
+              "$0.77",
+              "1M"
+            ],
+            [
+              "Mistral Large 2",
+              "$2.00",
+              "$6.00",
+              "128K"
             ]
           ]
         }
+      },
+      {
+        "heading": "Bedrock vs Direct API Pricing: Are You Actually Saving Money?",
+        "body": [
+          "A common question in 2026 is whether Bedrock adds a markup over calling model providers directly. The short answer: for on-demand pricing, Bedrock's per-token rates match the providers' published prices almost exactly. Claude Sonnet 4.6 costs $3/$15 per million tokens on both Bedrock and the Anthropic API. Llama models are priced at Meta's published inference rates.",
+          "Where the math gets interesting is prompt caching and batch discounts. Anthropic's direct API offers prompt caching that reduces costs by 90% on repeated prefixes. Bedrock supports prompt caching for Claude models, but the feature availability can lag behind Anthropic's direct API by weeks. If prompt caching is critical to your cost structure, verify that the specific caching feature you need is live on Bedrock before committing.",
+          "Batch inference is 50% off on Bedrock, matching the discount available on direct APIs. The operational advantage of Bedrock batch is S3 integration: you drop your input files in an S3 bucket, Bedrock processes them, and results appear in another bucket. No webhook management, no polling. For teams already running data pipelines on AWS, this eliminates real integration work.",
+          "The hidden cost that catches teams is Knowledge Bases. The managed RAG pipeline uses OpenSearch Serverless under the hood, which has a minimum cost of roughly $700/month (4 OCUs). For a simple chatbot that only needs vector search over a few thousand documents, this floor cost makes Bedrock's managed RAG dramatically more expensive than running Pinecone ($50/month) or pgvector (free) alongside direct API calls."
+        ]
       },
       {
         "heading": "Bedrock vs Direct API Access: When Bedrock Wins",

@@ -867,7 +867,7 @@
   <main>
     <div class="pricing-page">
       <h1>Pinecone Pricing: What It Actually Costs (April 2026)</h1>
-      <p class="subtitle">Pinecone's pricing is usage-based with monthly minimums that catch people off guard. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. This page breaks down the real costs, what the minimums actually cover, and how to estimate your monthly bill.</p>
+      <p class="subtitle">Pinecone overhauled its pricing in late 2025, fully committing to serverless as the default architecture and retiring pod-based indexes for new projects. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. With serverless now handling auto-scaling and per-query billing, the cost model is simpler than the old pod system but the minimums still catch people off guard. This page breaks down the real costs at each tier, what changed in the serverless transition, and how to estimate your monthly bill for RAG and search workloads.</p>
 
       <div class="pricing-tiers">
         
@@ -919,6 +919,16 @@
       </div>
 
       
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Serverless vs Pods: Which Architecture Costs Less in April 2026</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone now defaults every new index to serverless. Pod-based indexes still exist for legacy workloads, but new sign-ups land on serverless unless they explicitly request pods through Enterprise. This is the biggest pricing shift in Pinecone's history, and it changes how you think about costs.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Serverless pricing is pure usage: you pay for read units, write units, and storage. There is no idle compute charge. If nobody queries your index overnight, your bill is just storage. Pod-based pricing charged per pod-hour regardless of usage. An s1.x1 pod cost roughly $0.096/hour ($70/month) even if it sat idle. For bursty workloads with quiet periods, serverless saves 40-60% over equivalent pod configurations.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Where pods can still win: steady high-throughput workloads. If you are serving 50,000+ queries per minute around the clock, pod-based pricing with provisioned capacity is more predictable and can be cheaper per query than serverless at sustained volume. Pinecone's Enterprise tier offers pod access with committed use discounts for exactly this scenario.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">For most RAG applications doing fewer than 10,000 queries per day, serverless on the Standard tier is the clear winner. You stay on the $50/month minimum for months before actual usage charges exceed it. The key metric to watch is read units: at $16 per million on Standard, a chatbot handling 50,000 queries/day generates roughly 1.5 million read units/month, costing about $24 in reads alone, well under the $50 minimum.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One operational difference: serverless indexes cold-start after periods of inactivity. The first query after a quiet period may take 2-5 seconds instead of the usual sub-100ms. Pod-based indexes maintain warm capacity and respond consistently. If your application needs guaranteed sub-100ms latency at all times, factor cold starts into the serverless vs pods decision.</p>
+        
+      </div>
       <div style="margin-top: 48px;">
         <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Understanding Pinecone's Unit-Based Pricing</h2>
         

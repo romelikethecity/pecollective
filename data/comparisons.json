@@ -1505,7 +1505,7 @@
         "paragraphs": [
           "Cursor was built from the ground up as an AI editor, and that shows in every interaction. Composer lets you describe a change in natural language and see edits across multiple files in a visual diff before accepting. Copilot Edits is catching up, but Cursor's implementation is more mature and handles larger changes more reliably.",
           "Codebase indexing is where the gap widens. Cursor indexes your entire repository and uses that context when answering questions or generating code. Ask it 'where is authentication handled?' and it searches your actual codebase, not just the open file. Copilot's workspace awareness has improved but still focuses primarily on open files and nearby context.",
-          "Agent mode takes it further. Give Cursor a high-level task and it plans, executes, and iterates. It'll create files, run commands, check output, and fix errors. Copilot's coding agent exists but it's newer and less battle-tested. For developers who want to delegate entire features to AI, Cursor is ahead."
+          "Agent mode takes it further. Give Cursor a high-level task and it plans, executes, and iterates. It'll create files, run commands, check output, and fix errors. Copilot's coding agent has reached general availability in 2026 and works well for issue-to-PR workflows, but Cursor's real-time Agent mode is still more responsive for interactive development sessions where you want to watch and steer the AI as it works."
         ]
       },
       {
@@ -1513,8 +1513,17 @@
         "icon": "🤖",
         "paragraphs": [
           "At $10/month vs Cursor's $20, Copilot costs half as much. For teams, the gap is even larger: $19/user vs $40/user. If you're a solo developer or running a startup watching every dollar, Copilot delivers strong AI coding assistance at a price that's hard to argue with.",
-          "Copilot works inside your existing editor. VS Code, JetBrains, Neovim... you install a plugin and you're done. Cursor requires you to switch to a new IDE. Even though it's a VS Code fork with extension compatibility, switching editors still means migrating settings, rebuilding muscle memory, and convincing your team to come along. Copilot asks for none of that.",
-          "GitHub integration is a genuine advantage for teams. Copilot can generate PR descriptions that actually reflect the changes, reference related issues, and help with code review. Since most development teams already live on GitHub, this integration eliminates context switching that Cursor can't replicate."
+          "Copilot works inside your existing editor. VS Code, JetBrains, Neovim. You install a plugin and you're done. Cursor requires you to switch to a new IDE. Even though it's a VS Code fork with extension compatibility, switching editors still means migrating settings, rebuilding muscle memory, and convincing your team to come along. Copilot asks for none of that.",
+          "GitHub integration is a genuine advantage for teams. Copilot can generate PR descriptions that actually reflect the changes, reference related issues, and help with code review. The coding agent can take a GitHub issue, write the code, and open a PR without you touching the editor. Since most development teams already live on GitHub, this integration eliminates context switching that Cursor can't replicate."
+        ]
+      },
+      {
+        "heading": "April 2026 Update: Credit Systems and Model Access",
+        "icon": "\ud83d\udcb3",
+        "paragraphs": [
+          "Both tools restructured pricing around usage-based systems in 2026, and the comparison is no longer as simple as $10 vs $20. Cursor Pro gives you a $20 monthly credit pool that depletes based on which model you manually select, while Auto mode (Cursor picks the model) is unlimited. Copilot Pro gives 300 premium requests per month, with overage at $0.04 per request. Copilot Pro+ at $39/month gives 1,500 premium requests and access to Claude Opus 4.6 and o3.",
+          "Model access has converged. Copilot Pro+ now includes Claude Sonnet 4.6, Claude Opus 4.6, GPT-4.1, and o3. Cursor Pro gives you Claude Sonnet 4.6, GPT-4.1, Gemini, and GPT-4.1 Nano through the credit pool, with Opus available on higher tiers. The model selection gap that heavily favored Cursor in 2025 has narrowed significantly.",
+          "For most developers, the practical cost difference comes down to usage intensity. A developer who does 10-15 premium interactions per day stays within Copilot Pro's 300 monthly requests at $10/month. The same developer on Cursor Pro would use Auto mode for most tasks (free) and only tap the $20 credit pool occasionally. Light users save more on Copilot. Heavy users who need premium models for complex tasks may find Cursor's unlimited Auto mode more cost-effective than paying $0.04 per overage request on Copilot."
         ]
       }
     ],
@@ -1566,7 +1575,7 @@
         "answer": "Yes. Copilot Pro+ ($39/month) gives you access to Claude Sonnet and other models. At that price point, though, you're in the same range as Cursor Pro ($20/month) plus Claude Pro ($20/month), and you'd get more AI capabilities with the two separate subscriptions."
       }
     ],
-    "date_updated": "2026-04-06",
+    "date_updated": "2026-04-07",
     "migration": {
       "what_transfers": [
         "VS Code extensions and settings (Cursor is a VS Code fork)",

@@ -946,8 +946,18 @@
         <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How the Credit System Works</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Every AI interaction in Windsurf costs credits. The exact cost depends on which model handles the request. Windsurf's built-in SWE-1 model costs a fixed number of credits per interaction. Third-party models like Claude Sonnet 4.6 or GPT-4.1 cost credits proportional to the tokens they process.</p>
-          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Tab completions are free on all plans — they don't consume credits. This means basic autocomplete works indefinitely. Credits are consumed by Chat, Cascade (multi-file editing), and Commands.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Tab completions are free on all plans. This means basic autocomplete works indefinitely. Credits are consumed by Chat, Cascade (multi-file editing), and Commands.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">When you run out of credits, you can buy add-on packs at $10 for 250 credits. Your monthly allocation resets each billing cycle. Unused credits don't roll over.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Windsurf Credits vs Cursor Credits: How They Actually Compare</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Both Windsurf and Cursor moved to credit-based systems, but they work differently under the hood. Understanding the mechanics helps you predict which tool costs less for your workflow.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cursor gives you a dollar-denominated credit pool: $20 on Pro, $60 on Pro+, $200 on Ultra. Each request deducts from the pool based on the actual API cost of the model you select. Claude Sonnet 4.6 costs more per request than GPT-4.1 Nano. Cursor's Auto mode is unlimited and does not draw from the pool, which means most routine coding tasks are effectively free. The key optimization is using Auto mode by default and only switching to manual model selection when quality matters.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Windsurf gives you a fixed credit count: 500 on Pro. Credits are consumed by Chat, Cascade, and Commands at rates that depend on the model and the length of the interaction. The SWE-1 model costs a predictable number of credits per interaction. Third-party models like Claude Sonnet 4.6 cost credits proportional to tokens processed, meaning long Cascade sessions with complex context can burn through 20-30 credits in a single workflow.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">In practice, a developer doing 15-20 AI interactions per day (a mix of Chat questions and Cascade edits) will typically consume 300-400 Windsurf credits per month. That keeps you within the 500-credit Pro allocation most months. The same developer on Cursor Pro would use Auto mode for most requests (free) and dip into the $20 credit pool only for manual model selections, likely spending $8-12 of the pool per month.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The bottom line: light to moderate users spend less on Windsurf ($15/month covers usage). Heavy users who need premium models for every request spend less on Cursor because Auto mode absorbs the routine workload for free. If you are unsure, start with Windsurf's lower price point and monitor your credit consumption for a month before deciding.</p>
         
       </div>
       <div style="margin-top: 48px;">

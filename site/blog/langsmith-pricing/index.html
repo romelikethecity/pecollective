@@ -14,7 +14,7 @@
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="LangSmith Developer plan is free (5K traces). Plus is $39/seat/mo with 50K traces. Enterprise is custom. Full plan comparison and alternatives. April 2026.">
+  <meta name="description" content="LangSmith pricing for 2026: Developer (free), Plus ($39/seat), and Enterprise plans compared. Trace volumes, features, and alternatives like Weights & Biases and Arize.">
 
   <title>LangSmith Pricing 2026 - Free, Plus & Enterprise Plans Compared | PE Collective</title>
 
@@ -22,8 +22,8 @@
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://pecollective.com/blog/langsmith-pricing/">
-  <meta property="og:title" content="LangSmith Pricing 2026 - Developer, Plus & Enterprise Breakdown">
-  <meta property="og:description" content="LangSmith pricing breakdown: free Developer, $39/seat Plus, custom Enterprise. Trace limits and alternatives compared.">
+  <meta property="og:title" content="LangSmith Pricing 2026 - Free Plus and Enterprise Plans Compared">
+  <meta property="og:description" content="Complete LangSmith pricing breakdown for 2026. Free tier limits, Plus plan features, Enterprise options, and how it compares to W&B, Arize, and Braintrust.">
   <meta property="og:site_name" content="PE Collective">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
@@ -33,8 +33,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@pe_collective">
-  <meta name="twitter:title" content="LangSmith Pricing 2026 - Developer, Plus & Enterprise Breakdown">
-  <meta name="twitter:description" content="LangSmith pricing breakdown: free Developer, $39/seat Plus, custom Enterprise. Trace limits and alternatives compared.">
+  <meta name="twitter:title" content="LangSmith Pricing 2026 - Free Plus and Enterprise Plans Compared">
+  <meta name="twitter:description" content="Complete LangSmith pricing breakdown for 2026. Free tier limits, Plus plan features, Enterprise options, and how it compares to W&B, Arize, and Braintrust.">
   <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
   <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
@@ -75,7 +75,7 @@
   {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "LangSmith Pricing 2026 - Developer, Plus & Enterprise Breakdown",
+  "headline": "LangSmith Pricing 2026 - Free Plus and Enterprise Plans Compared",
   "image": "https://pecollective.com/assets/og-blog.png",
   "author": {
     "@type": "Person",
@@ -87,9 +87,9 @@
     "name": "PE Collective",
     "url": "https://pecollective.com"
   },
-  "datePublished": "2026-04-07",
-  "dateModified": "2026-04-07",
-  "description": "LangSmith Developer plan is free (5K traces). Plus is $39/seat/mo with 50K traces. Enterprise is custom. Full plan comparison and alternatives. April 2026."
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "description": "LangSmith pricing for 2026: Developer (free), Plus ($39/seat), and Enterprise plans compared. Trace volumes, features, and alternatives like Weights & Biases and Arize."
 }
   </script>
 
@@ -104,7 +104,7 @@
       "name": "How much does LangSmith cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "LangSmith has three plans: Developer (free, 5K traces/month, 1 user), Plus ($39/seat/month, 50K traces/month, unlimited users), and Enterprise (custom pricing). Overage traces on Plus cost approximately $0.005 each."
+        "text": "LangSmith has three plans: Developer (free, 5,000 traces/month, 1 seat), Plus ($39/seat/month, 10,000 traces included, $0.50 per additional 1,000 traces), and Enterprise (custom pricing with SSO, SLA, and dedicated infrastructure). Most small teams spend $117-215/month on Plus."
       }
     },
     {
@@ -112,7 +112,7 @@
       "name": "Is LangSmith free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the Developer plan is free with 5,000 traces per month, 14-day retention, and 1 user. It includes tracing, debugging, the playground, datasets, and the prompt hub. It's sufficient for development but not for production workloads."
+        "text": "Yes, the Developer plan is free and includes 5,000 traces per month, full tracing and debugging, prompt playground, and basic evaluation. Limitations include 14-day data retention, single seat (no team access), and no overage option when you hit the trace cap."
       }
     },
     {
@@ -120,15 +120,23 @@
       "name": "What is a LangSmith trace?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A trace captures one complete execution of your LLM application, including all LLM calls, inputs, outputs, latency, token usage, and metadata. If your app makes 3 LLM calls to answer one user question, that's 1 trace with 3 child spans."
+        "text": "A trace is one end-to-end execution of your LLM pipeline. For a simple chatbot, one user message equals one trace. For a multi-step agent that makes 5 LLM calls, retrieves documents, and uses tools, that entire execution is still one trace. Sub-steps are called 'runs' and don't count separately toward your limit."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need LangSmith if I don't use LangChain?",
+      "name": "Is LangSmith worth it for production?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. LangSmith works with any LLM application through its Python/TypeScript SDKs, but the deepest integrations are with LangChain. If you use LlamaIndex, custom code, or another framework, alternatives like Braintrust, Arize Phoenix, or Promptfoo may be better fits."
+        "text": "If you're running multi-step LLM chains in production, yes. The ability to trace failures, monitor quality metrics, and run evaluations against production data pays for itself in debugging time saved. The Plus plan at $39/seat is comparable to other developer tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best LangSmith alternatives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top alternatives include Arize Phoenix (open-source, self-hostable), Weights & Biases Weave (best if you also do ML experiment tracking), and Braintrust (strongest evaluation and prompt management). Arize Phoenix is the best free alternative since it can be fully self-hosted at no cost."
       }
     }
   ]
@@ -199,79 +207,184 @@
           <span class="article-header__category">Guide</span>
           <h1 class="article-header__title">LangSmith Pricing 2026 - Free, Plus & Enterprise Plans Compared</h1>
           <p class="article-header__meta">
-            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 7, 2026 &middot; 7 min read
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 6, 2026 &middot; 12 min read
           </p>
         </header>
 
         <div class="article-content">
-          <p>LangSmith is LangChain's observability and evaluation platform for LLM applications. It tracks every LLM call, prompt, and response in your application. If you are building with <a href="/tools/langchain/">LangChain</a> or any LLM framework, LangSmith is one of the most popular choices for debugging and monitoring.</p>
+          <p>LangSmith is LangChain's observability and evaluation platform for LLM applications. If you're building with <a href="/tools/langchain/">LangChain</a>, LangGraph, or any LLM framework, LangSmith provides the tracing, testing, and monitoring infrastructure you need to ship production AI.</p>
 
-<h2>LangSmith Pricing Tiers (April 2026)</h2>
+<p>The pricing is straightforward but the value calculation depends on your trace volume and team size. Here's the full breakdown.</p>
 
-<table>
-<thead>
-<tr><th>Plan</th><th>Price</th><th>Traces Included</th><th>Key Features</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Developer</strong></td><td>Free</td><td>5,000/month</td><td>1 user, basic tracing, playground, datasets, prompt hub</td></tr>
-<tr><td><strong>Plus</strong></td><td>$39/seat/month</td><td>50,000/month</td><td>Unlimited users, advanced analytics, automations, 400-day retention</td></tr>
-<tr><td><strong>Enterprise</strong></td><td>Custom</td><td>Custom</td><td>SSO/SAML, SLA, dedicated support, self-hosted option</td></tr>
-</tbody>
-</table>
-
-<h3>Overage pricing</h3>
-<p>Once you exceed your included trace volume, LangSmith charges per additional trace. On the Plus plan, overage rates are approximately $0.005 per trace. At scale, this adds up. A production application sending 500,000 traces/month would cost roughly $39 + $2,250 in overage on Plus. At that volume, Enterprise custom pricing typically offers better rates.</p>
-
-<h2>What Is a Trace?</h2>
-
-<p>A trace captures one complete execution of your LLM application. If a user asks a question and your app makes 3 LLM calls (retrieval, reasoning, formatting), that counts as 1 trace with 3 child spans. Traces include the full input, output, latency, token usage, and any metadata you attach.</p>
-
-<p>The 5,000 free traces/month works for development and low-traffic staging environments. Most production applications exceed this within the first day.</p>
-
-<h2>Developer Plan (Free) - What You Actually Get</h2>
-
-<ul>
-<li><strong>5,000 traces/month</strong> with 14-day retention</li>
-<li><strong>1 user</strong> (no team access)</li>
-<li><strong>Tracing and debugging:</strong> Full request/response logging, latency tracking, error detection</li>
-<li><strong>Playground:</strong> Test prompts against your traced data</li>
-<li><strong>Datasets:</strong> Create evaluation datasets from production traces</li>
-<li><strong>Prompt Hub:</strong> Version and share prompts</li>
-</ul>
-
-<p>The free plan is genuinely useful for development. You can debug prompt issues, compare model outputs, and build evaluation datasets. The 14-day retention and 5K trace limit are the main constraints.</p>
-
-<h2>Plus Plan ($39/seat) - When to Upgrade</h2>
-
-<p>Upgrade from Developer to Plus when:</p>
-<ul>
-<li>Your app is in production and generating more than 5K traces/month</li>
-<li>You need team access (Plus supports unlimited users per organization)</li>
-<li>You need automations (alerts, evaluators that run automatically on traces)</li>
-<li>You need 400-day data retention instead of 14 days</li>
-<li>You want advanced analytics dashboards for monitoring production performance</li>
-</ul>
-
-<h2>LangSmith vs Alternatives</h2>
+<h2>LangSmith Pricing Tiers</h2>
 
 <table>
 <thead>
-<tr><th>Platform</th><th>Free Tier</th><th>Paid Starting</th><th>Best For</th></tr>
+<tr><th>Plan</th><th>Price</th><th>Traces Included</th><th>Extra Traces</th><th>Seats</th><th>Data Retention</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>LangSmith</strong></td><td>5K traces/mo</td><td>$39/seat/mo</td><td>LangChain users, prompt debugging</td></tr>
-<tr><td><strong>Braintrust</strong></td><td>1K logs/mo</td><td>$25/seat/mo</td><td>Evaluation-focused teams</td></tr>
-<tr><td><strong>Arize Phoenix</strong></td><td>Open source (self-host)</td><td>Cloud pricing varies</td><td>Teams with existing observability infrastructure</td></tr>
-<tr><td><strong>Weights & Biases</strong></td><td>Free for individuals</td><td>$50/seat/mo (Teams)</td><td>ML teams already using W&B for experiment tracking</td></tr>
-<tr><td><strong><a href="/tools/promptfoo/">Promptfoo</a></strong></td><td>Open source (free)</td><td>Cloud pricing varies</td><td>Evaluation and red-teaming, CI/CD integration</td></tr>
+<tr><td>Developer</td><td>Free</td><td>5,000/month</td><td>Not available</td><td>1</td><td>14 days</td></tr>
+<tr><td>Plus</td><td>$39/seat/month</td><td>10,000/month</td><td>$0.50 per 1,000 traces</td><td>Unlimited</td><td>400 days</td></tr>
+<tr><td>Enterprise</td><td>Custom</td><td>Custom</td><td>Custom</td><td>Unlimited</td><td>Custom + SSO, SLA</td></tr>
 </tbody>
 </table>
 
-<h2>Is LangSmith Worth It?</h2>
+<h2>Developer Plan (Free): What You Get</h2>
 
-<p>If you are building with LangChain, LangSmith is the path of least resistance. The integration is seamless. If you are using a different framework (<a href="/tools/llamaindex/">LlamaIndex</a>, <a href="/tools/langchain-alternatives/">custom code</a>), the alternatives may offer better value since LangSmith's deepest integrations are with the LangChain ecosystem.</p>
+<p>The free Developer plan is designed for individual builders prototyping and testing LLM applications.</p>
 
-<p>For teams spending $39/seat/month, the ROI calculation is straightforward: does the debugging and monitoring save you more than $39/month per developer in time? For production LLM applications, the answer is almost always yes. The first time you debug a production prompt issue in 5 minutes instead of 2 hours, the tool pays for itself.</p>
+<h3>Included Features</h3>
+
+<ul>
+<li><strong>5,000 traces per month.</strong> A trace is a single end-to-end execution of your LLM pipeline, which can include multiple LLM calls, tool uses, and retrieval steps. For a simple chatbot, one user message equals one trace.</li>
+<li><strong>Full tracing and debugging.</strong> View every step of your LLM chain: inputs, outputs, latency, token usage, and errors.</li>
+<li><strong>Prompt playground.</strong> Test and iterate on prompts directly in the LangSmith UI with side-by-side comparison.</li>
+<li><strong>Basic evaluation.</strong> Run evaluations against datasets with built-in and custom evaluators.</li>
+<li><strong>14-day data retention.</strong> Traces older than 14 days are deleted.</li>
+</ul>
+
+<h3>Developer Plan Limitations</h3>
+
+<ul>
+<li>Single seat (no team collaboration)</li>
+<li>5,000 trace cap with no overage option (traces beyond 5K are dropped)</li>
+<li>14-day retention makes historical debugging impossible</li>
+<li>No organization-level features (SSO, audit logs, RBAC)</li>
+</ul>
+
+<h3>Is the Free Plan Enough?</h3>
+
+<p>For prototyping and personal projects, yes. 5,000 traces handles roughly 150-200 traces per day. You'll outgrow it when you deploy to production (even moderate traffic exceeds 5K/month) or when you need team access.</p>
+
+<h2>Plus Plan ($39/seat/month): The Production Tier</h2>
+
+<p>Plus is where most teams land. It removes the Developer plan's constraints and adds production features.</p>
+
+<h3>What Changes from Developer</h3>
+
+<ul>
+<li><strong>10,000 traces included</strong> per month, with overage at $0.50 per 1,000 additional traces. No hard cap.</li>
+<li><strong>400-day data retention.</strong> Over a year of trace history for debugging, compliance, and performance trending.</li>
+<li><strong>Unlimited seats.</strong> Every team member can access traces, run evaluations, and collaborate on prompt development.</li>
+<li><strong>Annotation queues.</strong> Structured workflows for human review of LLM outputs.</li>
+<li><strong>Advanced monitoring.</strong> Dashboards, alerts, and performance metrics for production deployments.</li>
+<li><strong>Online evaluations.</strong> Run evaluators on production traffic in real-time.</li>
+</ul>
+
+<h3>Plus Plan Cost Examples</h3>
+
+<table>
+<thead>
+<tr><th>Scenario</th><th>Monthly Traces</th><th>Team Size</th><th>Monthly Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>Small team, light production</td><td>10,000</td><td>3</td><td>$117</td></tr>
+<tr><td>Mid-size team, moderate traffic</td><td>50,000</td><td>5</td><td>$215</td></tr>
+<tr><td>Growing team, heavy traffic</td><td>200,000</td><td>8</td><td>$407</td></tr>
+<tr><td>Large team, high volume</td><td>1,000,000</td><td>15</td><td>$1,080</td></tr>
+</tbody>
+</table>
+
+<p>The math: (seats x $39) + ((traces - 10,000) / 1,000 x $0.50).</p>
+
+<h2>Enterprise Plan: Custom Pricing</h2>
+
+<p>Enterprise adds security, compliance, and deployment flexibility.</p>
+
+<h3>Enterprise-Only Features</h3>
+
+<ul>
+<li><strong>SSO / SAML authentication</strong> for enterprise identity management</li>
+<li><strong>RBAC</strong> with custom roles and permissions</li>
+<li><strong>Dedicated infrastructure</strong> options for data isolation</li>
+<li><strong>SLA with uptime guarantees</strong></li>
+<li><strong>Audit logs</strong> for compliance</li>
+<li><strong>Custom data retention</strong> policies</li>
+<li><strong>Volume discounts</strong> on traces</li>
+<li><strong>Priority support</strong> with dedicated account management</li>
+</ul>
+
+<p>Enterprise pricing isn't published. Based on market positioning, expect $1,000-5,000/month minimum depending on team size and trace volume.</p>
+
+<h2>LangSmith vs. Alternatives</h2>
+
+<p>LangSmith isn't the only LLM observability platform. Here's how it compares.</p>
+
+<h3>LangSmith vs. Weights & Biases (W&B)</h3>
+
+<table>
+<thead>
+<tr><th>Feature</th><th>LangSmith</th><th>Weights & Biases</th></tr>
+</thead>
+<tbody>
+<tr><td>Free tier</td><td>5,000 traces/month</td><td>Generous (100GB storage)</td></tr>
+<tr><td>LLM-specific tracing</td><td>Purpose-built</td><td>Added via Weave platform</td></tr>
+<tr><td>LangChain integration</td><td>Native (built by same team)</td><td>Third-party integration</td></tr>
+<tr><td>ML experiment tracking</td><td>Not included</td><td>Industry standard</td></tr>
+<tr><td>Evaluation framework</td><td>Built-in, LLM-focused</td><td>General-purpose</td></tr>
+<tr><td>Best for</td><td>LLM-first teams using LangChain</td><td>Teams doing both ML and LLM work</td></tr>
+</tbody>
+</table>
+
+<p>W&B is broader (ML + LLM) while LangSmith is deeper on the LLM side. For a detailed comparison, see our <a href="/tools/langsmith-vs-weights-and-biases/">LangSmith vs W&B</a> review.</p>
+
+<h3>LangSmith vs. Arize Phoenix</h3>
+
+<table>
+<thead>
+<tr><th>Feature</th><th>LangSmith</th><th>Arize Phoenix</th></tr>
+</thead>
+<tbody>
+<tr><td>Pricing model</td><td>Per-seat + per-trace</td><td>Per-seat (cloud) or free (OSS)</td></tr>
+<tr><td>Open source</td><td>No</td><td>Yes (Phoenix is open source)</td></tr>
+<tr><td>Self-hosting</td><td>Enterprise only</td><td>Free self-hosted option</td></tr>
+<tr><td>Trace visualization</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td>Best for</td><td>Teams wanting managed service</td><td>Teams wanting open-source flexibility</td></tr>
+</tbody>
+</table>
+
+<p>Arize Phoenix is the strongest open-source alternative. Self-host for free to eliminate trace volume costs entirely.</p>
+
+<h3>LangSmith vs. Braintrust</h3>
+
+<table>
+<thead>
+<tr><th>Feature</th><th>LangSmith</th><th>Braintrust</th></tr>
+</thead>
+<tbody>
+<tr><td>Primary focus</td><td>Tracing + evaluation</td><td>Evaluation + prompt management</td></tr>
+<tr><td>Free tier</td><td>5,000 traces</td><td>1,000 evaluations</td></tr>
+<tr><td>AI proxy</td><td>No</td><td>Yes (route to any model)</td></tr>
+<tr><td>Best for</td><td>Observability-first teams</td><td>Evaluation-first teams</td></tr>
+</tbody>
+</table>
+
+<p>Braintrust emphasizes evaluation and prompt iteration over production monitoring. Its AI proxy feature is unique and useful for A/B testing models.</p>
+
+<h2>Do You Need LangSmith?</h2>
+
+<h3>You Probably Need LangSmith (or an Alternative) If:</h3>
+
+<ul>
+<li>You're running LLM chains with 3+ steps where debugging failures requires seeing intermediate outputs</li>
+<li>You're deploying to production and need to monitor quality, latency, and cost</li>
+<li>You're iterating on prompts and need structured evaluation against test datasets</li>
+<li>Your team has multiple people working on prompts and needs collaboration tools</li>
+</ul>
+
+<h3>You Probably Don't Need It If:</h3>
+
+<ul>
+<li>You're making single-step API calls</li>
+<li>You're in early prototyping with no production deployment planned</li>
+<li>Your LLM usage is simple enough that print-statement debugging works</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<p>Sign up for the free Developer plan at smith.langchain.com. No credit card required. If you're using <a href="/tools/langchain/">LangChain</a> or <a href="/tools/llamaindex/">LlamaIndex</a>, adding tracing takes two lines of code (set environment variables). Framework-agnostic tracing is also supported via the LangSmith SDK.</p>
+
+<p>Start with the free tier. If you hit 5,000 traces before the month is up, that's your signal to evaluate Plus.</p>
 
           <!-- Author Bio -->
           <div class="author-bio">
@@ -286,7 +399,7 @@
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/tools/langchain/">LangChain Review</a> | <a href="/tools/langchain-pricing/">LangChain Pricing</a> | <a href="/tools/langchain-alternatives/">LangChain Alternatives</a> | <a href="/tools/promptfoo/">Promptfoo Review</a> | <a href="/blog/llm-evaluation-guide/">LLM Evaluation Guide</a>
+            Related: <a href="/tools/langchain/">LangChain Review</a> | <a href="/tools/langsmith-vs-weights-and-biases/">LangSmith vs Weights & Biases</a> | <a href="/tools/langchain-pricing/">LangChain Pricing</a> | <a href="/tools/llamaindex/">LlamaIndex Review</a> | <a href="/tools/best-rag-tools/">Best RAG Tools</a> | <a href="/blog/llm-evaluation-guide/">LLM Evaluation Guide</a>
           </p>
         </div>
       </div>

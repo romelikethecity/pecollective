@@ -14,7 +14,7 @@
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="Token pricing for GPT-4.1, Claude, Gemini, Llama 4 and more. Per-1M-token costs, what a token is, and how to estimate your monthly API spend. April 2026.">
+  <meta name="description" content="Understand AI token pricing in 2026. Per-1M-token costs for GPT-4.1, Claude, Gemini, Llama 4, Mistral, and Cohere with cost calculation examples and optimization tips.">
 
   <title>AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM | PE Collective</title>
 
@@ -22,8 +22,8 @@
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://pecollective.com/blog/llm-token-pricing-guide/">
-  <meta property="og:title" content="AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs">
-  <meta property="og:description" content="Complete token pricing guide for every major LLM. Costs per 1M tokens, estimation formulas, and optimization tips.">
+  <meta property="og:title" content="AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM">
+  <meta property="og:description" content="Per-1M-token pricing for every major LLM in 2026. Cost examples, token-to-word conversions, and strategies to minimize your AI API spend.">
   <meta property="og:site_name" content="PE Collective">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
@@ -33,8 +33,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@pe_collective">
-  <meta name="twitter:title" content="AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs">
-  <meta name="twitter:description" content="Complete token pricing guide for every major LLM. Costs per 1M tokens, estimation formulas, and optimization tips.">
+  <meta name="twitter:title" content="AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM">
+  <meta name="twitter:description" content="Per-1M-token pricing for every major LLM in 2026. Cost examples, token-to-word conversions, and strategies to minimize your AI API spend.">
   <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
   <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
@@ -75,7 +75,7 @@
   {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs",
+  "headline": "AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM",
   "image": "https://pecollective.com/assets/og-blog.png",
   "author": {
     "@type": "Person",
@@ -87,9 +87,9 @@
     "name": "PE Collective",
     "url": "https://pecollective.com"
   },
-  "datePublished": "2026-04-07",
-  "dateModified": "2026-04-07",
-  "description": "Token pricing for GPT-4.1, Claude, Gemini, Llama 4 and more. Per-1M-token costs, what a token is, and how to estimate your monthly API spend. April 2026."
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "description": "Understand AI token pricing in 2026. Per-1M-token costs for GPT-4.1, Claude, Gemini, Llama 4, Mistral, and Cohere with cost calculation examples and optimization tips."
 }
   </script>
 
@@ -101,10 +101,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How many tokens are in 1,000 words?",
+      "name": "How many words is 1 million tokens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Approximately 1,333 tokens. The ratio is roughly 1 token per 0.75 words in English. This varies slightly by language and content type. Code tends to have more tokens per word than prose."
+        "text": "Approximately 750,000 words for English text. The exact ratio varies by language and content type. Code typically produces more tokens per word due to syntax characters. A good rule of thumb: 1 token is about 4 characters or 0.75 words in English."
       }
     },
     {
@@ -112,23 +112,31 @@
       "name": "Why do output tokens cost more than input tokens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Generating text (output) requires more computation than processing text (input). The model must calculate probabilities for every possible next token at each step. Input processing can be parallelized more efficiently. The output premium ranges from 2x to 8x depending on the provider."
+        "text": "Generating output tokens requires the model to run a sequential forward pass for each token, which is computationally expensive. Input tokens can be processed in parallel batches, which is more efficient. The output-to-input cost ratio ranges from 2.5x to 8x depending on the provider and model."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the cheapest way to use LLM APIs?",
+      "name": "What's the cheapest way to use AI APIs in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Combine three strategies: use the cheapest adequate model (GPT-4.1 Nano or Gemini Flash for simple tasks), enable prompt caching for repeated context, and use batch processing for non-real-time workloads. Together these can reduce costs by 80-90% compared to using a premium model without optimization."
+        "text": "For the lowest per-token cost, use Gemini 2.0 Flash ($0.10/1M input) or GPT-4.1 nano ($0.10/1M input). Combine with prompt caching (50-90% savings on repeated prompts), batch processing (50% discount on OpenAI), and output optimization. Most applications can reduce costs 60-80% through model selection and these optimizations."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I estimate my monthly LLM API cost?",
+      "name": "How do I calculate my monthly LLM API cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Count your expected requests per day, estimate average input and output tokens per request, multiply by 30 for monthly tokens, then multiply by the per-token price. Use our cost table above for quick estimates by use case. Most teams overestimate usage initially and can start with a lower model tier."
+        "text": "Multiply your average input tokens per request by the input price per token, add output tokens per request times the output price per token, then multiply by your monthly request volume. Example: 1,000 input tokens + 500 output tokens on GPT-4.1 = (1000 * $0.000002) + (500 * $0.000008) = $0.006 per request. At 10,000 requests/month = $60."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is per-1K or per-1M token pricing standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per-1M tokens has become the industry standard as of 2025-2026. Older documentation and some providers still show per-1K pricing. To convert: divide per-1M pricing by 1,000. For example, $2.00 per 1M tokens = $0.002 per 1K tokens."
       }
     }
   ]
@@ -199,83 +207,208 @@
           <span class="article-header__category">Guide</span>
           <h1 class="article-header__title">AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM</h1>
           <p class="article-header__meta">
-            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 7, 2026 &middot; 8 min read
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 6, 2026 &middot; 14 min read
           </p>
         </header>
 
         <div class="article-content">
-          <p>Every LLM API charges by tokens. Understanding token pricing is the foundation of managing AI costs. This guide covers what tokens are, what they cost across every major provider, and how to estimate your monthly spend.</p>
+          <p>Every LLM provider quotes prices in tokens. Most developers have a rough sense that tokens are "kind of like words." That rough understanding leads to rough cost estimates, which lead to budget surprises.</p>
 
-<h2>What Is a Token?</h2>
+<p>This guide explains token pricing precisely: what tokens are, how much they cost across every major provider, and how to calculate your actual spend before you commit to a model.</p>
 
-<p>A token is the unit LLMs use to process text. One token is roughly 4 characters or 0.75 words in English. A page of text (500 words) is about 670 tokens. A full-length book (80,000 words) is about 107,000 tokens.</p>
+<h2>Tokens: The Basics</h2>
 
-<p>Key conversions:</p>
+<p>A token is a chunk of text that the model processes as a single unit. For English text:</p>
+
 <ul>
-<li>1 token = ~4 characters in English</li>
-<li>1,000 tokens = ~750 words</li>
-<li>1M tokens = ~750,000 words = ~7.5 average books</li>
-<li>100 words = ~133 tokens</li>
+<li><strong>1 token is roughly 4 characters</strong> or about 0.75 words</li>
+<li><strong>1,000 tokens is roughly 750 words</strong></li>
+<li><strong>1 million tokens is roughly 750,000 words</strong> (about 10 novels)</li>
+<li><strong>A typical email</strong> (200 words) is about 270 tokens</li>
+<li><strong>A 10-page report</strong> (3,000 words) is about 4,000 tokens</li>
 </ul>
 
-<h2>Token Pricing Per 1M Tokens (April 2026)</h2>
+<p>Code tokenizes differently than prose. Python code typically produces 1.5-2x more tokens per line than English text because of syntax characters, indentation, and variable names. JSON and XML are particularly token-hungry formats.</p>
 
-<p>LLM providers price input tokens (what you send) and output tokens (what the model generates) separately. Output tokens always cost more because generation is computationally harder than processing.</p>
+<h2>Per-1M-Token Pricing: Every Major Model</h2>
 
-<table>
-<thead>
-<tr><th>Model</th><th>Input / 1M</th><th>Output / 1M</th><th>Output Multiple</th></tr>
-</thead>
-<tbody>
-<tr><td>GPT-4.1 Nano</td><td>$0.10</td><td>$0.40</td><td>4x</td></tr>
-<tr><td>Mistral Small</td><td>$0.10</td><td>$0.30</td><td>3x</td></tr>
-<tr><td>Gemini 2.5 Flash</td><td>$0.15</td><td>$0.60</td><td>4x</td></tr>
-<tr><td>Llama 4 Scout</td><td>$0.15</td><td>$0.40</td><td>2.7x</td></tr>
-<tr><td>GPT-4.1 Mini</td><td>$0.40</td><td>$1.60</td><td>4x</td></tr>
-<tr><td>Claude Haiku 4.5</td><td>$0.80</td><td>$4.00</td><td>5x</td></tr>
-<tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>8x</td></tr>
-<tr><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>4x</td></tr>
-<tr><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>5x</td></tr>
-<tr><td>Claude Opus 4.6</td><td>$15.00</td><td>$75.00</td><td>5x</td></tr>
-</tbody>
-</table>
+<p>All prices current as of April 2026. Input tokens are what you send; output tokens are what the model generates.</p>
 
-<h2>Monthly Cost Estimates by Use Case</h2>
-
-<p>These estimates assume typical input/output ratios for each use case.</p>
+<h3>Frontier Models (Highest Capability)</h3>
 
 <table>
 <thead>
-<tr><th>Use Case</th><th>Tokens/Month</th><th>GPT-4.1 Nano</th><th>Claude Haiku</th><th>GPT-4.1</th><th>Claude Sonnet</th></tr>
+<tr><th>Model</th><th>Input / 1M Tokens</th><th>Output / 1M Tokens</th><th>Effective Ratio</th></tr>
 </thead>
 <tbody>
-<tr><td>Chatbot (1K conversations/day)</td><td>~30M</td><td>$4</td><td>$36</td><td>$90</td><td>$135</td></tr>
-<tr><td>Document processing (100 docs/day)</td><td>~50M</td><td>$6</td><td>$48</td><td>$120</td><td>$180</td></tr>
-<tr><td>Code generation (dev team of 5)</td><td>~20M</td><td>$3</td><td>$28</td><td>$72</td><td>$108</td></tr>
-<tr><td>Content generation (50 articles/day)</td><td>~75M</td><td>$12</td><td>$96</td><td>$240</td><td>$360</td></tr>
+<tr><td>Claude Opus 4</td><td>$15.00</td><td>$75.00</td><td>5.0x</td></tr>
+<tr><td>o3 (OpenAI)</td><td>$2.00</td><td>$8.00</td><td>4.0x</td></tr>
+<tr><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>4.0x</td></tr>
+<tr><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>4.0x</td></tr>
+<tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>8.0x</td></tr>
 </tbody>
 </table>
 
-<h2>Per 1K Tokens vs Per 1M Tokens</h2>
+<h3>Mid-Tier Models (Best Price-Performance)</h3>
 
-<p>Older pricing pages quote costs per 1K tokens. Current standard is per 1M tokens. To convert: multiply per-1K price by 1,000 to get per-1M price. Example: GPT-4o at $0.0025/1K input = $2.50/1M input.</p>
+<table>
+<thead>
+<tr><th>Model</th><th>Input / 1M Tokens</th><th>Output / 1M Tokens</th><th>Effective Ratio</th></tr>
+</thead>
+<tbody>
+<tr><td>Claude Sonnet 4</td><td>$3.00</td><td>$15.00</td><td>5.0x</td></tr>
+<tr><td>Mistral Large 2</td><td>$2.00</td><td>$6.00</td><td>3.0x</td></tr>
+<tr><td>Cohere Command R+</td><td>$2.50</td><td>$10.00</td><td>4.0x</td></tr>
+<tr><td>o4-mini (OpenAI)</td><td>$1.10</td><td>$4.40</td><td>4.0x</td></tr>
+</tbody>
+</table>
 
-<h2>How to Reduce Token Costs</h2>
+<h3>Budget Models (High Volume / Low Cost)</h3>
 
-<h3>1. Use prompt caching</h3>
-<p>Anthropic, OpenAI, and Google offer prompt caching that reduces costs for repeated context by up to 90%. If your system prompt is 5,000 tokens and you send it with every request, caching eliminates that cost after the first call.</p>
+<table>
+<thead>
+<tr><th>Model</th><th>Input / 1M Tokens</th><th>Output / 1M Tokens</th><th>Effective Ratio</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1 mini</td><td>$0.40</td><td>$1.60</td><td>4.0x</td></tr>
+<tr><td>Claude Haiku 3.5</td><td>$0.80</td><td>$4.00</td><td>5.0x</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>$0.15</td><td>$0.60</td><td>4.0x</td></tr>
+<tr><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>4.0x</td></tr>
+<tr><td>GPT-4.1 nano</td><td>$0.10</td><td>$0.40</td><td>4.0x</td></tr>
+<tr><td>Mistral Small</td><td>$0.10</td><td>$0.30</td><td>3.0x</td></tr>
+<tr><td>Cohere Command R</td><td>$0.15</td><td>$0.60</td><td>4.0x</td></tr>
+<tr><td>Llama 4 Maverick (hosted)</td><td>$0.20</td><td>$0.60</td><td>3.0x</td></tr>
+<tr><td>Llama 4 Scout (hosted)</td><td>$0.10</td><td>$0.25</td><td>2.5x</td></tr>
+</tbody>
+</table>
 
-<h3>2. Use batch processing</h3>
-<p>OpenAI offers 50% discounts on batch API calls (non-real-time). If your workload can tolerate 24-hour latency, this cuts costs in half immediately.</p>
+<h2>Why Output Tokens Cost More</h2>
 
-<h3>3. Match model to task</h3>
-<p>Use the cheapest model that produces acceptable output. Route simple tasks (classification, extraction) to Nano/Flash and complex tasks (reasoning, creative writing) to full-size models. Many teams use a router that selects the model based on task complexity.</p>
+<p>Every provider charges more for output tokens than input tokens. The ratio ranges from 2.5x (Llama 4 Scout) to 8x (Gemini 2.5 Pro). This isn't arbitrary pricing. Generating output requires the model to run its full forward pass for each token sequentially, while input tokens can be processed in parallel batches.</p>
 
-<h3>4. Limit output tokens</h3>
-<p>Set max_tokens in your API call. If you need a yes/no answer, don't let the model generate 500 tokens of explanation. Output tokens cost 3-5x more than input tokens.</p>
+<p>This asymmetry has a practical implication: <strong>controlling output length is the single most effective cost optimization</strong>. A prompt that generates 500 tokens of output costs 2-5x less than one that generates 2,000 tokens, even with identical input.</p>
 
-<h3>5. Compress inputs</h3>
-<p>Remove unnecessary whitespace, redundant instructions, and boilerplate from prompts. A 20% reduction in prompt size directly reduces input token costs by 20%.</p>
+<h2>Real-World Cost Calculations</h2>
+
+<p>Abstract per-million pricing is hard to reason about. Here are concrete examples.</p>
+
+<h3>Example 1: Email Classification System</h3>
+
+<p>You're classifying incoming customer emails by topic and priority.</p>
+
+<ul>
+<li>System prompt: 500 tokens (fixed per request)</li>
+<li>Average email: 270 tokens</li>
+<li>Output (classification + reasoning): 50 tokens</li>
+<li>Volume: 5,000 emails/day</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Daily Cost</th><th>Monthly Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1</td><td>$9.70</td><td>$291</td></tr>
+<tr><td>GPT-4.1 mini</td><td>$1.94</td><td>$58</td></tr>
+<tr><td>GPT-4.1 nano</td><td>$0.49</td><td>$15</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>$0.73</td><td>$22</td></tr>
+<tr><td>Claude Haiku 3.5</td><td>$4.08</td><td>$122</td></tr>
+</tbody>
+</table>
+
+<p>For a simple classification task, the difference between the cheapest and most expensive reasonable option is 20x. If classification accuracy is similar across models (test this with your data), there's no reason to pay $291/month when $15/month works.</p>
+
+<h3>Example 2: Content Generation Platform</h3>
+
+<p>You're generating blog post drafts from outlines.</p>
+
+<ul>
+<li>System prompt: 1,000 tokens</li>
+<li>User input (outline + instructions): 500 tokens</li>
+<li>Output (draft article): 4,000 tokens (~3,000 words)</li>
+<li>Volume: 200 articles/day</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Daily Cost</th><th>Monthly Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1</td><td>$7.00</td><td>$210</td></tr>
+<tr><td>Claude Sonnet 4</td><td>$12.90</td><td>$387</td></tr>
+<tr><td>Gemini 2.5 Pro</td><td>$8.38</td><td>$251</td></tr>
+<tr><td>GPT-4.1 mini</td><td>$1.40</td><td>$42</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>$0.53</td><td>$16</td></tr>
+</tbody>
+</table>
+
+<p>Content generation is output-heavy, so the output token price dominates. Claude Sonnet's $15/1M output pricing makes it expensive for this workload despite competitive input pricing.</p>
+
+<h3>Example 3: RAG-Based Q&A System</h3>
+
+<p>Knowledge base chatbot retrieving context from documents.</p>
+
+<ul>
+<li>System prompt: 800 tokens</li>
+<li>Retrieved context: 3,000 tokens (average 4 chunks)</li>
+<li>User question: 50 tokens</li>
+<li>Answer: 300 tokens</li>
+<li>Volume: 2,000 queries/day</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Daily Cost</th><th>Monthly Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1</td><td>$20.20</td><td>$606</td></tr>
+<tr><td>Claude Sonnet 4</td><td>$32.10</td><td>$963</td></tr>
+<tr><td>GPT-4.1 mini</td><td>$4.04</td><td>$121</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>$1.52</td><td>$46</td></tr>
+<tr><td>Llama 4 Maverick (hosted)</td><td>$1.90</td><td>$57</td></tr>
+</tbody>
+</table>
+
+<p><a href="/glossary/rag/">RAG systems</a> are input-heavy (large context windows), so input token pricing matters more. Prompt caching can dramatically reduce costs here since the system prompt repeats every request.</p>
+
+<h2>Per-1K Tokens vs. Per-1M Tokens</h2>
+
+<p>Some documentation quotes prices per 1K tokens, others per 1M tokens. The industry has largely standardized on per-1M-token pricing, but you'll still encounter per-1K pricing in older docs.</p>
+
+<p>Conversion: divide the per-1M price by 1,000 to get per-1K pricing. GPT-4.1 at $2.00/1M input = $0.002/1K input.</p>
+
+<h2>Hidden Costs to Account For</h2>
+
+<h3>Reasoning Token Overhead</h3>
+
+<p>OpenAI's o3 and o4-mini models generate internal reasoning tokens that you're billed for as output tokens but never see. A simple question might generate 500 visible output tokens but consume 3,000 reasoning tokens internally. Your actual cost is 7x what you'd estimate from the visible output alone.</p>
+
+<h3>Retry and Error Costs</h3>
+
+<p>Rate limits, timeouts, and malformed outputs mean you'll retry some percentage of requests. Budget for 5-15% overhead depending on your error handling logic and the provider's reliability.</p>
+
+<h3>Embedding Costs</h3>
+
+<p>If you're building <a href="/glossary/rag/">RAG</a> systems, you also pay for embedding your documents. OpenAI's text-embedding-3-small costs $0.02/1M tokens. See our <a href="/blog/best-embedding-models-2026/">Best Embedding Models 2026</a> guide for a full comparison.</p>
+
+<h3>Fine-Tuning Costs</h3>
+
+<p>Training tokens for fine-tuning cost 2-8x more than inference tokens. OpenAI charges $25.00/1M training tokens for GPT-4.1 mini. Factor this into your total cost of ownership if you plan to fine-tune.</p>
+
+<h2>Cost Optimization Checklist</h2>
+
+<p>Apply these in order of impact:</p>
+
+<ol>
+<li><strong>Right-size your model.</strong> Test cheaper models first. You might not need GPT-4.1 when GPT-4.1 mini or Gemini Flash produces acceptable results for your task.</li>
+<li><strong>Minimize output tokens.</strong> Request JSON instead of prose. Set max_tokens. Use structured output schemas to prevent verbose generation.</li>
+<li><strong>Enable prompt caching.</strong> Both OpenAI and Anthropic cache system prompts automatically. Make sure your system prompt is stable to benefit from caching.</li>
+<li><strong>Batch when possible.</strong> OpenAI's Batch API is 50% cheaper. Anthropic offers similar discounts for batched requests.</li>
+<li><strong>Compress context.</strong> Use <a href="/glossary/rag/">RAG</a> to retrieve only relevant sections. Summarize long contexts before passing them to the model.</li>
+<li><strong>Monitor and alert.</strong> Set spending alerts in your provider dashboard. Review token usage weekly to catch inefficiencies early.</li>
+</ol>
+
+<p>For a comprehensive comparison of all model pricing, see our <a href="/blog/llm-pricing-comparison-2026/">LLM Pricing Comparison (April 2026)</a> guide.</p>
 
           <!-- Author Bio -->
           <div class="author-bio">
@@ -290,7 +423,7 @@
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/blog/llm-pricing-comparison-2026/">LLM API Pricing Comparison</a> | <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/anthropic-api-pricing/">Anthropic API Pricing</a> | <a href="/tools/best-open-source-llms/">Best Open Source LLMs</a>
+            Related: <a href="/blog/llm-pricing-comparison-2026/">LLM Pricing Comparison (April 2026)</a> | <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/anthropic-api-pricing/">Anthropic API Pricing</a> | <a href="/blog/best-embedding-models-2026/">Best Embedding Models 2026</a> | <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/fine-tuning-vs-rag/">Fine-Tuning vs RAG</a>
           </p>
         </div>
       </div>

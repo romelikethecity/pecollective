@@ -764,6 +764,14 @@
                 "@type": "Answer",
                 "text": "Only if Cursor isn't meeting a specific need. If you're happy with it, there's no reason to switch. If you're frustrated by price, model lock-in, or the VS Code-only approach, alternatives like Windsurf, Claude Code, or Copilot each address specific pain points."
             }
+        },
+        {
+            "@type": "Question",
+            "name": "What about open-source Cursor alternatives?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aider and Zed are the strongest open-source options. Aider is a terminal-based AI coding tool that works with any model provider and automatically commits changes to git. Zed is a full code editor written in Rust with built-in AI features. Both are free to use, though Aider requires you to pay for your own API access to models like Claude or GPT-4.1."
+            }
         }
     ]
 }
@@ -1014,10 +1022,56 @@
 
           <p style="color: var(--gold); font-weight: 600; font-size: 0.9375rem; margin: 0;">Best alternative if editor speed and native performance matter most.</p>
         </div>
+        <div class="alternative-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;">
+            <span style="font-size: 2rem; flex-shrink: 0;">💬</span>
+            <div style="flex: 1;">
+              <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                <h3 style="margin: 0; font-size: 1.25rem;">
+                  <a href="https://aider.chat" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: none;">Aider</a>
+                </h3>
+                <span style="font-size: 0.875rem; color: var(--gold); font-weight: 600;">Free (open source, pay for API usage)</span>
+              </div>
+              <p style="margin: 4px 0 0; font-size: 0.9375rem; color: var(--text-secondary);">Developers who want a lightweight, open-source terminal AI coding assistant with git integration</p>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-darker); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+            <span style="font-size: 0.8125rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em;">Key Difference</span>
+            <p style="margin: 4px 0 0; color: var(--text-secondary); font-size: 0.9375rem;">Open-source terminal tool with automatic git commits. Works with any model provider. No vendor lock-in.</p>
+          </div>
+
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Aider is an open-source command-line tool that pairs with your existing editor. It connects to Claude, GPT-4.1, or any OpenAI-compatible API and makes edits directly to your files. What sets Aider apart is its git-first workflow: every change gets committed automatically with a descriptive message, giving you a clean undo history. It handles multi-file edits well and its /architect command lets you plan changes before executing them. The community is active and the tool updates frequently. For developers who want full control over their AI coding stack without paying a subscription, Aider is the best open-source option available.</p>
+
+          <p style="color: var(--gold); font-weight: 600; font-size: 0.9375rem; margin: 0;">Best alternative for open-source enthusiasts who want terminal-based AI coding with git integration.</p>
+        </div>
+        <div class="alternative-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;">
+            <span style="font-size: 2rem; flex-shrink: 0;">🔮</span>
+            <div style="flex: 1;">
+              <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                <h3 style="margin: 0; font-size: 1.25rem;">
+                  <a href="https://www.augmentcode.com" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: none;">Augment Code</a>
+                </h3>
+                <span style="font-size: 0.875rem; color: var(--gold); font-weight: 600;">Free tier / $30/mo Pro</span>
+              </div>
+              <p style="margin: 4px 0 0; font-size: 0.9375rem; color: var(--text-secondary);">Enterprise teams working on very large codebases who need deep context awareness</p>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-darker); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+            <span style="font-size: 0.8125rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em;">Key Difference</span>
+            <p style="margin: 4px 0 0; color: var(--text-secondary); font-size: 0.9375rem;">Purpose-built for large codebases. Indexes entire repositories including dependencies and documentation for deeper context.</p>
+          </div>
+
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px;">Augment Code targets a gap that Cursor doesn't fully address: massive enterprise codebases. It indexes not just your repo but also your dependencies, internal docs, and connected services to build a deep understanding of your entire software ecosystem. The autocomplete and chat features leverage this broader context, which produces noticeably better suggestions on large monorepos and microservice architectures. At $30/month it's more expensive than Cursor, but for teams working on 500K+ line codebases where context matters more than anything, the deeper indexing justifies the premium.</p>
+
+          <p style="color: var(--gold); font-weight: 600; font-size: 0.9375rem; margin: 0;">Best alternative for teams working on very large, complex codebases where deep context awareness matters most.</p>
+        </div>
 
       <div class="bottom-line">
         <h3>The Bottom Line</h3>
-        <p>If you want the closest Cursor experience for less money, go with Windsurf. If you want the smartest AI regardless of interface, try Claude Code. If you need enterprise compliance or JetBrains support, stick with GitHub Copilot. And if you want something completely different, Replit Agent or Zed each offer a genuinely unique approach.</p>
+        <p>If you want the closest Cursor experience for less money, go with Windsurf. If you want the smartest AI regardless of interface, try Claude Code. If you need enterprise compliance or JetBrains support, stick with GitHub Copilot. For open-source terminal workflows, Aider gives you full control with git integration. For massive enterprise codebases, Augment Code provides the deepest context awareness. And if you want something completely different, Replit Agent or Zed each offer a unique approach.</p>
       </div>
 
       <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
@@ -1033,6 +1087,8 @@
           <a href="/tools/windsurf/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Windsurf Review &rarr;</a>
           <a href="/tools/cursor-vs-windsurf/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Windsurf &rarr;</a>
           <a href="/tools/best-ai-coding-assistants/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Best AI Coding Assistants &rarr;</a>
+          <a href="/tools/cursor-vs-claude-code/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cursor vs Claude Code &rarr;</a>
+          <a href="/tools/replit-alternatives/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Replit Alternatives &rarr;</a>
         </div>
       </div>
 
@@ -1055,6 +1111,10 @@
         <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
           <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is it worth switching from Cursor to an alternative?</summary>
           <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Only if Cursor isn't meeting a specific need. If you're happy with it, there's no reason to switch. If you're frustrated by price, model lock-in, or the VS Code-only approach, alternatives like Windsurf, Claude Code, or Copilot each address specific pain points.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What about open-source Cursor alternatives?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Aider and Zed are the strongest open-source options. Aider is a terminal-based AI coding tool that works with any model provider and automatically commits changes to git. Zed is a full code editor written in Rust with built-in AI features. Both are free to use, though Aider requires you to pay for your own API access to models like Claude or GPT-4.1.</p>
         </details>
       </div>
 

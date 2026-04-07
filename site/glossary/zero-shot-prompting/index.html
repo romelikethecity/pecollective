@@ -1150,7 +1150,7 @@
                 
     <div class="glossary-section">
         <h2>How It Works</h2>
-        <p>Zero-shot prompting relies entirely on the knowledge and instruction-following capabilities baked into a model during training. The model must understand the task purely from the instruction text, with no examples to guide it.</p><p>Zero-shot performance varies dramatically by task type. Models excel at tasks similar to their training data (summarization, translation, sentiment analysis) but struggle with novel formats or domain-specific conventions. The key advantage is simplicity and token efficiency: no examples means shorter prompts, which means lower cost and more room for input data.</p><p>Modern instruction-tuned models like Claude and GPT-4.1 have dramatically improved zero-shot performance compared to base models. Many tasks that previously required few-shot examples now work well zero-shot with clear, specific instructions.</p>
+        <p>Zero-shot prompting relies entirely on the knowledge and instruction-following capabilities baked into a model during training. The model must understand the task purely from the instruction text, with no examples to guide it.</p><p>Zero-shot performance varies dramatically by task type. Models excel at tasks similar to their training data (summarization, translation, sentiment analysis) but struggle with novel formats or domain-specific conventions. The key advantage is simplicity and token efficiency: no examples means shorter prompts, which means lower cost and more room for input data.</p><p>Modern instruction-tuned models like Claude and GPT-4.1 have dramatically improved zero-shot performance compared to base models. Many tasks that previously required few-shot examples now work well zero-shot with clear, specific instructions.</p><p>Practical zero-shot strategies have evolved significantly with newer models. Here are patterns that consistently improve zero-shot results:</p><p>Explicit output format specification: Instead of asking "summarize this article," specify "summarize this article in exactly 3 bullet points, each under 15 words." The more precise your format instructions, the less the model needs examples to understand what you want.</p><p>Role assignment: Prefixing with "You are a senior data analyst" or "You are an experienced technical writer" primes the model to draw on relevant training patterns. This is sometimes called zero-shot role prompting and often produces expert-quality output without any examples.</p><p>Negative constraints: Telling the model what NOT to do is often more effective than examples. "Do not use marketing language. Do not include caveats. Do not start with 'In today's world.'" These constraints shape the output without requiring demonstrations.</p><p>When to upgrade from zero-shot to few-shot: If you're getting inconsistent output formats, domain-specific terminology errors, or the model misunderstands the task more than 20% of the time, adding 2-3 examples will usually fix the problem. The cost of few-shot examples (more tokens, higher latency) is worth paying when zero-shot reliability drops below your threshold.</p>
     </div>
                 
     <div class="glossary-section">
@@ -1164,11 +1164,15 @@
             <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Writing instructions that are too brief, expecting the model to 'figure it out'</p>
             <p style="color: var(--text-secondary); line-height: 1.7;">Compensate for the lack of examples with detailed, explicit instructions about what you want and don't want.</p>
         </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <p style="color: var(--error); font-weight: 600; margin-bottom: 8px;">Common mistake: Using zero-shot for tasks that require specific output formatting (e.g., JSON with exact field names)</p>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Provide at least one example of the exact output format you expect. Zero-shot often produces correct content in the wrong structure.</p>
+        </div>
     </div>
                 
     <div class="glossary-section">
         <h2>Career Relevance</h2>
-        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding when zero-shot works (and when it doesn't) is a core prompt engineering skill. It determines whether you can ship a feature quickly with a simple prompt or need to invest time in building few-shot example sets.</p>
+        <p style="background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.7;">Understanding when zero-shot works (and when it doesn't) is a core prompt engineering skill. It determines whether you can ship a feature quickly with a simple prompt or need to invest time in building few-shot example sets. In production systems, zero-shot prompts are cheaper (fewer tokens) and easier to maintain (no example management), so maximizing zero-shot coverage is a practical cost optimization. Senior prompt engineers typically start with zero-shot, measure failure rates, and selectively add examples only where needed.</p>
     </div>
                 
                 
@@ -1182,7 +1186,7 @@
     <div class="glossary-section">
         <h2>Learn More</h2>
         <ul class="related-links">
-            <li><a href="/blog/prompt-engineering-guide/">Read: Prompt Engineering Guide</a></li>
+            <li><a href="/blog/prompt-engineering-guide/">Read: Prompt Engineering Guide</a></li><li><a href="/glossary/few-shot-prompting/">Few Shot Prompting</a></li><li><a href="/glossary/chain-of-thought/">Chain Of Thought</a></li><li><a href="/glossary/prompt-engineering/">Prompt Engineering</a></li><li><a href="/tools/best-prompt-engineering-courses/">Browse AI Tools</a></li>
         </ul>
     </div>
             </div>

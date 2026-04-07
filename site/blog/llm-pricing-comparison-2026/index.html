@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Compare LLM API pricing for GPT-4.1, Claude Sonnet 4.6, Gemini 2.5, Llama 4, and 15+ models. Input/output costs per 1M tokens, updated April 2026.">
+
+  <title>LLM API Pricing Comparison (April 2026) - Every Model, Side by Side | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/llm-pricing-comparison-2026/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/llm-pricing-comparison-2026/">
+  <meta property="og:title" content="LLM API Pricing Comparison April 2026 - GPT-4.1, Claude, Gemini & More">
+  <meta property="og:description" content="Side-by-side LLM API pricing for every major model. Updated April 2026 with per-token costs.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="LLM API Pricing Comparison April 2026 - GPT-4.1, Claude, Gemini & More">
+  <meta name="twitter:description" content="Side-by-side LLM API pricing for every major model. Updated April 2026 with per-token costs.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLM API Pricing Comparison (April 2026) - Every Model, Side by Side",
+      "item": "https://pecollective.com/blog/llm-pricing-comparison-2026/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM API Pricing Comparison April 2026 - GPT-4.1, Claude, Gemini & More",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07",
+  "description": "Compare LLM API pricing for GPT-4.1, Claude Sonnet 4.6, Gemini 2.5, Llama 4, and 15+ models. Input/output costs per 1M tokens, updated April 2026."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the cheapest LLM API in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-4.1 Nano at $0.10 per 1M input tokens and Gemini 2.5 Flash at $0.15 per 1M input tokens are the cheapest commercial LLM APIs. Mistral Small at $0.10 per 1M input tokens is comparable. Self-hosted Llama 4 can be cheaper at scale but requires GPU infrastructure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to process 1 million tokens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It ranges from $0.10 (GPT-4.1 Nano input) to $75.00 (Claude Opus 4.6 output). For a typical balanced workload, expect $0.50-5.00 per 1M tokens depending on the model. One million tokens is approximately 750,000 words or about 7-8 full-length books."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Claude or GPT cheaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-4.1 ($2.00/$8.00 per 1M) is cheaper than Claude Sonnet 4.6 ($3.00/$15.00 per 1M) for equivalent capability. But Claude Haiku 4.5 ($0.80/$4.00) is cheaper than GPT-4o ($2.50/$10.00). Compare models at the same capability tier, not across tiers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do LLM APIs have free tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OpenAI, Google, Anthropic, Mistral, and Cohere all offer free API tiers with rate limits. Google AI Studio is the most generous for experimentation. See our AI Free Tiers Comparison for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reduce LLM API costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use prompt caching for repeated context (saves up to 90%), batch processing for non-real-time tasks (saves 50%), smaller models for simple tasks, and output length limits. Most teams can reduce costs 40-60% through optimization without changing models."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Comparison</span>
+          <h1 class="article-header__title">LLM API Pricing Comparison (April 2026) - Every Model, Side by Side</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 7, 2026 &middot; 12 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>LLM API pricing changes constantly. New models launch, old ones get cheaper, and pricing structures shift from per-token to per-request and back. This page tracks the current cost of every major LLM API as of April 2026.</p>
+
+<h2>LLM API Pricing Table (April 2026)</h2>
+
+<p>All prices are per 1 million tokens unless noted. Input and output tokens are priced separately by most providers.</p>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Provider</th><th>Input/1M</th><th>Output/1M</th><th>Context Window</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1</td><td>OpenAI</td><td>$2.00</td><td>$8.00</td><td>1M tokens</td></tr>
+<tr><td>GPT-4.1 Mini</td><td>OpenAI</td><td>$0.40</td><td>$1.60</td><td>1M tokens</td></tr>
+<tr><td>GPT-4.1 Nano</td><td>OpenAI</td><td>$0.10</td><td>$0.40</td><td>1M tokens</td></tr>
+<tr><td>GPT-4o</td><td>OpenAI</td><td>$2.50</td><td>$10.00</td><td>128K tokens</td></tr>
+<tr><td>o3</td><td>OpenAI</td><td>$2.00</td><td>$8.00</td><td>200K tokens</td></tr>
+<tr><td>o4-mini</td><td>OpenAI</td><td>$1.10</td><td>$4.40</td><td>200K tokens</td></tr>
+<tr><td>Claude Opus 4.6</td><td>Anthropic</td><td>$15.00</td><td>$75.00</td><td>1M tokens</td></tr>
+<tr><td>Claude Sonnet 4.6</td><td>Anthropic</td><td>$3.00</td><td>$15.00</td><td>200K tokens</td></tr>
+<tr><td>Claude Haiku 4.5</td><td>Anthropic</td><td>$0.80</td><td>$4.00</td><td>200K tokens</td></tr>
+<tr><td>Gemini 2.5 Pro</td><td>Google</td><td>$1.25</td><td>$10.00</td><td>1M tokens</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>Google</td><td>$0.15</td><td>$0.60</td><td>1M tokens</td></tr>
+<tr><td>Llama 4 Scout</td><td>Meta (via providers)</td><td>$0.15</td><td>$0.40</td><td>10M tokens</td></tr>
+<tr><td>Llama 4 Maverick</td><td>Meta (via providers)</td><td>$0.20</td><td>$0.60</td><td>1M tokens</td></tr>
+<tr><td>Mistral Large 2</td><td>Mistral</td><td>$2.00</td><td>$6.00</td><td>128K tokens</td></tr>
+<tr><td>Mistral Small</td><td>Mistral</td><td>$0.10</td><td>$0.30</td><td>32K tokens</td></tr>
+<tr><td>Command R+</td><td>Cohere</td><td>$2.50</td><td>$10.00</td><td>128K tokens</td></tr>
+<tr><td>Command R</td><td>Cohere</td><td>$0.15</td><td>$0.60</td><td>128K tokens</td></tr>
+</tbody>
+</table>
+
+<h2>Cost Comparison: What Does $100/Month Buy?</h2>
+
+<p>Raw per-token pricing is hard to contextualize. Here is what $100/month buys you in actual usage across different models.</p>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Input Tokens for $100</th><th>Approx. Words</th><th>Equivalent To</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1 Nano</td><td>1 billion</td><td>750M words</td><td>Processing 7,500 full books</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>667 million</td><td>500M words</td><td>Processing 5,000 full books</td></tr>
+<tr><td>Claude Haiku 4.5</td><td>125 million</td><td>94M words</td><td>Processing 940 full books</td></tr>
+<tr><td>GPT-4.1</td><td>50 million</td><td>37.5M words</td><td>Processing 375 full books</td></tr>
+<tr><td>Claude Sonnet 4.6</td><td>33 million</td><td>25M words</td><td>Processing 250 full books</td></tr>
+<tr><td>Claude Opus 4.6</td><td>6.7 million</td><td>5M words</td><td>Processing 50 full books</td></tr>
+</tbody>
+</table>
+
+<p>The range is massive. GPT-4.1 Nano processes 150x more tokens per dollar than Claude Opus 4.6. The question is always whether the cheaper model produces acceptable output for your use case.</p>
+
+<h2>Provider-by-Provider Breakdown</h2>
+
+<h3>OpenAI</h3>
+<p>OpenAI's April 2026 lineup centers on the GPT-4.1 family. The <a href="/tools/openai-api-pricing/">full OpenAI pricing breakdown</a> covers every model, but the key insight is the new tiered approach: Nano for high-volume, low-complexity tasks, Mini for balanced workloads, and the full 4.1 for tasks requiring maximum capability. The o-series models (o3, o4-mini) add reasoning capabilities at slightly different price points.</p>
+
+<p>OpenAI offers a generous free tier through their API with rate limits. Batch processing gets a 50% discount on all models.</p>
+
+<h3>Anthropic</h3>
+<p>Anthropic's Claude lineup spans from Haiku 4.5 (their cost-optimized model at $0.80/$4.00 per 1M tokens) to Opus 4.6 (their most capable model at $15/$75). See our <a href="/tools/anthropic-api-pricing/">detailed Anthropic pricing page</a> for tier breakdowns and prompt caching discounts.</p>
+
+<p>Claude's prompt caching feature reduces costs by up to 90% for repeated context. If you are building applications with large system prompts, this changes the economics significantly.</p>
+
+<h3>Google</h3>
+<p>Gemini 2.5 Pro offers strong performance at $1.25/$10.00 per 1M tokens with a massive 1M token context window. Gemini 2.5 Flash at $0.15/$0.60 competes directly with GPT-4.1 Nano on price while offering a larger context window. Google also provides generous free tiers through AI Studio.</p>
+
+<h3>Open Source (Llama, Mistral)</h3>
+<p>Meta's Llama 4 models are free to use if you self-host, but most teams access them through inference providers like Together AI, Fireworks, or <a href="/tools/aws-bedrock-pricing/">AWS Bedrock</a>. Provider pricing varies but typically runs $0.10-0.30 per 1M input tokens for Scout-class models.</p>
+
+<p>Mistral offers both API access and self-hosting options. Their Small model at $0.10/$0.30 per 1M tokens is one of the cheapest commercial API options available.</p>
+
+<h2>Hidden Costs Nobody Mentions</h2>
+
+<h3>Output tokens cost more than input tokens</h3>
+<p>Every provider charges 2-5x more for output tokens than input tokens. This means generation-heavy workloads (writing, coding, summarization) cost significantly more than classification or extraction tasks where outputs are short.</p>
+
+<h3>Context window usage affects cost</h3>
+<p>Sending a 100K token document with every API call gets expensive fast, even with cheap models. Prompt caching (available from Anthropic, OpenAI, and Google) mitigates this, but only if your prompts have a consistent prefix.</p>
+
+<h3>Rate limits force tier upgrades</h3>
+<p>Free and low tiers have aggressive rate limits. Production workloads almost always require paid tiers with higher throughput. Check each provider's rate limit documentation before committing to a model based on per-token pricing alone.</p>
+
+<h2>Which Model Should You Use?</h2>
+
+<p>The right model depends on your use case, not just the price tag.</p>
+
+<ul>
+<li><strong>High-volume classification or extraction:</strong> GPT-4.1 Nano or Gemini 2.5 Flash. Both deliver strong results at under $0.50 per 1M tokens.</li>
+<li><strong>General-purpose chatbots and assistants:</strong> GPT-4.1 Mini or Claude Haiku 4.5. Good quality at moderate cost.</li>
+<li><strong>Complex reasoning and coding:</strong> Claude Sonnet 4.6 or GPT-4.1. The quality difference over cheaper models is measurable on hard tasks.</li>
+<li><strong>Maximum capability (research, complex analysis):</strong> Claude Opus 4.6 or o3. Expensive but meaningfully better on the hardest tasks.</li>
+<li><strong>Budget-constrained with quality needs:</strong> Llama 4 via inference providers or Mistral Small. Surprisingly capable for the price.</li>
+</ul>
+
+<h2>Pricing Trends: What Changed in 2026</h2>
+
+<p>Three trends are reshaping LLM pricing in 2026:</p>
+
+<ol>
+<li><strong>Context windows are expanding faster than prices are dropping.</strong> GPT-4.1 and Gemini 2.5 both offer 1M token windows. Llama 4 Scout supports 10M tokens. Larger contexts mean more tokens per request, which can offset per-token price drops.</li>
+<li><strong>Reasoning models are a new pricing tier.</strong> OpenAI's o-series and other reasoning-focused models sit between standard and premium pricing, creating a middle tier that didn't exist in 2025.</li>
+<li><strong>Caching and batching discounts are becoming standard.</strong> Prompt caching, batch processing, and volume discounts make list prices less meaningful. The effective cost for optimized workloads is often 30-60% below list price.</li>
+</ol>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/anthropic-api-pricing/">Anthropic API Pricing</a> | <a href="/tools/aws-bedrock-pricing/">AWS Bedrock Pricing</a> | <a href="/tools/best-open-source-llms/">Best Open Source LLMs</a> | <a href="/blog/ai-free-tiers-compared/">AI Free Tiers Compared</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get smarter about AI tools, careers &amp; strategy. Every week.</h2>
+          <p class="cta-section__text">
+            <strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMWEZTSWM0');
+  </script>
+
+  <meta name="description" content="Token pricing for GPT-4.1, Claude, Gemini, Llama 4 and more. Per-1M-token costs, what a token is, and how to estimate your monthly API spend. April 2026.">
+
+  <title>AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM | PE Collective</title>
+
+  <link rel="canonical" href="https://pecollective.com/blog/llm-token-pricing-guide/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pecollective.com/blog/llm-token-pricing-guide/">
+  <meta property="og:title" content="AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs">
+  <meta property="og:description" content="Complete token pricing guide for every major LLM. Costs per 1M tokens, estimation formulas, and optimization tips.">
+  <meta property="og:site_name" content="PE Collective">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pe_collective">
+  <meta name="twitter:title" content="AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs">
+  <meta name="twitter:description" content="Complete token pricing guide for every major LLM. Costs per 1M tokens, estimation formulas, and optimization tips.">
+  <meta name="twitter:image" content="https://pecollective.com/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pecollective.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://pecollective.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM",
+      "item": "https://pecollective.com/blog/llm-token-pricing-guide/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/jpeg" href="../../assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Token Pricing Guide 2026 - What 1M Tokens Actually Costs",
+  "image": "https://pecollective.com/assets/og-blog.png",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PE Collective",
+    "url": "https://pecollective.com"
+  },
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07",
+  "description": "Token pricing for GPT-4.1, Claude, Gemini, Llama 4 and more. Per-1M-token costs, what a token is, and how to estimate your monthly API spend. April 2026."
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many tokens are in 1,000 words?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Approximately 1,333 tokens. The ratio is roughly 1 token per 0.75 words in English. This varies slightly by language and content type. Code tends to have more tokens per word than prose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do output tokens cost more than input tokens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generating text (output) requires more computation than processing text (input). The model must calculate probabilities for every possible next token at each step. Input processing can be parallelized more efficiently. The output premium ranges from 2x to 8x depending on the provider."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest way to use LLM APIs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Combine three strategies: use the cheapest adequate model (GPT-4.1 Nano or Gemini Flash for simple tasks), enable prompt caching for repeated context, and use batch processing for non-real-time workloads. Together these can reduce costs by 80-90% compared to using a premium model without optimization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I estimate my monthly LLM API cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Count your expected requests per day, estimate average input and output tokens per request, multiply by 30 for monthly tokens, then multiply by the per-token price. Use our cost table above for quick estimates by use case. Most teams overestimate usage initially and can start with a lower model tier."
+      }
+    }
+  ]
+}
+  </script>
+    <link rel="stylesheet" href="/assets/css/inline-18ab5506.css">
+    </head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="../../" class="header__logo">
+          <img src="../../assets/logo.jpeg" alt="PE Collective Logo" width="36" height="36">
+          <span>PE Collective</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="../../jobs/">AI Jobs</a>
+          <a href="../../salaries/">Salaries</a>
+          <a href="../../tools/">Tools</a>
+          <a href="../" class="active">Blog</a>
+          <a href="../../insights/">Market Intel</a>
+          <a href="../../about/">About</a>
+        </nav>
+
+        <div class="header__cta">
+          <a href="../../join/" class="btn btn--secondary btn--small">Join Community</a>
+          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+        </div>
+        <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header__mobile-overlay"></div>
+  <nav class="header__mobile-nav" aria-label="Mobile navigation">
+    <div class="header__mobile-nav-top">
+      <span>PE Collective</span>
+      <button class="header__mobile-close" aria-label="Close menu">&#10005;</button>
+    </div>
+    <ul class="header__mobile-links">
+      <li><a href="../../jobs/">AI Jobs</a></li>
+      <li><a href="../../salaries/">Salaries</a></li>
+      <li><a href="../../tools/">Tools</a></li>
+      <li><a href="../">Blog</a></li>
+      <li><a href="../../insights/">Market Intel</a></li>
+      <li><a href="../../about/">About</a></li>
+    </ul>
+    <a href="../../join/" class="header__mobile-cta">Join Community</a>
+  </nav>
+  <script>
+  (function(){
+    var b=document.querySelector('.header__menu-btn'),c=document.querySelector('.header__mobile-close'),o=document.querySelector('.header__mobile-overlay'),n=document.querySelector('.header__mobile-nav');
+    function open(){n.classList.add('active');o.classList.add('active');document.body.style.overflow='hidden';}
+    function close(){n.classList.remove('active');o.classList.remove('active');document.body.style.overflow='';}
+    if(b)b.addEventListener('click',open);if(c)c.addEventListener('click',close);if(o)o.addEventListener('click',close);
+    document.querySelectorAll('.header__mobile-links a,.header__mobile-cta').forEach(function(l){l.addEventListener('click',close);});
+  })();
+  </script>
+
+  <main id="main">
+    <article class="article-page">
+      <div class="container">
+        <header class="article-header">
+          <span class="article-header__category">Guide</span>
+          <h1 class="article-header__title">AI Token Pricing 2026 - Cost Per 1M Tokens for Every Major LLM</h1>
+          <p class="article-header__meta">
+            By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; April 7, 2026 &middot; 8 min read
+          </p>
+        </header>
+
+        <div class="article-content">
+          <p>Every LLM API charges by tokens. Understanding token pricing is the foundation of managing AI costs. This guide covers what tokens are, what they cost across every major provider, and how to estimate your monthly spend.</p>
+
+<h2>What Is a Token?</h2>
+
+<p>A token is the unit LLMs use to process text. One token is roughly 4 characters or 0.75 words in English. A page of text (500 words) is about 670 tokens. A full-length book (80,000 words) is about 107,000 tokens.</p>
+
+<p>Key conversions:</p>
+<ul>
+<li>1 token = ~4 characters in English</li>
+<li>1,000 tokens = ~750 words</li>
+<li>1M tokens = ~750,000 words = ~7.5 average books</li>
+<li>100 words = ~133 tokens</li>
+</ul>
+
+<h2>Token Pricing Per 1M Tokens (April 2026)</h2>
+
+<p>LLM providers price input tokens (what you send) and output tokens (what the model generates) separately. Output tokens always cost more because generation is computationally harder than processing.</p>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Input / 1M</th><th>Output / 1M</th><th>Output Multiple</th></tr>
+</thead>
+<tbody>
+<tr><td>GPT-4.1 Nano</td><td>$0.10</td><td>$0.40</td><td>4x</td></tr>
+<tr><td>Mistral Small</td><td>$0.10</td><td>$0.30</td><td>3x</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>$0.15</td><td>$0.60</td><td>4x</td></tr>
+<tr><td>Llama 4 Scout</td><td>$0.15</td><td>$0.40</td><td>2.7x</td></tr>
+<tr><td>GPT-4.1 Mini</td><td>$0.40</td><td>$1.60</td><td>4x</td></tr>
+<tr><td>Claude Haiku 4.5</td><td>$0.80</td><td>$4.00</td><td>5x</td></tr>
+<tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>8x</td></tr>
+<tr><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>4x</td></tr>
+<tr><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>5x</td></tr>
+<tr><td>Claude Opus 4.6</td><td>$15.00</td><td>$75.00</td><td>5x</td></tr>
+</tbody>
+</table>
+
+<h2>Monthly Cost Estimates by Use Case</h2>
+
+<p>These estimates assume typical input/output ratios for each use case.</p>
+
+<table>
+<thead>
+<tr><th>Use Case</th><th>Tokens/Month</th><th>GPT-4.1 Nano</th><th>Claude Haiku</th><th>GPT-4.1</th><th>Claude Sonnet</th></tr>
+</thead>
+<tbody>
+<tr><td>Chatbot (1K conversations/day)</td><td>~30M</td><td>$4</td><td>$36</td><td>$90</td><td>$135</td></tr>
+<tr><td>Document processing (100 docs/day)</td><td>~50M</td><td>$6</td><td>$48</td><td>$120</td><td>$180</td></tr>
+<tr><td>Code generation (dev team of 5)</td><td>~20M</td><td>$3</td><td>$28</td><td>$72</td><td>$108</td></tr>
+<tr><td>Content generation (50 articles/day)</td><td>~75M</td><td>$12</td><td>$96</td><td>$240</td><td>$360</td></tr>
+</tbody>
+</table>
+
+<h2>Per 1K Tokens vs Per 1M Tokens</h2>
+
+<p>Older pricing pages quote costs per 1K tokens. Current standard is per 1M tokens. To convert: multiply per-1K price by 1,000 to get per-1M price. Example: GPT-4o at $0.0025/1K input = $2.50/1M input.</p>
+
+<h2>How to Reduce Token Costs</h2>
+
+<h3>1. Use prompt caching</h3>
+<p>Anthropic, OpenAI, and Google offer prompt caching that reduces costs for repeated context by up to 90%. If your system prompt is 5,000 tokens and you send it with every request, caching eliminates that cost after the first call.</p>
+
+<h3>2. Use batch processing</h3>
+<p>OpenAI offers 50% discounts on batch API calls (non-real-time). If your workload can tolerate 24-hour latency, this cuts costs in half immediately.</p>
+
+<h3>3. Match model to task</h3>
+<p>Use the cheapest model that produces acceptable output. Route simple tasks (classification, extraction) to Nano/Flash and complex tasks (reasoning, creative writing) to full-size models. Many teams use a router that selects the model based on task complexity.</p>
+
+<h3>4. Limit output tokens</h3>
+<p>Set max_tokens in your API call. If you need a yes/no answer, don't let the model generate 500 tokens of explanation. Output tokens cost 3-5x more than input tokens.</p>
+
+<h3>5. Compress inputs</h3>
+<p>Remove unnecessary whitespace, redundant instructions, and boilerplate from prompts. A 20% reduction in prompt size directly reduces input token costs by 20%.</p>
+
+          <!-- Author Bio -->
+          <div class="author-bio">
+            <div class="author-bio__avatar">RT</div>
+            <div class="author-bio__content">
+              <div class="author-bio__name">About the Author</div>
+              <p class="author-bio__text">
+                <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> is the founder of the Prompt Engineer Collective, a community of over 1,300 prompt engineering professionals, and author of The AI News Digest, a weekly newsletter with 2,700+ subscribers. Rome brings hands-on AI/ML experience from Microsoft, where he worked with Dynamics and Azure AI/ML solutions, and later led sales at Datajoy (acquired by Databricks).
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Links -->
+          <p class="related-links">
+            Related: <a href="/blog/llm-pricing-comparison-2026/">LLM API Pricing Comparison</a> | <a href="/tools/openai-api-pricing/">OpenAI API Pricing</a> | <a href="/tools/anthropic-api-pricing/">Anthropic API Pricing</a> | <a href="/tools/best-open-source-llms/">Best Open Source LLMs</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Newsletter CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="cta-section">
+          <h2 class="cta-section__title">Get smarter about AI tools, careers &amp; strategy. Every week.</h2>
+          <p class="cta-section__text">
+            <strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.
+          </p>
+          <form class="cta-section__form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" class="cta-section__input" required>
+            <button type="submit" class="btn btn--primary btn--large">Subscribe Free</button>
+          </form>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../" class="footer__logo">
+            <img src="../../assets/logo.jpeg" alt="PE Collective" width="32" height="32">
+            <span>PE Collective</span>
+          </a>
+          <p class="footer__tagline">
+            The job board and community built by AI professionals, for AI professionals.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <h4>Jobs</h4>
+          <nav class="footer__links">
+            <a href="../../jobs/">All Jobs</a>
+            <a href="../../jobs/?category=prompt-engineer">Prompt Engineer</a>
+            <a href="../../jobs/?category=ai-engineer">AI Engineer</a>
+            <a href="../../jobs/?remote=true">Remote Only</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <nav class="footer__links">
+            <a href="../">Blog</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../glossary/">Glossary</a>
+            <a href="../../insights/">Market Intel</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <h4>Community</h4>
+          <nav class="footer__links">
+            <a href="../../join/">Join Us</a>
+            <a href="../../about/">About</a>
+            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 PE Collective. Built with 🧠 for the AI community.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/js/tracking.js" defer></script>
+</body>
+</html>

@@ -2,11 +2,11 @@
   {
     "slug": "windsurf",
     "name": "Windsurf",
-    "icon": "\ud83c\udf0a",
+    "icon": "🌊",
     "url": "https://windsurf.com",
     "category": "AI Code Editor",
     "rating": "4.5",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "Windsurf Review 2026 - AI Code Editor Pros, Cons & Pricing",
     "meta_description": "Windsurf (formerly Codeium) tested. Flows, inline completions, and agentic mode reviewed. How it compares to Cursor, what the free tier includes, and who it fits.",
     "og_description": "Windsurf AI code editor review. Flows, agentic mode, and free tier tested. Where it beats Cursor and where it falls short.",
@@ -80,17 +80,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/cursor/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "\ud83e\udd16",
+        "icon": "🤖",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Claude Code",
-        "icon": "\ud83d\udd27",
+        "icon": "🔧",
         "url": "/tools/claude-code/"
       }
     ],
@@ -130,17 +130,17 @@
         "url": "/tools/windsurf-vs-copilot/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Windows, macOS, Linux"
   },
   {
     "slug": "claude-code",
     "name": "Claude Code",
-    "icon": "\ud83e\udde0",
+    "icon": "🧠",
     "url": "https://docs.anthropic.com/en/docs/claude-code",
     "category": "AI Coding Agent",
     "rating": "4.7",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★★",
     "title": "Claude Code Review 2026",
     "meta_description": "Claude Code review: Anthropic's terminal-based AI coding agent. Features, pricing, pros and cons for developers who prefer the command line.",
     "og_description": "Honest review of Claude Code, Anthropic's terminal AI coding agent. Is the command line the future of AI-assisted development?",
@@ -214,17 +214,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/cursor/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "\ud83e\udd16",
+        "icon": "🤖",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Windsurf",
-        "icon": "\ud83c\udf0a",
+        "icon": "🌊",
         "url": "/tools/windsurf/"
       }
     ],
@@ -262,11 +262,11 @@
   {
     "slug": "langchain",
     "name": "LangChain",
-    "icon": "\ud83d\udd17",
+    "icon": "🔗",
     "url": "https://www.langchain.com/",
     "category": "LLM Framework",
     "rating": "4.2",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u2606",
+    "rating_stars": "★★★★☆",
     "title": "LangChain Review (2026): LLM Framework Pros, Cons & When to Use It",
     "meta_description": "The most popular LLM framework. Chains, agents, and LCEL explained. Where LangChain excels, where the abstractions hurt, and the alternatives.",
     "og_description": "Honest review of LangChain, the most popular LLM application framework. Worth the complexity? Our take for AI professionals.",
@@ -344,17 +344,17 @@
     "related_tools": [
       {
         "name": "LlamaIndex",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "CrewAI",
-        "icon": "\ud83d\udc65",
+        "icon": "👥",
         "url": "/tools/crewai/"
       },
       {
         "name": "DSPy",
-        "icon": "\ud83e\uddea",
+        "icon": "🧪",
         "url": "/tools/dspy/"
       }
     ],
@@ -404,11 +404,11 @@
   {
     "slug": "replit-agent",
     "name": "Replit Agent",
-    "icon": "\ud83d\udd37",
+    "icon": "🔷",
     "url": "https://replit.com/",
     "category": "AI Development Environment",
     "rating": "4.0",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u2606",
+    "rating_stars": "★★★★☆",
     "title": "Replit Agent Review 2026 - AI Coding From Prompt to Deploy",
     "meta_description": "Replit Agent builds and deploys apps from natural language prompts. Tested for prototyping, learning, and production. Pricing starts at $20/mo Core.",
     "og_description": "Honest review of Replit Agent, the browser-based AI development environment. Can you really build apps by describing them?",
@@ -483,17 +483,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/cursor/"
       },
       {
         "name": "Windsurf",
-        "icon": "\ud83c\udf0a",
+        "icon": "🌊",
         "url": "/tools/windsurf/"
       },
       {
         "name": "Claude Code",
-        "icon": "\ud83d\udd27",
+        "icon": "🔧",
         "url": "/tools/claude-code/"
       }
     ],
@@ -533,17 +533,17 @@
         "url": "/tools/replit-pricing/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Browser-based (any OS)"
   },
   {
     "slug": "llamaindex",
     "name": "LlamaIndex",
-    "icon": "\ud83e\udd99",
+    "icon": "🦙",
     "url": "https://www.llamaindex.ai",
     "category": "LLM Framework",
     "rating": "4.4",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "LlamaIndex Review 2026 - RAG Framework Pros, Cons & Pricing",
     "meta_description": "LlamaIndex review for RAG and LLM apps. Data connectors, query engines, and LlamaCloud pricing. Free tier limits and when LangChain is a better fit.",
     "og_description": "LlamaIndex review. The data framework for RAG apps. Features, LlamaCloud pricing, and how it compares to LangChain.",
@@ -619,17 +619,17 @@
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "Pinecone",
-        "icon": "\ud83c\udf32",
+        "icon": "🌲",
         "url": "/tools/pinecone/"
       },
       {
         "name": "LangChain vs LlamaIndex",
-        "icon": "\u2694\ufe0f",
+        "icon": "⚔️",
         "url": "/tools/langchain-vs-llamaindex/"
       }
     ],
@@ -671,11 +671,11 @@
   {
     "slug": "crewai",
     "name": "CrewAI",
-    "icon": "\ud83d\udc65",
+    "icon": "👥",
     "url": "https://www.crewai.com",
     "category": "AI Agent Framework",
     "rating": "4.2",
-    "rating_stars": "\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★",
     "title": "CrewAI Review 2026 - Multi-Agent Framework Tested & Priced",
     "meta_description": "CrewAI reviewed for building multi-agent AI systems. Crew orchestration, tool use, and enterprise pricing. Where it works and how it compares to LangGraph and AutoGen.",
     "og_description": "CrewAI review. Multi-agent AI framework tested. Pricing tiers, enterprise features, and when LangGraph is a better choice.",
@@ -747,17 +747,17 @@
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "DSPy",
-        "icon": "\ud83e\uddea",
+        "icon": "🧪",
         "url": "/tools/dspy/"
       }
     ],
@@ -807,11 +807,11 @@
   {
     "slug": "dspy",
     "name": "DSPy",
-    "icon": "\ud83d\udd2c",
+    "icon": "🔬",
     "url": "https://dspy.ai",
     "category": "LLM Framework",
     "rating": "4.3",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "DSPy Review 2026",
     "meta_description": "DSPy review: Stanford's framework for programming LLMs with optimizable modules instead of manual prompts. Features, pros, cons for AI developers.",
     "og_description": "Honest review of DSPy, the Stanford framework that replaces prompt engineering with programming. Is the paradigm shift worth it?",
@@ -879,17 +879,17 @@
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "CrewAI",
-        "icon": "\ud83d\udc65",
+        "icon": "👥",
         "url": "/tools/crewai/"
       }
     ],
@@ -931,11 +931,11 @@
   {
     "slug": "pinecone",
     "name": "Pinecone",
-    "icon": "\ud83c\udf32",
+    "icon": "🌲",
     "url": "https://www.pinecone.io",
     "category": "Vector Database",
     "rating": "4.5",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "Pinecone Review 2026 - Serverless Vector DB Tested at Scale",
     "meta_description": "Pinecone serverless tested for RAG and similarity search. Zero-ops setup, query performance, and scaling limits. Compared to Chroma, pgvector, and Weaviate.",
     "og_description": "Pinecone serverless review. Where it delivers on zero-ops vector search and where it hits limits at scale.",
@@ -1008,17 +1008,17 @@
     "related_tools": [
       {
         "name": "Chroma",
-        "icon": "\ud83c\udfa8",
+        "icon": "🎨",
         "url": "/tools/chroma/"
       },
       {
         "name": "pgvector",
-        "icon": "\ud83d\udc18",
+        "icon": "🐘",
         "url": "/tools/pgvector/"
       },
       {
         "name": "Weaviate",
-        "icon": "\ud83d\udd37",
+        "icon": "🔷",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1066,17 +1066,17 @@
         "url": "/tools/best-embedding-models/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Cloud-based (any OS)"
   },
   {
     "slug": "weaviate",
     "name": "Weaviate",
-    "icon": "\ud83d\udd37",
+    "icon": "🔷",
     "url": "https://weaviate.io",
     "category": "Vector Database",
     "rating": "4.4",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "Weaviate Review 2026",
     "meta_description": "Weaviate review: open-source vector database with built-in vectorization and hybrid search. Features, pricing, and comparison to Pinecone for 2026.",
     "og_description": "Honest review of Weaviate, the open-source vector database with built-in AI modules. Self-host or use the cloud. Your call.",
@@ -1152,17 +1152,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "\ud83c\udf32",
+        "icon": "🌲",
         "url": "/tools/pinecone/"
       },
       {
         "name": "Chroma",
-        "icon": "\ud83c\udfa8",
+        "icon": "🎨",
         "url": "/tools/chroma/"
       },
       {
         "name": "pgvector",
-        "icon": "\ud83d\udc18",
+        "icon": "🐘",
         "url": "/tools/pgvector/"
       }
     ],
@@ -1208,11 +1208,11 @@
   {
     "slug": "chroma",
     "name": "Chroma",
-    "icon": "\ud83c\udfa8",
+    "icon": "🎨",
     "url": "https://www.trychroma.com",
     "category": "Vector Database",
     "rating": "4.1",
-    "rating_stars": "\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★",
     "title": "Chroma Review 2026 - Simplest Vector DB Tested, Pros & Limits",
     "meta_description": "Chroma tested for RAG and embedding search. Python-native, runs in-memory, zero config. Where it works and where it breaks down at scale vs Pinecone and pgvector.",
     "og_description": "Chroma vector database review. The simplest option for embedding search. Where it works and when to switch to something bigger.",
@@ -1284,17 +1284,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "\ud83c\udf32",
+        "icon": "🌲",
         "url": "/tools/pinecone/"
       },
       {
         "name": "pgvector",
-        "icon": "\ud83d\udc18",
+        "icon": "🐘",
         "url": "/tools/pgvector/"
       },
       {
         "name": "Weaviate",
-        "icon": "\ud83d\udd37",
+        "icon": "🔷",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1348,11 +1348,11 @@
   {
     "slug": "pgvector",
     "name": "pgvector",
-    "icon": "\ud83d\udc18",
+    "icon": "🐘",
     "url": "https://github.com/pgvector/pgvector",
     "category": "Vector Database",
     "rating": "4.0",
-    "rating_stars": "\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★",
     "title": "pgvector Review 2026 - Vector Search Inside Postgres Tested",
     "meta_description": "pgvector adds vector similarity search to your existing Postgres DB. HNSW and IVFFlat indexes benchmarked. When to use it vs a dedicated vector database.",
     "og_description": "pgvector review. Add vector search to Postgres without a new database. Performance benchmarks and when a dedicated vector DB makes more sense.",
@@ -1420,17 +1420,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "\ud83c\udf32",
+        "icon": "🌲",
         "url": "/tools/pinecone/"
       },
       {
         "name": "Chroma",
-        "icon": "\ud83c\udfa8",
+        "icon": "🎨",
         "url": "/tools/chroma/"
       },
       {
         "name": "Weaviate",
-        "icon": "\ud83d\udd37",
+        "icon": "🔷",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1480,11 +1480,11 @@
   {
     "slug": "cursor",
     "name": "Cursor",
-    "icon": "\u26a1",
+    "icon": "⚡",
     "url": "https://cursor.com",
     "category": "AI Code Editor",
     "rating": "4.7",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★★",
     "title": "Cursor Review 2026 - AI Code Editor Tested on Real Projects",
     "meta_description": "Cursor tested on production codebases. Tab completions, Composer agent, and Cmd+K reviewed. Where it beats Copilot and Windsurf, and where it falls short.",
     "og_description": "Honest Cursor review from daily use. Tab completions, Composer, and agent mode tested. Where it excels and where it frustrates.",
@@ -1555,17 +1555,17 @@
     "related_tools": [
       {
         "name": "Windsurf",
-        "icon": "\ud83c\udf0a",
+        "icon": "🌊",
         "url": "/tools/windsurf/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "\ud83e\udd16",
+        "icon": "🤖",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Claude Code",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/claude-code/"
       }
     ],
@@ -1613,17 +1613,17 @@
         "url": "/tools/cursor-alternatives/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Windows, macOS, Linux"
   },
   {
     "slug": "github-copilot",
     "name": "GitHub Copilot",
-    "icon": "\ud83e\udd16",
+    "icon": "🤖",
     "url": "https://github.com/features/copilot",
     "category": "AI Code Assistant",
     "rating": "4.3",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "GitHub Copilot Review 2026 - Features, Pricing & Real Performance",
     "meta_description": "GitHub Copilot reviewed after daily use. Code completions, chat, and agent mode tested. $10/mo Individual, $19/mo Business. How it compares to Cursor and Windsurf.",
     "og_description": "GitHub Copilot review for 2026. Code completions, chat, and Workspace tested. Where it wins and where Cursor pulls ahead.",
@@ -1698,17 +1698,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/cursor/"
       },
       {
         "name": "Windsurf",
-        "icon": "\ud83c\udf0a",
+        "icon": "🌊",
         "url": "/tools/windsurf/"
       },
       {
         "name": "Claude Code",
-        "icon": "\ud83e\udde0",
+        "icon": "🧠",
         "url": "/tools/claude-code/"
       }
     ],
@@ -1748,17 +1748,17 @@
         "url": "/tools/windsurf/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Windows, macOS, Linux"
   },
   {
     "slug": "anthropic-api",
     "name": "Anthropic API",
-    "icon": "\ud83d\udd2e",
+    "icon": "🔮",
     "url": "https://docs.anthropic.com",
     "category": "AI API",
     "rating": "4.8",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
+    "rating_stars": "★★★★★",
     "title": "Anthropic Claude API Review 2026 - DX, Pricing & Limits",
     "meta_description": "Anthropic Claude API reviewed for developers. SDK experience, rate limits, pricing tiers, and how it compares to OpenAI and Google for building AI apps.",
     "og_description": "Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.",
@@ -1829,17 +1829,17 @@
     "related_tools": [
       {
         "name": "OpenAI API",
-        "icon": "\ud83d\udd2e",
+        "icon": "🔮",
         "url": "/tools/openai-api/"
       },
       {
         "name": "Claude Code",
-        "icon": "\u26a1",
+        "icon": "⚡",
         "url": "/tools/claude-code/"
       },
       {
         "name": "Hugging Face",
-        "icon": "\ud83e\udd17",
+        "icon": "🤗",
         "url": "/tools/hugging-face/"
       }
     ],
@@ -1889,11 +1889,11 @@
   {
     "slug": "openai-api",
     "name": "OpenAI API",
-    "icon": "\ud83d\udfe2",
+    "icon": "🟢",
     "url": "https://platform.openai.com",
     "category": "AI API",
     "rating": "4.6",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "OpenAI API Review 2026 - GPT-5, o3 & Every Model Compared",
     "meta_description": "OpenAI API review covering GPT-5, GPT-4.1, o3, Whisper, and DALL-E. Pricing per model, rate limits, and how it compares to Claude and Gemini for developers.",
     "og_description": "OpenAI API review for developers. Every model compared on pricing, performance, and rate limits. GPT-5, o3, and when to use Claude instead.",
@@ -1968,22 +1968,22 @@
     "related_tools": [
       {
         "name": "Anthropic API",
-        "icon": "\ud83d\udd2e",
+        "icon": "🔮",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "Hugging Face",
-        "icon": "\ud83e\udd17",
+        "icon": "🤗",
         "url": "/tools/hugging-face/"
       }
     ],
@@ -2029,11 +2029,11 @@
   {
     "slug": "hugging-face",
     "name": "Hugging Face",
-    "icon": "\ud83e\udd17",
+    "icon": "🤗",
     "url": "https://huggingface.co",
     "category": "AI Model Hub",
     "rating": "4.5",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "Hugging Face Review 2026 - Transformers, Hub & Free Tier",
     "meta_description": "Hugging Face reviewed: Transformers library, Model Hub, Inference API, Spaces, and Pro pricing. Where it fits your ML workflow and when you need more.",
     "og_description": "Hugging Face review for 2026. Transformers, Model Hub, and pricing. What you get free and when to upgrade.",
@@ -2108,22 +2108,22 @@
     "related_tools": [
       {
         "name": "OpenAI API",
-        "icon": "\ud83d\udfe2",
+        "icon": "🟢",
         "url": "/tools/openai-api/"
       },
       {
         "name": "Anthropic API",
-        "icon": "\ud83d\udd2e",
+        "icon": "🔮",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "\ud83e\udd99",
+        "icon": "🦙",
         "url": "/tools/llamaindex/"
       }
     ],
@@ -2163,17 +2163,17 @@
         "url": "/tools/openai-api/"
       }
     ],
-    "date_published": "2026-02-20",
+    "date_published": "2026-04-06",
     "operating_system": "Web platform (any OS)"
   },
   {
     "slug": "promptfoo",
     "name": "Promptfoo",
-    "icon": "\ud83e\uddea",
+    "icon": "🧪",
     "url": "https://promptfoo.dev",
     "category": "AI Testing & Evaluation",
     "rating": "4.4",
-    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "rating_stars": "★★★★½",
     "title": "Promptfoo Review 2026",
     "meta_description": "Promptfoo review: the open-source LLM testing and evaluation tool. Compare prompts, models, and catch regressions before they hit production.",
     "og_description": "Honest review of Promptfoo, the open-source tool for testing and evaluating LLM prompts. How it helps you ship better AI features, faster.",
@@ -2248,22 +2248,22 @@
     "related_tools": [
       {
         "name": "Anthropic API",
-        "icon": "\ud83d\udd2e",
+        "icon": "🔮",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "OpenAI API",
-        "icon": "\ud83d\udfe2",
+        "icon": "🟢",
         "url": "/tools/openai-api/"
       },
       {
         "name": "LangChain",
-        "icon": "\ud83d\udd17",
+        "icon": "🔗",
         "url": "/tools/langchain/"
       },
       {
         "name": "Hugging Face",
-        "icon": "\ud83e\udd17",
+        "icon": "🤗",
         "url": "/tools/hugging-face/"
       }
     ],

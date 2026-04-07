@@ -746,7 +746,7 @@
       "name": "Can I use LLMs to grade LLM outputs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, and it works better than you'd expect. LLM-as-judge scoring correlates well with human judgment for factual accuracy and relevance. It's weaker for subjective qualities like tone and creativity. All five tools support LLM-based scoring. Use it for fast automated checks, but keep human review in the loop for high-stakes decisions."
+        "text": "Yes, and it works better than you'd expect. LLM-as-judge scoring correlates well with human judgment for factual accuracy and relevance. It's weaker for subjective qualities like tone and creativity. All tools on this list support LLM-based scoring. Use it for fast automated checks, but keep human review in the loop for high-stakes decisions."
       }
     },
     {
@@ -764,6 +764,14 @@
         "@type": "Answer",
         "text": "Promptfoo. It's free, open source, runs locally, and you can have your first evaluation running in under 30 minutes with a YAML config file. Graduate to Braintrust or Humanloop when you need team collaboration features."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between LLM testing and LLM observability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Testing evaluates your LLM outputs against expected results before deployment. Observability monitors what's happening in production: latency, token usage, error rates, and output quality over time. Most tools on this list do both to varying degrees. Promptfoo and Braintrust lean toward testing. LangSmith and Arize Phoenix lean toward observability. The best workflow uses both: test before you ship, monitor after."
+      }
     }
   ]
 }
@@ -776,7 +784,7 @@
   "@type": "ItemList",
   "name": "Best AI Testing Tools 2026 - 5 Evaluated",
   "description": "Promptfoo, Braintrust, LangSmith, Humanloop, and Weights & Biases compared for LLM evaluation. Features, pricing, and which fits your testing workflow.",
-  "numberOfItems": 5,
+  "numberOfItems": 6,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -807,6 +815,12 @@
       "position": 5,
       "name": "Weights & Biases",
       "url": "https://wandb.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Arize Phoenix",
+      "url": "https://phoenix.arize.com"
     }
   ]
 }
@@ -1278,12 +1292,12 @@
           <div class="page-label">Best Of Roundup</div>
           <h1>Best AI Testing & Evaluation Tools (2026)</h1>
           <p class="subtitle">Your LLM app works in the demo. Will it work on the 10,000th user? These tools help you find out before they do.</p>
-          <p class="date">Last updated: February 2026</p>
+          <p class="date">Last updated: April 2026</p>
         </div>
 
         <div class="bestof-intro">
             <p>Shipping an LLM application without evaluation is like deploying a web app without tests. It'll work until it doesn't, and you won't know why. The difference is that LLM failures are subtle. Your app won't crash. It'll just start giving confidently wrong answers and you'll find out from an angry customer, not a stack trace.</p>
-            <p>AI testing tools have matured fast. A year ago, most teams were eyeballing outputs in a Jupyter notebook. Now there are proper evaluation frameworks with dataset management, automated scoring, regression detection, and human review workflows. The market is crowded, but five tools have pulled clearly ahead.</p>
+            <p>AI testing tools have matured fast. A year ago, most teams were eyeballing outputs in a Jupyter notebook. Now there are proper evaluation frameworks with dataset management, automated scoring, regression detection, and human review workflows. The market is crowded, but six tools have pulled clearly ahead.</p>
             <p>We evaluated each tool on a production RAG application with 500 test cases across four dimensions: factual accuracy, relevance, hallucination detection, and response format compliance.</p>
         </div>
 
@@ -1329,6 +1343,14 @@
                   <span class="quick-pick__award">Best for ML Teams</span>
                 </div>
                 <span class="quick-pick__price">Free tier / Team from $50/mo per user</span>
+              </div>
+              <div class="quick-pick">
+                <span class="quick-pick__number">6</span>
+                <div class="quick-pick__info">
+                  <span class="quick-pick__name">Arize Phoenix</span>
+                  <span class="quick-pick__award">Best Open Source Observability</span>
+                </div>
+                <span class="quick-pick__price">Free (open source) / Arize Cloud paid</span>
               </div>
         </div>
 
@@ -1445,6 +1467,28 @@
               <a href="https://wandb.ai" target="_blank" rel="noopener" class="btn btn-gold">Visit Weights & Biases &rarr;</a>
             </div>
           </div>
+          <div class="pick-card" id="pick-6">
+            <div class="pick-card__header">
+              <div class="pick-card__rank">#6</div>
+              <div class="pick-card__title-group">
+                <h3 class="pick-card__name">Arize Phoenix</h3>
+                <span class="pick-card__award-badge">Best Open Source Observability</span>
+              </div>
+              <div class="pick-card__price">Free (open source) / Arize Cloud paid</div>
+            </div>
+            <div class="pick-card__body">
+              <p>Arize Phoenix is an open-source LLM observability and evaluation tool that has gained significant traction in 2026. It provides tracing, evaluation, and dataset management in a single local-first platform. The trace visualization helps you debug multi-step LLM pipelines by showing exactly what happened at each step, including token counts, latencies, and model responses. Built-in LLM-as-judge evaluators score responses for relevance, hallucination, and toxicity. The notebook integration makes it easy to experiment with evaluations in Jupyter before building automated pipelines. For teams that want LangSmith-level observability without vendor lock-in, Phoenix is the strongest open-source option.</p>
+              <div class="pick-card__detail">
+                <strong>Best for:</strong> Teams that want open-source LLM observability with tracing, evaluation, and experimentation. Particularly strong for debugging RAG pipelines and running evaluations locally before deploying to production.
+              </div>
+              <div class="pick-card__detail pick-card__caveat">
+                <strong>Caveat:</strong> Newer than the other tools on this list, so the community and documentation are still growing. The self-hosted approach means you handle infrastructure. The cloud offering from Arize adds managed features but at an additional cost. Less polished than Humanloop's UI for non-technical stakeholders.
+              </div>
+            </div>
+            <div class="pick-card__footer">
+              <a href="https://phoenix.arize.com" target="_blank" rel="noopener" class="btn btn-gold">Visit Arize Phoenix &rarr;</a>
+            </div>
+          </div>
         </div>
 
         <div class="methodology-section">
@@ -1460,6 +1504,8 @@
               <a href="/tools/best-llm-frameworks/" class="related-link">Best LLM Frameworks & Libraries &rarr;</a>
               <a href="/glossary/rag/" class="related-link">What Is RAG? &rarr;</a>
               <a href="/blog/prompt-engineering-guide/" class="related-link">Prompt Engineering Guide &rarr;</a>
+              <a href="/tools/best-rag-tools/" class="related-link">Best RAG Tools &rarr;</a>
+              <a href="/tools/langchain/" class="related-link">LangChain Review &rarr;</a>
           </div>
         </div>
 
@@ -1472,7 +1518,7 @@
             </details>
             <details class="faq-item">
               <summary>Can I use LLMs to grade LLM outputs?</summary>
-              <p>Yes, and it works better than you'd expect. LLM-as-judge scoring correlates well with human judgment for factual accuracy and relevance. It's weaker for subjective qualities like tone and creativity. All five tools support LLM-based scoring. Use it for fast automated checks, but keep human review in the loop for high-stakes decisions.</p>
+              <p>Yes, and it works better than you'd expect. LLM-as-judge scoring correlates well with human judgment for factual accuracy and relevance. It's weaker for subjective qualities like tone and creativity. All tools on this list support LLM-based scoring. Use it for fast automated checks, but keep human review in the loop for high-stakes decisions.</p>
             </details>
             <details class="faq-item">
               <summary>Do I need an evaluation tool if I have unit tests?</summary>
@@ -1481,6 +1527,10 @@
             <details class="faq-item">
               <summary>Which tool should I start with if I've never done LLM evaluation?</summary>
               <p>Promptfoo. It's free, open source, runs locally, and you can have your first evaluation running in under 30 minutes with a YAML config file. Graduate to Braintrust or Humanloop when you need team collaboration features.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What's the difference between LLM testing and LLM observability?</summary>
+              <p>Testing evaluates your LLM outputs against expected results before deployment. Observability monitors what's happening in production: latency, token usage, error rates, and output quality over time. Most tools on this list do both to varying degrees. Promptfoo and Braintrust lean toward testing. LangSmith and Arize Phoenix lean toward observability. The best workflow uses both: test before you ship, monitor after.</p>
             </details>
         </div>
 

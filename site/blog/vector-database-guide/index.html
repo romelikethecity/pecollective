@@ -88,7 +88,7 @@
     "url": "https://pecollective.com"
   },
   "datePublished": "2026-02-15",
-  "dateModified": "2026-03-13",
+  "dateModified": "2026-04-07",
   "description": "What vector databases do, when you need one, and which to pick. Pinecone, Weaviate, Chroma, pgvector, and Qdrant compared for RAG and search."
 }
   </script>
@@ -161,6 +161,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Re-embed your documents (1-2 hours compute time, a few dollars in API costs), swap the retrieval code from SQL to the new database's SDK (50-200 lines if you used an abstraction layer), set up the new infrastructure (30 minutes for managed services), and test retrieval quality with an evaluation set. Total migration: 1-3 days for managed services. Building a thin retrieval abstraction from the start makes this easier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use pgvector or a dedicated vector database in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with pgvector if you already run PostgreSQL. It handles millions of vectors with sub-100ms queries using HNSW indexes, which covers most RAG applications. Move to a dedicated vector database (Pinecone, Weaviate, Qdrant) if you need: billions of vectors, advanced filtering during search, built-in hybrid search, or managed infrastructure with zero ops overhead. The migration path from pgvector to a dedicated database is straightforward since your embeddings are portable."
       }
     }
   ]
@@ -892,6 +900,28 @@
   </p>
 </div>
 
+
+
+<h2>The 2026 Vector Database Landscape</h2>
+
+<p>The vector database market has matured significantly since the initial RAG boom of 2023-2024. Several trends are reshaping which databases developers should consider for new projects.</p>
+
+<h3>PostgreSQL with pgvector Has Become the Default Starting Point</h3>
+
+<p>The pgvector extension has improved dramatically. HNSW index support, better parallel query execution, and the pgvector 0.7+ releases with quantization support have closed much of the performance gap with purpose-built vector databases. For teams already running PostgreSQL (which is most teams), starting with pgvector eliminates an entire category of infrastructure complexity. You can always migrate to a dedicated vector database later if you hit scale limits, but most applications never reach the point where pgvector becomes a bottleneck.</p>
+
+<h3>Hybrid Search Is No Longer Optional</h3>
+
+<p>Pure vector similarity search has a well-documented weakness: it misses exact keyword matches that users expect. Searching for "error code E-4021" using only vector search may return documents about errors generally rather than the specific error code. The industry has converged on hybrid search (combining vector similarity with BM25 keyword matching) as the standard approach. <a href="/tools/pinecone-vs-weaviate/">Weaviate</a> and <a href="/tools/best-vector-databases/">Qdrant</a> both offer native hybrid search. Pinecone added keyword search support in late 2025. If you're evaluating vector databases today, hybrid search capability should be a requirement, not a nice-to-have.</p>
+
+<h3>Serverless Pricing Changed the Cost Equation</h3>
+
+<p>Pinecone's serverless offering and similar pay-per-query models from other vendors have made managed vector databases accessible to small teams and prototypes. You no longer need to provision and pay for always-on instances during development. For production workloads with predictable traffic, dedicated instances still offer better economics. But for development, staging, and low-traffic applications, serverless vector databases have eliminated the cost barrier that previously pushed teams toward self-hosted options.</p>
+
+<h3>Multi-Modal Embeddings Are Expanding Use Cases</h3>
+
+<p>Vector databases are no longer just for text. Models like OpenAI's CLIP and Google's multimodal embeddings allow you to store and search across text, images, and video in the same vector space. This opens up use cases like visual product search, cross-modal document retrieval (search text to find relevant images), and multi-modal <a href="/glossary/rag/">RAG</a> systems. Most major vector databases now support the higher-dimensional vectors these models produce, though storage and query costs scale accordingly.</p>
+
 <p>The best vector database is the one that fits your current needs without adding unnecessary complexity. Start simple. Scale when you have data showing you need to. And spend more time on your embedding model and chunking strategy than on database selection, because those choices affect retrieval quality far more than the storage layer.</p>
 
 <p>For more on building AI applications with retrieval, see our <a href="/blog/rag-architecture-guide/">RAG architecture guide</a> and the <a href="/glossary/vector-database/">vector database glossary entry</a>.</p>
@@ -909,7 +939,7 @@
 
           <!-- Related Links -->
           <p class="related-links">
-            Related: <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/rag-vs-fine-tuning-cost/">RAG vs Fine-Tuning Cost Comparison</a> | <a href="/glossary/vector-database/">Vector Database Glossary Entry</a> | <a href="/blog/ai-tools-for-developers-2026/">AI Tools for Developers</a> | <a href="/tools/best-vector-databases/">Best Vector Databases</a> | <a href="/tools/pinecone-vs-weaviate/">Pinecone vs Weaviate</a> | <a href="/tools/chroma-vs-pgvector/">Chroma vs pgvector</a> | <a href="/tools/pinecone-pricing/">Pinecone Pricing</a>
+            Related: <a href="/blog/rag-architecture-guide/">RAG Architecture Guide</a> | <a href="/blog/rag-vs-fine-tuning-cost/">RAG vs Fine-Tuning Cost Comparison</a> | <a href="/glossary/vector-database/">Vector Database Glossary Entry</a> | <a href="/blog/ai-tools-for-developers-2026/">AI Tools for Developers</a> | <a href="/tools/best-vector-databases/">Best Vector Databases</a> | <a href="/tools/pinecone-vs-weaviate/">Pinecone vs Weaviate</a> | <a href="/tools/chroma-vs-pgvector/">Chroma vs pgvector</a> | <a href="/tools/pinecone-pricing/">Pinecone Pricing</a> | <a href="/tools/pinecone-alternatives/">Pinecone Alternatives</a> | <a href="/glossary/embeddings/">Embeddings Explained</a> | <a href="/tools/best-llm-frameworks/">Best LLM Frameworks</a>
           </p>
         </div>
       </div>

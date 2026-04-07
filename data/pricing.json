@@ -3,10 +3,10 @@
     "slug": "cursor-pricing",
     "tool_name": "Cursor",
     "tool_slug": "cursor",
-    "title": "Cursor Pricing (March 2026): Hobby, Pro, Pro+, Ultra & Teams Plans",
+    "title": "Cursor Pricing (April 2026): Hobby, Pro, Pro+, Ultra & Teams Plans",
     "meta_description": "Cursor Pro costs $20/mo with a $20 credit pool. Pro+ is $60/mo. Ultra is $200/mo. Teams is $40/user. Full plan comparison with credit system explained.",
     "og_description": "Cursor pricing breakdown for 2026. Compare free, Pro, and Business plans. Hidden costs and what you actually need.",
-    "h1": "Cursor Pricing: Every Plan Explained (March 2026)",
+    "h1": "Cursor Pricing: Every Plan Explained (April 2026)",
     "intro": "Cursor overhauled its pricing in mid-2025, replacing fixed request allotments with usage-based credit pools. Every paid plan now includes a monthly credit pool that depletes based on which AI model you use. Auto mode (Cursor's default model routing) is unlimited. Manually selecting premium models like Claude Sonnet 4.6 or GPT-4.1 draws from your pool. This page breaks down every plan, what the credits actually buy, and which tier makes sense for different workflows.",
     "tiers": [
       {
@@ -157,7 +157,7 @@
         "answer": "Yes, annual billing gives a 20% discount on all paid plans. Pro drops to $16/month, Pro+ to $48/month, Ultra to $160/month. Only commit to annual after 2-3 months of monthly usage so you know which tier fits."
       }
     ],
-    "date_updated": "2026-02-15",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "How the Credit Pool System Works",
@@ -270,7 +270,7 @@
     "title": "GitHub Copilot Pricing 2026 - Is Pro Worth $10/mo?",
     "meta_description": "Copilot Free: 2K completions + 50 premium requests. Pro: $10/mo unlimited. Business: $19/user. Plan comparison with credit costs and upgrade triggers.",
     "og_description": "GitHub Copilot plan comparison for 2026. Free vs Pro vs Business vs Enterprise with real usage limits and credit costs.",
-    "h1": "GitHub Copilot Pricing: Every Plan Compared (March 2026)",
+    "h1": "GitHub Copilot Pricing: Every Plan Compared (April 2026)",
     "intro": "GitHub Copilot now has five tiers, from a useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
     "tiers": [
       {
@@ -422,7 +422,7 @@
         "answer": "Yes. All Copilot plans (including free) work in VS Code, JetBrains IDEs (IntelliJ, PyCharm, etc.), and Neovim. Cursor and Windsurf are VS Code forks and don't support other IDEs."
       }
     ],
-    "date_updated": "2026-02-15",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "What Are Premium Requests and How Do They Work?",
@@ -522,7 +522,7 @@
     "title": "Pinecone Pricing 2026 - Free Tier Limits & Real Costs",
     "meta_description": "Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.",
     "og_description": "Pinecone pricing breakdown for 2026. Free tier, serverless costs, and what you'll actually pay at different scales.",
-    "h1": "Pinecone Pricing: What It Actually Costs (March 2026)",
+    "h1": "Pinecone Pricing: What It Actually Costs (April 2026)",
     "intro": "Pinecone's pricing is usage-based with monthly minimums that catch people off guard. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. This page breaks down the real costs, what the minimums actually cover, and how to estimate your monthly bill.",
     "tiers": [
       {
@@ -628,7 +628,7 @@
         "answer": "Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query."
       }
     ],
-    "date_updated": "2026-02-15",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "Understanding Pinecone's Unit-Based Pricing",
@@ -663,11 +663,11 @@
     "slug": "openai-api-pricing",
     "tool_name": "OpenAI API",
     "tool_slug": "openai-api",
-    "title": "OpenAI API Pricing 2026 - Real Costs & Hidden Fees Explained",
-    "meta_description": "GPT-4.1 costs $2/$8 per 1M tokens. GPT-5 is $1.25/$10. Full model-by-model breakdown with batch discounts, caching savings, and monthly cost calculator.",
+    "title": "OpenAI API Pricing 2026 - $0.10 to $40 Per 1M Tokens",
+    "meta_description": "GPT-4.1 Nano at $0.10/1M, GPT-4.1 at $2/$8, GPT-5 at $1.25/$10, o3 at $10/$40. Batch discounts cut 50%. Updated April 2026.",
     "og_description": "Every OpenAI model priced per million tokens. Batch discounts, prompt caching, and real monthly cost examples for April 2026.",
-    "h1": "OpenAI API Pricing: What Every Model Actually Costs (March 2026)",
-    "intro": "OpenAI's model lineup has expanded significantly. GPT-4.1 replaced GPT-4o as the recommended production model. GPT-5 is the new flagship. The o-series reasoning models now include o3 and o4-mini. And the GPT-4.1 Nano at $0.10 per million input tokens is one of the cheapest capable models available anywhere. This page breaks down every current model's pricing, the batch and caching discounts that cut costs by 50-90%, and real cost math for production workloads. All prices verified March 2026.",
+    "h1": "OpenAI API Pricing: What Every Model Actually Costs (April 2026)",
+    "intro": "OpenAI's model lineup has expanded significantly. GPT-4.1 replaced GPT-4o as the recommended production model. GPT-5 is the new flagship. The o-series reasoning models now include o3 and o4-mini. And the GPT-4.1 Nano at $0.10 per million input tokens is one of the cheapest capable models available anywhere. This page breaks down every current model's pricing, the batch and caching discounts that cut costs by 50-90%, and real cost math for production workloads. All prices verified April 2026.",
     "tiers": [
       {
         "name": "GPT-4.1 Nano",
@@ -775,7 +775,7 @@
     ],
     "deep_sections": [
       {
-        "heading": "Complete Model Pricing Table (March 2026)",
+        "heading": "Complete Model Pricing Table (April 2026)",
         "body": [
           "OpenAI now offers more than a dozen models across three families: GPT (general-purpose), o-series (reasoning), and specialized models. Here's the full breakdown of every current model worth knowing about."
         ],
@@ -904,7 +904,7 @@
           "OpenAI's o-series models use chain-of-thought reasoning \u2014 they \"think\" before answering, using internal reasoning tokens that you pay for as output tokens. This means the visible cost per request is higher than the visible output would suggest. A short o3 answer might use 2,000 visible output tokens but 10,000 reasoning tokens behind the scenes.",
           "o4-mini ($1.10/$4.40) is the best value reasoning model. It replaced o3-mini and outperforms it on most benchmarks while costing the same. Use it for math, science, coding problems, and any task that benefits from step-by-step reasoning. The cached input rate is $0.275 per million tokens.",
           "o3 ($2.00/$8.00) is the flagship reasoning model. It costs roughly 2x o4-mini and offers stronger performance on the hardest problems \u2014 PhD-level math, complex logic, and multi-step scientific reasoning. For most applications, o4-mini is sufficient. Save o3 for tasks where o4-mini's accuracy drops below your threshold.",
-          "One important detail: reasoning models don't support all features. As of March 2026, o-series models support function calling and structured outputs, but some parameters like temperature and top_p behave differently. Check OpenAI's docs for the latest compatibility matrix before building reasoning model pipelines.",
+          "One important detail: reasoning models don't support all features. As of April 2026, o-series models support function calling and structured outputs, but some parameters like temperature and top_p behave differently. Check OpenAI's docs for the latest compatibility matrix before building reasoning model pipelines.",
           "The cost trap with reasoning models is unpredictable token usage. A query that uses 500 reasoning tokens on one request might use 5,000 on a slightly different phrasing. Set <code>max_completion_tokens</code> to cap your worst-case costs, and monitor average reasoning token usage per query type."
         ]
       },
@@ -1137,17 +1137,18 @@
         "question": "How do I reduce my OpenAI API costs?",
         "answer": "Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1 \u2014 20x cheaper. (2) Use the Batch API for non-real-time workloads \u2014 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first \u2014 up to 90% off repeated input tokens. Together these can cut costs by 70-85%."
       }
-    ]
+    ],
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "anthropic-api-pricing",
     "tool_name": "Anthropic API (Claude)",
     "tool_slug": "anthropic-api",
-    "title": "Claude API Pricing 2026 - Sonnet, Opus & Haiku Per Token",
-    "meta_description": "Claude Sonnet 4.6: $3/$15 per 1M tokens. Opus 4.6: $5/$25. Haiku 4.5: $1/$5. Batch discounts, prompt caching, and real monthly cost breakdowns.",
+    "title": "Claude API Pricing 2026 - Haiku, Sonnet & Opus Costs",
+    "meta_description": "Haiku 4.5 at $1/$5, Sonnet 4.6 at $3/$15, Opus 4.6 at $15/$75 per 1M tokens. 90% off with caching, 50% off batch. April 2026 rates.",
     "og_description": "Anthropic Claude API pricing for April 2026. Every model compared with batch discounts and caching savings.",
     "h1": "Anthropic API Pricing: What Every Claude Model Costs in 2026",
-    "intro": "Anthropic has shipped a lot of models since Claude 3. The naming is confusing, the pricing tiers stack in non-obvious ways, and the gap between the cheapest and most expensive model is now 25x. This page breaks down every current Claude model's pricing, the batch and caching discounts that can cut your bill in half, and real cost math for production apps. All prices verified against Anthropic's official pricing page, March 2026.",
+    "intro": "Anthropic has shipped a lot of models since Claude 3. The naming is confusing, the pricing tiers stack in non-obvious ways, and the gap between the cheapest and most expensive model is now 25x. This page breaks down every current Claude model's pricing, the batch and caching discounts that can cut your bill in half, and real cost math for production apps. All prices verified against Anthropic's official pricing page, April 2026.",
     "tiers": [
       {
         "name": "Claude Haiku 4.5",
@@ -1284,7 +1285,7 @@
     ],
     "deep_sections": [
       {
-        "heading": "Complete Model Pricing Table (March 2026)",
+        "heading": "Complete Model Pricing Table (April 2026)",
         "body": [
           "Anthropic offers 12 models across four generations. The table below shows every model with base input pricing, cache pricing, and output pricing. The current flagship models (Opus 4.6, Sonnet 4.6, Haiku 4.5) are at the top. Legacy models are still available via the API but Anthropic recommends migrating.",
           "A few things stand out. First, Opus 4.6 at $5/$25 is dramatically cheaper than the older Opus 4.1 and Opus 4 at $15/$75. Anthropic cut the flagship price by 3x while improving capability. Second, the Sonnet family has held steady at $3/$15 across four generations (Sonnet 3.7 through Sonnet 4.6). Third, Haiku 4.5 at $1/$5 is significantly more expensive than the legacy Haiku 3 at $0.25/$1.25, but the capability jump is massive."
@@ -1481,7 +1482,7 @@
       {
         "heading": "Real-World Cost Examples",
         "body": [
-          "Abstract per-token pricing is hard to reason about. Here are concrete cost breakdowns for common production use cases, using current March 2026 pricing.",
+          "Abstract per-token pricing is hard to reason about. Here are concrete cost breakdowns for common production use cases, using current April 2026 pricing.",
           "<strong>Customer support chatbot (Sonnet 4.6)</strong><br>Processing 10,000 support tickets per day. Average conversation: 2,000 input tokens (system prompt + user message + context), 500 output tokens. With a cached system prompt (1,500 tokens cached, 500 fresh per request): Input cost = 500 fresh tokens x 10K = 5M tokens at $3/MTok ($15) + 15M cached tokens at $0.30/MTok ($4.50). Output = 5M tokens at $15/MTok ($75). Daily total: ~$95. Monthly: ~$2,850.",
           "<strong>Code review agent (Opus 4.6)</strong><br>Reviewing 200 pull requests per day. Average: 8,000 input tokens (code + instructions), 2,000 output tokens (review comments). No caching (each PR is different). Daily: 1.6M input at $5/MTok ($8) + 400K output at $25/MTok ($10). Daily total: ~$18. Monthly: ~$540.",
           "<strong>Document processing pipeline (Haiku 4.5 batch)</strong><br>Classifying and extracting data from 50,000 documents per day. Average: 1,000 input tokens, 200 output tokens. Using Batch API. Daily: 50M input at $0.50/MTok ($25) + 10M output at $2.50/MTok ($25). Daily total: ~$50. Monthly: ~$1,500.",
@@ -1650,7 +1651,8 @@
           ]
         }
       }
-    ]
+    ],
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "windsurf-pricing",
@@ -1659,7 +1661,7 @@
     "title": "Windsurf Pricing 2026 - Free vs Pro at $15/mo",
     "meta_description": "Windsurf free: 50 completions/day. Pro: $15/mo unlimited Cascade + completions. Team pricing and credit system explained.",
     "og_description": "Windsurf pricing breakdown for 2026. Free, Pro, and Team plans compared with hidden costs and real limitations.",
-    "h1": "Windsurf Pricing: Plans, Credits & Real Costs (March 2026)",
+    "h1": "Windsurf Pricing: Plans, Credits & Real Costs (April 2026)",
     "intro": "Windsurf uses a credit-based pricing model. Every AI interaction costs credits, with the amount varying by model. The free tier gives 25 credits per month \u2014 enough for a few sessions. Pro at $15/month includes 500 credits. Windsurf's own SWE-1 model has a fixed credit cost, while third-party models like Claude Sonnet 4.6 charge based on actual token usage. This page covers every plan, what credits buy, and how Windsurf compares to Cursor and Copilot.",
     "tiers": [
       {
@@ -1781,7 +1783,7 @@
         "answer": "If you're using Windsurf daily, yes. The free tier's 5 Cascade sessions run out fast during active development. Pro removes all limits and gives you access to better models. At $15/mo, it's the cheapest unlimited AI editor plan available."
       }
     ],
-    "date_updated": "2026-02-20",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "How the Credit System Works",
@@ -1855,8 +1857,8 @@
     "slug": "replit-pricing",
     "tool_name": "Replit",
     "tool_slug": "replit",
-    "title": "Replit Pricing 2026 - Free, Core & Teams Plans Compared",
-    "meta_description": "Replit free tier caps AI and compute. Core is $25/mo with full AI features. Teams starts at $40/user. See what each plan includes and where hidden costs appear.",
+    "title": "Replit Pricing 2026 - Free vs $25/mo Core vs Teams",
+    "meta_description": "Replit free plan caps AI and compute at 0.5 vCPU. Core at $25/mo unlocks Agent and 4 vCPU. Teams at $40/user. Hidden compute fees inside.",
     "og_description": "Replit pricing compared across all tiers. Free limits, Core features, Teams costs, and where the hidden compute charges hit.",
     "h1": "Replit Pricing: Plans, AI Credits, and Compute Costs",
     "intro": "Replit has evolved from a browser-based IDE into a full AI development platform. The pricing reflects that ambition. Between the subscription tiers, compute charges, and AI credit system, the actual cost of using Replit can be hard to predict. Here's how the pricing works and what you'll actually pay.",
@@ -1969,14 +1971,14 @@
         "answer": "They serve different needs. Cursor is a local AI code editor focused on writing and editing code. Replit is a cloud-based development and deployment platform with AI features. Cursor is better for coding in existing projects. Replit is better for building new apps from scratch and deploying them quickly."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "langchain-pricing",
     "tool_name": "LangChain / LangSmith",
     "tool_slug": "langchain",
-    "title": "LangSmith Pricing 2026 - Free vs Plus vs Enterprise",
-    "meta_description": "LangSmith free: 5K traces/mo. Plus: $39/mo for 50K traces. Enterprise: custom. What each tier includes and when to upgrade from free.",
+    "title": "LangSmith Pricing 2026 - Free 5K Traces vs $39/mo Plus",
+    "meta_description": "LangSmith free gives 5K traces/mo and 1 seat. Plus at $39/user adds 100K traces. Extra traces cost $0.50/1K. Worth upgrading at ~10K traces/mo.",
     "og_description": "LangSmith pricing across all tiers. Trace limits, seat costs, and whether the observability platform is worth paying for.",
     "h1": "LangChain / LangSmith Pricing: What the Platform Costs",
     "intro": "LangChain the framework is free and open source. LangSmith, the observability and evaluation platform, is where the pricing kicks in. If you're building production LLM apps with LangChain, you'll eventually want LangSmith for debugging and monitoring. Here's what that costs.",
@@ -2089,16 +2091,16 @@
         "answer": "It depends on your use case. LangChain is great for complex chains, agents, and retrieval pipelines where you need the orchestration abstractions. For simple API calls to OpenAI or Anthropic, it adds unnecessary complexity. Many production teams start with LangChain and either stick with it or simplify to direct API calls."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "weaviate-pricing",
     "tool_name": "Weaviate",
     "tool_slug": "weaviate",
-    "title": "Weaviate Pricing 2026 - Free Sandbox & Cloud Costs",
-    "meta_description": "Weaviate Cloud sandbox is free. Standard starts at $25/mo. Self-hosted is free but ops-heavy. Full plan comparison with storage costs.",
+    "title": "Weaviate Pricing 2026 - Free Self-Hosted vs $45/mo Cloud",
+    "meta_description": "Weaviate open source is free. Cloud Flex starts at $45/mo. 14-day sandbox for testing. Self-hosted vs managed cost comparison inside.",
     "og_description": "Weaviate pricing from free self-hosted to managed cloud. Real costs at different data scales with storage and dimension breakdowns.",
-    "h1": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium (March 2026)",
+    "h1": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium (April 2026)",
     "intro": "Weaviate updated its cloud pricing in late 2025, replacing the old Serverless/Enterprise tiers with Flex, Plus, and Premium plans. Self-hosted Weaviate is still free and open source. The cloud plans start at $45/month for Flex (pay-as-you-go) and go up to Premium for enterprise deployments. There's also a free 14-day sandbox for testing. This page covers every option and helps you choose between self-hosted and managed cloud.",
     "tiers": [
       {
@@ -2216,7 +2218,7 @@
         "answer": "Weaviate offers self-hosting (Pinecone doesn't), hybrid search (vector + keyword), and more flexible data modeling. Pinecone has simpler serverless pricing and less operational overhead. Weaviate is cheaper at scale due to the self-host option. Pinecone is easier to start with."
       }
     ],
-    "date_updated": "2026-02-20",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "Self-Hosted vs Cloud: The Real Tradeoff",
@@ -2278,8 +2280,8 @@
     "slug": "chroma-pricing",
     "tool_name": "Chroma",
     "tool_slug": "chroma",
-    "title": "Chroma Pricing 2026 - Open Source vs Chroma Cloud Costs",
-    "meta_description": "Chroma is free and open source. Chroma Cloud adds managed hosting with a free tier. Compare self-hosted costs vs cloud pricing for vector search.",
+    "title": "Chroma Pricing 2026 - Free Open Source vs Cloud Hosting",
+    "meta_description": "Chroma is free and runs embedded in Python. Chroma Cloud adds managed hosting starting free. Self-hosted vs cloud costs at 100K to 10M vectors.",
     "og_description": "Chroma pricing: free open source vs managed Chroma Cloud. What it costs to run vector search at different scales.",
     "h1": "Chroma Pricing: What the Simplest Vector Database Costs",
     "intro": "Chroma has become the default vector database for developers who want something that works without a PhD in infrastructure. It's open source, runs embedded in your Python app, and has a growing cloud offering. Here's what it costs across all the options.",
@@ -2403,16 +2405,16 @@
         "answer": "Embedded mode runs Chroma directly inside your Python process. No separate server needed. You import chromadb, create a client, and start storing vectors. Data persists to disk by default. It's the fastest way to add vector search to any Python application."
       }
     ],
-    "date_updated": "2026-02-20"
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "cohere-pricing",
     "tool_name": "Cohere",
     "tool_slug": "cohere",
-    "title": "Cohere API Pricing 2026 - Command, Embed & Rerank Costs",
-    "meta_description": "Command R+ is $2.50/$10 per 1M tokens. Embed v3 is $0.10/1M. Rerank 3.5 is $2/1K searches. Full model breakdown with free trial details.",
+    "title": "Cohere API Pricing 2026 - Command R+ $2.50, Embed $0.10",
+    "meta_description": "Command R+ at $2.50/$10 per 1M tokens. Embed v3 at $0.10/1M. Rerank at $2/1K. Free trial with 1K calls/mo, no credit card needed.",
     "og_description": "Cohere API pricing for every model. Command, Embed, and Rerank costs with real-world usage estimates for production apps.",
-    "h1": "Cohere API Pricing: Every Model Compared (March 2026)",
+    "h1": "Cohere API Pricing: Every Model Compared (April 2026)",
     "intro": "Cohere offers three product lines: Command (text generation), Embed (vector embeddings), and Rerank (search result reranking). Unlike OpenAI and Anthropic, Cohere has a meaningful free trial tier with 100 API calls per minute and 1,000 per month. The paid models are competitively priced \u2014 Command R+ at $2.50/$10 per million tokens is cheaper than Claude Sonnet 4.6 and GPT-4.1 for text generation. This page covers every model's pricing.",
     "tiers": [
       {
@@ -2543,7 +2545,7 @@
         "answer": "Cohere has a trial tier that's free with 1,000 API calls per month and 100 per minute. It's limited to non-production use. There's no permanent free tier for production applications. You move to pay-as-you-go pricing once you're past evaluation."
       }
     ],
-    "date_updated": "2026-02-20",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "Cohere vs OpenAI vs Anthropic: Pricing Comparison",
@@ -2600,7 +2602,7 @@
     "title": "AWS Bedrock Pricing 2026 - Claude & Llama Costs Per Token",
     "meta_description": "Run Claude, Llama, and Mistral through AWS Bedrock. On-demand, provisioned, and batch pricing compared. Calculate actual monthly costs.",
     "og_description": "AWS Bedrock pricing breakdown for 2026. On-demand, provisioned, and batch modes compared across all available models.",
-    "h1": "AWS Bedrock Pricing: Every Model's Real Cost (March 2026)",
+    "h1": "AWS Bedrock Pricing: Every Model's Real Cost (April 2026)",
     "intro": "AWS Bedrock gives you API access to models from Anthropic, Meta, Mistral, Cohere, and others \u2014 all through a single AWS endpoint. The pricing varies by model, with the same per-token rates as the providers' direct APIs in most cases. Bedrock adds its own pricing dimensions: on-demand (pay per token), batch (50% off), and provisioned throughput (reserved capacity). This page covers every major model's pricing on Bedrock and when each billing option makes sense.",
     "tiers": [
       {
@@ -2728,7 +2730,7 @@
         "answer": "Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training."
       }
     ],
-    "date_updated": "2026-02-20",
+    "date_updated": "2026-04-06",
     "deep_sections": [
       {
         "heading": "On-Demand Model Pricing Table",
@@ -3333,14 +3335,14 @@
         "answer": "GPT-4o ($2.50/$10.00) is cheaper than Claude Sonnet 4.6 ($3.00/$15.00) on both input and output. Claude Haiku 4.5 ($0.80/$4.00) is cheaper than GPT-4o but more expensive than GPT-4o Mini ($0.15/$0.60)."
       }
     ],
-    "date_updated": "April 2026"
+    "date_updated": "2026-04-06"
   },
   {
     "slug": "gpt-4o-mini-pricing",
     "tool_name": "GPT-4o Mini",
     "tool_slug": "openai-api",
-    "title": "GPT-4o Mini Pricing 2026 - Cheapest OpenAI Model",
-    "meta_description": "GPT-4o Mini costs $0.15 input / $0.60 output per 1M tokens. 94% cheaper than GPT-4o. See limits, batch pricing, and when Mini is enough.",
+    "title": "GPT-4o Mini Pricing 2026 - $0.15/$0.60 Per 1M Tokens",
+    "meta_description": "GPT-4o Mini at $0.15 input, $0.60 output per 1M tokens. 94% cheaper than GPT-4o. Now competes with GPT-4.1 Nano at $0.10/$0.40.",
     "og_description": "GPT-4o Mini pricing breakdown. Per-token costs, batch discounts, and where Mini falls short versus GPT-4o and GPT-4.1 Nano.",
     "h1": "GPT-4o Mini Pricing: The Cheapest Way to Use OpenAI (April 2026)",
     "intro": "GPT-4o Mini is OpenAI's cheapest model in the GPT-4 family at $0.15/$0.60 per million tokens. Launched July 2024, it handles classification, extraction, routing, and simple generation at 94% less than GPT-4o. Now competes with GPT-4.1 Nano ($0.10/$0.40) for the budget tier.",
@@ -3821,6 +3823,6 @@
         "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens \u2014 significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
       }
     ],
-    "date_updated": "April 2026"
+    "date_updated": "2026-04-06"
   }
 ]

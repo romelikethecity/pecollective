@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>DPO (Direct Preference Optimization) simplifies the RLHF process by eliminating the need to train a separate reward model. Instead of the three-step RLHF pipeline (supervised fine-tuning, reward model training, RL optimization), DPO directly optimizes the language model on pairs of preferred and dispreferred responses.</p><p>The mathematical insight is that the optimal policy under the RLHF objective can be expressed in closed form, allowing preference data to be used directly as a training signal. This makes DPO simpler to implement, more stable during training, and less computationally expensive than PPO-based RLHF.</p><p>DPO and its variants (IPO, KTO, ORPO) have become the preferred approach for alignment fine-tuning in open-source models. Llama 3, Mistral, and many other models use DPO-style training. The trade-off is that DPO may be less effective than RLHF for complex preference landscapes where the reward isn't easily captured by pairwise comparisons.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how DPO connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How DPO fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

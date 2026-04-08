@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Parameter count has been the primary scaling axis for LLMs. Each parameter is typically stored as a floating-point number (16-bit or 32-bit), so a 70B parameter model requires at least 140 GB of memory in 16-bit precision. Quantization can reduce this: 8-bit quantization halves memory requirements, and 4-bit reduces it further, with some quality trade-off.</p><p>However, parameter count alone doesn't determine model quality. Training data quality and quantity, architecture choices, and training techniques all matter significantly. A well-trained 8B model can outperform a poorly trained 70B model. The Chinchilla scaling laws showed that many early LLMs were undertrained: they had too many parameters relative to their training data. Modern models focus more on training data quality and optimal compute allocation.</p><p>The trend in 2025-2026 is toward more efficient models that achieve strong performance with fewer parameters. Mixture of Experts (MoE) architectures like Mixtral activate only a subset of parameters for each input, getting large-model quality at small-model inference costs. Distillation creates smaller models that replicate larger model behavior. For practitioners, this means the 'biggest model wins' era is giving way to a more nuanced model selection landscape.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Parameter Count connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Parameter Count fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

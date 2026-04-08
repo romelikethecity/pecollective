@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Data normalization has two common forms. Min-max scaling transforms values to a fixed range (usually 0-1). Standardization (z-score normalization) transforms values to have zero mean and unit variance. Standardization is generally preferred because it handles outliers better and works well with gradient-based optimization.</p><p>Neural network normalization operates during the forward pass. Batch normalization (BatchNorm) normalizes activations across the batch dimension, computing mean and variance from all examples in the current mini-batch. It was a breakthrough in 2015, enabling much deeper networks to train reliably. However, it has issues with small batch sizes and doesn't work well in recurrent networks.</p><p>Layer normalization (LayerNorm) normalizes across the feature dimension within each individual example, independent of batch size. This is what transformers use and it's the default for LLM architectures. RMSNorm is a simplified variant (normalizing by root mean square only) used in models like LLaMA.</p><p>Group normalization and instance normalization are variants for specific use cases: group norm works well in vision tasks with small batches, and instance norm is used in style transfer.</p><p>Pre-norm vs. post-norm placement matters in transformers. Original transformers used post-norm (normalize after the residual connection), but modern models prefer pre-norm (normalize before the sub-layer) because it provides more stable training for very deep models.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Normalization connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Normalization fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

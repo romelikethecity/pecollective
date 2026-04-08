@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Cosine similarity measures the cosine of the angle between two vectors, producing a score from -1 (opposite) to 1 (identical), with 0 meaning no relationship. Unlike Euclidean distance, cosine similarity ignores vector magnitude and focuses purely on direction, which makes it ideal for comparing embeddings of different-length texts.</p><p>The formula is straightforward: divide the dot product of two vectors by the product of their magnitudes. In practice, you rarely compute this yourself. Libraries like NumPy, scikit-learn, and vector databases handle the math. What matters is understanding what the scores mean and how to set thresholds.</p><p>Setting the right similarity threshold is more art than science. A 0.85 cosine similarity between two sentence embeddings usually indicates strong semantic similarity, but the exact threshold depends on your embedding model, domain, and use case. For search, you might accept anything above 0.7. For deduplication, you'd want 0.95 or higher. Always calibrate thresholds on your specific data rather than using generic cutoffs.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Cosine Similarity connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Cosine Similarity fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

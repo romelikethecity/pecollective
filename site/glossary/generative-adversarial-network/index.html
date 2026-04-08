@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The GAN training process is a minimax game formalized by Ian Goodfellow in 2014. The generator G takes random noise as input and produces fake data. The discriminator D takes both real and generated data and outputs a probability of the input being real. G is trained to maximize D's error rate, while D is trained to maximize its accuracy.</p><p>Training GANs is notoriously difficult. Mode collapse occurs when the generator finds a few outputs that fool the discriminator and stops exploring diverse outputs. Training instability happens when one network overpowers the other. Techniques to stabilize training include Wasserstein loss (WGAN), spectral normalization, progressive growing (starting from low resolution and gradually increasing), and careful learning rate balancing.</p><p>Notable GAN variants include StyleGAN (controllable, high-quality face generation), CycleGAN (unpaired image-to-image translation, like turning horses into zebras), Pix2Pix (paired image translation, like sketches to photos), and BigGAN (class-conditional generation at scale).</p><p>GANs are still preferred over diffusion models in scenarios requiring real-time generation (since they need only a single forward pass) and for adversarial training and data augmentation. The discriminator concept has also influenced other architectures and training techniques.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how GAN connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How GAN fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

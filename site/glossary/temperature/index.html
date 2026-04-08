@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Temperature is a parameter that controls the randomness of a language model's output by adjusting the probability distribution over possible next tokens. At temperature 0, the model always picks the most likely token (deterministic). At temperature 1.0, it samples proportionally from the full distribution. Above 1.0, it amplifies the probabilities of less likely tokens, creating more surprising and sometimes incoherent output.</p><p>Temperature interacts with other sampling parameters like top-p (nucleus sampling) and top-k. In practice, most applications use temperature between 0 and 0.7. Code generation and factual Q&A work best at 0-0.2. Creative writing and brainstorming benefit from 0.7-1.0. Values above 1.0 are rarely useful.</p><p>An important nuance: temperature 0 doesn't guarantee identical outputs across calls. Model providers may add small amounts of randomness even at temperature 0, and different hardware can produce slightly different results.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Temperature connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Temperature fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

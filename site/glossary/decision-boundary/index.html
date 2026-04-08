@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A logistic regression model produces a linear decision boundary: a straight line (in 2D), a plane (in 3D), or a hyperplane (in higher dimensions). This works well when classes are actually linearly separable but fails when the true boundary is curved.</p><p>Kernel methods (like SVMs with RBF kernels) and neural networks can learn non-linear decision boundaries. The more parameters and layers, the more complex the boundary can become. This is directly related to the bias-variance tradeoff: a simple boundary might underfit, while an overly complex boundary overfits by wrapping around individual training points.</p><p>For multi-class problems, there are multiple decision boundaries, one between each pair of classes. The softmax output of a neural network defines these boundaries implicitly through the relative magnitudes of class probabilities.</p><p>In the context of language models, decision boundaries exist in high-dimensional space and determine things like sentiment classification, toxicity detection, and intent recognition. Adversarial examples work by finding inputs that sit just on the wrong side of these boundaries.</p><p>Visualization is only practical in 2D or 3D. For high-dimensional data, techniques like t-SNE or UMAP can project data to show approximate boundary structure.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Decision Boundary connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Decision Boundary fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

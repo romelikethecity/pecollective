@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A loss function (also called a cost function or objective function) defines what a model is optimizing for during training. For language models, the primary loss function is cross-entropy loss over next-token predictions, but the full training pipeline often uses multiple loss functions at different stages.</p><p>During pre-training, cross-entropy loss teaches the model to predict text. During RLHF, a combination of reward model scores and KL divergence (to prevent the model from diverging too far from the base model) forms the objective. DPO uses a preference-based loss that directly optimizes on human preference data.</p><p>Understanding loss functions explains many model behaviors. Why do models sometimes generate plausible-sounding but incorrect text? Because the loss function optimizes for likelihood, not truthfulness. Why do RLHF models sometimes refuse harmless requests? Because the reward model penalizes certain topics during alignment training.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Loss Function connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Loss Function fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

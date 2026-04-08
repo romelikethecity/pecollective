@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The two main families are linear methods and non-linear methods. PCA (Principal Component Analysis) is the classic linear approach: it finds the directions of maximum variance in the data and projects onto those directions. It's fast, well-understood, and works well when relationships are approximately linear.</p><p>Non-linear methods handle curved or clustered data structures. t-SNE (t-distributed Stochastic Neighbor Embedding) excels at 2D visualization by preserving local neighborhood structure but distorts global distances. UMAP (Uniform Manifold Approximation and Projection) offers a better balance of local and global structure and is faster than t-SNE.</p><p>Autoencoders perform learned dimensionality reduction: the bottleneck layer of an autoencoder is a non-linear compressed representation. This can capture more complex structure than PCA but requires training data and compute.</p><p>In the context of embeddings and RAG, dimensionality reduction is used to visualize embedding spaces (seeing how documents or queries cluster), reduce storage requirements for vector databases, and improve retrieval speed. Matryoshka embeddings are a recent approach where embeddings are trained to be useful at multiple dimensionalities, letting you trade precision for speed.</p><p>The curse of dimensionality explains why reduction helps: in high dimensions, distance metrics become less meaningful, and you need exponentially more data to fill the space.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Dimensionality Reduction connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Dimensionality Reduction fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

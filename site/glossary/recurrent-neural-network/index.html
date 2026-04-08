@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A basic RNN processes one element at a time, updating a hidden state vector at each step. The hidden state acts as the network's memory, encoding a summary of everything it's seen so far. At each timestep, the network combines the new input with the previous hidden state to produce an updated hidden state and (optionally) an output.</p><p>The fundamental problem with vanilla RNNs is vanishing gradients: when backpropagating through many timesteps, gradients shrink exponentially, making it impossible to learn long-range dependencies. A network processing a 500-word paragraph effectively can't connect information from the beginning to the end.</p><p>LSTMs and GRUs solve this with gating mechanisms that allow gradients to flow unchanged across many timesteps. LSTMs use three gates (forget, input, output) and a separate cell state. GRUs simplify this to two gates (reset, update) with comparable performance on many tasks.</p><p>Bidirectional RNNs process sequences in both directions, producing representations that capture both past and future context. Encoder-decoder architectures use one RNN to encode a sequence and another to decode it, enabling tasks like translation.</p><p>Transformers solved the RNN's core limitations: sequential processing (can't parallelize across positions) and practical difficulty with very long sequences. However, recent architectures like RWKV and state-space models (Mamba) revisit recurrent ideas with modern improvements, achieving transformer-like performance with linear-time sequence processing.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Recurrent Neural Network connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Recurrent Neural Network fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

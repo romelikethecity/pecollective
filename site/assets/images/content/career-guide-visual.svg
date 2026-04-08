@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2d35"/>
+      <stop offset="100%" stop-color="#0a1f25"/>
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d8a9a" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#3d8a9a"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad5)"/>
+
+  <!-- Title -->
+  <text x="600" y="48" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">AI Engineering Career Path</text>
+  <text x="600" y="74" fill="#6a8a94" font-size="14" text-anchor="middle">Progression, compensation, and key skills at every level</text>
+
+  <!-- Career path line -->
+  <line x1="120" y1="250" x2="1080" y2="250" stroke="url(#pathGrad)" stroke-width="3" stroke-dasharray="0"/>
+  <line x1="120" y1="250" x2="1080" y2="250" stroke="#3d8a9a" stroke-width="1" opacity="0.3"/>
+
+  <!-- Connection dots on path -->
+  <circle cx="120" cy="250" r="6" fill="#3d8a9a" opacity="0.4"/>
+  <circle cx="360" cy="250" r="6" fill="#3d8a9a" opacity="0.6"/>
+  <circle cx="600" cy="250" r="6" fill="#3d8a9a" opacity="0.8"/>
+  <circle cx="840" cy="250" r="6" fill="#e8a87c" opacity="0.8"/>
+  <circle cx="1080" cy="250" r="6" fill="#e8a87c"/>
+
+  <!-- Level 1: Junior -->
+  <rect x="30" y="110" width="180" height="110" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1" opacity="0.8"/>
+  <text x="120" y="138" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">LEVEL 1</text>
+  <text x="120" y="162" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">Junior</text>
+  <text x="120" y="184" fill="#e8a87c" font-size="15" font-weight="600" text-anchor="middle">$95K-$130K</text>
+  <text x="120" y="206" fill="#6a8a94" font-size="10" text-anchor="middle">0-2 years</text>
+
+  <!-- Level 2: Mid -->
+  <rect x="270" y="110" width="180" height="110" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <text x="360" y="138" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">LEVEL 2</text>
+  <text x="360" y="162" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">Mid-Level</text>
+  <text x="360" y="184" fill="#e8a87c" font-size="15" font-weight="600" text-anchor="middle">$140K-$185K</text>
+  <text x="360" y="206" fill="#6a8a94" font-size="10" text-anchor="middle">2-5 years</text>
+
+  <!-- Level 3: Senior -->
+  <rect x="510" y="110" width="180" height="110" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="2"/>
+  <text x="600" y="138" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">LEVEL 3</text>
+  <text x="600" y="162" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">Senior</text>
+  <text x="600" y="184" fill="#e8a87c" font-size="15" font-weight="600" text-anchor="middle">$185K-$250K</text>
+  <text x="600" y="206" fill="#6a8a94" font-size="10" text-anchor="middle">5-8 years</text>
+
+  <!-- Level 4: Staff -->
+  <rect x="750" y="110" width="180" height="110" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <text x="840" y="138" fill="#e8a87c" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">LEVEL 4</text>
+  <text x="840" y="162" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">Staff</text>
+  <text x="840" y="184" fill="#e8a87c" font-size="15" font-weight="600" text-anchor="middle">$250K-$350K</text>
+  <text x="840" y="206" fill="#6a8a94" font-size="10" text-anchor="middle">8-12 years</text>
+
+  <!-- Level 5: Principal -->
+  <rect x="990" y="110" width="180" height="110" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <text x="1080" y="138" fill="#e8a87c" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">LEVEL 5</text>
+  <text x="1080" y="162" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">Principal</text>
+  <text x="1080" y="184" fill="#e8a87c" font-size="15" font-weight="600" text-anchor="middle">$350K-$500K+</text>
+  <text x="1080" y="206" fill="#6a8a94" font-size="10" text-anchor="middle">12+ years</text>
+
+  <!-- Skills section below path -->
+  <!-- Junior skills -->
+  <rect x="40" y="285" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="120" y="304" fill="#a8c5cc" font-size="11" text-anchor="middle">Python / PyTorch</text>
+  <rect x="40" y="320" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="120" y="339" fill="#a8c5cc" font-size="11" text-anchor="middle">ML Fundamentals</text>
+  <rect x="40" y="355" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="120" y="374" fill="#a8c5cc" font-size="11" text-anchor="middle">API Integration</text>
+
+  <!-- Mid skills -->
+  <rect x="280" y="285" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="360" y="304" fill="#a8c5cc" font-size="11" text-anchor="middle">System Design</text>
+  <rect x="280" y="320" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="360" y="339" fill="#a8c5cc" font-size="11" text-anchor="middle">MLOps / Pipelines</text>
+  <rect x="280" y="355" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="360" y="374" fill="#a8c5cc" font-size="11" text-anchor="middle">Fine-tuning LLMs</text>
+
+  <!-- Senior skills -->
+  <rect x="520" y="285" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="600" y="304" fill="#a8c5cc" font-size="11" text-anchor="middle">Architecture</text>
+  <rect x="520" y="320" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="600" y="339" fill="#a8c5cc" font-size="11" text-anchor="middle">Team Leadership</text>
+  <rect x="520" y="355" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="600" y="374" fill="#a8c5cc" font-size="11" text-anchor="middle">Production ML</text>
+
+  <!-- Staff skills -->
+  <rect x="760" y="285" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="840" y="304" fill="#a8c5cc" font-size="11" text-anchor="middle">Org-wide Impact</text>
+  <rect x="760" y="320" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="840" y="339" fill="#a8c5cc" font-size="11" text-anchor="middle">Technical Strategy</text>
+  <rect x="760" y="355" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="840" y="374" fill="#a8c5cc" font-size="11" text-anchor="middle">Cross-team Design</text>
+
+  <!-- Principal skills -->
+  <rect x="1000" y="285" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="1080" y="304" fill="#a8c5cc" font-size="11" text-anchor="middle">Industry Vision</text>
+  <rect x="1000" y="320" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="1080" y="339" fill="#a8c5cc" font-size="11" text-anchor="middle">Research Direction</text>
+  <rect x="1000" y="355" width="160" height="28" rx="4" fill="#0f2d35" stroke="#1e4a55" stroke-width="1"/>
+  <text x="1080" y="374" fill="#a8c5cc" font-size="11" text-anchor="middle">Company Strategy</text>
+
+  <!-- Section label -->
+  <text x="60" y="430" fill="#6a8a94" font-size="11" font-weight="500" letter-spacing="1">KEY SKILLS BY LEVEL</text>
+  <line x1="60" y1="440" x2="1140" y2="440" stroke="#1e4a55" stroke-width="1"/>
+
+  <!-- Salary growth visualization -->
+  <text x="60" y="475" fill="#ffffff" font-size="14" font-weight="600">Total Compensation Growth</text>
+
+  <!-- Mini bar chart for TC -->
+  <rect x="60" y="490" width="80" height="16" rx="2" fill="#3d8a9a" opacity="0.4"/>
+  <text x="150" y="503" fill="#6a8a94" font-size="11">$110K avg</text>
+
+  <rect x="60" y="514" width="140" height="16" rx="2" fill="#3d8a9a" opacity="0.6"/>
+  <text x="210" y="527" fill="#6a8a94" font-size="11">$165K avg</text>
+
+  <rect x="60" y="538" width="210" height="16" rx="2" fill="#3d8a9a" opacity="0.8"/>
+  <text x="280" y="551" fill="#6a8a94" font-size="11">$220K avg</text>
+
+  <rect x="60" y="562" width="310" height="16" rx="2" fill="#e8a87c" opacity="0.7"/>
+  <text x="380" y="575" fill="#6a8a94" font-size="11">$300K avg (incl. equity)</text>
+
+  <rect x="60" y="586" width="440" height="16" rx="2" fill="#e8a87c"/>
+  <text x="510" y="599" fill="#6a8a94" font-size="11">$425K+ avg (incl. equity)</text>
+
+  <!-- Footer -->
+  <text x="1140" y="600" fill="#6a8a94" font-size="11" text-anchor="end">pecollective.com · AI Career Guide</text>
+</svg>

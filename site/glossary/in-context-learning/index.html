@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>In-context learning is remarkable because the model isn't actually updating its weights. It's using the examples in the prompt as a kind of temporary program that guides its generation. The transformer architecture's attention mechanism allows it to identify patterns across the examples and apply them to new inputs, all within a single forward pass.</p><p>Research has shown that in-context learning has interesting properties. The format and ordering of examples matters more than you'd expect. The model can learn tasks it was never explicitly trained on, just from seeing a few examples. And sometimes, even the labels in the examples don't need to be correct; the model picks up the task structure from the input-output format alone (though correct labels obviously help).</p><p>The practical limits of in-context learning are tied to the context window. You can only include so many examples before running out of space. There's also a quality ceiling: for specialized tasks requiring deep domain knowledge, in-context learning with a general model will eventually underperform a fine-tuned model. The sweet spot is using in-context learning for rapid prototyping and then fine-tuning if you need higher accuracy or lower per-request costs.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how In-Context Learning connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How In-Context Learning fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

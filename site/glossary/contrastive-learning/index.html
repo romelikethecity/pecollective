@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The key insight behind contrastive learning is that you don't need explicit labels to learn useful representations. You just need a way to define 'similar' and 'dissimilar' pairs.</p><p>The most common framework is SimCLR (Simple Framework for Contrastive Learning). For each item in a batch, you create two augmented views (positive pairs). All other items in the batch are treated as negatives. The model is trained with a contrastive loss (like InfoNCE) that minimizes the distance between positive pairs and maximizes distance from negatives.</p><p>CLIP extended this to multimodal learning: image-text pairs from the internet serve as positive examples, while mismatched images and texts are negatives. This produced a model that understands both images and text in a shared representation space.</p><p>Hard negative mining is a critical technique: deliberately selecting negatives that are difficult to distinguish from positives forces the model to learn finer-grained features. Temperature scaling in the loss function controls how sharply the model discriminates between similar and dissimilar items.</p><p>Contrastive learning connects directly to retrieval and RAG systems. The embedding models used for semantic search are typically trained with contrastive objectives on query-document pairs.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Contrastive Learning connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Contrastive Learning fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

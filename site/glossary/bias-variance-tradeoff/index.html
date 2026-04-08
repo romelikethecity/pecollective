@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The total prediction error of any model can be decomposed into three components: bias squared, variance, and irreducible noise. Bias measures how far off the model's average predictions are from the true values. Variance measures how much the model's predictions change when trained on different subsets of data. Irreducible noise is the randomness inherent in the data that no model can capture.</p><p>Simple models (few parameters, strong assumptions) have high bias and low variance. They consistently get the same roughly-wrong answer. Complex models (many parameters, few assumptions) have low bias and high variance. They can fit anything but are unreliable on new data.</p><p>Practical strategies for managing this tradeoff include regularization (adding penalties for complexity), cross-validation (estimating generalization performance), ensemble methods (combining multiple models to reduce variance without increasing bias), early stopping (halting training before the model memorizes noise), and dropout (randomly deactivating neurons during training).</p><p>In the era of large language models, this tradeoff manifests differently. LLMs are massively overparameterized but still generalize well, partly because of implicit regularization from training procedures and the sheer volume of training data. This phenomenon, sometimes called the 'double descent' curve, challenges the classical bias-variance view but doesn't invalidate it.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Bias-Variance Tradeoff connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Bias-Variance Tradeoff fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

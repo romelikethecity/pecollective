@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>An LSTM cell has three gates that control information flow. The forget gate decides what to discard from the cell state (e.g., when encountering a new subject, forget the old one). The input gate decides what new information to store (e.g., store the gender and number of the new subject). The output gate decides what to expose as the cell's output (e.g., output features relevant to predicting the next word).</p><p>The cell state acts as a conveyor belt running through the entire sequence. Information can flow along it unchanged, which is how LSTMs maintain long-range memory. The gates learn to modulate this flow based on the current input and previous hidden state.</p><p>Bidirectional LSTMs process sequences in both directions, capturing both past and future context. Stacked LSTMs (multiple LSTM layers) learn hierarchical temporal features. Attention mechanisms were first added on top of LSTMs (as in the original seq2seq translation models) before evolving into the standalone self-attention used in transformers.</p><p>Transformers largely replaced LSTMs for NLP because self-attention processes all positions in parallel (vs. LSTM's sequential processing) and captures long-range dependencies more directly. However, LSTMs remain competitive for time series, streaming data, and resource-constrained environments where transformer quadratic attention costs are prohibitive.</p><p>GRU (Gated Recurrent Unit) is a simplified variant with two gates instead of three. It's faster to train with comparable performance on many tasks.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how LSTM connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How LSTM fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A tokenizer converts raw text into the numerical token IDs that a language model can process. Most modern tokenizers use subword algorithms like Byte-Pair Encoding (BPE) or SentencePiece that learn a vocabulary by finding frequently occurring character sequences in training data.</p><p>The tokenizer's vocabulary directly affects model behavior. Common English words might be single tokens, while rare words or non-English text get split into multiple subword tokens. This explains why models handle common language better than specialized jargon, and why API costs vary by language (Chinese text uses roughly 2x more tokens than English for the same content).</p><p>Each model family has its own tokenizer with a different vocabulary. GPT-4.1's tokenizer (cl100k_base) has 100,256 tokens. Claude and Llama use different tokenizers. This means the same text produces different token counts and costs across providers. OpenAI's tiktoken library and Hugging Face's tokenizers library let you count tokens before making API calls.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Tokenizer connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Tokenizer fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

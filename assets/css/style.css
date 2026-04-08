@@ -958,3 +958,26 @@ a:hover {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Content figures (contextual page images) */
+.content-figure {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg-card, #132f38);
+  border: 1px solid var(--color-teal-primary, #1a4a56);
+}
+
+.content-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.content-figure figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted, #6a8a94);
+  text-align: center;
+  border-top: 1px solid var(--color-teal-primary, #1a4a56);
+}

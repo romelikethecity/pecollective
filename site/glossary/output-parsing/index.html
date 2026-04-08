@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Output parsing strategies range from simple to sophisticated. Regex-based parsing extracts data using pattern matching, which is brittle but works for simple, consistent formats. JSON parsing instructs the model to respond in JSON and uses json.loads(), which is more structured but can fail if the model includes extra text. Structured output modes (like OpenAI's JSON mode or response_format) constrain the model's output format at the API level, providing the strongest guarantees.</p><p>The most common parsing challenge is handling format variations. A model might return valid JSON one time and wrap it in markdown code blocks the next. It might use 'True' instead of 'true', or include trailing commas. Defensive parsing code needs to handle these variations: strip code block markers, fix common JSON issues, and validate against expected schemas.</p><p>Modern approaches increasingly use Pydantic models or similar schema-based validation. You define the expected output structure as a typed schema, and the parser validates that the model's response conforms to it. Libraries like Instructor, Marvin, and LangChain's output parsers automate this pattern. The trend is toward API-level structured output guarantees, which eliminate parsing errors entirely.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Output Parsing connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Output Parsing fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Classification is one of the oldest and most practical tasks in machine learning. Traditional classifiers use algorithms like logistic regression, random forests, or SVMs trained on labeled datasets. Modern approaches increasingly use either fine-tuned transformer models (BERT variants are popular for text classification) or LLM-based classification through prompting.</p><p>LLM-based classification has a major advantage: you don't need labeled training data. You can describe categories in natural language and the model classifies inputs based on its understanding. This is sometimes called zero-shot classification. The trade-off is cost and latency. An API call to GPT-4.1 for each classification is much slower and more expensive than running a small fine-tuned BERT model locally.</p><p>The practical decision often comes down to volume and accuracy requirements. For fewer than 1,000 classifications per day, LLM-based prompting is fast to set up and flexible. For high-volume production use (millions of items), you'll want a dedicated classifier model. A common pattern is to use LLM prompting to generate labeled training data, then train a smaller specialized classifier on that data.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Classifier connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Classifier fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

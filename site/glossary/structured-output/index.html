@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Structured output goes beyond JSON mode by constraining model outputs to match a specific schema. Instead of just guaranteeing valid JSON, structured output ensures the response contains exactly the fields, types, and formats your application expects. This eliminates an entire class of integration bugs.</p><p>Implementation varies by provider. OpenAI's structured outputs use JSON Schema definitions. Anthropic's tool use effectively provides structured output through function return schemas. Open-source solutions like Outlines and Instructor use constrained decoding to enforce arbitrary output schemas.</p><p>Structured output is particularly valuable for: data extraction (pulling specific fields from unstructured text), classification (ensuring responses match predefined categories), and multi-step pipelines (where one model's output feeds into another model or function as input).</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Structured Output connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Structured Output fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>RL formalizes decision-making as a Markov Decision Process: an agent observes a state, takes an action, receives a reward, and transitions to a new state. The goal is to learn a policy (mapping from states to actions) that maximizes cumulative reward over time.</p><p>Value-based methods (like Q-learning and DQN) learn the expected reward for each state-action pair and then pick the action with the highest expected value. Policy-based methods (like REINFORCE and PPO) directly learn the policy without estimating values. Actor-critic methods combine both: a critic estimates values while an actor learns the policy.</p><p>Deep RL combines deep neural networks with RL algorithms. Landmarks include DQN (Atari games, 2013), AlphaGo (Go, 2016), and AlphaFold (protein structure, 2020). OpenAI Five (Dota 2) and DeepMind's StarCraft agent showed RL scaling to complex multi-agent environments.</p><p>RLHF (RL from Human Feedback) applies RL to align language models with human preferences. A reward model trained on human preference data provides the reward signal, and PPO fine-tunes the language model to maximize this reward. DPO (Direct Preference Optimization) achieves similar results without explicitly training a separate reward model.</p><p>Challenges include sample inefficiency (RL often requires millions of interactions), reward hacking (the agent finds unexpected ways to maximize reward that don't match the designer's intent), and sim-to-real transfer (policies learned in simulation may not work in the real world).</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Reinforcement Learning connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Reinforcement Learning fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

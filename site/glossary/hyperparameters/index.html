@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Hyperparameters fall into two categories: training-time and inference-time. Training hyperparameters (learning rate, batch size, epochs, weight decay, warmup steps) are set before training begins and affect how the model learns. Inference hyperparameters (temperature, top-p, top-k, frequency penalty, presence penalty, max tokens) are set at generation time and affect how the model produces output.</p><p>For prompt engineers, inference hyperparameters are the daily tools. Temperature controls randomness: 0 gives deterministic, repeatable outputs; 1.0 gives more creative but less predictable responses. Top-p (nucleus sampling) trims the probability distribution, removing unlikely tokens. These two parameters interact, so it's best to adjust one at a time.</p><p>Hyperparameter tuning for training is more involved. Grid search (trying every combination) is thorough but expensive. Random search is surprisingly effective because not all hyperparameters are equally important. Bayesian optimization uses previous results to intelligently choose the next set of parameters to try. For fine-tuning LLMs, most practitioners start with recommended defaults and only tune learning rate and number of epochs.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Hyperparameters connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Hyperparameters fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

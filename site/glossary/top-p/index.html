@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Top-p sampling (nucleus sampling) is a text generation parameter that limits token selection to the smallest set of tokens whose cumulative probability exceeds a threshold p. At top-p 0.9, the model considers only the tokens that make up 90% of the probability mass, ignoring the long tail of unlikely tokens.</p><p>Unlike top-k (which always considers exactly k tokens), top-p adapts dynamically. For a confident prediction where one token has 95% probability, top-p 0.9 might select just that one token. For an uncertain prediction where probabilities are spread across many tokens, it might consider dozens.</p><p>Top-p and temperature interact: temperature reshapes the probability distribution first, then top-p filters it. Most practitioners set one or the other, not both. OpenAI's documentation recommends adjusting temperature OR top-p, not both simultaneously.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Top-P Sampling connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Top-P Sampling fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Rate limiting shows up in two forms: request-based limits (how many API calls per minute) and token-based limits (how many tokens per minute or per day). Most AI providers enforce both simultaneously, and hitting either one will throttle your application.</p><p>Handling rate limits properly requires several strategies. Exponential backoff with jitter is the standard approach for retries: wait 1 second, then 2, then 4, adding random variation so multiple clients don't retry in sync. Request queuing lets you buffer calls and release them at a controlled pace. Batch APIs, where available, let you submit large workloads at lower priority for reduced cost.</p><p>For production systems, you'll also want to monitor your usage against limits proactively. Most providers return rate limit headers (remaining requests, reset time) that your code can use to throttle preemptively instead of waiting for 429 errors. Token estimation before sending requests helps you stay within token-per-minute limits without trial and error.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how API Rate Limiting connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How API Rate Limiting fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

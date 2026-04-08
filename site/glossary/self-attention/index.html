@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Self-attention works by computing three vectors for each token: Query (what am I looking for?), Key (what do I contain?), and Value (what information do I carry?). For each token, the model computes attention scores by comparing its Query with every other token's Key. These scores determine how much each token's Value contributes to the current token's updated representation.</p><p>The 'self' in self-attention means the model attends to other positions within the same input sequence, as opposed to cross-attention where it attends to a separate input. Multi-head attention runs multiple attention computations in parallel, each focusing on different aspects of the relationships (syntax, semantics, coreference, etc.).</p><p>The computational cost of self-attention scales quadratically with sequence length, because every token must attend to every other token. This is why extending context windows is challenging and expensive. Techniques like FlashAttention, sparse attention, and sliding window attention reduce this cost while preserving most of the capability. Understanding this trade-off explains why longer context windows cost more per token and why models process long inputs more slowly.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Self-Attention connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Self-Attention fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

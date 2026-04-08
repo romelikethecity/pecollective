@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The most common activation functions each have distinct trade-offs. ReLU (Rectified Linear Unit) is the default for most hidden layers because it's fast and avoids vanishing gradients, but it can 'die' when neurons get stuck outputting zero. Leaky ReLU fixes the dying problem by allowing a small negative slope. GELU (Gaussian Error Linear Unit) is what modern transformers like GPT and BERT use because it provides smooth gradients that help training stability.</p><p>Sigmoid squashes values between 0 and 1, making it useful for binary classification outputs but problematic in deep networks due to vanishing gradients. Tanh maps values between -1 and 1 and was popular before ReLU took over. Softmax is technically an activation function applied to output layers for multi-class classification, converting raw scores into probability distributions.</p><p>The choice of activation function interacts with other architecture decisions. Batch normalization, skip connections, and learning rate all need to be tuned alongside activation choice. In practice, you'll rarely need to change activation functions from defaults unless you're doing architecture research.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Activation Function connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Activation Function fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

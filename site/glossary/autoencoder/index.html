@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The basic autoencoder has a simple training objective: make the output match the input as closely as possible. The magic happens in the bottleneck layer, where the network is forced to learn an efficient compressed representation because it can't pass all the information through.</p><p>Variants include denoising autoencoders (trained to reconstruct clean data from corrupted inputs, learning noise-resistant features), sparse autoencoders (which encourage the compressed representation to use as few active neurons as possible), and variational autoencoders (which learn a smooth, continuous latent space useful for generating new data).</p><p>In practice, autoencoders are used for anomaly detection (unusual inputs get high reconstruction error), data denoising, feature learning, and as pre-training for other tasks. They've been somewhat overtaken by transformer-based approaches for many NLP tasks but remain important in computer vision, signal processing, and generative modeling.</p><p>The concept of learning compressed representations is central to modern AI. When you use embeddings in a RAG pipeline, you're relying on the same principle that autoencoders formalized.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Autoencoder connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Autoencoder fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

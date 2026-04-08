@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>GNNs work through a message-passing framework. In each layer, every node collects 'messages' from its neighbors (typically their current feature vectors), aggregates them (by summing, averaging, or attention-weighted combination), and updates its own representation using the aggregated information. After K layers of message passing, each node's representation captures information from its K-hop neighborhood.</p><p>Key GNN variants include GCN (Graph Convolutional Network, using neighborhood averaging), GAT (Graph Attention Network, using attention weights to prioritize important neighbors), GraphSAGE (sampling a fixed number of neighbors for scalability), and GIN (Graph Isomorphism Network, maximally expressive message passing).</p><p>GNNs can tackle three levels of prediction: node-level (classify each node, like predicting user interests), edge-level (predict whether an edge should exist, like link prediction), and graph-level (classify entire graphs, like predicting molecular properties).</p><p>Challenges include over-smoothing (deep GNNs make all node representations converge to the same value), scalability (real-world graphs can have billions of nodes), and expressiveness limits (standard message-passing GNNs can't distinguish certain graph structures). Research on graph transformers and positional encodings addresses some of these limitations.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Graph Neural Network connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Graph Neural Network fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

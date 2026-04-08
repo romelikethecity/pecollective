@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Data augmentation has evolved significantly with LLMs. Traditional NLP augmentation used mechanical transformations: swapping synonyms, changing word order, deleting random words, or translating to another language and back. These methods are fast but produce limited variety.</p><p>LLM-based augmentation is far more powerful. You can prompt a model to paraphrase text while preserving meaning, generate new examples that match a pattern, create edge cases that test specific scenarios, or produce examples in different writing styles. The key is quality control: augmented data needs to be reviewed and filtered to avoid introducing noise.</p><p>A practical augmentation pipeline looks like this: start with your real labeled data, identify underrepresented classes or scenarios, prompt an LLM to generate new examples for those gaps, filter generated examples (both automatically and manually), then combine with original data for training. The ratio matters: too much synthetic data can bias the model away from real-world patterns. A common starting point is 3-5 synthetic examples per real example.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Data Augmentation connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Data Augmentation fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

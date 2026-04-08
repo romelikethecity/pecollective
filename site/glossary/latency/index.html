@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>In AI systems, latency measures the time from sending a request to receiving the first (or complete) response. For language models, there are two key metrics: time-to-first-token (TTFT, how long until the first word appears) and end-to-end latency (total time to generate the complete response).</p><p>Latency depends on multiple factors: model size (larger models are slower), input length (longer prompts take longer to process), output length (more tokens to generate means more time), GPU hardware (A100 vs H100 vs inference-optimized chips), and serving infrastructure (batch size, queue depth, geographic distance).</p><p>For user-facing applications, latency directly impacts user experience. Research shows users perceive delays over 200ms for TTFT and expect streaming responses to match reading speed (about 15-20 tokens per second). Batch processing applications care less about latency and more about throughput.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Latency connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Latency fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The standard federated learning process (FedAvg) works in rounds: the server sends the current model to selected clients, each client trains on its local data for a few steps, clients send their updated model weights back, and the server averages the updates to produce a new global model.</p><p>Key challenges include data heterogeneity (different clients have different data distributions, making averaging tricky), communication efficiency (model updates are large and clients may have slow connections), stragglers (waiting for the slowest client holds everyone back), and security (adversarial clients can send poisoned updates).</p><p>Differential privacy adds noise to model updates before sharing, providing mathematical guarantees that individual data points can't be reverse-engineered from the updates. Secure aggregation lets the server combine updates without seeing any individual client's contribution.</p><p>Cross-silo federated learning involves a small number of organizations (like hospitals) with large datasets. Cross-device federated learning involves millions of consumer devices with small datasets each. The two settings have very different engineering challenges.</p><p>Federated learning is increasingly important as regulations like GDPR and HIPAA restrict data movement. It's also relevant to the growing demand for on-device AI that respects user privacy.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Federated Learning connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Federated Learning fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -463,6 +463,12 @@ def generate_term_page(term_data, all_terms):
                 {example_html}
                 {why_html}
                 {in_depth_html}
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how {term} connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How {term} fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 {mistakes_html}
                 {career_html}
                 {extra_faq_html}

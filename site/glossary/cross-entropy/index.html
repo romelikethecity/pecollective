@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Cross-entropy measures the difference between two probability distributions: what the model predicted and what actually happened. For language models, it measures how surprised the model is by each token in the training data. The goal of training is to minimize this surprise across trillions of tokens.</p><p>The formula computes the negative log probability assigned to the correct token at each position. If the model assigned high probability to the correct token, the cross-entropy for that position is low. If it assigned low probability, the cross-entropy is high. Averaging across all positions gives the model's overall loss.</p><p>Cross-entropy connects to perplexity through a simple relationship: perplexity = 2^(cross-entropy). This means a model with cross-entropy loss of 3.32 has a perplexity of 10. Understanding this relationship helps interpret training curves and model comparisons.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Cross-Entropy connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Cross-Entropy fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

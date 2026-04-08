@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Dropout works by creating an implicit ensemble of sub-networks. Each training step uses a different random subset of neurons, effectively training a different network architecture each time. At test time, all neurons are active but their outputs are scaled down (multiplied by the keep probability) to approximate the average prediction of all the sub-networks.</p><p>Common dropout rates are 0.1-0.3 for input layers and 0.3-0.5 for hidden layers. Higher rates provide stronger regularization but can hurt training if the network becomes too sparse. The optimal rate depends on network size, dataset size, and how prone the architecture is to overfitting.</p><p>Variants include spatial dropout (drops entire feature maps in CNNs, better for spatially correlated features), DropConnect (drops individual weights instead of entire neurons), and DropBlock (drops contiguous regions in feature maps).</p><p>In transformers, dropout is applied at multiple points: after attention scores, after feed-forward layers, and on embeddings. Modern large language models often use relatively low dropout rates (0.1 or less) because they're trained on enormous datasets where overfitting is less of a concern.</p><p>An important nuance: dropout must be turned off during inference. Forgetting this is a common bug that causes non-deterministic and degraded predictions at test time.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Dropout connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Dropout fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1158,6 +1158,12 @@ response = client.chat.completions.create(
         <h2>How It Works</h2>
         <p>The OpenAI API centers around the chat completions endpoint. You send a list of messages (system, user, assistant roles) and receive a model response. Key parameters include model (which model to use), temperature (randomness), max_tokens (response length limit), and tools (function definitions the model can call).</p><p>Advanced features include structured outputs (forcing JSON schema compliance), vision (sending images alongside text), streaming (receiving responses token by token for better UX), and batch API (submitting large workloads at 50% discount with 24-hour turnaround). The assistants API adds persistent threads, file search, and code interpreter capabilities for building more complex applications.</p><p>The API has evolved toward standardization. The chat completions format (messages array with roles) has been adopted by Anthropic, Google, Mistral, and most open-source model servers. This means code written for OpenAI's API often ports to other providers with minimal changes, especially when using abstraction libraries. Understanding OpenAI's API patterns gives you a head start with any LLM provider.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how OpenAI API connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How OpenAI API fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

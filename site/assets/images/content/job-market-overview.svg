@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2d35"/>
+      <stop offset="100%" stop-color="#0a1f25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad2)"/>
+
+  <!-- Title -->
+  <text x="60" y="52" fill="#ffffff" font-size="28" font-weight="700">AI/ML Job Market Dashboard</text>
+  <text x="60" y="78" fill="#6a8a94" font-size="14">Live hiring trends across AI engineering roles</text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1: Open Roles -->
+  <rect x="60" y="105" width="250" height="100" rx="8" fill="#132f38"/>
+  <rect x="60" y="105" width="250" height="4" rx="2" fill="#3d8a9a"/>
+  <text x="80" y="140" fill="#6a8a94" font-size="12" font-weight="500">OPEN ROLES</text>
+  <text x="80" y="176" fill="#ffffff" font-size="36" font-weight="700">2,847</text>
+  <text x="215" y="176" fill="#3d8a9a" font-size="14" font-weight="600">+12%</text>
+  <polygon points="250,168 258,158 266,168" fill="#3d8a9a"/>
+
+  <!-- Card 2: Avg Salary -->
+  <rect x="340" y="105" width="250" height="100" rx="8" fill="#132f38"/>
+  <rect x="340" y="105" width="250" height="4" rx="2" fill="#e8a87c"/>
+  <text x="360" y="140" fill="#6a8a94" font-size="12" font-weight="500">AVG SALARY</text>
+  <text x="360" y="176" fill="#ffffff" font-size="36" font-weight="700">$187K</text>
+  <text x="492" y="176" fill="#e8a87c" font-size="14" font-weight="600">+8%</text>
+  <polygon points="523,168 531,158 539,168" fill="#e8a87c"/>
+
+  <!-- Card 3: Remote % -->
+  <rect x="620" y="105" width="250" height="100" rx="8" fill="#132f38"/>
+  <rect x="620" y="105" width="250" height="4" rx="2" fill="#3d8a9a"/>
+  <text x="640" y="140" fill="#6a8a94" font-size="12" font-weight="500">REMOTE ROLES</text>
+  <text x="640" y="176" fill="#ffffff" font-size="36" font-weight="700">34%</text>
+  <text x="742" y="176" fill="#6a8a94" font-size="14">of postings</text>
+
+  <!-- Card 4: Top Location -->
+  <rect x="900" y="105" width="250" height="100" rx="8" fill="#132f38"/>
+  <rect x="900" y="105" width="250" height="4" rx="2" fill="#e8a87c"/>
+  <text x="920" y="140" fill="#6a8a94" font-size="12" font-weight="500">TOP LOCATION</text>
+  <text x="920" y="176" fill="#ffffff" font-size="28" font-weight="700">SF Bay Area</text>
+
+  <!-- Demand by role bar chart -->
+  <rect x="60" y="230" width="540" height="340" rx="8" fill="#132f38"/>
+  <text x="85" y="265" fill="#ffffff" font-size="16" font-weight="600">Demand by Role</text>
+
+  <!-- Bar: AI Agent Developer -->
+  <text x="85" y="305" fill="#a8c5cc" font-size="13">AI Agent Developer</text>
+  <rect x="250" y="290" width="320" height="22" rx="3" fill="#3d8a9a"/>
+  <text x="258" y="306" fill="#ffffff" font-size="12" font-weight="600">842 openings</text>
+
+  <!-- Bar: ML Engineer -->
+  <text x="85" y="345" fill="#a8c5cc" font-size="13">ML Engineer</text>
+  <rect x="250" y="330" width="275" height="22" rx="3" fill="#3d8a9a" opacity="0.85"/>
+  <text x="258" y="346" fill="#ffffff" font-size="12" font-weight="600">724 openings</text>
+
+  <!-- Bar: Data Scientist -->
+  <text x="85" y="385" fill="#a8c5cc" font-size="13">Data Scientist</text>
+  <rect x="250" y="370" width="230" height="22" rx="3" fill="#3d8a9a" opacity="0.7"/>
+  <text x="258" y="386" fill="#ffffff" font-size="12" font-weight="600">601 openings</text>
+
+  <!-- Bar: AI Researcher -->
+  <text x="85" y="425" fill="#a8c5cc" font-size="13">AI Researcher</text>
+  <rect x="250" y="410" width="155" height="22" rx="3" fill="#3d8a9a" opacity="0.55"/>
+  <text x="258" y="426" fill="#ffffff" font-size="12" font-weight="600">389 openings</text>
+
+  <!-- Bar: Prompt Engineer -->
+  <text x="85" y="465" fill="#a8c5cc" font-size="13">Prompt Engineer</text>
+  <rect x="250" y="450" width="110" height="22" rx="3" fill="#3d8a9a" opacity="0.4"/>
+  <text x="258" y="466" fill="#ffffff" font-size="12" font-weight="600">291 openings</text>
+
+  <!-- Trend arrows next to bars -->
+  <polygon points="578,296 586,286 594,296" fill="#e8a87c"/>
+  <polygon points="533,336 541,326 549,336" fill="#e8a87c"/>
+  <polygon points="488,376 496,370 504,376" fill="#6a8a94"/>
+  <polygon points="413,416 421,410 429,416" fill="#6a8a94"/>
+  <polygon points="368,456 376,450 384,456" fill="#e8a87c"/>
+
+  <!-- Top hiring companies panel -->
+  <rect x="630" y="230" width="520" height="340" rx="8" fill="#132f38"/>
+  <text x="655" y="265" fill="#ffffff" font-size="16" font-weight="600">Top Hiring Companies</text>
+
+  <!-- Company rows -->
+  <rect x="655" y="285" width="470" height="40" rx="4" fill="#0f2d35"/>
+  <text x="675" y="310" fill="#ffffff" font-size="14" font-weight="500">Google DeepMind</text>
+  <text x="1095" y="310" fill="#e8a87c" font-size="14" font-weight="600" text-anchor="end">127 roles</text>
+
+  <rect x="655" y="335" width="470" height="40" rx="4" fill="#0f2d35"/>
+  <text x="675" y="360" fill="#ffffff" font-size="14" font-weight="500">Meta AI</text>
+  <text x="1095" y="360" fill="#e8a87c" font-size="14" font-weight="600" text-anchor="end">98 roles</text>
+
+  <rect x="655" y="385" width="470" height="40" rx="4" fill="#0f2d35"/>
+  <text x="675" y="410" fill="#ffffff" font-size="14" font-weight="500">OpenAI</text>
+  <text x="1095" y="410" fill="#e8a87c" font-size="14" font-weight="600" text-anchor="end">84 roles</text>
+
+  <rect x="655" y="435" width="470" height="40" rx="4" fill="#0f2d35"/>
+  <text x="675" y="460" fill="#ffffff" font-size="14" font-weight="500">Anthropic</text>
+  <text x="1095" y="460" fill="#e8a87c" font-size="14" font-weight="600" text-anchor="end">71 roles</text>
+
+  <rect x="655" y="485" width="470" height="40" rx="4" fill="#0f2d35"/>
+  <text x="675" y="510" fill="#ffffff" font-size="14" font-weight="500">Amazon AWS AI</text>
+  <text x="1095" y="510" fill="#e8a87c" font-size="14" font-weight="600" text-anchor="end">63 roles</text>
+
+  <!-- Footer -->
+  <text x="1140" y="600" fill="#6a8a94" font-size="11" text-anchor="end">pecollective.com · Updated from live job postings</text>
+</svg>

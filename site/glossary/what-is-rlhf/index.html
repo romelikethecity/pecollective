@@ -1168,6 +1168,12 @@
         <h2>How It Works</h2>
         <p>RLHF has three distinct stages:</p><p>Stage 1: Supervised Fine-Tuning (SFT). The base model is fine-tuned on a dataset of high-quality instruction-response pairs. This teaches the model to follow instructions rather than just complete text. The result is a model that can answer questions but without consistent quality or safety.</p><p>Stage 2: Reward Model Training. Human annotators compare pairs of model outputs and select which response is better. These preference pairs train a separate reward model that scores any model output on a quality scale. The reward model learns patterns like 'clear explanations score higher than jargon' and 'polite refusals score higher than harmful content.'</p><p>Stage 3: Reinforcement Learning. The SFT model generates responses, the reward model scores them, and Proximal Policy Optimization (PPO) adjusts the model's weights to maximize the reward score. Over millions of iterations, the model learns to produce responses that score highly according to human preferences.</p><p>Alternatives to RLHF have emerged, notably Direct Preference Optimization (DPO), which skips the reward model entirely and optimizes preferences directly. DPO is simpler to implement but RLHF remains the most proven approach for flagship models.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how RLHF connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How RLHF fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

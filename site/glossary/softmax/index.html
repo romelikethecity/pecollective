@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Softmax computes e^x_i / sum(e^x_j) for each element. The exponential function ensures all outputs are positive, and dividing by the sum ensures they add to 1. The exponential also amplifies differences: a small gap in raw scores becomes a large gap in probabilities.</p><p>In transformers, softmax appears in the attention mechanism: after computing query-key dot products, softmax converts them into attention weights that determine how much each position attends to every other position. This is where the quadratic cost of attention comes from.</p><p>Temperature scaling modifies softmax by dividing logits by a temperature value T before applying softmax. T=1 is standard. T<1 makes the distribution sharper (more confident, less random). T>1 makes it flatter (less confident, more random). This is exactly how the 'temperature' parameter works when you're prompting language models.</p><p>Top-p (nucleus) sampling and top-k sampling both operate on the softmax output: they truncate the probability distribution to only the most likely tokens before sampling, preventing the model from choosing extremely unlikely outputs.</p><p>Numerical stability is a practical concern. Computing e^x for large x causes overflow. The standard fix is subtracting the maximum value from all logits before applying softmax, which gives the same probabilities without overflow. Every production implementation handles this automatically.</p><p>For binary classification, softmax with two classes reduces to sigmoid. This is why sigmoid is used for binary output layers.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Softmax connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Softmax fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

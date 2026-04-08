@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Word embeddings emerged from the insight that you can learn word meaning from context. Word2Vec (2013) trained a neural network to predict a word from its surrounding words (or vice versa), producing 100-300 dimensional vectors as a byproduct. GloVe took a different approach, factorizing word co-occurrence statistics. Both methods showed that word vectors capture genuine semantic and syntactic relationships.</p><p>Modern AI has evolved beyond static word embeddings. In Word2Vec, 'bank' always has the same vector regardless of context. Contextual embeddings from models like BERT and GPT produce different representations for the same word based on its surrounding context. 'Bank' in 'river bank' gets a different vector than 'bank' in 'bank account.' This contextual understanding is a major reason why modern models are so much better at language tasks.</p><p>For practical applications, you'll typically work with sentence or document embeddings rather than individual word embeddings. Models like sentence-transformers produce fixed-size vectors for entire text passages, which you store in vector databases for semantic search. But the underlying principle is the same: meaning is captured as position in a high-dimensional vector space, and similarity is measured by distance or angle between vectors.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Word Embeddings connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Word Embeddings fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

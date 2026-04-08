@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>LangChain organizes LLM application development around several key abstractions. Chains compose multiple steps into a pipeline (retrieve documents, format prompt, call LLM, parse output). Agents give the model the ability to choose which tools to use and in what order. Memory modules track conversation history across interactions. Document loaders and text splitters handle data ingestion for RAG pipelines.</p><p>The framework has evolved significantly. LangChain Expression Language (LCEL) provides a declarative way to compose chains using a pipe operator syntax. LangGraph extends the framework for building stateful, multi-agent applications with cycles and branching. LangSmith provides observability and evaluation tools for debugging and monitoring production chains.</p><p>LangChain has vocal critics who argue it adds unnecessary abstraction over straightforward API calls. The counterargument is that it standardizes patterns that every LLM application needs: retry logic, streaming, prompt management, and retrieval. The practical advice: use LangChain when you need its specific patterns (complex chains, agents, multi-step retrieval), but don't force it onto simple use cases where a direct API call would suffice.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how LangChain connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How LangChain fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Attention mechanisms allow models to selectively focus on relevant parts of the input when generating each output token. The mechanism computes three vectors for each token: Query (what am I looking for?), Key (what do I contain?), and Value (what information do I provide?). Attention scores are computed as the dot product of Query and Key, then used to create a weighted sum of Values.</p><p>Multi-head attention runs multiple attention computations in parallel, each learning to focus on different types of relationships. One head might learn syntactic dependencies (subject-verb agreement), another might capture semantic relationships (word meaning), and another might track positional patterns.</p><p>Recent innovations include Flash Attention (memory-efficient attention computation), Multi-Query Attention (sharing keys/values across heads for faster inference), and Grouped Query Attention (a compromise between full multi-head and multi-query). These optimizations make it practical to run large models with long context windows.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Attention Mechanism connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Attention Mechanism fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

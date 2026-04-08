@@ -1171,6 +1171,12 @@ Model: 'Starting: 45 apples. After selling 12: 45 - 12 = 33. After receiving 30:
         <h2>How It Works</h2>
         <p>Chain of thought works because language models process text sequentially. Each generated token serves as additional context for the next token. When the model writes out intermediate steps, each step provides context that improves the accuracy of subsequent steps.</p><p>There are several CoT variants with different applications:</p><p>Zero-shot CoT: Simply add 'Let's think step by step' to your prompt. This triggers step-by-step reasoning without examples. It is the simplest approach and works surprisingly well on most reasoning tasks.</p><p>Few-shot CoT: Provide 2-3 example problems with worked-out solutions before your actual question. The examples teach the model the expected reasoning format. This produces more reliable output than zero-shot CoT.</p><p>Self-consistency: Generate multiple CoT reasoning paths for the same question, then take a majority vote on the final answer. If 4 out of 5 reasoning paths arrive at the same answer, that answer is likely correct.</p><p>Tree of Thought: Explore multiple reasoning branches at each step, evaluate which branches look most promising, and follow the best path. This is slower and more expensive but handles complex problems where the first approach may be a dead end.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Chain of Thought Prompting connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Chain of Thought Prompting fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

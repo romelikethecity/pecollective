@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter,system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2d35"/>
+      <stop offset="100%" stop-color="#0a1f25"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad3)"/>
+
+  <!-- Title -->
+  <text x="60" y="52" fill="#ffffff" font-size="28" font-weight="700">AI Concepts &amp; Terminology</text>
+  <text x="60" y="78" fill="#6a8a94" font-size="14">How key AI/ML concepts connect to each other</text>
+
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <g stroke="#3d8a9a" stroke-width="1.5" opacity="0.35" fill="none">
+    <!-- LLM to RAG -->
+    <line x1="600" y1="280" x2="380" y2="350"/>
+    <!-- LLM to Fine-tuning -->
+    <line x1="600" y1="280" x2="830" y2="350"/>
+    <!-- LLM to Prompt Engineering -->
+    <line x1="600" y1="280" x2="600" y2="440"/>
+    <!-- LLM to AI Agent -->
+    <line x1="600" y1="280" x2="250" y2="200"/>
+    <!-- RAG to Embeddings -->
+    <line x1="380" y1="350" x2="200" y2="440"/>
+    <!-- RAG to Vector DB -->
+    <line x1="380" y1="350" x2="380" y2="500"/>
+    <!-- Embeddings to Vector DB -->
+    <line x1="200" y1="440" x2="380" y2="500"/>
+    <!-- AI Agent to Prompt Engineering -->
+    <line x1="250" y1="200" x2="600" y2="440"/>
+    <!-- Fine-tuning to Embeddings -->
+    <line x1="830" y1="350" x2="200" y2="440"/>
+    <!-- AI Agent to RAG -->
+    <line x1="250" y1="200" x2="380" y2="350"/>
+    <!-- LLM to Transformers -->
+    <line x1="600" y1="280" x2="950" y2="200"/>
+    <!-- Transformers to Fine-tuning -->
+    <line x1="950" y1="200" x2="830" y2="350"/>
+    <!-- Prompt Eng to RLHF -->
+    <line x1="600" y1="440" x2="850" y2="500"/>
+    <!-- Fine-tuning to RLHF -->
+    <line x1="830" y1="350" x2="850" y2="500"/>
+  </g>
+
+  <!-- Animated pulse lines on key connections -->
+  <g stroke="#3d8a9a" stroke-width="2" opacity="0.5" fill="none" stroke-dasharray="6,8">
+    <line x1="600" y1="280" x2="380" y2="350"/>
+    <line x1="600" y1="280" x2="600" y2="440"/>
+    <line x1="380" y1="350" x2="380" y2="500"/>
+  </g>
+
+  <!-- NODE: LLM (center, highlighted as active concept) -->
+  <circle cx="600" cy="270" r="52" fill="#3d8a9a" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="600" cy="270" r="42" fill="#132f38" stroke="#3d8a9a" stroke-width="3"/>
+  <text x="600" y="265" fill="#3d8a9a" font-size="17" font-weight="700" text-anchor="middle">LLM</text>
+  <text x="600" y="284" fill="#a8c5cc" font-size="10" text-anchor="middle">Large Language</text>
+  <text x="600" y="296" fill="#a8c5cc" font-size="10" text-anchor="middle">Model</text>
+
+  <!-- NODE: AI Agent -->
+  <circle cx="250" cy="195" r="38" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="250" y="191" fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">AI Agent</text>
+  <text x="250" y="208" fill="#a8c5cc" font-size="10" text-anchor="middle">Autonomous</text>
+
+  <!-- NODE: RAG -->
+  <circle cx="380" cy="350" r="38" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <text x="380" y="347" fill="#e8a87c" font-size="16" font-weight="700" text-anchor="middle">RAG</text>
+  <text x="380" y="365" fill="#a8c5cc" font-size="9" text-anchor="middle">Retrieval-Augmented</text>
+
+  <!-- NODE: Fine-tuning -->
+  <circle cx="830" cy="350" r="38" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="830" y="347" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">Fine-</text>
+  <text x="830" y="364" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">tuning</text>
+
+  <!-- NODE: Prompt Engineering -->
+  <circle cx="600" cy="445" r="42" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="600" y="440" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Prompt</text>
+  <text x="600" y="456" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Engineering</text>
+
+  <!-- NODE: Embeddings -->
+  <circle cx="200" cy="440" r="34" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="200" y="437" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Embed-</text>
+  <text x="200" y="453" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">dings</text>
+
+  <!-- NODE: Vector DB -->
+  <circle cx="380" cy="510" r="34" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="380" y="507" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Vector</text>
+  <text x="380" y="523" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">DB</text>
+
+  <!-- NODE: Transformers -->
+  <circle cx="950" cy="200" r="38" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="950" y="196" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Trans-</text>
+  <text x="950" y="212" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">formers</text>
+
+  <!-- NODE: RLHF -->
+  <circle cx="850" cy="500" r="32" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="850" y="504" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">RLHF</text>
+
+  <!-- Legend -->
+  <rect x="60" y="555" width="1080" height="1" fill="#1e4a55"/>
+  <circle cx="80" cy="590" r="8" fill="#132f38" stroke="#3d8a9a" stroke-width="2"/>
+  <text x="98" y="595" fill="#6a8a94" font-size="12">Current concept</text>
+  <circle cx="230" cy="590" r="8" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <text x="248" y="595" fill="#6a8a94" font-size="12">Closely related</text>
+  <circle cx="390" cy="590" r="8" fill="#132f38" stroke="#6a8a94" stroke-width="1.5"/>
+  <text x="408" y="595" fill="#6a8a94" font-size="12">Connected concept</text>
+
+  <!-- Footer -->
+  <text x="1140" y="600" fill="#6a8a94" font-size="11" text-anchor="end">pecollective.com · AI/ML Glossary</text>
+</svg>

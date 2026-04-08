@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A VAE has two components: an encoder that maps input data to a probability distribution in latent space (specifically, it outputs the mean and variance of a Gaussian distribution), and a decoder that maps samples from the latent space back to data space.</p><p>The training objective combines two terms. The reconstruction loss (how well the decoder reproduces the input from the latent code) pushes the model to encode useful information. The KL divergence term (how much the learned distribution deviates from a standard normal distribution) pushes the latent space to be smooth and continuous. This regularization is what makes VAEs generative: a smooth latent space means you can sample new points and get meaningful outputs.</p><p>The reparameterization trick enables backpropagation through the sampling step. Instead of sampling directly from the learned distribution (which isn't differentiable), the encoder outputs mean and variance, then sampling is reparameterized as mean + variance * noise, where noise is drawn from a standard normal.</p><p>VAE variants include beta-VAE (stronger KL penalty for more disentangled representations), VQ-VAE (vector quantized, using a discrete latent space), and hierarchical VAEs (multiple latent variable layers for better quality). VQ-VAE is particularly important: it's the approach used in DALL-E's image tokenizer and in the latent space of Stable Diffusion.</p><p>Compared to GANs, VAEs produce slightly blurrier outputs but are more stable to train, provide a meaningful latent space for interpolation and manipulation, and give a proper likelihood estimate.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Variational Autoencoder connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Variational Autoencoder fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

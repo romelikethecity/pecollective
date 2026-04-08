@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Streaming delivers model output token-by-token as it's generated rather than waiting for the complete response. For a response that takes 10 seconds to fully generate, streaming shows the first word in 200-500ms, giving users the perception of a fast, responsive system.</p><p>The technical implementation uses Server-Sent Events (SSE) or WebSocket connections. The client receives a stream of partial responses, each containing one or a few new tokens. The client application reconstructs the full response incrementally, typically rendering it in real-time.</p><p>Streaming introduces complexity: you need to handle partial responses, connection interruptions, and the fact that you can't validate the complete response until generation finishes. For applications that need to filter or modify output, this means building buffer-and-release logic or accepting that filtering can only happen post-completion.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Streaming connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Streaming fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

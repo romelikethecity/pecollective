@@ -1168,6 +1168,12 @@
         <h2>How It Works</h2>
         <p>Function calling works through a structured protocol between your application and the model.</p><p>First, you define available functions as JSON schemas (name, description, parameters with types). These schemas are sent to the model alongside the user's message.</p><p>The model then decides whether to respond with text or call a function. If a function call is appropriate, it outputs the function name and arguments as structured JSON. Your application parses this JSON, executes the real function, and sends the result back to the model.</p><p>The model can chain multiple function calls in a single conversation turn, enabling complex workflows like: search for flights, filter by price, then book the cheapest option.</p><p>OpenAI, Anthropic, and Google all support function calling (Anthropic calls it 'tool use'). The implementations differ slightly but the core concept is the same: the model generates structured output that maps to real code execution.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Function Calling in LLMs connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Function Calling in LLMs fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>A RAG system has three core components: the retriever, the knowledge base, and the generator. The retriever converts a user query into a vector embedding and searches the knowledge base for semantically similar content. The top results get injected into the LLM's context window alongside the original query.</p><p>Building a production RAG pipeline requires decisions at every layer. Chunking strategy determines how documents get split (by paragraph, by semantic boundary, by fixed token count). Embedding model choice affects retrieval quality. Re-ranking adds a second pass to improve relevance. Hybrid search combines keyword matching with vector similarity for better recall.</p><p>Advanced patterns include multi-hop RAG (where the model reasons across multiple retrieved documents), agentic RAG (where the model decides when and what to retrieve), and graph RAG (which uses knowledge graphs instead of flat document stores).</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how RAG connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How RAG fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Gradient descent works in three steps, repeated millions of times. First, the model makes a prediction and the loss function measures how wrong it is. Second, backpropagation calculates the gradient: how much each weight contributed to the error. Third, the optimizer updates each weight by a small amount in the direction that reduces the error. The size of each update is controlled by the learning rate.</p><p>In practice, pure gradient descent (computing gradients over the entire dataset) is too slow. Stochastic gradient descent (SGD) computes gradients on small random batches, which is noisy but much faster. Modern optimizers like Adam combine adaptive learning rates with momentum (remembering the direction of recent updates) to converge faster and more reliably.</p><p>The learning rate is the most critical hyperparameter. Too high, and the model overshoots the optimal weights, oscillating wildly. Too low, and training takes forever or gets stuck in a poor local minimum. Learning rate schedules (starting high and decreasing over time) are standard practice. This is why fine-tuning typically uses a much smaller learning rate than pre-training: you want to make small adjustments, not overwrite what the model already knows.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Gradient Descent connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Gradient Descent fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

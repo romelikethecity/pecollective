@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Overfitting happens when a model has too much capacity relative to the amount and complexity of the training data. A model with millions of parameters trained on hundreds of examples will memorize those examples perfectly but learn nothing generalizable.</p><p>Detection is straightforward: plot training loss and validation loss over time. If training loss keeps dropping while validation loss starts increasing, the model is overfitting. The gap between training and validation performance is your overfitting measure.</p><p>Prevention techniques form a toolkit that should be applied in combination. More data is the most reliable cure. Data augmentation creates synthetic training examples (rotating images, paraphrasing text). Regularization penalizes model complexity: L2 regularization adds a weight decay term, L1 regularization encourages sparsity, and dropout randomly deactivates neurons. Early stopping halts training when validation performance stops improving. Simpler architectures (fewer layers, fewer parameters) have less capacity to memorize.</p><p>In the LLM era, overfitting manifests differently. Large language models are heavily overparameterized but trained on massive datasets, which provides implicit regularization. However, fine-tuning on small datasets can cause severe overfitting, which is why techniques like LoRA (which restricts the number of trainable parameters) are so important.</p><p>Underfitting is the opposite problem: a model too simple to capture the patterns in the data. The bias-variance tradeoff frames the balance between these two failure modes.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Overfitting connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Overfitting fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

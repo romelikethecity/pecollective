@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Inference is the process of running a trained model to generate predictions or outputs. For language models, inference involves feeding input tokens through the model's layers to produce output tokens one at a time (autoregressive generation). Each output token requires a full forward pass through the model.</p><p>Inference optimization is critical for production deployment. Key techniques include KV-cache (storing intermediate computations to avoid redundant work), batching (processing multiple requests simultaneously), speculative decoding (using a small model to draft tokens that a large model verifies), and continuous batching (dynamically combining requests for GPU efficiency).</p><p>Inference costs typically dominate the total cost of running AI services. Optimizing inference through quantization, caching, and batching can reduce costs by 5-10x. This is why inference infrastructure is a major area of competition among cloud providers and specialized companies like Groq, Together AI, and Fireworks.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Inference connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Inference fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

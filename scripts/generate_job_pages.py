@@ -396,6 +396,11 @@ def create_job_page(job, idx, all_jobs_df=None):
 
             {skills_html}
 
+            <figure class="content-figure">
+                <img src="/assets/images/content/job-market-overview.svg" alt="AI job market overview showing open positions, demand by role, and hiring trends" loading="lazy" width="800" height="400">
+                <figcaption>AI hiring market: demand, salaries, and top employers updated weekly.</figcaption>
+            </figure>
+
             <div class="job-details-table">
                 <h2 style="margin-bottom: 20px; font-size: 1.25rem;">Role Details</h2>
                 <div class="job-details-row">

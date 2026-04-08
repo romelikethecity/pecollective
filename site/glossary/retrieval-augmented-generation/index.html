@@ -1168,6 +1168,12 @@
         <h2>How It Works</h2>
         <p>A RAG pipeline has three core stages: indexing, retrieval, and generation.</p><p>During indexing, your documents are split into chunks (by paragraph, section, or semantic boundary), converted into vector embeddings, and stored in a vector database like Pinecone or Weaviate. This is a one-time process that runs when documents change.</p><p>At query time, the user's question is converted into the same embedding format and compared against stored vectors using similarity search. The top 3-10 most relevant chunks are retrieved.</p><p>Finally, the retrieved chunks are inserted into the LLM's prompt alongside the original question. The model generates a response grounded in the provided context, reducing hallucination and enabling citation.</p><p>Advanced RAG patterns include hybrid search (combining vector and keyword matching), re-ranking (using a second model to improve retrieval quality), and multi-hop RAG (iterative retrieval for complex questions that span multiple documents).</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Retrieval Augmented Generation connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Retrieval Augmented Generation fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

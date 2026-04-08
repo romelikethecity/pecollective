@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Diffusion models work through a two-phase process. In the forward process (during training), the model gradually adds Gaussian noise to real images until they become pure static. In the reverse process (during generation), the model learns to predict and remove that noise one step at a time, reconstructing an image from scratch.</p><p>Text-guided diffusion models like Stable Diffusion combine the diffusion process with a text encoder (usually CLIP) that translates your prompt into a conditioning signal. This signal guides the denoising process, steering the random noise toward an image that matches your description. Parameters like the number of sampling steps (more steps = more detail but slower), guidance scale (how strictly to follow the prompt), and the noise scheduler all affect output quality.</p><p>Recent advances include latent diffusion (operating in compressed space for faster generation), ControlNet (adding structural control via sketches or depth maps), and consistency models (generating images in fewer steps). Video diffusion models like Sora extend these techniques to generate temporal sequences.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Diffusion Models connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Diffusion Models fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

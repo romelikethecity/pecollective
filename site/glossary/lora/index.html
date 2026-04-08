@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>LoRA (Low-Rank Adaptation) makes fine-tuning large models practical by freezing the original weights and training small adapter matrices that modify the model's behavior. Instead of updating billions of parameters, LoRA typically trains only 0.1-1% of the parameters, reducing GPU memory requirements by 10-100x.</p><p>The technique works by decomposing weight updates into two small matrices (low-rank factorization). During inference, these adapter weights are merged with the original model at near-zero cost. You can even swap different LoRA adapters for different tasks without loading multiple copies of the base model.</p><p>QLoRA extends this further by quantizing the base model to 4-bit precision before applying LoRA, making it possible to fine-tune a 70B parameter model on a single consumer GPU. This democratized fine-tuning, enabling individual researchers and small teams to customize large models.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how LoRA connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How LoRA fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

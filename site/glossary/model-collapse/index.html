@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Model collapse occurs through two mechanisms. First, statistical approximation errors compound across generations. Each model is an imperfect approximation of its training data, and training the next model on those imperfect approximations makes errors accumulate. Second, models tend to amplify high-probability outputs and suppress low-probability ones, reducing the diversity of the distribution with each generation.</p><p>Research from Oxford and other institutions has demonstrated this effect mathematically and experimentally. When models are trained recursively on their own outputs, minority patterns in the data (unusual writing styles, rare facts, diverse perspectives) get progressively erased. The result is a narrower, more generic output distribution that loses the long tail of human expression.</p><p>The practical implications are significant. Web scraping for training data now risks capturing large amounts of AI-generated content. This has led to increased interest in data provenance (tracking where training data comes from), watermarking AI outputs, and curating verified human-created datasets. For AI practitioners, model collapse is a strong argument for grounding outputs in authoritative sources rather than relying purely on model knowledge.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Model Collapse connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Model Collapse fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

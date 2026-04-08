@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Throughput in AI systems measures how many requests or tokens a system can process per unit of time. For language models, it's typically measured in tokens per second (TPS) for a single request or requests per second (RPS) for the system overall.</p><p>Maximizing throughput requires different strategies than minimizing latency. Larger batch sizes increase throughput but add latency to individual requests. Continuous batching helps by dynamically grouping requests, reducing GPU idle time. Model parallelism across multiple GPUs can increase throughput linearly but adds complexity.</p><p>The throughput-cost equation drives infrastructure decisions. A single H100 GPU might serve 100 requests per second with a small model or 5 requests per second with a large model. Choosing the right model size, quantization level, and serving framework for your throughput requirements is a critical engineering decision.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Throughput connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Throughput fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Backpropagation applies the chain rule from calculus to compute gradients efficiently. During the forward pass, data flows through the network layer by layer, producing a prediction. The loss function compares this prediction to the correct answer. During the backward pass, the algorithm computes the gradient of the loss with respect to every weight in the network, working from the output layer back to the input layer.</p><p>These gradients tell the optimizer (like SGD or Adam) how to adjust each weight. The learning rate controls how big each adjustment is. Too large and training becomes unstable. Too small and training takes forever.</p><p>Key challenges include vanishing gradients (gradients shrink to near-zero in deep networks, preventing early layers from learning), exploding gradients (gradients grow uncontrollably), and saddle points (flat regions where gradients are tiny but the model hasn't converged). Solutions include skip connections (ResNets), gradient clipping, better activation functions (ReLU, GELU), and normalization techniques.</p><p>Backpropagation through time (BPTT) extends the algorithm to sequential models like RNNs and LSTMs, unrolling the network across time steps before computing gradients.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Backpropagation connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Backpropagation fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

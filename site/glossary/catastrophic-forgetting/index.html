@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Catastrophic forgetting happens because neural networks store knowledge distributed across their weights. When you train on new data, gradient updates push those weights toward representing the new patterns, which can destroy the delicate weight configurations that encoded previous knowledge.</p><p>Several strategies mitigate this problem. LoRA and other parameter-efficient fine-tuning methods only update a small subset of weights, leaving most of the original model intact. Elastic Weight Consolidation (EWC) identifies which weights are most important for previous tasks and penalizes changes to those specific weights. Replay-based methods mix old training data with new data during fine-tuning to maintain previous capabilities.</p><p>For prompt engineers, catastrophic forgetting is one reason why in-context learning (providing examples in the prompt) is often preferred over fine-tuning for tasks that need flexibility. A fine-tuned model is specialized but brittle. A well-prompted general model can handle diverse tasks without forgetting. The trade-off is that in-context learning uses more tokens per request but avoids the risk of degrading the model's general capabilities.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Catastrophic Forgetting connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Catastrophic Forgetting fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

@@ -880,6 +880,11 @@ def generate_blog_post(article, all_articles):
         <div class="article-content">
           {article['content']}
 
+          <figure class="content-figure">
+              <img src="/assets/images/content/career-guide-visual.svg" alt="AI engineering career progression from junior to principal with salary ranges" loading="lazy" width="800" height="400">
+              <figcaption>AI engineering career path: roles, skills, and compensation at each level.</figcaption>
+          </figure>
+
           <!-- Author Bio -->
           <div class="author-bio">
             <div class="author-bio__avatar">RT</div>

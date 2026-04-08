@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Adversarial examples work because models learn statistical shortcuts rather than true understanding. A classifier might rely on texture patterns rather than shape, so altering texture fools it while humans (who rely on shape) see no change.</p><p>In the language model space, adversarial examples overlap heavily with prompt injection. Techniques include encoding harmful requests in Base64, using foreign languages to bypass English-trained safety filters, role-playing scenarios that gradually escalate, and token-level manipulations that exploit how tokenizers split text.</p><p>Defenses include adversarial training (exposing the model to adversarial examples during training), input preprocessing (detecting and sanitizing suspicious inputs), ensemble methods (using multiple models that are hard to fool simultaneously), and output filtering. No defense is perfect, and the field is a constant arms race between attack and defense researchers.</p><p>For production systems, the practical approach is defense in depth: multiple layers of protection rather than relying on any single technique.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Adversarial Examples connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Adversarial Examples fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

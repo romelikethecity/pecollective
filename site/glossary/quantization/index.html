@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Quantization reduces a model's memory footprint by representing weights with fewer bits. A standard model uses 16-bit floating point (FP16) weights. 8-bit quantization halves the memory requirement; 4-bit quantization quarters it. This makes it possible to run large models on smaller GPUs.</p><p>Common quantization methods include GPTQ (post-training quantization using calibration data), AWQ (activation-aware quantization that preserves important weights), and bitsandbytes (dynamic quantization during inference). Each method trades off between compression ratio, inference speed, and output quality.</p><p>The quality impact of quantization depends on the model size. Large models (70B+) can typically be quantized to 4-bit with minimal quality loss. Smaller models (7B-13B) show more noticeable degradation at aggressive quantization levels. The sweet spot for most deployments is 8-bit quantization, which typically preserves 99%+ of the original model's performance.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Quantization connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Quantization fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

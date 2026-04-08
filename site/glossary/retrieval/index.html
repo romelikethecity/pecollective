@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Retrieval in AI systems operates through several mechanisms. Keyword search (BM25) matches exact terms and works well for specific queries with distinctive words. Vector search converts queries and documents into embeddings and finds semantically similar content, even when different words express the same meaning. Hybrid search combines both approaches, typically using reciprocal rank fusion to merge results.</p><p>Retrieval quality depends on several factors beyond the search algorithm. Chunking strategy determines how documents are split into searchable units. Metadata filtering narrows results by date, source, category, or other attributes. Re-ranking adds a second-pass model that scores relevance more accurately than initial retrieval. Query transformation techniques (like HyDE, which generates a hypothetical answer to use as the search query) can dramatically improve retrieval for certain query types.</p><p>The retrieval pipeline in a production system typically follows these steps: preprocess the query (expand abbreviations, extract entities), search multiple indexes in parallel (vector + keyword), merge and deduplicate results, re-rank by relevance, filter to the top-k most relevant chunks, and format them into the model's context window with source attribution.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Retrieval connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Retrieval fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

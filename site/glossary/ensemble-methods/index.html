@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>The three main ensemble strategies are bagging, boosting, and stacking. Bagging (Bootstrap Aggregating) trains multiple models on random subsets of the data and averages their predictions. Random Forest is the classic example: it builds many decision trees on bootstrapped samples with random feature subsets, then votes. Bagging primarily reduces variance.</p><p>Boosting trains models sequentially, where each new model focuses on the errors the previous models got wrong. Gradient Boosting (XGBoost, LightGBM, CatBoost) is the gold standard for tabular data. Boosting reduces both bias and variance but can overfit if not carefully regularized.</p><p>Stacking uses one model to learn how to combine the predictions of other models. A meta-learner takes the base models' predictions as input features and learns the optimal way to weight and combine them.</p><p>In the LLM space, ensemble ideas appear as mixture of experts (routing different inputs to specialized sub-networks), model routing (choosing the best model for each query), and multi-model consensus (running queries through multiple LLMs and comparing outputs for safety).</p><p>Diversity is key to ensemble effectiveness. Models that make the same errors don't benefit from combination. Effective ensembles use different algorithms, different training data subsets, or different feature sets to ensure diverse error patterns.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Ensemble Methods connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Ensemble Methods fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

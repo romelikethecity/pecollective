@@ -363,6 +363,12 @@ def generate_salary_page(filtered_df, slug, title, category_type, salary_col, mi
             </style>
 
             {desc_html}
+
+            <figure class="content-figure">
+                <img src="/assets/images/content/salary-benchmarks.svg" alt="AI and ML salary benchmarks showing compensation ranges for {escape_html(title)}" loading="lazy" width="800" height="400">
+                <figcaption>Salary data based on disclosed job posting compensation.</figcaption>
+            </figure>
+
             {skills_html}
 
             {'<div class="section"><h2 style="margin-bottom: 20px;">Top Paying Companies</h2>' + companies_html + '</div>' if companies_html else ''}

@@ -1152,6 +1152,12 @@
         <h2>How It Works</h2>
         <p>Prompt caching works by storing the key-value cache (the internal representation computed during the transformer's forward pass) for a prompt prefix. When a new request starts with the same prefix, the provider loads the cached representation instead of recomputing it. This saves both computation time and processing costs.</p><p>Different providers implement caching differently. Anthropic's prompt caching lets you explicitly mark cache breakpoints in your messages, with cached input tokens priced at 10% of regular input tokens. OpenAI automatically caches prompt prefixes longer than 1,024 tokens, with cached tokens at 50% of regular price. Google's Gemini offers context caching for frequently reused contexts.</p><p>To take advantage of prompt caching, structure your prompts with static content first (system instructions, few-shot examples, reference documents) and dynamic content last (the user's specific query). The more tokens you can keep identical across requests, the more you benefit from caching. This is one reason why separating system prompts from user inputs isn't just good practice for clarity; it's an optimization strategy.</p>
     </div>
+
+                <figure class="content-figure">
+                    <img src="/assets/images/content/ai-concept-diagram.svg" alt="AI concept knowledge graph showing how Prompt Caching connects to related AI and ML concepts" loading="lazy" width="800" height="400">
+                    <figcaption>How Prompt Caching fits into the broader AI/ML technology landscape.</figcaption>
+                </figure>
+
                 
     <div class="glossary-section">
         <h2>Common Mistakes</h2>

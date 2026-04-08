@@ -981,23 +981,12 @@ def get_footer_html():
 '''
 
 
-def get_content_figure():
-    """Generate the content intelligence dashboard figure."""
-    return '''
-    <figure class="content-figure">
-      <img src="/assets/images/content/industry-intelligence-dashboard.svg" alt="Industry intelligence dashboard showing salary trends, market size, and hiring data" width="1200" height="500" loading="lazy">
-      <figcaption>Market intelligence: salary trends, hiring velocity, and industry data updated weekly.</figcaption>
-    </figure>
-'''
-
-
 def get_cta_box(title="Join the AI Community",
                 description="Connect with prompt engineers and AI professionals. Get job alerts, salary insights, and market intelligence.",
                 button_text="Join Community",
                 button_url="/join/"):
-    """Generate a CTA box with content figure above it"""
+    """Generate a CTA box."""
     return f'''
-    {get_content_figure()}
     <div class="cta-box">
         <h3>{title}</h3>
         <p>{description}</p>

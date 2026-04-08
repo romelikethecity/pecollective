@@ -899,6 +899,11 @@ def generate_blog_post(article, all_articles):
       </div>
     </article>
 {get_newsletter_cta()}
+
+    <figure class="content-figure">
+      <img src="/assets/images/content/industry-intelligence-dashboard.svg" alt="Industry intelligence dashboard showing salary trends, market size, and hiring data" width="1200" height="500" loading="lazy">
+      <figcaption>Market intelligence: salary trends, hiring velocity, and industry data updated weekly.</figcaption>
+    </figure>
   </main>
 '''
 
@@ -1004,6 +1009,11 @@ def generate_blog_index(articles):
         </div>
       </div>
     </section>
+
+    <figure class="content-figure">
+      <img src="/assets/images/content/industry-intelligence-dashboard.svg" alt="Industry intelligence dashboard showing salary trends, market size, and hiring data" width="1200" height="500" loading="lazy">
+      <figcaption>Market intelligence: salary trends, hiring velocity, and industry data updated weekly.</figcaption>
+    </figure>
   </main>
 '''
 

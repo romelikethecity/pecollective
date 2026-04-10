@@ -180,7 +180,20 @@ def generate_page(entry):
       <div class="methodology">
         <strong>How we evaluated:</strong> {entry['methodology']}
       </div>
+'''
 
+    # Inject content image if specified
+    if entry.get('content_image'):
+        img_filename = entry['content_image']
+        img_alt = f"{entry.get('tool_name', entry.get('title', ''))} alternatives pricing comparison chart"
+        html += f'''
+      <figure class="content-figure">
+        <img src="/assets/images/content/{img_filename}" alt="{img_alt}" loading="lazy" width="800" height="400">
+        <figcaption>Pricing comparison across top {entry.get('tool_name', '')} alternatives. Data verified by PE Collective.</figcaption>
+      </figure>
+'''
+
+    html += f'''
       <h2>The Alternatives</h2>
       {alternatives_html}
 

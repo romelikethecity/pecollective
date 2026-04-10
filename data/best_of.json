@@ -116,7 +116,8 @@
         "question": "Do AI coding assistants work with all programming languages?",
         "answer": "All five tools support major languages like Python, TypeScript, JavaScript, Go, Java, and Rust well. Performance drops for niche languages like Haskell, Elixir, or Zig. Copilot and Cursor have the broadest language coverage since they're trained on the most data. Amazon Q is specifically strong for infrastructure-as-code languages like HCL and CloudFormation YAML."
       }
-    ]
+    ],
+    "content_image": "ai-coding-assistants-comparison.svg"
   },
   {
     "slug": "best-vector-databases",
@@ -227,7 +228,8 @@
         "question": "Can I switch vector databases later without rebuilding everything?",
         "answer": "Switching is possible but not painless. You'll need to re-embed and re-index your data, update your query code, and adjust any filtering logic. The embedding vectors themselves are portable since they're just arrays of numbers. Plan for 1-2 weeks of migration work for a production system. This is why starting with the right choice matters."
       }
-    ]
+    ],
+    "content_image": "vector-database-comparison.svg"
   },
   {
     "slug": "best-prompt-engineering-courses",
@@ -370,7 +372,8 @@
         "question": "Should I learn prompt engineering for one specific model or all of them?",
         "answer": "Start with one model and learn its patterns deeply. The fundamentals (clear instructions, few-shot examples, chain-of-thought) transfer across all models. The model-specific differences (XML tags for Claude, system message behavior in GPT, grounding in Gemini) are easier to pick up once you have a strong foundation. Most practitioners end up working with 2-3 models in production anyway."
       }
-    ]
+    ],
+    "content_image": "prompt-engineering-course-comparison.svg"
   },
   {
     "slug": "best-llm-frameworks",
@@ -1100,7 +1103,8 @@
         "question": "Are open-source embedding models good enough for production?",
         "answer": "BGE-M3 and Nomic Embed v2 are both production-ready. BGE-M3 matches commercial APIs on most benchmarks. The tradeoff isn't quality. It's operational complexity. Self-hosting means managing GPU instances, model updates, and inference scaling. If your team has the infrastructure skills and the volume to justify it, open source saves significant money. If not, API-based models are worth the per-token cost."
       }
-    ]
+    ],
+    "content_image": "embedding-model-benchmarks.svg"
   },
   {
     "slug": "best-ai-writing-tools",
@@ -1387,7 +1391,7 @@
         "price": "$15/mo Pro",
         "icon": "",
         "url": "/tools/windsurf/",
-        "summary": "Cascade is Windsurf\u2019s killer feature, an AI agent that reads your codebase, plans changes, and executes across files. The autocomplete is solid but not Cursor-level. At $15/mo versus Cursor\u2019s $20, it\u2019s the value pick.",
+        "summary": "Cascade is Windsurf’s killer feature, an AI agent that reads your codebase, plans changes, and executes across files. The autocomplete is solid but not Cursor-level. At $15/mo versus Cursor’s $20, it’s the value pick.",
         "best_for": "Developers who want agent-style AI coding at a lower price",
         "caveat": "Cascade can be slow on large codebases. Autocomplete occasionally lags behind Cursor."
       },
@@ -1397,7 +1401,7 @@
         "price": "$10/mo Individual, $19/mo Business",
         "icon": "",
         "url": "/tools/github-copilot/",
-        "summary": "The default choice for most teams. Copilot\u2019s autocomplete is reliable, chat works well for explanations, and the VS Code ecosystem is unmatched. Agent mode (Copilot Workspace) is catching up but still behind Cursor and Windsurf.",
+        "summary": "The default choice for most teams. Copilot’s autocomplete is reliable, chat works well for explanations, and the VS Code ecosystem is unmatched. Agent mode (Copilot Workspace) is catching up but still behind Cursor and Windsurf.",
         "best_for": "Teams already on VS Code who want AI without switching editors",
         "caveat": "Multi-file editing is weaker than Cursor. No Composer-equivalent for complex refactors."
       },
@@ -1459,11 +1463,11 @@
     "faqs": [
       {
         "question": "What is the best AI code editor in 2026?",
-        "answer": "Cursor is the best overall. It has the strongest autocomplete, best multi-file editing (Composer), and inherits VS Code\u2019s extension ecosystem."
+        "answer": "Cursor is the best overall. It has the strongest autocomplete, best multi-file editing (Composer), and inherits VS Code’s extension ecosystem."
       },
       {
         "question": "Is Cursor better than VS Code with Copilot?",
-        "answer": "For AI features, yes. Cursor\u2019s tab completions, Composer, and agent mode outperform Copilot in our testing. But VS Code has a larger ecosystem and Copilot is more affordable at $10/mo."
+        "answer": "For AI features, yes. Cursor’s tab completions, Composer, and agent mode outperform Copilot in our testing. But VS Code has a larger ecosystem and Copilot is more affordable at $10/mo."
       },
       {
         "question": "Are AI code editors worth paying for?",
@@ -1474,7 +1478,7 @@
         "answer": "Yes. Cursor is built on VS Code and supports the same extension marketplace. Most extensions work without modification."
       },
       {
-        "question": "What\u2019s the difference between an AI code editor and an AI coding assistant?",
+        "question": "What’s the difference between an AI code editor and an AI coding assistant?",
         "answer": "AI coding assistants like Copilot are plugins that add AI features to existing editors. AI code editors like Cursor and Windsurf are full IDEs rebuilt around AI, with deeper integration into every workflow."
       }
     ]

@@ -311,7 +311,20 @@ def generate_page(entry):
     <div class="pricing-page">
       <h1>{entry['h1']}</h1>
       <p class="subtitle">{entry['intro']}</p>
+'''
 
+    # Inject content image if specified
+    if entry.get('content_image'):
+        img_filename = entry['content_image']
+        img_alt = f"{entry['tool_name']} pricing comparison chart showing plan tiers and costs"
+        html += f'''
+      <figure class="content-figure">
+        <img src="/assets/images/content/{img_filename}" alt="{img_alt}" loading="lazy" width="800" height="400">
+        <figcaption>{entry['tool_name']} pricing tiers as of April 2026. Data verified by PE Collective.</figcaption>
+      </figure>
+'''
+
+    html += f'''
       <div class="pricing-tiers">
         {tiers_html}
       </div>

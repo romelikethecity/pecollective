@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="34" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Side-by-Side Comparison</text>
+  <text x="400" y="52" fill="#a8c5cc" font-size="11" text-anchor="middle">Feature-by-feature analysis from independent testing</text>
+
+  <!-- VS visual -->
+  <rect x="60" y="80" width="300" height="240" rx="12" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <text x="210" y="120" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">Tool A</text>
+  <line x1="100" y1="140" x2="320" y2="140" stroke="#1a4a56" stroke-opacity="0.5"/>
+
+  <!-- Tool A features -->
+  <g fill="#a8c5cc" font-size="12">
+    <text x="100" y="170">Performance</text>
+    <text x="100" y="200">Pricing</text>
+    <text x="100" y="230">Ease of Use</text>
+    <text x="100" y="260">Ecosystem</text>
+    <text x="100" y="290">Support</text>
+  </g>
+  <!-- Tool A ratings -->
+  <g fill="#e8a87c" font-size="12" font-weight="600">
+    <text x="300" y="170" text-anchor="end">Strong</text>
+    <text x="300" y="200" text-anchor="end">$$</text>
+    <text x="300" y="230" text-anchor="end">Easy</text>
+    <text x="300" y="260" text-anchor="end">Large</text>
+    <text x="300" y="290" text-anchor="end">Good</text>
+  </g>
+
+  <!-- VS circle -->
+  <circle cx="400" cy="200" r="28" fill="#0a1f25" stroke="#e8a87c" stroke-width="2"/>
+  <text x="400" y="206" fill="#e8a87c" font-size="18" font-weight="700" text-anchor="middle">VS</text>
+
+  <!-- Tool B -->
+  <rect x="440" y="80" width="300" height="240" rx="12" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <text x="590" y="120" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">Tool B</text>
+  <line x1="480" y1="140" x2="700" y2="140" stroke="#1a4a56" stroke-opacity="0.5"/>
+
+  <!-- Tool B features -->
+  <g fill="#a8c5cc" font-size="12">
+    <text x="480" y="170">Performance</text>
+    <text x="480" y="200">Pricing</text>
+    <text x="480" y="230">Ease of Use</text>
+    <text x="480" y="260">Ecosystem</text>
+    <text x="480" y="290">Support</text>
+  </g>
+  <g fill="#3d8a9a" font-size="12" font-weight="600">
+    <text x="700" y="170" text-anchor="end">Faster</text>
+    <text x="700" y="200" text-anchor="end">$</text>
+    <text x="700" y="230" text-anchor="end">Moderate</text>
+    <text x="700" y="260" text-anchor="end">Growing</text>
+    <text x="700" y="290" text-anchor="end">Great</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="60" y="340" width="680" height="30" rx="6" fill="#132f38"/>
+  <text x="400" y="360" fill="#a8c5cc" font-size="11" text-anchor="middle">Read the full comparison below for detailed benchmarks, pricing, and our verdict.</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

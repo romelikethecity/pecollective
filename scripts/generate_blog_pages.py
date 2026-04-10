@@ -807,6 +807,25 @@ def generate_css_file(css_content, filename_prefix):
     return filename
 
 
+def _blog_content_image(article):
+    """Return figure HTML for the article's content image, or a default fallback."""
+    img_file = article.get('content_image')
+    if img_file:
+        title = article.get('title', '')
+        slug = article.get('slug', '')
+        alt_text = f"{title} - data visualization and comparison chart"
+        caption = f"Visual summary for {title}. Data verified by PE Collective."
+        return f'''<figure class="content-figure">
+              <img src="/assets/images/content/{img_file}" alt="{alt_text}" loading="lazy" width="800" height="400">
+              <figcaption>{caption}</figcaption>
+          </figure>'''
+    # Default fallback for articles without a specific image
+    return '''<figure class="content-figure">
+              <img src="/assets/images/content/blog-article-default.svg" alt="AI industry analysis and data visualization" loading="lazy" width="800" height="400">
+              <figcaption>AI industry analysis by PE Collective.</figcaption>
+          </figure>'''
+
+
 def generate_blog_post(article, all_articles):
     """Generate a single blog post page."""
     slug = article['slug']
@@ -882,10 +901,7 @@ def generate_blog_post(article, all_articles):
         <div class="article-content">
           {article['content']}
 
-          <figure class="content-figure">
-              <img src="/assets/images/content/career-guide-visual.svg" alt="AI engineering career progression from junior to principal with salary ranges" loading="lazy" width="800" height="400">
-              <figcaption>AI engineering career path: roles, skills, and compensation at each level.</figcaption>
-          </figure>
+          {_blog_content_image(article)}
 
           <!-- Author Bio -->
           <div class="author-bio">

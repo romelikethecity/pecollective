@@ -86,6 +86,22 @@ def generate_itemlist_schema(entry):
     return json.dumps(schema, indent=2)
 
 
+def _bestof_content_image(entry):
+    """Return figure HTML for the best-of entry's content image, if set."""
+    img_file = entry.get('content_image')
+    if not img_file:
+        return ''
+    title = entry.get('title', '')
+    alt_text = f"{title} - comparison chart and benchmark data"
+    caption = f"Comparison data for {title}. Verified by PE Collective."
+    return f'''<div style="max-width: 800px; margin: 0 auto 48px;">
+          <figure class="content-figure" style="margin: 0;">
+            <img src="/assets/images/content/{img_file}" alt="{alt_text}" loading="lazy" width="800" height="400">
+            <figcaption>{caption}</figcaption>
+          </figure>
+        </div>'''
+
+
 def generate_best_of_page(entry):
     """Generate a full best-of roundup page HTML."""
     slug = entry['slug']
@@ -595,6 +611,8 @@ def generate_best_of_page(entry):
         <div class="bestof-intro">
             {intro_html}
         </div>
+
+        {_bestof_content_image(entry)}
 
         <div class="quick-picks">
           <h2>Our Top Picks</h2>

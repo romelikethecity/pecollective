@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Decorative abstract data visualization -->
+
+  <!-- Grid background -->
+  <g stroke="#1a4a56" stroke-opacity="0.2" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="500" y1="0" x2="500" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
+    <line x1="700" y1="0" x2="700" y2="400"/>
+  </g>
+
+  <!-- Abstract trend line (gold) -->
+  <polyline
+    points="40,320 100,300 160,310 220,260 280,240 340,220 400,180 460,190 520,140 580,120 640,90 700,80 760,60"
+    fill="none"
+    stroke="#e8a87c"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Gold area fill -->
+  <polygon
+    points="40,320 100,300 160,310 220,260 280,240 340,220 400,180 460,190 520,140 580,120 640,90 700,80 760,60 760,380 40,380"
+    fill="#e8a87c"
+    opacity="0.08"
+  />
+
+  <!-- Secondary trend line (teal) -->
+  <polyline
+    points="40,340 100,330 160,320 220,310 280,290 340,280 400,260 460,240 520,230 580,210 640,200 700,180 760,170"
+    fill="none"
+    stroke="#3d8a9a"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="8,4"
+  />
+
+  <!-- Data points on gold line -->
+  <circle cx="220" cy="260" r="4" fill="#e8a87c"/>
+  <circle cx="400" cy="180" r="4" fill="#e8a87c"/>
+  <circle cx="580" cy="120" r="4" fill="#e8a87c"/>
+  <circle cx="760" cy="60" r="4" fill="#e8a87c"/>
+
+  <!-- Central content box -->
+  <rect x="220" y="130" width="360" height="140" rx="12" fill="#132f38" fill-opacity="0.95" stroke="#1a4a56" stroke-width="1"/>
+  <text x="400" y="170" fill="#ffffff" font-size="20" font-weight="700" text-anchor="middle">AI Industry Analysis</text>
+  <text x="400" y="198" fill="#a8c5cc" font-size="13" text-anchor="middle">Data-driven insights from</text>
+  <text x="400" y="218" fill="#a8c5cc" font-size="13" text-anchor="middle">PE Collective research</text>
+  <line x1="320" y1="232" x2="480" y2="232" stroke="#e8a87c" stroke-width="2" stroke-opacity="0.5"/>
+  <text x="400" y="254" fill="#e8a87c" font-size="12" font-weight="600" text-anchor="middle">Read the full analysis below</text>
+
+  <!-- Stats decorative -->
+  <rect x="50" y="30" width="120" height="50" rx="6" fill="#132f38" fill-opacity="0.9"/>
+  <text x="110" y="52" fill="#e8a87c" font-size="18" font-weight="700" text-anchor="middle">2026</text>
+  <text x="110" y="70" fill="#6a8a94" font-size="10" text-anchor="middle">Latest Data</text>
+
+  <rect x="630" y="300" width="120" height="50" rx="6" fill="#132f38" fill-opacity="0.9"/>
+  <text x="690" y="322" fill="#3d8a9a" font-size="18" font-weight="700" text-anchor="middle">Updated</text>
+  <text x="690" y="340" fill="#6a8a94" font-size="10" text-anchor="middle">Weekly</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

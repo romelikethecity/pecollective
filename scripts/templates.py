@@ -45,6 +45,30 @@ BASE_URL = 'https://pecollective.com'
 # UTILITY FUNCTIONS
 # =============================================================================
 
+def enforce_seo_lengths(title, description, suffix_len=17):
+    """Enforce SEO length limits on title and description.
+
+    Args:
+        title: Page title (before suffix like ' | PE Collective')
+        description: Meta description
+        suffix_len: Length of suffix appended to title (default 17 for ' | PE Collective')
+
+    Returns:
+        (title, description) with enforced lengths
+    """
+    max_title = 65 - suffix_len  # 48 chars for default suffix
+    if title and len(title) > max_title:
+        title = title[:max_title - 1].rsplit(' ', 1)[0]
+    if description:
+        if len(description) > 165:
+            description = description[:162].rsplit(' ', 1)[0] + '.'
+        elif len(description) < 120:
+            description = description.rstrip('.') + '. AI tools, pricing, and career data from PE Collective.'
+            if len(description) > 165:
+                description = description[:162].rsplit(' ', 1)[0] + '.'
+    return title, description
+
+
 def slugify(text, max_length=60):
     """Convert text to URL-safe slug"""
     if pd.isna(text) or not text:
@@ -819,6 +843,9 @@ def get_html_head(title, description, page_path, include_styles=True, extra_head
     """Generate SEO-compliant head section"""
     page_path = page_path.lstrip('/')
     styles = get_base_styles() if include_styles else ''
+
+    # SEO length enforcement
+    title, description = enforce_seo_lengths(title, description)
 
     return f'''<!DOCTYPE html>
 <html lang="en">

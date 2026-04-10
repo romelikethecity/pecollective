@@ -31,6 +31,8 @@ import sys
 from collections import OrderedDict
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, SCRIPT_DIR)
+from templates import enforce_seo_lengths
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 SITE_DIR = os.path.join(PROJECT_ROOT, 'site')
@@ -478,7 +480,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
 
   <meta name="description" content="{meta_description}">
 
-  <title>AI Tools Directory — 100+ Reviews, Pricing & Comparisons | PE Collective</title>
+  <title>AI Tools Directory — Reviews, Pricing | PE Collective</title>
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pecollective.com/tools/">
@@ -836,7 +838,7 @@ def main():
 
     meta_description = (
         '100+ AI tools reviewed: code editors, LLM frameworks, vector databases, '
-        'embedding models, and more. Pricing data and head-to-head comparisons '
+        'embedding models, and more. Pricing and head-to-head comparisons '
         'updated April 2026.'
     )
     page_subtitle = (

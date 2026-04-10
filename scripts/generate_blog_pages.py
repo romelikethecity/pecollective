@@ -16,6 +16,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
 from nav_config import NAV_ITEMS, SUBSCRIBE_LINK, SUBSCRIBE_LABEL, NEWSLETTER_LINK, NEWSLETTER_LABEL, SITE_NAME, COPYRIGHT_YEAR
+from templates import enforce_seo_lengths
 
 BASE_URL = 'https://pecollective.com'
 DATA_FILE = os.path.join(os.path.dirname(script_dir), 'data', 'blog.json')
@@ -48,6 +49,7 @@ def format_date_display(date_str):
 
 def get_head_html(title, description, canonical_path, og_type='article', og_title=None, og_description=None):
     """Generate the full <head> section matching existing blog pages."""
+    title, description = enforce_seo_lengths(title, description)
     og_title = og_title or title
     og_description = og_description or description
 

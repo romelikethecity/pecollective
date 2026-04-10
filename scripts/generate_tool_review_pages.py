@@ -30,6 +30,7 @@ SITE_DIR = os.path.join(PROJECT_ROOT, 'site')
 sys.path.insert(0, SCRIPT_DIR)
 
 from nav_config import NAV_ITEMS, SITE_NAME, COPYRIGHT_YEAR
+from templates import enforce_seo_lengths
 
 BASE_URL = 'https://pecollective.com'
 
@@ -621,6 +622,9 @@ def generate_page(review):
         cta = review['comparison_cta']
         comparison_btn = f'\n              <a href="{cta["url"]}" class="btn btn--secondary">{cta["text"]}</a>'
 
+    # SEO length enforcement
+    _seo_title, _seo_desc = enforce_seo_lengths(review['title'], review['meta_description'])
+
     # Build the full HTML
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -638,9 +642,9 @@ def generate_page(review):
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="{review['meta_description']}">
+  <meta name="description" content="{_seo_desc}">
 
-  <title>{review['title']} | PE Collective</title>
+  <title>{_seo_title} | PE Collective</title>
 
   <meta property="og:title" content="{review['title']}">
   <meta property="og:description" content="{review['og_description']}">

@@ -29,7 +29,7 @@ sys.path.insert(0, script_dir)
 try:
     from templates import (
         get_html_head, get_nav_html, get_footer_html, get_cta_box, get_breadcrumb_schema,
-        get_job_posting_schema, slugify, format_salary, is_remote,
+        get_job_posting_schema, slugify, format_salary, is_remote, enforce_seo_lengths,
         BASE_URL, SITE_NAME, CSS_VARIABLES, CSS_NAV, CSS_LAYOUT, CSS_CARDS, CSS_CTA, CSS_FOOTER, CSS_JOB_PAGE,
         get_newsletter_cta_css, get_newsletter_cta_html
     )
@@ -214,6 +214,7 @@ def create_job_page(job, idx, all_jobs_df=None):
         meta_desc += f" Skills: {', '.join(skills[:3])}."
     meta_desc += " Apply now."
     meta_desc = meta_desc[:155]
+    page_title, meta_desc = enforce_seo_lengths(page_title, meta_desc)
 
     # === CANONICAL URL ===
     canonical_url = f"{BASE_URL}/jobs/{slug}/"
@@ -601,13 +602,17 @@ def create_stale_job_page(stale_slug, similar_jobs):
             </a>
         '''
 
+    _stale_title = f"{title_display} at {company_display} - Position Filled"
+    _stale_desc = f"This {title_display} position at {company_display} is no longer available. Browse similar AI and ML engineering opportunities."
+    _stale_title, _stale_desc = enforce_seo_lengths(_stale_title, _stale_desc)
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title_display} at {company_display} - Position Filled | {SITE_NAME}</title>
-    <meta name="description" content="This {title_display} position at {company_display} is no longer available. Browse similar AI and ML engineering opportunities.">
+    <title>{_stale_title} | {SITE_NAME}</title>
+    <meta name="description" content="{_stale_desc}">
     <link rel="canonical" href="{BASE_URL}/jobs/{stale_slug}/">
     <meta name="robots" content="index, follow">
 

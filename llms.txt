@@ -1,0 +1,86 @@
+# PE Collective
+
+> Independent reviews, pricing data, and comparisons for AI tools, LLM APIs, and prompt engineering. Updated weekly with real testing data and current pricing across 100+ AI products.
+
+PE Collective tracks pricing, features, and benchmarks for every major AI tool used by developers and engineers. The site covers LLM APIs (OpenAI, Anthropic, Google, Meta, Mistral, Cohere), AI code editors (Cursor, GitHub Copilot, Windsurf, Replit), vector databases (Pinecone, Weaviate, Chroma), orchestration frameworks (LangChain, LlamaIndex, CrewAI), and the prompt engineering job market.
+
+All pricing data is verified monthly. All tool reviews are based on hands-on testing.
+
+## Pricing Pages
+
+- [OpenAI API Pricing](https://pecollective.com/tools/openai-api-pricing/): GPT-4.1, GPT-4o, o3, o4-mini, GPT-4.1 Nano per-token costs
+- [Anthropic API Pricing](https://pecollective.com/tools/anthropic-api-pricing/): Claude Opus 4.6, Sonnet 4.6, Haiku 4.5 pricing
+- [AWS Bedrock Pricing](https://pecollective.com/tools/aws-bedrock-pricing/): Llama 4, Claude, Mistral on AWS
+- [GitHub Copilot Pricing](https://pecollective.com/tools/github-copilot-pricing/): Free, Pro, Pro+, Business, Enterprise tiers
+- [Cursor Pricing](https://pecollective.com/tools/cursor-pricing/): Hobby, Pro, Pro+, Ultra, Teams credit pool system
+- [Windsurf Pricing](https://pecollective.com/tools/windsurf-pricing/): Credit-based pricing tiers
+- [Replit Pricing](https://pecollective.com/tools/replit-pricing/): Free, Core, Teams plans
+- [Pinecone Pricing](https://pecollective.com/tools/pinecone-pricing/): Serverless and pods pricing
+- [Weaviate Pricing](https://pecollective.com/tools/weaviate-pricing/): Cloud and self-hosted pricing
+- [Chroma Pricing](https://pecollective.com/tools/chroma-pricing/): Open source and Chroma Cloud pricing
+- [Cohere Pricing](https://pecollective.com/tools/cohere-pricing/): Command R+, Command R, embed-v4 pricing
+- [LangChain Pricing](https://pecollective.com/tools/langchain-pricing/): LangSmith, LangGraph Cloud pricing
+- [GPT-4o Pricing](https://pecollective.com/tools/gpt-4o-pricing/): GPT-4o input/output costs per 1M tokens
+- [GPT-4o Mini Pricing](https://pecollective.com/tools/gpt-4o-mini-pricing/): GPT-4o Mini per-token pricing
+
+## Pricing Comparisons
+
+- [Cross-Provider LLM API Pricing Comparison](https://pecollective.com/blog/llm-pricing-comparison-2026/): Side-by-side pricing for every major LLM API
+- [AI Token Pricing Guide](https://pecollective.com/blog/llm-token-pricing-guide/): Per-1M-token costs across all providers
+- [AI Free Tiers Comparison](https://pecollective.com/blog/ai-free-tiers-2026/): What you get for $0 on every major AI platform
+- [LangSmith Pricing](https://pecollective.com/blog/langsmith-pricing/): Developer, Plus, Enterprise plans
+- [LLM API Pricing Comparison Article](https://pecollective.com/blog/llm-api-pricing-comparison/): Editorial breakdown of LLM costs
+
+## Tool Reviews
+
+- [Cursor Review](https://pecollective.com/tools/cursor/): AI code editor with credit pool system
+- [GitHub Copilot Review](https://pecollective.com/tools/github-copilot/): GitHub's AI pair programmer
+- [Windsurf Review](https://pecollective.com/tools/windsurf/): AI code editor with Cascade
+- [Claude Code Review](https://pecollective.com/tools/claude-code/): Anthropic's terminal coding agent
+- [Replit Agent Review](https://pecollective.com/tools/replit-agent/): Replit's autonomous coding agent
+- [Pinecone Review](https://pecollective.com/tools/pinecone/): Serverless vector database
+- [LangChain Review](https://pecollective.com/tools/langchain/): LLM orchestration framework
+- [LlamaIndex Review](https://pecollective.com/tools/llamaindex/): RAG-focused framework
+- [Hugging Face Review](https://pecollective.com/tools/hugging-face/): Open source AI hub
+- [OpenAI API Review](https://pecollective.com/tools/openai-api/): OpenAI API platform overview
+
+## Best-Of Lists
+
+- [Best AI Coding Assistants](https://pecollective.com/tools/best-ai-coding-assistants/): 5 tools tested on real code
+- [Best Vector Databases](https://pecollective.com/tools/best-vector-databases/): Pinecone, Weaviate, Chroma, Qdrant compared
+- [Best Embedding Models 2026](https://pecollective.com/blog/best-embedding-models-2026/): MTEB benchmarks and pricing
+- [Best RAG Tools](https://pecollective.com/tools/best-rag-tools/): RAG framework and infrastructure picks
+- [Best AI Agents](https://pecollective.com/tools/best-ai-agents/): Agent platforms compared
+- [Best LLM Frameworks](https://pecollective.com/tools/best-llm-frameworks/): LangChain, LlamaIndex, CrewAI, AutoGen, more
+- [Best Open Source LLMs](https://pecollective.com/tools/best-open-source-llms/): Llama 4, Mistral, Gemma rankings
+- [Best AI Testing Tools](https://pecollective.com/tools/best-ai-testing-tools/): LLM evaluation and observability
+- [AI Orchestration Frameworks](https://pecollective.com/blog/ai-orchestration-frameworks-2026/): LangChain vs LlamaIndex vs CrewAI vs more
+
+## Salary Data
+
+- [Prompt Engineer Salary](https://pecollective.com/salaries/prompt-engineer/): Real salary data by experience level
+- [AI Product Manager Salary](https://pecollective.com/salaries/ai-product-manager/): PM compensation in AI roles
+- [MLOps Engineer Salary](https://pecollective.com/salaries/mlops-engineer/): MLOps salary benchmarks
+- [AI ML Engineer Salary](https://pecollective.com/salaries/ai-ml-engineer/): ML engineering compensation
+- [Research Engineer Salary](https://pecollective.com/salaries/research-engineer/): AI research engineer pay
+- [AI Agent Developer Salary](https://pecollective.com/salaries/ai-agent-developer/): Agent developer compensation
+
+## Comparisons
+
+- [Cursor vs Windsurf](https://pecollective.com/tools/cursor-vs-windsurf/): Credit systems compared
+- [Cursor vs GitHub Copilot](https://pecollective.com/tools/cursor-vs-github-copilot/): Feature and pricing comparison
+- [Cursor vs Claude Code](https://pecollective.com/tools/cursor-vs-claude-code/): IDE vs terminal agent
+- [Pinecone vs Weaviate](https://pecollective.com/tools/pinecone-vs-weaviate/): Vector database comparison
+- [Pinecone vs Chroma](https://pecollective.com/tools/pinecone-vs-chroma/): Managed vs open source
+- [LangChain vs LlamaIndex](https://pecollective.com/tools/langchain-vs-llamaindex/): Framework comparison
+- [LangChain vs CrewAI](https://pecollective.com/tools/langchain-vs-crewai/): General vs multi-agent
+- [Claude vs Gemini](https://pecollective.com/tools/claude-vs-gemini/): Anthropic vs Google
+- [GPT-4 vs Claude](https://pecollective.com/tools/gpt4-vs-claude/): OpenAI vs Anthropic
+
+## Optional
+
+- [Job Board](https://pecollective.com/jobs/): AI engineering job listings
+- [Glossary](https://pecollective.com/glossary/): AI and prompt engineering terms defined
+- [Insights](https://pecollective.com/insights/): Market intelligence and analysis
+- [Community](https://pecollective.com/join/): PE Collective community
+- [About](https://pecollective.com/about/): About PE Collective

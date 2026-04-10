@@ -422,10 +422,10 @@
         "answer": "Yes. All Copilot plans (including free) work in VS Code, JetBrains IDEs (IntelliJ, PyCharm, etc.), and Neovim. Cursor and Windsurf are VS Code forks and don't support other IDEs."
       }
     ],
-    "date_updated": "2026-04-06",
+    "date_updated": "2026-04-09",
     "deep_sections": [
       {
-        "heading": "What Are Premium Requests and How Do They Work?",
+        "heading": "GitHub Copilot Premium Requests Explained (How Pricing Works in 2026)",
         "body": [
           "Premium requests are GitHub Copilot's currency for AI-powered features beyond basic code completion. Chat messages, Agent mode actions, code reviews, and manual model selection all consume premium requests.",
           "The cost per premium request varies by feature and model. A simple Chat question using the default model costs 1 premium request. Selecting a more expensive model like Claude Opus 4.6 may cost more per request. Agent mode sessions consume multiple premium requests as the agent iterates through steps.",
@@ -434,7 +434,7 @@
         ]
       },
       {
-        "heading": "Free Tier: What You Actually Get",
+        "heading": "GitHub Copilot Free Tier 2026 - 2,000 Completions and 50 Premium Requests",
         "body": [
           "GitHub Copilot's free tier launched as a way to get developers hooked before they pay. It works. 2,000 code completions per month covers light coding \u2014 maybe 1-2 hours of active development per day. 50 premium requests per month is about 2-3 Chat interactions per day.",
           "The free tier includes access to Claude Sonnet 4.6 and GPT-4.1 in Chat. You don't get the full model lineup (no Opus 4.6 or o3), but the available models handle most coding questions well.",
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "heading": "Pro vs Pro+: When the Upgrade Makes Sense",
+        "heading": "GitHub Copilot Pro ($10/Mo) vs Pro+ ($39/Mo) - Individual Plans Compared",
         "body": [
           "Pro at $10/month gives 300 premium requests. Pro+ at $39/month gives 1,500. The 5x increase costs 3.9x the price, so Pro+ is better value per request if you need the volume.",
           "The breakeven math: if you'd use more than ~725 premium requests per month on Pro (paying $0.04 each for the overage), Pro+ saves money. That's about 36 premium requests per working day \u2014 heavy but not extreme for a developer who uses Chat frequently.",
@@ -452,7 +452,7 @@
         ]
       },
       {
-        "heading": "GitHub Copilot vs Cursor vs Windsurf: Pricing Comparison",
+        "heading": "GitHub Copilot Plans vs Cursor vs Windsurf - Pricing Comparison",
         "body": [
           "The three leading AI code editors take different approaches to pricing. Here's how they compare."
         ],
@@ -504,7 +504,7 @@
         }
       },
       {
-        "heading": "Business vs Enterprise: What's the Real Difference?",
+        "heading": "GitHub Copilot Business ($19/User) vs Enterprise ($39/User) - Real Differences",
         "body": [
           "Business ($19/user/month) and Enterprise ($39/user/month) share most features. The key differences are knowledge bases, GitHub.com Chat, custom models, and the Enterprise Cloud requirement.",
           "Business adds organization-wide policy controls, audit logs, IP indemnity, SAML SSO, and file exclusion (prevent Copilot from accessing certain files). For most teams under 100 developers, Business has everything you need.",

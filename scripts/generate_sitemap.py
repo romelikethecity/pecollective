@@ -102,10 +102,59 @@ with open(f'{SITE_DIR}/sitemap.xml', 'w') as f:
 
 print(f"\n Generated sitemap with {len(pages)} URLs")
 
-# Update robots.txt
-robots = f'''User-agent: *
+# Update robots.txt with explicit AI bot allowlists
+robots = f'''# PE Collective - robots.txt
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /comments/
+
+# AI/LLM crawlers - explicitly allowed for AI search citations
+User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemap location
 Sitemap: {BASE_URL}/sitemap.xml
 '''
 

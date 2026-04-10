@@ -17,6 +17,7 @@ using the external style.css stylesheet and inline tool-review CSS.
 
 import json
 import os
+import re
 import sys
 
 # Project paths
@@ -75,34 +76,96 @@ def generate_breadcrumb_schema(tool_name, slug):
     return json.dumps(schema, indent=4)
 
 
+def extract_lowest_price(pricing_entries):
+    """Extract the lowest USD dollar amount from a tool_reviews pricing list.
+
+    Returns a string like "0" or "15". Returns None if no numeric price
+    can be identified (e.g., all tiers are "Custom" or "Usage-based").
+    """
+    if not pricing_entries:
+        return None
+
+    prices = []
+    for item in pricing_entries:
+        value = str(item.get("value", "")).strip()
+        if not value:
+            continue
+
+        # Treat "Free" and any form of $0 as price 0 (strongly preferred low price)
+        if re.search(r"\bfree\b", value, re.IGNORECASE):
+            prices.append(0.0)
+            continue
+
+        # Find all dollar amounts like $15, $0.25, $1.25
+        matches = re.findall(r"\$(\d+(?:\.\d+)?)", value)
+        if matches:
+            # Take the smallest numeric value on this line (handles "$0.25/$1.25")
+            prices.append(min(float(m) for m in matches))
+
+    if not prices:
+        return None
+
+    lowest = min(prices)
+    # Return integer string when whole, else keep decimals
+    if lowest == int(lowest):
+        return str(int(lowest))
+    return f"{lowest:g}"
+
+
 def generate_software_review_schema(review):
-    """Generate SoftwareApplication + Review JSON-LD schema."""
+    """Generate SoftwareApplication + Review JSON-LD schema.
+
+    Includes offers and aggregateRating when extractable, enabling Google
+    rich results (price range, star ratings).
+    """
     schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": review["name"],
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": review.get("operating_system", "Windows, macOS, Linux"),
+        "operatingSystem": review.get("operating_system", "Web, macOS, Windows, Linux"),
         "url": review["url"],
-        "review": {
-            "@type": "Review",
-            "author": {
-                "@type": "Person",
-                "name": "Rome Thorndike"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "PE Collective"
-            },
-            "datePublished": review.get("date_published", "2026-02-20"),
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": review["rating"],
-                "bestRating": "5"
-            },
-            "reviewBody": review.get("verdict", "").replace("<p>", "").replace("</p>", " ").strip()[:500]
-        }
+        "description": review.get("meta_description", ""),
     }
+
+    # Offers (only if we can extract a numeric lowest price)
+    lowest_price = extract_lowest_price(review.get("pricing", []))
+    if lowest_price is not None:
+        schema["offers"] = {
+            "@type": "Offer",
+            "price": lowest_price,
+            "priceCurrency": "USD"
+        }
+
+    # AggregateRating (only if rating is present)
+    if review.get("rating"):
+        schema["aggregateRating"] = {
+            "@type": "AggregateRating",
+            "ratingValue": str(review["rating"]),
+            "bestRating": "5",
+            "ratingCount": "1"
+        }
+
+    # Editorial Review (preserves existing reviewer attribution)
+    schema["review"] = {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": review.get("date_published", "2026-02-20"),
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review["rating"],
+            "bestRating": "5"
+        },
+        "reviewBody": review.get("verdict", "").replace("<p>", "").replace("</p>", " ").strip()[:500]
+    }
+
     return json.dumps(schema, indent=4)
 
 

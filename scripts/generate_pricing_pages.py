@@ -15,6 +15,7 @@ Each pricing page produces site/tools/{slug}/index.html with:
 
 import json
 import os
+import re
 import sys
 
 # Add scripts directory to path
@@ -50,6 +51,79 @@ def generate_faq_schema(faqs):
     }, indent=4)
 
 
+def extract_tier_price(price_str):
+    """Extract numeric USD amount from a pricing tier price field.
+
+    Handles:
+    - "$0", "$15", "$20/mo" -> 0, 15, 20
+    - "Free" -> 0
+    - "$0.15 / $0.60" -> 0.15 (picks the lowest number on the line)
+    - "Custom", "Usage-based", "Per-token" -> None
+    """
+    if price_str is None:
+        return None
+    value = str(price_str).strip()
+    if not value:
+        return None
+
+    if re.search(r"\bfree\b", value, re.IGNORECASE):
+        return 0.0
+
+    matches = re.findall(r"\$(\d+(?:\.\d+)?)", value)
+    if not matches:
+        return None
+    return min(float(m) for m in matches)
+
+
+def format_price(num):
+    """Format a numeric price as a clean string."""
+    if num == int(num):
+        return str(int(num))
+    return f"{num:g}"
+
+
+def generate_product_schema(entry):
+    """Generate Product JSON-LD schema with AggregateOffer for a pricing page.
+
+    Returns None if no numeric prices can be extracted from the tiers.
+    """
+    tiers = entry.get("tiers", [])
+    if not tiers:
+        return None
+
+    numeric_prices = []
+    for tier in tiers:
+        price = extract_tier_price(tier.get("price"))
+        if price is not None:
+            numeric_prices.append(price)
+
+    if not numeric_prices:
+        return None
+
+    low = min(numeric_prices)
+    high = max(numeric_prices)
+    tool_name = entry.get("tool_name") or entry.get("title", "")
+
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": tool_name,
+        "description": entry.get("meta_description", ""),
+        "brand": {
+            "@type": "Brand",
+            "name": tool_name
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": format_price(low),
+            "highPrice": format_price(high),
+            "priceCurrency": "USD",
+            "offerCount": str(len(tiers))
+        }
+    }
+    return json.dumps(schema, indent=4)
+
+
 def generate_breadcrumb_schema(slug, name):
     """Generate BreadcrumbList JSON-LD schema."""
     return json.dumps({
@@ -67,6 +141,16 @@ def generate_page(entry):
     """Generate a complete pricing page."""
     slug = entry['slug']
 
+    product_schema_json = generate_product_schema(entry)
+    product_schema_block = ''
+    if product_schema_json:
+        product_schema_block = f'''
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {product_schema_json}
+    </script>
+'''
+
     head = get_html_head(
         title=entry['title'],
         description=entry['meta_description'],
@@ -81,7 +165,7 @@ def generate_page(entry):
     <script type="application/ld+json">
     {generate_faq_schema(entry['faqs'])}
     </script>
-    '''
+{product_schema_block}    '''
     )
 
     nav = get_nav_html(active_page='tools')

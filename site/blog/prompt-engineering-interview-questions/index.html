@@ -239,7 +239,7 @@ Ticket: "I can't log in to my dashboard since the update" → ?</p>
 
 <p><strong>Strong answer:</strong> <a href="/glossary/chain-of-thought/">Chain-of-thought prompting</a> asks the model to show its reasoning steps before arriving at an answer. The technique was formalized in Wei et al.'s <a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener">"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"</a> (2022). Instead of jumping directly from question to conclusion, the model works through the problem incrementally.</p>
 
-<p>It improves performance because language models generate <a href="/glossary/tokens/">tokens</a> sequentially. Each token is conditioned on everything that came before it. When you force the model to generate intermediate reasoning steps, those steps become part of the context for the final answer. The model literally has more relevant information available when it produces its conclusion.</p>
+<p>It improves performance because language models generate <a href="/glossary/tokens/">tokens</a> sequentially. Each token is conditioned on everything that came before it. When you force the model to generate intermediate reasoning steps, those steps become part of the context for the final answer. The model has more relevant information available when it produces its conclusion.</p>
 
 <p>Without CoT, a model answering "What is 47 times 23?" might guess. With CoT, the model writes out "47 times 20 is 940, 47 times 3 is 141, 940 plus 141 is 1,081" and each step constrains the next, reducing errors.</p>
 

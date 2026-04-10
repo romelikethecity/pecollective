@@ -3,7 +3,7 @@
     "slug": "cursor-pricing",
     "tool_name": "Cursor",
     "tool_slug": "cursor",
-    "title": "Cursor Pricing (April 2026): Hobby, Pro, Pro+, Ultra & Teams Plans",
+    "title": "Cursor Pricing 2026 - Hobby, Pro, Pro+, Ultra & Teams Plans",
     "meta_description": "Cursor Pro costs $20/mo with a $20 credit pool. Pro+ is $60/mo. Ultra is $200/mo. Teams is $40/user. Full plan comparison with credit system explained.",
     "og_description": "Cursor pricing breakdown for 2026. Compare free, Pro, and Business plans. Hidden costs and what you actually need.",
     "h1": "Cursor Pricing: Every Plan Explained (April 2026)",
@@ -18,7 +18,7 @@
           "Basic Tab autocomplete",
           "Access to Cursor's default model",
           "Good for trying the tool before committing",
-          "No credit pool \u2014 fixed request limits"
+          "No credit pool, fixed request limits"
         ],
         "popular": false
       },
@@ -100,7 +100,7 @@
         "recommendation": "Teams at $40/user. Worth the premium over individual Pro for centralized billing, usage visibility, and SSO. Enterprise (custom) adds pooled usage across the org and dedicated support."
       }
     ],
-    "bottom_line": "Pro at $20/mo is the right starting point for most developers. The credit pool system means you only pay more if you're actively using premium models. Auto mode being unlimited is the key insight \u2014 let Cursor pick the model for routine tasks and manually select Claude or GPT-4.1 only when quality matters. If you're burning through credits, Pro+ at $60/mo gives 3x the pool. Ultra at $200/mo is for the small percentage of developers who live in Agent mode all day.",
+    "bottom_line": "Pro at $20/mo is the right starting point for most developers. The credit pool system means you only pay more if you're actively using premium models. Auto mode being unlimited is the key insight, let Cursor pick the model for routine tasks and manually select Claude or GPT-4.1 only when quality matters. If you're burning through credits, Pro+ at $60/mo gives 3x the pool. Ultra at $200/mo is for the small percentage of developers who live in Agent mode all day.",
     "internal_links": [
       {
         "text": "Cursor Review",
@@ -130,7 +130,7 @@
       },
       {
         "question": "What's the difference between Auto mode and manual model selection?",
-        "answer": "Auto mode lets Cursor pick the best model for each task automatically \u2014 it's unlimited on all paid plans and doesn't use your credit pool. Manual model selection lets you choose a specific model (like Claude Sonnet 4.6) but each request deducts from your monthly credit pool."
+        "answer": "Auto mode lets Cursor pick the best model for each task automatically, it's unlimited on all paid plans and doesn't use your credit pool. Manual model selection lets you choose a specific model (like Claude Sonnet 4.6) but each request deducts from your monthly credit pool."
       },
       {
         "question": "Is Cursor Pro worth $20/month?",
@@ -150,7 +150,7 @@
       },
       {
         "question": "Should I get Pro+ or Ultra?",
-        "answer": "Start with Pro. If you consistently exhaust your credits before month-end, upgrade to Pro+ ($60/mo). Ultra ($200/mo) is only worth it if Pro+ also runs out \u2014 that means you're doing heavy Agent mode or Composer work daily. Most developers are fine on Pro or Pro+."
+        "answer": "Start with Pro. If you consistently exhaust your credits before month-end, upgrade to Pro+ ($60/mo). Ultra ($200/mo) is only worth it if Pro+ also runs out, that means you're doing heavy Agent mode or Composer work daily. Most developers are fine on Pro or Pro+."
       },
       {
         "question": "Does Cursor offer annual billing?",
@@ -163,9 +163,9 @@
         "heading": "How the Credit Pool System Works",
         "body": [
           "In mid-2025, Cursor replaced its fixed 'fast request' system with usage-based credit pools. Each paid plan includes a monthly credit pool equal to the subscription price in dollars. Pro gets $20, Pro+ gets $60, Ultra gets $200.",
-          "When you use Auto mode (Cursor's default), it picks the best model for each task automatically. Auto mode requests are unlimited and don't draw from your credit pool. This is the most important detail in Cursor's pricing \u2014 most routine coding tasks work fine with Auto mode.",
+          "When you use Auto mode (Cursor's default), it picks the best model for each task automatically. Auto mode requests are unlimited and don't draw from your credit pool. This is the most important detail in Cursor's pricing, most routine coding tasks work fine with Auto mode.",
           "When you manually select a premium model like Claude Sonnet 4.6, GPT-4.1, or Gemini, each request deducts from your pool based on the actual API cost of that model. Cheaper models like GPT-4.1 Nano use less of your pool per request than expensive models like Claude Opus 4.6.",
-          "Your pool resets monthly. Unused credits don't roll over. If you exhaust your pool mid-month, you can still use Auto mode (unlimited) or purchase additional credits. This means Cursor never stops working \u2014 you just lose the ability to manually pick premium models."
+          "Your pool resets monthly. Unused credits don't roll over. If you exhaust your pool mid-month, you can still use Auto mode (unlimited) or purchase additional credits. This means Cursor never stops working, you just lose the ability to manually pick premium models."
         ]
       },
       {
@@ -174,16 +174,16 @@
           "The three individual paid tiers differ only in credit pool size and a few perks. All of them include the same features: Composer, Agent mode, Tab autocomplete, Chat, MCPs, skills, hooks, and cloud agents. The question is purely about usage volume.",
           "Pro ($20/mo) works for developers who use AI assistance for a few hours each day. With Auto mode unlimited, you only consume credits when you manually select a model. A developer who does 10-20 manual premium requests per day stays well within the $20 pool.",
           "Pro+ ($60/mo) is for developers who live in Cursor all day and frequently use Composer for multi-file edits or Agent mode for extended sessions. These features consume more credits per use than simple Tab completions or Chat queries. If you find yourself rationing Pro credits in the second half of each month, Pro+ solves that.",
-          "Ultra ($200/mo) is for a small group of power users who run Agent mode sessions constantly, use the most expensive models for every task, and treat Cursor as their primary development interface. Most developers never need Ultra \u2014 it exists for the ceiling."
+          "Ultra ($200/mo) is for a small group of power users who run Agent mode sessions constantly, use the most expensive models for every task, and treat Cursor as their primary development interface. Most developers never need Ultra, it exists for the ceiling."
         ]
       },
       {
         "heading": "Teams vs Individual Pro: The Math",
         "body": [
-          "Teams costs $40/user/month \u2014 double the price of individual Pro at $20/month. Is it worth it? The answer depends on your team size and operational needs.",
+          "Teams costs $40/user/month, double the price of individual Pro at $20/month. Is it worth it? The answer depends on your team size and operational needs.",
           "What Teams adds over individual Pro subscriptions: centralized billing (one invoice instead of expense reports from each developer), admin controls (manage seats, set policies), SSO integration, and usage visibility across the team. If your company requires SSO or centralized billing, Teams is the only option.",
           "What Teams doesn't add: more AI features. Every developer on Teams gets the same AI capabilities as an individual Pro subscriber. The premium is purely for organizational features.",
-          "Enterprise (custom pricing) adds pooled usage across the organization, invoice billing, and dedicated support. Pooled usage is valuable when some team members are heavy users and others are light \u2014 the credits balance out across the team instead of being wasted on light users."
+          "Enterprise (custom pricing) adds pooled usage across the organization, invoice billing, and dedicated support. Pooled usage is valuable when some team members are heavy users and others are light, the credits balance out across the team instead of being wasted on light users."
         ]
       },
       {
@@ -258,7 +258,7 @@
           "Pick the cheapest adequate model for manual requests. GPT-4.1 Nano costs a fraction of Claude Opus 4.6 per request. For simple code generation or boilerplate, Nano is fine. Save Opus for complex architecture decisions and difficult debugging.",
           "Use Tab completion instead of Chat for simple changes. Tab is cheaper than Chat, and Chat is cheaper than Composer. Match the tool to the complexity of the task.",
           "Review your usage dashboard weekly. Cursor shows your credit consumption by model, feature, and day. This data tells you whether you're on track to exhaust your pool or have room to spare. Adjust your model selection habits accordingly.",
-          "Consider annual billing only after 2-3 months of usage data. Don't commit to annual on day one \u2014 use monthly first to understand your actual consumption pattern, then switch to annual if Pro is consistently the right tier."
+          "Consider annual billing only after 2-3 months of usage data. Don't commit to annual on day one, use monthly first to understand your actual consumption pattern, then switch to annual if Pro is consistently the right tier."
         ]
       }
     ]
@@ -271,7 +271,7 @@
     "meta_description": "Copilot Free: 2K completions + 50 premium requests. Pro: $10/mo unlimited. Business: $19/user. Plan comparison with credit costs and upgrade triggers.",
     "og_description": "GitHub Copilot plan comparison for 2026. Free vs Pro vs Business vs Enterprise with real usage limits and credit costs.",
     "h1": "GitHub Copilot Pricing: Every Plan Compared (April 2026)",
-    "intro": "GitHub Copilot now has five tiers, from a useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests' \u2014 a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
+    "intro": "GitHub Copilot now has five tiers, from a useful free plan to Enterprise at $39/user. The pricing revolves around 'premium requests', a currency that powers Chat, Agent mode, code review, and model selection. The free tier's 50 premium requests per month is enough to test but not to rely on. This page breaks down every plan, what premium requests actually buy, and which tier fits different developer workflows.",
     "tiers": [
       {
         "name": "Free",
@@ -341,7 +341,7 @@
     ],
     "hidden_costs": [
       "Premium requests are consumed by Chat, Agent mode, code reviews, and model selection. A simple Chat question and a complex Agent session both use premium requests, but at different rates depending on the model.",
-      "Additional premium requests beyond your plan limit cost $0.04 each. A developer who blows through 300 Pro requests and uses 200 more pays $8 extra \u2014 at that point, Pro+ at $39/mo is better.",
+      "Additional premium requests beyond your plan limit cost $0.04 each. A developer who blows through 300 Pro requests and uses 200 more pays $8 extra, at that point, Pro+ at $39/mo is better.",
       "The free tier's 2,000 completions sound generous, but heavy users can hit that in a few days. Code completions on paid plans are unlimited.",
       "Enterprise requires GitHub Enterprise Cloud ($21/user/month separately). Total cost is $60/user/month ($39 Copilot + $21 Enterprise Cloud). This catches teams off guard.",
       "Premium request quotas reset on the 1st of each month regardless of when you subscribed. If you sign up on the 25th, you get 5 days of full quota, then it resets.",
@@ -365,7 +365,7 @@
         "recommendation": "Business at $19/user. Cheaper than Cursor Teams ($40/user) with strong admin controls. Enterprise ($39/user + $21 GitHub Enterprise Cloud) only if you need knowledge bases and custom models."
       }
     ],
-    "bottom_line": "Pro at $10/month is the best value in AI coding tools. 300 premium requests covers daily use for most developers, and unlimited completions means the core autocomplete experience is always on. Pro+ at $39/month is worth it only if you consistently exhaust Pro's limits or need access to the most expensive models. Business at $19/user undercuts Cursor Teams ($40/user) significantly. The free tier is a genuine product now, not a trial \u2014 2,000 completions per month is enough for light use.",
+    "bottom_line": "Pro at $10/month is the best value in AI coding tools. 300 premium requests covers daily use for most developers, and unlimited completions means the core autocomplete experience is always on. Pro+ at $39/month is worth it only if you consistently exhaust Pro's limits or need access to the most expensive models. Business at $19/user undercuts Cursor Teams ($40/user) significantly. The free tier is a genuine product now, not a trial, 2,000 completions per month is enough for light use.",
     "internal_links": [
       {
         "text": "GitHub Copilot Review",
@@ -403,7 +403,7 @@
       },
       {
         "question": "Is Copilot Pro worth $10/month?",
-        "answer": "For full-time developers, yes. Unlimited code completions plus 300 premium requests per month covers typical daily use. At $10/month, it's the cheapest paid AI coding tool \u2014 Cursor Pro is $20, Windsurf Pro is $15."
+        "answer": "For full-time developers, yes. Unlimited code completions plus 300 premium requests per month covers typical daily use. At $10/month, it's the cheapest paid AI coding tool. Cursor Pro is $20, Windsurf Pro is $15."
       },
       {
         "question": "Should I get Pro or Pro+?",
@@ -430,23 +430,23 @@
           "Premium requests are GitHub Copilot's currency for AI-powered features beyond basic code completion. Chat messages, Agent mode actions, code reviews, and manual model selection all consume premium requests.",
           "The cost per premium request varies by feature and model. A simple Chat question using the default model costs 1 premium request. Selecting a more expensive model like Claude Opus 4.6 may cost more per request. Agent mode sessions consume multiple premium requests as the agent iterates through steps.",
           "Your premium request quota resets on the 1st of each month. Unused requests don't roll over. If you exceed your quota, additional requests cost $0.04 each, billed to your account automatically.",
-          "Code completions (Tab autocomplete) are separate from premium requests. Free tier gets 2,000 completions per month. All paid plans get unlimited completions. This distinction matters \u2014 the core autocomplete experience works even when your premium requests are exhausted."
+          "Code completions (Tab autocomplete) are separate from premium requests. Free tier gets 2,000 completions per month. All paid plans get unlimited completions. This distinction matters, the core autocomplete experience works even when your premium requests are exhausted."
         ]
       },
       {
         "heading": "GitHub Copilot Free Tier 2026 - 2,000 Completions and 50 Premium Requests",
         "body": [
-          "GitHub Copilot's free tier launched as a way to get developers hooked before they pay. It works. 2,000 code completions per month covers light coding \u2014 maybe 1-2 hours of active development per day. 50 premium requests per month is about 2-3 Chat interactions per day.",
+          "GitHub Copilot's free tier launched as a way to get developers hooked before they pay. It works. 2,000 code completions per month covers light coding, maybe 1-2 hours of active development per day. 50 premium requests per month is about 2-3 Chat interactions per day.",
           "The free tier includes access to Claude Sonnet 4.6 and GPT-4.1 in Chat. You don't get the full model lineup (no Opus 4.6 or o3), but the available models handle most coding questions well.",
           "The limitation that bites first is usually premium requests, not completions. 50 per month means you have to be intentional about when you use Chat or Agent mode. If you're the type of developer who asks the AI a question every 10 minutes, you'll exhaust 50 requests in a single day.",
-          "The free tier works in VS Code, JetBrains, and Neovim. There's no feature lockout on IDE support \u2014 the limitation is purely on usage volume."
+          "The free tier works in VS Code, JetBrains, and Neovim. There's no feature lockout on IDE support, the limitation is purely on usage volume."
         ]
       },
       {
         "heading": "GitHub Copilot Pro ($10/Mo) vs Pro+ ($39/Mo) - Individual Plans Compared",
         "body": [
           "Pro at $10/month gives 300 premium requests. Pro+ at $39/month gives 1,500. The 5x increase costs 3.9x the price, so Pro+ is better value per request if you need the volume.",
-          "The breakeven math: if you'd use more than ~725 premium requests per month on Pro (paying $0.04 each for the overage), Pro+ saves money. That's about 36 premium requests per working day \u2014 heavy but not extreme for a developer who uses Chat frequently.",
+          "The breakeven math: if you'd use more than ~725 premium requests per month on Pro (paying $0.04 each for the overage), Pro+ saves money. That's about 36 premium requests per working day, heavy but not extreme for a developer who uses Chat frequently.",
           "Pro+ also unlocks access to all available models, including Claude Opus 4.6 and o3. Pro gives access to premium models but not the full lineup. If you specifically need Opus 4.6's reasoning quality for complex architecture questions, Pro+ is the only individual plan that provides it.",
           "Most developers should start with Pro. Track your premium request usage for 2-3 months. If you're consistently hitting 250+ requests before month-end, the upgrade to Pro+ pays for itself."
         ]
@@ -508,7 +508,7 @@
         "body": [
           "Business ($19/user/month) and Enterprise ($39/user/month) share most features. The key differences are knowledge bases, GitHub.com Chat, custom models, and the Enterprise Cloud requirement.",
           "Business adds organization-wide policy controls, audit logs, IP indemnity, SAML SSO, and file exclusion (prevent Copilot from accessing certain files). For most teams under 100 developers, Business has everything you need.",
-          "Enterprise adds knowledge bases \u2014 the ability to index your organization's repositories so Copilot can answer questions with full codebase context. It also includes GitHub.com Chat (use Copilot on github.com, not just in your IDE) and options for custom model fine-tuning.",
+          "Enterprise adds knowledge bases, the ability to index your organization's repositories so Copilot can answer questions with full codebase context. It also includes GitHub.com Chat (use Copilot on github.com, not just in your IDE) and options for custom model fine-tuning.",
           "The hidden cost: Enterprise requires GitHub Enterprise Cloud at $21/user/month. Total cost is $60/user/month ($39 + $21). This makes Enterprise 3x the cost of Business when you factor in the prerequisite. Only organizations that already have Enterprise Cloud should consider this tier.",
           "Each Enterprise user gets 1,000 premium requests per month vs Business's standard allocation. For teams doing heavy Agent mode or code review work, this higher quota matters."
         ]
@@ -587,7 +587,7 @@
         "recommendation": "Enterprise at $500/month minimum. Required for private networking, CMK encryption, or HIPAA compliance. Budget $500-2,000/month depending on vector count and query volume."
       }
     ],
-    "bottom_line": "Pinecone's free tier is generous for prototyping. The jump to Standard ($50/month minimum) is where it gets real \u2014 most production RAG applications land between $50-200/month on Standard. Enterprise at $500/month minimum is for teams that need compliance features. Read-heavy workloads (which most RAG apps are) should budget around the read unit cost ($16/million) as the primary expense driver.",
+    "bottom_line": "Pinecone's free tier is generous for prototyping. The jump to Standard ($50/month minimum) is where it gets real, most production RAG applications land between $50-200/month on Standard. Enterprise at $500/month minimum is for teams that need compliance features. Read-heavy workloads (which most RAG apps are) should budget around the read unit cost ($16/million) as the primary expense driver.",
     "internal_links": [
       {
         "text": "Pinecone Review",
@@ -749,7 +749,7 @@
       },
       {
         "persona": "Production AI application",
-        "recommendation": "GPT-4.1 at $2/$8 per 1M tokens. This is OpenAI's recommended production model \u2014 better instruction following and coding than GPT-4o at a lower price. Route simple tasks to GPT-4.1 Nano or GPT-4.1 Mini to save more."
+        "recommendation": "GPT-4.1 at $2/$8 per 1M tokens. This is OpenAI's recommended production model, better instruction following and coding than GPT-4o at a lower price. Route simple tasks to GPT-4.1 Nano or GPT-4.1 Mini to save more."
       },
       {
         "persona": "Complex reasoning or research",
@@ -760,7 +760,7 @@
         "recommendation": "GPT-4.1 Nano ($0.10/$0.40) for everything, upgraded to GPT-4.1 Mini ($0.40/$1.60) when Nano's quality falls short. Combined with batch processing (50% off), you can run a serious app for under $20/month."
       }
     ],
-    "bottom_line": "GPT-4.1 Nano at $0.10 per million input tokens is the cheapest capable model in OpenAI's lineup and handles most simple tasks. GPT-4.1 is the new production workhorse \u2014 better and cheaper than GPT-4o. For reasoning, o4-mini at $1.10/$4.40 undercuts o3 while matching it on most tasks. GPT-5 is the ceiling for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task, and use batch processing for anything that doesn't need real-time responses.",
+    "bottom_line": "GPT-4.1 Nano at $0.10 per million input tokens is the cheapest capable model in OpenAI's lineup and handles most simple tasks. GPT-4.1 is the new production workhorse, better and cheaper than GPT-4o. For reasoning, o4-mini at $1.10/$4.40 undercuts o3 while matching it on most tasks. GPT-5 is the ceiling for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task, and use batch processing for anything that doesn't need real-time responses.",
     "internal_links": [
       {
         "text": "OpenAI API Review",
@@ -894,15 +894,15 @@
         "heading": "GPT-4.1 Family: The New Production Standard",
         "body": [
           "GPT-4.1 launched as OpenAI's recommended replacement for GPT-4o. It's cheaper ($2/$8 vs $2.50/$10), has a 1 million token context window (vs 128K), and scores better on instruction-following and coding benchmarks. If your code still references <code>gpt-4o</code>, switching to <code>gpt-4.1</code> saves money while improving quality.",
-          "The GPT-4.1 family includes three variants. GPT-4.1 ($2/$8) is the main production model \u2014 strong at coding, long-context processing, and structured outputs. GPT-4.1 Mini ($0.40/$1.60) handles mid-tier tasks at 5x lower cost. GPT-4.1 Nano ($0.10/$0.40) is the budget option, ideal for classification and extraction where you don't need sophisticated reasoning.",
+          "The GPT-4.1 family includes three variants. GPT-4.1 ($2/$8) is the main production model, strong at coding, long-context processing, and structured outputs. GPT-4.1 Mini ($0.40/$1.60) handles mid-tier tasks at 5x lower cost. GPT-4.1 Nano ($0.10/$0.40) is the budget option, ideal for classification and extraction where you don't need sophisticated reasoning.",
           "All three variants share the 1 million token context window. This is significant for document processing and RAG applications that previously needed to chunk documents into 128K segments. With GPT-4.1, you can process entire codebases, legal documents, or research papers in a single request.",
-          "Cache read pricing for the GPT-4.1 family is 75% off standard input pricing. GPT-4.1's cached input rate is $0.50 per million tokens (vs $2.00 standard). For applications that send the same system prompt, few-shot examples, or document context across requests, this stacks with the already-low base price to make GPT-4.1 extremely cost-effective."
+          "Cache read pricing for the GPT-4.1 family is 75% off standard input pricing. GPT-4.1's cached input rate is $0.50 per million tokens (vs $2.00 standard). For applications that send the same system prompt, few-shot examples, or document context across requests, this stacks with the already-low base price to make GPT-4.1 very cost-effective."
         ]
       },
       {
         "heading": "GPT-5: When You Need the Ceiling",
         "body": [
-          "GPT-5 is OpenAI's most capable general-purpose model. At $1.25 per million input tokens, it's actually cheaper than GPT-4.1 on input \u2014 but output tokens cost $10 per million (vs $8 for GPT-4.1). The higher output cost is where GPT-5 gets expensive, especially for tasks that generate long responses.",
+          "GPT-5 is OpenAI's most capable general-purpose model. At $1.25 per million input tokens, it's actually cheaper than GPT-4.1 on input, but output tokens cost $10 per million (vs $8 for GPT-4.1). The higher output cost is where GPT-5 gets expensive, especially for tasks that generate long responses.",
           "Where GPT-5 shines is agentic workflows, complex multi-step reasoning, and tasks that require broad world knowledge. It also gets the best cache discount in OpenAI's lineup: 90% off cached input reads, bringing the effective cached input rate to $0.125 per million tokens.",
           "GPT-5 Mini ($0.25/$2.00) offers a budget path into GPT-5's capabilities. It's positioned between GPT-4.1 Nano and GPT-4.1 Mini in price but uses GPT-5's architecture. For applications that need GPT-5-class reasoning on a budget, this is worth testing.",
           "The practical question: when should you use GPT-5 vs GPT-4.1? GPT-4.1 wins on coding tasks, instruction following, and long-context processing. GPT-5 wins on complex reasoning, agentic tool use, and tasks requiring nuanced judgment. Most production apps should default to GPT-4.1 and only route to GPT-5 for their hardest queries."
@@ -911,9 +911,9 @@
       {
         "heading": "o-Series Reasoning Models: o3 and o4-mini",
         "body": [
-          "OpenAI's o-series models use chain-of-thought reasoning \u2014 they \"think\" before answering, using internal reasoning tokens that you pay for as output tokens. This means the visible cost per request is higher than the visible output would suggest. A short o3 answer might use 2,000 visible output tokens but 10,000 reasoning tokens behind the scenes.",
+          "OpenAI's o-series models use chain-of-thought reasoning, they \"think\" before answering, using internal reasoning tokens that you pay for as output tokens. This means the visible cost per request is higher than the visible output would suggest. A short o3 answer might use 2,000 visible output tokens but 10,000 reasoning tokens behind the scenes.",
           "o4-mini ($1.10/$4.40) is the best value reasoning model. It replaced o3-mini and outperforms it on most benchmarks while costing the same. Use it for math, science, coding problems, and any task that benefits from step-by-step reasoning. The cached input rate is $0.275 per million tokens.",
-          "o3 ($2.00/$8.00) is the flagship reasoning model. It costs roughly 2x o4-mini and offers stronger performance on the hardest problems \u2014 PhD-level math, complex logic, and multi-step scientific reasoning. For most applications, o4-mini is sufficient. Save o3 for tasks where o4-mini's accuracy drops below your threshold.",
+          "o3 ($2.00/$8.00) is the flagship reasoning model. It costs roughly 2x o4-mini and offers stronger performance on the hardest problems. PhD-level math, complex logic, and multi-step scientific reasoning. For most applications, o4-mini is sufficient. Save o3 for tasks where o4-mini's accuracy drops below your threshold.",
           "One important detail: reasoning models don't support all features. As of April 2026, o-series models support function calling and structured outputs, but some parameters like temperature and top_p behave differently. Check OpenAI's docs for the latest compatibility matrix before building reasoning model pipelines.",
           "The cost trap with reasoning models is unpredictable token usage. A query that uses 500 reasoning tokens on one request might use 5,000 on a slightly different phrasing. Set <code>max_completion_tokens</code> to cap your worst-case costs, and monitor average reasoning token usage per query type."
         ]
@@ -921,9 +921,9 @@
       {
         "heading": "Batch API: 50% Off Everything",
         "body": [
-          "OpenAI's Batch API processes requests asynchronously and returns results within 24 hours. The tradeoff for that latency is a flat 50% discount on all token costs \u2014 input and output \u2014 across every model.",
+          "OpenAI's Batch API processes requests asynchronously and returns results within 24 hours. The tradeoff for that latency is a flat 50% discount on all token costs, input and output, across every model.",
           "At batch pricing, GPT-4.1 drops to $1/$4 per million tokens. GPT-4.1 Nano drops to $0.05/$0.20. o4-mini drops to $0.55/$2.20. These are some of the lowest prices available for capable language models.",
-          "Batch processing works by uploading a JSONL file of requests. Each line is a standard API request. You submit the batch, wait for completion (usually 1-12 hours in practice, 24-hour SLA), then download results. No code changes to your prompts \u2014 just a different submission endpoint.",
+          "Batch processing works by uploading a JSONL file of requests. Each line is a standard API request. You submit the batch, wait for completion (usually 1-12 hours in practice, 24-hour SLA), then download results. No code changes to your prompts, just a different submission endpoint.",
           "Best use cases for batch: data extraction from documents, content generation, bulk classification, evaluation/grading, and dataset creation. Anything where you don't need real-time responses. If you're currently running these workloads through the standard API, switching to batch is the single biggest cost reduction available.",
           "You can combine batch pricing with prompt caching for even deeper discounts. A cached batch request through GPT-4.1 pays $0.25 per million cached input tokens and $4 per million output tokens. That's 87.5% off standard input pricing."
         ]
@@ -932,10 +932,10 @@
         "heading": "Prompt Caching: Discounts by Model Family",
         "body": [
           "OpenAI automatically caches repeated prompt prefixes and charges a reduced rate for cache reads on subsequent requests. The discount varies significantly by model family, making this a key factor in model selection for cost-sensitive applications.",
-          "GPT-5 family models get the deepest cache discount: 90% off input tokens for cache reads. This means GPT-5's effective cached input rate is just $0.125 per million tokens \u2014 cheaper than GPT-4.1 Nano's standard input rate. If your application sends the same long context repeatedly and you're using GPT-5, caching makes it remarkably affordable.",
-          "GPT-4.1 family models get 75% off cached reads. GPT-4.1's cached rate drops to $0.50 per million, GPT-4.1 Mini to $0.10, and GPT-4.1 Nano to $0.025. For applications with stable system prompts and shared context (RAG, chatbots, document processing), these cached rates make the GPT-4.1 family extremely competitive.",
+          "GPT-5 family models get the deepest cache discount: 90% off input tokens for cache reads. This means GPT-5's effective cached input rate is just $0.125 per million tokens, cheaper than GPT-4.1 Nano's standard input rate. If your application sends the same long context repeatedly and you're using GPT-5, caching makes it remarkably affordable.",
+          "GPT-4.1 family models get 75% off cached reads. GPT-4.1's cached rate drops to $0.50 per million, GPT-4.1 Mini to $0.10, and GPT-4.1 Nano to $0.025. For applications with stable system prompts and shared context (RAG, chatbots, document processing), these cached rates make the GPT-4.1 family very competitive.",
           "GPT-4o family and o-series models get 50% off cached reads. This is the weakest discount tier. o4-mini's cached rate is $0.275, o3's is $0.50, and GPT-4o's is $1.25. If you're choosing between GPT-4.1 ($0.50 cached) and GPT-4o ($1.25 cached), the caching difference alone is 2.5x.",
-          "Cache writes happen automatically when your prompt prefix exceeds a minimum length (typically 1,024 tokens). The cache has a TTL that varies by model \u2014 check OpenAI's docs for current values. Cache hits require an exact prefix match, so structure your prompts with stable content first (system prompt, few-shot examples, shared context) and variable content last (user query)."
+          "Cache writes happen automatically when your prompt prefix exceeds a minimum length (typically 1,024 tokens). The cache has a TTL that varies by model, check OpenAI's docs for current values. Cache hits require an exact prefix match, so structure your prompts with stable content first (system prompt, few-shot examples, shared context) and variable content last (user query)."
         ]
       },
       {
@@ -995,8 +995,8 @@
         "body": [
           "Abstract per-token pricing is hard to reason about. Here's what real applications actually cost based on typical usage patterns.",
           "<strong>Customer support chatbot (10K conversations/day):</strong> Average conversation uses 2,000 input tokens (system prompt + history + user message) and 500 output tokens. With GPT-4.1: (10,000 \u00d7 2,000 \u00d7 $2/1M) + (10,000 \u00d7 500 \u00d7 $8/1M) = $40 + $40 = $80/day ($2,400/month). With GPT-4.1 Nano: $2 + $2 = $4/day ($120/month). With prompt caching on GPT-4.1 (assuming 75% cache hits on the system prompt): roughly $1,800/month.",
-          "<strong>Document processing pipeline (1,000 docs/day, 10K tokens each):</strong> Input-heavy workload \u2014 10M input tokens, 500K output tokens per day. With GPT-4.1: (10M \u00d7 $2/1M) + (0.5M \u00d7 $8/1M) = $20 + $4 = $24/day ($720/month). With batch processing (50% off): $12/day ($360/month). With GPT-4.1 Nano in batch mode: $0.50 + $0.10 = $0.60/day ($18/month).",
-          "<strong>AI coding assistant (500 requests/day, complex):</strong> Average request: 5,000 input tokens (code context + instructions), 2,000 output tokens. With GPT-4.1: (500 \u00d7 5,000 \u00d7 $2/1M) + (500 \u00d7 2,000 \u00d7 $8/1M) = $5 + $8 = $13/day ($390/month). With GPT-5 for hard problems: $3.13 + $10 = $13.13/day ($394/month). Surprisingly close \u2014 GPT-5's cheaper input but pricier output roughly balances out.",
+          "<strong>Document processing pipeline (1,000 docs/day, 10K tokens each):</strong> Input-heavy workload, 10M input tokens, 500K output tokens per day. With GPT-4.1: (10M \u00d7 $2/1M) + (0.5M \u00d7 $8/1M) = $20 + $4 = $24/day ($720/month). With batch processing (50% off): $12/day ($360/month). With GPT-4.1 Nano in batch mode: $0.50 + $0.10 = $0.60/day ($18/month).",
+          "<strong>AI coding assistant (500 requests/day, complex):</strong> Average request: 5,000 input tokens (code context + instructions), 2,000 output tokens. With GPT-4.1: (500 \u00d7 5,000 \u00d7 $2/1M) + (500 \u00d7 2,000 \u00d7 $8/1M) = $5 + $8 = $13/day ($390/month). With GPT-5 for hard problems: $3.13 + $10 = $13.13/day ($394/month). Surprisingly close. GPT-5's cheaper input but pricier output roughly balances out.",
           "<strong>Reasoning-heavy analytics (200 queries/day):</strong> Average: 3,000 input tokens, 1,000 visible output tokens, 5,000 reasoning tokens. With o4-mini: (200 \u00d7 3,000 \u00d7 $1.10/1M) + (200 \u00d7 6,000 \u00d7 $4.40/1M) = $0.66 + $5.28 = $5.94/day ($178/month). With o3: $1.20 + $9.60 = $10.80/day ($324/month). The reasoning tokens are where the cost lives.",
           "<strong>High-volume SaaS with model routing (100K requests/day):</strong> Route 70% to GPT-4.1 Nano (70K \u00d7 1,500 input \u00d7 $0.10/1M + 70K \u00d7 400 output \u00d7 $0.40/1M = $1.05 + $1.12 = $2.17/day), 25% to GPT-4.1 (25K \u00d7 3,000 \u00d7 $2/1M + 25K \u00d7 1,000 \u00d7 $8/1M = $150 + $200 = $350/day), and 5% to o4-mini (5K \u00d7 3,000 \u00d7 $1.10/1M + 5K \u00d7 6,000 \u00d7 $4.40/1M = $16.50 + $132 = $148.50/day). Total: ~$500/day ($15,000/month). Without routing (everything on GPT-4.1): ~$900/day ($27,000/month). Routing saves $12,000/month.",
           "These examples assume standard API pricing. Apply batch discounts (50% off) to any non-real-time portion and caching discounts to repeated context for further savings. A well-optimized app typically spends 30-50% less than these baseline estimates."
@@ -1064,9 +1064,9 @@
       {
         "heading": "Cost Optimization Strategies",
         "body": [
-          "The biggest cost lever is model routing. Most production queries don't need GPT-4.1 \u2014 they can be handled by GPT-4.1 Nano at 20x lower cost. Build a simple classifier (which itself runs on Nano) that routes requests to the cheapest model that can handle each query type. This alone can cut costs by 60-80%.",
+          "The biggest cost lever is model routing. Most production queries don't need GPT-4.1, they can be handled by GPT-4.1 Nano at 20x lower cost. Build a simple classifier (which itself runs on Nano) that routes requests to the cheapest model that can handle each query type. This alone can cut costs by 60-80%.",
           "Prompt caching is the second lever. If you send the same system prompt, few-shot examples, or document context on every request, you're overpaying. Structure prompts so stable content comes first (cached) and variable content comes last. GPT-4.1's 75% cache discount means your 2,000-token system prompt costs $0.001 per request instead of $0.004.",
-          "Batch processing is the third lever. Any workload that doesn't need real-time responses \u2014 data processing, content generation, evaluations, nightly reports \u2014 should use the Batch API for a flat 50% discount. Combined with caching, batch GPT-4.1 processes cached input at $0.25 per million tokens.",
+          "Batch processing is the third lever. Any workload that doesn't need real-time responses, data processing, content generation, evaluations, nightly reports, should use the Batch API for a flat 50% discount. Combined with caching, batch GPT-4.1 processes cached input at $0.25 per million tokens.",
           "Output token optimization matters disproportionately because output costs 4-8x more than input. Tell the model to be concise. Set <code>max_tokens</code> to prevent runaway responses. Use structured output mode to get clean JSON instead of prose. For classification tasks, request a single word or short label instead of an explanation.",
           "Monitor and iterate. OpenAI's API returns token usage in every response. Build a dashboard that tracks cost per request by model, endpoint, and use case. Review weekly. Common findings: a debug system prompt that inflates every request by 500 tokens, a retry loop that doubles costs on timeouts, or a model assignment that hasn't been updated since you launched.",
           "One underused optimization: response format constraints. For classification tasks, use <code>response_format</code> with a JSON schema that only allows your label values. This prevents the model from generating explanations you don't need, saving output tokens. For a 10-class classifier, structured output typically uses 5-20 output tokens instead of 50-200 with free-form responses. At scale, this 10x reduction in output tokens translates directly to a 10x reduction in output costs."
@@ -1087,9 +1087,9 @@
         "heading": "Token Counting and How OpenAI Bills You",
         "body": [
           "OpenAI uses byte-pair encoding (BPE) tokenization. One token is roughly 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to 1,300-1,400 tokens. You can use OpenAI's <code>tiktoken</code> library to count tokens before sending requests.",
-          "System prompts count as input tokens on every request. A 500-token system prompt across 10,000 requests costs 5 million input tokens \u2014 $10 on GPT-4.1 before any user messages. This is why prompt caching matters: that same system prompt cached costs $2.50 instead of $10.",
+          "System prompts count as input tokens on every request. A 500-token system prompt across 10,000 requests costs 5 million input tokens, $10 on GPT-4.1 before any user messages. This is why prompt caching matters: that same system prompt cached costs $2.50 instead of $10.",
           "Function/tool definitions also count as input tokens. Defining 10 tools with detailed JSON schemas can add 2,000-5,000 tokens per request. Only include the tools each request actually needs, and keep descriptions concise.",
-          "The API response includes a <code>usage</code> object with exact <code>prompt_tokens</code>, <code>completion_tokens</code>, and (for reasoning models) <code>reasoning_tokens</code> counts. Log these for every request to build accurate cost tracking. Don't estimate \u2014 measure.",
+          "The API response includes a <code>usage</code> object with exact <code>prompt_tokens</code>, <code>completion_tokens</code>, and (for reasoning models) <code>reasoning_tokens</code> counts. Log these for every request to build accurate cost tracking. Don't estimate, measure.",
           "Image tokens depend on the image's dimensions and the <code>detail</code> parameter. A 1024x1024 image at high detail costs roughly 765 tokens. A low-detail image costs a fixed 85 tokens. If you're processing images that don't need pixel-level analysis, set <code>detail: low</code> to save 90% on image token costs."
         ]
       },
@@ -1097,10 +1097,10 @@
         "heading": "Migrating from Legacy Models",
         "body": [
           "If your application still uses GPT-4 ($30/$60), GPT-4 Turbo ($5/$15), or GPT-3.5 Turbo ($0.50/$1.50), you're overpaying significantly. Here's the migration path for each.",
-          "<strong>GPT-4 \u2192 GPT-4.1:</strong> Drop-in replacement for most use cases. GPT-4.1 is 15x cheaper ($2/$8 vs $30/$60) with better performance. The main difference is the API endpoint name \u2014 change <code>gpt-4</code> to <code>gpt-4.1</code> in your code and test. Context window jumps from 8K to 1M tokens.",
+          "<strong>GPT-4 \u2192 GPT-4.1:</strong> Drop-in replacement for most use cases. GPT-4.1 is 15x cheaper ($2/$8 vs $30/$60) with better performance. The main difference is the API endpoint name, change <code>gpt-4</code> to <code>gpt-4.1</code> in your code and test. Context window jumps from 8K to 1M tokens.",
           "<strong>GPT-4 Turbo \u2192 GPT-4.1:</strong> Also a near-drop-in replacement. GPT-4.1 is 2.5x cheaper ($2/$8 vs $5/$15) with a larger context window (1M vs 128K). Function calling and structured outputs work the same way. JSON mode is supported.",
-          "<strong>GPT-4o \u2192 GPT-4.1:</strong> Cheapest migration \u2014 saves 20% ($2/$8 vs $2.50/$10). GPT-4.1 adds the 1M context window and better instruction following. Vision capabilities are maintained. The only potential issue: GPT-4o has slightly different behavior on some creative writing tasks, so test your specific prompts.",
-          "<strong>GPT-3.5 Turbo \u2192 GPT-4.1 Nano:</strong> GPT-4.1 Nano is 5x cheaper ($0.10/$0.40 vs $0.50/$1.50) and significantly more capable. The quality jump is substantial \u2014 GPT-4.1 Nano handles tasks that GPT-3.5 Turbo struggled with, at a fraction of the cost.",
+          "<strong>GPT-4o \u2192 GPT-4.1:</strong> Cheapest migration, saves 20% ($2/$8 vs $2.50/$10). GPT-4.1 adds the 1M context window and better instruction following. Vision capabilities are maintained. The only potential issue: GPT-4o has slightly different behavior on some creative writing tasks, so test your specific prompts.",
+          "<strong>GPT-3.5 Turbo \u2192 GPT-4.1 Nano:</strong> GPT-4.1 Nano is 5x cheaper ($0.10/$0.40 vs $0.50/$1.50) and significantly more capable. The quality jump is substantial. GPT-4.1 Nano handles tasks that GPT-3.5 Turbo struggled with, at a fraction of the cost.",
           "<strong>o1 \u2192 o3 or o4-mini:</strong> o1 at $15/$60 is expensive. o3 ($2/$8) is 7.5x cheaper on input and o4-mini ($1.10/$4.40) is 13.6x cheaper. Both outperform o1 on most benchmarks. The migration requires testing because reasoning behavior differs between models, but the cost savings are dramatic.",
           "Before migrating any model, run your evaluation suite against the new model to catch behavior differences. Pricing savings mean nothing if output quality drops. Most migrations are smooth, but edge cases in creative writing, specific formatting requirements, or fine-tuned model behavior can surface during testing."
         ]
@@ -1113,7 +1113,7 @@
       },
       {
         "question": "What's the cheapest OpenAI model?",
-        "answer": "GPT-4.1 Nano at $0.10 per million input tokens and $0.40 per million output tokens. It's designed for classification, extraction, and simple tasks. With batch processing (50% off), it drops to $0.05/$0.20 \u2014 effectively free for most use cases."
+        "answer": "GPT-4.1 Nano at $0.10 per million input tokens and $0.40 per million output tokens. It's designed for classification, extraction, and simple tasks. With batch processing (50% off), it drops to $0.05/$0.20, effectively free for most use cases."
       },
       {
         "question": "Should I use GPT-4o or GPT-4.1?",
@@ -1145,7 +1145,7 @@
       },
       {
         "question": "How do I reduce my OpenAI API costs?",
-        "answer": "Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1 \u2014 20x cheaper. (2) Use the Batch API for non-real-time workloads \u2014 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first \u2014 up to 90% off repeated input tokens. Together these can cut costs by 70-85%."
+        "answer": "Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1, 20x cheaper. (2) Use the Batch API for non-real-time workloads, 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first, up to 90% off repeated input tokens. Together these can cut costs by 70-85%."
       }
     ],
     "date_updated": "2026-04-06"
@@ -1604,11 +1604,11 @@
         "heading": "Token Counting: How Claude Measures Usage",
         "body": [
           "Claude uses byte-pair encoding (BPE) tokenization, similar to other large language models. One token roughly equals 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to around 1,300-1,400 tokens.",
-          "System prompts count as input tokens on every request. If your system prompt is 500 tokens and you send 100 requests, you pay for 50,000 tokens of system prompt alone. This is where prompt caching becomes valuable \u2014 cache that system prompt and pay the write cost once, then 90% less on every subsequent read.",
+          "System prompts count as input tokens on every request. If your system prompt is 500 tokens and you send 100 requests, you pay for 50,000 tokens of system prompt alone. This is where prompt caching becomes valuable, cache that system prompt and pay the write cost once, then 90% less on every subsequent read.",
           "Images are tokenized based on their dimensions. A 1024x1024 image costs roughly 1,600 tokens. Larger images get scaled down automatically, but you can resize them yourself before sending to save on token costs. PDFs are processed page by page, with each page treated similarly to an image.",
           "Tool definitions also count as input tokens. If you define 10 tools with detailed schemas, that could add 2,000-5,000 tokens per request. Keep tool descriptions concise and only include the tools your request actually needs.",
           "The Messages API response includes a <code>usage</code> field that reports exact input and output token counts for every request. Use this to build dashboards and track costs in real time rather than estimating after the fact.",
-          "One common mistake: assuming token counts are symmetric between input and output. Output tokens cost 5x more than input tokens across all Claude models. A request that sends 10,000 input tokens and receives 2,000 output tokens costs the same as one that sends 10,000 input tokens and receives 2,000 output tokens \u2014 but the output portion accounts for roughly half the total cost despite being only 17% of the tokens. This asymmetry makes output token optimization (concise instructions, max_tokens limits, structured output formats) disproportionately valuable."
+          "One common mistake: assuming token counts are symmetric between input and output. Output tokens cost 5x more than input tokens across all Claude models. A request that sends 10,000 input tokens and receives 2,000 output tokens costs the same as one that sends 10,000 input tokens and receives 2,000 output tokens, but the output portion accounts for roughly half the total cost despite being only 17% of the tokens. This asymmetry makes output token optimization (concise instructions, max_tokens limits, structured output formats) disproportionately valuable."
         ]
       },
       {
@@ -1616,8 +1616,8 @@
         "body": [
           "The biggest cost lever is model selection. Most API users default to the most capable model, but 70-80% of typical production queries can be handled by Haiku 4.5 at $1/$5 per million tokens. Use Sonnet 4.6 for tasks requiring stronger reasoning, and reserve Opus 4.6 for your hardest problems. A tiered routing approach can cut costs by 50-70% compared to running everything through Opus.",
           "Prompt caching is the second-biggest lever. If you send the same system prompt, few-shot examples, or document context across multiple requests, enable caching. The first request pays a 25% premium to write the cache, but every subsequent request within the 5-minute TTL pays 90% less for those cached tokens. For a chatbot with a 2,000-token system prompt handling 1,000 requests per hour, caching saves roughly $4.50/hour on Sonnet 4.6.",
-          "Batch API processing offers a flat 50% discount on all token costs. The tradeoff is latency \u2014 results return within 24 hours instead of seconds. For any workload that doesn't need real-time responses (data extraction, content generation, bulk classification, evaluation), batching should be your default.",
-          "Token-level optimizations matter at scale. Shorter system prompts, compressed few-shot examples, and max_tokens limits all reduce costs. Setting max_tokens to 500 instead of 4,096 won't affect quality for short-answer tasks but prevents runaway output on edge cases. Similarly, avoid sending full conversation history when only the last few turns matter \u2014 summarize older context instead.",
+          "Batch API processing offers a flat 50% discount on all token costs. The tradeoff is latency, results return within 24 hours instead of seconds. For any workload that doesn't need real-time responses (data extraction, content generation, bulk classification, evaluation), batching should be your default.",
+          "Token-level optimizations matter at scale. Shorter system prompts, compressed few-shot examples, and max_tokens limits all reduce costs. Setting max_tokens to 500 instead of 4,096 won't affect quality for short-answer tasks but prevents runaway output on edge cases. Similarly, avoid sending full conversation history when only the last few turns matter, summarize older context instead.",
           "Monitor usage patterns weekly. The API's usage field gives exact token counts per request. Aggregate these by model, endpoint, and use case to identify where you're overspending. Common findings: a debug prompt that accidentally stayed in production, a retry loop that doubles costs on timeouts, or a document processing pipeline sending the same 50,000-token document 10 times instead of caching it."
         ],
         "table": {
@@ -1672,7 +1672,7 @@
     "meta_description": "Windsurf free: 50 completions/day. Pro: $15/mo unlimited Cascade + completions. Team pricing and credit system explained.",
     "og_description": "Windsurf pricing breakdown for 2026. Free, Pro, and Team plans compared with hidden costs and real limitations.",
     "h1": "Windsurf Pricing: Plans, Credits & Real Costs (April 2026)",
-    "intro": "Windsurf uses a credit-based pricing model. Every AI interaction costs credits, with the amount varying by model. The free tier gives 25 credits per month \u2014 enough for a few sessions. Pro at $15/month includes 500 credits. Windsurf's own SWE-1 model has a fixed credit cost, while third-party models like Claude Sonnet 4.6 charge based on actual token usage. This page covers every plan, what credits buy, and how Windsurf compares to Cursor and Copilot.",
+    "intro": "Windsurf uses a credit-based pricing model. Every AI interaction costs credits, with the amount varying by model. The free tier gives 25 credits per month, enough for a few sessions. Pro at $15/month includes 500 credits. Windsurf's own SWE-1 model has a fixed credit cost, while third-party models like Claude Sonnet 4.6 charge based on actual token usage. This page covers every plan, what credits buy, and how Windsurf compares to Cursor and Copilot.",
     "tiers": [
       {
         "name": "Free",
@@ -1728,7 +1728,7 @@
       }
     ],
     "hidden_costs": [
-      "Credits deplete at different rates depending on the AI model. Windsurf's SWE-1 model costs a fixed amount per interaction. Premium third-party models like Claude Sonnet 4.6 charge based on token volume \u2014 long conversations drain credits faster.",
+      "Credits deplete at different rates depending on the AI model. Windsurf's SWE-1 model costs a fixed amount per interaction. Premium third-party models like Claude Sonnet 4.6 charge based on token volume, long conversations drain credits faster.",
       "Add-on credits cost $10 for 250 credits if you exhaust your monthly allocation. That's $0.04 per credit, the same effective rate as the $15/500 Pro plan.",
       "Tab completions are unlimited on all plans, but Cascade (multi-file editing) and Chat consume credits. Heavy Cascade use burns through 500 credits faster than you expect.",
       "Enterprise at $60/user is 2x Teams and includes ZDR (Zero Data Retention) by default. If your organization doesn't need ZDR or advanced compliance, Teams at $30/user is sufficient.",
@@ -1748,7 +1748,7 @@
         "recommendation": "Teams at $30/user. 500 credits per user with admin controls. Cheaper than Cursor Teams ($40/user) but more than Copilot Business ($19/user)."
       }
     ],
-    "bottom_line": "Windsurf Pro at $15/month is the value play in AI code editors \u2014 $5 less than Cursor Pro and $5 more than Copilot Pro, with a solid feature set including Cascade for multi-file editing. The 500-credit monthly allocation covers typical daily coding. If you're evaluating AI code editors, Windsurf is worth testing alongside Cursor and Copilot. The free tier's 25 credits is just enough to form an opinion.",
+    "bottom_line": "Windsurf Pro at $15/month is the value play in AI code editors, $5 less than Cursor Pro and $5 more than Copilot Pro, with a solid feature set including Cascade for multi-file editing. The 500-credit monthly allocation covers typical daily coding. If you're evaluating AI code editors, Windsurf is worth testing alongside Cursor and Copilot. The free tier's 25 credits is just enough to form an opinion.",
     "internal_links": [
       {
         "text": "Windsurf Review",
@@ -2217,7 +2217,7 @@
         "recommendation": "Cloud Plus ($280/month) or Premium (custom). Plus gets you dedicated infrastructure and 99.9% SLA. Premium adds BYOC for data residency requirements."
       }
     ],
-    "bottom_line": "Self-hosted Weaviate is the best deal in vector databases \u2014 full-featured and free. Cloud Flex at $45/month is competitive with Pinecone Standard ($50/month) for teams that want managed infrastructure. The Plus and Premium tiers make sense for enterprises that need SLAs and compliance. If you have a DevOps team, self-hosted saves significant money at any scale.",
+    "bottom_line": "Self-hosted Weaviate is the best deal in vector databases, full-featured and free. Cloud Flex at $45/month is competitive with Pinecone Standard ($50/month) for teams that want managed infrastructure. The Plus and Premium tiers make sense for enterprises that need SLAs and compliance. If you have a DevOps team, self-hosted saves significant money at any scale.",
     "internal_links": [
       {
         "text": "Weaviate Review",
@@ -2455,7 +2455,7 @@
     "meta_description": "Command R+ at $2.50/$10 per 1M tokens. Embed v3 at $0.10/1M. Rerank at $2/1K. Free trial with 1K calls/mo, no credit card needed.",
     "og_description": "Cohere API pricing for every model. Command, Embed, and Rerank costs with real-world usage estimates for production apps.",
     "h1": "Cohere API Pricing: Every Model Compared (April 2026)",
-    "intro": "Cohere offers three product lines: Command (text generation), Embed (vector embeddings), and Rerank (search result reranking). Unlike OpenAI and Anthropic, Cohere has a meaningful free trial tier with 100 API calls per minute and 1,000 per month. The paid models are competitively priced \u2014 Command R+ at $2.50/$10 per million tokens is cheaper than Claude Sonnet 4.6 and GPT-4.1 for text generation. This page covers every model's pricing.",
+    "intro": "Cohere offers three product lines: Command (text generation), Embed (vector embeddings), and Rerank (search result reranking). Unlike OpenAI and Anthropic, Cohere has a meaningful free trial tier with 100 API calls per minute and 1,000 per month. The paid models are competitively priced. Command R+ at $2.50/$10 per million tokens is cheaper than Claude Sonnet 4.6 and GPT-4.1 for text generation. This page covers every model's pricing.",
     "tiers": [
       {
         "name": "Trial (Free)",
@@ -2492,7 +2492,7 @@
           "Good for classification and extraction",
           "128K context window",
           "Comparable to GPT-4.1 Nano on simple tasks",
-          "Extremely cost-effective at scale"
+          "very cost-effective at scale"
         ],
         "popular": false
       },
@@ -2505,7 +2505,7 @@
           "1024 dimensions (configurable)",
           "Multilingual support",
           "Comparable to OpenAI text-embedding-3-small",
-          "Best-in-class for search and RAG"
+          "Top for search and RAG"
         ],
         "popular": false
       },
@@ -2517,7 +2517,7 @@
           "Reranks up to 100 docs per search",
           "Dramatically improves RAG accuracy",
           "Works with any vector database",
-          "Simple API \u2014 just send query + documents",
+          "Simple API, just send query + documents",
           "Documents >500 tokens split into chunks"
         ],
         "popular": false
@@ -2526,7 +2526,7 @@
     "hidden_costs": [
       "Rerank charges per search, not per document. One search with 100 documents costs the same as one search with 10 documents (if all docs are under 500 tokens). But documents over 500 tokens get split into chunks, and each chunk counts separately.",
       "Command R+ output tokens cost 4x input tokens. Long generative responses get expensive. Use Command R ($0.15/$0.60) for tasks that don't need R+ quality.",
-      "The free trial's 1,000 calls/month is generous for prototyping but not for production. There's no pay-as-you-go middle ground \u2014 you go from free to production pricing.",
+      "The free trial's 1,000 calls/month is generous for prototyping but not for production. There's no pay-as-you-go middle ground, you go from free to production pricing.",
       "Embed v3 at $0.10/1M tokens is cheap, but embedding large document collections adds up. A million 500-word documents is roughly 650M tokens, costing $65 to embed.",
       "Cohere's pricing is competitive with OpenAI and Anthropic, but the model quality gap matters. Command R+ is strong at RAG but may lag behind Sonnet 4.6 or GPT-4.1 on general reasoning and coding tasks."
     ],
@@ -2544,7 +2544,7 @@
         "recommendation": "Cohere offers deployment on your own cloud (VPC) and on-premises options. Contact sales for enterprise pricing. This is a differentiator vs OpenAI and Anthropic, which are API-only."
       }
     ],
-    "bottom_line": "Cohere's sweet spot is RAG pipelines. Embed v3 for creating embeddings plus Rerank 3.5 for improving search results is a best-in-class combination at competitive prices. For text generation, Command R+ at $2.50/$10 is cheaper than Sonnet 4.6 ($3/$15) and GPT-4.1 ($2/$8 on output), though model quality varies by task. The free trial with 1,000 calls/month is the most generous free tier among major API providers.",
+    "bottom_line": "Cohere's sweet spot is RAG pipelines. Embed v3 for creating embeddings plus Rerank 3.5 for improving search results is a top combination at competitive prices. For text generation, Command R+ at $2.50/$10 is cheaper than Sonnet 4.6 ($3/$15) and GPT-4.1 ($2/$8 on output), though model quality varies by task. The free trial with 1,000 calls/month is the most generous free tier among major API providers.",
     "internal_links": [
       {
         "text": "Anthropic API Pricing",
@@ -2699,8 +2699,8 @@
       }
     ],
     "hidden_costs": [
-      "Bedrock's on-demand pricing for Claude matches Anthropic's direct API pricing. You're not paying a premium for the AWS wrapper \u2014 but you're also not getting a discount.",
-      "Legacy Claude models (3.5 Sonnet in Public Extended Access) now cost $6/$30 per 1M tokens \u2014 double the current Sonnet 4.6 price. If your code references old model IDs, you're overpaying.",
+      "Bedrock's on-demand pricing for Claude matches Anthropic's direct API pricing. You're not paying a premium for the AWS wrapper, but you're also not getting a discount.",
+      "Legacy Claude models (3.5 Sonnet in Public Extended Access) now cost $6/$30 per 1M tokens, double the current Sonnet 4.6 price. If your code references old model IDs, you're overpaying.",
       "Knowledge Bases adds charges for vector storage, document processing, and retrieval on top of the model inference cost. A simple RAG setup can cost $50-200/month in Bedrock-specific charges.",
       "Provisioned throughput requires 1-month minimum commitments. If your traffic drops, you still pay for reserved capacity. Only commit after you have stable baseline traffic data.",
       "Data transfer costs apply when moving data between AWS regions or out of AWS. These are standard AWS charges but easy to overlook when budgeting for AI.",
@@ -2985,7 +2985,7 @@
         "recommendation": "Batch API at $1.25/$5.00 per 1M tokens. Half the cost of synchronous GPT-4o, with 24-hour turnaround. Ideal for data labeling, content generation, and test suite evaluation."
       }
     ],
-    "bottom_line": "GPT-4o at $2.50/$10.00 per million tokens is no longer OpenAI's best value for text-only applications \u2014 GPT-4.1 is 20% cheaper and performs better on most benchmarks. But GPT-4o remains the right choice for vision and multimodal workflows where GPT-4.1 has no support. If you're starting fresh, default to GPT-4.1 for text and GPT-4o for images. If you're already running GPT-4o, the migration is straightforward since they share the same API format.",
+    "bottom_line": "GPT-4o at $2.50/$10.00 per million tokens is no longer OpenAI's best value for text-only applications. GPT-4.1 is 20% cheaper and performs better on most benchmarks. But GPT-4o remains the right choice for vision and multimodal workflows where GPT-4.1 has no support. If you're starting fresh, default to GPT-4.1 for text and GPT-4o for images. If you're already running GPT-4o, the migration is straightforward since they share the same API format.",
     "internal_links": [
       {
         "text": "Full OpenAI API pricing for all models",
@@ -3111,7 +3111,7 @@
       },
       {
         "heading": "GPT-4o vs GPT-4.1: Which Should You Use?",
-        "body": "GPT-4.1 replaced GPT-4o as OpenAI's recommended production model in January 2025. It is cheaper ($2.00/$8.00 vs $2.50/$10.00), scores higher on coding benchmarks (SWE-bench), handles instruction following better, and supports a 1 million token context window versus GPT-4o's 128K. The main reason to stay on GPT-4o is vision support \u2014 GPT-4.1 does not accept image inputs. For text-only applications, GPT-4.1 is strictly better on price and performance. The API interface is identical, so migration requires only changing the model parameter from gpt-4o to gpt-4.1.",
+        "body": "GPT-4.1 replaced GPT-4o as OpenAI's recommended production model in January 2025. It is cheaper ($2.00/$8.00 vs $2.50/$10.00), scores higher on coding benchmarks (SWE-bench), handles instruction following better, and supports a 1 million token context window versus GPT-4o's 128K. The main reason to stay on GPT-4o is vision support. GPT-4.1 does not accept image inputs. For text-only applications, GPT-4.1 is strictly better on price and performance. The API interface is identical, so migration requires only changing the model parameter from gpt-4o to gpt-4.1.",
         "table": {
           "headers": [
             "Feature",
@@ -3159,7 +3159,7 @@
       },
       {
         "heading": "GPT-4o vs GPT-4o Mini: When to Use Each",
-        "body": "GPT-4o Mini costs 94% less than GPT-4o on input tokens and 94% less on output tokens. For tasks that do not require GPT-4o's full capabilities \u2014 classification, entity extraction, simple Q&A, content routing \u2014 Mini delivers comparable results at a fraction of the cost. The quality gap shows up on complex reasoning, nuanced writing, and multi-step tool use. A common pattern is to use Mini for initial filtering or classification and route only complex requests to the full GPT-4o or GPT-4.1 model. This hybrid approach can cut API costs by 80% or more depending on your traffic mix."
+        "body": "GPT-4o Mini costs 94% less than GPT-4o on input tokens and 94% less on output tokens. For tasks that do not require GPT-4o's full capabilities, classification, entity extraction, simple Q&A, content routing. Mini delivers comparable results at a fraction of the cost. The quality gap shows up on complex reasoning, nuanced writing, and multi-step tool use. A common pattern is to use Mini for initial filtering or classification and route only complex requests to the full GPT-4o or GPT-4.1 model. This hybrid approach can cut API costs by 80% or more depending on your traffic mix."
       },
       {
         "heading": "Batch API: Half-Price GPT-4o",
@@ -3192,7 +3192,7 @@
       },
       {
         "heading": "Prompt Caching and How It Reduces GPT-4o Costs",
-        "body": "OpenAI automatically caches the prefix of your prompt. When a subsequent request starts with the same tokens, cached input tokens are billed at 50% off ($1.25/1M instead of $2.50/1M for GPT-4o). Caching works best with long, stable system prompts and few-shot examples. The cache has a short TTL \u2014 typically a few minutes \u2014 so it helps most with high-throughput applications making frequent similar requests. Structure your prompts with static content first and dynamic content last to maximize cache hits."
+        "body": "OpenAI automatically caches the prefix of your prompt. When a subsequent request starts with the same tokens, cached input tokens are billed at 50% off ($1.25/1M instead of $2.50/1M for GPT-4o). Caching works best with long, stable system prompts and few-shot examples. The cache has a short TTL, typically a few minutes, so it helps most with high-throughput applications making frequent similar requests. Structure your prompts with static content first and dynamic content last to maximize cache hits."
       },
       {
         "heading": "Real-World Cost Examples",
@@ -3307,7 +3307,7 @@
       },
       {
         "heading": "GPT-4o vs Claude Sonnet 4.6: Cross-Provider Comparison",
-        "body": "Anthropic's Claude Sonnet 4.6 is the closest competitor to GPT-4o. Claude Sonnet 4.6 costs $3.00 input and $15.00 output per million tokens \u2014 more expensive than GPT-4o on both dimensions. Claude offers a 200K context window versus GPT-4o's 128K. Performance is comparable on most benchmarks, with Claude generally stronger on long-form writing and analysis, and GPT-4o stronger on structured output and tool use. For cost-sensitive applications, GPT-4o (or better yet, GPT-4.1) has the edge.",
+        "body": "Anthropic's Claude Sonnet 4.6 is the closest competitor to GPT-4o. Claude Sonnet 4.6 costs $3.00 input and $15.00 output per million tokens, more expensive than GPT-4o on both dimensions. Claude offers a 200K context window versus GPT-4o's 128K. Performance is comparable on most benchmarks, with Claude generally stronger on long-form writing and analysis, and GPT-4o stronger on structured output and tool use. For cost-sensitive applications, GPT-4o (or better yet, GPT-4.1) has the edge.",
         "table": {
           "headers": [
             "Model",
@@ -3357,7 +3357,7 @@
       },
       {
         "heading": "Migration Guide: GPT-4o to GPT-4.1",
-        "body": "If you are running GPT-4o for text-only applications, switching to GPT-4.1 saves 20% on every API call with no quality loss. The migration is simple: change the model parameter from \"gpt-4o\" to \"gpt-4.1\" in your API calls. Both models use the same Chat Completions API format, support the same tools (function calling, structured outputs, JSON mode), and accept the same parameters. Test with a small sample first to verify output quality meets your requirements, then switch over. The only blocker is if you rely on vision input \u2014 GPT-4.1 does not support images."
+        "body": "If you are running GPT-4o for text-only applications, switching to GPT-4.1 saves 20% on every API call with no quality loss. The migration is simple: change the model parameter from \"gpt-4o\" to \"gpt-4.1\" in your API calls. Both models use the same Chat Completions API format, support the same tools (function calling, structured outputs, JSON mode), and accept the same parameters. Test with a small sample first to verify output quality meets your requirements, then switch over. The only blocker is if you rely on vision input. GPT-4.1 does not support images."
       }
     ],
     "faqs": [
@@ -3367,15 +3367,15 @@
       },
       {
         "question": "Is GPT-4o cheaper than GPT-4?",
-        "answer": "Yes. GPT-4o is significantly cheaper than the original GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($10/$30 per 1M tokens). GPT-4o costs $2.50/$10.00 \u2014 roughly 75% cheaper than GPT-4 Turbo."
+        "answer": "Yes. GPT-4o is significantly cheaper than the original GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($10/$30 per 1M tokens). GPT-4o costs $2.50/$10.00, roughly 75% cheaper than GPT-4 Turbo."
       },
       {
         "question": "Should I use GPT-4o or GPT-4.1?",
-        "answer": "Use GPT-4.1 for text-only applications \u2014 it is 20% cheaper and benchmarks higher. Use GPT-4o only if you need vision (image input) or audio capabilities, which GPT-4.1 does not support."
+        "answer": "Use GPT-4.1 for text-only applications, it is 20% cheaper and benchmarks higher. Use GPT-4o only if you need vision (image input) or audio capabilities, which GPT-4.1 does not support."
       },
       {
         "question": "What is GPT-4o Mini and when should I use it?",
-        "answer": "GPT-4o Mini costs $0.15/$0.60 per million tokens \u2014 94% cheaper than GPT-4o. Use it for simple tasks like classification, extraction, routing, and early-stage development. Switch to GPT-4o or GPT-4.1 for complex reasoning and nuanced generation."
+        "answer": "GPT-4o Mini costs $0.15/$0.60 per million tokens, 94% cheaper than GPT-4o. Use it for simple tasks like classification, extraction, routing, and early-stage development. Switch to GPT-4o or GPT-4.1 for complex reasoning and nuanced generation."
       },
       {
         "question": "Does GPT-4o have a free tier?",
@@ -3434,7 +3434,7 @@
           "50% discount on input tokens with prompt caching",
           "Output tokens remain at standard rate",
           "Best for apps with repeated system prompts",
-          "Cache hits automatic \u2014 no code changes needed"
+          "Cache hits automatic, no code changes needed"
         ],
         "popular": false
       },
@@ -3466,7 +3466,7 @@
     "hidden_costs": [
       {
         "title": "GPT-4.1 Nano is now cheaper",
-        "detail": "GPT-4.1 Nano costs $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. That is 33% cheaper on input and output. For simple classification and routing, Nano may be the better budget pick \u2014 benchmark your specific task before choosing."
+        "detail": "GPT-4.1 Nano costs $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. That is 33% cheaper on input and output. For simple classification and routing, Nano may be the better budget pick, benchmark your specific task before choosing."
       },
       {
         "title": "Output tokens cost 4x input tokens",
@@ -3504,10 +3504,10 @@
       },
       {
         "persona": "Budget production workloads",
-        "recommendation": "Compare GPT-4.1 Nano ($0.10/$0.40) versus GPT-4o Mini ($0.15/$0.60). Nano is 33% cheaper. Run both on your actual prompts and pick whichever scores higher \u2014 the cost difference is small but compounds at scale."
+        "recommendation": "Compare GPT-4.1 Nano ($0.10/$0.40) versus GPT-4o Mini ($0.15/$0.60). Nano is 33% cheaper. Run both on your actual prompts and pick whichever scores higher, the cost difference is small but compounds at scale."
       }
     ],
-    "bottom_line": "GPT-4o Mini at $0.15/$0.60 is excellent for simple tasks but now faces competition from GPT-4.1 Nano ($0.10/$0.40). For classification and routing, both are fine \u2014 pick based on benchmark performance for your specific task. For anything requiring reasoning or nuance, step up to GPT-4.1 or GPT-4o.",
+    "bottom_line": "GPT-4o Mini at $0.15/$0.60 is excellent for simple tasks but now faces competition from GPT-4.1 Nano ($0.10/$0.40). For classification and routing, both are fine, pick based on benchmark performance for your specific task. For anything requiring reasoning or nuance, step up to GPT-4.1 or GPT-4o.",
     "internal_links": [
       {
         "text": "Full OpenAI API pricing for all models",
@@ -3622,7 +3622,7 @@
       },
       {
         "heading": "GPT-4o Mini vs GPT-4o: When to Upgrade",
-        "body": "GPT-4o costs $2.50/$10.00 per million tokens \u2014 roughly 17x more than Mini on input and output. The quality gap matters most on complex reasoning, nuanced writing, multi-step tool use, and long-form content generation. Mini matches GPT-4o closely on simple classification (90%+ agreement on binary tasks) but falls behind on anything requiring chain-of-thought reasoning or subtle distinctions. A common architecture uses Mini for initial triage and routes only complex requests to GPT-4o or GPT-4.1, cutting costs by 70-80%.",
+        "body": "GPT-4o costs $2.50/$10.00 per million tokens, roughly 17x more than Mini on input and output. The quality gap matters most on complex reasoning, nuanced writing, multi-step tool use, and long-form content generation. Mini matches GPT-4o closely on simple classification (90%+ agreement on binary tasks) but falls behind on anything requiring chain-of-thought reasoning or subtle distinctions. A common architecture uses Mini for initial triage and routes only complex requests to GPT-4o or GPT-4.1, cutting costs by 70-80%.",
         "table": {
           "headers": [
             "Feature",
@@ -3707,7 +3707,7 @@
       },
       {
         "heading": "Fine-Tuning Costs for GPT-4o Mini",
-        "body": "Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Once trained, inference costs double: $0.30 input and $1.20 output per million tokens. A typical fine-tuning job on 100K training tokens costs about $0.03 for training alone. The real cost is inference \u2014 if you run 1M requests per month, the 2x inference premium adds up fast. Consider whether prompt engineering or few-shot examples can achieve the same quality before committing to fine-tuning. Fine-tuned Mini models still cannot match the reasoning ability of base GPT-4.1 or GPT-4o.",
+        "body": "Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Once trained, inference costs double: $0.30 input and $1.20 output per million tokens. A typical fine-tuning job on 100K training tokens costs about $0.03 for training alone. The real cost is inference, if you run 1M requests per month, the 2x inference premium adds up fast. Consider whether prompt engineering or few-shot examples can achieve the same quality before committing to fine-tuning. Fine-tuned Mini models still cannot match the reasoning ability of base GPT-4.1 or GPT-4o.",
         "table": {
           "headers": [
             "Cost Component",
@@ -3866,12 +3866,12 @@
         "answer": "No. GPT-4o Mini is not free through the API. New OpenAI accounts get $5 in credits which can be used for Mini. ChatGPT Free includes limited Mini access in the consumer product, but API usage always costs money."
       },
       {
-        "question": "GPT-4o Mini vs GPT-4.1 Nano \u2014 which is cheaper?",
-        "answer": "GPT-4.1 Nano is cheaper at $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. Nano is 33% less on both input and output. For new projects, benchmark both on your task \u2014 Nano is the better default unless Mini specifically outperforms."
+        "question": "GPT-4o Mini vs GPT-4.1 Nano, which is cheaper?",
+        "answer": "GPT-4.1 Nano is cheaper at $0.10/$0.40 per million tokens versus Mini's $0.15/$0.60. Nano is 33% less on both input and output. For new projects, benchmark both on your task. Nano is the better default unless Mini specifically outperforms."
       },
       {
         "question": "Can I fine-tune GPT-4o Mini?",
-        "answer": "Yes. Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Inference on fine-tuned models costs $0.30 input and $1.20 output per million tokens \u2014 double the base rate. You need at least 10 training examples, though 50-100 examples typically produce better results."
+        "answer": "Yes. Fine-tuning GPT-4o Mini costs $0.30 per 1M training tokens. Inference on fine-tuned models costs $0.30 input and $1.20 output per million tokens, double the base rate. You need at least 10 training examples, though 50-100 examples typically produce better results."
       },
       {
         "question": "What is GPT-4o Mini good for?",
@@ -3887,7 +3887,7 @@
       },
       {
         "question": "How does GPT-4o Mini compare to Claude Haiku?",
-        "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens \u2014 significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
+        "answer": "Claude Haiku 4.5 costs $0.80/$4.00 per million tokens, significantly more expensive than GPT-4o Mini at $0.15/$0.60. Mini is roughly 5x cheaper on input and 7x cheaper on output. Haiku offers a 200K context window and is generally stronger on nuanced text tasks, but Mini wins on price for simple workloads."
       }
     ],
     "date_updated": "2026-04-06"

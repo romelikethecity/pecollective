@@ -2,11 +2,11 @@
   {
     "slug": "windsurf",
     "name": "Windsurf",
-    "icon": "🌊",
+    "icon": "\ud83c\udf0a",
     "url": "https://windsurf.com",
     "category": "AI Code Editor",
     "rating": "4.5",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "Windsurf Review 2026 - AI Code Editor Pros, Cons & Pricing",
     "meta_description": "Windsurf (formerly Codeium) tested. Flows, inline completions, and agentic mode reviewed. How it compares to Cursor, what the free tier includes, and who it fits.",
     "og_description": "Windsurf AI code editor review. Flows, agentic mode, and free tier tested. Where it beats Cursor and where it falls short.",
@@ -80,17 +80,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/cursor/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "🤖",
+        "icon": "\ud83e\udd16",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Claude Code",
-        "icon": "🔧",
+        "icon": "\ud83d\udd27",
         "url": "/tools/claude-code/"
       }
     ],
@@ -136,12 +136,12 @@
   {
     "slug": "claude-code",
     "name": "Claude Code",
-    "icon": "🧠",
+    "icon": "\ud83e\udde0",
     "url": "https://docs.anthropic.com/en/docs/claude-code",
     "category": "AI Coding Agent",
     "rating": "4.7",
-    "rating_stars": "★★★★★",
-    "title": "Claude Code Review 2026",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
+    "title": "Claude Code Review 2026 - Anthropic Terminal Coding Agent Tested",
     "meta_description": "Claude Code review: Anthropic's terminal-based AI coding agent. Features, pricing, pros and cons for developers who prefer the command line.",
     "og_description": "Honest review of Claude Code, Anthropic's terminal AI coding agent. Is the command line the future of AI-assisted development?",
     "subtitle": "Anthropic's terminal-based AI coding agent. No GUI, no distractions. Just you, your codebase, and one of the smartest models available.",
@@ -214,17 +214,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/cursor/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "🤖",
+        "icon": "\ud83e\udd16",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Windsurf",
-        "icon": "🌊",
+        "icon": "\ud83c\udf0a",
         "url": "/tools/windsurf/"
       }
     ],
@@ -262,12 +262,12 @@
   {
     "slug": "langchain",
     "name": "LangChain",
-    "icon": "🔗",
+    "icon": "\ud83d\udd17",
     "url": "https://www.langchain.com/",
     "category": "LLM Framework",
     "rating": "4.2",
-    "rating_stars": "★★★★☆",
-    "title": "LangChain Review (2026): LLM Framework Pros, Cons & When to Use It",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u2606",
+    "title": "LangChain Review 2026 - LLM Framework Pros, Cons & Use Cases",
     "meta_description": "The most popular LLM framework. Chains, agents, and LCEL explained. Where LangChain excels, where the abstractions hurt, and the alternatives.",
     "og_description": "Honest review of LangChain, the most popular LLM application framework. Worth the complexity? Our take for AI professionals.",
     "subtitle": "The most popular framework for building LLM applications. Everyone uses it. Not everyone loves it. Here's why both things are true.",
@@ -330,7 +330,7 @@
     ],
     "ideal_for": [
       "<strong>AI engineers building complex multi-step agents</strong> where LangGraph's state machine model shines",
-      "<strong>Teams that need production observability</strong> since LangSmith's tracing and evaluation tools are best-in-class",
+      "<strong>Teams that need production observability</strong> since LangSmith's tracing and evaluation tools are top",
       "<strong>Projects integrating multiple LLM providers</strong> where LangChain's unified interface saves time switching between OpenAI, Anthropic, and others",
       "<strong><a href=\"/glossary/prompt-engineering/\">Prompt engineers</a> building RAG applications</strong> where the retriever/vector store abstractions accelerate development"
     ],
@@ -344,17 +344,17 @@
     "related_tools": [
       {
         "name": "LlamaIndex",
-        "icon": "🦙",
+        "icon": "\ud83e\udd99",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "CrewAI",
-        "icon": "👥",
+        "icon": "\ud83d\udc65",
         "url": "/tools/crewai/"
       },
       {
         "name": "DSPy",
-        "icon": "🧪",
+        "icon": "\ud83e\uddea",
         "url": "/tools/dspy/"
       }
     ],
@@ -404,11 +404,11 @@
   {
     "slug": "replit-agent",
     "name": "Replit Agent",
-    "icon": "🔷",
+    "icon": "\ud83d\udd37",
     "url": "https://replit.com/",
     "category": "AI Development Environment",
     "rating": "4.0",
-    "rating_stars": "★★★★☆",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u2606",
     "title": "Replit Agent Review 2026 - AI Coding From Prompt to Deploy",
     "meta_description": "Replit Agent builds and deploys apps from natural language prompts. Tested for prototyping, learning, and production. Pricing starts at $20/mo Core.",
     "og_description": "Honest review of Replit Agent, the browser-based AI development environment. Can you really build apps by describing them?",
@@ -479,21 +479,21 @@
       "<strong>Teams with specific deployment requirements</strong> since you're locked into Replit's hosting infrastructure"
     ],
     "verdict": "<p>Replit Agent is the fastest path from \"I have an idea\" to \"I have a working app.\" It's impressive for prototyping. Describe what you want in plain English, and within minutes you have a functional application deployed on a live URL. For founders validating ideas, students learning to build, and hackathon teams racing against the clock, nothing else comes close to that speed.</p><p>But it has real limits. The code it generates often needs significant cleanup for production use. The browser-based editor can't match desktop tools for serious development. And at $25/month, you're paying more than Cursor while getting a less capable coding environment. Replit Agent is best thought of as a prototyping accelerator, not a replacement for professional development tools.</p>",
-    "content": "<h2>What is Replit Agent?</h2>\n<p>Replit Agent is an AI-powered development environment that lives entirely in your browser. It combines a code editor, deployment platform, and AI agent into a single product. The pitch is simple: describe what you want to build in plain English, and Replit Agent writes the code, sets up the project, and deploys it for you.</p>\n<p>It's part of a broader trend toward \"AI-first\" development environments, but Replit takes the most aggressive stance. Where Cursor and <a href=\"/tools/windsurf/\">Windsurf</a> augment your coding, Replit Agent tries to replace as much of it as possible.</p>\n\n<h2>Key Features</h2>\n\n<h3>Natural Language App Building</h3>\n<p>This is Replit Agent's headline feature. You type something like \"build me a task management app with user authentication, drag-and-drop task boards, and dark mode\" and it starts working. It creates files, installs dependencies, sets up a database, and gives you a running application.</p>\n<p>For simple applications, the results are impressive. A basic CRUD app with authentication can be up and running in 10-15 minutes. The agent handles file structure, routing, database setup, and even basic styling without any manual intervention.</p>\n\n<h3>Instant Deployment</h3>\n<p>Every Replit project gets a URL. There's no separate deployment step, no CI/CD to configure, no server to provision. Hit deploy, and your app is live. For prototypes and demos, this removes an entire category of complexity.</p>\n\n<h3>Collaborative Editing</h3>\n<p>Replit has always been strong on collaboration. Multiple people can edit the same project simultaneously, like Google Docs for code. Combined with the AI agent, this means a team can brainstorm features and see them implemented in real time.</p>\n\n<h3>Built-in Database and Storage</h3>\n<p>Replit provides built-in database solutions (Replit Database and PostgreSQL), file storage, and secrets management. You don't need to set up external services for basic data persistence, which keeps the prototyping speed high.</p>\n\n<h2>Where Replit Agent Struggles</h2>\n<p>The code quality conversation is important. Replit Agent generates functional code, but \"functional\" and \"production-ready\" are different things. The generated code often lacks proper error handling, input validation, and the kind of defensive programming that production applications need.</p>\n<p>Complex applications hit a wall. Once you're past basic CRUD operations and need things like real-time updates, complex business logic, or custom integrations, the agent starts producing code that needs heavy manual intervention.</p>\n<p>The browser-based editor is also a limitation. Experienced developers will miss the speed, extensions, and customization of desktop editors like Cursor or even plain VS Code. Keyboard shortcuts, custom themes, debugger integration, and Git workflows are all more limited in the browser.</p>\n\n<h2>Pricing</h2>\n<p>Replit's free tier lets you create projects and experiment with the agent, but with strict compute limits. The Core plan at $25/month gives you more compute, storage, and agent usage. Teams pricing is $40/user/month with additional collaboration and admin features.</p>\n<p>For context, <a href=\"/tools/cursor/\">Cursor Pro</a> is $20/month and gives you a more powerful coding environment. But Cursor doesn't include deployment. If you factor in hosting costs separately, Replit's all-in-one pricing starts to make more sense for simple projects.</p>",
+    "content": "<h2>What is Replit Agent?</h2>\n<p>Replit Agent is an AI-powered development environment that lives entirely in your browser. It combines a code editor, deployment platform, and AI agent into a single product. The pitch is simple: describe what you want to build in plain English, and Replit Agent writes the code, sets up the project, and deploys it for you.</p>\n<p>It's part of a broader trend toward \"AI-first\" development environments, but Replit takes the most aggressive stance. Where Cursor and <a href=\"/tools/windsurf/\">Windsurf</a> augment your coding, Replit Agent tries to replace as much of it as possible.</p>\n\n<h2>Key Features</h2>\n\n<h3>Natural Language App Building</h3>\n<p>This is Replit Agent's headline feature. You type something like \"build me a task management app with user authentication, drag-and-drop task boards, and dark mode\" and it starts working. It creates files, installs dependencies, sets up a database, and gives you a running application.</p>\n<p>For simple applications, the results are impressive. A basic CRUD app with authentication can be up and running in 10-15 minutes. The agent handles file structure, routing, database setup, and even basic styling without any manual intervention.</p>\n\n<h3>Instant Deployment</h3>\n<p>Every Replit project gets a URL. There's no separate deployment step, no CI/CD to configure, no server to provision. Hit deploy, and your app is live. For prototypes and demos, this removes an entire category of complexity.</p>\n\n<h3>Collaborative Editing</h3>\n<p>Replit has always been strong on collaboration. Multiple people can edit the same project simultaneously, like Google Docs for code. Combined with the AI agent, this means a team can brainstorm features and see them implemented in real time.</p>\n\n<h3>Built-in Database and Storage</h3>\n<p>Replit provides built-in database solutions (Replit Database and PostgreSQL), file storage, and secrets management. You don't need to set up external services for basic data persistence, which keeps the prototyping speed high.</p>\n\n<h2>Where Replit Agent Struggles</h2>\n<p>The code quality conversation is important. Replit Agent generates functional code, but \"functional\" and \"production-ready\" are different things. The generated code often lacks proper error handling, input validation, and the kind of defensive programming that production applications need.</p>\n<p>Complex applications hit a wall. Once you're past basic CRUD operations and need things like real-time updates, complex business logic, or custom integrations, the agent starts producing code that needs heavy manual intervention.</p>\n<p>The browser-based editor is also a limitation. Experienced developers will miss the speed, extensions, and customization of desktop editors like Cursor or even plain VS Code. Keyboard shortcuts, custom themes, debugger integration, and Git workflows are all more limited in the browser.</p>\n\n<h2>Pricing</h2>\n<p>Replit's free tier lets you create projects and experiment with the agent, but with strict compute limits. The Core plan at $25/month gives you more compute, storage, and agent usage. Teams pricing is $40/user/month with additional collaboration and admin features.</p>\n<p>, <a href=\"/tools/cursor/\">Cursor Pro</a> is $20/month and gives you a more powerful coding environment. But Cursor doesn't include deployment. If you factor in hosting costs separately, Replit's all-in-one pricing starts to make more sense for simple projects.</p>",
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/cursor/"
       },
       {
         "name": "Windsurf",
-        "icon": "🌊",
+        "icon": "\ud83c\udf0a",
         "url": "/tools/windsurf/"
       },
       {
         "name": "Claude Code",
-        "icon": "🔧",
+        "icon": "\ud83d\udd27",
         "url": "/tools/claude-code/"
       }
     ],
@@ -539,11 +539,11 @@
   {
     "slug": "llamaindex",
     "name": "LlamaIndex",
-    "icon": "🦙",
+    "icon": "\ud83e\udd99",
     "url": "https://www.llamaindex.ai",
     "category": "LLM Framework",
     "rating": "4.4",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "LlamaIndex Review 2026 - RAG Framework Pros, Cons & Pricing",
     "meta_description": "LlamaIndex review for RAG and LLM apps. Data connectors, query engines, and LlamaCloud pricing. Free tier limits and when LangChain is a better fit.",
     "og_description": "LlamaIndex review. The data framework for RAG apps. Features, LlamaCloud pricing, and how it compares to LangChain.",
@@ -591,7 +591,7 @@
       }
     ],
     "pros": [
-      "Best-in-class RAG pipeline with multiple index types out of the box",
+      "Top RAG pipeline with multiple index types out of the box",
       "150+ data connectors for ingesting documents, APIs, databases, and more",
       "LlamaParse handles complex PDFs, tables, and images better than most alternatives",
       "Clean, intuitive API that's simpler than LangChain for data-focused tasks",
@@ -619,17 +619,17 @@
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "Pinecone",
-        "icon": "🌲",
+        "icon": "\ud83c\udf32",
         "url": "/tools/pinecone/"
       },
       {
         "name": "LangChain vs LlamaIndex",
-        "icon": "⚔️",
+        "icon": "\u2694\ufe0f",
         "url": "/tools/langchain-vs-llamaindex/"
       }
     ],
@@ -671,13 +671,13 @@
   {
     "slug": "crewai",
     "name": "CrewAI",
-    "icon": "👥",
+    "icon": "\ud83d\udc65",
     "url": "https://www.crewai.com",
     "category": "AI Agent Framework",
     "rating": "4.2",
-    "rating_stars": "★★★★",
+    "rating_stars": "\u2605\u2605\u2605\u2605",
     "title": "CrewAI Review 2026 - Multi-Agent Framework Tested & Priced",
-    "meta_description": "CrewAI reviewed for building multi-agent AI systems. Crew orchestration, tool use, and enterprise pricing. Where it works and how it compares to LangGraph and AutoGen.",
+    "meta_description": "CrewAI reviewed for multi-agent AI systems. Crew orchestration, tool use, enterprise pricing, and how it compares to AutoGen.",
     "og_description": "CrewAI review. Multi-agent AI framework tested. Pricing tiers, enterprise features, and when LangGraph is a better choice.",
     "subtitle": "Give your AI agents job titles, backstories, and tasks. Then watch them collaborate. It's multi-agent orchestration that feels surprisingly natural.",
     "cta_text": "Try CrewAI",
@@ -743,21 +743,21 @@
       "<strong>Production systems requiring deterministic behavior</strong> because agent delegation can produce variable results"
     ],
     "verdict": "<p>CrewAI makes multi-agent AI feel approachable. The role-based design, where you define agents with specific roles, goals, and backstories, maps surprisingly well to how real teams work. A researcher gathers information, an analyst processes it, a writer produces the output. It's intuitive in a way that building the same workflow in LangGraph isn't.</p><p>The tradeoff is control. When agents delegate tasks to each other, the flow becomes harder to predict and debug. For prototypes and internal tools, that's fine. For production systems where you need consistent outputs, you'll want thorough testing. The enterprise pricing also climbs steeply, going from free to $99/month to six figures. Still, for teams exploring multi-agent architectures, CrewAI is the fastest way to see if the approach works for your use case.</p>",
-    "content": "<h2>What is CrewAI?</h2>\n<p>CrewAI is an open-source Python framework for building multi-agent AI systems. The core idea is simple: instead of one AI doing everything, you create a \"crew\" of specialized agents that work together. Each agent has a role (like \"Senior Researcher\" or \"Technical Writer\"), a goal, a backstory for context, and a set of tools it can use.</p>\n<p>It's an opinionated take on the multi-agent problem. Where <a href=\"/tools/langchain/\">LangChain's LangGraph</a> gives you a blank canvas to build state machines, CrewAI gives you a framework that mirrors how human teams collaborate. That constraint makes it faster to get started but less flexible for unusual architectures.</p>\n\n<h2>Key Features</h2>\n\n<h3>Role-Based Agents</h3>\n<p>Every CrewAI agent is defined by a role, goal, and backstory. This isn't just flavor text. The role influences how the agent approaches tasks and communicates with other agents. A \"Senior Data Analyst\" agent will produce different outputs than a \"Junior Research Assistant\" even with the same underlying LLM. The backstory provides additional context that shapes the agent's perspective.</p>\n\n<h3>Task Delegation</h3>\n<p>Agents can delegate work to other agents in the crew. If a researcher agent realizes it needs data cleaned before analysis, it can hand that task to an analyst agent automatically. This emergent collaboration is CrewAI's signature feature. It's also the source of most debugging headaches, since delegation paths aren't always predictable.</p>\n\n<h3>Process Types</h3>\n<p>CrewAI supports sequential processes (agents work in order), hierarchical processes (a manager agent delegates to workers), and more recently, consensual processes where agents discuss and agree on approaches. Sequential is the most predictable. Hierarchical adds a layer of coordination that works well for complex projects.</p>\n\n<h3>Memory and Context</h3>\n<p>Crews maintain shared memory across tasks. An agent that researches a topic in task one passes that context forward to the agent writing about it in task two. Long-term memory persists across crew executions, allowing agents to learn from previous runs. This context continuity is what separates CrewAI from just chaining independent LLM calls.</p>\n\n<h3>Tool Integration</h3>\n<p>Agents can use tools for web search, file operations, API calls, and custom functions. CrewAI includes built-in tools and supports LangChain tools as well. The tool system is straightforward: define what the tool does, and the agent figures out when to use it based on its current task.</p>\n\n<h2>CrewAI vs LangChain</h2>\n<p>LangChain (specifically LangGraph) gives you lower-level control. You define nodes, edges, and state transitions. CrewAI gives you higher-level abstractions. You define agents, tasks, and processes. For multi-agent workflows, CrewAI gets you to a working prototype faster. For production systems where you need to control every decision point, LangGraph offers more precision.</p>\n<p>Many teams prototype with CrewAI to validate that a multi-agent approach works for their use case, then rebuild critical paths in LangGraph when they need tighter control.</p>\n\n<h2>Pricing</h2>\n<p>The core CrewAI framework is free and MIT licensed. The enterprise platform starts at $99/month for managed deployments with observability and monitoring. Higher tiers add dedicated support, on-premise deployment, and advanced security features. The top \"Ultra\" tier runs $120,000/year for large-scale enterprise deployments.</p>\n<p>For most developers, the open-source version is enough to build and deploy crews. The enterprise platform matters when you need production monitoring, team management, and compliance features.</p>\n\n<h2>Real-World Use Cases</h2>\n<p>CrewAI shines in content production (research, write, edit pipelines), data analysis (gather, clean, analyze, report workflows), and customer support automation (classify, research, respond teams). The pattern is the same: break a complex task into roles that a human team would have, then let the crew handle it. The framework works best when the task naturally decomposes into distinct responsibilities.</p>",
+    "content": "<h2>What is CrewAI?</h2>\n<p>CrewAI is an open-source Python framework for building multi-agent AI systems. The core idea is simple: instead of one AI doing everything, you create a \"crew\" of specialized agents that work together. Each agent has a role (like \"Senior Researcher\" or \"Technical Writer\"), a goal, a backstory , and a set of tools it can use.</p>\n<p>It's an opinionated take on the multi-agent problem. Where <a href=\"/tools/langchain/\">LangChain's LangGraph</a> gives you a blank canvas to build state machines, CrewAI gives you a framework that mirrors how human teams collaborate. That constraint makes it faster to get started but less flexible for unusual architectures.</p>\n\n<h2>Key Features</h2>\n\n<h3>Role-Based Agents</h3>\n<p>Every CrewAI agent is defined by a role, goal, and backstory. This isn't just flavor text. The role influences how the agent approaches tasks and communicates with other agents. A \"Senior Data Analyst\" agent will produce different outputs than a \"Junior Research Assistant\" even with the same underlying LLM. The backstory provides additional context that shapes the agent's perspective.</p>\n\n<h3>Task Delegation</h3>\n<p>Agents can delegate work to other agents in the crew. If a researcher agent realizes it needs data cleaned before analysis, it can hand that task to an analyst agent automatically. This emergent collaboration is CrewAI's signature feature. It's also the source of most debugging headaches, since delegation paths aren't always predictable.</p>\n\n<h3>Process Types</h3>\n<p>CrewAI supports sequential processes (agents work in order), hierarchical processes (a manager agent delegates to workers), and more recently, consensual processes where agents discuss and agree on approaches. Sequential is the most predictable. Hierarchical adds a layer of coordination that works well for complex projects.</p>\n\n<h3>Memory and Context</h3>\n<p>Crews maintain shared memory across tasks. An agent that researches a topic in task one passes that context forward to the agent writing about it in task two. Long-term memory persists across crew executions, allowing agents to learn from previous runs. This context continuity is what separates CrewAI from just chaining independent LLM calls.</p>\n\n<h3>Tool Integration</h3>\n<p>Agents can use tools for web search, file operations, API calls, and custom functions. CrewAI includes built-in tools and supports LangChain tools as well. The tool system is straightforward: define what the tool does, and the agent figures out when to use it based on its current task.</p>\n\n<h2>CrewAI vs LangChain</h2>\n<p>LangChain (specifically LangGraph) gives you lower-level control. You define nodes, edges, and state transitions. CrewAI gives you higher-level abstractions. You define agents, tasks, and processes. For multi-agent workflows, CrewAI gets you to a working prototype faster. For production systems where you need to control every decision point, LangGraph offers more precision.</p>\n<p>Many teams prototype with CrewAI to validate that a multi-agent approach works for their use case, then rebuild critical paths in LangGraph when they need tighter control.</p>\n\n<h2>Pricing</h2>\n<p>The core CrewAI framework is free and MIT licensed. The enterprise platform starts at $99/month for managed deployments with observability and monitoring. Higher tiers add dedicated support, on-premise deployment, and advanced security features. The top \"Ultra\" tier runs $120,000/year for large-scale enterprise deployments.</p>\n<p>For most developers, the open-source version is enough to build and deploy crews. The enterprise platform matters when you need production monitoring, team management, and compliance features.</p>\n\n<h2>Real-World Use Cases</h2>\n<p>CrewAI shines in content production (research, write, edit pipelines), data analysis (gather, clean, analyze, report workflows), and customer support automation (classify, research, respond teams). The pattern is the same: break a complex task into roles that a human team would have, then let the crew handle it. The framework works best when the task naturally decomposes into distinct responsibilities.</p>",
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "🦙",
+        "icon": "\ud83e\udd99",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "DSPy",
-        "icon": "🧪",
+        "icon": "\ud83e\uddea",
         "url": "/tools/dspy/"
       }
     ],
@@ -807,14 +807,14 @@
   {
     "slug": "dspy",
     "name": "DSPy",
-    "icon": "🔬",
+    "icon": "\ud83d\udd2c",
     "url": "https://dspy.ai",
     "category": "LLM Framework",
     "rating": "4.3",
-    "rating_stars": "★★★★½",
-    "title": "DSPy Review 2026",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "title": "DSPy Review 2026 - Stanford Prompt Optimization Framework Tested",
     "meta_description": "DSPy review: Stanford's framework for programming LLMs with optimizable modules instead of manual prompts. Features, pros, cons for AI developers.",
-    "og_description": "Honest review of DSPy, the Stanford framework that replaces prompt engineering with programming. Is the paradigm shift worth it?",
+    "og_description": "Honest review of DSPy, the Stanford framework that replaces prompt engineering with programming. Is the major shift worth it?",
     "subtitle": "Stop writing prompts. Start writing programs. DSPy compiles your LLM logic into optimized prompts automatically, and it works better than you'd expect.",
     "cta_text": "Try DSPy",
     "cta_url": "https://dspy.ai",
@@ -879,17 +879,17 @@
     "related_tools": [
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "🦙",
+        "icon": "\ud83e\udd99",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "CrewAI",
-        "icon": "👥",
+        "icon": "\ud83d\udc65",
         "url": "/tools/crewai/"
       }
     ],
@@ -931,11 +931,11 @@
   {
     "slug": "pinecone",
     "name": "Pinecone",
-    "icon": "🌲",
+    "icon": "\ud83c\udf32",
     "url": "https://www.pinecone.io",
     "category": "Vector Database",
     "rating": "4.5",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "Pinecone Review 2026 - Serverless Vector DB Tested at Scale",
     "meta_description": "Pinecone serverless tested for RAG and similarity search. Zero-ops setup, query performance, and scaling limits. Compared to Chroma, pgvector, and Weaviate.",
     "og_description": "Pinecone serverless review. Where it delivers on zero-ops vector search and where it hits limits at scale.",
@@ -1008,17 +1008,17 @@
     "related_tools": [
       {
         "name": "Chroma",
-        "icon": "🎨",
+        "icon": "\ud83c\udfa8",
         "url": "/tools/chroma/"
       },
       {
         "name": "pgvector",
-        "icon": "🐘",
+        "icon": "\ud83d\udc18",
         "url": "/tools/pgvector/"
       },
       {
         "name": "Weaviate",
-        "icon": "🔷",
+        "icon": "\ud83d\udd37",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1072,12 +1072,12 @@
   {
     "slug": "weaviate",
     "name": "Weaviate",
-    "icon": "🔷",
+    "icon": "\ud83d\udd37",
     "url": "https://weaviate.io",
     "category": "Vector Database",
     "rating": "4.4",
-    "rating_stars": "★★★★½",
-    "title": "Weaviate Review 2026",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "title": "Weaviate Review 2026 - Open Source Vector DB With Hybrid Search",
     "meta_description": "Weaviate review: open-source vector database with built-in vectorization and hybrid search. Features, pricing, and comparison to Pinecone for 2026.",
     "og_description": "Honest review of Weaviate, the open-source vector database with built-in AI modules. Self-host or use the cloud. Your call.",
     "subtitle": "An open-source vector database that does its own vectorization. Send it text, it handles the embeddings. That's a bigger deal than it sounds.",
@@ -1152,17 +1152,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "🌲",
+        "icon": "\ud83c\udf32",
         "url": "/tools/pinecone/"
       },
       {
         "name": "Chroma",
-        "icon": "🎨",
+        "icon": "\ud83c\udfa8",
         "url": "/tools/chroma/"
       },
       {
         "name": "pgvector",
-        "icon": "🐘",
+        "icon": "\ud83d\udc18",
         "url": "/tools/pgvector/"
       }
     ],
@@ -1208,11 +1208,11 @@
   {
     "slug": "chroma",
     "name": "Chroma",
-    "icon": "🎨",
+    "icon": "\ud83c\udfa8",
     "url": "https://www.trychroma.com",
     "category": "Vector Database",
     "rating": "4.1",
-    "rating_stars": "★★★★",
+    "rating_stars": "\u2605\u2605\u2605\u2605",
     "title": "Chroma Review 2026 - Simplest Vector DB Tested, Pros & Limits",
     "meta_description": "Chroma tested for RAG and embedding search. Python-native, runs in-memory, zero config. Where it works and where it breaks down at scale vs Pinecone and pgvector.",
     "og_description": "Chroma vector database review. The simplest option for embedding search. Where it works and when to switch to something bigger.",
@@ -1284,17 +1284,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "🌲",
+        "icon": "\ud83c\udf32",
         "url": "/tools/pinecone/"
       },
       {
         "name": "pgvector",
-        "icon": "🐘",
+        "icon": "\ud83d\udc18",
         "url": "/tools/pgvector/"
       },
       {
         "name": "Weaviate",
-        "icon": "🔷",
+        "icon": "\ud83d\udd37",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1348,11 +1348,11 @@
   {
     "slug": "pgvector",
     "name": "pgvector",
-    "icon": "🐘",
+    "icon": "\ud83d\udc18",
     "url": "https://github.com/pgvector/pgvector",
     "category": "Vector Database",
     "rating": "4.0",
-    "rating_stars": "★★★★",
+    "rating_stars": "\u2605\u2605\u2605\u2605",
     "title": "pgvector Review 2026 - Vector Search Inside Postgres Tested",
     "meta_description": "pgvector adds vector similarity search to your existing Postgres DB. HNSW and IVFFlat indexes benchmarked. When to use it vs a dedicated vector database.",
     "og_description": "pgvector review. Add vector search to Postgres without a new database. Performance benchmarks and when a dedicated vector DB makes more sense.",
@@ -1420,17 +1420,17 @@
     "related_tools": [
       {
         "name": "Pinecone",
-        "icon": "🌲",
+        "icon": "\ud83c\udf32",
         "url": "/tools/pinecone/"
       },
       {
         "name": "Chroma",
-        "icon": "🎨",
+        "icon": "\ud83c\udfa8",
         "url": "/tools/chroma/"
       },
       {
         "name": "Weaviate",
-        "icon": "🔷",
+        "icon": "\ud83d\udd37",
         "url": "/tools/weaviate/"
       }
     ],
@@ -1480,11 +1480,11 @@
   {
     "slug": "cursor",
     "name": "Cursor",
-    "icon": "⚡",
+    "icon": "\u26a1",
     "url": "https://cursor.com",
     "category": "AI Code Editor",
     "rating": "4.7",
-    "rating_stars": "★★★★★",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
     "title": "Cursor Review 2026 - AI Code Editor Tested on Real Projects",
     "meta_description": "Cursor tested on production codebases. Tab completions, Composer agent, and Cmd+K reviewed. Where it beats Copilot and Windsurf, and where it falls short.",
     "og_description": "Honest Cursor review from daily use. Tab completions, Composer, and agent mode tested. Where it excels and where it frustrates.",
@@ -1555,17 +1555,17 @@
     "related_tools": [
       {
         "name": "Windsurf",
-        "icon": "🌊",
+        "icon": "\ud83c\udf0a",
         "url": "/tools/windsurf/"
       },
       {
         "name": "GitHub Copilot",
-        "icon": "🤖",
+        "icon": "\ud83e\udd16",
         "url": "/tools/github-copilot/"
       },
       {
         "name": "Claude Code",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/claude-code/"
       }
     ],
@@ -1619,11 +1619,11 @@
   {
     "slug": "github-copilot",
     "name": "GitHub Copilot",
-    "icon": "🤖",
+    "icon": "\ud83e\udd16",
     "url": "https://github.com/features/copilot",
     "category": "AI Code Assistant",
     "rating": "4.3",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "GitHub Copilot Review 2026 - Features, Pricing & Real Performance",
     "meta_description": "GitHub Copilot reviewed after daily use. Code completions, chat, and agent mode tested. $10/mo Individual, $19/mo Business. How it compares to Cursor and Windsurf.",
     "og_description": "GitHub Copilot review for 2026. Code completions, chat, and Workspace tested. Where it wins and where Cursor pulls ahead.",
@@ -1698,17 +1698,17 @@
     "related_tools": [
       {
         "name": "Cursor",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/cursor/"
       },
       {
         "name": "Windsurf",
-        "icon": "🌊",
+        "icon": "\ud83c\udf0a",
         "url": "/tools/windsurf/"
       },
       {
         "name": "Claude Code",
-        "icon": "🧠",
+        "icon": "\ud83e\udde0",
         "url": "/tools/claude-code/"
       }
     ],
@@ -1754,15 +1754,15 @@
   {
     "slug": "anthropic-api",
     "name": "Anthropic API",
-    "icon": "🔮",
+    "icon": "\ud83d\udd2e",
     "url": "https://docs.anthropic.com",
     "category": "AI API",
     "rating": "4.8",
-    "rating_stars": "★★★★★",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u2605",
     "title": "Anthropic Claude API Review 2026 - DX, Pricing & Limits",
     "meta_description": "Anthropic Claude API reviewed for developers. SDK experience, rate limits, pricing tiers, and how it compares to OpenAI and Google for building AI apps.",
     "og_description": "Honest review of the Anthropic API for accessing Claude models. Pricing, developer experience, and how it stacks up against OpenAI.",
-    "subtitle": "The API behind Claude. Best-in-class reasoning, a developer experience that respects your time, and the model that keeps winning benchmarks.",
+    "subtitle": "The API behind Claude. Top reasoning, a developer experience that respects your time, and the model that keeps winning benchmarks.",
     "cta_text": "Get API Access",
     "cta_url": "https://console.anthropic.com",
     "comparison_cta": {
@@ -1802,7 +1802,7 @@
       }
     ],
     "pros": [
-      "Claude's reasoning quality is best-in-class for code, analysis, and nuanced tasks",
+      "Claude's reasoning quality is top for code, analysis, and nuanced tasks",
       "200K context window handles entire codebases and long documents",
       "Developer experience is clean with excellent docs, SDKs, and error messages",
       "Tiered model lineup (Haiku/Sonnet/Opus) lets you match cost to complexity"
@@ -1829,17 +1829,17 @@
     "related_tools": [
       {
         "name": "OpenAI API",
-        "icon": "🔮",
+        "icon": "\ud83d\udd2e",
         "url": "/tools/openai-api/"
       },
       {
         "name": "Claude Code",
-        "icon": "⚡",
+        "icon": "\u26a1",
         "url": "/tools/claude-code/"
       },
       {
         "name": "Hugging Face",
-        "icon": "🤗",
+        "icon": "\ud83e\udd17",
         "url": "/tools/hugging-face/"
       }
     ],
@@ -1889,11 +1889,11 @@
   {
     "slug": "openai-api",
     "name": "OpenAI API",
-    "icon": "🟢",
+    "icon": "\ud83d\udfe2",
     "url": "https://platform.openai.com",
     "category": "AI API",
     "rating": "4.6",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "OpenAI API Review 2026 - GPT-5, o3 & Every Model Compared",
     "meta_description": "OpenAI API review covering GPT-5, GPT-4.1, o3, Whisper, and DALL-E. Pricing per model, rate limits, and how it compares to Claude and Gemini for developers.",
     "og_description": "OpenAI API review for developers. Every model compared on pricing, performance, and rate limits. GPT-5, o3, and when to use Claude instead.",
@@ -1968,22 +1968,22 @@
     "related_tools": [
       {
         "name": "Anthropic API",
-        "icon": "🔮",
+        "icon": "\ud83d\udd2e",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "🦙",
+        "icon": "\ud83e\udd99",
         "url": "/tools/llamaindex/"
       },
       {
         "name": "Hugging Face",
-        "icon": "🤗",
+        "icon": "\ud83e\udd17",
         "url": "/tools/hugging-face/"
       }
     ],
@@ -2029,11 +2029,11 @@
   {
     "slug": "hugging-face",
     "name": "Hugging Face",
-    "icon": "🤗",
+    "icon": "\ud83e\udd17",
     "url": "https://huggingface.co",
     "category": "AI Model Hub",
     "rating": "4.5",
-    "rating_stars": "★★★★½",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
     "title": "Hugging Face Review 2026 - Transformers, Hub & Free Tier",
     "meta_description": "Hugging Face reviewed: Transformers library, Model Hub, Inference API, Spaces, and Pro pricing. Where it fits your ML workflow and when you need more.",
     "og_description": "Hugging Face review for 2026. Transformers, Model Hub, and pricing. What you get free and when to upgrade.",
@@ -2108,22 +2108,22 @@
     "related_tools": [
       {
         "name": "OpenAI API",
-        "icon": "🟢",
+        "icon": "\ud83d\udfe2",
         "url": "/tools/openai-api/"
       },
       {
         "name": "Anthropic API",
-        "icon": "🔮",
+        "icon": "\ud83d\udd2e",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "LlamaIndex",
-        "icon": "🦙",
+        "icon": "\ud83e\udd99",
         "url": "/tools/llamaindex/"
       }
     ],
@@ -2169,12 +2169,12 @@
   {
     "slug": "promptfoo",
     "name": "Promptfoo",
-    "icon": "🧪",
+    "icon": "\ud83e\uddea",
     "url": "https://promptfoo.dev",
     "category": "AI Testing & Evaluation",
     "rating": "4.4",
-    "rating_stars": "★★★★½",
-    "title": "Promptfoo Review 2026",
+    "rating_stars": "\u2605\u2605\u2605\u2605\u00bd",
+    "title": "Promptfoo Review 2026 - Open Source LLM Eval & Red Team Tool",
     "meta_description": "Promptfoo review: the open-source LLM testing and evaluation tool. Compare prompts, models, and catch regressions before they hit production.",
     "og_description": "Honest review of Promptfoo, the open-source tool for testing and evaluating LLM prompts. How it helps you ship better AI features, faster.",
     "subtitle": "The open-source tool that brings unit testing discipline to LLM prompts. Compare models, catch regressions, and stop guessing whether your prompts actually work.",
@@ -2244,26 +2244,26 @@
       "<strong>Developers not using Node.js</strong> who'd need to add it to their stack just for testing"
     ],
     "verdict": "<p>Promptfoo fills a gap that most AI teams don't realize they have until something breaks in production. It brings the discipline of unit testing to LLM prompts: define your test cases, set your assertions, run them against multiple models, and get a clear comparison table showing what works and what doesn't.</p><p>The YAML-based configuration is a strength. You can define hundreds of test cases without writing code, share them across the team, and run them in CI. The side-by-side model comparison alone is worth the setup time if you're deciding between Claude, GPT-4.1, and open-source alternatives for a specific task. It's not the flashiest tool in the AI stack, but it might be the one that saves you from the most embarrassing production failures.</p>",
-    "content": "<h2>What is Promptfoo?</h2>\n<p>Promptfoo is an open-source tool for testing and evaluating LLM prompts. Think of it as a testing framework specifically designed for AI: you define test cases with expected outputs, run them against one or more models, and get a comparison showing how each prompt and model combination performed.</p>\n<p>If you've ever changed a prompt, deployed it, and then discovered it broke something that used to work, Promptfoo is the tool that prevents that. It's the \"write tests before you refactor\" approach applied to prompt engineering.</p>\n\n<h2>Key Features</h2>\n\n<h3>YAML-Based Test Configuration</h3>\n<p>You define your prompts, test cases, and assertions in YAML files. Each test case has an input and expected behavior, which can be an exact match, a substring check, a regex pattern, a semantic similarity threshold, or a custom function. No code required for basic setups.</p>\n<p>A simple config might test whether your prompt correctly classifies customer support tickets. You define 50 sample tickets with their expected categories, run them against your prompt, and see the pass rate. Change the prompt, re-run, and compare.</p>\n\n<h3>Side-by-Side Model Comparison</h3>\n<p>Run the same test suite against multiple models simultaneously. Promptfoo generates a comparison table showing how Claude Sonnet, GPT-4.1, GPT-4.1 Nano, and Llama perform on your specific task. This is incredibly useful when you're deciding which model to use in production, because benchmarks don't always predict real-world performance on your data.</p>\n\n<h3>Assertion Types</h3>\n<p>Promptfoo supports a wide range of assertion types: exact match, contains, regex, JSON schema validation, cost thresholds, latency limits, and LLM-graded evaluations where you use one model to judge another's output. You can also write custom assertion functions in JavaScript or Python.</p>\n\n<h3>CI/CD Integration</h3>\n<p>Promptfoo runs from the command line and outputs results in formats compatible with CI systems. You can add prompt evaluation to your GitHub Actions, GitLab CI, or Jenkins pipeline. If a prompt change causes regressions, the build fails before it reaches production.</p>\n\n<h3>Red Teaming</h3>\n<p>Promptfoo includes a red teaming module that automatically generates adversarial inputs to test your prompts for jailbreaks, prompt injection, data leakage, and other security issues. For teams building customer-facing AI features, this catches vulnerabilities before users find them.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The core tool is open source under the MIT License. You can self-host it with all features at no cost. The cloud offering has a free tier for individual use. The Team plan at $50/month adds collaboration features, shared results, and team management. Enterprise pricing is custom.</p>\n<p>Since Promptfoo calls LLM APIs during evaluation, you'll also pay for the API tokens used in your tests. Running 100 test cases against GPT-4.1 costs roughly $0.50-$2.00 depending on prompt length.</p>\n\n<h2>How It Fits the AI Stack</h2>\n<p>Promptfoo sits between your development workflow and production deployment. It works with any LLM provider: <a href=\"/tools/openai-api/\">OpenAI</a>, <a href=\"/tools/anthropic-api/\">Anthropic</a>, local models via Ollama, and models on <a href=\"/tools/hugging-face/\">Hugging Face</a>. If you're using <a href=\"/tools/langchain/\">LangChain</a> or <a href=\"/tools/llamaindex/\">LlamaIndex</a>, Promptfoo can test the prompts those frameworks generate.</p>",
+    "content": "<h2>What is Promptfoo?</h2>\n<p>Promptfoo is an open-source tool for testing and evaluating LLM prompts. Think of it as a testing framework specifically designed for AI: you define test cases with expected outputs, run them against one or more models, and get a comparison showing how each prompt and model combination performed.</p>\n<p>If you've ever changed a prompt, deployed it, and then discovered it broke something that used to work, Promptfoo is the tool that prevents that. It's the \"write tests before you refactor\" approach applied to prompt engineering.</p>\n\n<h2>Key Features</h2>\n\n<h3>YAML-Based Test Configuration</h3>\n<p>You define your prompts, test cases, and assertions in YAML files. Each test case has an input and expected behavior, which can be an exact match, a substring check, a regex pattern, a semantic similarity threshold, or a custom function. No code required for basic setups.</p>\n<p>A simple config might test whether your prompt correctly classifies customer support tickets. You define 50 sample tickets with their expected categories, run them against your prompt, and see the pass rate. Change the prompt, re-run, and compare.</p>\n\n<h3>Side-by-Side Model Comparison</h3>\n<p>Run the same test suite against multiple models simultaneously. Promptfoo generates a comparison table showing how Claude Sonnet, GPT-4.1, GPT-4.1 Nano, and Llama perform on your specific task. This is useful when you're deciding which model to use in production, because benchmarks don't always predict real-world performance on your data.</p>\n\n<h3>Assertion Types</h3>\n<p>Promptfoo supports a wide range of assertion types: exact match, contains, regex, JSON schema validation, cost thresholds, latency limits, and LLM-graded evaluations where you use one model to judge another's output. You can also write custom assertion functions in JavaScript or Python.</p>\n\n<h3>CI/CD Integration</h3>\n<p>Promptfoo runs from the command line and outputs results in formats compatible with CI systems. You can add prompt evaluation to your GitHub Actions, GitLab CI, or Jenkins pipeline. If a prompt change causes regressions, the build fails before it reaches production.</p>\n\n<h3>Red Teaming</h3>\n<p>Promptfoo includes a red teaming module that automatically generates adversarial inputs to test your prompts for jailbreaks, prompt injection, data leakage, and other security issues. For teams building customer-facing AI features, this catches vulnerabilities before users find them.</p>\n\n<h2>Pricing Breakdown</h2>\n<p>The core tool is open source under the MIT License. You can self-host it with all features at no cost. The cloud offering has a free tier for individual use. The Team plan at $50/month adds collaboration features, shared results, and team management. Enterprise pricing is custom.</p>\n<p>Since Promptfoo calls LLM APIs during evaluation, you'll also pay for the API tokens used in your tests. Running 100 test cases against GPT-4.1 costs roughly $0.50-$2.00 depending on prompt length.</p>\n\n<h2>How It Fits the AI Stack</h2>\n<p>Promptfoo sits between your development workflow and production deployment. It works with any LLM provider: <a href=\"/tools/openai-api/\">OpenAI</a>, <a href=\"/tools/anthropic-api/\">Anthropic</a>, local models via Ollama, and models on <a href=\"/tools/hugging-face/\">Hugging Face</a>. If you're using <a href=\"/tools/langchain/\">LangChain</a> or <a href=\"/tools/llamaindex/\">LlamaIndex</a>, Promptfoo can test the prompts those frameworks generate.</p>",
     "related_tools": [
       {
         "name": "Anthropic API",
-        "icon": "🔮",
+        "icon": "\ud83d\udd2e",
         "url": "/tools/anthropic-api/"
       },
       {
         "name": "OpenAI API",
-        "icon": "🟢",
+        "icon": "\ud83d\udfe2",
         "url": "/tools/openai-api/"
       },
       {
         "name": "LangChain",
-        "icon": "🔗",
+        "icon": "\ud83d\udd17",
         "url": "/tools/langchain/"
       },
       {
         "name": "Hugging Face",
-        "icon": "🤗",
+        "icon": "\ud83e\udd17",
         "url": "/tools/hugging-face/"
       }
     ],

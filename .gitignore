@@ -19,3 +19,10 @@ Thumbs.db
 # Local
 *.log
 .env
+
+# Build scripts and internal docs (not for public serving)
+scripts/
+data/
+.agents/
+.planning/
+CLAUDE.md

@@ -25,6 +25,16 @@ sys.path.insert(0, script_dir)
 from templates import get_html_head, get_nav_html, get_footer_html, BASE_URL
 
 
+def load_reviews_lookup():
+    """Load tool reviews and return a dict keyed by slug."""
+    data_path = os.path.join(os.path.dirname(script_dir), 'data', 'tool_reviews.json')
+    if not os.path.exists(data_path):
+        return {}
+    with open(data_path) as f:
+        reviews = json.load(f)
+    return {r['slug']: r for r in reviews}
+
+
 def load_pricing():
     """Load pricing data from JSON file."""
     data_path = os.path.join(os.path.dirname(script_dir), 'data', 'pricing.json')
@@ -82,10 +92,11 @@ def format_price(num):
     return f"{num:g}"
 
 
-def generate_product_schema(entry):
+def generate_product_schema(entry, review=None):
     """Generate Product JSON-LD schema with AggregateOffer for a pricing page.
 
     Returns None if no numeric prices can be extracted from the tiers.
+    When a matching tool review exists, includes aggregateRating and review.
     """
     tiers = entry.get("tiers", [])
     if not tiers:
@@ -121,6 +132,34 @@ def generate_product_schema(entry):
             "offerCount": str(len(tiers))
         }
     }
+
+    if review and review.get("rating"):
+        schema["aggregateRating"] = {
+            "@type": "AggregateRating",
+            "ratingValue": str(review["rating"]),
+            "bestRating": "5",
+            "ratingCount": "1"
+        }
+        verdict = review.get("verdict", "").replace("<p>", "").replace("</p>", " ").strip()[:500]
+        schema["review"] = {
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": "Rome Thorndike"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "PE Collective"
+            },
+            "datePublished": review.get("date_published", "2026-02-20"),
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": str(review["rating"]),
+                "bestRating": "5"
+            },
+            "reviewBody": verdict
+        }
+
     return json.dumps(schema, indent=4)
 
 
@@ -137,11 +176,11 @@ def generate_breadcrumb_schema(slug, name):
     }, indent=4)
 
 
-def generate_page(entry):
+def generate_page(entry, review=None):
     """Generate a complete pricing page."""
     slug = entry['slug']
 
-    product_schema_json = generate_product_schema(entry)
+    product_schema_json = generate_product_schema(entry, review=review)
     product_schema_block = ''
     if product_schema_json:
         product_schema_block = f'''
@@ -373,15 +412,18 @@ def generate_page(entry):
 
 def main():
     pricing = load_pricing()
+    reviews_lookup = load_reviews_lookup()
     output_base = os.path.join(os.path.dirname(script_dir), 'site', 'tools')
 
     generated = 0
     for entry in pricing:
         slug = entry['slug']
+        tool_slug = entry.get('tool_slug', slug.replace('-pricing', ''))
+        review = reviews_lookup.get(tool_slug)
         output_dir = os.path.join(output_base, slug)
         os.makedirs(output_dir, exist_ok=True)
 
-        html = generate_page(entry)
+        html = generate_page(entry, review=review)
         output_path = os.path.join(output_dir, 'index.html')
 
         with open(output_path, 'w') as f:

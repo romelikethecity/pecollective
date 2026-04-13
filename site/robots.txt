@@ -1,10 +1,6 @@
 # PE Collective - robots.txt
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /comments/
 
 # AI/LLM crawlers - explicitly allowed for AI search citations
 User-agent: GPTBot

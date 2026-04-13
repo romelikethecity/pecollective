@@ -14,15 +14,15 @@
       gtag('config', 'G-WMWEZTSWM0');
     </script>
 
-    <title>Claude API Pricing 2026 - Haiku, Sonnet & Opus | PE Collective</title>
-    <meta name="description" content="Haiku 4.5 at $1/$5, Sonnet 4.6 at $3/$15, Opus 4.6 at $15/$75 per 1M tokens. 90% off with caching, 50% off batch. April 2026 rates.">
+    <title>Claude API Pricing 2026: Costs + How to Save 90%</title>
+    <meta name="description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
     <link rel="canonical" href="https://pecollective.com/tools/anthropic-api-pricing/">
 
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pecollective.com/tools/anthropic-api-pricing/">
-    <meta property="og:title" content="Claude API Pricing 2026 - Haiku, Sonnet & Opus">
-    <meta property="og:description" content="Haiku 4.5 at $1/$5, Sonnet 4.6 at $3/$15, Opus 4.6 at $15/$75 per 1M tokens. 90% off with caching, 50% off batch. April 2026 rates.">
+    <meta property="og:title" content="Claude API Pricing 2026: Costs + How to Save 90%">
+    <meta property="og:description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
     <meta property="og:site_name" content="PE Collective">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
@@ -33,8 +33,8 @@
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@pe_collective">
-    <meta name="twitter:title" content="Claude API Pricing 2026 - Haiku, Sonnet & Opus">
-    <meta name="twitter:description" content="Haiku 4.5 at $1/$5, Sonnet 4.6 at $3/$15, Opus 4.6 at $15/$75 per 1M tokens. 90% off with caching, 50% off batch. April 2026 rates.">
+    <meta name="twitter:title" content="Claude API Pricing 2026: Costs + How to Save 90%">
+    <meta name="twitter:description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
     <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
     <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
 
@@ -1061,7 +1061,7 @@
           </div>
       </div>
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Real-World Cost Examples</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">What This Actually Costs Per Month (Real Numbers)</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Abstract per-token pricing is hard to reason about. Here are concrete cost breakdowns for common production use cases, using current April 2026 pricing.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Customer support chatbot (Sonnet 4.6)</strong><br>Processing 10,000 support tickets per day. Average conversation: 2,000 input tokens (system prompt + user message + context), 500 output tokens. With a cached system prompt (1,500 tokens cached, 500 fresh per request): Input cost = 500 fresh tokens x 10K = 5M tokens at $3/MTok ($15) + 15M cached tokens at $0.30/MTok ($4.50). Output = 5M tokens at $15/MTok ($75). Daily total: ~$95. Monthly: ~$2,850.</p>
@@ -1096,7 +1096,7 @@
         
       </div>
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Legacy Models and Migration</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Still on Claude 3.5? What Upgrading Saves You</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Anthropic has deprecated several older models. Claude Haiku 3 (the cheapest model ever at $0.25/$1.25) retires on April 19, 2026. Claude Sonnet 3.7 is also deprecated. If you're running production workloads on either, migrate now.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The upgrade path depends on your priorities. Haiku 3 users should move to Haiku 4.5 ($1/$5). Yes, it's 4x more expensive. But it's dramatically more capable: 64K max output (vs 4K), extended thinking support, and higher quality across every task type. If cost is the primary concern, Haiku 3.5 at $0.80/$4 is a middle ground that's not deprecated yet.</p>
@@ -1114,7 +1114,7 @@
         
       </div>
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How to Estimate Your Monthly Claude API Bill</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Will You Spend $20 or $2,000? How to Estimate Your Bill</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Estimating API costs before you build is tricky because token usage varies by use case. Here's a framework that works for planning purposes.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 1: Estimate your average request size. A typical chatbot request is 1,000-3,000 input tokens (system prompt + user message + any context) and 300-1,000 output tokens. A document processing task might be 5,000-50,000 input tokens and 500-2,000 output tokens. A code generation task is typically 2,000-10,000 input tokens and 1,000-5,000 output tokens.</p>
@@ -1126,7 +1126,7 @@
         
       </div>
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Token Counting: How Claude Measures Usage</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Token Counting and How Anthropic Bills You</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Claude uses byte-pair encoding (BPE) tokenization, similar to other large language models. One token roughly equals 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to around 1,300-1,400 tokens.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">System prompts count as input tokens on every request. If your system prompt is 500 tokens and you send 100 requests, you pay for 50,000 tokens of system prompt alone. This is where prompt caching becomes valuable, cache that system prompt and pay the write cost once, then 90% less on every subsequent read.</p>
@@ -1137,7 +1137,7 @@
         
       </div>
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Cost Optimization Strategies That Actually Work</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How to Cut Your Claude API Bill by 90%</h2>
         
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The biggest cost lever is model selection. Most API users default to the most capable model, but 70-80% of typical production queries can be handled by Haiku 4.5 at $1/$5 per million tokens. Use Sonnet 4.6 for tasks requiring stronger reasoning, and reserve Opus 4.6 for your hardest problems. A tiered routing approach can cut costs by 50-70% compared to running everything through Opus.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Prompt caching is the second-biggest lever. If you send the same system prompt, few-shot examples, or document context across multiple requests, enable caching. The first request pays a 25% premium to write the cache, but every subsequent request within the 5-minute TTL pays 90% less for those cached tokens. For a chatbot with a 2,000-token system prompt handling 1,000 requests per hour, caching saves roughly $4.50/hour on Sonnet 4.6.</p>
@@ -1155,7 +1155,7 @@
 
       
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Hidden Costs &amp; Gotchas</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">5 Ways Claude Charges More Than You Expect</h2>
         <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
           <ul style="list-style: none; padding: 0; margin: 0;">
           <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Output tokens cost 5x input tokens across every Claude model. A chatbot that generates long responses will spend most of its budget on output, not input. Track your output-to-input ratio.</li>
@@ -1172,7 +1172,7 @@
 
       
       <div style="margin-top: 48px;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Plan Do You Need?</h2>
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Claude Model Should You Use? Quick Decision Guide</h2>
         
           <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
             <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">High-volume classification, routing, or extraction</h3>

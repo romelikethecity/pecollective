@@ -777,6 +777,32 @@
 }
     </script>
     
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
 </head>
 
 
@@ -804,6 +830,32 @@
       .newsletter-cta input { width: 100%; }
     }
     </style>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
 </head>
 <body>
 
@@ -824,7 +876,7 @@
             </nav>
             <div style="display: flex; gap: 8px; align-items: center;">
                 <a href="/join/" class="btn-secondary">Join Community</a>
-                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
         </div>
@@ -1079,15 +1131,27 @@
       <div class="newsletter-cta">
         <h2>New tools ship every week. We test them so you don't have to.</h2>
         <p><strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.</p>
-        <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
           <input type="email" name="email" placeholder="your@email.com" required>
-          <button type="submit">Subscribe Free</button>
+          <button type="submit">Get the Data</button>
         </form>
         <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
       </div>
     </div>
 
-  </main>
+  
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
 
 
     <footer class="site-footer">
@@ -1112,5 +1176,42 @@
         </div>
     </footer>
     <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://pecollective-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
 </body>
 </html>

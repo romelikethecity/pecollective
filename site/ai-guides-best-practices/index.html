@@ -905,7 +905,7 @@
             </nav>
             <div style="display: flex; gap: 8px; align-items: center;">
                 <a href="/join/" class="btn-secondary">Join Community</a>
-                <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
         </div>
@@ -1137,9 +1137,9 @@
             <div class="newsletter-cta">
                 <h2>Stay ahead of the AI curve.</h2>
                 <p><strong>AI News Digest</strong> covers industry moves &amp; tool updates. <strong>AI Pulse</strong> covers salary data &amp; career strategy. Both free.</p>
-                <form action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+                <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
                     <input type="email" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Subscribe Free</button>
+                    <button type="submit">Get the Data</button>
                 </form>
                 <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
             </div>
@@ -1163,5 +1163,42 @@
         </div>
     </footer>
     <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://pecollective-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
 </body>
 </html>

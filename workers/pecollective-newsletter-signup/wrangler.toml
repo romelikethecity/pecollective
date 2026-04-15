@@ -1,0 +1,11 @@
+name = "pecollective-newsletter-signup"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Same Resend audience as aimarketpulse — signups go to AI Pulse list
+RESEND_AUDIENCE_ID = "e13b2c0e-d554-47bf-bd4e-597972c98085"
+ALLOWED_ORIGIN = "https://pecollective.com"
+
+# RESEND_API_KEY is set as a secret via:
+#   wrangler secret put RESEND_API_KEY

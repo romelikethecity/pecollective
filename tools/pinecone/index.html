@@ -541,6 +541,29 @@
 <h3>Performance at Scale</h3>
 <p>Pinecone handles billions of vectors with single-digit millisecond query latency. For most applications, query performance isn't the bottleneck. The architecture is optimized for high-throughput reads, which is the typical access pattern for RAG and search applications.</p>
 
+<h2>What Changed in Pinecone in 2026</h2>
+<p>Pinecone has gone all-in on serverless. Pod-based indexes are officially legacy, and new users won't even see them unless they go looking. Serverless is the default for every new index, and the pricing model reflects that shift: you pay for read units, write units, and storage. No more idle pod charges eating your budget overnight.</p>
+<p>The Inference API is the other big addition. Pinecone now offers built-in embedding generation, so you don't need a separate call to OpenAI or Cohere to create vectors. Upload raw text, and Pinecone handles the embedding step. It's one less service to manage and one fewer API key to rotate.</p>
+<p>Metadata filtering got faster. Queries that combine vector similarity with WHERE-style filters now perform better on large indexes, especially when the filter is selective. BYOC (bring your own cloud) is available at the Enterprise tier for teams that need data residency or compliance controls. And pricing across the board is simpler to reason about than the old pod-based model.</p>
+
+<h2>Setting Up Pinecone for RAG: A Quick Walkthrough</h2>
+<p>Getting a <a href="/glossary/rag/">RAG</a> application running on Pinecone takes about 15 minutes. Here's what matters.</p>
+<p>Start by creating a serverless index with the right dimensions. If you're using OpenAI's <code>text-embedding-3-small</code>, set dimensions to 1536. For <code>text-embedding-3-large</code>, it's 3072. Mismatched dimensions will silently produce garbage results, so get this right the first time.</p>
+<p>Chunk your documents into 200-500 token pieces. Smaller chunks give more precise retrieval for Q&A. Larger chunks preserve more context but return fuzzier matches. There's no universal answer here, but 300 tokens is a safe starting point for most knowledge base applications.</p>
+<p>Use namespaces to separate environments. A single Pinecone index can hold dev, staging, and production data in different namespaces. This saves money compared to running three separate indexes, and it keeps your environment management clean.</p>
+<p>Attach metadata to every vector: source document, date, category, author, whatever your application needs to filter on. Metadata filtering is what turns a raw similarity search into something useful. A query like "find similar documents from the last 30 days in the engineering category" is trivial with good metadata.</p>
+<p>Set up API key rotation before you go to production. Pinecone supports multiple API keys per project. Rotate them on a schedule. Don't hardcode a single key in your application and forget about it.</p>
+
+<h2>Real-World Cost Scenarios</h2>
+<p>Pinecone pricing depends on three things: how much data you store, how often you read, and how often you write. Here's what real workloads look like.</p>
+<h3>Small RAG App</h3>
+<p>50,000 vectors from a company knowledge base. Around 1,000 queries per day from an internal chatbot. Storage is minimal, read units are low. Expect $5-15/month on serverless. The free Starter tier might even cover this if query volume stays modest.</p>
+<h3>Mid-Size Application</h3>
+<p>1 million vectors powering a customer-facing search feature. 10,000 queries per day with metadata filtering. This is solidly in the Standard plan territory. Budget $50-100/month depending on query complexity and filtering patterns.</p>
+<h3>Production at Scale</h3>
+<p>10 million or more vectors serving 100,000+ queries per day. This is where costs climb. Plan for $300-800/month, and potentially more if you're doing heavy writes (frequent index updates) or complex filtered queries. At this scale, it's worth comparing against self-hosted alternatives like <a href="/tools/weaviate/">Weaviate</a> or <a href="/tools/pgvector/">pgvector</a> to see if the ops savings justify the cost.</p>
+<p>One thing these numbers don't include: your embedding API costs. If you're using OpenAI's embedding models, that's a separate bill. For a million documents, embedding generation alone can run $10-50 depending on the model and chunk sizes. Factor that into your total cost of ownership.</p>
+
 <h2>Pricing</h2>
 <p>Pinecone offers a free Starter tier, a Standard plan from $50/month, and Enterprise from $500/month. Pricing is usage-based with per-operation and storage charges that scale with your workload. <a href="/tools/pinecone-pricing/">See our full Pinecone pricing breakdown</a> for real-world cost examples, hidden gotchas, and plan comparisons.</p>
 <h2>Pinecone vs Weaviate</h2>

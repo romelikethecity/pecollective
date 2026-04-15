@@ -1223,6 +1223,13 @@
         </div>
 
         <div class="comparison-content">
+          <div class="section-divider">
+            <h2>Quick Decision: Pinecone or Weaviate?</h2>
+            <p><strong>Pick Pinecone if:</strong> you want zero ops, you don't need self-hosting, you're building a standard RAG app, and you value simplicity over flexibility. Pinecone is the "just works" option. You get an API key, send vectors, query them. Done.</p>
+            <p><strong>Pick Weaviate if:</strong> you need self-hosting or on-prem deployment, you want hybrid search (BM25 + vector in one query), you need built-in vectorization modules, or you want to avoid vendor lock-in. Weaviate gives you more control at the cost of more setup.</p>
+            <p><strong>Pick neither (use pgvector) if:</strong> you already run Postgres and need under 5M vectors. Adding a separate vector database for small-scale search is over-engineering. pgvector handles this fine, and you skip an entire service in your stack.</p>
+          </div>
+
           <h2>Feature Comparison</h2>
           <table class="comparison-table">
             <thead>
@@ -1327,6 +1334,39 @@
           </div>
 
           <div class="section-divider">
+            <h2>Cost Comparison at Scale</h2>
+            <p>Pricing pages are vague on purpose. Here's what you'll pay at different vector counts, based on standard 1536-dimension embeddings with moderate query volume.</p>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Scale</th>
+                  <th>Pinecone</th>
+                  <th>Weaviate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>100K vectors</strong></td>
+                  <td>~$5-15/mo (serverless)</td>
+                  <td>~$25/mo cloud (sandbox free but limited)</td>
+                </tr>
+                <tr>
+                  <td><strong>1M vectors</strong></td>
+                  <td>~$50-100/mo</td>
+                  <td>~$100-200/mo cloud, ~$30-60/mo self-hosted</td>
+                </tr>
+                <tr>
+                  <td><strong>10M vectors</strong></td>
+                  <td>~$300-800/mo</td>
+                  <td class="winner">Self-hosted becomes significantly cheaper</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>The crossover point:</strong> Around 5M vectors, self-hosting Weaviate on your own infrastructure starts saving real money over Pinecone. Below that, Pinecone's serverless pricing is competitive and you don't pay for idle compute. Above that, the managed service premium adds up fast.</p>
+            <p>If you're a startup burning through a free tier, both work. If you're an enterprise running 50M+ vectors, Weaviate self-hosted on your own GPU cluster will cost a fraction of any managed service.</p>
+          </div>
+
+          <div class="section-divider">
             <h2>Pricing Breakdown</h2>
             <table class="comparison-table">
               <thead>
@@ -1370,6 +1410,13 @@
           </div>
 
           
+          <div class="section-divider">
+            <h2>Migration Path Between Them</h2>
+            <p>Both Pinecone and Weaviate support standard embedding formats, so migrating your actual vector data is straightforward. Export from one, import to the other. Your embeddings don't care which database stores them.</p>
+            <p>The real cost is rewriting integration code. Pinecone and Weaviate use different SDKs, different query APIs, and different configuration patterns. If you've abstracted your vector DB behind a clean interface, migration takes a day. If your Pinecone SDK calls are scattered across 40 files, plan for a week.</p>
+            <p><strong>If you're unsure which to pick:</strong> start with Pinecone for simplicity. It's faster to get running, and the serverless model means you won't waste time on infrastructure while you're still figuring out your use case. If costs climb or self-hosting requirements push you toward more control, migrate to Weaviate later. The data moves easily. The code is the work.</p>
+          </div>
+
           <div class="section-divider">
             <h2>Switching Between Pinecone and Weaviate</h2>
             <div class="migration-section">

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>LLM Pricing Per Million Tokens 2026: Every Model Compared</title>
+    <meta name="description" content="Side-by-side token costs for OpenAI, Anthropic, Google, Meta, Mistral, and Cohere. Input and output prices per 1M tokens, updated April 2026.">
+    <link rel="canonical" href="https://pecollective.com/tools/llm-pricing-per-million-tokens/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/llm-pricing-per-million-tokens/">
+    <meta property="og:title" content="LLM Pricing Per Million Tokens 2026: Every Model Compared">
+    <meta property="og:description" content="Side-by-side token costs for OpenAI, Anthropic, Google, Meta, Mistral, and Cohere. Input and output prices per 1M tokens, updated April 2026.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="LLM Pricing Per Million Tokens 2026: Every Model Compared">
+    <meta name="twitter:description" content="Side-by-side token costs for OpenAI, Anthropic, Google, Meta, Mistral, and Cohere. Input and output prices per 1M tokens, updated April 2026.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
+    <style>
+
+    :root {
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: color 0.15s ease; }
+    a:hover { color: var(--gold-light); }
+
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img { width: 36px; height: 36px; border-radius: 8px; }
+    .logo:hover { color: var(--text-primary); }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9375rem; font-weight: 500; transition: color 0.15s; }
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover { background: var(--gold-hover) !important; transform: translateY(-1px); }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover { background: var(--bg-card); border-color: var(--teal-light); }
+
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-primary); }
+    .mobile-nav-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 999; opacity: 0; transition: opacity 0.3s ease; }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav { position: fixed; top: 0; right: -100%; width: 280px; max-width: 85%; height: 100vh; background: var(--bg-darker); z-index: 1000; padding: 1.5rem; box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3); transition: right 0.3s ease; overflow-y: auto; }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .mobile-nav-header .logo-text { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); font-family: 'Space Grotesk', sans-serif; }
+    .mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); }
+    .mobile-nav-links { list-style: none; margin: 0 0 2rem 0; padding: 0; }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a { display: block; padding: 1rem 0; font-size: 1rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe { display: block; width: 100%; padding: 1rem; background: var(--gold); color: var(--bg-darker); text-align: center; font-weight: 600; border-radius: 8px; text-decoration: none; }
+    .mobile-nav-subscribe:hover { background: var(--gold-hover); color: var(--bg-darker); }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    .page-header { background: var(--bg-darker); padding: 48px 0 40px; border-bottom: 1px solid var(--border); }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+    .page-label { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .page-header h1 { font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+    .page-header .lead { font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; line-height: 1.7; }
+
+    .tool-card, .job-card, .company-card, .salary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s; }
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover { border-color: var(--teal-light); background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); }
+
+    .card-badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 14px; width: fit-content; }
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    .skill-tag { display: inline-block; padding: 2px 8px; background: var(--bg-darker); border-radius: 4px; font-size: 0.8125rem; color: var(--text-secondary); margin-right: 6px; margin-bottom: 6px; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    .stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.25s; }
+    .stat-box:hover { border-color: var(--teal-light); transform: translateY(-2px); }
+    .stat-number { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+    .stat-label { font-size: 0.875rem; color: var(--text-muted); margin-top: 8px; }
+
+    .cta-box { background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%); color: var(--text-primary); border-radius: 16px; padding: 40px; text-align: center; margin: 40px 0; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .cta-box::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%); pointer-events: none; }
+    .cta-box h3 { font-size: 1.5rem; margin-bottom: 12px; position: relative; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: all 0.15s; }
+    .btn-gold { background: var(--gold); color: var(--bg-darker); }
+    .btn-gold:hover { background: var(--gold-hover); color: var(--bg-darker); transform: translateY(-1px); box-shadow: 0 0 20px rgba(232, 168, 124, 0.3); }
+    .btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--bg-card); border-color: var(--teal-light); color: var(--text-primary); }
+
+    .site-footer, .footer { background: var(--bg-darker); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 64px; }
+    .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; color: var(--text-muted); }
+    .footer-content a, .footer a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+    @media (max-width: 768px) { .footer-content { flex-direction: column; gap: 12px; text-align: center; } .footer-links a { margin: 0 12px; } }
+
+    </style>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LLM Pricing Per Million Tokens",
+            "item": "https://pecollective.com/tools/llm-pricing-per-million-tokens/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What does per million tokens mean?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LLM providers charge based on tokens, which are chunks of text roughly 3-4 characters long. Per million tokens (per 1M tokens) is the standard pricing unit. One million tokens is approximately 750,000 words. If a model costs $2 per 1M input tokens and you send 500,000 tokens in a month, your input cost is $1."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How many tokens is 1,000 words?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In English, 1,000 words is roughly 1,300 to 1,400 tokens. The exact count depends on word length and punctuation. Code typically tokenizes at a higher ratio because of special characters and syntax. You can use OpenAI's tiktoken library or Anthropic's token counter to get exact counts."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why do output tokens cost more than input tokens?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Input tokens can be processed in parallel because the model reads the entire prompt at once. Output tokens must be generated one at a time, sequentially, because each new token depends on the ones before it. This sequential generation uses more GPU compute per token. That is why output tokens cost 4-8x more than input tokens across every major provider."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which LLM has the cheapest API?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPT-4.1 Nano at $0.10 per 1M input tokens and $0.40 per 1M output tokens is the cheapest capable model from a major provider. Gemini 2.5 Flash ($0.15/$0.60) and Mistral Small ($0.10/$0.30) are close alternatives. Google also offers a free tier for Gemini Flash under certain rate limits."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I switch providers to save money?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most LLM APIs follow the same request/response format (messages array with roles). Switching providers usually means changing the API endpoint, API key, and model name. Libraries like LiteLLM and OpenRouter provide a unified interface across providers, letting you switch with a single config change. Always run your evaluation suite against the new model before switching production traffic."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are there free LLM APIs?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google offers a free tier for Gemini 2.5 Flash with rate limits. OpenAI has a free tier with very limited rate limits (3 RPM for reasoning models). Groq offers free access to open-source models like Llama 4 with rate limits. These are enough for prototyping but not production use."
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LLM Pricing Per Million Tokens: Every API Provider Compared (April 2026)",
+    "description": "Side-by-side token costs for OpenAI, Anthropic, Google, Meta, Mistral, and Cohere. Input and output prices per 1M tokens, updated April 2026.",
+    "author": {
+        "@type": "Person",
+        "name": "Rome Thorndike"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "PE Collective",
+        "url": "https://pecollective.com"
+    },
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-04-15",
+    "mainEntityOfPage": "https://pecollective.com/tools/llm-pricing-per-million-tokens/"
+}
+    </script>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form { flex-direction: column; } }
+</style>
+</head>
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .pricing-page .bottom-line { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .pricing-page .bottom-line h3 { color: var(--gold); margin-bottom: 12px; }
+    .pricing-page .bottom-line p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">&#10005;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            var menuBtn = document.querySelector('.mobile-menu-btn');
+            var closeBtn = document.querySelector('.mobile-nav-close');
+            var overlay = document.querySelector('.mobile-nav-overlay');
+            var mobileNav = document.querySelector('.mobile-nav');
+            var mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(function(link) { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+  <main>
+    <div class="pricing-page">
+      <h1>LLM Pricing Per Million Tokens: Every API Provider Compared (April 2026)</h1>
+      <p class="subtitle">Token-based pricing is confusing. OpenAI quotes "per 1M tokens." Anthropic does the same but with different tiers. Google changes prices based on context length. And output tokens always cost more than input. Every provider uses a slightly different structure, making direct comparison painful. This page normalizes everything to a single unit: cost per 1 million tokens. Input and output, side by side, for every major model worth considering in April 2026.</p>
+
+      <!-- Section 1: Complete Pricing Table -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Complete Pricing Table: All Major LLM APIs (April 2026)</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">This table covers six providers and 20+ models. All prices are per 1 million tokens. "Input" is what you send to the model (prompts, context, documents). "Output" is what the model generates back. Where a provider offers tiered pricing based on context length, both tiers are listed.</p>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">OpenAI</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 Nano</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Cheapest capable model. 1M context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 Mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mid-tier. 1M context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o4-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget reasoning. 200K context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Most capable. 128K context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$8.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Production workhorse. 1M context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$8.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Advanced reasoning. 200K context.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">Anthropic</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Fast, affordable. 200K context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Best quality/cost balance. 200K context.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$25.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Most capable Claude. 200K context.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">Google</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Gemini 2.5 Flash (&lt;200K)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget tier under 200K tokens.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Gemini 2.5 Flash (&gt;200K)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.30</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.20</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">2x price above 200K tokens.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Gemini 2.5 Pro (&lt;200K)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship Google model.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Gemini 2.5 Pro (&gt;200K)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Long-context premium.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">Meta (Llama 4, via inference providers)</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 4 Scout (via Groq)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Open-source. Fastest inference.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 4 Maverick (via Together)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">~$0.20</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">~$0.80</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Open-source. Larger model.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">Mistral</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mistral Small</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.30</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Cheapest output per token.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mistral Medium</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mid-tier European alternative.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mistral Large</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$6.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship. EU data residency.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1.125rem; margin-top: 32px; margin-bottom: 12px; color: var(--gold);">Cohere</h3>
+        <div style="overflow-x: auto; margin: 12px 0 24px;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Notes</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Command R</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget RAG-optimized model.</td></tr>
+              <tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Command R+</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship. Strong at RAG + citations.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 2: Cheapest Models by Category -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Cheapest Models by Price Tier</h2>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Under $0.20 per 1M Input Tokens: Classification and Extraction</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">GPT-4.1 Nano ($0.10/$0.40), Mistral Small ($0.10/$0.30), Gemini 2.5 Flash ($0.15/$0.60), Llama 4 Scout ($0.15/$0.60), and Cohere Command R ($0.15/$0.60). These models handle classification, entity extraction, data labeling, and simple Q&A. If your task doesn't require nuanced reasoning, start here. Mistral Small has the cheapest output tokens at $0.30 per million. GPT-4.1 Nano has the best overall quality at this price point. For a chatbot that handles 10,000 conversations a day, Nano costs $39/month. The same traffic on GPT-4.1 costs $780/month.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">$0.40 to $2.00 per 1M Input: Production Workloads</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">GPT-4.1 Mini ($0.40/$1.60), Mistral Medium ($0.40/$2.00), Haiku 4.5 ($1.00/$5.00), o4-mini ($1.10/$4.40), GPT-5 ($1.25/$10.00), Gemini 2.5 Pro ($1.25/$10.00), GPT-4.1 ($2.00/$8.00), and o3 ($2.00/$8.00). This is the production tier. Most real applications live here. GPT-4.1 is the default for coding, content, and general tasks. o4-mini is the best value if you need step-by-step reasoning. GPT-5 and Gemini 2.5 Pro offer flagship capabilities with cheap input but expensive output ($10/1M).</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">$2.00+ per 1M Input: Hard Problems and Premium Quality</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Mistral Large ($2.00/$6.00), Cohere Command R+ ($2.50/$10.00), Sonnet 4.6 ($3.00/$15.00), and Opus 4.6 ($5.00/$25.00). Reserve these for tasks where cheaper models fall short. Opus 4.6 is the most expensive mainstream model at $5/$25 but excels at complex reasoning, nuanced writing, and difficult coding. Sonnet 4.6 offers 80-90% of Opus quality at 60% of the cost. Mistral Large is worth considering if EU data residency is a requirement.</p>
+        </div>
+      </div>
+
+      <!-- Section 3: Why Output Tokens Cost More -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Why Output Tokens Cost 4-8x More Than Input</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Every LLM provider charges more for output tokens than input tokens. GPT-4.1 charges $2 for input but $8 for output. Opus 4.6 charges $5 for input but $25 for output. This isn't arbitrary. It reflects how the models work.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">When you send input tokens (your prompt), the model processes them all at once in parallel. The GPU crunches through your entire prompt in a single forward pass. It's fast and computationally efficient.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Output tokens are different. The model generates them one at a time, sequentially. Each new token depends on every token that came before it. The model can't skip ahead or parallelize this step. Token 50 requires tokens 1 through 49 to exist first. This sequential dependency means each output token requires a separate forward pass through the model, using far more compute per token than input processing.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">This has a direct impact on your bill. A typical API call with 2,000 input tokens and 500 output tokens on GPT-4.1 costs $0.004 for input and $0.004 for output. Equal cost despite 4x fewer output tokens. If your responses average 1,000 output tokens, output is 67% of your total cost.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The practical takeaway: controlling output length is the single most effective way to reduce costs. Tell the model to be concise. Use structured output (JSON) instead of prose. For classification, request a single label instead of an explanation. Set <code>max_tokens</code> to prevent runaway responses. A 10-class classifier using structured output typically uses 5-20 output tokens instead of 50-200 with free-form text. At scale, that's a 10x cost reduction on your most expensive token type.</p>
+      </div>
+
+      <!-- Section 4: Monthly Cost Calculator -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How to Calculate Your Monthly Cost: 3 Real Scenarios</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Token pricing means nothing in isolation. Here's what three common workloads cost per month across different models, with the math shown.</p>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Scenario 1: Customer Support Chatbot (10K conversations/day)</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px;">Each conversation averages 500 input tokens (system prompt + user message) and 200 output tokens. Daily tokens: 5M input, 2M output.</p>
+          <ul style="list-style: none; padding: 0; margin: 8px 0 0;">
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1 Nano: (5 x $0.10) + (2 x $0.40) = <strong style="color: var(--gold);">$1.30/day, $39/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">Gemini 2.5 Flash: (5 x $0.15) + (2 x $0.60) = <strong style="color: var(--gold);">$1.95/day, $59/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1: (5 x $2.00) + (2 x $8.00) = <strong style="color: var(--gold);">$26/day, $780/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">Sonnet 4.6: (5 x $3.00) + (2 x $15.00) = <strong style="color: var(--gold);">$45/day, $1,350/month</strong></li>
+          </ul>
+          <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 8px;">For most support chatbots, GPT-4.1 Nano or Gemini Flash provides sufficient quality. Upgrading to GPT-4.1 or Sonnet only makes sense if the chatbot handles complex, multi-turn conversations where reasoning quality directly impacts customer satisfaction.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Scenario 2: RAG Pipeline (50K queries/day)</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px;">Each query includes 2,000 input tokens (retrieved documents + question) and 500 output tokens. Daily tokens: 100M input, 25M output.</p>
+          <ul style="list-style: none; padding: 0; margin: 8px 0 0;">
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1 Nano: (100 x $0.10) + (25 x $0.40) = <strong style="color: var(--gold);">$20/day, $600/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">Mistral Small: (100 x $0.10) + (25 x $0.30) = <strong style="color: var(--gold);">$17.50/day, $525/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1: (100 x $2.00) + (25 x $8.00) = <strong style="color: var(--gold);">$400/day, $12,000/month</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">Sonnet 4.6: (100 x $3.00) + (25 x $15.00) = <strong style="color: var(--gold);">$675/day, $20,250/month</strong></li>
+          </ul>
+          <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 8px;">RAG pipelines are input-heavy. Prompt caching helps here because the system prompt and few-shot examples repeat on every query. With 75% cache hits on GPT-4.1, that $12,000/month drops to roughly $5,000/month.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Scenario 3: Batch Document Classification (1M documents, one-time)</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px;">Each document averages 1,000 input tokens. Output is a single classification label (10 tokens). Total: 1B input tokens, 10M output tokens.</p>
+          <ul style="list-style: none; padding: 0; margin: 8px 0 0;">
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1 Nano: (1000 x $0.10) + (10 x $0.40) = <strong style="color: var(--gold);">$104 total</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1 Nano (batch, 50% off): <strong style="color: var(--gold);">$52 total</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">Gemini 2.5 Flash: (1000 x $0.15) + (10 x $0.60) = <strong style="color: var(--gold);">$156 total</strong></li>
+            <li style="padding: 4px 0; color: var(--text-secondary); font-size: 0.9375rem;">GPT-4.1: (1000 x $2.00) + (10 x $8.00) = <strong style="color: var(--gold);">$2,080 total</strong></li>
+          </ul>
+          <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 8px;">Classification is the ideal use case for cheap models. The difference between $52 (Nano batch) and $2,080 (GPT-4.1) is 40x, and for labeling tasks, Nano's accuracy is typically within 1-2% of the larger model.</p>
+        </div>
+      </div>
+
+      <!-- Section 5: Batch and Caching Discounts -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Batch and Caching Discounts That Change the Math</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The per-million-token prices above are sticker prices. Three discount mechanisms can cut your actual costs by 50-90%. Ignoring them means overpaying.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>OpenAI Batch API: 50% off everything.</strong> Submit requests as a JSONL file and get results within 24 hours. Every token costs half. GPT-4.1 drops from $2/$8 to $1/$4. GPT-4.1 Nano drops to $0.05/$0.20. Use this for any workload that doesn't need real-time responses: data extraction, content generation, nightly processing, bulk classification. It's the single biggest cost reduction available from any provider.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Prompt caching: 50-90% off input tokens.</strong> Both OpenAI and Anthropic cache repeated prompt prefixes automatically. If your system prompt, few-shot examples, or document context stays the same across requests, subsequent calls pay a reduced rate on those cached tokens. OpenAI's discounts vary by model: GPT-5 gets 90% off cached reads, GPT-4.1 gets 75% off, o-series gets 50% off. Anthropic offers 90% off cached input tokens across all Claude models. Structure your prompts with stable content first and variable content last to maximize cache hits.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Google's free tier.</strong> Gemini 2.5 Flash is free under certain rate limits (roughly 15 RPM and 1M TPM). For prototyping, low-volume internal tools, or development environments, this is zero-cost access to a model that competes with GPT-4.1 Nano in quality. No credit card required.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">These discounts stack in some cases. A cached batch request through OpenAI's GPT-4.1 pays $0.25 per million cached input tokens and $4 per million output tokens. That's 87.5% off standard input pricing. The sticker prices at the top of this page are the ceiling, not the floor.</p>
+      </div>
+
+      <!-- Section 6: Which Provider for Your Use Case -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Provider Is Cheapest for Your Use Case?</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Stop comparing models in isolation. Match the model to your task. Here are clear winners in each category.</p>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Simple classification, extraction, or routing</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;"><strong>Pick GPT-4.1 Nano ($0.10/$0.40) or Gemini 2.5 Flash ($0.15/$0.60).</strong> For labeling data, extracting structured fields from text, or routing queries to other models, you don't need a $3+ model. Nano handles these tasks with 95%+ accuracy at a fraction of the cost. Gemini Flash is a strong alternative, especially if you want Google's free tier for development. If output cost matters most, Mistral Small ($0.10/$0.30) has the cheapest output tokens available.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">General production (chatbots, content, coding)</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;"><strong>Pick GPT-4.1 ($2/$8) or Sonnet 4.6 ($3/$15).</strong> This is where most teams spend their money. GPT-4.1 is 33% cheaper on input and 47% cheaper on output. Sonnet 4.6 tends to produce higher-quality writing and handles ambiguous instructions better. Test both on your specific prompts. If cost is the priority, GPT-4.1 wins. If output quality on nuanced tasks matters more, Sonnet 4.6 is worth the premium.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Complex reasoning (math, logic, multi-step analysis)</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;"><strong>Pick o4-mini ($1.10/$4.40) or Opus 4.6 ($5/$25).</strong> o4-mini is the value play for reasoning tasks. It uses chain-of-thought reasoning at a low price and handles most math, science, and logic problems well. Opus 4.6 is the quality ceiling but costs 5x more on input and 6x more on output. For most reasoning workloads, start with o4-mini and only escalate to Opus when accuracy drops below your threshold. o3 ($2/$8) sits between them as a mid-range option.</p>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+          <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Budget-sensitive or experimental</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;"><strong>Pick Gemini 2.5 Flash (free tier) or Llama 4 Scout via Groq ($0.15/$0.60).</strong> Google's free tier gets you a competitive model at zero cost for low-volume use. Groq's inference of Llama 4 is extremely fast and cheap. Both work for prototyping, internal tools, and development. When you need to move to production, switch to GPT-4.1 Nano or stay on Gemini Flash's paid tier.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Line -->
+      <div class="bottom-line">
+        <h3>The Bottom Line</h3>
+        <p>The cheapest capable model is GPT-4.1 Nano at $0.10 per million input tokens, with Mistral Small and Gemini 2.5 Flash close behind. For production workloads, GPT-4.1 ($2/$8) and Sonnet 4.6 ($3/$15) are the two defaults. For reasoning, o4-mini ($1.10/$4.40) is the value pick. The biggest cost lever isn't which model you pick. It's routing simple tasks to cheap models instead of sending everything through the same expensive one. Combine that with batch processing and prompt caching, and your actual costs will be 30-60% below the sticker prices on this page.</p>
+      </div>
+
+      <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
+        <strong>Disclosure:</strong> Pricing information is sourced from official provider websites and may change. We update this page regularly but always verify current pricing on the vendor's site before purchasing.
+      </div>
+
+      <!-- Related Resources -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+          <a href="/tools/openai-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI API Pricing &rarr;</a>
+          <a href="/tools/anthropic-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Anthropic API Pricing &rarr;</a>
+          <a href="/tools/aws-bedrock-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">AWS Bedrock Pricing &rarr;</a>
+          <a href="/tools/cohere-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cohere API Pricing &rarr;</a>
+          <a href="/blog/llm-api-pricing-comparison/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">LLM API Pricing Comparison &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What does "per million tokens" mean?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">LLM providers charge based on tokens, which are chunks of text roughly 3-4 characters long. "Per million tokens" (per 1M tokens) is the standard pricing unit. One million tokens is approximately 750,000 words. If a model costs $2 per 1M input tokens and you send 500,000 tokens in a month, your input cost is $1. Some older documentation quotes prices "per 1K tokens." To convert, multiply by 1,000. A model priced at $0.002 per 1K tokens costs $2 per 1M tokens.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How many tokens is 1,000 words?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">In English, 1,000 words is roughly 1,300 to 1,400 tokens. The exact count depends on word length and punctuation. Code typically tokenizes at a higher ratio because of special characters and syntax. A 10-page report (around 5,000 words) is about 6,500-7,000 tokens. You can use OpenAI's <code>tiktoken</code> library or Anthropic's token counter to get exact counts before sending requests.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Why do output tokens cost more than input tokens?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Input tokens can be processed in parallel because the model reads the entire prompt at once. Output tokens must be generated one at a time, sequentially, because each new token depends on the ones before it. This sequential generation uses more GPU compute per token. That's why output costs 4-8x more than input across every major provider. It also means verbose responses are disproportionately expensive. Controlling output length is the single most effective cost optimization.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which LLM has the cheapest API?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">GPT-4.1 Nano at $0.10/$0.40 per million tokens is the cheapest capable model from a major provider. Mistral Small matches it on input at $0.10 and beats it on output at $0.30. Gemini 2.5 Flash is $0.15/$0.60 but has a free tier for low-volume use. For open-source models, Llama 4 Scout via Groq costs about $0.15/$0.60. With OpenAI's batch API (50% off), GPT-4.1 Nano drops to $0.05/$0.20, making it the cheapest option at scale.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How do I switch providers to save money?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Most LLM APIs follow the same request/response format: a messages array with system, user, and assistant roles. Switching providers usually means changing the API endpoint, API key, and model name. Libraries like LiteLLM and OpenRouter provide a unified interface across providers, letting you switch with a single config change. The hard part isn't the code. It's testing. Different models behave differently on the same prompt. Always run your evaluation suite against the new model before switching production traffic.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Are there free LLM APIs?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Google offers a free tier for Gemini 2.5 Flash with rate limits (around 15 RPM and 1M TPM for free users). OpenAI has a free tier with very limited rate limits (3 RPM for reasoning models). Groq offers free access to open-source models like Llama 4 with rate limits. These free tiers are enough for prototyping and development but won't support production traffic. For serious volume, expect to pay. But the cheapest models ($0.10/1M tokens) make the cost minimal for most use cases.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>LLM pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) {
+    msgEl = document.createElement('div');
+    msgEl.className = 'newsletter-capture__msg';
+    msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;';
+    form.parentElement.insertBefore(msgEl, form.nextSibling);
+  }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.textContent = "You're in. Check your inbox.";
+      msgEl.style.color = '#4ade80';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.textContent = data.error || 'Something went wrong.';
+      msgEl.style.color = '#f87171';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.textContent = 'Network error. Try again.';
+    msgEl.style.color = '#f87171';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

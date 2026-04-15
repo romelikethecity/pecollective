@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>AI API Free Tiers 2026: Every Limit You Hit (and When)</title>
+    <meta name="description" content="Free tiers from OpenAI, Anthropic, Google, GitHub Copilot, Pinecone, and 10+ more. Exact rate limits, token caps, and when you'll need to upgrade.">
+    <link rel="canonical" href="https://pecollective.com/tools/ai-api-free-tiers/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/ai-api-free-tiers/">
+    <meta property="og:title" content="AI API Free Tiers 2026: Every Limit You Hit (and When)">
+    <meta property="og:description" content="Free tiers from OpenAI, Anthropic, Google, GitHub Copilot, Pinecone, and 10+ more. Exact rate limits, token caps, and when you'll need to upgrade.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="AI API Free Tiers 2026: Every Limit You Hit (and When)">
+    <meta name="twitter:description" content="Free tiers from OpenAI, Anthropic, Google, GitHub Copilot, Pinecone, and 10+ more. Exact rate limits, token caps, and when you'll need to upgrade.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
+    <style>
+
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+    </style>
+
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI API Free Tiers 2026",
+            "item": "https://pecollective.com/tools/ai-api-free-tiers/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Which AI API has the best free tier?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google Gemini API. The free tier gives you 15 requests per minute and 1 million tokens per day on Gemini Flash models. No other provider comes close to that volume at zero cost. Groq is second with fast inference on Llama models, but its rate limits are tighter at 30 RPM and 6,000 tokens per minute."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Anthropic have a free tier?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No permanent free tier. Anthropic occasionally provides $5 in free API credits for new accounts, but this isn't guaranteed and it expires. Once the credits are gone, you pay per token. There's no ongoing free access to Claude models through the API."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long do free tiers last?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It varies. Google Gemini's free tier has no expiration. OpenAI's free tier is ongoing but with very low rate limits (3 RPM). Pinecone's free tier lasts indefinitely for one index. Weaviate's sandbox expires after 14 days. GitHub Copilot Free has no expiration but caps at 2,000 completions per month. Cursor's Pro trial expires after 14 days, then reverts to a limited free plan."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I build a production app on free tiers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Only with Google Gemini Flash. At 1 million tokens per day free, it can handle a small production app with low traffic. Everything else is too rate-limited for production. Free tiers offer zero SLA, meaning your app can break anytime the provider changes limits or has an outage, with no recourse."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens when I exceed free tier limits?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You'll get HTTP 429 (rate limit) errors. Most providers return a retry-after header telling you how long to wait. OpenAI queues you behind paid users. Hugging Face puts you in a request queue that can take minutes. Groq returns instant 429s. No provider auto-upgrades you to paid without explicit action."
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI API Free Tiers 2026: Every Limit You Hit (and When)",
+    "description": "Free tiers from OpenAI, Anthropic, Google, GitHub Copilot, Pinecone, and 10+ more. Exact rate limits, token caps, and when you'll need to upgrade.",
+    "author": {
+        "@type": "Person",
+        "name": "Rome Thorndike"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "PE Collective",
+        "url": "https://pecollective.com"
+    },
+    "datePublished": "2026-04-15",
+    "dateModified": "2026-04-15",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://pecollective.com/tools/ai-api-free-tiers/"
+    }
+}
+    </script>
+
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    .verdict-box { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 24px 0; }
+    .verdict-box h3 { color: var(--gold); margin-bottom: 12px; }
+    .verdict-box p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    @media (max-width: 600px) {
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">&#10005;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            var menuBtn = document.querySelector('.mobile-menu-btn');
+            var closeBtn = document.querySelector('.mobile-nav-close');
+            var overlay = document.querySelector('.mobile-nav-overlay');
+            var mobileNav = document.querySelector('.mobile-nav');
+            var mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(function(link) { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+  <main>
+    <div class="pricing-page">
+      <h1>AI API Free Tiers 2026: What You Get, What You Don't, and When You'll Pay</h1>
+      <p class="subtitle">Every AI provider offers a free tier. None of them tell you upfront exactly where the wall is. This page documents every free tier's real limits so you know what you're signing up for before you hit a paywall mid-project.</p>
+
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Free tiers exist to get you building. The provider's goal is to hook you before you realize the limits are too tight for anything beyond a weekend prototype. Some free tiers are legitimately useful. Google Gemini Flash gives you 1 million tokens per day at no cost. Others are window dressing. OpenAI's free tier caps reasoning models at 3 requests per minute, which means you'll burn through it in the time it takes to test a single prompt chain.</p>
+
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">This guide covers every major AI API, developer tool, and infrastructure service that offers free access in 2026. For each one, you'll get the exact limits, what breaks first, and when it makes sense to upgrade. All data verified April 2026.</p>
+
+
+      <!-- ============================================ -->
+      <!-- FREE TIER COMPARISON TABLE                   -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Free Tier Comparison Table</h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Here's every provider's free tier side by side. The "What Breaks First" column is what matters most. It tells you the constraint you'll hit before any other.</p>
+
+        <div style="overflow-x: auto; margin: 20px 0;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr>
+                <th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Provider</th>
+                <th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Free Tier?</th>
+                <th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Rate Limit</th>
+                <th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Token / Usage Cap</th>
+                <th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">What Breaks First</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">OpenAI API</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">3 RPM (reasoning), 500 RPM (GPT-4o-mini)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Limited tokens/day</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Rate limits on anything useful</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Anthropic API</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">No (sometimes $5 credits)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">N/A</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5 credit expires</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">No free tier exists</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Google Gemini API</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">15 RPM</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M tokens/day</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">RPM during traffic spikes</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">GitHub Copilot</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes (Free plan)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">2,000 completions/mo</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">50 chat messages/mo</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Completions in ~3 days of real coding</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Hugging Face Inference</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Rate-limited (varies)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Varies by model</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Request queue times (minutes)</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Pinecone</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Shared infrastructure</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1 index, 100K vectors</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Vector count at ~100K records</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Replit</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Limited compute</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Agent access capped</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Compute and deployment limits</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Windsurf / Codeium</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">50 completions/day</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Limited Cascade flows</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Daily completion cap</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Cohere</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes (trial)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Rate-limited</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1,000 API calls/month</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Monthly call cap</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border); font-weight: 600;">Groq</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Yes</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">30 RPM</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">6,000 tokens/min (Llama)</td>
+                <td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tokens per minute on longer prompts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- LLM API FREE TIERS (DEEP DIVE)              -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">LLM API Free Tiers: The Full Picture</h2>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">OpenAI Free Tier</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI's free tier exists, but it's severely limited. You get access to GPT-4o-mini at 500 requests per minute, which sounds generous until you realize the token-per-minute cap restricts real throughput. Reasoning models (o3, o4-mini) are capped at 3 requests per minute. GPT-4.1 and GPT-5 are available at the free tier, but with the same 3 RPM restriction on most models.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The free tier doesn't expire. You can use it indefinitely, but the rate limits make it usable only for testing individual prompts. If you need to iterate on prompt engineering or run any batch of requests, you'll hit 429 errors within minutes. Upgrading to Tier 1 costs $5 cumulative spend and unlocks 500 RPM across most models.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">When you exceed the free tier rate limit, OpenAI returns a 429 status code with a <code>retry-after</code> header. Your requests aren't queued. They're rejected. You need to handle retries in your own code with exponential backoff.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Google Gemini API Free Tier</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Google offers the most generous free tier in the industry. Gemini Flash models are available at 15 requests per minute and 1 million tokens per day, at zero cost. This is enough to build and run a small production application. No other major provider matches this volume for free.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The free tier covers Gemini 2.0 Flash and Gemini 2.0 Flash-Lite. The more capable Gemini 2.5 Pro model isn't included in the free tier for high-volume use. You get the free tier through Google AI Studio or the Gemini API directly. It doesn't expire, and there's no credit system. You just start making requests.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The 15 RPM limit is the real constraint. For a chatbot handling multiple concurrent users, 15 RPM means about one request every 4 seconds. That works for a personal project or internal tool. It doesn't work for a consumer-facing app with any meaningful traffic. The paid tier starts at $0.075 per million input tokens for Flash, which is so cheap you might as well upgrade once you have users.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Cohere Free Trial</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cohere offers a free trial tier with 1,000 API calls per month. This covers their Command models for text generation, Embed models for embeddings, and Rerank for search. The models are solid for enterprise NLP tasks like classification, summarization, and RAG.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">At 1,000 calls per month, you get about 33 calls per day. That's enough to evaluate the models and build a proof of concept, but not enough for any ongoing use. The trial doesn't expire as long as you stay under the limit. Cohere's paid tier is usage-based starting around $1 per 1,000 API calls depending on the model.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Groq Free Tier</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Groq's free tier is interesting because the inference speed is exceptional. Running Llama models on Groq's custom LPU hardware produces tokens faster than any other provider. The free tier gives you 30 requests per minute and roughly 6,000 tokens per minute for Llama models.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The tokens-per-minute cap is the binding constraint, not RPM. A single longer prompt can eat half your per-minute token budget. This makes Groq's free tier great for short-completion tasks (classification, extraction, short answers) and frustrating for anything involving long context or detailed responses.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Groq also supports Mixtral and other open models on the free tier. The limits vary by model. Check the Groq console for current per-model rate limits, as they adjust these regularly. When you exceed limits, you get instant 429 errors with no queuing.</p>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- DEVELOPER TOOL FREE TIERS                   -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Developer Tool Free Tiers</h2>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">GitHub Copilot Free</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GitHub Copilot Free gives you 2,000 code completions per month and 50 chat messages per month. You get access to GPT-4o and Claude 3.5 Sonnet as the underlying models. No access to Claude 3.5 Opus or other premium models on the free plan.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">2,000 completions sounds like a lot until you realize how often Copilot fires. If you're coding actively, each keystroke pause can trigger a completion. In practice, heavy users burn through 2,000 completions in about 3 days. After that, you're coding without AI assistance for the rest of the month.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The 50 chat messages per month is the tighter constraint for many developers. That's less than 2 per day. If you use Copilot Chat for debugging, explaining code, or generating boilerplate, you'll exhaust this in the first week. Copilot Pro at $10/month removes both caps and is worth it for anyone coding daily.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Windsurf (Codeium) Free</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Windsurf's free plan includes 50 autocomplete completions per day and limited access to Cascade, their multi-file AI editing feature. The daily reset is better than Copilot's monthly cap in some ways. You always get a fresh 50 completions tomorrow.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">50 completions per day is enough for light coding. One or two focused hours of work. After that, the autocomplete stops and you're back to typing manually. Cascade flows (multi-step edits across files) are limited on the free plan but available. Windsurf Pro at $15/month removes the completion cap and gives full Cascade access.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Cursor Free Tier</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cursor gives new users a 14-day Pro trial with full features. After that, you drop to the free tier with limited completions and no access to premium models. The trial is generous. You get the complete Cursor experience, including Composer (multi-file generation), Chat, and autocomplete with no caps during those 14 days.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Once the trial ends, the free tier is bare bones. Limited slow completions, basic models only, and no Composer. If you're evaluating AI coding tools, use those 14 days on a real project so you can make an informed decision about whether Cursor Pro ($20/month) is worth it. Don't waste the trial on toy code.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Replit Free Tier</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Replit's free tier includes basic IDE features, limited compute for running code, and capped access to the Replit Agent (their AI coding assistant). You can write and run code for free, but deployments are limited and the Agent has usage caps that reset monthly.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The compute limits are the real issue. Free tier projects sleep after inactivity and have limited CPU and RAM. If you're building anything that needs to stay running (a web app, a bot, an API), you'll need the paid tier. Replit Core starts at $25/month and includes more compute, always-on deployments, and higher Agent limits.</p>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- INFRASTRUCTURE FREE TIERS                   -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Infrastructure Free Tiers</h2>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Pinecone</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone's free tier gives you 1 serverless index with up to 100,000 vectors on shared infrastructure. There's no time limit. You can keep your index running indefinitely. Query performance is acceptable for development and light production, though latency can spike since you're on shared pods.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">100,000 vectors sounds like a lot. It isn't. If you're building a RAG application, each document chunk becomes a vector. A 100-page PDF might produce 500+ chunks. A knowledge base with 200 documents fills the free tier. For anything beyond a small prototype, you'll need the Starter tier at $70/month for 1 million vectors.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Weaviate Cloud</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Weaviate offers a free sandbox cluster that self-destructs after 14 days. That's it. No permanent free tier. The sandbox is useful for testing Weaviate's features and running through tutorials, but you can't build anything lasting on it.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">If you want free Weaviate long-term, self-host it. Weaviate is open source and runs well in Docker. You'll need your own server, but there's no licensing cost. For managed hosting, Weaviate's paid plans start around $25/month for a small cluster.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Hugging Face</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Hugging Face's free tier has two parts. The Inference API lets you run models hosted by Hugging Face with rate limits that vary by model popularity. Popular models like Llama often have long queue times (30 seconds to several minutes). Less popular models respond faster but may be less capable.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Hugging Face Spaces gives you free CPU-only compute to deploy apps. This is great for demos and simple apps. GPU Spaces start at $0.60/hour. For production inference, the free tier is too unreliable. Queue times are unpredictable and there's no SLA. Use it for experimentation and model evaluation, then deploy your own infrastructure for production.</p>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; margin-top: 32px;">Chroma</h3>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Chroma is fully open source. There's no managed free tier because the default deployment is self-hosted. You can run Chroma locally or in Docker with no cost and no limits. It's the simplest vector database to get started with, just <code>pip install chromadb</code> and you're running.</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The tradeoff: you manage everything yourself. Backups, scaling, uptime. For local development and small deployments, Chroma is perfect. For production at scale, you'll either need to invest in infrastructure management or switch to a managed service like Pinecone.</p>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- WHICH FREE TIERS ARE WORTH USING             -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Free Tiers Are Worth Using in Production?</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Most free tiers are testing-only. A few are legitimately useful beyond that. Here's the honest breakdown.</p>
+
+        <div class="verdict-box">
+          <h3>Google Gemini Flash: Yes</h3>
+          <p>1 million tokens per day free is enough for a small production app. If your app handles under 15 requests per minute and each request stays under ~65K tokens, you can run on Gemini Flash's free tier indefinitely. The model quality is good enough for chatbots, summarization, extraction, and classification. It's the only LLM free tier worth building production on.</p>
+        </div>
+
+        <div class="verdict-box">
+          <h3>Groq: Yes, for Prototyping</h3>
+          <p>Groq's speed makes it excellent for building and demoing prototypes. The free tier rate limits are tight for production, but the inference is so fast that it's the best place to test ideas that need quick turnaround. Build on Groq free, then move to a paid provider (or Groq paid) when you have real users.</p>
+        </div>
+
+        <div class="verdict-box">
+          <h3>Pinecone: Barely</h3>
+          <p>100K vectors runs out fast with real data. A small RAG application with a few hundred documents fills the free tier. You can use it for a lightweight demo, but plan to upgrade the moment you start loading real data. The free tier's shared infrastructure also means inconsistent query latency.</p>
+        </div>
+
+        <div class="verdict-box">
+          <h3>Everything Else: Testing Only</h3>
+          <p>OpenAI's 3 RPM, Copilot's 2,000 completions/month, Windsurf's 50/day, Cohere's 1,000 calls/month, Hugging Face's unpredictable queues. These are all fine for evaluation and testing. None of them are stable enough, fast enough, or generous enough to build production applications on. Don't architect around a free tier that can change without notice.</p>
+        </div>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- WHEN TO UPGRADE                              -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">When to Upgrade: The Real Breakpoints</h2>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Here are the specific scenarios where free tiers stop working and what you should switch to.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>If you're making over 100 API calls per day:</strong> Upgrade to OpenAI Tier 1 ($5 minimum cumulative spend). The free tier's 3 RPM on useful models means 100 calls takes over 30 minutes of wall time. Tier 1 gives you 500 RPM, which handles 100 calls in seconds. Or stay on Google Gemini free if 15 RPM is sufficient.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>If you need more than 50 code completions per day:</strong> Get Copilot Pro ($10/month) or Windsurf Pro ($15/month). Both remove daily and monthly caps. Copilot Pro is the safer choice with broader IDE support. Windsurf Pro is better if you use Cascade for multi-file edits. Don't try to ration 50 completions across a full workday. It kills your flow.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>If you're storing more than 100K vectors:</strong> Move to Pinecone Starter ($70/month) or self-host with Chroma or Qdrant. The jump from 100K to 1M vectors is where most RAG applications land. If you're on Weaviate's 14-day sandbox, decide before day 10 whether to pay or self-host. Don't let your data get deleted.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>If you need guaranteed uptime:</strong> Any paid tier. Free tiers across every provider offer zero SLA. No uptime guarantee, no support, no compensation when things break. If your application has users who depend on it, the cost of a paid tier is trivially small compared to the cost of an outage you can't escalate.</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>If you're hitting rate limits more than once per session:</strong> That's the signal. You've outgrown the free tier. Don't build retry logic and queue systems to work around free tier limits. The engineering time to manage rate limits costs more than the paid tier itself. Upgrade and redirect that time toward your actual product.</p>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- FAQ SECTION                                  -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Frequently Asked Questions</h2>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Which AI API has the best free tier?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Google Gemini API. The free tier gives you 15 requests per minute and 1 million tokens per day on Gemini Flash models. No other provider comes close to that volume at zero cost. Groq is second with fast inference on Llama models, but its rate limits are tighter at 30 RPM and 6,000 tokens per minute.</p>
+        </details>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Does Anthropic have a free tier?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">No permanent free tier. Anthropic occasionally provides $5 in free API credits for new accounts, but this isn't guaranteed and it expires. Once the credits run out, you pay per token. If you want to test Claude models without paying, use the free chat at claude.ai, which has usage limits but no API access.</p>
+        </details>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How long do free tiers last?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Most are indefinite with usage caps. Google Gemini free doesn't expire. OpenAI's free tier is ongoing. Pinecone's free index runs forever. The exceptions: Weaviate's sandbox expires after 14 days, Cursor's Pro trial lasts 14 days, and Anthropic's credits expire after a set period. Always check if there's a time limit before you start building on a free tier.</p>
+        </details>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Can I build a production app on free tiers?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Only with Google Gemini Flash. At 1 million tokens per day free, it can handle a small production app with low traffic. Everything else is too rate-limited. More importantly, free tiers offer zero SLA. Your app can break anytime the provider changes limits, and you have no recourse. For anything user-facing, budget for a paid tier from day one.</p>
+        </details>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What happens when I exceed free tier limits?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">You'll get HTTP 429 (rate limit) errors. Most providers return a <code>retry-after</code> header telling you how long to wait. OpenAI queues you behind paid users. Hugging Face puts you in a request queue that can take minutes. Groq returns instant 429s. No provider auto-upgrades you to paid without your explicit action, so you won't accidentally get a surprise bill.</p>
+        </details>
+
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is the GitHub Copilot free plan worth using?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For casual coding, yes. For daily development, no. 2,000 completions per month and 50 chat messages is roughly 3 days of active coding. If you code every day, you'll spend most of the month without AI assistance. Copilot Pro at $10/month is one of the highest-ROI subscriptions a developer can have. Don't cheap out on a tool you use 8 hours a day.</p>
+        </details>
+      </div>
+
+
+      <!-- ============================================ -->
+      <!-- RELATED RESOURCES                            -->
+      <!-- ============================================ -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Related Resources</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--border-light);"><a href="/tools/openai-api-pricing/">OpenAI API Pricing 2026: Full Cost Breakdown</a></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--border-light);"><a href="/tools/anthropic-api-pricing/">Anthropic API Pricing: Claude Model Costs</a></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--border-light);"><a href="/tools/github-copilot-pricing/">GitHub Copilot Pricing: Free vs Pro vs Enterprise</a></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--border-light);"><a href="/tools/windsurf-pricing/">Windsurf Pricing: Plans and Limits</a></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--border-light);"><a href="/tools/llm-pricing-per-million-tokens/">LLM Pricing Per Million Tokens: Every Model Compared</a></li>
+          <li style="padding: 8px 0;"><a href="/blog/ai-free-tiers-2026/">AI Free Tiers in 2026: What Changed This Year</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>AI tool pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) {
+    msgEl = document.createElement('div');
+    msgEl.className = 'newsletter-capture__msg';
+    msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;';
+    form.parentElement.insertBefore(msgEl, form.nextSibling);
+  }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.textContent = "You're in. Check your inbox.";
+      msgEl.style.color = '#4ade80';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.textContent = data.error || 'Something went wrong.';
+      msgEl.style.color = '#f87171';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.textContent = 'Network error. Try again.';
+    msgEl.style.color = '#f87171';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

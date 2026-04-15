@@ -106,6 +106,22 @@
                 "@type": "Answer",
                 "text": "No. Chroma can run entirely in-memory within your Python process. No separate server, no Docker, no cloud account needed. For persistent storage or client-server mode, you can run Chroma as a standalone service, but it's optional."
             }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Chroma support GPU acceleration?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not directly. Chroma's core vector search runs on CPU. However, if you use an embedding model that supports GPU (like a local sentence-transformers model), the embedding generation step will use your GPU. The similarity search itself is CPU-based, which is fine for most workloads under a few hundred thousand vectors."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What embedding models work with Chroma?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Chroma works with any embedding model. By default, it uses a local all-MiniLM-L6-v2 model for automatic embedding. You can swap in OpenAI's text-embedding-3-small, Cohere's embed models, or any sentence-transformers model. You can also generate embeddings yourself and pass raw vectors directly."
+            }
         }
     ]
 }
@@ -556,6 +572,27 @@ results = collection.query(query_texts=["search term"], n_results=2)</code></pre
 <p>Chroma's simplicity comes with tradeoffs. There's no built-in hybrid search (keyword + vector). There's no native multi-tenancy. Replication and high availability aren't part of the open-source offering. Performance at scale (millions of vectors, high query throughput) doesn't match dedicated solutions like Pinecone or Weaviate.</p>
 <p>These aren't bugs. They're scope decisions. Chroma optimized for developer experience and getting started fast. Production features at massive scale aren't the primary goal, at least not yet.</p>
 
+<h2>What Changed in Chroma in 2026</h2>
+<p>Chroma Cloud launched. It's a managed hosting option that puts Chroma in the cloud without requiring you to run your own infrastructure. It's still in preview, but it signals where the project is headed: keeping the simple API while solving the deployment problem.</p>
+<p>Performance for large collections improved. Collections with 500K+ vectors are noticeably faster on both inserts and queries compared to a year ago. Multi-tenancy support got better, though it's still not at the level of Pinecone or Weaviate for true SaaS isolation.</p>
+<p>The JavaScript/TypeScript client caught up to the Python client in feature coverage. If you're building a Node.js backend, Chroma is now a first-class option rather than a Python-only tool. The core project remains Apache 2.0 licensed and fully open source. No license rug-pulls here.</p>
+
+<h2>When Chroma Makes Sense (and When It Doesn't)</h2>
+<p><strong>Use Chroma when</strong> you're prototyping a RAG app and want a vector database running in five minutes. Use it when you're building demos, running in development, or shipping a small production app with under 100K vectors. Use it when you want an embedded database with zero external dependencies. If your app is a Python script or a small web service, Chroma fits like a glove.</p>
+<p><strong>Don't use Chroma when</strong> you need more than 1 million vectors. Don't use it when you need high availability, automatic replication, or guaranteed uptime SLAs. Don't use it when you're running a multi-tenant SaaS product where tenant data isolation is a hard requirement. And don't use it when your production system needs to handle thousands of concurrent queries per second.</p>
+<p>The sweet spot is development through early production. Chroma gets you moving fast with zero friction. Once your dataset outgrows it or your reliability requirements tighten, migrate to <a href="/tools/pinecone/">Pinecone</a>, <a href="/tools/weaviate/">Weaviate</a>, or <a href="/tools/pgvector/">pgvector</a>. The migration isn't painful because vector database APIs are similar enough across tools.</p>
+
+<h2>Chroma vs Pinecone vs pgvector: Quick Decision Guide</h2>
+<p>Picking a vector database comes down to what you value most. Here's the short version.</p>
+<ul>
+<li><strong>Need zero ops?</strong> Go with <a href="/tools/pinecone/">Pinecone</a>. You create an index and forget about infrastructure. It costs money, but it saves you from managing anything.</li>
+<li><strong>Need open source and embedded?</strong> Go with Chroma. Pip install, import, done. No servers, no cloud accounts, no billing surprises.</li>
+<li><strong>Already run Postgres?</strong> Go with <a href="/tools/pgvector/">pgvector</a>. One extension, and your vectors live next to your application data. SQL joins between vector results and relational tables are the killer feature.</li>
+<li><strong>Need hybrid search (keyword + vector)?</strong> Go with <a href="/tools/weaviate/">Weaviate</a>. It's the only option here with built-in BM25 and vector search in the same query.</li>
+<li><strong>Budget is $0/month?</strong> Chroma (self-hosted) or pgvector (if you already have Postgres). Both are free and open source.</li>
+</ul>
+<p>Most teams prototype with Chroma, evaluate with pgvector if they run Postgres, and land on Pinecone when they need managed production infrastructure. That's not a failure of planning. It's a reasonable progression.</p>
+
 <h2>Chroma vs Pinecone</h2>
 <p><a href="/tools/pinecone/">Pinecone</a> is the managed production choice. Chroma is the lightweight development choice. Pinecone handles billions of vectors with managed infrastructure. Chroma handles development and small-to-medium workloads with minimal setup. Start with Chroma, move to Pinecone when scale demands it.</p>
 
@@ -709,6 +746,14 @@ results = collection.query(query_texts=["search term"], n_results=2)</code></pre
           <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
             <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Does Chroma require a server?</summary>
             <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">No. Chroma can run entirely in-memory within your Python process. No separate server, no Docker, no cloud account needed. For persistent storage or client-server mode, you can run Chroma as a standalone service, but it's optional.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">Does Chroma support GPU acceleration?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Not directly. Chroma's core vector search runs on CPU. However, if you use an embedding model that supports GPU (like a local sentence-transformers model), the embedding generation step will use your GPU. The similarity search itself is CPU-based, which is fine for most workloads under a few hundred thousand vectors.</p>
+          </details>
+          <details style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: var(--space-lg); font-weight: 600; cursor: pointer; color: var(--color-text-primary);">What embedding models work with Chroma?</summary>
+            <p style="padding: 0 var(--space-lg) var(--space-lg); color: var(--color-text-secondary); line-height: 1.7;">Chroma works with any embedding model. By default, it uses a local all-MiniLM-L6-v2 model for automatic embedding. You can swap in OpenAI's text-embedding-3-small, Cohere's embed models, or any sentence-transformers model. You can also generate embeddings yourself and pass raw vectors directly. Chroma doesn't care where the vectors come from.</p>
           </details>
         </div>
       </div>

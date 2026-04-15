@@ -1231,6 +1231,13 @@
         </div>
 
         <div class="comparison-content">
+          <div class="section-divider">
+            <h2>Quick Decision: LangChain or CrewAI?</h2>
+            <p><strong>Pick LangChain if:</strong> you need a general-purpose LLM framework, you want RAG, chains, and agents in one toolkit, you need the largest ecosystem of integrations, or you're building custom pipelines where you control every step. LangChain is the Swiss Army knife. It does everything, but you'll spend time learning which blade to use.</p>
+            <p><strong>Pick CrewAI if:</strong> you specifically need multi-agent coordination, you want role-based agents that collaborate, or you're building workflows where agents hand off tasks to each other. CrewAI is opinionated about how agents work together. That opinion saves you weeks of wiring.</p>
+            <p><strong>Pick neither (use raw API calls) if:</strong> you're building a simple single-prompt app. LangChain and CrewAI both add overhead you don't need for straightforward LLM calls. OpenAI's SDK or Anthropic's SDK will get you there faster with fewer dependencies and less abstraction to debug.</p>
+          </div>
+
           <h2>Feature Comparison</h2>
           <table class="comparison-table">
             <thead>
@@ -1365,6 +1372,14 @@
           </div>
 
           <div class="section-divider">
+            <h2>What Changed in 2026</h2>
+            <p>The LangChain you read about in 2024 tutorials doesn't exist anymore. The team split the monolith into <strong>langchain-core</strong> (base abstractions), <strong>langchain-community</strong> (third-party integrations), and <strong>LangGraph</strong> (agent orchestration). LangGraph is now the recommended way to build agents in the LangChain ecosystem. If you're following old tutorials that use AgentExecutor, stop. That's legacy code.</p>
+            <p>CrewAI moved fast too. Structured tool delegation, better memory management, and production deployment features all shipped in the last year. The framework went from "cool demo tool" to something teams run in production.</p>
+            <p>The competitive landscape shifted in an important way. LangChain now competes more with LlamaIndex on RAG pipelines, while CrewAI competes with Microsoft's AutoGen and Semantic Kernel on multi-agent orchestration. These are different markets solving different problems.</p>
+            <p><strong>If you're building agents in 2026:</strong> LangGraph vs CrewAI is the real comparison now. Not "LangChain vs CrewAI" broadly. LangGraph is LangChain's answer to the same problem CrewAI solves, just with more control and less magic.</p>
+          </div>
+
+          <div class="section-divider">
             <h2>Our Recommendation</h2>
             
             <p><strong>For AI Engineers:</strong> Use LangChain (with LangGraph) if you need full control and your project involves more than just agents. Use CrewAI if you're specifically building multi-agent systems and want to ship faster. You can always migrate CrewAI agents into LangGraph later if you need more control.</p>
@@ -1373,6 +1388,13 @@
           </div>
 
           
+          <div class="section-divider">
+            <h2>When to Use Both Together</h2>
+            <p>They're not mutually exclusive. CrewAI can use LangChain components internally. Many teams do this already.</p>
+            <p>The common pattern: LangChain handles retrieval and RAG pipelines (document loading, chunking, embedding, vector search). CrewAI handles agent orchestration on top (a researcher agent queries the RAG pipeline, a writer agent drafts content, an editor agent reviews it). Each framework does what it's best at.</p>
+            <p>The downside is added complexity. Two frameworks means two sets of dependencies, two upgrade cycles, and more surface area for things to break. Only combine them if you need both agent collaboration AND deep RAG integration. If your agents just call APIs and process text, CrewAI alone is enough. If you just need a RAG pipeline with no agent coordination, LangChain alone is enough.</p>
+          </div>
+
           <div class="section-divider">
             <h2>Switching Between LangChain and CrewAI</h2>
             <div class="migration-section">

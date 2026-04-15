@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="34" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Pricing Tiers at a Glance</text>
+  <text x="400" y="52" fill="#a8c5cc" font-size="11" text-anchor="middle">Compare plans side-by-side to find the right fit</text>
+
+  <!-- Decorative tier cards -->
+  <!-- Free tier -->
+  <rect x="50" y="80" width="160" height="250" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <text x="130" y="112" fill="#6a8a94" font-size="12" font-weight="600" text-anchor="middle">FREE</text>
+  <line x1="70" y1="122" x2="190" y2="122" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <text x="130" y="152" fill="#e8a87c" font-size="32" font-weight="700" text-anchor="middle">$0</text>
+  <text x="130" y="172" fill="#6a8a94" font-size="10" text-anchor="middle">per month</text>
+  <line x1="70" y1="185" x2="190" y2="185" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <g fill="#a8c5cc" font-size="10">
+    <text x="80" y="205">Basic features</text>
+    <text x="80" y="225">Limited usage</text>
+    <text x="80" y="245">Community support</text>
+    <text x="80" y="265">Standard models</text>
+  </g>
+  <text x="130" y="310" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle">Get Started</text>
+
+  <!-- Pro tier -->
+  <rect x="230" y="70" width="160" height="270" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <rect x="270" y="62" width="80" height="18" rx="9" fill="#e8a87c"/>
+  <text x="310" y="75" fill="#0a1f25" font-size="9" font-weight="700" text-anchor="middle">POPULAR</text>
+  <text x="310" y="112" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">PRO</text>
+  <line x1="250" y1="122" x2="370" y2="122" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <text x="310" y="152" fill="#e8a87c" font-size="32" font-weight="700" text-anchor="middle">$$</text>
+  <text x="310" y="172" fill="#6a8a94" font-size="10" text-anchor="middle">per month</text>
+  <line x1="250" y1="185" x2="370" y2="185" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <g fill="#ffffff" font-size="10">
+    <text x="260" y="205">All free features</text>
+    <text x="260" y="225">Higher limits</text>
+    <text x="260" y="245">Priority support</text>
+    <text x="260" y="265">Advanced models</text>
+    <text x="260" y="285">API access</text>
+  </g>
+  <text x="310" y="320" fill="#e8a87c" font-size="11" font-weight="600" text-anchor="middle">Most Popular</text>
+
+  <!-- Business tier -->
+  <rect x="410" y="80" width="160" height="250" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <text x="490" y="112" fill="#6a8a94" font-size="12" font-weight="600" text-anchor="middle">BUSINESS</text>
+  <line x1="430" y1="122" x2="550" y2="122" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <text x="490" y="152" fill="#e8a87c" font-size="32" font-weight="700" text-anchor="middle">$$$</text>
+  <text x="490" y="172" fill="#6a8a94" font-size="10" text-anchor="middle">per user/month</text>
+  <line x1="430" y1="185" x2="550" y2="185" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <g fill="#a8c5cc" font-size="10">
+    <text x="440" y="205">Everything in Pro</text>
+    <text x="440" y="225">Team management</text>
+    <text x="440" y="245">SSO + audit logs</text>
+    <text x="440" y="265">Admin controls</text>
+  </g>
+  <text x="490" y="310" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle">For Teams</text>
+
+  <!-- Enterprise tier -->
+  <rect x="590" y="80" width="160" height="250" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <text x="670" y="112" fill="#6a8a94" font-size="12" font-weight="600" text-anchor="middle">ENTERPRISE</text>
+  <line x1="610" y1="122" x2="730" y2="122" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <text x="670" y="152" fill="#e8a87c" font-size="26" font-weight="700" text-anchor="middle">Custom</text>
+  <text x="670" y="172" fill="#6a8a94" font-size="10" text-anchor="middle">contact sales</text>
+  <line x1="610" y1="185" x2="730" y2="185" stroke="#1a4a56" stroke-opacity="0.5"/>
+  <g fill="#a8c5cc" font-size="10">
+    <text x="620" y="205">Everything in Biz</text>
+    <text x="620" y="225">Custom contracts</text>
+    <text x="620" y="245">Dedicated support</text>
+    <text x="620" y="265">SLA guarantees</text>
+  </g>
+  <text x="670" y="310" fill="#3d8a9a" font-size="11" font-weight="600" text-anchor="middle">Contact Sales</text>
+
+  <!-- Footer -->
+  <text x="400" y="370" fill="#a8c5cc" font-size="11" text-anchor="middle">Scroll down for detailed plan breakdowns, hidden costs, and our recommendations.</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

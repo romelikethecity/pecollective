@@ -315,7 +315,7 @@
         
         <div class="header__cta">
           <a href="./" class="btn btn--secondary btn--small active">Join Community</a>
-          <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" class="btn btn--primary btn--small">Newsletter</a>
+          <a href="/#newsletter" class="btn btn--primary btn--small">Newsletter</a>
         </div>
         <button class="header__menu-btn" aria-label="Open menu">&#9776;</button>
       </div>
@@ -356,17 +356,21 @@
           <div class="join-info">
             <h1>Join the <span class="text-gold">PE Collective</span></h1>
             <p class="join-info__subtitle">
-              A private community of prompt engineers, AI engineers, and ML practitioners sharing job leads, salary data, and career insights.
+              The private community where AI professionals share what they can't post publicly: real salary numbers, interview intel, and job leads before they hit LinkedIn.
             </p>
-            
+
             <ul class="join-benefits">
-              <li>Private Slack with 1,300+ AI professionals</li>
-              <li>Job referrals and early access to unlisted roles</li>
-              <li>Salary benchmarks and negotiation intel</li>
-              <li>Weekly office hours with industry experts</li>
-              <li>Direct access to hiring managers at top AI companies</li>
-              <li>Full newsletter archive + AI Playbook</li>
+              <li><strong>Job referrals first</strong> - Members share unlisted roles 2-3 weeks before public posting</li>
+              <li><strong>Real salary data</strong> - Benchmarks from actual offers, not self-reported surveys</li>
+              <li><strong>Weekly office hours</strong> - Live sessions with hiring managers at Anthropic, OpenAI, Google, Meta</li>
+              <li><strong>Prompt review</strong> - Get feedback on production prompts from people shipping AI products</li>
+              <li><strong>Interview prep</strong> - Company-specific prep from members who recently interviewed there</li>
+              <li><strong>Full newsletter archive</strong> - Every AI Pulse issue + the AI Playbook resource library</li>
             </ul>
+
+            <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,0.03);border-radius:8px;border-left:3px solid var(--color-gold);">
+              <p style="font-size:0.9375rem;color:var(--color-text-secondary);margin:0;font-style:italic;">"I got my current role through a referral posted in the Slack 10 days before it went on LinkedIn. The salary negotiation intel alone paid for the subscription 100x over." <span style="display:block;margin-top:6px;font-style:normal;font-weight:600;color:var(--color-text-primary);font-size:0.8125rem;">- Senior Prompt Engineer, Series B startup</span></p>
+            </div>
             
             <div class="member-stats">
               <div class="member-stat">
@@ -412,11 +416,13 @@
             </div>
             
             <div class="join-free-option">
-              <p>Not ready for paid? Get the free newsletter:</p>
-              <form class="join-email-form" action="https://ainewsdigest.substack.com/subscribe" method="get" target="_blank">
+              <p>Not ready for paid? Get the free weekly data:</p>
+              <form class="join-email-form" onsubmit="handleNewsletterSignup(event, this)" style="position:relative;">
+                <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
                 <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-                <button type="submit" class="btn btn--primary btn--small">Subscribe Free</button>
+                <button type="submit" class="btn btn--primary btn--small">Get the Data</button>
               </form>
+              <div class="newsletter-capture__msg" style="margin-top:6px;font-size:0.8125rem;"></div>
             </div>
           </div>
         </div>
@@ -463,19 +469,52 @@
           <nav class="footer__links">
             <a href="./">Join Us</a>
             <a href="../about/">About</a>
-            <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">Newsletter</a>
+            <a href="/#newsletter">Newsletter</a>
           </nav>
         </div>
       </div>
       
       <div class="footer__bottom">
         <span>© 2026 PE Collective. Built with 🧠 for the AI community.</span>
-        <span>Part of the <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener">AI News Digest</a> network.</span>
+        <span>Part of the AI News Digest network.</span>
       </div>
     </div>
   </footer>
 
-  <!-- No JavaScript needed - simple links to Substack -->
 <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      if (msgEl) msgEl.innerHTML = '<span style="color:var(--color-success);">You\'re in. Check your inbox.</span>';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      if (msgEl) msgEl.innerHTML = '<span style="color:var(--color-error);">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    if (msgEl) msgEl.innerHTML = '<span style="color:var(--color-error);">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
 </body>
 </html>

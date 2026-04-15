@@ -55,8 +55,9 @@
   });
 
   // ── Newsletter Form Submissions ────────────────────────
+  // Track on-site newsletter captures (Resend-powered forms)
   document.querySelectorAll(
-    'form[action*="substack.com/subscribe"], .cta-section__form'
+    '.newsletter-capture__form, .newsletter-inline__form, .cta-section__form'
   ).forEach(function (form) {
     form.addEventListener('submit', function () {
       var email = form.querySelector('input[type="email"]');
@@ -124,6 +125,72 @@
           page_location: window.location.pathname
         });
       }
+    });
+  });
+
+  // ── Scroll Depth Tracking ────────────────────────────
+  // Fires at 25%, 50%, 75%, 90% on blog posts and long-form pages
+  (function () {
+    var path = window.location.pathname;
+    var isLongForm = path.indexOf('/blog/') === 0 ||
+                     path.indexOf('/glossary/') === 0 ||
+                     path.indexOf('/tools/') === 0 ||
+                     path.indexOf('/salaries/') === 0;
+    if (!isLongForm) return;
+
+    var thresholds = [25, 50, 75, 90];
+    var fired = {};
+
+    function getScrollPercent() {
+      var docHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+      var winHeight = window.innerHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (docHeight <= winHeight) return 100;
+      return Math.round((scrollTop / (docHeight - winHeight)) * 100);
+    }
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var pct = getScrollPercent();
+        for (var i = 0; i < thresholds.length; i++) {
+          var t = thresholds[i];
+          if (pct >= t && !fired[t]) {
+            fired[t] = true;
+            track('scroll_depth', {
+              percent: t,
+              page_location: path
+            });
+          }
+        }
+        ticking = false;
+      });
+    }, { passive: true });
+  })();
+
+  // ── AI News Digest Click Tracking ────────────────────
+  document.querySelectorAll('a[href*="ainewsdigest.substack.com"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      track('ainewsdigest_click', {
+        click_location: window.location.pathname,
+        link_text: (el.textContent || '').trim().substring(0, 40)
+      });
+    });
+  });
+
+  // ── Internal Link Click Tracking ─────────────────────
+  document.querySelectorAll('.related-articles a, .job-cross-links a, .glossary-cross-links a').forEach(function (el) {
+    el.addEventListener('click', function () {
+      track('internal_link_click', {
+        link_text: (el.textContent || '').trim(),
+        link_url: el.getAttribute('href') || '',
+        source_page: window.location.pathname
+      });
     });
   });
 })();

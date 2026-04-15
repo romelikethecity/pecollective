@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="34" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">AI Agent Frameworks Compared</text>
+  <text x="400" y="52" fill="#a8c5cc" font-size="11" text-anchor="middle">LangChain/LangGraph vs CrewAI vs AutoGen (April 2026)</text>
+
+  <!-- Three column cards -->
+
+  <!-- LangChain/LangGraph -->
+  <rect x="30" y="70" width="235" height="290" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <rect x="88" y="62" width="120" height="18" rx="9" fill="#e8a87c"/>
+  <text x="148" y="75" fill="#0a1f25" font-size="10" font-weight="700" text-anchor="middle">MOST FLEXIBLE</text>
+
+  <text x="148" y="100" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">LangGraph</text>
+  <text x="148" y="116" fill="#6a8a94" font-size="11" text-anchor="middle">by LangChain</text>
+
+  <!-- GitHub stars -->
+  <rect x="80" y="126" width="136" height="24" rx="4" fill="#0f2d35"/>
+  <text x="148" y="142" fill="#e8a87c" font-size="12" font-weight="600" text-anchor="middle">100K+ GitHub Stars</text>
+
+  <line x1="50" y1="160" x2="245" y2="160" stroke="#1a4a56" stroke-opacity="0.5"/>
+
+  <text x="55" y="180" fill="#4ade80" font-size="11">+ Graph-based workflows</text>
+  <text x="55" y="198" fill="#4ade80" font-size="11">+ Fine-grained control</text>
+  <text x="55" y="216" fill="#4ade80" font-size="11">+ Huge ecosystem</text>
+  <text x="55" y="234" fill="#4ade80" font-size="11">+ LangSmith tracing</text>
+  <text x="55" y="258" fill="#e8a87c" font-size="11">- Steep learning curve</text>
+  <text x="55" y="276" fill="#e8a87c" font-size="11">- Complex abstractions</text>
+
+  <text x="148" y="310" fill="#a8c5cc" font-size="10" text-anchor="middle">Best for: Production agents</text>
+  <text x="148" y="326" fill="#a8c5cc" font-size="10" text-anchor="middle">needing full control</text>
+  <text x="148" y="348" fill="#6a8a94" font-size="10" text-anchor="middle">Free / Open Source</text>
+
+  <!-- CrewAI -->
+  <rect x="283" y="70" width="235" height="290" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="400" y="100" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">CrewAI</text>
+  <text x="400" y="116" fill="#6a8a94" font-size="11" text-anchor="middle">Multi-agent framework</text>
+
+  <rect x="332" y="126" width="136" height="24" rx="4" fill="#0f2d35"/>
+  <text x="400" y="142" fill="#3d8a9a" font-size="12" font-weight="600" text-anchor="middle">25K+ GitHub Stars</text>
+
+  <line x1="303" y1="160" x2="498" y2="160" stroke="#1a4a56" stroke-opacity="0.5"/>
+
+  <text x="308" y="180" fill="#4ade80" font-size="11">+ Role-based agents</text>
+  <text x="308" y="198" fill="#4ade80" font-size="11">+ Easy to get started</text>
+  <text x="308" y="216" fill="#4ade80" font-size="11">+ Built-in collaboration</text>
+  <text x="308" y="234" fill="#4ade80" font-size="11">+ Good documentation</text>
+  <text x="308" y="258" fill="#e8a87c" font-size="11">- Less flexible than LG</text>
+  <text x="308" y="276" fill="#e8a87c" font-size="11">- Smaller ecosystem</text>
+
+  <text x="400" y="310" fill="#a8c5cc" font-size="10" text-anchor="middle">Best for: Multi-agent teams</text>
+  <text x="400" y="326" fill="#a8c5cc" font-size="10" text-anchor="middle">with defined roles</text>
+  <text x="400" y="348" fill="#6a8a94" font-size="10" text-anchor="middle">Free / Open Source</text>
+
+  <!-- AutoGen -->
+  <rect x="536" y="70" width="235" height="290" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="653" y="100" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">AutoGen</text>
+  <text x="653" y="116" fill="#6a8a94" font-size="11" text-anchor="middle">Microsoft</text>
+
+  <rect x="585" y="126" width="136" height="24" rx="4" fill="#0f2d35"/>
+  <text x="653" y="142" fill="#3d8a9a" font-size="12" font-weight="600" text-anchor="middle">36K+ GitHub Stars</text>
+
+  <line x1="556" y1="160" x2="751" y2="160" stroke="#1a4a56" stroke-opacity="0.5"/>
+
+  <text x="561" y="180" fill="#4ade80" font-size="11">+ Conversational agents</text>
+  <text x="561" y="198" fill="#4ade80" font-size="11">+ Human-in-the-loop</text>
+  <text x="561" y="216" fill="#4ade80" font-size="11">+ Microsoft backing</text>
+  <text x="561" y="234" fill="#4ade80" font-size="11">+ Code execution</text>
+  <text x="561" y="258" fill="#e8a87c" font-size="11">- v0.4 breaking changes</text>
+  <text x="561" y="276" fill="#e8a87c" font-size="11">- Verbose configuration</text>
+
+  <text x="653" y="310" fill="#a8c5cc" font-size="10" text-anchor="middle">Best for: Research +</text>
+  <text x="653" y="326" fill="#a8c5cc" font-size="10" text-anchor="middle">human-in-the-loop</text>
+  <text x="653" y="348" fill="#6a8a94" font-size="10" text-anchor="middle">Free / Open Source</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

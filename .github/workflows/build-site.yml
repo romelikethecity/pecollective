@@ -40,12 +40,7 @@ jobs:
       - name: Create directories
         run: |
           mkdir -p site/jobs site/salaries site/insights site/assets
-          # Preserve existing static pages
-          if [ -d "tools" ]; then cp -r tools site/; fi
-          if [ -d "about" ]; then cp -r about site/; fi
-          if [ -d "join" ]; then cp -r join site/; fi
-          if [ -f "index.html" ]; then cp index.html site/; fi
-          if [ -d "assets" ]; then cp -r assets site/; fi
+          # site/ is the source of truth — do NOT overwrite from root
 
       - name: Fix history file naming
         run: |

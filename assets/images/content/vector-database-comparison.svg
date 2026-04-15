@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="34" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Vector Database Comparison 2026</text>
+  <text x="400" y="52" fill="#a8c5cc" font-size="11" text-anchor="middle">Deployment model, pricing, and key strengths</text>
+
+  <!-- Five database cards in a stacked layout -->
+
+  <!-- Pinecone -->
+  <rect x="30" y="70" width="350" height="66" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <rect x="38" y="63" width="80" height="16" rx="8" fill="#e8a87c"/>
+  <text x="78" y="75" fill="#0a1f25" font-size="9" font-weight="700" text-anchor="middle">MANAGED</text>
+  <text x="50" y="96" fill="#ffffff" font-size="15" font-weight="700">Pinecone</text>
+  <text x="50" y="114" fill="#a8c5cc" font-size="11">Free 100K vectors | Usage-based from $0.33/hr</text>
+  <text x="50" y="128" fill="#6a8a94" font-size="10">Serverless + pod options | Real-time indexing</text>
+  <rect x="270" y="80" width="100" height="20" rx="4" fill="#0f2d35"/>
+  <text x="320" y="94" fill="#e8a87c" font-size="10" font-weight="600" text-anchor="middle">Best Managed</text>
+
+  <!-- Weaviate -->
+  <rect x="30" y="148" width="350" height="66" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <rect x="38" y="141" width="90" height="16" rx="8" fill="#3d8a9a"/>
+  <text x="83" y="153" fill="#ffffff" font-size="9" font-weight="700" text-anchor="middle">OPEN SOURCE</text>
+  <text x="50" y="174" fill="#ffffff" font-size="15" font-weight="700">Weaviate</text>
+  <text x="50" y="192" fill="#a8c5cc" font-size="11">Free (self-hosted) | Cloud from $25/mo</text>
+  <text x="50" y="206" fill="#6a8a94" font-size="10">GraphQL API | Hybrid search | Multi-tenancy</text>
+  <rect x="270" y="158" width="100" height="20" rx="4" fill="#0f2d35"/>
+  <text x="320" y="172" fill="#3d8a9a" font-size="10" font-weight="600" text-anchor="middle">Best OSS</text>
+
+  <!-- Chroma -->
+  <rect x="420" y="70" width="350" height="66" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <rect x="428" y="63" width="90" height="16" rx="8" fill="#3d8a9a"/>
+  <text x="473" y="75" fill="#ffffff" font-size="9" font-weight="700" text-anchor="middle">OPEN SOURCE</text>
+  <text x="440" y="96" fill="#ffffff" font-size="15" font-weight="700">Chroma</text>
+  <text x="440" y="114" fill="#a8c5cc" font-size="11">Free (open source) | Embedded mode</text>
+  <text x="440" y="128" fill="#6a8a94" font-size="10">Python-native | In-memory | Simple API</text>
+  <rect x="660" y="80" width="100" height="20" rx="4" fill="#0f2d35"/>
+  <text x="710" y="94" fill="#3d8a9a" font-size="10" font-weight="600" text-anchor="middle">Prototyping</text>
+
+  <!-- Qdrant -->
+  <rect x="420" y="148" width="350" height="66" rx="8" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <rect x="428" y="141" width="90" height="16" rx="8" fill="#3d8a9a"/>
+  <text x="473" y="153" fill="#ffffff" font-size="9" font-weight="700" text-anchor="middle">OPEN SOURCE</text>
+  <text x="440" y="174" fill="#ffffff" font-size="15" font-weight="700">Qdrant</text>
+  <text x="440" y="192" fill="#a8c5cc" font-size="11">Free (self-hosted) | Cloud from $25/mo</text>
+  <text x="440" y="206" fill="#6a8a94" font-size="10">Rust-based | Fast filtering | Payload search</text>
+  <rect x="660" y="158" width="100" height="20" rx="4" fill="#0f2d35"/>
+  <text x="710" y="172" fill="#3d8a9a" font-size="10" font-weight="600" text-anchor="middle">Performance</text>
+
+  <!-- Milvus -->
+  <rect x="170" y="228" width="460" height="66" rx="8" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <rect x="178" y="221" width="90" height="16" rx="8" fill="#3d8a9a"/>
+  <text x="223" y="233" fill="#ffffff" font-size="9" font-weight="700" text-anchor="middle">OPEN SOURCE</text>
+  <text x="190" y="254" fill="#ffffff" font-size="15" font-weight="700">Milvus</text>
+  <text x="190" y="272" fill="#a8c5cc" font-size="11">Free (open source) | Zilliz Cloud managed option</text>
+  <text x="190" y="286" fill="#6a8a94" font-size="10">Distributed architecture | Billion-scale vectors | GPU-accelerated</text>
+  <rect x="520" y="238" width="100" height="20" rx="4" fill="#0f2d35"/>
+  <text x="570" y="252" fill="#3d8a9a" font-size="10" font-weight="600" text-anchor="middle">Best for Scale</text>
+
+  <!-- Comparison summary -->
+  <rect x="30" y="310" width="740" height="56" rx="8" fill="#132f38"/>
+  <text x="400" y="332" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Quick Decision Guide</text>
+  <text x="400" y="352" fill="#a8c5cc" font-size="11" text-anchor="middle">Prototyping: Chroma | Production (managed): Pinecone | Production (self-hosted): Qdrant or Weaviate | Scale: Milvus</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

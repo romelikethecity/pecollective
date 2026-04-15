@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>AWS Bedrock Pricing 2026 - Claude & Llama | PE Collective</title>
+    <meta name="description" content="Run Claude, Llama, and Mistral through AWS Bedrock. On-demand, provisioned, and batch pricing compared. Calculate actual monthly costs.">
+    <link rel="canonical" href="https://pecollective.com/tools/aws-bedrock-pricing/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/aws-bedrock-pricing/">
+    <meta property="og:title" content="AWS Bedrock Pricing 2026 - Claude & Llama">
+    <meta property="og:description" content="Run Claude, Llama, and Mistral through AWS Bedrock. On-demand, provisioned, and batch pricing compared. Calculate actual monthly costs.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="AWS Bedrock Pricing 2026 - Claude & Llama">
+    <meta name="twitter:description" content="Run Claude, Llama, and Mistral through AWS Bedrock. On-demand, provisioned, and batch pricing compared. Calculate actual monthly costs.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AWS Bedrock Pricing 2026 - Claude & Llama Costs Per Token",
+            "item": "https://pecollective.com/tools/aws-bedrock-pricing/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is AWS Bedrock cheaper than using APIs directly?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. On-demand pricing on Bedrock matches the model providers' direct pricing (e.g., Claude on Bedrock costs the same as Claude on Anthropic's API). Batch inference is 50% cheaper, which is the same discount Anthropic offers directly. The value of Bedrock is AWS integration, not lower prices."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What models are available on AWS Bedrock?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bedrock offers Claude (Anthropic), Llama (Meta), Mistral, Amazon Titan, Cohere Command, and Stability AI models. The selection is broad but model versions may lag behind the providers' direct APIs by a few weeks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is Provisioned Throughput?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Provisioned Throughput reserves dedicated model capacity for your workload. You pay an hourly rate for guaranteed throughput and latency. It requires a 1-month or 6-month commitment. Worth it for high-volume production workloads where consistent performance matters."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much do Bedrock Knowledge Bases cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Knowledge Base queries cost $0.01 per retrieval query plus the LLM costs for generating answers. The backend uses OpenSearch Serverless, which has a minimum of roughly $700/month (4 OCUs). For small projects, this floor cost makes managed RAG expensive compared to alternatives."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Should I use Bedrock or call model APIs directly?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use Bedrock if you're already on AWS and want to keep data within your VPC, use IAM for access control, and avoid managing separate API keys. Call APIs directly if you want the latest model versions immediately, lower overhead for small projects, or you're not locked into AWS."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Bedrock support fine-tuning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training."
+            }
+        }
+    ]
+}
+    </script>
+    
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .pricing-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+    .pricing-page .bottom-line { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .pricing-page .bottom-line h3 { color: var(--gold); margin-bottom: 12px; }
+    .pricing-page .bottom-line p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .pricing-tiers { grid-template-columns: 1fr; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+  <main>
+    <div class="pricing-page">
+      <h1>AWS Bedrock Pricing: Every Model's Real Cost (April 2026)</h1>
+      <p class="subtitle">AWS Bedrock gives you API access to models from Anthropic, Meta, Mistral, Cohere, and others through a single AWS endpoint. The model lineup expanded significantly in early 2026 with Claude Opus 4.6, Llama 4 Scout and Maverick, and Mistral Large 2. Bedrock's pricing matches the providers' direct API rates in most cases. The three billing modes remain: on-demand (pay per token), batch (50% off), and provisioned throughput (reserved capacity). This page covers every major model's current pricing on Bedrock, the new 2026 additions, and when each billing option makes sense.</p>
+
+      <div class="pricing-tiers">
+        
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-color: var(--gold) !important;">
+          <span style="position: absolute; top: -12px; right: 16px; background: var(--gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">On-Demand</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">Per-token</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> Pay per use, no commitment</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Claude Sonnet 4.6: $3/$15 per 1M tokens</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Llama 3.1 70B: $2.65/$3.50 per 1M tokens</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Mistral Large: $4/$12 per 1M tokens</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> No minimum spend or commitment</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for variable or unpredictable workloads</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Batch Inference</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">50% off</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> on-demand rates</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Half the cost of on-demand</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Results within 24 hours</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Same models and quality</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for offline processing</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Submit via S3 bucket</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Provisioned Throughput</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">Hourly rate</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> reserved capacity</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Guaranteed throughput for production</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1-month or 6-month commitments</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> No per-token charges</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for steady high-volume workloads</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Custom model hosting available</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Knowledge Bases / Agents</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">Usage-based</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per query + storage</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Managed RAG pipeline</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Vector storage included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Automatic document chunking</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Agent orchestration built in</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Additional charges on top of model costs</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">On-Demand Model Pricing Table</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Here's what every major model costs on Bedrock's on-demand tier. These prices match (or are very close to) the providers' direct API pricing.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Context Window</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Claude Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$25.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 3.1 8B</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.30</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 3.1 70B</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.65</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 3.1 405B</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.32</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$16.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mistral Large</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$12.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Cohere Command R+</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Cohere Embed v3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">—</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">512</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 4 Scout (109B MoE)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.27</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.36</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10M</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Llama 4 Maverick (402B MoE)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.77</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mistral Large 2</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$6.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Bedrock vs Direct API Pricing: Are You Actually Saving Money?</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">A common question in 2026 is whether Bedrock adds a markup over calling model providers directly. The short answer: for on-demand pricing, Bedrock's per-token rates match the providers' published prices almost exactly. Claude Sonnet 4.6 costs $3/$15 per million tokens on both Bedrock and the Anthropic API. Llama models are priced at Meta's published inference rates.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Where the math gets interesting is prompt caching and batch discounts. Anthropic's direct API offers prompt caching that reduces costs by 90% on repeated prefixes. Bedrock supports prompt caching for Claude models, but the feature availability can lag behind Anthropic's direct API by weeks. If prompt caching is critical to your cost structure, verify that the specific caching feature you need is live on Bedrock before committing.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Batch inference is 50% off on Bedrock, matching the discount available on direct APIs. The operational advantage of Bedrock batch is S3 integration: you drop your input files in an S3 bucket, Bedrock processes them, and results appear in another bucket. No webhook management, no polling. For teams already running data pipelines on AWS, this eliminates real integration work.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The hidden cost that catches teams is Knowledge Bases. The managed RAG pipeline uses OpenSearch Serverless under the hood, which has a minimum cost of roughly $700/month (4 OCUs). For a simple chatbot that only needs vector search over a few thousand documents, this floor cost makes Bedrock's managed RAG dramatically more expensive than running Pinecone ($50/month) or pgvector (free) alongside direct API calls.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Bedrock vs Direct API Access: When Bedrock Wins</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Bedrock's pricing matches direct API pricing, so the decision comes down to operational benefits, not cost savings.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Bedrock wins when your team is already AWS-native. IAM authentication means no API key management. CloudWatch gives you usage metrics alongside your other AWS monitoring. VPC endpoints keep traffic off the public internet. These are significant operational advantages for enterprise teams.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Bedrock also wins for multi-model architectures. Instead of managing API keys, billing, and SDKs for Anthropic, Meta, Mistral, and Cohere separately, Bedrock gives you one endpoint. Model switching is a config change, not an integration project.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Direct APIs win when you need the providers' latest features fastest. New models and capabilities (like Anthropic's prompt caching or OpenAI's batch API improvements) often hit the direct API before they're available on Bedrock. If being on the latest version matters, direct access has less lag.</p>
+        
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Hidden Costs &amp; Gotchas</h2>
+        <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Bedrock's on-demand pricing for Claude matches Anthropic's direct API pricing. You're not paying a premium for the AWS wrapper, but you're also not getting a discount.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Legacy Claude models (3.5 Sonnet in Public Extended Access) now cost $6/$30 per 1M tokens, double the current Sonnet 4.6 price. If your code references old model IDs, you're overpaying.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Knowledge Bases adds charges for vector storage, document processing, and retrieval on top of the model inference cost. A simple RAG setup can cost $50-200/month in Bedrock-specific charges.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Provisioned throughput requires 1-month minimum commitments. If your traffic drops, you still pay for reserved capacity. Only commit after you have stable baseline traffic data.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Data transfer costs apply when moving data between AWS regions or out of AWS. These are standard AWS charges but easy to overlook when budgeting for AI.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Bedrock Agents adds orchestration charges per step. A multi-step agent workflow costs more than a single model invocation for the same output.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Model availability varies by AWS region. Not all models are available in all regions. Check your region before building a pipeline.</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Plan Do You Need?</h2>
+        
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">AWS-native team</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">On-demand Bedrock. If your infrastructure is already on AWS, Bedrock keeps everything in one ecosystem. IAM auth, CloudWatch metrics, and VPC endpoints work out of the box.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Multi-model application</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">On-demand Bedrock gives you Claude, Llama, Mistral, and Cohere through a single API endpoint. No need for separate API keys and billing from each provider.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">High-volume production workload</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Provisioned throughput. If you need guaranteed latency and throughput for a steady workload, provisioned capacity eliminates throttling risk at a predictable cost.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Cost-sensitive team</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Consider the providers' direct APIs. Anthropic and OpenAI offer the same models at the same price, and some offer additional discounts (prompt caching, batch API) that may not be available on Bedrock.</p>
+          </div>
+      </div>
+
+      <div class="bottom-line">
+        <h3>The Bottom Line</h3>
+        <p>Bedrock makes sense for teams already on AWS who want one API endpoint for multiple model providers. The pricing matches direct API costs for on-demand usage, and batch inference at 50% off is the same deal you'd get from the providers directly. The value-add is operational: IAM auth, CloudWatch, VPC endpoints, and managed RAG via Knowledge Bases. If you're not on AWS, there's no pricing reason to choose Bedrock over direct API access.</p>
+      </div>
+
+      <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
+        <strong>Disclosure:</strong> Pricing information is sourced from official websites and may change. We update this page regularly but always verify current pricing on the vendor's site before purchasing.
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+          <a href="/tools/anthropic-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Anthropic API Pricing &rarr;</a>
+          <a href="/tools/openai-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI API Pricing &rarr;</a>
+          <a href="/tools/cohere-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cohere Pricing &rarr;</a>
+          <a href="/tools/openai-api-vs-anthropic-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI vs Anthropic API &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is AWS Bedrock cheaper than using APIs directly?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">No. On-demand pricing on Bedrock matches the model providers' direct pricing (e.g., Claude on Bedrock costs the same as Claude on Anthropic's API). Batch inference is 50% cheaper, which is the same discount Anthropic offers directly. The value of Bedrock is AWS integration, not lower prices.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What models are available on AWS Bedrock?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Bedrock offers Claude (Anthropic), Llama (Meta), Mistral, Amazon Titan, Cohere Command, and Stability AI models. The selection is broad but model versions may lag behind the providers' direct APIs by a few weeks.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What is Provisioned Throughput?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Provisioned Throughput reserves dedicated model capacity for your workload. You pay an hourly rate for guaranteed throughput and latency. It requires a 1-month or 6-month commitment. Worth it for high-volume production workloads where consistent performance matters.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How much do Bedrock Knowledge Bases cost?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Knowledge Base queries cost $0.01 per retrieval query plus the LLM costs for generating answers. The backend uses OpenSearch Serverless, which has a minimum of roughly $700/month (4 OCUs). For small projects, this floor cost makes managed RAG expensive compared to alternatives.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Should I use Bedrock or call model APIs directly?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Use Bedrock if you're already on AWS and want to keep data within your VPC, use IAM for access control, and avoid managing separate API keys. Call APIs directly if you want the latest model versions immediately, lower overhead for small projects, or you're not locked into AWS.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Does Bedrock support fine-tuning?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Yes, Bedrock supports fine-tuning for select models including Amazon Titan and some Llama variants. Fine-tuned models require Provisioned Throughput to serve, which adds to the cost. The fine-tuning job itself is billed separately based on the number of tokens processed during training.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>AI tool pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+  
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

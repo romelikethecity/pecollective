@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Space Grotesk', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="8" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="40" y="36" fill="#ffffff" font-size="19" font-weight="700">Anthropic Claude API Pricing Per 1M Tokens</text>
+  <text x="40" y="54" fill="#a8c5cc" font-size="11">Standard pricing for all Claude models (April 2026)</text>
+
+  <!-- Legend -->
+  <rect x="560" y="22" width="12" height="12" rx="2" fill="#e8a87c"/>
+  <text x="578" y="33" fill="#a8c5cc" font-size="11">Input</text>
+  <rect x="630" y="22" width="12" height="12" rx="2" fill="#3d8a9a"/>
+  <text x="648" y="33" fill="#a8c5cc" font-size="11">Output</text>
+
+  <!-- Grid lines: scale 0-$25 over 540px (200 to 740). 21.6px per $1 -->
+  <g stroke="#1a4a56" stroke-opacity="0.5" stroke-width="1">
+    <line x1="200" y1="70" x2="200" y2="345"/>
+    <line x1="308" y1="70" x2="308" y2="345"/>
+    <line x1="416" y1="70" x2="416" y2="345"/>
+    <line x1="524" y1="70" x2="524" y2="345"/>
+    <line x1="632" y1="70" x2="632" y2="345"/>
+    <line x1="740" y1="70" x2="740" y2="345"/>
+  </g>
+
+  <!-- Scale labels -->
+  <text x="200" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$0</text>
+  <text x="308" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$5</text>
+  <text x="416" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$10</text>
+  <text x="524" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$15</text>
+  <text x="632" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$20</text>
+  <text x="740" y="362" fill="#6a8a94" font-size="10" text-anchor="middle">$25</text>
+
+  <!-- Haiku 4.5: Input $1, Output $5 -->
+  <text x="190" y="100" fill="#ffffff" font-size="14" font-weight="600" text-anchor="end">Haiku 4.5</text>
+  <text x="190" y="114" fill="#6a8a94" font-size="10" text-anchor="end">200K ctx | Fastest</text>
+
+  <rect x="200" y="88" width="22" height="16" rx="2" fill="#e8a87c"/>
+  <text x="227" y="100" fill="#a8c5cc" font-size="10">$1</text>
+  <rect x="200" y="108" width="108" height="16" rx="2" fill="#3d8a9a"/>
+  <text x="313" y="120" fill="#a8c5cc" font-size="10">$5</text>
+
+  <!-- Sonnet 4.6: Input $3, Output $15 -->
+  <text x="190" y="180" fill="#ffffff" font-size="14" font-weight="600" text-anchor="end">Sonnet 4.6</text>
+  <text x="190" y="194" fill="#6a8a94" font-size="10" text-anchor="end">1M ctx | Best balance</text>
+
+  <!-- Popular badge -->
+  <rect x="70" y="162" width="70" height="16" rx="8" fill="#e8a87c"/>
+  <text x="105" y="174" fill="#0a1f25" font-size="9" font-weight="700" text-anchor="middle">POPULAR</text>
+
+  <rect x="200" y="168" width="65" height="16" rx="2" fill="#e8a87c"/>
+  <text x="270" y="180" fill="#a8c5cc" font-size="10">$3</text>
+  <rect x="200" y="188" width="324" height="16" rx="2" fill="#3d8a9a"/>
+  <text x="529" y="200" fill="#a8c5cc" font-size="10">$15</text>
+
+  <!-- Opus 4.6: Input $5, Output $25 -->
+  <text x="190" y="260" fill="#ffffff" font-size="14" font-weight="600" text-anchor="end">Opus 4.6</text>
+  <text x="190" y="274" fill="#6a8a94" font-size="10" text-anchor="end">1M ctx | Most capable</text>
+
+  <rect x="200" y="248" width="108" height="16" rx="2" fill="#e8a87c"/>
+  <text x="313" y="260" fill="#a8c5cc" font-size="10">$5</text>
+  <rect x="200" y="268" width="540" height="16" rx="2" fill="#3d8a9a"/>
+  <text x="745" y="280" fill="#a8c5cc" font-size="10">$25</text>
+
+  <!-- Batch pricing note -->
+  <rect x="40" y="310" width="720" height="30" rx="6" fill="#132f38"/>
+  <text x="400" y="330" fill="#a8c5cc" font-size="12" text-anchor="middle">Batch API available at 50% discount on all models (e.g., Sonnet: $1.50/$7.50 per 1M tokens)</text>
+
+  <!-- Watermark -->
+  <text x="780" y="390" fill="#6a8a94" font-size="10" text-anchor="end">PE Collective</text>
+</svg>

@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Claude API Pricing 2026: Costs + How to Save 90%</title>
+    <meta name="description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
+    <link rel="canonical" href="https://pecollective.com/tools/anthropic-api-pricing/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/anthropic-api-pricing/">
+    <meta property="og:title" content="Claude API Pricing 2026: Costs + How to Save 90%">
+    <meta property="og:description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Claude API Pricing 2026: Costs + How to Save 90%">
+    <meta name="twitter:description" content="Most teams pick Sonnet when Haiku would do the job at 3x less. See real monthly costs, caching tricks that cut bills 90%, and which model fits your workload.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Claude API Pricing 2026 - Haiku, Sonnet & Opus Costs",
+            "item": "https://pecollective.com/tools/anthropic-api-pricing/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much does the Anthropic Claude API cost in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Haiku 4.5: $1/$5 per 1M input/output tokens. Sonnet 4.6: $3/$15. Opus 4.6: $5/$25. Output tokens cost 5x input across all models. Batch processing cuts all prices by 50%."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is Claude cheaper than GPT-4o in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sonnet 4.6 ($3/$15) is more expensive than GPT-4o ($2.50/$10) on raw price. Haiku 4.5 ($1/$5) is more expensive than GPT-4o-mini ($0.15/$0.60). Claude wins on output quality for many coding and analysis tasks, so cost-per-useful-output can be lower despite higher per-token pricing."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is prompt caching and how much does it save?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prompt caching lets you reuse previously processed parts of your prompt across API calls. The first write costs 1.25x base input (5-minute cache) or 2x (1-hour cache). Every subsequent cache hit costs just 0.1x base input, which is a 90% discount. It pays for itself after one cache read on 5-minute caches."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happened to Claude 3.5 Sonnet and Claude 3 Opus?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "They're legacy models. Claude 3.5 Sonnet is now called Sonnet 3.7 (deprecated). Claude 3 Opus is deprecated. The current models are Opus 4.6, Sonnet 4.6, and Haiku 4.5. Notably, Opus 4.6 at $5/$25 is 3x cheaper than the old Opus 3 at $15/$75, while being more capable."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the cheapest way to use Claude's API?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Combine three things: (1) Use Haiku 4.5 for simple tasks and Sonnet 4.6 for complex ones (model routing). (2) Enable prompt caching for any repeated context like system prompts (90% savings on cached tokens). (3) Use the Batch API for non-real-time workloads (50% off everything). A pipeline using all three optimizations can run 80-90% cheaper than naive Opus 4.6 calls."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the context window sizes for Claude models in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Opus 4.6 and Sonnet 4.6 have 1M token context windows (about 750K words) at standard pricing. Haiku 4.5 has a 200K token window. Max output tokens: Opus 4.6 gets 128K, Sonnet 4.6 and Haiku 4.5 get 64K each."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is extended thinking and does it cost extra?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Extended thinking lets Claude reason internally before responding. All current models support it (Opus 4.6, Sonnet 4.6, Haiku 4.5). The thinking tokens count as output tokens and are billed at output rates. Budget 2-5x your visible output for thinking-heavy tasks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Claude's batch API pricing work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Batch API gives 50% off both input and output tokens. Opus 4.6 drops from $5/$25 to $2.50/$12.50. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50. Haiku 4.5 drops from $1/$5 to $0.50/$2.50. Results are returned asynchronously within 24 hours."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What does Claude's fast mode cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fast mode for Opus 4.6 (research preview) costs 6x standard rates: $30/1M input, $150/1M output. It provides significantly faster output. Prompt caching and data residency multipliers stack on top. Fast mode can't be used with the Batch API."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are there volume discounts for Claude API usage?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standard tier pricing is fixed. Enterprise customers can negotiate volume discounts and custom rate limits by contacting Anthropic's sales team. Rate limits increase across five usage tiers as your spending grows."
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Anthropic API (Claude)",
+    "description": "Haiku 4.5 at $1/$5, Sonnet 4.6 at $3/$15, Opus 4.6 at $15/$75 per 1M tokens. 90% off with caching, 50% off batch. April 2026 rates.",
+    "brand": {
+        "@type": "Brand",
+        "name": "Anthropic API (Claude)"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "1",
+        "highPrice": "5",
+        "priceCurrency": "USD",
+        "offerCount": "3"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "ratingCount": "1"
+    },
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.8",
+            "bestRating": "5"
+        },
+        "reviewBody": "The Anthropic API gives you access to what many developers consider the best reasoning model available. Claude excels at tasks that require careful thinking: complex code generation, document analysis, nuanced writing, and following multi-step instructions precisely. The three-tier model lineup (Haiku for speed, Sonnet for balance, Opus for depth) means you're not paying Opus prices when Haiku can handle the job. Where it falls short compared to OpenAI is ecosystem breadth. OpenAI has image gene"
+    }
+}
+    </script>
+    
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .pricing-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+    .pricing-page .bottom-line { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .pricing-page .bottom-line h3 { color: var(--gold); margin-bottom: 12px; }
+    .pricing-page .bottom-line p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .pricing-tiers { grid-template-columns: 1fr; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+  <main>
+    <div class="pricing-page">
+      <h1>Anthropic API Pricing: What Every Claude Model Costs in 2026</h1>
+      <p class="subtitle">Anthropic has shipped a lot of models since Claude 3. The naming is confusing, the pricing tiers stack in non-obvious ways, and the gap between the cheapest and most expensive model is now 25x. This page breaks down every current Claude model's pricing, the batch and caching discounts that can cut your bill in half, and real cost math for production apps. All prices verified against Anthropic's official pricing page, April 2026.</p>
+
+      <figure class="content-figure">
+        <img src="/assets/images/content/anthropic-api-pricing-tiers.svg" alt="Anthropic API (Claude) pricing comparison chart showing plan tiers and costs" loading="lazy" width="800" height="400">
+        <figcaption>Anthropic API (Claude) pricing tiers as of April 2026. Data verified by PE Collective.</figcaption>
+      </figure>
+
+      <div class="pricing-tiers">
+        
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Claude Haiku 4.5</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$1 / $5</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Fastest current Claude model</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 200K context window, 64K max output</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Extended thinking support</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for classification, extraction, routing</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Batch API: $0.50/$2.50 per 1M tokens (50% off)</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-color: var(--gold) !important;">
+          <span style="position: absolute; top: -12px; right: 16px; background: var(--gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Claude Sonnet 4.6</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$3 / $15</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best speed-to-intelligence ratio</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1M context window, 64K max output</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Extended thinking + adaptive thinking</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> The default model for most production apps</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Batch API: $1.50/$7.50 per 1M tokens (50% off)</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Claude Opus 4.6</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$5 / $25</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Most intelligent Claude model</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1M context window, 128K max output</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Extended thinking + adaptive thinking</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for agents, complex coding, research</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Batch API: $2.50/$12.50 per 1M tokens (50% off)</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Complete Model Pricing Table (April 2026)</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Anthropic offers 12 models across four generations. The table below shows every model with base input pricing, cache pricing, and output pricing. The current flagship models (Opus 4.6, Sonnet 4.6, Haiku 4.5) are at the top. Legacy models are still available via the API but Anthropic recommends migrating.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">A few things stand out. First, Opus 4.6 at $5/$25 is dramatically cheaper than the older Opus 4.1 and Opus 4 at $15/$75. Anthropic cut the flagship price by 3x while improving capability. Second, the Sonnet family has held steady at $3/$15 across four generations (Sonnet 3.7 through Sonnet 4.6). Third, Haiku 4.5 at $1/$5 is significantly more expensive than the legacy Haiku 3 at $0.25/$1.25, but the capability jump is massive.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Context Window</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Max Output</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Status</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$25.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Current</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Current</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Current</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K (1M beta)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$25.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$75.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">32K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K (1M beta)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$75.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">32K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 3.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.80</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">64K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">4K tokens</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Deprecated (Apr 2026)</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Batch API Pricing: 50% Off Everything</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The Batch API processes requests asynchronously with results returned within 24 hours. The tradeoff for giving up real-time responses is a flat 50% discount on both input and output tokens. For workloads like data processing, model evaluations, content generation, or any pipeline that doesn't need instant results, this is the single biggest cost lever available.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">At batch pricing, Opus 4.6 drops from $5/$25 to $2.50/$12.50 per million tokens. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50. Haiku 4.5 drops from $1/$5 to $0.50/$2.50. The batch discount stacks with prompt caching, meaning a cached batch request can cost as little as 5% of a standard non-cached request.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Here's a concrete example. Say you're running a content moderation pipeline processing 1 million user posts per day. Each post averages 200 input tokens and 50 output tokens. At standard Haiku 4.5 rates, that's $200/day input + $250/day output = $450/day. With batch pricing: $100 + $125 = $225/day. Add prompt caching for a shared system prompt across all requests and you could push that under $150/day.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Standard Input</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Batch Input</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Standard Output</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Batch Output</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$25.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$12.50/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.50/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$7.50/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.50/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 3.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.80/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.25/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.125/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.625/MTok</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Prompt Caching: How the 90% Discount Works</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Prompt caching is Anthropic's most powerful cost optimization feature. It stores previously processed portions of your prompt so subsequent requests can read from cache instead of reprocessing. The mechanics are straightforward: the first time you cache content, you pay a write premium. Every subsequent read costs just 10% of the base input price.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">There are two cache durations. A 5-minute cache costs 1.25x the base input price to write and pays for itself after just one cache hit. A 1-hour cache costs 2x base input to write and pays for itself after two cache hits. Cache hits cost 0.1x base input regardless of duration.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">For Sonnet 4.6, that means a 5-minute cache write costs $3.75/MTok, a 1-hour cache write costs $6.00/MTok, and any cache hit costs just $0.30/MTok. Compare that to the standard $3.00/MTok input price. If you're sending a 5,000-token system prompt on every request and you make 100 requests per hour, you pay for the system prompt once at 1.25x and then 99 times at 0.1x. The savings are enormous.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The best use cases for caching: system prompts that stay constant across requests, RAG contexts where the same documents get referenced repeatedly, conversation histories where earlier turns don't change, and few-shot examples that you include in every call.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One thing to watch: cache multipliers stack with other pricing modifiers. Batch API discount applies first, then caching multipliers apply on top. Long context pricing for Sonnet 4.5 and Sonnet 4 also stacks. The math can get complicated, but the general direction is always cheaper.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Base Input</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">5-min Cache Write</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">1-hr Cache Write</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Cache Hit</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$6.25/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.50/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3.75/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$6.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.30/MTok</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00/MTok</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10/MTok</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">What This Actually Costs Per Month (Real Numbers)</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Abstract per-token pricing is hard to reason about. Here are concrete cost breakdowns for common production use cases, using current April 2026 pricing.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Customer support chatbot (Sonnet 4.6)</strong><br>Processing 10,000 support tickets per day. Average conversation: 2,000 input tokens (system prompt + user message + context), 500 output tokens. With a cached system prompt (1,500 tokens cached, 500 fresh per request): Input cost = 500 fresh tokens x 10K = 5M tokens at $3/MTok ($15) + 15M cached tokens at $0.30/MTok ($4.50). Output = 5M tokens at $15/MTok ($75). Daily total: ~$95. Monthly: ~$2,850.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Code review agent (Opus 4.6)</strong><br>Reviewing 200 pull requests per day. Average: 8,000 input tokens (code + instructions), 2,000 output tokens (review comments). No caching (each PR is different). Daily: 1.6M input at $5/MTok ($8) + 400K output at $25/MTok ($10). Daily total: ~$18. Monthly: ~$540.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Document processing pipeline (Haiku 4.5 batch)</strong><br>Classifying and extracting data from 50,000 documents per day. Average: 1,000 input tokens, 200 output tokens. Using Batch API. Daily: 50M input at $0.50/MTok ($25) + 10M output at $2.50/MTok ($25). Daily total: ~$50. Monthly: ~$1,500.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>RAG-powered search (Sonnet 4.6 with caching)</strong><br>1,000 queries per day. Each query: 500-token question + 3,000-token cached context + 1,000-token response. Cached input: 3M tokens at $0.30/MTok ($0.90). Fresh input: 500K tokens at $3/MTok ($1.50). Output: 1M tokens at $15/MTok ($15). Daily total: ~$17.40. Monthly: ~$522.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Anthropic vs OpenAI: How the Pricing Compares</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The most common comparison. OpenAI's GPT-4o costs $2.50/$10 per million tokens versus Sonnet 4.6's $3/$15. On raw price, OpenAI wins by about 17% on input and 33% on output. But pricing alone doesn't tell the full story.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Claude's prompt caching is more aggressive than OpenAI's. A cached Sonnet 4.6 request costs $0.30/MTok for input versus GPT-4o's cached rate. The discount structures differ, and depending on your caching hit rate, Claude can be cheaper on effective cost per request.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">For the flagship tier, Opus 4.6 at $5/$25 competes with GPT-4o at $2.50/$10 and o1 at $15/$60. Opus is more expensive than GPT-4o but significantly cheaper than o1, while offering comparable reasoning performance. The right comparison depends on which OpenAI model your workload actually needs.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">At the budget end, Haiku 4.5 at $1/$5 is substantially more expensive than GPT-4o-mini at $0.15/$0.60. If you have price-sensitive high-volume tasks where quality doesn't matter as much, OpenAI has the edge. But Haiku 4.5 with extended thinking can handle tasks that GPT-4o-mini can't touch.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The batch API discount is identical: both providers offer 50% off for async processing. Anthropic has the edge on caching flexibility (two cache durations vs one). OpenAI has the edge on raw price for their mini model tier.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model Tier</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Anthropic</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Anthropic Price</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">OpenAI</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">OpenAI Price</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Winner</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 4.5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1/$5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15/$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">OpenAI (6-8x cheaper)</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Workhorse</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3/$15</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50/$10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">OpenAI (~20-30% cheaper)</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.6</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5/$25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15/$60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Anthropic (3x cheaper)</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Batch (workhorse)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6 batch</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.50/$7.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o batch</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25/$5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">OpenAI (~20% cheaper)</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Cheapest ever</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 3 (deprecated)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.25/$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15/$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">OpenAI</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Extended Thinking: What It Costs and When to Use It</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Extended thinking lets Claude reason step-by-step internally before producing a response. The thinking tokens are billed as output tokens at output rates. All three current models support it (Opus 4.6, Sonnet 4.6, Haiku 4.5), plus Opus 4.6 and Sonnet 4.6 support adaptive thinking which lets the model decide how much thinking a task needs.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The cost impact depends on your task. Simple classification might use zero thinking tokens. A complex math problem or multi-file code review might generate 3-5x more thinking tokens than visible output tokens. At Opus 4.6's $25/MTok output rate, a response with 500 visible output tokens and 2,000 thinking tokens costs $0.0625 versus $0.0125 without thinking. That's a 5x multiplier on output cost.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">When is it worth it? Extended thinking makes a material difference on tasks requiring multi-step reasoning: code generation with complex logic, mathematical proofs, legal document analysis, and research synthesis. For straightforward tasks like text classification, summarization, or simple Q&A, you're paying for thinking tokens that don't improve the output.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One practical tip: use adaptive thinking when available (Opus 4.6 and Sonnet 4.6). It lets the model skip expensive reasoning for simple requests and engage deep thinking only when needed. This naturally optimizes your thinking token spend without manual intervention.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Still on Claude 3.5? What Upgrading Saves You</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Anthropic has deprecated several older models. Claude Haiku 3 (the cheapest model ever at $0.25/$1.25) retires on April 19, 2026. Claude Sonnet 3.7 is also deprecated. If you're running production workloads on either, migrate now.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The upgrade path depends on your priorities. Haiku 3 users should move to Haiku 4.5 ($1/$5). Yes, it's 4x more expensive. But it's dramatically more capable: 64K max output (vs 4K), extended thinking support, and higher quality across every task type. If cost is the primary concern, Haiku 3.5 at $0.80/$4 is a middle ground that's not deprecated yet.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">For Opus users, the migration is actually a price cut. Opus 4 and Opus 4.1 both cost $15/$75. Opus 4.6 costs $5/$25 and is more capable. There's no reason to stay on the older Opus models. Switch and save 67% immediately.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Sonnet users have the simplest migration. Sonnet 3.7 through Sonnet 4.6 all cost $3/$15. The pricing hasn't changed across four generations. You can upgrade to Sonnet 4.6 for better quality at the same price. The newer models also get the full 1M context window at standard pricing, while older Sonnets needed a beta header for anything over 200K tokens.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Rate Limits by Usage Tier</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Anthropic uses a tiered system that increases your rate limits as your spending grows. The tiers determine how many requests per minute (RPM), input tokens per minute, and output tokens per minute you can use. Understanding these limits matters for production planning because hitting a rate limit means dropped requests.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Tier 1 starts at $0 minimum spend with basic limits. Each tier roughly doubles your limits. Tier 4 offers the highest standard limits. Enterprise customers can negotiate custom limits beyond Tier 4.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">If you're building a production app that needs to handle traffic spikes, pay attention to the output tokens per minute limit. That's typically the bottleneck for chatbot-style applications where every request generates a substantial response. The input token limit matters more for batch processing and document ingestion workloads.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One strategy for managing rate limits without upgrading tiers: model routing. Send simple tasks to Haiku 4.5 (which has higher rate limits per dollar) and reserve Sonnet 4.6 or Opus 4.6 for complex tasks. This spreads your load across model-specific rate limit pools.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Will You Spend $20 or $2,000? How to Estimate Your Bill</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Estimating API costs before you build is tricky because token usage varies by use case. Here's a framework that works for planning purposes.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 1: Estimate your average request size. A typical chatbot request is 1,000-3,000 input tokens (system prompt + user message + any context) and 300-1,000 output tokens. A document processing task might be 5,000-50,000 input tokens and 500-2,000 output tokens. A code generation task is typically 2,000-10,000 input tokens and 1,000-5,000 output tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 2: Multiply by your daily request volume. 100 requests/day is a small app. 1,000/day is moderate. 10,000+/day is when you need to think seriously about optimization.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 3: Apply your model choice. Sonnet 4.6 at $3/$15 per MTok is the default. Switch to Haiku 4.5 for simple tasks, Opus 4.6 for complex ones.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 4: Apply discounts. Prompt caching typically saves 30-60% on input costs for apps with consistent system prompts. Batch API saves 50% on everything for async workloads. Combined, an optimized pipeline can run at 20-40% of naive pricing.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 5: Add a 20-30% buffer for extended thinking tokens, retries, and edge cases. Token usage is never as predictable as you hope.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">A concrete example: a B2B SaaS app using Sonnet 4.6 for a customer-facing AI feature. 500 requests/day, 2,000 avg input tokens (1,500 cached system prompt + 500 fresh), 800 avg output tokens. Monthly: 15M cached input at $0.30/MTok ($4.50) + 7.5M fresh input at $3/MTok ($22.50) + 12M output at $15/MTok ($180). Total: ~$207/month. With a 25% buffer: ~$260/month.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Token Counting and How Anthropic Bills You</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Claude uses byte-pair encoding (BPE) tokenization, similar to other large language models. One token roughly equals 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to around 1,300-1,400 tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">System prompts count as input tokens on every request. If your system prompt is 500 tokens and you send 100 requests, you pay for 50,000 tokens of system prompt alone. This is where prompt caching becomes valuable, cache that system prompt and pay the write cost once, then 90% less on every subsequent read.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Images are tokenized based on their dimensions. A 1024x1024 image costs roughly 1,600 tokens. Larger images get scaled down automatically, but you can resize them yourself before sending to save on token costs. PDFs are processed page by page, with each page treated similarly to an image.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Tool definitions also count as input tokens. If you define 10 tools with detailed schemas, that could add 2,000-5,000 tokens per request. Keep tool descriptions concise and only include the tools your request actually needs.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The Messages API response includes a <code>usage</code> field that reports exact input and output token counts for every request. Use this to build dashboards and track costs in real time rather than estimating after the fact.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One common mistake: assuming token counts are symmetric between input and output. Output tokens cost 5x more than input tokens across all Claude models. A request that sends 10,000 input tokens and receives 2,000 output tokens costs the same as one that sends 10,000 input tokens and receives 2,000 output tokens, but the output portion accounts for roughly half the total cost despite being only 17% of the tokens. This asymmetry makes output token optimization (concise instructions, max_tokens limits, structured output formats) disproportionately valuable.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How to Cut Your Claude API Bill by 90%</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The biggest cost lever is model selection. Most API users default to the most capable model, but 70-80% of typical production queries can be handled by Haiku 4.5 at $1/$5 per million tokens. Use Sonnet 4.6 for tasks requiring stronger reasoning, and reserve Opus 4.6 for your hardest problems. A tiered routing approach can cut costs by 50-70% compared to running everything through Opus.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Prompt caching is the second-biggest lever. If you send the same system prompt, few-shot examples, or document context across multiple requests, enable caching. The first request pays a 25% premium to write the cache, but every subsequent request within the 5-minute TTL pays 90% less for those cached tokens. For a chatbot with a 2,000-token system prompt handling 1,000 requests per hour, caching saves roughly $4.50/hour on Sonnet 4.6.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Batch API processing offers a flat 50% discount on all token costs. The tradeoff is latency, results return within 24 hours instead of seconds. For any workload that doesn't need real-time responses (data extraction, content generation, bulk classification, evaluation), batching should be your default.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Token-level optimizations matter at scale. Shorter system prompts, compressed few-shot examples, and max_tokens limits all reduce costs. Setting max_tokens to 500 instead of 4,096 won't affect quality for short-answer tasks but prevents runaway output on edge cases. Similarly, avoid sending full conversation history when only the last few turns matter, summarize older context instead.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Monitor usage patterns weekly. The API's usage field gives exact token counts per request. Aggregate these by model, endpoint, and use case to identify where you're overspending. Common findings: a debug prompt that accidentally stayed in production, a retry loop that doubles costs on timeouts, or a document processing pipeline sending the same 50,000-token document 10 times instead of caching it.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Strategy</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Effort</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Typical Savings</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Best For</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Model routing (Haiku/Sonnet/Opus)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Medium</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">50-70%</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Production apps with mixed query complexity</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Prompt caching</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Low</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">30-50%</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Repeated system prompts, RAG with shared context</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Batch API</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Low</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">50%</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Offline processing, evaluations, data extraction</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Token reduction (shorter prompts)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Low</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10-25%</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">High-volume endpoints</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Max tokens limits</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Minimal</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">5-15%</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Short-answer tasks, classification</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">5 Ways Claude Charges More Than You Expect</h2>
+        <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Output tokens cost 5x input tokens across every Claude model. A chatbot that generates long responses will spend most of its budget on output, not input. Track your output-to-input ratio.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Prompt caching slashes repeat input costs by 90%. A 5-minute cache write costs 1.25x base input, but every subsequent cache hit costs just 0.1x. If you send the same system prompt on every request, caching pays for itself after one read.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> There's also a 1-hour cache at 2x base input. Worth it if your cached content stays stable across longer sessions. Pays off after two cache reads.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> The Batch API gives 50% off both input and output tokens. The tradeoff: results are asynchronous (up to 24 hours). Good for data processing, evaluations, and any job that doesn't need real-time responses.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Extended thinking burns tokens you don't see in the response. The model uses internal reasoning tokens before producing output. Budget 2-5x your visible output for thinking-heavy tasks like multi-step coding or math.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> US-only data residency (inference_geo parameter) adds a 10% surcharge on all token categories for Opus 4.6 and newer models. Global routing (the default) uses standard pricing.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Fast mode for Opus 4.6 costs 6x standard rates ($30/$150 per 1M tokens). You get significantly faster output but it's a research preview and can't be combined with batch processing.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Legacy models are still available but don't assume they're cheaper. Claude Opus 4.1 and Opus 4 cost $15/$75 per 1M tokens, which is 3x the price of the newer, more capable Opus 4.6 at $5/$25.</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Claude Model Should You Use? Quick Decision Guide</h2>
+        
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">High-volume classification, routing, or extraction</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Haiku 4.5 at $1/$5 per 1M tokens. It's fast, supports extended thinking, and handles structured tasks well. For batch jobs, the price drops to $0.50/$2.50. A pipeline processing 10M tokens/day costs about $15/day with batch pricing.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Production apps: chatbots, coding assistants, document analysis</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Sonnet 4.6 at $3/$15 per 1M tokens. The workhorse model. 1M context window, 64K max output, fast enough for real-time use. A typical SaaS feature processing 500 requests/day (averaging 2K input + 1K output tokens each) costs about $25/month.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Agents, complex multi-step coding, deep research</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Opus 4.6 at $5/$25 per 1M tokens. The price gap to Sonnet has narrowed significantly (was 5x with Opus 3, now less than 2x). If your task requires extended reasoning or autonomous tool use, Opus 4.6 is worth the premium.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Cost-sensitive apps that need decent quality</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Haiku 3.5 at $0.80/$4 per 1M tokens or legacy Haiku 3 at $0.25/$1.25 (deprecated April 2026). Haiku 3 is the cheapest Claude model ever but it's being retired. Migrate to Haiku 4.5 before April 19, 2026.</p>
+          </div>
+      </div>
+
+      <div class="bottom-line">
+        <h3>The Bottom Line</h3>
+        <p>Sonnet 4.6 at $3/$15 per 1M tokens is the default choice for most developers. It's the same price as the old Sonnet 3.5 but significantly more capable, with a 1M context window and adaptive thinking. The big pricing story in 2026 is that Opus got cheaper: Opus 4.6 costs $5/$25 versus the old Opus 3's $15/$75. That's a 3x price cut for the flagship model. Stack prompt caching (90% off repeat inputs) and batch processing (50% off everything) to push costs even lower. A well-optimized production app using Sonnet 4.6 with caching typically spends $30-100/month for moderate traffic.</p>
+      </div>
+
+      <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
+        <strong>Disclosure:</strong> Pricing information is sourced from official websites and may change. We update this page regularly but always verify current pricing on the vendor's site before purchasing.
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+          <a href="/tools/anthropic-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Anthropic Claude API Review &rarr;</a>
+          <a href="/tools/openai-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI API Pricing Comparison &rarr;</a>
+          <a href="/tools/openai-api-vs-anthropic-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI vs Anthropic API &rarr;</a>
+          <a href="/tools/aws-bedrock-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">AWS Bedrock Pricing &rarr;</a>
+          <a href="/tools/cohere-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cohere API Pricing &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How much does the Anthropic Claude API cost in 2026?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Haiku 4.5: $1/$5 per 1M input/output tokens. Sonnet 4.6: $3/$15. Opus 4.6: $5/$25. Output tokens cost 5x input across all models. Batch processing cuts all prices by 50%.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Claude cheaper than GPT-4o in 2026?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Sonnet 4.6 ($3/$15) is more expensive than GPT-4o ($2.50/$10) on raw price. Haiku 4.5 ($1/$5) is more expensive than GPT-4o-mini ($0.15/$0.60). Claude wins on output quality for many coding and analysis tasks, so cost-per-useful-output can be lower despite higher per-token pricing.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What is prompt caching and how much does it save?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Prompt caching lets you reuse previously processed parts of your prompt across API calls. The first write costs 1.25x base input (5-minute cache) or 2x (1-hour cache). Every subsequent cache hit costs just 0.1x base input, which is a 90% discount. It pays for itself after one cache read on 5-minute caches.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What happened to Claude 3.5 Sonnet and Claude 3 Opus?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">They're legacy models. Claude 3.5 Sonnet is now called Sonnet 3.7 (deprecated). Claude 3 Opus is deprecated. The current models are Opus 4.6, Sonnet 4.6, and Haiku 4.5. Notably, Opus 4.6 at $5/$25 is 3x cheaper than the old Opus 3 at $15/$75, while being more capable.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What's the cheapest way to use Claude's API?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Combine three things: (1) Use Haiku 4.5 for simple tasks and Sonnet 4.6 for complex ones (model routing). (2) Enable prompt caching for any repeated context like system prompts (90% savings on cached tokens). (3) Use the Batch API for non-real-time workloads (50% off everything). A pipeline using all three optimizations can run 80-90% cheaper than naive Opus 4.6 calls.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What are the context window sizes for Claude models in 2026?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Opus 4.6 and Sonnet 4.6 have 1M token context windows (about 750K words) at standard pricing. Haiku 4.5 has a 200K token window. Max output tokens: Opus 4.6 gets 128K, Sonnet 4.6 and Haiku 4.5 get 64K each.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What is extended thinking and does it cost extra?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Extended thinking lets Claude reason internally before responding. All current models support it (Opus 4.6, Sonnet 4.6, Haiku 4.5). The thinking tokens count as output tokens and are billed at output rates. Budget 2-5x your visible output for thinking-heavy tasks.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How does Claude's batch API pricing work?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">The Batch API gives 50% off both input and output tokens. Opus 4.6 drops from $5/$25 to $2.50/$12.50. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50. Haiku 4.5 drops from $1/$5 to $0.50/$2.50. Results are returned asynchronously within 24 hours.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What does Claude's fast mode cost?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Fast mode for Opus 4.6 (research preview) costs 6x standard rates: $30/1M input, $150/1M output. It provides significantly faster output. Prompt caching and data residency multipliers stack on top. Fast mode can't be used with the Batch API.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Are there volume discounts for Claude API usage?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Standard tier pricing is fixed. Enterprise customers can negotiate volume discounts and custom rate limits by contacting Anthropic's sales team. Rate limits increase across five usage tiers as your spending grows.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>AI tool pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+  
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

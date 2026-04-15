@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>Pinecone Pricing 2026 - Free Tier Limits & | PE Collective</title>
+    <meta name="description" content="Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.">
+    <link rel="canonical" href="https://pecollective.com/tools/pinecone-pricing/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/pinecone-pricing/">
+    <meta property="og:title" content="Pinecone Pricing 2026 - Free Tier Limits &">
+    <meta property="og:description" content="Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="Pinecone Pricing 2026 - Free Tier Limits &">
+    <meta name="twitter:description" content="Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pinecone Pricing 2026 - Free Tier Limits & Real Costs",
+            "item": "https://pecollective.com/tools/pinecone-pricing/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much does Pinecone cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pinecone has a free tier (2GB storage, 5 indexes) and a usage-based Standard plan. Standard costs $8.25 per 1M read units, $2 per 1M write units, and $0.33/GB/month for storage. A typical small app costs $50-200/month."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is Pinecone free tier good enough for production?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For small apps with under 100K vectors, yes. The free tier gives you 2GB storage and 5 serverless indexes. The main limitation is community-only support and single-region deployment."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Pinecone pricing compare to Weaviate?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pinecone is cheaper for small workloads (serverless pricing starts lower). Weaviate becomes cheaper at scale because you can self-host on your own infrastructure. For medium workloads, both cost roughly $100-300/month."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are Pinecone read units?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query."
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Pinecone",
+    "description": "Pinecone free tier: 2GB storage. Standard: $50/mo minimum. See per-pod vs serverless pricing, hidden costs, and how bills scale with data volume.",
+    "brand": {
+        "@type": "Brand",
+        "name": "Pinecone"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "0",
+        "highPrice": "500",
+        "priceCurrency": "USD",
+        "offerCount": "3"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "ratingCount": "1"
+    },
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-04-06",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Pinecone is the easiest way to add <a href=\"/glossary/vector-database/\">vector search</a> to your AI application. Period. The serverless architecture means you create an index, upload vectors, and query them. No servers to provision, no clusters to tune, no rebalancing to worry about. For teams that want to build AI features instead of managing infrastructure, that's a compelling pitch. In April 2026, Pinecone has fully committed to serverless as the default. Pod-based indexes are legacy. The pr"
+    }
+}
+    </script>
+    
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .pricing-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+    .pricing-page .bottom-line { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .pricing-page .bottom-line h3 { color: var(--gold); margin-bottom: 12px; }
+    .pricing-page .bottom-line p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .pricing-tiers { grid-template-columns: 1fr; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+  <main>
+    <div class="pricing-page">
+      <h1>Pinecone Pricing: What It Actually Costs (April 2026)</h1>
+      <p class="subtitle">Pinecone overhauled its pricing in late 2025, fully committing to serverless as the default architecture and retiring pod-based indexes for new projects. The free Starter tier gives you 2GB of index storage. Standard requires a $50/month minimum. Enterprise starts at $500/month. Beyond the minimums, you pay per read unit, write unit, and storage GB. With serverless now handling auto-scaling and per-query billing, the cost model is simpler than the old pod system but the minimums still catch people off guard. This page breaks down the real costs at each tier, what changed in the serverless transition, and how to estimate your monthly bill for RAG and search workloads.</p>
+
+      <div class="pricing-tiers">
+        
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Starter (Free)</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$0</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> Free forever</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 2GB index storage included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 2 million write units included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1 million read units included</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1 serverless index</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Community support only</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-color: var(--gold) !important;">
+          <span style="position: absolute; top: -12px; right: 16px; background: var(--gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Standard</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$50/mo</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> minimum + usage</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> $50/month minimum commitment</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Storage: $0.33/GB/month</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Write units: $4 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Read units: $16 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> SAML SSO, backup/restore, RBAC</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">Enterprise</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$500/mo</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> minimum + usage</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> $500/month minimum commitment</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Write units: $6 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Read units: $24 per million</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Private networking and CMK encryption</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> HIPAA compliance available ($190/mo add-on)</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Serverless vs Pods: Which Architecture Costs Less in April 2026</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone now defaults every new index to serverless. Pod-based indexes still exist for legacy workloads, but new sign-ups land on serverless unless they explicitly request pods through Enterprise. This is the biggest pricing shift in Pinecone's history, and it changes how you think about costs.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Serverless pricing is pure usage: you pay for read units, write units, and storage. There is no idle compute charge. If nobody queries your index overnight, your bill is just storage. Pod-based pricing charged per pod-hour regardless of usage. An s1.x1 pod cost roughly $0.096/hour ($70/month) even if it sat idle. For bursty workloads with quiet periods, serverless saves 40-60% over equivalent pod configurations.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Where pods can still win: steady high-throughput workloads. If you are serving 50,000+ queries per minute around the clock, pod-based pricing with provisioned capacity is more predictable and can be cheaper per query than serverless at sustained volume. Pinecone's Enterprise tier offers pod access with committed use discounts for exactly this scenario.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">For most RAG applications doing fewer than 10,000 queries per day, serverless on the Standard tier is the clear winner. You stay on the $50/month minimum for months before actual usage charges exceed it. The key metric to watch is read units: at $16 per million on Standard, a chatbot handling 50,000 queries/day generates roughly 1.5 million read units/month, costing about $24 in reads alone, well under the $50 minimum.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One operational difference: serverless indexes cold-start after periods of inactivity. The first query after a quiet period may take 2-5 seconds instead of the usual sub-100ms. Pod-based indexes maintain warm capacity and respond consistently. If your application needs guaranteed sub-100ms latency at all times, factor cold starts into the serverless vs pods decision.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Understanding Pinecone's Unit-Based Pricing</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone charges for three things: storage ($/GB/month), write units (indexing vectors), and read units (querying vectors). Your monthly bill is the greater of your minimum commitment or your actual usage.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">A write unit represents writing one vector to an index. Writing 1 million vectors costs $4 on Standard. A read unit represents one vector read during a query. A single query that scans and returns 10 nearest neighbors might consume 10+ read units depending on your index configuration.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Storage is straightforward: $0.33 per GB per month on Standard. The size of your index depends on vector dimensions and metadata. OpenAI's text-embedding-3-small (1536 dimensions) produces ~6KB per vector. One million vectors takes roughly 6GB, costing $2/month in storage.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The key insight: most RAG applications are read-heavy. You index once (or incrementally), but every user query triggers a read. A chatbot handling 10,000 queries per day generates ~300,000 read units per month, costing about $5 on Standard. Storage and write costs are usually smaller than read costs for production apps.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Real-World Cost Examples</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Small RAG chatbot (100K vectors, 1K queries/day):</strong> Storage: 0.6GB × $0.33 = $0.20/month. Read units: ~30K/month × $16/1M = $0.48/month. Total usage: under $1/month. You still pay the $50 minimum. The free Starter tier would cover this easily.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Production SaaS with search (5M vectors, 50K queries/day):</strong> Storage: 30GB × $0.33 = $9.90/month. Read units: ~1.5M/month × $16/1M = $24/month. Write units (daily updates): ~100K/month × $4/1M = $0.40/month. Total: ~$35/month in usage, so you pay the $50 minimum.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Large-scale recommendation engine (50M vectors, 500K queries/day):</strong> Storage: 300GB × $0.33 = $99/month. Read units: ~15M/month × $16/1M = $240/month. Write units: ~1M/month × $4/1M = $4/month. Total: ~$343/month on Standard.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Enterprise healthcare app (10M vectors, HIPAA required):</strong> Standard usage might be $80/month, but you need Enterprise ($500 min) plus HIPAA ($190/month add-on). Total: $690/month minimum regardless of actual usage.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Pinecone vs Self-Hosted Alternatives</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone's managed service competes with self-hosted vector databases like pgvector, Weaviate, Chroma, and Qdrant. The tradeoff is operational simplicity vs cost control.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">pgvector (PostgreSQL extension) is free and runs on your existing database server. No minimum commitments. But you manage scaling, backups, and performance tuning yourself. For teams already running PostgreSQL, pgvector at zero marginal cost beats Pinecone's $50/month minimum for small workloads.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Weaviate Cloud starts at $45/month (Flex plan) with a similar usage-based model. Chroma Cloud has a free tier and pay-as-you-go pricing. Both are worth evaluating alongside Pinecone.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Pinecone's advantage is zero operational overhead and strong query performance at scale. If your team doesn't want to manage vector database infrastructure, Pinecone's $50-200/month Standard tier is reasonable for the convenience. If you have a DevOps team, self-hosted options save money on larger deployments.</p>
+        
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Hidden Costs &amp; Gotchas</h2>
+        <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> The $50/month minimum on Standard means you pay $50 even if you use $5 worth of resources. Your usage only matters once it exceeds $50. This catches hobbyists and small projects off guard.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Read units cost 4x more than write units ($16/M vs $4/M on Standard). Read-heavy workloads like RAG applications pay more than write-heavy indexing pipelines.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Storage costs ($0.33/GB/month) add up with high-dimensional embeddings. A million 1536-dimension vectors (OpenAI embeddings) uses roughly 6GB, costing $2/month in storage alone.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Enterprise's $500/month minimum is non-negotiable. Even light usage costs $500. The premium buys private networking, CMK encryption, and HIPAA eligibility.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> HIPAA compliance is an additional $190/month add-on on Enterprise tier. Healthcare applications need to budget for the total: $500 minimum + $190 HIPAA = $690/month before usage.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Pinecone offers a $300 credit for a 3-week trial on Standard. Use this to benchmark your actual costs before committing.</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Plan Do You Need?</h2>
+        
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Personal project or prototype</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Starter (free). 2GB storage and 1 million read units is enough for prototyping RAG applications with up to ~300K vectors. Upgrade to Standard only when you outgrow the storage or need RBAC.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Production RAG application</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Standard at $50/month minimum. Most production RAG apps with 1-10 million vectors cost $50-200/month on Standard. Use the $300 trial credit to benchmark before committing.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Enterprise with compliance needs</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">Enterprise at $500/month minimum. Required for private networking, CMK encryption, or HIPAA compliance. Budget $500-2,000/month depending on vector count and query volume.</p>
+          </div>
+      </div>
+
+      <div class="bottom-line">
+        <h3>The Bottom Line</h3>
+        <p>Pinecone's free tier is generous for prototyping. The jump to Standard ($50/month minimum) is where it gets real, most production RAG applications land between $50-200/month on Standard. Enterprise at $500/month minimum is for teams that need compliance features. Read-heavy workloads (which most RAG apps are) should budget around the read unit cost ($16/million) as the primary expense driver.</p>
+      </div>
+
+      <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
+        <strong>Disclosure:</strong> Pricing information is sourced from official websites and may change. We update this page regularly but always verify current pricing on the vendor's site before purchasing.
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+          <a href="/tools/pinecone/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Pinecone Review &rarr;</a>
+          <a href="/tools/best-vector-databases/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Best Vector Databases &rarr;</a>
+          <a href="/tools/chroma-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Chroma Pricing &rarr;</a>
+          <a href="/tools/weaviate-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Weaviate Pricing &rarr;</a>
+          <a href="/tools/pinecone-vs-weaviate/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Pinecone vs Weaviate &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How much does Pinecone cost?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Pinecone has a free tier (2GB storage, 5 indexes) and a usage-based Standard plan. Standard costs $8.25 per 1M read units, $2 per 1M write units, and $0.33/GB/month for storage. A typical small app costs $50-200/month.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is Pinecone free tier good enough for production?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">For small apps with under 100K vectors, yes. The free tier gives you 2GB storage and 5 serverless indexes. The main limitation is community-only support and single-region deployment.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How does Pinecone pricing compare to Weaviate?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Pinecone is cheaper for small workloads (serverless pricing starts lower). Weaviate becomes cheaper at scale because you can self-host on your own infrastructure. For medium workloads, both cost roughly $100-300/month.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What are Pinecone read units?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Read units are Pinecone's billing measure for queries. A simple vector search costs 1 read unit per 1,000 vectors scanned. Metadata filtering, larger result sets, and complex queries use more read units per query.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>AI tool pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+  
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

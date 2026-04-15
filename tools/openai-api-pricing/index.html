@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMWEZTSWM0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMWEZTSWM0');
+    </script>
+
+    <title>OpenAI API Pricing 2026: Costs + How to Save 60%</title>
+    <meta name="description" content="GPT-4.1 Nano starts at $0.10/1M tokens, but most teams overpay 3x picking the wrong model. See which model fits your use case with real monthly cost breakdowns and optimization tricks.">
+    <link rel="canonical" href="https://pecollective.com/tools/openai-api-pricing/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pecollective.com/tools/openai-api-pricing/">
+    <meta property="og:title" content="OpenAI API Pricing 2026: Costs + How to Save 60%">
+    <meta property="og:description" content="GPT-4.1 Nano starts at $0.10/1M tokens, but most teams overpay 3x picking the wrong model. See which model fits your use case with real monthly cost breakdowns and optimization tricks.">
+    <meta property="og:site_name" content="PE Collective">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pe_collective">
+    <meta name="twitter:title" content="OpenAI API Pricing 2026: Costs + How to Save 60%">
+    <meta name="twitter:description" content="GPT-4.1 Nano starts at $0.10/1M tokens, but most teams overpay 3x picking the wrong model. See which model fits your use case with real monthly cost breakdowns and optimization tricks.">
+    <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
+    <meta name="twitter:image:alt" content="PE Collective - AI jobs, salaries, and tools for prompt engineers">
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    
+    <style>
+        
+    :root {
+        /* Core colors - dark theme */
+        --bg-dark: #0f2d35;
+        --bg-darker: #0a1f25;
+        --bg-card: #132f38;
+        --bg-card-hover: #1a3d48;
+
+        --teal-primary: #1a4a56;
+        --teal-light: #2a6a7a;
+        --teal-accent: #3d8a9a;
+
+        --gold: #e8a87c;
+        --gold-light: #f0c4a8;
+        --gold-hover: #d4956a;
+
+        --text-primary: #ffffff;
+        --text-secondary: #a8c5cc;
+        --text-muted: #6a8a94;
+
+        --success: #4ade80;
+        --warning: #fbbf24;
+        --error: #f87171;
+
+        --border: rgba(255, 255, 255, 0.1);
+        --border-light: rgba(255, 255, 255, 0.05);
+
+        /* Legacy compatibility mappings */
+        --navy: #0f2d35;
+        --navy-light: #132f38;
+        --navy-medium: #1a4a56;
+        --navy-hover: #2a6a7a;
+        --gold-muted: #d4956a;
+        --gold-dark: #c4855c;
+        --green: #4ade80;
+        --green-dark: #22c55e;
+        --red: #f87171;
+        --gray-50: #0f2d35;
+        --gray-100: #132f38;
+        --gray-200: rgba(255, 255, 255, 0.1);
+        --gray-300: #6a8a94;
+        --gray-500: #6a8a94;
+        --gray-600: #a8c5cc;
+        --gray-700: #a8c5cc;
+        --gray-800: #ffffff;
+        --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover {
+        color: var(--gold-light);
+    }
+
+        
+    /* Navigation */
+    .site-header {
+        background: rgba(15, 45, 53, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    .logo img, .logo-img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .logo:hover {
+        color: var(--text-primary);
+    }
+
+    .nav, .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a, .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: color 0.15s;
+    }
+
+    .nav a:hover, .nav-links a:hover { color: var(--text-primary); }
+    .nav a.active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-cta, .btn-subscribe {
+        background: var(--gold) !important;
+        color: var(--bg-darker) !important;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    .nav-cta:hover, .btn-subscribe:hover {
+        background: var(--gold-hover) !important;
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .btn-secondary:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active { opacity: 1; }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85%;
+        height: 100vh;
+        background: var(--bg-darker);
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+    .mobile-nav.active { right: 0; }
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-header .logo-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .mobile-nav-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-muted);
+    }
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+    }
+    .mobile-nav-links li { border-bottom: 1px solid var(--border-light); }
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+    .mobile-nav-links a:hover { color: var(--text-primary); }
+    .mobile-nav-subscribe {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background: var(--gold);
+        color: var(--bg-darker);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .mobile-nav-subscribe:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+    }
+
+    @media (max-width: 768px) {
+        .nav, .nav-links { display: none; }
+        .mobile-menu-btn { display: block; }
+        .mobile-nav-overlay { display: block; pointer-events: none; }
+        .mobile-nav-overlay.active { pointer-events: auto; }
+    }
+
+        
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    main { padding: 48px 0; }
+    .section { margin-bottom: 56px; }
+
+    /* Page Header */
+    .page-header {
+        background: var(--bg-darker);
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-light); }
+
+    .page-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .page-header .lead {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        line-height: 1.7;
+    }
+
+        
+    /* Cards */
+    .tool-card, .job-card, .company-card, .salary-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s;
+    }
+
+    .tool-card:hover, .job-card:hover, .company-card:hover, .salary-card:hover {
+        border-color: var(--teal-light);
+        background: var(--bg-card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        width: fit-content;
+    }
+
+    .badge-live { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-soon { background: rgba(106, 138, 148, 0.2); color: var(--text-muted); }
+    .badge-comparison { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+    .badge-remote { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+    .badge-salary { background: rgba(232, 168, 124, 0.15); color: var(--gold); }
+
+    /* Skill Tags */
+    .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: var(--bg-darker);
+        border-radius: 4px;
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .stat-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .stat-box:hover {
+        border-color: var(--teal-light);
+        transform: translateY(-2px);
+    }
+
+    .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+    }
+
+    .stat-number.green { color: var(--success); }
+    .stat-number.red { color: var(--error); }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+    }
+
+        
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--teal-primary) 0%, var(--bg-darker) 100%);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        margin: 40px 0;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(ellipse, rgba(232, 168, 124, 0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .cta-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.15s;
+    }
+
+    .btn-gold {
+        background: var(--gold);
+        color: var(--bg-darker);
+    }
+    .btn-gold:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+        background: var(--bg-card);
+        border-color: var(--teal-light);
+        color: var(--text-primary);
+    }
+
+        
+    /* Footer */
+    .site-footer, .footer {
+        background: var(--bg-darker);
+        border-top: 1px solid var(--border);
+        padding: 48px 0 24px;
+        margin-top: 64px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+
+    .footer-content a, .footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.15s;
+    }
+    .footer-content a:hover, .footer a:hover { color: var(--text-primary); }
+    .footer-links a { margin-left: 24px; }
+
+    @media (max-width: 768px) {
+        .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+        .footer-links a { margin: 0 12px; }
+    }
+
+        
+    /* Individual Job Page Styles */
+    .job-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .job-detail-header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .job-company {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .job-meta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    .job-meta-badge.salary {
+        background: rgba(232, 168, 124, 0.15);
+        border-color: rgba(232, 168, 124, 0.3);
+        color: var(--gold);
+    }
+
+    .job-meta-badge.remote {
+        background: rgba(74, 222, 128, 0.15);
+        border-color: rgba(74, 222, 128, 0.3);
+        color: var(--success);
+    }
+
+    .apply-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        background: var(--gold);
+        color: var(--bg-darker);
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .apply-btn:hover {
+        background: var(--gold-hover);
+        color: var(--bg-darker);
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(232, 168, 124, 0.3);
+    }
+
+    .job-skills {
+        margin: 24px 0;
+    }
+
+    .job-skills h3 {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .job-details-table {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .job-details-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .job-details-row:last-child {
+        border-bottom: none;
+    }
+
+    .job-details-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .job-details-value {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Expired/Stale Job Styles */
+    .job-expired-notice {
+        background: rgba(248, 113, 113, 0.1);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .job-expired-notice h2 {
+        color: var(--error);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .job-expired-notice p {
+        color: var(--text-secondary);
+    }
+
+    .similar-jobs-section h3 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .similar-jobs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .job-detail-header {
+            flex-direction: column;
+        }
+        .apply-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    </style>
+
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pecollective.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://pecollective.com/tools/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OpenAI API Pricing 2026 - $0.10 to $40 Per 1M Tokens",
+            "item": "https://pecollective.com/tools/openai-api-pricing/"
+        }
+    ]
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much does the OpenAI API cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It depends on the model. GPT-4.1 Nano is the cheapest at $0.10 per 1M input tokens. GPT-4.1 (the recommended production model) costs $2 per 1M input tokens. GPT-5 costs $1.25/$10. o4-mini costs $1.10/$4.40. Output tokens cost 4-8x more than input across all models."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the cheapest OpenAI model?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPT-4.1 Nano at $0.10 per million input tokens and $0.40 per million output tokens. It's designed for classification, extraction, and simple tasks. With batch processing (50% off), it drops to $0.05/$0.20, effectively free for most use cases."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Should I use GPT-4o or GPT-4.1?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GPT-4.1. It replaced GPT-4o as OpenAI's recommended production model. It's cheaper ($2/$8 vs $2.50/$10), has a larger context window (1M vs 128K tokens), and performs better on instruction following and coding tasks. GPT-4o is still available but considered legacy."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are reasoning tokens and why do they increase costs?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The o-series models (o3, o4-mini) use internal chain-of-thought reasoning before producing a visible answer. These reasoning tokens are billed as output tokens but aren't shown in the response. A simple o3 answer might use 500 visible output tokens but 5,000 reasoning tokens, meaning you pay for 5,500 output tokens total."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does OpenAI pricing compare to Anthropic's Claude?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "OpenAI is generally cheaper at the low end. GPT-4.1 Nano ($0.10/$0.40) is 10x cheaper than Claude Haiku 4.5 ($1/$5). At the production tier, GPT-4.1 ($2/$8) is cheaper than Sonnet 4.6 ($3/$15). At the flagship tier, GPT-5 ($1.25/$10) is cheaper than Opus 4.6 ($5/$25) on input but comparable on output. Quality differences vary by task."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the Batch API and when should I use it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Batch API processes requests asynchronously (results within 24 hours) at a 50% discount on all token costs. Use it for any workload that doesn't need real-time responses: data extraction, content generation, evaluations, nightly processing. It's the single biggest cost reduction available."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does prompt caching work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "OpenAI automatically caches repeated prompt prefixes and charges a reduced rate on subsequent requests. The discount varies: GPT-5 family gets 90% off cached reads, GPT-4.1 family gets 75% off, GPT-4o/o-series get 50% off. Structure prompts with stable content first and variable content last to maximize cache hits."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happened to GPT-4 and GPT-4 Turbo?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "They're legacy models. GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($5/$15) are still available but deprecated. GPT-4.1 ($2/$8) and GPT-4o ($2.50/$10) replaced them at dramatically lower prices with better performance. There's no reason to use GPT-4 or GPT-4 Turbo in new projects."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is the OpenAI API free?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "OpenAI offers a free tier with limited rate limits (3 RPM for reasoning models, 500 RPM for GPT-4o-mini). It's enough for testing and development but not production use. Paid tiers start at $5 cumulative spend and unlock significantly higher rate limits."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I reduce my OpenAI API costs?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1, 20x cheaper. (2) Use the Batch API for non-real-time workloads, 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first, up to 90% off repeated input tokens. Together these can cut costs by 70-85%."
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "OpenAI API",
+    "description": "GPT-4.1 Nano at $0.10/1M, GPT-4.1 at $2/$8, GPT-5 at $1.25/$10, o3 at $10/$40. Batch discounts cut 50%. Updated April 2026.",
+    "brand": {
+        "@type": "Brand",
+        "name": "OpenAI API"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "0.1",
+        "highPrice": "2",
+        "priceCurrency": "USD",
+        "offerCount": "4"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "bestRating": "5",
+        "ratingCount": "1"
+    },
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PE Collective"
+        },
+        "datePublished": "2026-02-20",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.6",
+            "bestRating": "5"
+        },
+        "reviewBody": "OpenAI's API is the Swiss Army knife of AI platforms. No other single API gives you text generation, image creation, speech-to-text, text-to-speech, embeddings, fine-tuning, and real-time voice all under one roof. The ecosystem is the largest in the industry, with more tutorials, libraries, and third-party integrations than any competitor. The catch is that being broad doesn't mean being best. For pure text reasoning, Claude's models have pulled ahead on benchmarks and in real-world developer ex"
+    }
+}
+    </script>
+    
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+
+
+    <style>
+    .pricing-page { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    .pricing-page h1 { font-size: 2rem; margin-bottom: 8px; }
+    .pricing-page .subtitle { color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 32px; line-height: 1.7; }
+    .pricing-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+    .pricing-page .bottom-line { background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(6, 214, 160, 0.2); border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .pricing-page .bottom-line h3 { color: var(--gold); margin-bottom: 12px; }
+    .pricing-page .bottom-line p { color: var(--text-secondary); line-height: 1.7; margin: 0; }
+    .faq-section { max-width: 900px; margin: 0 auto; }
+    .faq-section h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-cta { max-width: 600px; margin: 48px auto 0; text-align: center; padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+    .newsletter-cta h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .newsletter-cta p { color: var(--text-secondary); margin-bottom: 16px; }
+    .newsletter-cta form { display: flex; gap: 8px; justify-content: center; }
+    .newsletter-cta input { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-darker); color: var(--text-primary); font-size: 0.9375rem; width: 250px; }
+    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: var(--gold); color: #000; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .newsletter-cta button:hover { background: var(--gold-hover); }
+    @media (max-width: 600px) {
+      .pricing-tiers { grid-template-columns: 1fr; }
+      .newsletter-cta form { flex-direction: column; align-items: center; }
+      .newsletter-cta input { width: 100%; }
+    }
+    </style>
+
+<style>
+.newsletter-capture { background: var(--bg-card, #132f38); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; }
+.newsletter-capture h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.375rem; margin-bottom: 8px; color: var(--text-primary, #fff); }
+.newsletter-capture p { color: var(--text-secondary, #a8c5cc); margin-bottom: 16px; }
+.newsletter-capture__form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; position: relative; }
+.newsletter-capture__form input[type="email"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-capture__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-capture__form button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.9375rem; cursor: pointer; white-space: nowrap; }
+.newsletter-capture__form button:hover { background: var(--gold-hover, #d4956a); }
+.newsletter-capture__msg { margin-top: 12px; font-size: 0.875rem; min-height: 20px; }
+.newsletter-capture__note { font-size: 0.8125rem; color: var(--text-muted, #6a8a94); margin-top: 8px; }
+.newsletter-capture__secondary { margin-top: 12px; font-size: 0.875rem; color: var(--text-secondary, #a8c5cc); display: none; }
+.newsletter-capture__secondary a { color: var(--gold, #e8a87c); }
+.newsletter-inline { margin: 24px 0; padding: 24px; background: var(--color-bg-card, #132f38); border: 1px solid var(--color-border, rgba(255,255,255,0.1)); border-radius: 12px; }
+.newsletter-inline__title { font-family: var(--font-display, 'Space Grotesk', sans-serif); font-size: 1.125rem; margin-bottom: 4px; }
+.newsletter-inline__text { font-size: 0.9375rem; color: var(--color-text-secondary, #a8c5cc); margin-bottom: 12px; }
+.newsletter-inline__form { display: flex; gap: 8px; position: relative; }
+.newsletter-inline__form input[type="email"] { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border, rgba(255,255,255,0.1)); background: var(--color-bg-darker, #0a1f25); color: var(--color-text-primary, #fff); font-size: 0.9375rem; outline: none; }
+.newsletter-inline__form input[type="email"]:focus { border-color: var(--color-gold, #e8a87c); }
+@media (max-width: 480px) { .newsletter-capture__form, .newsletter-inline__form { flex-direction: column; } }
+</style>
+<style>
+.community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
+.community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.jpeg" alt="PE Collective" width="36" height="36">
+                PE Collective
+            </a>
+            <nav class="nav">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/" class="active">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+            </nav>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="/join/" class="btn-secondary">Join Community</a>
+                <a href="/#newsletter" class="nav-cta">Newsletter</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">PE Collective</span>
+            <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/jobs/">AI Jobs</a></li>
+            <li><a href="/salaries/">Salaries</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/insights/">Market Intel</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+        <a href="/join/" class="mobile-nav-subscribe">Join Community</a>
+    </nav>
+
+    <script>
+        (function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.mobile-nav-close');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-subscribe');
+            function openMenu() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        })();
+    </script>
+
+
+  <main>
+    <div class="pricing-page">
+      <h1>OpenAI API Pricing: What Every Model Actually Costs (April 2026)</h1>
+      <p class="subtitle">OpenAI's model lineup has expanded significantly. GPT-4.1 replaced GPT-4o as the recommended production model. GPT-5 is the new flagship. The o-series reasoning models now include o3 and o4-mini. And the GPT-4.1 Nano at $0.10 per million input tokens is one of the cheapest capable models available anywhere. This page breaks down every current model's pricing, the batch and caching discounts that cut costs by 50-90%, and real cost math for production workloads. All prices verified April 2026.</p>
+
+      <figure class="content-figure">
+        <img src="/assets/images/content/openai-api-pricing-tiers.svg" alt="OpenAI API pricing comparison chart showing plan tiers and costs" loading="lazy" width="800" height="400">
+        <figcaption>OpenAI API pricing tiers as of April 2026. Data verified by PE Collective.</figcaption>
+      </figure>
+
+      <div class="pricing-tiers">
+        
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">GPT-4.1 Nano</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$0.10 / $0.40</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Cheapest capable model in OpenAI's lineup</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Good for classification, extraction, routing</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1M token context window</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Fast response times</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best cost-per-token ratio for simple tasks</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-color: var(--gold) !important;">
+          <span style="position: absolute; top: -12px; right: 16px; background: var(--gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">GPT-4.1</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$2.00 / $8.00</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Recommended production model (replaced GPT-4o)</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Strong coding, instruction following, long context</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 1M token context window</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Function calling and structured outputs</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best balance of cost, speed, and quality</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">o4-mini</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$1.10 / $4.40</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best-value reasoning model</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Chain-of-thought reasoning built in</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 200K context window</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Outperforms o3-mini on most benchmarks</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Good for math, science, and complex logic</li>
+          </ul>
+        </div>
+        <div style="position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; ">
+          
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;">GPT-5</h3>
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">$1.25 / $10.00</span>
+            <span style="color: var(--text-muted); font-size: 0.875rem;"> per 1M input / output tokens</span>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Most capable model overall</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Agentic workflows and complex reasoning</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 128K context window</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> Best for research and hard problems</li>
+              <li style="padding: 6px 0; color: var(--text-secondary); font-size: 0.9375rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--gold); flex-shrink: 0;">&#10003;</span> 90% cache read discount</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Complete Model Pricing Table (April 2026)</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI now offers more than a dozen models across three families: GPT (general-purpose), o-series (reasoning), and specialized models. Here's the full breakdown of every current model worth knowing about.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Input / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Output / 1M tokens</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Cached Input</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Context Window</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Best For</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 Nano</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.025</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Classification, routing, extraction</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.15</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.075</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy simple tasks</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-5 Mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.025</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget general-purpose</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 Mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.60</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Mid-tier production tasks</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o4-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.275</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget reasoning</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o3-mini</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$4.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.55</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy reasoning</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.125</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship, agentic workflows</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$8.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">1M</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Production workhorse</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$8.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Advanced reasoning</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4o</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$10.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">128K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy production</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$15.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$60.00</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$7.50</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200K</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Legacy deep reasoning</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">GPT-4.1 Family: The New Production Standard</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-4.1 launched as OpenAI's recommended replacement for GPT-4o. It's cheaper ($2/$8 vs $2.50/$10), has a 1 million token context window (vs 128K), and scores better on instruction-following and coding benchmarks. If your code still references <code>gpt-4o</code>, switching to <code>gpt-4.1</code> saves money while improving quality.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The GPT-4.1 family includes three variants. GPT-4.1 ($2/$8) is the main production model, strong at coding, long-context processing, and structured outputs. GPT-4.1 Mini ($0.40/$1.60) handles mid-tier tasks at 5x lower cost. GPT-4.1 Nano ($0.10/$0.40) is the budget option, ideal for classification and extraction where you don't need sophisticated reasoning.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">All three variants share the 1 million token context window. This is significant for document processing and RAG applications that previously needed to chunk documents into 128K segments. With GPT-4.1, you can process entire codebases, legal documents, or research papers in a single request.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cache read pricing for the GPT-4.1 family is 75% off standard input pricing. GPT-4.1's cached input rate is $0.50 per million tokens (vs $2.00 standard). For applications that send the same system prompt, few-shot examples, or document context across requests, this stacks with the already-low base price to make GPT-4.1 very cost-effective.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Is GPT-5 Worth 5x the Price of GPT-4.1?</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-5 is OpenAI's most capable general-purpose model. At $1.25 per million input tokens, it's actually cheaper than GPT-4.1 on input, but output tokens cost $10 per million (vs $8 for GPT-4.1). The higher output cost is where GPT-5 gets expensive, especially for tasks that generate long responses.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Where GPT-5 shines is agentic workflows, complex multi-step reasoning, and tasks that require broad world knowledge. It also gets the best cache discount in OpenAI's lineup: 90% off cached input reads, bringing the effective cached input rate to $0.125 per million tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-5 Mini ($0.25/$2.00) offers a budget path into GPT-5's capabilities. It's positioned between GPT-4.1 Nano and GPT-4.1 Mini in price but uses GPT-5's architecture. For applications that need GPT-5-class reasoning on a budget, this is worth testing.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The practical question: when should you use GPT-5 vs GPT-4.1? GPT-4.1 wins on coding tasks, instruction following, and long-context processing. GPT-5 wins on complex reasoning, agentic tool use, and tasks requiring nuanced judgment. Most production apps should default to GPT-4.1 and only route to GPT-5 for their hardest queries.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">o-Series Reasoning Models: o3 and o4-mini</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI's o-series models use chain-of-thought reasoning, they "think" before answering, using internal reasoning tokens that you pay for as output tokens. This means the visible cost per request is higher than the visible output would suggest. A short o3 answer might use 2,000 visible output tokens but 10,000 reasoning tokens behind the scenes.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">o4-mini ($1.10/$4.40) is the best value reasoning model. It replaced o3-mini and outperforms it on most benchmarks while costing the same. Use it for math, science, coding problems, and any task that benefits from step-by-step reasoning. The cached input rate is $0.275 per million tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">o3 ($2.00/$8.00) is the flagship reasoning model. It costs roughly 2x o4-mini and offers stronger performance on the hardest problems. PhD-level math, complex logic, and multi-step scientific reasoning. For most applications, o4-mini is sufficient. Save o3 for tasks where o4-mini's accuracy drops below your threshold.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One important detail: reasoning models don't support all features. As of April 2026, o-series models support function calling and structured outputs, but some parameters like temperature and top_p behave differently. Check OpenAI's docs for the latest compatibility matrix before building reasoning model pipelines.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The cost trap with reasoning models is unpredictable token usage. A query that uses 500 reasoning tokens on one request might use 5,000 on a slightly different phrasing. Set <code>max_completion_tokens</code> to cap your worst-case costs, and monitor average reasoning token usage per query type.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Batch API: 50% Off Everything</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI's Batch API processes requests asynchronously and returns results within 24 hours. The tradeoff for that latency is a flat 50% discount on all token costs, input and output, across every model.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">At batch pricing, GPT-4.1 drops to $1/$4 per million tokens. GPT-4.1 Nano drops to $0.05/$0.20. o4-mini drops to $0.55/$2.20. These are some of the lowest prices available for capable language models.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Batch processing works by uploading a JSONL file of requests. Each line is a standard API request. You submit the batch, wait for completion (usually 1-12 hours in practice, 24-hour SLA), then download results. No code changes to your prompts, just a different submission endpoint.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Best use cases for batch: data extraction from documents, content generation, bulk classification, evaluation/grading, and dataset creation. Anything where you don't need real-time responses. If you're currently running these workloads through the standard API, switching to batch is the single biggest cost reduction available.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">You can combine batch pricing with prompt caching for even deeper discounts. A cached batch request through GPT-4.1 pays $0.25 per million cached input tokens and $4 per million output tokens. That's 87.5% off standard input pricing.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Prompt Caching: How to Get 50% Off Every Request</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI automatically caches repeated prompt prefixes and charges a reduced rate for cache reads on subsequent requests. The discount varies significantly by model family, making this a key factor in model selection for cost-sensitive applications.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-5 family models get the deepest cache discount: 90% off input tokens for cache reads. This means GPT-5's effective cached input rate is just $0.125 per million tokens, cheaper than GPT-4.1 Nano's standard input rate. If your application sends the same long context repeatedly and you're using GPT-5, caching makes it remarkably affordable.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-4.1 family models get 75% off cached reads. GPT-4.1's cached rate drops to $0.50 per million, GPT-4.1 Mini to $0.10, and GPT-4.1 Nano to $0.025. For applications with stable system prompts and shared context (RAG, chatbots, document processing), these cached rates make the GPT-4.1 family very competitive.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">GPT-4o family and o-series models get 50% off cached reads. This is the weakest discount tier. o4-mini's cached rate is $0.275, o3's is $0.50, and GPT-4o's is $1.25. If you're choosing between GPT-4.1 ($0.50 cached) and GPT-4o ($1.25 cached), the caching difference alone is 2.5x.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cache writes happen automatically when your prompt prefix exceeds a minimum length (typically 1,024 tokens). The cache has a TTL that varies by model, check OpenAI's docs for current values. Cache hits require an exact prefix match, so structure your prompts with stable content first (system prompt, few-shot examples, shared context) and variable content last (user query).</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">OpenAI vs Anthropic: Which API Costs Less for Your Workload?</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The two leading API providers have different pricing philosophies. OpenAI offers more model tiers with a wider price range. Anthropic offers fewer models but competitive pricing on its core lineup. Here's how they compare head-to-head on comparable models.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Use Case</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">OpenAI Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">OpenAI Price</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Anthropic Model</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Anthropic Price</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget tasks</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 Nano ($0.10/$0.40)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0.10/$0.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Haiku 4.5 ($1/$5)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1/$5</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Production workhorse</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-4.1 ($2/$8)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2/$8</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Sonnet 4.6 ($3/$15)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$3/$15</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Flagship</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">GPT-5 ($1.25/$10)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.25/$10</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus 4.6 ($5/$25)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5/$25</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Budget reasoning</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o4-mini ($1.10/$4.40)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1.10/$4.40</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">—</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">—</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Advanced reasoning</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">o3 ($2/$8)</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$2/$8</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Opus Extended Thinking</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5/$25</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">What This Actually Costs Per Month (Real Numbers)</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Abstract per-token pricing is hard to reason about. Here's what real applications actually cost based on typical usage patterns.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Customer support chatbot (10K conversations/day):</strong> Average conversation uses 2,000 input tokens (system prompt + history + user message) and 500 output tokens. With GPT-4.1: (10,000 × 2,000 × $2/1M) + (10,000 × 500 × $8/1M) = $40 + $40 = $80/day ($2,400/month). With GPT-4.1 Nano: $2 + $2 = $4/day ($120/month). With prompt caching on GPT-4.1 (assuming 75% cache hits on the system prompt): roughly $1,800/month.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Document processing pipeline (1,000 docs/day, 10K tokens each):</strong> Input-heavy workload, 10M input tokens, 500K output tokens per day. With GPT-4.1: (10M × $2/1M) + (0.5M × $8/1M) = $20 + $4 = $24/day ($720/month). With batch processing (50% off): $12/day ($360/month). With GPT-4.1 Nano in batch mode: $0.50 + $0.10 = $0.60/day ($18/month).</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>AI coding assistant (500 requests/day, complex):</strong> Average request: 5,000 input tokens (code context + instructions), 2,000 output tokens. With GPT-4.1: (500 × 5,000 × $2/1M) + (500 × 2,000 × $8/1M) = $5 + $8 = $13/day ($390/month). With GPT-5 for hard problems: $3.13 + $10 = $13.13/day ($394/month). Surprisingly close. GPT-5's cheaper input but pricier output roughly balances out.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>Reasoning-heavy analytics (200 queries/day):</strong> Average: 3,000 input tokens, 1,000 visible output tokens, 5,000 reasoning tokens. With o4-mini: (200 × 3,000 × $1.10/1M) + (200 × 6,000 × $4.40/1M) = $0.66 + $5.28 = $5.94/day ($178/month). With o3: $1.20 + $9.60 = $10.80/day ($324/month). The reasoning tokens are where the cost lives.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>High-volume SaaS with model routing (100K requests/day):</strong> Route 70% to GPT-4.1 Nano (70K × 1,500 input × $0.10/1M + 70K × 400 output × $0.40/1M = $1.05 + $1.12 = $2.17/day), 25% to GPT-4.1 (25K × 3,000 × $2/1M + 25K × 1,000 × $8/1M = $150 + $200 = $350/day), and 5% to o4-mini (5K × 3,000 × $1.10/1M + 5K × 6,000 × $4.40/1M = $16.50 + $132 = $148.50/day). Total: ~$500/day ($15,000/month). Without routing (everything on GPT-4.1): ~$900/day ($27,000/month). Routing saves $12,000/month.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">These examples assume standard API pricing. Apply batch discounts (50% off) to any non-real-time portion and caching discounts to repeated context for further savings. A well-optimized app typically spends 30-50% less than these baseline estimates.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Rate Limits: How Much You Need to Spend to Unlock Them</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI uses a tiered rate limit system based on your cumulative API spend. Higher tiers unlock more requests per minute (RPM) and tokens per minute (TPM). This matters for production apps that need consistent throughput.</p>
+        
+          <div style="overflow-x: auto; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden;">
+              <thead><tr><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Tier</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">Qualification</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">GPT-4.1 RPM</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">GPT-4.1 TPM</th><th style="padding: 10px 14px; text-align: left; font-size: 0.875rem; color: var(--text-muted); border-bottom: 2px solid var(--border); white-space: nowrap;">o4-mini RPM</th></tr></thead>
+              <tbody><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Free</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$0 spend</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">3 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">40,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">3 RPM</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tier 1</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$5 cumulative</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">500 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">200,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">500 RPM</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tier 2</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$50 cumulative</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">5,000 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">2,000,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">5,000 RPM</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tier 3</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$100 cumulative</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">5,000 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">4,000,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">5,000 RPM</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tier 4</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$250 cumulative</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10,000 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10,000,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10,000 RPM</td></tr><tr><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">Tier 5</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">$1,000 cumulative</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10,000 RPM</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">30,000,000</td><td style="padding: 10px 14px; font-size: 0.9375rem; border-bottom: 1px solid var(--border);">10,000 RPM</td></tr></tbody>
+            </table>
+          </div>
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">How to Cut Your OpenAI Bill by 60%</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The biggest cost lever is model routing. Most production queries don't need GPT-4.1, they can be handled by GPT-4.1 Nano at 20x lower cost. Build a simple classifier (which itself runs on Nano) that routes requests to the cheapest model that can handle each query type. This alone can cut costs by 60-80%.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Prompt caching is the second lever. If you send the same system prompt, few-shot examples, or document context on every request, you're overpaying. Structure prompts so stable content comes first (cached) and variable content comes last. GPT-4.1's 75% cache discount means your 2,000-token system prompt costs $0.001 per request instead of $0.004.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Batch processing is the third lever. Any workload that doesn't need real-time responses, data processing, content generation, evaluations, nightly reports, should use the Batch API for a flat 50% discount. Combined with caching, batch GPT-4.1 processes cached input at $0.25 per million tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Output token optimization matters disproportionately because output costs 4-8x more than input. Tell the model to be concise. Set <code>max_tokens</code> to prevent runaway responses. Use structured output mode to get clean JSON instead of prose. For classification tasks, request a single word or short label instead of an explanation.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Monitor and iterate. OpenAI's API returns token usage in every response. Build a dashboard that tracks cost per request by model, endpoint, and use case. Review weekly. Common findings: a debug system prompt that inflates every request by 500 tokens, a retry loop that doubles costs on timeouts, or a model assignment that hasn't been updated since you launched.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">One underused optimization: response format constraints. For classification tasks, use <code>response_format</code> with a JSON schema that only allows your label values. This prevents the model from generating explanations you don't need, saving output tokens. For a 10-class classifier, structured output typically uses 5-20 output tokens instead of 50-200 with free-form responses. At scale, this 10x reduction in output tokens translates directly to a 10x reduction in output costs.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Will You Spend $50 or $5,000? How to Estimate Your Bill</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 1: Count your requests per day by category. Separate simple tasks (classification, extraction, short answers) from complex tasks (reasoning, code generation, long-form content). This determines your model mix.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 2: Estimate average tokens per request. A typical chatbot message is 1,000-3,000 input tokens and 300-1,000 output tokens. A document processing request is 5,000-50,000 input tokens and 500-2,000 output tokens. A reasoning query is 2,000-5,000 input tokens, 500-2,000 visible output tokens, plus 3,000-10,000 reasoning tokens (billed as output).</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 3: Calculate daily cost. For each category: (requests × avg_input_tokens × model_input_price/1M) + (requests × avg_output_tokens × model_output_price/1M). Add categories together. Multiply by 30 for monthly.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 4: Apply discounts. Subtract 50% if using batch processing. Subtract the cache discount percentage for the portion of input tokens that repeat across requests (system prompt, shared context). A typical chatbot with a 1,500-token system prompt gets 30-50% of its input tokens cached.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Step 5: Add a 20-30% buffer for token estimation variance, retry costs, and usage growth. Real production costs almost always exceed initial estimates because prompts grow, edge cases trigger longer responses, and usage increases after launch.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Quick reference: A startup running 5,000 requests/day through GPT-4.1 Nano for simple tasks and 1,000 requests/day through GPT-4.1 for complex tasks typically spends $200-500/month. A mid-size company running 50,000+ requests/day across multiple models typically spends $2,000-10,000/month depending on model mix and optimization.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Token Counting and How OpenAI Bills You</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">OpenAI uses byte-pair encoding (BPE) tokenization. One token is roughly 3-4 characters of English text, or about 0.75 words. A 1,000-word document typically tokenizes to 1,300-1,400 tokens. You can use OpenAI's <code>tiktoken</code> library to count tokens before sending requests.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">System prompts count as input tokens on every request. A 500-token system prompt across 10,000 requests costs 5 million input tokens, $10 on GPT-4.1 before any user messages. This is why prompt caching matters: that same system prompt cached costs $2.50 instead of $10.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Function/tool definitions also count as input tokens. Defining 10 tools with detailed JSON schemas can add 2,000-5,000 tokens per request. Only include the tools each request actually needs, and keep descriptions concise.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The API response includes a <code>usage</code> object with exact <code>prompt_tokens</code>, <code>completion_tokens</code>, and (for reasoning models) <code>reasoning_tokens</code> counts. Log these for every request to build accurate cost tracking. Don't estimate, measure.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Image tokens depend on the image's dimensions and the <code>detail</code> parameter. A 1024x1024 image at high detail costs roughly 765 tokens. A low-detail image costs a fixed 85 tokens. If you're processing images that don't need pixel-level analysis, set <code>detail: low</code> to save 90% on image token costs.</p>
+        
+      </div>
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Still on GPT-4? What Migration Saves You</h2>
+        
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">If your application still uses GPT-4 ($30/$60), GPT-4 Turbo ($5/$15), or GPT-3.5 Turbo ($0.50/$1.50), you're overpaying significantly. Here's the migration path for each.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>GPT-4 → GPT-4.1:</strong> Drop-in replacement for most use cases. GPT-4.1 is 15x cheaper ($2/$8 vs $30/$60) with better performance. The main difference is the API endpoint name, change <code>gpt-4</code> to <code>gpt-4.1</code> in your code and test. Context window jumps from 8K to 1M tokens.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>GPT-4 Turbo → GPT-4.1:</strong> Also a near-drop-in replacement. GPT-4.1 is 2.5x cheaper ($2/$8 vs $5/$15) with a larger context window (1M vs 128K). Function calling and structured outputs work the same way. JSON mode is supported.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>GPT-4o → GPT-4.1:</strong> Cheapest migration, saves 20% ($2/$8 vs $2.50/$10). GPT-4.1 adds the 1M context window and better instruction following. Vision capabilities are maintained. The only potential issue: GPT-4o has slightly different behavior on some creative writing tasks, so test your specific prompts.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>GPT-3.5 Turbo → GPT-4.1 Nano:</strong> GPT-4.1 Nano is 5x cheaper ($0.10/$0.40 vs $0.50/$1.50) and significantly more capable. The quality jump is substantial. GPT-4.1 Nano handles tasks that GPT-3.5 Turbo struggled with, at a fraction of the cost.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;"><strong>o1 → o3 or o4-mini:</strong> o1 at $15/$60 is expensive. o3 ($2/$8) is 7.5x cheaper on input and o4-mini ($1.10/$4.40) is 13.6x cheaper. Both outperform o1 on most benchmarks. The migration requires testing because reasoning behavior differs between models, but the cost savings are dramatic.</p>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Before migrating any model, run your evaluation suite against the new model to catch behavior differences. Pricing savings mean nothing if output quality drops. Most migrations are smooth, but edge cases in creative writing, specific formatting requirements, or fine-tuned model behavior can surface during testing.</p>
+        
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">5 Ways OpenAI Charges More Than You Expect</h2>
+        <div style="background: var(--bg-darker); border-radius: 12px; padding: 20px 24px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Output tokens cost 4-8x more than input tokens depending on the model. GPT-5 has the steepest ratio at 8x. Verbose responses can blow up costs fast.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Reasoning models (o3, o4-mini) use internal reasoning tokens billed as output tokens. A simple-looking o3 response might consume 5-10x more tokens than the visible output. You pay for the thinking, not just the answer.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> GPT-4.1 replaced GPT-4o as the recommended model, but GPT-4o is still available. If your codebase still references GPT-4o, you're paying $2.50/$10 instead of $2/$8 for similar quality. Update your model strings.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Cache read pricing varies wildly by model family. GPT-5 family gets 90% off cached reads. GPT-4.1 family gets 75% off. GPT-4o family only gets 50% off. Pick models with better cache discounts if you send repeated context.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Rate limits on the free tier are tight: 3 RPM for reasoning models, 500 RPM for GPT-4o-mini. You need $5+ cumulative spend to unlock Tier 1 limits.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> The Batch API gives 50% off but results arrive within 24 hours, not seconds. Fine for offline processing, useless for real-time apps.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Fine-tuned model pricing is separate and higher. Training costs $25/1M tokens for GPT-4o, and inference on fine-tuned models costs more than base models.</li>
+          <li style="padding: 8px 0; color: var(--text-secondary); line-height: 1.7; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--warning); flex-shrink: 0;">&#9888;</span> Image inputs (vision) are tokenized based on dimensions. A 1024x1024 image costs roughly 765 tokens. Sending high-res images without downscaling wastes tokens.</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Which Model Should You Use? Quick Decision Guide</h2>
+        
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Simple chatbot or classification pipeline</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">GPT-4.1 Nano at $0.10/$0.40 per 1M tokens. It's 20x cheaper than GPT-4.1 and handles extraction, routing, and simple conversations. At this price point, even high-volume apps cost under $50/month.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Production AI application</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">GPT-4.1 at $2/$8 per 1M tokens. This is OpenAI's recommended production model, better instruction following and coding than GPT-4o at a lower price. Route simple tasks to GPT-4.1 Nano or GPT-4.1 Mini to save more.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Complex reasoning or research</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">o4-mini at $1.10/$4.40 for most reasoning tasks. Only upgrade to o3 ($2/$8) when o4-mini's accuracy isn't sufficient. Reserve GPT-5 ($1.25/$10) for your hardest agentic workflows.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;">
+            <h3 style="font-size: 1rem; color: var(--gold); margin-bottom: 8px;">Budget-conscious startup or hobby project</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;">GPT-4.1 Nano ($0.10/$0.40) for everything, upgraded to GPT-4.1 Mini ($0.40/$1.60) when Nano's quality falls short. Combined with batch processing (50% off), you can run a serious app for under $20/month.</p>
+          </div>
+      </div>
+
+      <div class="bottom-line">
+        <h3>The Bottom Line</h3>
+        <p>GPT-4.1 Nano at $0.10 per million input tokens is the cheapest capable model in OpenAI's lineup and handles most simple tasks. GPT-4.1 is the new production workhorse, better and cheaper than GPT-4o. For reasoning, o4-mini at $1.10/$4.40 undercuts o3 while matching it on most tasks. GPT-5 is the ceiling for hard problems. The biggest cost-saving move: route requests to the cheapest model that can handle each task, and use batch processing for anything that doesn't need real-time responses.</p>
+      </div>
+
+      <div class="affiliate-disclosure" style="font-size: 0.8125rem; color: var(--text-muted); padding: 12px 16px; background: var(--bg-darker); border-radius: 8px; margin-top: 24px;">
+        <strong>Disclosure:</strong> Pricing information is sourced from official websites and may change. We update this page regularly but always verify current pricing on the vendor's site before purchasing.
+      </div>
+
+      
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.25rem; color: var(--gold); margin-bottom: 16px;">Related Resources</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;">
+          <a href="/tools/openai-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI API Review &rarr;</a>
+          <a href="/tools/anthropic-api-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Anthropic API Pricing &rarr;</a>
+          <a href="/tools/openai-api-vs-anthropic-api/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">OpenAI vs Anthropic API &rarr;</a>
+          <a href="/tools/aws-bedrock-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">AWS Bedrock Pricing &rarr;</a>
+          <a href="/tools/cohere-pricing/" style="display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s;">Cohere API Pricing &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section" style="margin-top: 48px;">
+        <h2>Frequently Asked Questions</h2>
+        
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How much does the OpenAI API cost?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">It depends on the model. GPT-4.1 Nano is the cheapest at $0.10 per 1M input tokens. GPT-4.1 (the recommended production model) costs $2 per 1M input tokens. GPT-5 costs $1.25/$10. o4-mini costs $1.10/$4.40. Output tokens cost 4-8x more than input across all models.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What's the cheapest OpenAI model?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">GPT-4.1 Nano at $0.10 per million input tokens and $0.40 per million output tokens. It's designed for classification, extraction, and simple tasks. With batch processing (50% off), it drops to $0.05/$0.20, effectively free for most use cases.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Should I use GPT-4o or GPT-4.1?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">GPT-4.1. It replaced GPT-4o as OpenAI's recommended production model. It's cheaper ($2/$8 vs $2.50/$10), has a larger context window (1M vs 128K tokens), and performs better on instruction following and coding tasks. GPT-4o is still available but considered legacy.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What are reasoning tokens and why do they increase costs?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">The o-series models (o3, o4-mini) use internal chain-of-thought reasoning before producing a visible answer. These reasoning tokens are billed as output tokens but aren't shown in the response. A simple o3 answer might use 500 visible output tokens but 5,000 reasoning tokens, meaning you pay for 5,500 output tokens total.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How does OpenAI pricing compare to Anthropic's Claude?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">OpenAI is generally cheaper at the low end. GPT-4.1 Nano ($0.10/$0.40) is 10x cheaper than Claude Haiku 4.5 ($1/$5). At the production tier, GPT-4.1 ($2/$8) is cheaper than Sonnet 4.6 ($3/$15). At the flagship tier, GPT-5 ($1.25/$10) is cheaper than Opus 4.6 ($5/$25) on input but comparable on output. Quality differences vary by task.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What's the Batch API and when should I use it?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">The Batch API processes requests asynchronously (results within 24 hours) at a 50% discount on all token costs. Use it for any workload that doesn't need real-time responses: data extraction, content generation, evaluations, nightly processing. It's the single biggest cost reduction available.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How does prompt caching work?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">OpenAI automatically caches repeated prompt prefixes and charges a reduced rate on subsequent requests. The discount varies: GPT-5 family gets 90% off cached reads, GPT-4.1 family gets 75% off, GPT-4o/o-series get 50% off. Structure prompts with stable content first and variable content last to maximize cache hits.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">What happened to GPT-4 and GPT-4 Turbo?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">They're legacy models. GPT-4 ($30/$60 per 1M tokens) and GPT-4 Turbo ($5/$15) are still available but deprecated. GPT-4.1 ($2/$8) and GPT-4o ($2.50/$10) replaced them at dramatically lower prices with better performance. There's no reason to use GPT-4 or GPT-4 Turbo in new projects.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">Is the OpenAI API free?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">OpenAI offers a free tier with limited rate limits (3 RPM for reasoning models, 500 RPM for GPT-4o-mini). It's enough for testing and development but not production use. Paid tiers start at $5 cumulative spend and unlock significantly higher rate limits.</p>
+        </details>
+        <details style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; margin-bottom: 8px;">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.0625rem; color: var(--text-primary); list-style: none;">How do I reduce my OpenAI API costs?</summary>
+          <p style="margin-top: 8px; color: var(--text-secondary); line-height: 1.7;">Three high-impact moves: (1) Route simple requests to GPT-4.1 Nano instead of GPT-4.1, 20x cheaper. (2) Use the Batch API for non-real-time workloads, 50% off everything. (3) Enable prompt caching by structuring prompts with stable content first, up to 90% off repeated input tokens. Together these can cut costs by 70-85%.</p>
+        </details>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <h2>AI tool pricing changes weekly. We track all of it.</h2>
+        <p>Weekly data from 22,000+ job postings. Free.</p>
+        <form onsubmit="handleNewsletterSignup(event, this)" style="position:relative;"><div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Get the Data</button>
+        </form>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+  
+    <div class="newsletter-capture" id="newsletter">
+      <h2>See what AI skills pay in your role</h2>
+      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
+        <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Get the Data</button>
+      </form>
+      <div class="newsletter-capture__msg"></div>
+      <p class="newsletter-capture__note">Weekly data from 22,000+ job postings. Unsubscribe anytime.</p>
+    </div>
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2026 <a href="/">PE Collective</a></span>
+            <div class="footer-links">
+                <a href="/jobs/">AI Jobs</a>
+                <a href="/salaries/">Salaries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/glossary/">Glossary</a>
+                <a href="/insights/">Market Intel</a>
+                <a href="/about/">About</a>
+                <a href="/join/">Community</a>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 12px auto 0; padding: 12px 24px 0; border-top: 1px solid var(--border-light); text-align: center; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="margin-right: 8px;">AI Career Resources:</span>
+            <a href="https://theaimarketpulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">AI Market Pulse</a> &middot;
+            <a href="https://gtmepulse.com" target="_blank" rel="noopener" style="margin: 0 8px;">GTME Pulse</a> &middot;
+            <a href="https://datastackguide.com" target="_blank" rel="noopener" style="margin: 0 8px;">DataStack Guide</a>
+        </div>
+    </footer>
+    <script src="/assets/js/tracking.js" defer></script>
+<script>
+function handleNewsletterSignup(e, form) {
+  e.preventDefault();
+  var hp = form.querySelector('input[name="website"]');
+  if (hp && hp.value) return;
+  var emailInput = form.querySelector('input[type="email"]');
+  var email = emailInput.value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  var msgEl = form.parentElement.querySelector('.newsletter-capture__msg');
+  if (!msgEl) { msgEl = document.createElement('div'); msgEl.className = 'newsletter-capture__msg'; msgEl.style.cssText = 'margin-top:12px;font-size:0.875rem;'; form.parentElement.insertBefore(msgEl, form.nextSibling); }
+  var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.success) {
+      msgEl.innerHTML = '<span style="color:#4ade80;">You're in. Check your inbox.</span>';
+      if (secEl) secEl.style.display = 'block';
+      emailInput.value = '';
+      btn.textContent = 'Subscribed';
+      if (typeof gtag === 'function') gtag('event', 'aipulse_signup', {form_location: window.location.pathname});
+    } else {
+      msgEl.innerHTML = '<span style="color:#f87171;">' + (data.error || 'Something went wrong.') + '</span>';
+      btn.disabled = false;
+      btn.textContent = 'Get the Data';
+    }
+  }).catch(function() {
+    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    btn.disabled = false;
+    btn.textContent = 'Get the Data';
+  });
+}
+</script>
+</body>
+</html>

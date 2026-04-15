@@ -291,11 +291,18 @@
           Guides, salaries, and AI jobs from 1,300+ prompt engineers.
         </p>
 
-        <div class="hero__actions">
-          <a href="blog/prompt-engineering-guide/" class="btn btn--primary btn--large">Read the Guide</a>
-          <a href="jobs/" class="btn btn--secondary btn--large">Browse AI Jobs</a>
+        <!-- Newsletter Capture -->
+        <div id="newsletter" style="margin-top: var(--space-xl); max-width: 480px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 1rem; color: var(--color-text-secondary); margin-bottom: 12px;">See what AI skills pay in your role. Weekly data from 22,000+ job postings. Free.</p>
+          <form class="newsletter-inline__form" onsubmit="handleNewsletterSignup(event, this)" style="position:relative;">
+            <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+            <button type="submit" class="btn btn--primary">Get the Data</button>
+          </form>
+          <div class="newsletter-capture__msg"></div>
+          <div class="newsletter-capture__secondary" style="display:none;margin-top:8px;font-size:0.875rem;color:var(--color-text-secondary);">Also want broader AI news and analysis? <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" onclick="if(typeof gtag==='function')gtag('event','ainewsdigest_click',{click_location:'homepage_hero'})">AI News Digest</a></div>
         </div>
-        
+
         <!-- Stats -->
         <div class="stats">
           <div class="stat-card">
@@ -314,19 +321,6 @@
             <div class="stat-card__value">1.3k</div>
             <div class="stat-card__label">Community Members</div>
           </div>
-        </div>
-
-        <!-- Newsletter Capture -->
-        <div class="newsletter-inline" id="newsletter" style="margin-top: var(--space-2xl); max-width: 560px; margin-left: auto; margin-right: auto;">
-          <h3 class="newsletter-inline__title">See what AI skills pay in your role</h3>
-          <p class="newsletter-inline__text">Weekly data from 22,000+ job postings. Free.</p>
-          <form class="newsletter-inline__form" onsubmit="handleNewsletterSignup(event, this)" style="position:relative;">
-            <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-            <button type="submit" class="btn btn--primary">Get the Data</button>
-          </form>
-          <div class="newsletter-capture__msg"></div>
-          <div class="newsletter-capture__secondary" style="display:none;margin-top:8px;font-size:0.875rem;color:var(--color-text-secondary);">Also want broader AI news and analysis? <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" onclick="if(typeof gtag==='function')gtag('event','ainewsdigest_click',{click_location:'homepage_hero'})">AI News Digest</a></div>
         </div>
       </div>
     </section>
@@ -470,24 +464,6 @@
         
         <div class="text-center mt-xl">
           <a href="jobs/" class="btn btn--primary btn--large">View All Jobs →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter CTA (mid-page) -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="newsletter-capture" id="newsletter-mid">
-          <h2>See what AI skills pay in your role</h2>
-          <p>Weekly data from 22,000+ job postings. Salary trends, new roles, career moves. Free.</p>
-          <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)" style="position:relative;">
-            <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-            <button type="submit">Get the Data</button>
-          </form>
-          <div class="newsletter-capture__msg"></div>
-          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 12px;">2,700+ subscribers. Unsubscribe anytime.</p>
-          <div class="newsletter-capture__secondary" style="display:none;"><p>Also want broader AI news and analysis? <a href="https://ainewsdigest.substack.com" target="_blank" rel="noopener" onclick="if(typeof gtag==='function')gtag('event','ainewsdigest_click',{click_location:'homepage_mid'})">AI News Digest</a></p></div>
         </div>
       </div>
     </section>

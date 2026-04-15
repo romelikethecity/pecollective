@@ -1150,7 +1150,7 @@ function handleNewsletterSignup(e, form) {
   var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
   btn.disabled = true;
   btn.textContent = 'Sending...';
-  fetch('https://newsletter-subscribe.rome-workers.workers.dev', {
+  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({email: email})

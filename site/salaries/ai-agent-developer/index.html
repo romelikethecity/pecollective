@@ -802,8 +802,7 @@
             </nav>
             <div style="display: flex; gap: 8px; align-items: center;">
                 <a href="/join/" class="btn-secondary">Join Community</a>
-                <a href="/#newsletter" class="nav-cta">Newsletter</a>
-            </div>
+                </div>
             <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
         </div>
     </header>
@@ -1051,7 +1050,7 @@ function handleNewsletterSignup(e, form) {
     body: JSON.stringify({email: email})
   }).then(function(r) { return r.json(); }).then(function(data) {
     if (data.success) {
-      if (msgEl) msgEl.innerHTML = '<span style="color:var(--success,#4ade80);">You\'re in. Check your inbox.</span>';
+      if (msgEl) msgEl.innerHTML = '<span style="color:#4ade80;">You\'re in. Check your inbox for AI Pulse — weekly salary data from <a href=\"https://theaimarketpulse.com\" target=\"_blank\" rel=\"noopener\" style=\"color:#e8a87c;text-decoration:underline;\">theaimarketpulse.com</a>.</span>';
       if (secEl) secEl.style.display = 'block';
       emailInput.value = '';
       btn.textContent = 'Subscribed';
@@ -1062,7 +1061,7 @@ function handleNewsletterSignup(e, form) {
       btn.textContent = 'Get the Data';
     }
   }).catch(function() {
-    if (msgEl) msgEl.innerHTML = '<span style="color:var(--error,#f87171);">Network error. Try again.</span>';
+    if (msgEl) msgEl.innerHTML = '<span style="color:#f87171;">Couldn\'t reach our server. If you have an ad blocker, disable it and try again, or email rome@getprovyx.com.</span>';
     btn.disabled = false;
     btn.textContent = 'Get the Data';
   });

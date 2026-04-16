@@ -893,8 +893,7 @@
             </nav>
             <div style="display: flex; gap: 8px; align-items: center;">
                 <a href="/join/" class="btn-secondary">Join Community</a>
-                <a href="/#newsletter" class="nav-cta">Newsletter</a>
-            </div>
+                </div>
             <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
         </div>
     </header>
@@ -1525,7 +1524,7 @@ function handleNewsletterSignup(e, form) {
       btn.textContent = 'Get the Data';
     }
   }).catch(function() {
-    msgEl.innerHTML = '<span style="color:#f87171;">Network error. Try again.</span>';
+    msgEl.innerHTML = '<span style="color:#f87171;">Couldn\'t reach our server. If you have an ad blocker, disable it and try again, or email rome@getprovyx.com.</span>';
     btn.disabled = false;
     btn.textContent = 'Get the Data';
   });

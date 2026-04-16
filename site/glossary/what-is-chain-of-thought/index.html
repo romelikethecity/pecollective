@@ -1317,12 +1317,12 @@ function handleNewsletterSignup(e, form) {
   var secEl = form.parentElement.querySelector('.newsletter-capture__secondary');
   btn.disabled = true;
   btn.textContent = 'Sending...';
-  fetch('https://aipulse-newsletter-signup.rome-workers.workers.dev', {
+  fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email})
+    body: JSON.stringify({email: email, list: 'ai-market-pulse', source: 'pecollective'})
   }).then(function(r) { return r.json(); }).then(function(data) {
-    if (data.success) {
+    if (data.ok) {
       if (msgEl) msgEl.innerHTML = '<span style="color:#4ade80;">You\'re in. Check your inbox for AI Pulse — weekly salary data from <a href=\"https://theaimarketpulse.com\" target=\"_blank\" rel=\"noopener\" style=\"color:#e8a87c;text-decoration:underline;\">theaimarketpulse.com</a>.</span>';
       if (secEl) secEl.style.display = 'block';
       emailInput.value = '';

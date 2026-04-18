@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="sal-bar1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#c4845c"/>
+    </linearGradient>
+    <linearGradient id="sal-bar2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d8a9a"/>
+      <stop offset="100%" stop-color="#1a4a56"/>
+    </linearGradient>
+    <linearGradient id="sal-bar3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#1a4a56"/>
+    </linearGradient>
+    <filter id="sal-glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">AI Role Salary Overview</text>
+  <text x="400" y="58" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Annual compensation ranges (USD) across top AI positions</text>
+
+  <!-- Y-axis labels -->
+  <text x="42" y="365" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$80K</text>
+  <text x="42" y="295" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$150K</text>
+  <text x="42" y="225" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$200K</text>
+  <text x="42" y="155" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$250K</text>
+  <text x="42" y="85" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$350K</text>
+
+  <!-- Grid lines -->
+  <line x1="70" y1="360" x2="770" y2="360" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="70" y1="290" x2="770" y2="290" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="70" y1="220" x2="770" y2="220" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="70" y1="150" x2="770" y2="150" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="70" y1="80" x2="770" y2="80" stroke="#1a4a56" stroke-width="0.5"/>
+
+  <!-- Bar groups - 5 roles, each bar shows range from min to max -->
+  <!-- Scale: $80K = y:360, $350K = y:80 => 1K = (360-80)/(350-80) = 280/270 ~= 1.037px -->
+  <!-- y = 360 - (val - 80) * 280/270 -->
+
+  <!-- AI Engineer: $150K-$280K -->
+  <!-- min y: 360 - (150-80)*1.037 = 360 - 72.6 = 287.4 -->
+  <!-- max y: 360 - (280-80)*1.037 = 360 - 207.4 = 152.6 -->
+  <rect x="105" y="153" width="80" height="135" rx="6" fill="url(#sal-bar1)" opacity="0.9"/>
+  <text x="145" y="143" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$280K</text>
+  <text x="145" y="302" fill="#f0c4a8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$150K</text>
+  <text x="145" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AI Engineer</text>
+
+  <!-- ML Engineer: $140K-$300K -->
+  <!-- min y: 360 - (140-80)*1.037 = 360 - 62.2 = 297.8 -->
+  <!-- max y: 360 - (300-80)*1.037 = 360 - 228.1 = 131.9 -->
+  <rect x="235" y="132" width="80" height="166" rx="6" fill="url(#sal-bar2)" opacity="0.9"/>
+  <text x="275" y="122" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$300K</text>
+  <text x="275" y="312" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$140K</text>
+  <text x="275" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">ML Engineer</text>
+
+  <!-- LLM Engineer: $159K-$280K -->
+  <!-- min y: 360 - (159-80)*1.037 = 360 - 81.9 = 278.1 -->
+  <!-- max y: 360 - (280-80)*1.037 = 152.6 -->
+  <rect x="365" y="153" width="80" height="125" rx="6" fill="url(#sal-bar1)" opacity="0.9"/>
+  <text x="405" y="143" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$280K</text>
+  <text x="405" y="291" fill="#f0c4a8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$159K</text>
+  <text x="405" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">LLM Engineer</text>
+
+  <!-- Prompt Engineer: $85K-$350K -->
+  <!-- min y: 360 - (85-80)*1.037 = 360 - 5.2 = 354.8 -->
+  <!-- max y: 360 - (350-80)*1.037 = 360 - 280 = 80 -->
+  <rect x="495" y="80" width="80" height="275" rx="6" fill="url(#sal-bar3)" opacity="0.9"/>
+  <text x="535" y="73" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$350K</text>
+  <text x="535" y="368" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$85K</text>
+  <text x="535" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Prompt Eng.</text>
+
+  <!-- AI PM: $162K-$280K -->
+  <!-- min y: 360 - (162-80)*1.037 = 360 - 85 = 275 -->
+  <!-- max y: 152.6 -->
+  <rect x="625" y="153" width="80" height="122" rx="6" fill="url(#sal-bar2)" opacity="0.9"/>
+  <text x="665" y="143" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$280K</text>
+  <text x="665" y="289" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$162K</text>
+  <text x="665" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AI PM</text>
+
+  <!-- Average line at $227K -->
+  <!-- y = 360 - (227-80)*1.037 = 360 - 152.4 = 207.6 -->
+  <line x1="85" y1="208" x2="725" y2="208" stroke="#e8a87c" stroke-width="2" stroke-dasharray="8,4" filter="url(#sal-glow)"/>
+  <rect x="726" y="196" width="56" height="22" rx="4" fill="#e8a87c" opacity="0.2"/>
+  <text x="754" y="211" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">$227K</text>
+  <text x="754" y="223" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">AVG</text>
+</svg>

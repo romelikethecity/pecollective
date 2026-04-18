@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="gpt-input" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="gpt-output" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c47850"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+    <filter id="gpt-s">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="gpt-migrate" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#e8a87c"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">GPT-4o Pricing vs Alternatives</text>
+  <text x="400" y="50" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Input / Output cost per million tokens (USD)</text>
+
+  <!-- Legend -->
+  <rect x="280" y="58" width="12" height="12" rx="2" fill="#3d8a9a"/>
+  <text x="298" y="69" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Input</text>
+  <rect x="350" y="58" width="12" height="12" rx="2" fill="#e8a87c"/>
+  <text x="368" y="69" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Output</text>
+
+  <!-- Scale: max $10 output. Bar area x:200 to x:760 = 560px. $1 = 56px -->
+  <!-- Y positions for 4 models -->
+
+  <!-- GPT-4o: $2.50 input / $10 output -->
+  <rect x="30" y="90" width="165" height="60" rx="8" fill="#132f38" filter="url(#gpt-s)"/>
+  <text x="45" y="113" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">GPT-4o</text>
+  <text x="45" y="133" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Current flagship</text>
+
+  <rect x="200" y="94" width="140" height="20" rx="4" fill="url(#gpt-input)" filter="url(#gpt-s)"/>
+  <text x="348" y="108" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$2.50</text>
+
+  <rect x="200" y="120" width="560" height="20" rx="4" fill="url(#gpt-output)" filter="url(#gpt-s)"/>
+  <text x="768" y="134" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="end">$10.00</text>
+
+  <!-- Migration arrow from 4o to 4.1 -->
+  <path d="M 112 152 C 112 168 112 168 112 178" fill="none" stroke="#e8a87c" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#gpt-migrate)"/>
+  <text x="125" y="170" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="9" font-weight="600">MIGRATE</text>
+
+  <!-- GPT-4.1: $2 input / $8 output -->
+  <rect x="30" y="180" width="165" height="60" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5" filter="url(#gpt-s)"/>
+  <text x="45" y="203" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="15" font-weight="700">GPT-4.1</text>
+  <text x="45" y="223" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Recommended upgrade</text>
+
+  <rect x="200" y="184" width="112" height="20" rx="4" fill="url(#gpt-input)" filter="url(#gpt-s)"/>
+  <text x="320" y="198" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$2.00</text>
+
+  <rect x="200" y="210" width="448" height="20" rx="4" fill="url(#gpt-output)" filter="url(#gpt-s)"/>
+  <text x="656" y="224" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$8.00</text>
+
+  <!-- GPT-4o mini: $0.075 input / $0.30 output -->
+  <rect x="30" y="250" width="165" height="60" rx="8" fill="#132f38" filter="url(#gpt-s)"/>
+  <text x="45" y="273" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">GPT-4o mini</text>
+  <text x="45" y="293" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Budget option</text>
+
+  <rect x="200" y="254" width="5" height="20" rx="2" fill="url(#gpt-input)" filter="url(#gpt-s)"/>
+  <text x="214" y="268" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$0.075</text>
+
+  <rect x="200" y="280" width="17" height="20" rx="4" fill="url(#gpt-output)" filter="url(#gpt-s)"/>
+  <text x="225" y="294" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$0.30</text>
+
+  <!-- GPT-4.1 nano: $0.10 input / $0.40 output -->
+  <rect x="30" y="320" width="165" height="60" rx="8" fill="#132f38" filter="url(#gpt-s)"/>
+  <text x="45" y="343" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">GPT-4.1 nano</text>
+  <text x="45" y="363" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Ultra-efficient</text>
+
+  <rect x="200" y="324" width="6" height="20" rx="2" fill="url(#gpt-input)" filter="url(#gpt-s)"/>
+  <text x="214" y="338" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$0.10</text>
+
+  <rect x="200" y="350" width="22" height="20" rx="4" fill="url(#gpt-output)" filter="url(#gpt-s)"/>
+  <text x="230" y="364" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="600">$0.40</text>
+
+  <!-- Savings callout -->
+  <rect x="540" y="256" width="220" height="50" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="650" y="276" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Mini models are</text>
+  <text x="650" y="296" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">33x cheaper than GPT-4o</text>
+</svg>

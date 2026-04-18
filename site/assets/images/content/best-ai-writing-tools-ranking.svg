@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="wr-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Best AI Writing Tools by Use Case</text>
+  <text x="400" y="50" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">The right tool depends on what you are writing</text>
+
+  <!-- 2x3 Grid of use case cards -->
+
+  <!-- Row 1 -->
+  <!-- Technical Docs - Claude -->
+  <rect x="30" y="70" width="235" height="96" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="1.5" filter="url(#wr-shadow)"/>
+  <rect x="30" y="70" width="235" height="30" rx="10" fill="#e8a87c" opacity="0.15"/>
+  <rect x="230" y="70" width="35" height="30" rx="0" fill="#e8a87c" opacity="0.15"/>
+  <text x="48" y="90" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">TECHNICAL DOCS</text>
+  <rect x="204" y="76" width="50" height="18" rx="9" fill="#e8a87c" opacity="0.2"/>
+  <text x="229" y="89" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">BEST</text>
+  <text x="48" y="118" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Claude</text>
+  <text x="48" y="136" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Nuanced explanations, accurate code</text>
+  <text x="48" y="152" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">snippets, structured formatting</text>
+
+  <!-- Blog Posts - ChatGPT -->
+  <rect x="283" y="70" width="235" height="96" rx="10" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5" filter="url(#wr-shadow)"/>
+  <rect x="283" y="70" width="235" height="30" rx="10" fill="#3d8a9a" opacity="0.15"/>
+  <rect x="483" y="70" width="35" height="30" rx="0" fill="#3d8a9a" opacity="0.15"/>
+  <text x="301" y="90" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="12" font-weight="700">BLOG POSTS</text>
+  <rect x="457" y="76" width="50" height="18" rx="9" fill="#3d8a9a" opacity="0.2"/>
+  <text x="482" y="89" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">BEST</text>
+  <text x="301" y="118" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">ChatGPT</text>
+  <text x="301" y="136" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Engaging tone, SEO-aware,</text>
+  <text x="301" y="152" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">versatile style matching</text>
+
+  <!-- Code Docs - Mintlify -->
+  <rect x="536" y="70" width="235" height="96" rx="10" fill="#132f38" stroke="#2a6a7a" stroke-width="1.5" filter="url(#wr-shadow)"/>
+  <rect x="536" y="70" width="235" height="30" rx="10" fill="#2a6a7a" opacity="0.15"/>
+  <rect x="736" y="70" width="35" height="30" rx="0" fill="#2a6a7a" opacity="0.15"/>
+  <text x="554" y="90" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="12" font-weight="700">CODE DOCUMENTATION</text>
+  <rect x="710" y="76" width="50" height="18" rx="9" fill="#2a6a7a" opacity="0.2"/>
+  <text x="735" y="89" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">BEST</text>
+  <text x="554" y="118" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Mintlify</text>
+  <text x="554" y="136" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Auto-generates from codebase,</text>
+  <text x="554" y="152" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">beautiful default themes</text>
+
+  <!-- Row 2 -->
+  <!-- Grammar - Grammarly -->
+  <rect x="30" y="182" width="235" height="96" rx="10" fill="#132f38" stroke="#6a8a94" stroke-width="1" filter="url(#wr-shadow)"/>
+  <rect x="30" y="182" width="235" height="30" rx="10" fill="#6a8a94" opacity="0.1"/>
+  <rect x="230" y="182" width="35" height="30" rx="0" fill="#6a8a94" opacity="0.1"/>
+  <text x="48" y="202" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" font-weight="700">GRAMMAR + POLISH</text>
+  <text x="48" y="230" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Grammarly</text>
+  <text x="48" y="248" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Real-time editing, tone detection,</text>
+  <text x="48" y="264" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">works everywhere via browser ext</text>
+
+  <!-- Notes - Notion AI -->
+  <rect x="283" y="182" width="235" height="96" rx="10" fill="#132f38" stroke="#6a8a94" stroke-width="1" filter="url(#wr-shadow)"/>
+  <rect x="283" y="182" width="235" height="30" rx="10" fill="#6a8a94" opacity="0.1"/>
+  <rect x="483" y="182" width="35" height="30" rx="0" fill="#6a8a94" opacity="0.1"/>
+  <text x="301" y="202" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" font-weight="700">NOTES + WIKIS</text>
+  <text x="301" y="230" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Notion AI</text>
+  <text x="301" y="248" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Inline in your workspace,</text>
+  <text x="301" y="264" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">summarize, rewrite, brainstorm</text>
+
+  <!-- Dev Blogs - Hashnode AI -->
+  <rect x="536" y="182" width="235" height="96" rx="10" fill="#132f38" stroke="#6a8a94" stroke-width="1" filter="url(#wr-shadow)"/>
+  <rect x="536" y="182" width="235" height="30" rx="10" fill="#6a8a94" opacity="0.1"/>
+  <rect x="736" y="182" width="35" height="30" rx="0" fill="#6a8a94" opacity="0.1"/>
+  <text x="554" y="202" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" font-weight="700">DEV BLOGS</text>
+  <text x="554" y="230" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Hashnode AI</text>
+  <text x="554" y="248" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Built-in publishing + AI drafts,</text>
+  <text x="554" y="264" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">developer community distribution</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="30" y="300" width="740" height="80" rx="10" fill="#132f38"/>
+  <text x="60" y="325" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Key Insight</text>
+  <text x="60" y="348" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">No single AI tool wins across all writing tasks. Claude leads for technical accuracy,</text>
+  <text x="60" y="366" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">ChatGPT for creative engagement, and specialized tools for their niches.</text>
+</svg>

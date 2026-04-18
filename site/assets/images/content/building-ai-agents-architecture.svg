@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="arch-core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#c47850"/>
+    </linearGradient>
+    <filter id="arch-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="arch-shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="30" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">AI Agent Architecture</text>
+
+  <!-- User node (left) -->
+  <circle cx="80" cy="160" r="32" fill="#132f38" stroke="#3d8a9a" stroke-width="2" filter="url(#arch-shadow)"/>
+  <text x="80" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">&#x1F464;</text>
+  <text x="80" y="168" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">USER</text>
+
+  <!-- Arrow User -> Agent Core -->
+  <line x1="112" y1="160" x2="218" y2="160" stroke="#3d8a9a" stroke-width="2" marker-end="url(#arch-arrow)"/>
+  <defs>
+    <marker id="arch-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d8a9a"/>
+    </marker>
+    <marker id="arch-arrow-gold" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e8a87c"/>
+    </marker>
+  </defs>
+
+  <!-- Agent Core (center) -->
+  <rect x="220" y="105" width="180" height="110" rx="16" fill="url(#arch-core)" filter="url(#arch-glow)" opacity="0.95"/>
+  <text x="310" y="140" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="16" font-weight="800" text-anchor="middle">Agent Core</text>
+  <rect x="250" y="150" width="120" height="28" rx="6" fill="#0f2d35" opacity="0.3"/>
+  <text x="310" y="169" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">LLM Brain</text>
+  <text x="310" y="205" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" opacity="0.7">Reasoning + Planning</text>
+
+  <!-- Arrow Agent Core -> Tools (right-up) -->
+  <line x1="400" y1="135" x2="488" y2="88" stroke="#3d8a9a" stroke-width="2" marker-end="url(#arch-arrow)"/>
+
+  <!-- Arrow Agent Core -> Memory (right-down) -->
+  <line x1="400" y1="185" x2="488" y2="232" stroke="#3d8a9a" stroke-width="2" marker-end="url(#arch-arrow)"/>
+
+  <!-- Arrow Agent Core -> Output (far right) -->
+  <line x1="400" y1="160" x2="618" y2="160" stroke="#e8a87c" stroke-width="2" marker-end="url(#arch-arrow-gold)"/>
+
+  <!-- Tools box (upper right) -->
+  <rect x="490" y="46" width="200" height="90" rx="10" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5" filter="url(#arch-shadow)"/>
+  <text x="590" y="68" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Tools</text>
+  <line x1="510" y1="76" x2="670" y2="76" stroke="#1a4a56" stroke-width="1"/>
+  <!-- Tool items as small pills -->
+  <rect x="505" y="84" width="55" height="20" rx="10" fill="#1a4a56"/>
+  <text x="532" y="98" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Search</text>
+  <rect x="568" y="84" width="48" height="20" rx="10" fill="#1a4a56"/>
+  <text x="592" y="98" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Code</text>
+  <rect x="624" y="84" width="52" height="20" rx="10" fill="#1a4a56"/>
+  <text x="650" y="98" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">APIs</text>
+  <rect x="505" y="110" width="76" height="20" rx="10" fill="#1a4a56"/>
+  <text x="543" y="124" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Database</text>
+  <rect x="589" y="110" width="87" height="20" rx="10" fill="#1a4a56"/>
+  <text x="632" y="124" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">File System</text>
+
+  <!-- Memory box (lower right) -->
+  <rect x="490" y="200" width="200" height="80" rx="10" fill="#132f38" stroke="#2a6a7a" stroke-width="1.5" filter="url(#arch-shadow)"/>
+  <text x="590" y="222" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Memory</text>
+  <line x1="510" y1="230" x2="670" y2="230" stroke="#1a4a56" stroke-width="1"/>
+  <rect x="505" y="238" width="82" height="20" rx="10" fill="#1a4a56"/>
+  <text x="546" y="252" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Short-term</text>
+  <rect x="595" y="238" width="82" height="20" rx="10" fill="#1a4a56"/>
+  <text x="636" y="252" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Long-term</text>
+  <text x="590" y="272" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Vector DB / Context Window</text>
+
+  <!-- Output node (far right) -->
+  <rect x="620" y="138" width="120" height="44" rx="22" fill="#132f38" stroke="#e8a87c" stroke-width="2" filter="url(#arch-shadow)"/>
+  <text x="680" y="165" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Output</text>
+
+  <!-- Feedback loop arrow from Output back to Agent Core -->
+  <path d="M 680 182 Q 680 210 590 210 Q 400 250 310 215" fill="none" stroke="#6a8a94" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arch-arrow)"/>
+  <text x="505" y="248" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" opacity="0">feedback loop</text>
+
+  <!-- Framework options at bottom -->
+  <rect x="80" y="310" width="640" height="70" rx="10" fill="#132f38" filter="url(#arch-shadow)"/>
+  <text x="400" y="332" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">FRAMEWORK OPTIONS</text>
+
+  <rect x="115" y="342" width="140" height="30" rx="8" fill="#1a4a56" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="185" y="362" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">LangGraph</text>
+
+  <rect x="280" y="342" width="120" height="30" rx="8" fill="#1a4a56" stroke="#e8a87c" stroke-width="1"/>
+  <text x="340" y="362" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">CrewAI</text>
+
+  <rect x="425" y="342" width="130" height="30" rx="8" fill="#1a4a56" stroke="#2a6a7a" stroke-width="1"/>
+  <text x="490" y="362" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">AutoGen</text>
+
+  <rect x="580" y="342" width="110" height="30" rx="8" fill="#1a4a56" stroke="#6a8a94" stroke-width="1"/>
+  <text x="635" y="362" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Smolagents</text>
+</svg>

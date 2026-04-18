@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="cp-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#1a4a56"/>
+    </linearGradient>
+    <linearGradient id="wf-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#e8a87c" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Header cards -->
+  <g transform="translate(30,15)">
+    <rect x="0" y="0" width="355" height="70" rx="12" fill="#132f38" stroke="#2a6a7a" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">GitHub Copilot</text>
+    <rect x="200" y="12" width="65" height="24" rx="12" fill="#2a6a7a"/>
+    <text x="232" y="29" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$10/mo</text>
+    <text x="20" y="52" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">OpenAI-backed | Inline completions | VS Code + JetBrains</text>
+  </g>
+  <g transform="translate(415,15)">
+    <rect x="0" y="0" width="355" height="70" rx="12" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">Windsurf</text>
+    <rect x="150" y="12" width="80" height="24" rx="12" fill="#e8a87c" opacity="0.2"/>
+    <text x="190" y="29" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Free tier</text>
+    <text x="20" y="52" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">SWE-1 model | Multi-file Cascade | $15/mo Pro</text>
+  </g>
+  <!-- Radar-style comparison with horizontal bars -->
+  <!-- Category 1: Code Quality -->
+  <g transform="translate(0,105)">
+    <rect x="30" y="0" width="740" height="55" rx="8" fill="#132f38"/>
+    <text x="70" y="18" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="600">CODE QUALITY</text>
+    <!-- Copilot -->
+    <text x="55" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Copilot</text>
+    <rect x="110" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="110" y="30" width="234" height="16" rx="3" fill="url(#cp-grad)"/>
+    <text x="350" y="42" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">9.0</text>
+    <!-- Windsurf -->
+    <text x="430" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Windsurf</text>
+    <rect x="490" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="490" y="30" width="208" height="16" rx="3" fill="url(#wf-grad)"/>
+    <text x="704" y="42" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">8.0</text>
+  </g>
+  <!-- Category 2: Multi-File Editing -->
+  <g transform="translate(0,172)">
+    <rect x="30" y="0" width="740" height="55" rx="8" fill="#132f38"/>
+    <text x="70" y="18" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="600">MULTI-FILE EDITING</text>
+    <text x="55" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Copilot</text>
+    <rect x="110" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="110" y="30" width="156" height="16" rx="3" fill="url(#cp-grad)"/>
+    <text x="272" y="42" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">6.0</text>
+    <text x="430" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Windsurf</text>
+    <rect x="490" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="490" y="30" width="234" height="16" rx="3" fill="url(#wf-grad)"/>
+    <text x="730" y="42" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">9.0</text>
+  </g>
+  <!-- Category 3: Price Value -->
+  <g transform="translate(0,239)">
+    <rect x="30" y="0" width="740" height="55" rx="8" fill="#132f38"/>
+    <text x="70" y="18" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="600">PRICE VALUE</text>
+    <text x="55" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Copilot</text>
+    <rect x="110" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="110" y="30" width="221" height="16" rx="3" fill="url(#cp-grad)"/>
+    <text x="337" y="42" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">8.5</text>
+    <text x="430" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Windsurf</text>
+    <rect x="490" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="490" y="30" width="247" height="16" rx="3" fill="url(#wf-grad)"/>
+    <text x="743" y="42" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">9.5</text>
+  </g>
+  <!-- Category 4: Context Awareness -->
+  <g transform="translate(0,306)">
+    <rect x="30" y="0" width="740" height="55" rx="8" fill="#132f38"/>
+    <text x="70" y="18" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="600">CONTEXT AWARENESS</text>
+    <text x="55" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Copilot</text>
+    <rect x="110" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="110" y="30" width="182" height="16" rx="3" fill="url(#cp-grad)"/>
+    <text x="298" y="42" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">7.0</text>
+    <text x="430" y="42" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Windsurf</text>
+    <rect x="490" y="30" width="260" height="16" rx="3" fill="#0f2d35"/>
+    <rect x="490" y="30" width="234" height="16" rx="3" fill="url(#wf-grad)"/>
+    <text x="730" y="42" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">9.0</text>
+  </g>
+  <!-- Bottom verdict -->
+  <g transform="translate(30,375)">
+    <text x="0" y="12" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Copilot: Best for inline autocomplete</text>
+    <text x="400" y="12" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="11">|</text>
+    <text x="430" y="12" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Windsurf: Best for AI-driven multi-file edits</text>
+  </g>
+</svg>

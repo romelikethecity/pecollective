@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="lc-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="ca-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Divider line -->
+  <line x1="400" y1="50" x2="400" y2="390" stroke="#1a4a56" stroke-width="1" stroke-dasharray="6,4"/>
+  <!-- Left header: LangChain -->
+  <text x="200" y="35" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="22" font-weight="800">LangChain</text>
+  <!-- Right header: CrewAI -->
+  <text x="600" y="35" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="22" font-weight="800">CrewAI</text>
+  <!-- LangChain tags -->
+  <g transform="translate(55,50)">
+    <rect x="0" y="0" width="80" height="22" rx="11" fill="#1a4a56"/>
+    <text x="40" y="15" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">Flexible</text>
+    <rect x="90" y="0" width="110" height="22" rx="11" fill="#1a4a56"/>
+    <text x="145" y="15" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">150+ Integrations</text>
+    <rect x="210" y="0" width="80" height="22" rx="11" fill="#1a4a56"/>
+    <text x="250" y="15" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">Complex</text>
+  </g>
+  <!-- CrewAI tags -->
+  <g transform="translate(445,50)">
+    <rect x="0" y="0" width="75" height="22" rx="11" fill="#132f38" stroke="#e8a87c" stroke-width="0.5"/>
+    <text x="38" y="15" text-anchor="middle" fill="#f0c4a8" font-family="system-ui,sans-serif" font-size="9">Simple</text>
+    <rect x="85" y="0" width="110" height="22" rx="11" fill="#132f38" stroke="#e8a87c" stroke-width="0.5"/>
+    <text x="140" y="15" text-anchor="middle" fill="#f0c4a8" font-family="system-ui,sans-serif" font-size="9">Role-Based Agents</text>
+    <rect x="205" y="0" width="95" height="22" rx="11" fill="#132f38" stroke="#e8a87c" stroke-width="0.5"/>
+    <text x="253" y="15" text-anchor="middle" fill="#f0c4a8" font-family="system-ui,sans-serif" font-size="9">Quick Setup</text>
+  </g>
+  <!-- Comparison bars -->
+  <!-- Flexibility -->
+  <g transform="translate(0,100)">
+    <text x="400" y="0" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Flexibility</text>
+    <!-- LangChain: 9.5/10 -->
+    <rect x="75" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="75" y="10" width="271" height="24" rx="4" fill="url(#lc-bar)"/>
+    <text x="348" y="27" text-anchor="end" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">9.5</text>
+    <!-- CrewAI: 6/10 -->
+    <rect x="440" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="440" y="10" width="171" height="24" rx="4" fill="url(#ca-bar)"/>
+    <text x="613" y="27" text-anchor="start" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700"> 6.0</text>
+  </g>
+  <!-- Learning Curve (lower = easier, show inverted) -->
+  <g transform="translate(0,165)">
+    <text x="400" y="0" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Ease of Learning</text>
+    <!-- LangChain: 4/10 -->
+    <rect x="75" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="75" y="10" width="114" height="24" rx="4" fill="url(#lc-bar)"/>
+    <text x="191" y="27" text-anchor="end" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">4.0</text>
+    <!-- CrewAI: 8.5/10 -->
+    <rect x="440" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="440" y="10" width="242" height="24" rx="4" fill="url(#ca-bar)"/>
+    <text x="684" y="27" text-anchor="end" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700">8.5</text>
+  </g>
+  <!-- Multi-Agent Support -->
+  <g transform="translate(0,230)">
+    <text x="400" y="0" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Multi-Agent Support</text>
+    <!-- LangChain (LangGraph): 8/10 -->
+    <rect x="75" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="75" y="10" width="228" height="24" rx="4" fill="url(#lc-bar)"/>
+    <text x="305" y="27" text-anchor="end" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">8.0</text>
+    <text x="78" y="27" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="9" opacity="0.7">via LangGraph</text>
+    <!-- CrewAI: 9/10 -->
+    <rect x="440" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="440" y="10" width="257" height="24" rx="4" fill="url(#ca-bar)"/>
+    <text x="699" y="27" text-anchor="end" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700">9.0</text>
+    <text x="443" y="27" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="9" opacity="0.7">native</text>
+  </g>
+  <!-- Ecosystem Size -->
+  <g transform="translate(0,295)">
+    <text x="400" y="0" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Ecosystem &amp; Community</text>
+    <!-- LangChain: 9/10 -->
+    <rect x="75" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="75" y="10" width="257" height="24" rx="4" fill="url(#lc-bar)"/>
+    <text x="334" y="27" text-anchor="end" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">9.0</text>
+    <!-- CrewAI: 6.5/10 -->
+    <rect x="440" y="10" width="285" height="24" rx="4" fill="#0f2d35" stroke="#1a4a56" stroke-width="0.5"/>
+    <rect x="440" y="10" width="185" height="24" rx="4" fill="url(#ca-bar)"/>
+    <text x="627" y="27" text-anchor="start" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700"> 6.5</text>
+  </g>
+  <!-- Verdict boxes -->
+  <g transform="translate(55,345)">
+    <rect x="0" y="0" width="290" height="40" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="145" y="17" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">BEST FOR</text>
+    <text x="145" y="33" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="12" font-weight="700">Complex, custom pipelines</text>
+  </g>
+  <g transform="translate(445,345)">
+    <rect x="0" y="0" width="290" height="40" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1"/>
+    <text x="145" y="17" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">BEST FOR</text>
+    <text x="145" y="33" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="12" font-weight="700">Quick multi-agent prototypes</text>
+  </g>
+</svg>

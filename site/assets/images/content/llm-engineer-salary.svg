@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="llm-entry" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+    <linearGradient id="llm-mid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="llm-senior" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c47850"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+    <filter id="llm-lift">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="700">LLM Engineer Salary Ranges</text>
+  <text x="30" y="55" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">Total compensation by experience level (2026)</text>
+
+  <!-- Left half: Salary range bars -->
+  <!-- Scale: $100K = x:30, $300K = x:440 => 1K = 2.05px -->
+
+  <!-- Labels column -->
+  <text x="30" y="105" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">LEVEL</text>
+  <text x="30" y="175" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">LEVEL</text>
+  <text x="30" y="245" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">LEVEL</text>
+
+  <!-- Entry: $130K-$159K -->
+  <text x="30" y="100" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Entry Level</text>
+  <rect x="30" y="108" width="60" height="38" rx="6" fill="url(#llm-entry)" filter="url(#llm-lift)"/>
+  <text x="60" y="132" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$130K</text>
+  <rect x="96" y="116" width="8" height="22" rx="2" fill="#1a4a56"/>
+  <text x="100" y="132" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">-</text>
+  <rect x="110" y="108" width="60" height="38" rx="6" fill="url(#llm-entry)" filter="url(#llm-lift)"/>
+  <text x="140" y="132" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$159K</text>
+
+  <!-- Connecting bar -->
+  <rect x="30" y="138" width="140" height="4" rx="2" fill="#2a6a7a" opacity="0.4"/>
+
+  <!-- Mid: $159K-$220K -->
+  <text x="30" y="170" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Mid Level</text>
+  <rect x="30" y="178" width="75" height="38" rx="6" fill="url(#llm-mid)" filter="url(#llm-lift)"/>
+  <text x="67" y="202" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$159K</text>
+  <rect x="111" y="186" width="8" height="22" rx="2" fill="#1a4a56"/>
+  <text x="115" y="202" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">-</text>
+  <rect x="125" y="178" width="80" height="38" rx="6" fill="url(#llm-mid)" filter="url(#llm-lift)"/>
+  <text x="165" y="202" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$220K</text>
+
+  <!-- Connecting bar -->
+  <rect x="30" y="208" width="175" height="4" rx="2" fill="#3d8a9a" opacity="0.4"/>
+
+  <!-- Senior: $220K-$280K+ -->
+  <text x="30" y="240" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Senior Level</text>
+  <rect x="30" y="248" width="85" height="38" rx="6" fill="url(#llm-senior)" filter="url(#llm-lift)"/>
+  <text x="72" y="272" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$220K</text>
+  <rect x="121" y="256" width="8" height="22" rx="2" fill="#1a4a56"/>
+  <text x="125" y="272" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">-</text>
+  <rect x="135" y="248" width="95" height="38" rx="6" fill="url(#llm-senior)" filter="url(#llm-lift)"/>
+  <text x="182" y="272" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">$280K+</text>
+
+  <!-- Connecting bar -->
+  <rect x="30" y="278" width="200" height="4" rx="2" fill="#e8a87c" opacity="0.4"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="70" x2="400" y2="380" stroke="#1a4a56" stroke-width="1"/>
+
+  <!-- Right half: Top employers -->
+  <text x="430" y="90" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Top Employers</text>
+  <text x="430" y="108" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Highest total compensation packages</text>
+
+  <!-- Snowflake $280K -->
+  <rect x="430" y="124" width="340" height="56" rx="10" fill="#132f38" filter="url(#llm-lift)"/>
+  <rect x="430" y="124" width="6" height="56" rx="3" fill="#e8a87c"/>
+  <text x="456" y="146" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Snowflake</text>
+  <text x="456" y="168" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">Infrastructure + LLM integration</text>
+  <text x="750" y="155" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="end">$280K</text>
+
+  <!-- Anthropic $260K -->
+  <rect x="430" y="190" width="340" height="56" rx="10" fill="#132f38" filter="url(#llm-lift)"/>
+  <rect x="430" y="190" width="6" height="56" rx="3" fill="#3d8a9a"/>
+  <text x="456" y="212" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Anthropic</text>
+  <text x="456" y="234" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">Claude model development</text>
+  <text x="750" y="221" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="end">$260K</text>
+
+  <!-- OpenAI $250K -->
+  <rect x="430" y="256" width="340" height="56" rx="10" fill="#132f38" filter="url(#llm-lift)"/>
+  <rect x="430" y="256" width="6" height="56" rx="3" fill="#2a6a7a"/>
+  <text x="456" y="278" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">OpenAI</text>
+  <text x="456" y="300" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">GPT model training + RLHF</text>
+  <text x="750" y="287" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="end">$250K</text>
+
+  <!-- Footer note -->
+  <rect x="430" y="330" width="340" height="40" rx="8" fill="#1a4a56" opacity="0.4"/>
+  <text x="600" y="348" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Median LLM Engineer salary: $195K</text>
+  <text x="600" y="363" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Source: Levels.fyi, Glassdoor, Blind (2026)</text>
+</svg>

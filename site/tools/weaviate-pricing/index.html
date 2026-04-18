@@ -1033,7 +1033,12 @@
       <div style="margin-top: 48px;">
         <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Self-Hosted vs Cloud: The Real Tradeoff</h2>
         
-          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Self-hosted Weaviate is free, but it's not zero-effort. You need to provision infrastructure, configure backups, handle upgrades, and monitor performance. For a small RAG application, a $20/month VPS running Docker is all you need. For a large production deployment, you're looking at Kubernetes orchestration and potentially $200-1,000/month in compute costs.</p>
+          
+      <figure class="content-figure">
+        <img src="/assets/images/content/weaviate-pricing-tiers.svg" alt="Weaviate pricing tiers from free Sandbox to $280 per month Cloud Plus with self-hosted option" loading="lazy" width="800" height="400">
+        <figcaption>Weaviate pricing tiers</figcaption>
+      </figure>
+<p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Self-hosted Weaviate is free, but it's not zero-effort. You need to provision infrastructure, configure backups, handle upgrades, and monitor performance. For a small RAG application, a $20/month VPS running Docker is all you need. For a large production deployment, you're looking at Kubernetes orchestration and potentially $200-1,000/month in compute costs.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">Cloud Flex eliminates operational overhead. Weaviate handles scaling, backups, upgrades, and monitoring. The $45/month minimum is the price of that convenience. For teams without dedicated DevOps, cloud is usually worth the premium.</p>
           <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">The breakpoint: if your self-hosted infrastructure costs exceed $100-200/month and you're spending significant engineering time on maintenance, Cloud Flex is comparable in total cost and saves engineering hours.</p>
         

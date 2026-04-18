@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="agsal-entry" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+    <linearGradient id="agsal-mid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="agsal-senior" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c47850"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+    <filter id="agsal-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="agsal-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Badge: Fastest Growing -->
+  <rect x="560" y="10" width="220" height="28" rx="14" fill="#e8a87c" opacity="0.15" stroke="#e8a87c" stroke-width="1"/>
+  <text x="670" y="29" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">FASTEST GROWING AI ROLE</text>
+
+  <!-- Title -->
+  <text x="30" y="34" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="700">AI Agent Developer Salary</text>
+  <text x="30" y="54" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">Total compensation by seniority (2026)</text>
+
+  <!-- Horizontal salary bars -->
+  <!-- Scale: bar width proportional to midpoint. Max $340K. x:30 to x:520 => 490px for $340K => 1K = 1.44px -->
+
+  <!-- Entry: $140K-$176K -->
+  <text x="30" y="100" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Entry Level</text>
+  <text x="160" y="100" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">0-2 years</text>
+  <rect x="30" y="108" width="253" height="36" rx="8" fill="url(#agsal-entry)" filter="url(#agsal-shadow)"/>
+  <!-- $140K marker -->
+  <line x1="232" y1="108" x2="232" y2="144" stroke="#0f2d35" stroke-width="1" opacity="0.3"/>
+  <text x="40" y="132" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">$140K</text>
+  <text x="245" y="132" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="14" font-weight="600">$176K</text>
+
+  <!-- Mid: $176K-$250K -->
+  <text x="30" y="172" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Mid Level</text>
+  <text x="140" y="172" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">2-5 years</text>
+  <rect x="30" y="180" width="360" height="36" rx="8" fill="url(#agsal-mid)" filter="url(#agsal-shadow)"/>
+  <line x1="283" y1="180" x2="283" y2="216" stroke="#0f2d35" stroke-width="1" opacity="0.3"/>
+  <text x="40" y="204" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">$176K</text>
+  <text x="345" y="204" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">$250K</text>
+
+  <!-- Senior: $250K-$340K (gold highlight) -->
+  <text x="30" y="244" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Senior Level</text>
+  <text x="160" y="244" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">5+ years</text>
+  <rect x="30" y="252" width="490" height="40" rx="8" fill="url(#agsal-senior)" filter="url(#agsal-glow)"/>
+  <line x1="390" y1="252" x2="390" y2="292" stroke="#0f2d35" stroke-width="1" opacity="0.3"/>
+  <text x="42" y="278" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="16" font-weight="700">$250K</text>
+  <text x="448" y="278" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="16" font-weight="700">$340K+</text>
+
+  <!-- Right side: Top employers callout boxes -->
+  <text x="570" y="100" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Top Paying</text>
+
+  <!-- OpenAI $340K -->
+  <rect x="570" y="112" width="200" height="48" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5" filter="url(#agsal-shadow)"/>
+  <text x="585" y="134" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">OpenAI</text>
+  <text x="585" y="150" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Swarm framework team</text>
+  <text x="755" y="138" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">$340K</text>
+
+  <!-- Cognition $310K -->
+  <rect x="570" y="168" width="200" height="48" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1" filter="url(#agsal-shadow)"/>
+  <text x="585" y="190" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Cognition</text>
+  <text x="585" y="206" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Devin AI builders</text>
+  <text x="755" y="194" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">$310K</text>
+
+  <!-- Anthropic $290K -->
+  <rect x="570" y="224" width="200" height="48" rx="8" fill="#132f38" stroke="#2a6a7a" stroke-width="1" filter="url(#agsal-shadow)"/>
+  <text x="585" y="246" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Anthropic</text>
+  <text x="585" y="262" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Claude Code + tool use</text>
+  <text x="755" y="250" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="end">$290K</text>
+
+  <!-- Bottom stats row -->
+  <rect x="30" y="315" width="740" height="68" rx="10" fill="#132f38"/>
+
+  <rect x="50" y="330" width="160" height="40" rx="6" fill="#1a4a56"/>
+  <text x="130" y="348" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">YOY GROWTH</text>
+  <text x="130" y="364" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+47%</text>
+
+  <rect x="230" y="330" width="160" height="40" rx="6" fill="#1a4a56"/>
+  <text x="310" y="348" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">OPEN POSITIONS</text>
+  <text x="310" y="364" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">12,400+</text>
+
+  <rect x="410" y="330" width="160" height="40" rx="6" fill="#1a4a56"/>
+  <text x="490" y="348" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">MEDIAN SALARY</text>
+  <text x="490" y="364" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">$213K</text>
+
+  <rect x="590" y="330" width="160" height="40" rx="6" fill="#1a4a56"/>
+  <text x="670" y="348" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">REMOTE %</text>
+  <text x="670" y="364" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">68%</text>
+</svg>

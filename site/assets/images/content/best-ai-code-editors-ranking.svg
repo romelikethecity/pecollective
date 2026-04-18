@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="rank-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+    <linearGradient id="rank-2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d8a9a"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+    <linearGradient id="rank-3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#1a4a56"/>
+    </linearGradient>
+    <linearGradient id="rank-4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#132f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="700">Best AI Code Editors (2026 Ranking)</text>
+  <!-- #1 Cursor - Gold treatment -->
+  <g transform="translate(30,55)">
+    <rect x="0" y="0" width="740" height="58" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+    <!-- Rank badge -->
+    <rect x="10" y="10" width="38" height="38" rx="19" fill="#e8a87c"/>
+    <text x="29" y="36" text-anchor="middle" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="18" font-weight="900">1</text>
+    <!-- Name -->
+    <text x="65" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">Cursor</text>
+    <!-- Rating -->
+    <text x="65" y="48" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="12">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="113" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9734;</text>
+    <text x="130" y="48" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="12" font-weight="700">4.5/5</text>
+    <!-- Bar -->
+    <rect x="200" y="18" width="400" height="22" rx="4" fill="#0f2d35"/>
+    <rect x="200" y="18" width="360" height="22" rx="4" fill="url(#rank-gold)"/>
+    <text x="540" y="34" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="10" font-weight="700">90%</text>
+    <!-- Price -->
+    <rect x="625" y="14" width="100" height="30" rx="6" fill="#0f2d35" stroke="#e8a87c" stroke-width="1"/>
+    <text x="675" y="34" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="14" font-weight="700">$20/mo</text>
+  </g>
+  <!-- #2 Windsurf -->
+  <g transform="translate(30,125)">
+    <rect x="0" y="0" width="740" height="58" rx="10" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+    <rect x="10" y="10" width="38" height="38" rx="19" fill="#3d8a9a"/>
+    <text x="29" y="36" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="900">2</text>
+    <text x="65" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">Windsurf</text>
+    <text x="65" y="48" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="12">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="113" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9734;</text>
+    <text x="130" y="48" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="12" font-weight="700">4.0/5</text>
+    <rect x="200" y="18" width="400" height="22" rx="4" fill="#0f2d35"/>
+    <rect x="200" y="18" width="320" height="22" rx="4" fill="url(#rank-2)"/>
+    <text x="500" y="34" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">80%</text>
+    <rect x="625" y="14" width="100" height="30" rx="6" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="675" y="34" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="14" font-weight="700">$15/mo</text>
+  </g>
+  <!-- #3 VS Code + Copilot -->
+  <g transform="translate(30,195)">
+    <rect x="0" y="0" width="740" height="58" rx="10" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <rect x="10" y="10" width="38" height="38" rx="19" fill="#2a6a7a"/>
+    <text x="29" y="36" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="900">3</text>
+    <text x="65" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="16" font-weight="800">VS Code + Copilot</text>
+    <text x="65" y="48" fill="#2a6a7a" font-family="system-ui,sans-serif" font-size="12">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="113" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9734;</text>
+    <text x="130" y="48" fill="#2a6a7a" font-family="system-ui,sans-serif" font-size="12" font-weight="700">4.3/5</text>
+    <rect x="235" y="18" width="365" height="22" rx="4" fill="#0f2d35"/>
+    <rect x="235" y="18" width="314" height="22" rx="4" fill="url(#rank-3)"/>
+    <text x="532" y="34" fill="#ffffff" font-family="system-ui,sans-serif" font-size="10" font-weight="700">86%</text>
+    <rect x="625" y="14" width="100" height="30" rx="6" fill="#0f2d35" stroke="#2a6a7a" stroke-width="1"/>
+    <text x="675" y="34" text-anchor="middle" fill="#2a6a7a" font-family="system-ui,sans-serif" font-size="14" font-weight="700">$10/mo</text>
+  </g>
+  <!-- #4 Replit -->
+  <g transform="translate(30,265)">
+    <rect x="0" y="0" width="740" height="58" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+    <rect x="10" y="10" width="38" height="38" rx="19" fill="#1a4a56"/>
+    <text x="29" y="36" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="18" font-weight="900">4</text>
+    <text x="65" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">Replit</text>
+    <text x="65" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9733;&#9733;&#9733;</text>
+    <text x="101" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9734;&#9734;</text>
+    <text x="130" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12" font-weight="700">3.8/5</text>
+    <rect x="200" y="18" width="400" height="22" rx="4" fill="#0f2d35"/>
+    <rect x="200" y="18" width="304" height="22" rx="4" fill="url(#rank-4)"/>
+    <text x="486" y="34" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="700">76%</text>
+    <rect x="625" y="14" width="100" height="30" rx="6" fill="#0f2d35" stroke="#1a4a56" stroke-width="1"/>
+    <text x="675" y="34" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="14" font-weight="700">$25/mo</text>
+  </g>
+  <!-- #5 Zed -->
+  <g transform="translate(30,335)">
+    <rect x="0" y="0" width="740" height="58" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+    <rect x="10" y="10" width="38" height="38" rx="19" fill="#1a4a56"/>
+    <text x="29" y="36" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="18" font-weight="900">5</text>
+    <text x="65" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">Zed</text>
+    <text x="65" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9733;&#9733;&#9733;</text>
+    <text x="101" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">&#9734;&#9734;</text>
+    <text x="130" y="48" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12" font-weight="700">3.5/5</text>
+    <rect x="200" y="18" width="400" height="22" rx="4" fill="#0f2d35"/>
+    <rect x="200" y="18" width="280" height="22" rx="4" fill="url(#rank-4)"/>
+    <text x="462" y="34" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10" font-weight="700">70%</text>
+    <rect x="625" y="14" width="100" height="30" rx="6" fill="#0f2d35" stroke="#1a4a56" stroke-width="1"/>
+    <text x="675" y="34" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Free</text>
+  </g>
+</svg>

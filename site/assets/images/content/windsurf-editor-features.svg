@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="ws-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#132f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Title area -->
+  <text x="400" y="34" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="19" font-weight="700">Windsurf Editor Features</text>
+  <!-- Badge: formerly Codeium -->
+  <rect x="310" y="42" width="180" height="22" rx="11" fill="#132f38" stroke="#6a8a94" stroke-width="1"/>
+  <text x="400" y="57" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">formerly Codeium</text>
+  <!-- Overall rating -->
+  <g transform="translate(580,15)">
+    <rect x="0" y="0" width="180" height="52" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+    <text x="90" y="20" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">OVERALL RATING</text>
+    <text x="55" y="44" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="24" font-weight="800">4.0</text>
+    <text x="77" y="44" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="12">/5</text>
+    <!-- Stars -->
+    <text x="115" y="44" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="16">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="163" y="44" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="16">&#9733;</text>
+  </g>
+  <!-- Feature Card 1: Cascade -->
+  <g transform="translate(30,85)">
+    <rect x="0" y="0" width="170" height="200" rx="12" fill="url(#ws-card)" stroke="#2a6a7a" stroke-width="1.5"/>
+    <!-- Icon area -->
+    <rect x="55" y="18" width="60" height="60" rx="30" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="85" y="58" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="28">&#8644;</text>
+    <text x="85" y="102" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Cascade</text>
+    <text x="85" y="122" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Multi-File AI</text>
+    <line x1="25" y1="135" x2="145" y2="135" stroke="#1a4a56" stroke-width="1"/>
+    <text x="85" y="155" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9" style="line-height:1.4">Edit across files</text>
+    <text x="85" y="170" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">with full context</text>
+    <text x="85" y="188" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Key Differentiator</text>
+  </g>
+  <!-- Feature Card 2: SWE-1 -->
+  <g transform="translate(220,85)">
+    <rect x="0" y="0" width="170" height="200" rx="12" fill="url(#ws-card)" stroke="#2a6a7a" stroke-width="1.5"/>
+    <rect x="55" y="18" width="60" height="60" rx="30" fill="#0f2d35" stroke="#e8a87c" stroke-width="1"/>
+    <text x="85" y="55" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="22" font-weight="800">AI</text>
+    <text x="85" y="102" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">SWE-1 Model</text>
+    <text x="85" y="122" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Custom AI Engine</text>
+    <line x1="25" y1="135" x2="145" y2="135" stroke="#1a4a56" stroke-width="1"/>
+    <text x="85" y="155" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Purpose-built for</text>
+    <text x="85" y="170" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">software engineering</text>
+    <text x="85" y="188" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Proprietary</text>
+  </g>
+  <!-- Feature Card 3: Pricing -->
+  <g transform="translate(410,85)">
+    <rect x="0" y="0" width="170" height="200" rx="12" fill="url(#ws-card)" stroke="#e8a87c" stroke-width="1.5"/>
+    <rect x="55" y="18" width="60" height="60" rx="30" fill="#0f2d35" stroke="#e8a87c" stroke-width="1"/>
+    <text x="85" y="56" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="20" font-weight="800">$</text>
+    <text x="85" y="102" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Credit Pricing</text>
+    <text x="85" y="122" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="16" font-weight="700">$15/mo</text>
+    <line x1="25" y1="135" x2="145" y2="135" stroke="#1a4a56" stroke-width="1"/>
+    <text x="85" y="155" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Free tier available</text>
+    <text x="85" y="170" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Credits = AI actions</text>
+    <text x="85" y="188" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Pay-as-you-go</text>
+  </g>
+  <!-- Feature Card 4: Tab Complete -->
+  <g transform="translate(600,85)">
+    <rect x="0" y="0" width="170" height="200" rx="12" fill="url(#ws-card)" stroke="#2a6a7a" stroke-width="1.5"/>
+    <rect x="55" y="18" width="60" height="60" rx="30" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="85" y="50" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="12" font-weight="700">TAB</text>
+    <text x="85" y="63" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="8">&#9654;</text>
+    <text x="85" y="102" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Autocomplete</text>
+    <text x="85" y="122" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Tab Predictions</text>
+    <line x1="25" y1="135" x2="145" y2="135" stroke="#1a4a56" stroke-width="1"/>
+    <text x="85" y="155" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Context-aware</text>
+    <text x="85" y="170" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">multi-line suggestions</text>
+    <text x="85" y="188" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Free on all plans</text>
+  </g>
+  <!-- Bottom bar -->
+  <rect x="30" y="305" width="740" height="80" rx="12" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <text x="100" y="332" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">PLATFORMS</text>
+  <text x="100" y="352" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Mac / Win / Linux</text>
+  <line x1="200" y1="315" x2="200" y2="375" stroke="#1a4a56" stroke-width="1"/>
+  <text x="310" y="332" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">LANGUAGES</text>
+  <text x="310" y="352" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">70+ programming languages</text>
+  <line x1="430" y1="315" x2="430" y2="375" stroke="#1a4a56" stroke-width="1"/>
+  <text x="540" y="332" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">BASE</text>
+  <text x="540" y="352" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">VS Code fork</text>
+  <line x1="620" y1="315" x2="620" y2="375" stroke="#1a4a56" stroke-width="1"/>
+  <text x="710" y="332" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">EXTENSIONS</text>
+  <text x="710" y="352" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="12" font-weight="600">VS Code compatible</text>
+</svg>

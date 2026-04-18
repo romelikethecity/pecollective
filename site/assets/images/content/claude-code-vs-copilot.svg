@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="cc-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="cc-claude" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+    <linearGradient id="cc-copilot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d8a9a"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="30" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Claude Code vs GitHub Copilot</text>
+
+  <!-- VS divider -->
+  <line x1="400" y1="42" x2="400" y2="395" stroke="#1a4a56" stroke-width="2"/>
+  <circle cx="400" cy="62" r="18" fill="#0f2d35" stroke="#1a4a56" stroke-width="2"/>
+  <text x="400" y="67" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">VS</text>
+
+  <!-- Left column: Claude Code -->
+  <rect x="30" y="42" width="340" height="42" rx="8" fill="#132f38"/>
+  <text x="200" y="60" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Claude Code</text>
+  <text x="200" y="76" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$20/mo with Max plan</text>
+
+  <!-- Claude Code features -->
+  <rect x="40" y="94" width="130" height="24" rx="12" fill="#1a4a56" stroke="#e8a87c" stroke-width="1"/>
+  <text x="105" y="110" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Terminal-based</text>
+
+  <rect x="180" y="94" width="110" height="24" rx="12" fill="#1a4a56" stroke="#e8a87c" stroke-width="1"/>
+  <text x="235" y="110" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Autonomous</text>
+
+  <rect x="300" y="94" width="60" height="24" rx="12" fill="#1a4a56" stroke="#e8a87c" stroke-width="1"/>
+  <text x="330" y="110" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Multi-file</text>
+
+  <!-- Right column: GitHub Copilot -->
+  <rect x="430" y="42" width="340" height="42" rx="8" fill="#132f38"/>
+  <text x="600" y="60" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">GitHub Copilot</text>
+  <text x="600" y="76" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">$10/mo Individual plan</text>
+
+  <!-- Copilot features -->
+  <rect x="440" y="94" width="100" height="24" rx="12" fill="#1a4a56" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="490" y="110" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">IDE-native</text>
+
+  <rect x="550" y="94" width="90" height="24" rx="12" fill="#1a4a56" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="595" y="110" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Inline hints</text>
+
+  <rect x="650" y="94" width="110" height="24" rx="12" fill="#1a4a56" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="705" y="110" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Chat sidebar</text>
+
+  <!-- Feature comparison bars -->
+  <!-- Autonomy -->
+  <text x="400" y="148" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Autonomy</text>
+  <rect x="76" y="155" width="280" height="18" rx="4" fill="url(#cc-claude)" filter="url(#cc-shadow)"/>
+  <rect x="450" y="155" width="100" height="18" rx="4" fill="url(#cc-copilot)" filter="url(#cc-shadow)"/>
+  <text x="50" y="168" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="end">9/10</text>
+  <text x="560" y="168" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">4/10</text>
+  <!-- Winner badge -->
+  <rect x="30" y="154" width="16" height="20" rx="3" fill="#e8a87c" opacity="0.3"/>
+  <text x="38" y="168" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">W</text>
+
+  <!-- IDE Integration -->
+  <text x="400" y="196" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">IDE Integration</text>
+  <rect x="186" y="203" width="170" height="18" rx="4" fill="url(#cc-claude)" filter="url(#cc-shadow)"/>
+  <rect x="450" y="203" width="280" height="18" rx="4" fill="url(#cc-copilot)" filter="url(#cc-shadow)"/>
+  <text x="50" y="216" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="end">6/10</text>
+  <text x="740" y="216" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10">9/10</text>
+  <rect x="754" y="202" width="16" height="20" rx="3" fill="#3d8a9a" opacity="0.3"/>
+  <text x="762" y="216" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">W</text>
+
+  <!-- Multi-file Editing -->
+  <text x="400" y="244" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Multi-file Editing</text>
+  <rect x="76" y="251" width="280" height="18" rx="4" fill="url(#cc-claude)" filter="url(#cc-shadow)"/>
+  <rect x="450" y="251" width="140" height="18" rx="4" fill="url(#cc-copilot)" filter="url(#cc-shadow)"/>
+  <text x="50" y="264" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="end">9/10</text>
+  <text x="600" y="264" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">5/10</text>
+  <rect x="30" y="250" width="16" height="20" rx="3" fill="#e8a87c" opacity="0.3"/>
+  <text x="38" y="264" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">W</text>
+
+  <!-- Price Value -->
+  <text x="400" y="292" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Price Value</text>
+  <rect x="186" y="299" width="170" height="18" rx="4" fill="url(#cc-claude)" filter="url(#cc-shadow)"/>
+  <rect x="450" y="299" width="260" height="18" rx="4" fill="url(#cc-copilot)" filter="url(#cc-shadow)"/>
+  <text x="50" y="312" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" text-anchor="end">6/10</text>
+  <text x="720" y="312" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10">8/10</text>
+  <rect x="754" y="298" width="16" height="20" rx="3" fill="#3d8a9a" opacity="0.3"/>
+  <text x="762" y="312" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">W</text>
+
+  <!-- Bottom verdict -->
+  <rect x="30" y="338" width="340" height="48" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1"/>
+  <text x="200" y="358" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for: Autonomous tasks,</text>
+  <text x="200" y="376" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">large refactors, complex multi-file changes</text>
+
+  <rect x="430" y="338" width="340" height="48" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="600" y="358" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Best for: Daily coding flow,</text>
+  <text x="600" y="376" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">inline completions, budget-conscious teams</text>
+</svg>

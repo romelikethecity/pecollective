@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="lcr-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Header -->
+  <text x="30" y="35" fill="#ffffff" font-family="system-ui,sans-serif" font-size="20" font-weight="800">LangChain</text>
+  <text x="160" y="35" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="20">Review</text>
+  <!-- Badge -->
+  <g transform="translate(30,45)">
+    <rect x="0" y="0" width="240" height="24" rx="12" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="120" y="16" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Most Popular LLM Framework</text>
+  </g>
+  <!-- Rating + Stars -->
+  <g transform="translate(580,12)">
+    <rect x="0" y="0" width="190" height="58" rx="10" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+    <text x="50" y="24" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="28" font-weight="800">4.1</text>
+    <text x="75" y="24" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">/5</text>
+    <text x="45" y="46" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="14">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="77" y="46" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="14">&#9733;</text>
+    <!-- GitHub stars -->
+    <line x1="100" y1="10" x2="100" y2="48" stroke="#1a4a56" stroke-width="1"/>
+    <text x="145" y="24" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">GitHub</text>
+    <text x="145" y="46" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="800">95K</text>
+  </g>
+  <!-- Feature Grid: 2x2 -->
+  <!-- Feature 1: LangGraph -->
+  <g transform="translate(30,82)">
+    <rect x="0" y="0" width="355" height="125" rx="12" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <!-- Icon circle -->
+    <circle cx="40" cy="35" r="22" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <!-- Graph nodes icon -->
+    <circle cx="33" cy="28" r="4" fill="#3d8a9a"/>
+    <circle cx="47" cy="28" r="4" fill="#3d8a9a"/>
+    <circle cx="40" cy="42" r="4" fill="#3d8a9a"/>
+    <line x1="33" y1="32" x2="40" y2="38" stroke="#3d8a9a" stroke-width="1"/>
+    <line x1="47" y1="32" x2="40" y2="38" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="75" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">LangGraph</text>
+    <text x="75" y="48" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Agent Orchestration</text>
+    <line x1="15" y1="65" x2="340" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <text x="15" y="82" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">Build stateful, multi-step AI agents with</text>
+    <text x="15" y="97" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">graph-based workflows. Supports cycles,</text>
+    <text x="15" y="112" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">branching, and human-in-the-loop patterns.</text>
+  </g>
+  <!-- Feature 2: LangSmith -->
+  <g transform="translate(415,82)">
+    <rect x="0" y="0" width="355" height="125" rx="12" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <circle cx="40" cy="35" r="22" fill="#0f2d35" stroke="#e8a87c" stroke-width="1"/>
+    <!-- Eye/observability icon -->
+    <ellipse cx="40" cy="35" rx="12" ry="7" fill="none" stroke="#e8a87c" stroke-width="1.5"/>
+    <circle cx="40" cy="35" r="3" fill="#e8a87c"/>
+    <text x="75" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">LangSmith</text>
+    <text x="75" y="48" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Observability &amp; Evaluation</text>
+    <line x1="15" y1="65" x2="340" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <text x="15" y="82" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">Trace every LLM call, debug prompts,</text>
+    <text x="15" y="97" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">run evaluations at scale. Playground for</text>
+    <text x="15" y="112" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">prompt iteration and dataset management.</text>
+  </g>
+  <!-- Feature 3: 150+ Integrations -->
+  <g transform="translate(30,222)">
+    <rect x="0" y="0" width="355" height="125" rx="12" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <circle cx="40" cy="35" r="22" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="40" y="41" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="16" font-weight="800">150+</text>
+    <text x="75" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Integrations</text>
+    <text x="75" y="48" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Ecosystem Breadth</text>
+    <line x1="15" y1="65" x2="340" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <!-- Integration tags -->
+    <g transform="translate(15,75)">
+      <rect x="0" y="0" width="55" height="18" rx="9" fill="#1a4a56"/>
+      <text x="28" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">OpenAI</text>
+      <rect x="62" y="0" width="60" height="18" rx="9" fill="#1a4a56"/>
+      <text x="92" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Anthropic</text>
+      <rect x="130" y="0" width="60" height="18" rx="9" fill="#1a4a56"/>
+      <text x="160" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Pinecone</text>
+      <rect x="198" y="0" width="50" height="18" rx="9" fill="#1a4a56"/>
+      <text x="223" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Redis</text>
+      <rect x="256" y="0" width="65" height="18" rx="9" fill="#1a4a56"/>
+      <text x="289" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Chroma</text>
+    </g>
+    <g transform="translate(15,100)">
+      <rect x="0" y="0" width="55" height="18" rx="9" fill="#1a4a56"/>
+      <text x="28" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Google</text>
+      <rect x="62" y="0" width="55" height="18" rx="9" fill="#1a4a56"/>
+      <text x="90" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Cohere</text>
+      <rect x="125" y="0" width="70" height="18" rx="9" fill="#1a4a56"/>
+      <text x="160" y="13" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="8">Weaviate</text>
+      <rect x="202" y="0" width="55" height="18" rx="9" fill="#6a8a94" opacity="0.3"/>
+      <text x="230" y="13" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="8">+140</text>
+    </g>
+  </g>
+  <!-- Feature 4: LCEL -->
+  <g transform="translate(415,222)">
+    <rect x="0" y="0" width="355" height="125" rx="12" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <circle cx="40" cy="35" r="22" fill="#0f2d35" stroke="#3d8a9a" stroke-width="1"/>
+    <!-- Chain links icon -->
+    <text x="40" y="42" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="18">&#9741;</text>
+    <text x="75" y="30" fill="#ffffff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">LCEL Chains</text>
+    <text x="75" y="48" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">LangChain Expression Language</text>
+    <line x1="15" y1="65" x2="340" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <!-- Mini code example -->
+    <rect x="15" y="75" width="325" height="38" rx="6" fill="#0f2d35"/>
+    <text x="25" y="90" fill="#3d8a9a" font-family="monospace" font-size="9">chain = prompt | llm | parser</text>
+    <text x="25" y="105" fill="#6a8a94" font-family="monospace" font-size="9">result = chain.invoke({"topic": "AI"})</text>
+  </g>
+  <!-- Bottom bar -->
+  <g transform="translate(30,362)">
+    <rect x="0" y="0" width="740" height="28" rx="14" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+    <text x="370" y="19" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">Python &amp; JavaScript | Open Source (MIT) | Founded by Harrison Chase (2022) | Backed by Sequoia</text>
+  </g>
+</svg>

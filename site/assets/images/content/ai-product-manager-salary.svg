@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="apm-ic" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+    <linearGradient id="apm-sr" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="apm-dir" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="19" font-weight="700">AI Product Manager Salary Ranges</text>
+  <text x="400" y="55" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="11">Total Compensation (Base + Equity + Bonus) | United States 2026</text>
+  <!-- Y-axis labels -->
+  <text x="100" y="370" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">$140K</text>
+  <text x="100" y="310" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">$180K</text>
+  <text x="100" y="250" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">$220K</text>
+  <text x="100" y="190" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">$260K</text>
+  <text x="100" y="130" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">$300K</text>
+  <!-- Gridlines -->
+  <line x1="130" y1="367" x2="680" y2="367" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,4"/>
+  <line x1="130" y1="307" x2="680" y2="307" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,4"/>
+  <line x1="130" y1="247" x2="680" y2="247" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,4"/>
+  <line x1="130" y1="187" x2="680" y2="187" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,4"/>
+  <line x1="130" y1="127" x2="680" y2="127" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,4"/>
+  <!-- Scale: $140K = y367, $300K = y127. Range = $160K over 240px. $1K = 1.5px -->
+  <!-- IC: $162K-$200K => y334 to y277 (height 57) -->
+  <g transform="translate(180,0)">
+    <rect x="0" y="277" width="100" height="90" rx="6" fill="url(#apm-ic)" stroke="#2a6a7a" stroke-width="1"/>
+    <text x="50" y="310" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$162K</text>
+    <text x="50" y="326" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">to</text>
+    <text x="50" y="342" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$200K</text>
+    <text x="50" y="385" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="12" font-weight="600">IC</text>
+  </g>
+  <!-- Senior: $200K-$240K => y277 to y217 (height 60) -->
+  <g transform="translate(330,0)">
+    <rect x="0" y="217" width="100" height="150" rx="6" fill="url(#apm-sr)" stroke="#3d8a9a" stroke-width="1"/>
+    <text x="50" y="260" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$200K</text>
+    <text x="50" y="276" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">to</text>
+    <text x="50" y="292" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$240K</text>
+    <text x="50" y="385" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Senior</text>
+  </g>
+  <!-- Director: $240K-$280K+ => y217 to y157 (height 60) -->
+  <g transform="translate(480,0)">
+    <rect x="0" y="157" width="100" height="210" rx="6" fill="url(#apm-dir)" stroke="#e8a87c" stroke-width="1.5"/>
+    <text x="50" y="215" text-anchor="middle" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$240K</text>
+    <text x="50" y="231" text-anchor="middle" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="10">to</text>
+    <text x="50" y="247" text-anchor="middle" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="700">$280K+</text>
+    <text x="50" y="385" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Director</text>
+  </g>
+  <!-- Median line at $232K => y233 -->
+  <line x1="155" y1="233" x2="605" y2="233" stroke="#e8a87c" stroke-width="2" stroke-dasharray="8,4"/>
+  <rect x="606" y="222" width="95" height="22" rx="4" fill="#e8a87c"/>
+  <text x="653" y="238" text-anchor="middle" fill="#0f2d35" font-family="system-ui,sans-serif" font-size="11" font-weight="800">Median $232K</text>
+  <!-- Top companies callout -->
+  <g transform="translate(618,75)">
+    <rect x="0" y="0" width="165" height="85" rx="10" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+    <text x="83" y="22" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">TOP EMPLOYERS</text>
+    <line x1="15" y1="30" x2="150" y2="30" stroke="#1a4a56" stroke-width="1"/>
+    <text x="83" y="48" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Google</text>
+    <text x="83" y="63" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="13" font-weight="700">OpenAI</text>
+    <text x="83" y="78" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Meta</text>
+  </g>
+</svg>

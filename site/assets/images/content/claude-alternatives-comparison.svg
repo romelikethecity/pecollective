@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="alt-cheap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="alt-mid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+    <linearGradient id="alt-exp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c47850"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Claude Alternatives: Price per Million Tokens</text>
+  <text x="400" y="50" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Input pricing comparison across 7 leading LLM providers</text>
+
+  <!-- Scale at bottom -->
+  <line x1="190" y1="370" x2="770" y2="370" stroke="#1a4a56" stroke-width="1"/>
+  <text x="190" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$0</text>
+  <text x="306" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$1</text>
+  <text x="422" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$2</text>
+  <text x="538" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$3</text>
+  <text x="654" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$4</text>
+  <text x="770" y="388" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">$5</text>
+
+  <!-- Grid lines -->
+  <line x1="306" y1="60" x2="306" y2="370" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="422" y1="60" x2="422" y2="370" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="538" y1="60" x2="538" y2="370" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="654" y1="60" x2="654" y2="370" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Cards - sorted cheapest to most expensive -->
+  <!-- Scale: $0 = x:190, $5 = x:770 => 1$ = 116px -->
+
+  <!-- DeepSeek: $0.27/MTok -->
+  <rect x="20" y="66" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="80" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">DeepSeek R1</text>
+  <text x="30" y="96" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Open-source reasoning</text>
+  <rect x="190" y="72" width="31" height="24" rx="4" fill="url(#alt-cheap)"/>
+  <text x="230" y="88" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">$0.27</text>
+
+  <!-- Gemini 2.5: $1.25/MTok -->
+  <rect x="20" y="110" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="124" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Gemini 2.5 Pro</text>
+  <text x="30" y="140" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Google flagship</text>
+  <rect x="190" y="116" width="145" height="24" rx="4" fill="url(#alt-cheap)"/>
+  <text x="344" y="132" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">$1.25</text>
+
+  <!-- GPT-4.1: $2/MTok -->
+  <rect x="20" y="154" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="168" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">GPT-4.1</text>
+  <text x="30" y="184" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">OpenAI latest</text>
+  <rect x="190" y="160" width="232" height="24" rx="4" fill="url(#alt-mid)"/>
+  <text x="430" y="176" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">$2.00</text>
+
+  <!-- Mistral Large: $2/MTok -->
+  <rect x="20" y="198" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="212" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Mistral Large</text>
+  <text x="30" y="228" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">EU-based, multilingual</text>
+  <rect x="190" y="204" width="232" height="24" rx="4" fill="url(#alt-mid)"/>
+  <text x="430" y="220" fill="#2a6a7a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">$2.00</text>
+
+  <!-- Cohere R+: $3/MTok -->
+  <rect x="20" y="242" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="256" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Cohere R+</text>
+  <text x="30" y="272" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">RAG-optimized</text>
+  <rect x="190" y="248" width="348" height="24" rx="4" fill="url(#alt-exp)"/>
+  <text x="548" y="264" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">$3.00</text>
+
+  <!-- Perplexity: $5/MTok -->
+  <rect x="20" y="286" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="300" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Perplexity</text>
+  <text x="30" y="316" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Search-integrated</text>
+  <rect x="190" y="292" width="580" height="24" rx="4" fill="url(#alt-exp)"/>
+  <text x="778" y="308" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="end">$5.00</text>
+
+  <!-- Llama 4: Free -->
+  <rect x="20" y="330" width="165" height="36" rx="6" fill="#132f38"/>
+  <text x="30" y="344" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Llama 4</text>
+  <text x="30" y="360" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Self-hosted, open-weight</text>
+  <rect x="190" y="336" width="60" height="24" rx="12" fill="#1a4a56" stroke="#3d8a9a" stroke-width="1.5"/>
+  <text x="220" y="352" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">FREE</text>
+</svg>

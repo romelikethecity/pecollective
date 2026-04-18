@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="li-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+    <linearGradient id="li-teal-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#1a4a56"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+  <!-- Title -->
+  <text x="30" y="38" fill="#ffffff" font-family="system-ui,sans-serif" font-size="20" font-weight="700">LlamaIndex</text>
+  <text x="175" y="38" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="20">Feature Overview</text>
+  <!-- Gold badge -->
+  <g transform="translate(600,12)">
+    <rect x="0" y="0" width="170" height="40" rx="20" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+    <text x="30" y="27" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="18">&#9733;</text>
+    <text x="50" y="26" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Best for RAG</text>
+  </g>
+  <!-- Rating -->
+  <g transform="translate(420,15)">
+    <text x="0" y="15" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="10">RATING</text>
+    <text x="0" y="35" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="20" font-weight="800">4.2</text>
+    <text x="30" y="35" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="12">/5</text>
+    <text x="55" y="35" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="14">&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="107" y="35" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="14">&#9733;</text>
+  </g>
+  <!-- Feature showcase: hexagonal/honeycomb-inspired layout -->
+  <!-- Feature 1: Data Connectors -->
+  <g transform="translate(30,65)">
+    <rect x="0" y="0" width="350" height="100" rx="14" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <!-- Big number -->
+    <text x="75" y="60" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="48" font-weight="800">100+</text>
+    <text x="75" y="82" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="11">Data Connectors</text>
+    <!-- List -->
+    <line x1="160" y1="15" x2="160" y2="85" stroke="#1a4a56" stroke-width="1"/>
+    <circle cx="178" cy="28" r="3" fill="#3d8a9a"/>
+    <text x="190" y="32" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11">PDFs, Notion, Slack, SQL</text>
+    <circle cx="178" cy="50" r="3" fill="#3d8a9a"/>
+    <text x="190" y="54" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11">Google Drive, S3, APIs</text>
+    <circle cx="178" cy="72" r="3" fill="#3d8a9a"/>
+    <text x="190" y="76" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11">Web scraping, databases</text>
+  </g>
+  <!-- Feature 2: Query Engines -->
+  <g transform="translate(400,65)">
+    <rect x="0" y="0" width="370" height="100" rx="14" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <text x="185" y="28" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Query Engines</text>
+    <!-- Mini pipeline diagram -->
+    <g transform="translate(30,42)">
+      <rect x="0" y="0" width="70" height="30" rx="5" fill="url(#li-teal-grad)"/>
+      <text x="35" y="19" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="9">Index</text>
+      <text x="80" y="19" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="14">&#8594;</text>
+      <rect x="95" y="0" width="70" height="30" rx="5" fill="url(#li-teal-grad)"/>
+      <text x="130" y="19" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="9">Retrieve</text>
+      <text x="175" y="19" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="14">&#8594;</text>
+      <rect x="190" y="0" width="70" height="30" rx="5" fill="url(#li-teal-grad)"/>
+      <text x="225" y="19" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="9">Synthesize</text>
+      <text x="270" y="19" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="14">&#8594;</text>
+      <rect x="285" y="0" width="55" height="30" rx="5" fill="#132f38" stroke="#e8a87c" stroke-width="1"/>
+      <text x="312" y="19" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="9">Answer</text>
+    </g>
+    <text x="185" y="92" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">Vector, keyword, knowledge graph, SQL, and custom retrievers</text>
+  </g>
+  <!-- Feature 3: LlamaCloud -->
+  <g transform="translate(30,185)">
+    <rect x="0" y="0" width="370" height="100" rx="14" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+    <rect x="15" y="12" width="80" height="22" rx="4" fill="#e8a87c" opacity="0.15"/>
+    <text x="55" y="27" text-anchor="middle" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="10" font-weight="700">MANAGED</text>
+    <text x="15" y="52" fill="#ffffff" font-family="system-ui,sans-serif" font-size="16" font-weight="700">LlamaCloud</text>
+    <text x="155" y="52" fill="#e8a87c" font-family="system-ui,sans-serif" font-size="16" font-weight="700">$399+/mo</text>
+    <text x="15" y="72" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="11">Managed parsing, indexing, and retrieval</text>
+    <text x="15" y="90" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">LlamaParse for complex documents (tables, charts, PDFs)</text>
+  </g>
+  <!-- Feature 4: RAG-Optimized -->
+  <g transform="translate(420,185)">
+    <rect x="0" y="0" width="350" height="100" rx="14" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+    <text x="175" y="28" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">RAG-Optimized Architecture</text>
+    <!-- Metric boxes -->
+    <g transform="translate(20,40)">
+      <rect x="0" y="0" width="95" height="45" rx="6" fill="#0f2d35"/>
+      <text x="48" y="18" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10">Chunking</text>
+      <text x="48" y="36" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Semantic</text>
+    </g>
+    <g transform="translate(128,40)">
+      <rect x="0" y="0" width="95" height="45" rx="6" fill="#0f2d35"/>
+      <text x="48" y="18" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10">Embeddings</text>
+      <text x="48" y="36" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Any model</text>
+    </g>
+    <g transform="translate(235,40)">
+      <rect x="0" y="0" width="95" height="45" rx="6" fill="#0f2d35"/>
+      <text x="48" y="18" text-anchor="middle" fill="#3d8a9a" font-family="system-ui,sans-serif" font-size="10">Reranking</text>
+      <text x="48" y="36" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Built-in</text>
+    </g>
+  </g>
+  <!-- Bottom summary bar -->
+  <g transform="translate(30,305)">
+    <rect x="0" y="0" width="740" height="75" rx="12" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+    <text x="100" y="22" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">GITHUB STARS</text>
+    <text x="100" y="45" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="700">38K+</text>
+    <text x="100" y="62" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">and growing</text>
+    <line x1="190" y1="10" x2="190" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <text x="310" y="22" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">OPEN SOURCE</text>
+    <text x="310" y="45" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">MIT License</text>
+    <text x="310" y="62" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">Free core framework</text>
+    <line x1="420" y1="10" x2="420" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <text x="530" y="22" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">LLM SUPPORT</text>
+    <text x="530" y="45" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="14" font-weight="700">OpenAI, Claude, Llama</text>
+    <text x="530" y="62" text-anchor="middle" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="9">+ all major providers</text>
+    <line x1="650" y1="10" x2="650" y2="65" stroke="#1a4a56" stroke-width="1"/>
+    <text x="700" y="22" text-anchor="middle" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="9">LANGUAGE</text>
+    <text x="700" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="700">Python</text>
+  </g>
+</svg>

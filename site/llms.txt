@@ -48,7 +48,7 @@ All pricing data is verified monthly. All tool reviews are based on hands-on tes
 
 - [Best AI Coding Assistants](https://pecollective.com/tools/best-ai-coding-assistants/): 5 tools tested on real code
 - [Best Vector Databases](https://pecollective.com/tools/best-vector-databases/): Pinecone, Weaviate, Chroma, Qdrant compared
-- [Best Embedding Models 2026](https://pecollective.com/blog/best-embedding-models-2026/): MTEB benchmarks and pricing
+- [Best Embedding Models 2026](https://pecollective.com/tools/best-embedding-models/): MTEB benchmarks and pricing
 - [Best RAG Tools](https://pecollective.com/tools/best-rag-tools/): RAG framework and infrastructure picks
 - [Best AI Agents](https://pecollective.com/tools/best-ai-agents/): Agent platforms compared
 - [Best LLM Frameworks](https://pecollective.com/tools/best-llm-frameworks/): LangChain, LlamaIndex, CrewAI, AutoGen, more

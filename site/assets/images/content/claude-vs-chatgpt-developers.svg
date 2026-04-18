@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="cvg-goldFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+    <linearGradient id="cvg-tealFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Claude vs ChatGPT for Developers</text>
+  <text x="400" y="52" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12">Head-to-head benchmark comparison</text>
+
+  <!-- Column Headers -->
+  <rect x="320" y="62" width="120" height="26" rx="6" fill="#e8a87c" opacity="0.15"/>
+  <text x="380" y="80" text-anchor="middle" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Claude</text>
+  <rect x="480" y="62" width="120" height="26" rx="6" fill="#3d8a9a" opacity="0.15"/>
+  <text x="540" y="80" text-anchor="middle" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="12" font-weight="700">ChatGPT</text>
+
+  <!-- Benchmark 1: Code Generation -->
+  <text x="40" y="115" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Code Generation</text>
+  <!-- Claude bar -->
+  <rect x="320" y="102" width="108" height="20" rx="4" fill="url(#cvg-goldFill)"/>
+  <text x="380" y="116" text-anchor="middle" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="11" font-weight="700">90%</text>
+  <!-- ChatGPT bar -->
+  <rect x="480" y="102" width="102" height="20" rx="4" fill="url(#cvg-tealFill)"/>
+  <text x="540" y="116" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">85%</text>
+  <!-- Winner indicator -->
+  <text x="660" y="116" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16">&#9664;</text>
+
+  <!-- Benchmark 2: Debugging -->
+  <text x="40" y="155" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Debugging</text>
+  <rect x="320" y="142" width="102" height="20" rx="4" fill="url(#cvg-goldFill)"/>
+  <text x="380" y="156" text-anchor="middle" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="11" font-weight="700">85%</text>
+  <rect x="480" y="142" width="108" height="20" rx="4" fill="url(#cvg-tealFill)"/>
+  <text x="540" y="156" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">90%</text>
+  <text x="660" y="156" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="16">&#9664;</text>
+
+  <!-- Benchmark 3: Context Handling -->
+  <text x="40" y="195" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Context Window</text>
+  <rect x="320" y="182" width="120" height="20" rx="4" fill="url(#cvg-goldFill)"/>
+  <text x="380" y="196" text-anchor="middle" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="11" font-weight="700">200K</text>
+  <rect x="480" y="182" width="96" height="20" rx="4" fill="url(#cvg-tealFill)"/>
+  <text x="540" y="196" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">128K</text>
+  <text x="660" y="196" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16">&#9664;</text>
+
+  <!-- Benchmark 4: Instruction Following -->
+  <text x="40" y="235" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Instruction Following</text>
+  <rect x="320" y="222" width="114" height="20" rx="4" fill="url(#cvg-goldFill)"/>
+  <text x="380" y="236" text-anchor="middle" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="11" font-weight="700">95%</text>
+  <rect x="480" y="222" width="96" height="20" rx="4" fill="url(#cvg-tealFill)"/>
+  <text x="540" y="236" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">80%</text>
+  <text x="660" y="236" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16">&#9664;</text>
+
+  <!-- Benchmark 5: Plugins/Tools -->
+  <text x="40" y="275" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Plugin Ecosystem</text>
+  <rect x="320" y="262" width="84" height="20" rx="4" fill="url(#cvg-goldFill)"/>
+  <text x="380" y="276" text-anchor="middle" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="11" font-weight="700">70%</text>
+  <rect x="480" y="262" width="114" height="20" rx="4" fill="url(#cvg-tealFill)"/>
+  <text x="540" y="276" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">95%</text>
+  <text x="660" y="276" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="16">&#9664;</text>
+
+  <!-- Pricing comparison -->
+  <line x1="40" y1="300" x2="760" y2="300" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="40" y="322" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="600">API PRICING (per 1M tokens)</text>
+
+  <rect x="40" y="334" width="350" height="50" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1"/>
+  <text x="215" y="354" text-anchor="middle" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Claude Sonnet</text>
+  <text x="215" y="374" text-anchor="middle" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">$3 input / $15 output</text>
+
+  <rect x="410" y="334" width="350" height="50" rx="8" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="585" y="354" text-anchor="middle" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="13" font-weight="700">GPT-4o</text>
+  <text x="585" y="374" text-anchor="middle" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">$2.50 input / $10 output</text>
+</svg>

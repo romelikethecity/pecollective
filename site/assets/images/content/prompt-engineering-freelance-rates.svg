@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="tierGold1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f0c4a8;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="tierGold2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#e8a87c;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="tierGold3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#e8a87c;stop-opacity:0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="30" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Prompt Engineering Freelance Earnings</text>
+  <text x="400" y="48" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Three pricing models and expected annual income at each tier</text>
+
+  <!-- Three tier columns -->
+
+  <!-- TIER 1: Hourly -->
+  <rect x="30" y="70" width="235" height="310" rx="12" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <rect x="30" y="70" width="235" height="5" rx="3" fill="#3d8a9a"/>
+
+  <text x="147" y="100" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">HOURLY RATE</text>
+  <text x="147" y="135" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="32" font-weight="800" text-anchor="middle">$100-$250</text>
+  <text x="147" y="153" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">per hour</text>
+
+  <line x1="60" y1="168" x2="235" y2="168" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="147" y="192" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Expected Annual Earnings</text>
+
+  <!-- Bar: Low end ($100/hr x 20hrs/wk x 48wk = $96K) -->
+  <text x="55" y="218" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Low (20 hrs/wk)</text>
+  <rect x="55" y="222" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="55" y="222" width="86" height="18" rx="4" fill="url(#tierGold3)"/>
+  <text x="148" y="235" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$96K</text>
+
+  <!-- Bar: Mid ($175/hr x 25hrs/wk x 48wk = $210K) -->
+  <text x="55" y="258" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Mid (25 hrs/wk)</text>
+  <rect x="55" y="262" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="55" y="262" width="135" height="18" rx="4" fill="url(#tierGold2)"/>
+  <text x="197" y="275" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$210K</text>
+
+  <!-- Bar: High ($250/hr x 30hrs/wk x 48wk = $360K) -->
+  <text x="55" y="298" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">High (30 hrs/wk)</text>
+  <rect x="55" y="302" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="55" y="302" width="180" height="18" rx="4" fill="url(#tierGold1)"/>
+  <text x="240" y="315" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$360K</text>
+
+  <text x="147" y="350" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Best for: Getting started,</text>
+  <text x="147" y="363" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">varied project types</text>
+
+  <!-- TIER 2: Per-Project (highlighted) -->
+  <rect x="283" y="70" width="235" height="310" rx="12" fill="#132f38" stroke="#e8a87c" stroke-width="2"/>
+  <rect x="283" y="70" width="235" height="5" rx="3" fill="#e8a87c"/>
+  <rect x="355" y="58" width="90" height="18" rx="9" fill="#e8a87c"/>
+  <text x="400" y="70" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">MOST POPULAR</text>
+
+  <text x="400" y="100" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">PER PROJECT</text>
+  <text x="400" y="135" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="30" font-weight="800" text-anchor="middle">$2K-$15K</text>
+  <text x="400" y="153" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">per project</text>
+
+  <line x1="313" y1="168" x2="488" y2="168" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="400" y="192" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Expected Annual Earnings</text>
+
+  <!-- Bar: Low (2 projects/mo x $2K = $48K) -->
+  <text x="308" y="218" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Low (2/mo @ $2K)</text>
+  <rect x="308" y="222" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="308" y="222" width="43" height="18" rx="4" fill="url(#tierGold3)"/>
+  <text x="358" y="235" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$48K</text>
+
+  <!-- Bar: Mid (3 projects/mo x $7K = $252K) -->
+  <text x="308" y="258" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Mid (3/mo @ $7K)</text>
+  <rect x="308" y="262" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="308" y="262" width="142" height="18" rx="4" fill="url(#tierGold2)"/>
+  <text x="457" y="275" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$252K</text>
+
+  <!-- Bar: High (2 projects/mo x $15K = $360K) -->
+  <text x="308" y="298" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">High (2/mo @ $15K)</text>
+  <rect x="308" y="302" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="308" y="302" width="180" height="18" rx="4" fill="url(#tierGold1)"/>
+  <text x="493" y="315" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$360K</text>
+
+  <text x="400" y="350" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Best for: Specialists with</text>
+  <text x="400" y="363" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">repeatable frameworks</text>
+
+  <!-- TIER 3: Monthly Retainer -->
+  <rect x="536" y="70" width="235" height="310" rx="12" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <rect x="536" y="70" width="235" height="5" rx="3" fill="#3d8a9a"/>
+
+  <text x="653" y="100" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="2">MONTHLY RETAINER</text>
+  <text x="653" y="135" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="30" font-weight="800" text-anchor="middle">$5K-$20K</text>
+  <text x="653" y="153" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">per month</text>
+
+  <line x1="566" y1="168" x2="741" y2="168" stroke="#1a4a56" stroke-width="1"/>
+
+  <text x="653" y="192" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Expected Annual Earnings</text>
+
+  <!-- Bar: 1 client @ $5K = $60K -->
+  <text x="561" y="218" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">1 client @ $5K</text>
+  <rect x="561" y="222" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="561" y="222" width="54" height="18" rx="4" fill="url(#tierGold3)"/>
+  <text x="622" y="235" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$60K</text>
+
+  <!-- Bar: 2 clients @ $10K = $240K -->
+  <text x="561" y="258" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">2 clients @ $10K</text>
+  <rect x="561" y="262" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="561" y="262" width="130" height="18" rx="4" fill="url(#tierGold2)"/>
+  <text x="698" y="275" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$240K</text>
+
+  <!-- Bar: 2 clients @ $20K = $480K -->
+  <text x="561" y="298" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">2 clients @ $20K</text>
+  <rect x="561" y="302" width="180" height="18" rx="4" fill="#1a4a56"/>
+  <rect x="561" y="302" width="180" height="18" rx="4" fill="url(#tierGold1)"/>
+  <text x="746" y="315" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$480K</text>
+
+  <text x="653" y="350" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Best for: Trusted advisors,</text>
+  <text x="653" y="363" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">enterprise relationships</text>
+</svg>

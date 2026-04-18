@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="priceHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#e8a87c;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="30" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">GitHub Copilot Feature Overview</text>
+
+  <!-- Rating + Price hero -->
+  <rect x="180" y="44" width="440" height="42" rx="8" fill="url(#priceHighlight)" stroke="#e8a87c" stroke-width="1"/>
+  <text x="210" y="71" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="22" font-weight="800">4.3/5</text>
+  <text x="290" y="71" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="13">|</text>
+  <text x="310" y="64" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">$10/mo individual</text>
+  <text x="310" y="80" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">$19/mo business</text>
+  <rect x="480" y="55" width="120" height="22" rx="11" fill="#e8a87c" opacity="0.2"/>
+  <text x="540" y="70" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">BEST PRICE</text>
+
+  <!-- Features as horizontal panels with detail bars -->
+
+  <!-- Feature 1: Inline Completions -->
+  <rect x="30" y="100" width="740" height="65" rx="8" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <circle cx="70" cy="132" r="22" fill="#1a4a56"/>
+  <text x="70" y="137" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">IC</text>
+  <text x="105" y="122" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Inline Completions</text>
+  <text x="105" y="140" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Ghost text suggestions as you type. Multi-line predictions based on context.</text>
+  <text x="105" y="155" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Works in VS Code, JetBrains, Neovim, Visual Studio</text>
+  <!-- Maturity bar -->
+  <text x="600" y="118" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Maturity</text>
+  <rect x="600" y="123" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="123" width="145" height="6" rx="3" fill="#3d8a9a"/>
+  <text x="600" y="145" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Accuracy</text>
+  <rect x="600" y="150" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="150" width="120" height="6" rx="3" fill="#3d8a9a"/>
+
+  <!-- Feature 2: Chat Sidebar -->
+  <rect x="30" y="175" width="740" height="65" rx="8" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <circle cx="70" cy="207" r="22" fill="#1a4a56"/>
+  <text x="70" y="212" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">CS</text>
+  <text x="105" y="197" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Chat Sidebar</text>
+  <text x="105" y="215" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Conversational AI in the editor. Ask questions, debug, explain code, generate tests.</text>
+  <text x="105" y="230" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">@workspace scoping for full project context</text>
+  <text x="600" y="193" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Maturity</text>
+  <rect x="600" y="198" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="198" width="130" height="6" rx="3" fill="#3d8a9a"/>
+  <text x="600" y="220" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Accuracy</text>
+  <rect x="600" y="225" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="225" width="110" height="6" rx="3" fill="#3d8a9a"/>
+
+  <!-- Feature 3: Agent Mode (NEW - highlighted) -->
+  <rect x="30" y="250" width="740" height="65" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="70" cy="282" r="22" fill="#e8a87c" opacity="0.2"/>
+  <text x="70" y="287" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">AG</text>
+  <text x="105" y="272" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Agent Mode</text>
+  <rect x="215" y="261" width="40" height="16" rx="8" fill="#e8a87c" opacity="0.3"/>
+  <text x="235" y="273" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">NEW</text>
+  <text x="105" y="290" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Autonomous multi-step coding. Plans, edits files, runs terminal commands.</text>
+  <text x="105" y="305" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Preview feature, rapidly improving. Competes with Cursor Composer.</text>
+  <text x="600" y="268" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Maturity</text>
+  <rect x="600" y="273" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="273" width="70" height="6" rx="3" fill="#e8a87c"/>
+  <text x="600" y="295" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Potential</text>
+  <rect x="600" y="300" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="300" width="140" height="6" rx="3" fill="#e8a87c"/>
+
+  <!-- Feature 4: Workspace Indexing -->
+  <rect x="30" y="325" width="740" height="65" rx="8" fill="#132f38" stroke="#1a4a56" stroke-width="1"/>
+  <circle cx="70" cy="357" r="22" fill="#1a4a56"/>
+  <text x="70" y="362" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">WI</text>
+  <text x="105" y="347" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Workspace Indexing</text>
+  <text x="105" y="365" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Local code index for smarter context retrieval. Understands project structure.</text>
+  <text x="105" y="380" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Powered by embeddings, respects .gitignore</text>
+  <text x="600" y="343" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Maturity</text>
+  <rect x="600" y="348" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="348" width="105" height="6" rx="3" fill="#3d8a9a"/>
+  <text x="600" y="370" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Accuracy</text>
+  <rect x="600" y="375" width="150" height="6" rx="3" fill="#1a4a56"/>
+  <rect x="600" y="375" width="100" height="6" rx="3" fill="#3d8a9a"/>
+</svg>

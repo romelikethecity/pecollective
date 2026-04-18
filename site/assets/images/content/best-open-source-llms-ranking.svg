@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f0c4a8;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="tealBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a4a56;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3d8a9a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Open Source LLM Benchmark Rankings (2026)</text>
+  <text x="400" y="55" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Composite score across MMLU, HumanEval, GSM8K, and HellaSwag</text>
+
+  <!-- Axis line -->
+  <line x1="200" y1="70" x2="200" y2="375" stroke="#1a4a56" stroke-width="1"/>
+  <line x1="200" y1="375" x2="750" y2="375" stroke="#1a4a56" stroke-width="1"/>
+
+  <!-- Scale markers -->
+  <text x="200" y="390" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">0</text>
+  <text x="365" y="390" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">25</text>
+  <text x="530" y="390" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">50</text>
+  <text x="695" y="390" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">75</text>
+  <line x1="365" y1="70" x2="365" y2="375" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="530" y1="70" x2="530" y2="375" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="695" y1="70" x2="695" y2="375" stroke="#1a4a56" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- 1. Llama 4 Scout — 89.2 — Gold highlight -->
+  <text x="195" y="100" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Llama 4 Scout</text>
+  <rect x="200" y="85" width="490" height="26" rx="4" fill="url(#goldBar)" opacity="0.95"/>
+  <text x="698" y="103" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">89.2</text>
+  <text x="700" y="103" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">109B · 24GB VRAM</text>
+
+  <!-- 2. Mistral Large 2 — 86.5 — Gold highlight -->
+  <text x="195" y="143" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Mistral Large 2</text>
+  <rect x="200" y="128" width="475" height="26" rx="4" fill="url(#goldBar)" opacity="0.85"/>
+  <text x="683" y="146" fill="#0f2d35" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">86.5</text>
+  <text x="685" y="146" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">123B · 80GB VRAM</text>
+
+  <!-- 3. Qwen 2.5 — 83.1 -->
+  <text x="195" y="186" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Qwen 2.5</text>
+  <rect x="200" y="171" width="457" height="26" rx="4" fill="url(#tealBar)"/>
+  <text x="663" y="189" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">83.1</text>
+  <text x="665" y="189" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">72B · 48GB VRAM</text>
+
+  <!-- 4. DeepSeek V3 — 81.8 -->
+  <text x="195" y="229" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">DeepSeek V3</text>
+  <rect x="200" y="214" width="449" height="26" rx="4" fill="url(#tealBar)"/>
+  <text x="655" y="232" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">81.8</text>
+  <text x="657" y="232" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">685B MoE · 80GB VRAM</text>
+
+  <!-- 5. Gemma 2 — 78.4 -->
+  <text x="195" y="272" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Gemma 2</text>
+  <rect x="200" y="257" width="430" height="26" rx="4" fill="url(#tealBar)"/>
+  <text x="636" y="275" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">78.4</text>
+  <text x="638" y="275" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">27B · 16GB VRAM</text>
+
+  <!-- 6. Phi-3 — 75.9 -->
+  <text x="195" y="315" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Phi-3</text>
+  <rect x="200" y="300" width="417" height="26" rx="4" fill="url(#tealBar)"/>
+  <text x="623" y="318" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">75.9</text>
+  <text x="625" y="318" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">14B · 8GB VRAM</text>
+
+  <!-- 7. Command R+ — 73.2 -->
+  <text x="195" y="358" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="end">Command R+</text>
+  <rect x="200" y="343" width="402" height="26" rx="4" fill="url(#tealBar)"/>
+  <text x="608" y="361" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">73.2</text>
+  <text x="610" y="361" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">104B · 64GB VRAM</text>
+
+  <!-- Legend -->
+  <rect x="30" y="375" width="12" height="12" rx="2" fill="url(#goldBar)"/>
+  <text x="47" y="386" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Top tier</text>
+  <rect x="100" y="375" width="12" height="12" rx="2" fill="url(#tealBar)"/>
+  <text x="117" y="386" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="10">Strong contender</text>
+</svg>

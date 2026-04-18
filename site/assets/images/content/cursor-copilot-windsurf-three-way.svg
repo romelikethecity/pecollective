@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="ccw-bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8a87c"/>
+      <stop offset="100%" stop-color="#f0c4a8"/>
+    </linearGradient>
+    <linearGradient id="ccw-bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a6a7a"/>
+      <stop offset="100%" stop-color="#3d8a9a"/>
+    </linearGradient>
+    <linearGradient id="ccw-bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a4a56"/>
+      <stop offset="100%" stop-color="#2a6a7a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">AI Code Editor Showdown</text>
+  <text x="400" y="52" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12">Cursor vs GitHub Copilot vs Windsurf</text>
+
+  <!-- Legend -->
+  <rect x="200" y="64" width="12" height="12" rx="2" fill="#e8a87c"/>
+  <text x="218" y="74" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Cursor ($20/mo)</text>
+  <rect x="340" y="64" width="12" height="12" rx="2" fill="#3d8a9a"/>
+  <text x="358" y="74" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Copilot ($10/mo)</text>
+  <rect x="490" y="64" width="12" height="12" rx="2" fill="#1a4a56"/>
+  <text x="508" y="74" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Windsurf ($15/mo)</text>
+
+  <!-- Grid background lines -->
+  <line x1="200" y1="90" x2="200" y2="325" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="350" y1="90" x2="350" y2="325" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="500" y1="90" x2="500" y2="325" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="650" y1="90" x2="650" y2="325" stroke="#1a4a56" stroke-width="0.5"/>
+  <line x1="750" y1="90" x2="750" y2="325" stroke="#1a4a56" stroke-width="0.5"/>
+
+  <!-- Scale labels at top -->
+  <text x="200" y="88" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">0</text>
+  <text x="350" y="88" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">2.5</text>
+  <text x="500" y="88" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">5</text>
+  <text x="650" y="88" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">7.5</text>
+  <text x="750" y="88" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">10</text>
+
+  <!-- Category 1: Code Completion -->
+  <text x="45" y="117" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Code</text>
+  <text x="45" y="131" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Completion</text>
+  <!-- Cursor: 8.5/10 -->
+  <rect x="200" y="103" width="467" height="12" rx="3" fill="url(#ccw-bar1)"/>
+  <text x="675" y="113" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">8.5</text>
+  <!-- Copilot: 9/10 -->
+  <rect x="200" y="119" width="495" height="12" rx="3" fill="url(#ccw-bar2)"/>
+  <text x="703" y="129" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">9.0</text>
+  <!-- Windsurf: 7.5/10 -->
+  <rect x="200" y="135" width="412" height="12" rx="3" fill="url(#ccw-bar3)"/>
+  <text x="620" y="145" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="700">7.5</text>
+
+  <!-- Category 2: Multi-File Editing -->
+  <text x="45" y="177" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Multi-File</text>
+  <text x="45" y="191" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Editing</text>
+  <!-- Cursor: 9/10 -->
+  <rect x="200" y="163" width="495" height="12" rx="3" fill="url(#ccw-bar1)"/>
+  <text x="703" y="173" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">9.0</text>
+  <!-- Copilot: 5/10 -->
+  <rect x="200" y="179" width="275" height="12" rx="3" fill="url(#ccw-bar2)"/>
+  <text x="483" y="189" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">5.0</text>
+  <!-- Windsurf: 8/10 -->
+  <rect x="200" y="195" width="440" height="12" rx="3" fill="url(#ccw-bar3)"/>
+  <text x="648" y="205" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="700">8.0</text>
+
+  <!-- Category 3: Model Selection -->
+  <text x="45" y="237" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Model</text>
+  <text x="45" y="251" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Selection</text>
+  <!-- Cursor: 9.5/10 -->
+  <rect x="200" y="223" width="522" height="12" rx="3" fill="url(#ccw-bar1)"/>
+  <text x="730" y="233" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">9.5</text>
+  <!-- Copilot: 6/10 -->
+  <rect x="200" y="239" width="330" height="12" rx="3" fill="url(#ccw-bar2)"/>
+  <text x="538" y="249" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">6.0</text>
+  <!-- Windsurf: 7/10 -->
+  <rect x="200" y="255" width="385" height="12" rx="3" fill="url(#ccw-bar3)"/>
+  <text x="593" y="265" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="700">7.0</text>
+
+  <!-- Category 4: Price Value -->
+  <text x="45" y="297" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Price</text>
+  <text x="45" y="311" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Value</text>
+  <!-- Cursor: 8/10 -->
+  <rect x="200" y="283" width="440" height="12" rx="3" fill="url(#ccw-bar1)"/>
+  <text x="648" y="293" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">8.0</text>
+  <!-- Copilot: 9/10 -->
+  <rect x="200" y="299" width="495" height="12" rx="3" fill="url(#ccw-bar2)"/>
+  <text x="703" y="309" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">9.0</text>
+  <!-- Windsurf: 8.5/10 -->
+  <rect x="200" y="315" width="467" height="12" rx="3" fill="url(#ccw-bar3)"/>
+  <text x="675" y="325" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" font-weight="700">8.5</text>
+
+  <!-- Summary boxes at bottom -->
+  <rect x="40" y="345" width="220" height="40" rx="6" fill="#132f38" stroke="#e8a87c" stroke-width="1"/>
+  <text x="150" y="363" text-anchor="middle" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Cursor: Best Overall</text>
+  <text x="150" y="377" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Multi-model, agent mode</text>
+
+  <rect x="280" y="345" width="220" height="40" rx="6" fill="#132f38" stroke="#3d8a9a" stroke-width="1"/>
+  <text x="390" y="363" text-anchor="middle" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Copilot: Best Value</text>
+  <text x="390" y="377" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">$10/mo, inline focus</text>
+
+  <rect x="520" y="345" width="240" height="40" rx="6" fill="#132f38" stroke="#2a6a7a" stroke-width="1"/>
+  <text x="640" y="363" text-anchor="middle" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Windsurf: Best Mid-Tier</text>
+  <text x="640" y="377" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">$15/mo, strong multi-file</text>
+</svg>

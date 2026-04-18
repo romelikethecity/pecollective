@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="ratingFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a87c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f0c4a8;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="featureCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a56;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#132f38;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#0f2d35"/>
+
+  <!-- Title area -->
+  <text x="400" y="32" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Cursor AI Editor</text>
+  <text x="400" y="50" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Feature breakdown and rating analysis</text>
+
+  <!-- Overall rating box -->
+  <rect x="290" y="62" width="220" height="50" rx="8" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <text x="315" y="93" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="28" font-weight="800">4.5</text>
+  <text x="357" y="93" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="14">/ 5</text>
+  <text x="395" y="83" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="16">&#9733;&#9733;&#9733;&#9733;&#9734;</text>
+  <text x="395" y="100" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">$20/mo Pro</text>
+
+  <!-- Feature cards - 2x2 grid -->
+  <!-- Feature 1: Multi-model (KEY DIFFERENTIATOR - highlighted) -->
+  <rect x="30" y="125" width="365" height="125" rx="10" fill="url(#featureCard)" stroke="#e8a87c" stroke-width="2"/>
+  <rect x="30" y="125" width="365" height="4" rx="2" fill="#e8a87c"/>
+  <rect x="48" y="144" width="120" height="20" rx="10" fill="#e8a87c" opacity="0.2"/>
+  <text x="108" y="158" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">KEY DIFFERENTIATOR</text>
+  <text x="48" y="184" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Multi-Model Support</text>
+  <text x="48" y="202" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Switch between GPT-4o, Claude Opus 4,</text>
+  <text x="48" y="217" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Gemini, and custom models on-the-fly</text>
+  <!-- Mini bar chart showing model quality -->
+  <text x="290" y="155" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="8">Models available</text>
+  <rect x="290" y="162" width="85" height="8" rx="4" fill="#1a4a56"/>
+  <rect x="290" y="162" width="85" height="8" rx="4" fill="#e8a87c" opacity="0.7"/>
+  <text x="380" y="170" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="8">10+</text>
+  <text x="290" y="185" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="8">Impact</text>
+  <rect x="290" y="192" width="85" height="8" rx="4" fill="#1a4a56"/>
+  <rect x="290" y="192" width="85" height="8" rx="4" fill="#e8a87c"/>
+  <text x="380" y="200" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="8">High</text>
+
+  <!-- Feature 2: Composer Agent -->
+  <rect x="405" y="125" width="365" height="125" rx="10" fill="url(#featureCard)" stroke="#2a6a7a" stroke-width="1.5"/>
+  <rect x="405" y="125" width="365" height="4" rx="2" fill="#3d8a9a"/>
+  <text x="423" y="153" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Composer Agent Mode</text>
+  <text x="423" y="175" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Autonomous multi-file editing. Describe</text>
+  <text x="423" y="190" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">what you want, agent writes across files</text>
+  <text x="423" y="205" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">with full codebase context awareness</text>
+  <!-- Rating -->
+  <text x="423" y="235" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Usefulness</text>
+  <rect x="490" y="226" width="100" height="8" rx="4" fill="#1a4a56"/>
+  <rect x="490" y="226" width="90" height="8" rx="4" fill="#3d8a9a"/>
+
+  <!-- Feature 3: Tab Autocomplete -->
+  <rect x="30" y="260" width="365" height="125" rx="10" fill="url(#featureCard)" stroke="#2a6a7a" stroke-width="1.5"/>
+  <rect x="30" y="260" width="365" height="4" rx="2" fill="#3d8a9a"/>
+  <text x="48" y="290" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Tab Autocomplete</text>
+  <text x="48" y="312" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">Context-aware completions that predict</text>
+  <text x="48" y="327" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">your next edit. Not just line completion</text>
+  <text x="48" y="342" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">but multi-line diffs and refactors</text>
+  <!-- Rating -->
+  <text x="48" y="372" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Speed boost</text>
+  <rect x="115" y="363" width="100" height="8" rx="4" fill="#1a4a56"/>
+  <rect x="115" y="363" width="80" height="8" rx="4" fill="#3d8a9a"/>
+  <text x="220" y="371" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="9">~40% faster coding</text>
+
+  <!-- Feature 4: Custom Instructions -->
+  <rect x="405" y="260" width="365" height="125" rx="10" fill="url(#featureCard)" stroke="#2a6a7a" stroke-width="1.5"/>
+  <rect x="405" y="260" width="365" height="4" rx="2" fill="#3d8a9a"/>
+  <text x="423" y="290" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Custom Instructions</text>
+  <text x="423" y="312" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">.cursorrules files define project-specific</text>
+  <text x="423" y="327" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">coding standards, frameworks, patterns.</text>
+  <text x="423" y="342" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="11">AI adapts to your team's conventions</text>
+  <!-- Rating -->
+  <text x="423" y="372" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="9">Customizability</text>
+  <rect x="505" y="363" width="100" height="8" rx="4" fill="#1a4a56"/>
+  <rect x="505" y="363" width="95" height="8" rx="4" fill="#3d8a9a"/>
+  <text x="610" y="371" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="9">Highly configurable</text>
+</svg>

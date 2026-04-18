@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="ccc-tealCol" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a6a7a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1a4a56" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="ccc-goldCol" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8a87c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8a87c" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Cursor vs Claude Code</text>
+  <text x="400" y="56" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="12">AI coding tool comparison for developers</text>
+
+  <!-- VS divider -->
+  <line x1="400" y1="75" x2="400" y2="380" stroke="#2a6a7a" stroke-width="1" stroke-dasharray="4,4"/>
+  <circle cx="400" cy="90" r="16" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <text x="400" y="95" text-anchor="middle" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="11" font-weight="800">VS</text>
+
+  <!-- Cursor Column Header -->
+  <rect x="40" y="72" width="330" height="46" rx="8" fill="url(#ccc-tealCol)" stroke="#2a6a7a" stroke-width="1"/>
+  <text x="205" y="95" text-anchor="middle" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Cursor</text>
+  <text x="205" y="112" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">IDE-based AI editor</text>
+
+  <!-- Claude Code Column Header -->
+  <rect x="430" y="72" width="330" height="46" rx="8" fill="url(#ccc-goldCol)" stroke="#e8a87c" stroke-width="1"/>
+  <text x="595" y="95" text-anchor="middle" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Claude Code</text>
+  <text x="595" y="112" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Terminal-based AI agent</text>
+
+  <!-- Row 1: Interface -->
+  <text x="400" y="145" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">INTERFACE</text>
+  <rect x="55" y="152" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="210" y="171" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">VS Code fork with inline AI</text>
+  <rect x="435" y="152" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="590" y="171" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">CLI / Terminal native</text>
+
+  <!-- Row 2: Price -->
+  <text x="400" y="200" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">PRICE</text>
+  <rect x="55" y="207" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="210" y="226" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">$20/mo Pro</text>
+  <rect x="435" y="207" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="590" y="226" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">$20/mo (Max plan)</text>
+
+  <!-- Row 3: Key Strength (with highlight) -->
+  <text x="400" y="255" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">KEY STRENGTH</text>
+  <rect x="55" y="262" width="310" height="36" rx="6" fill="#132f38" stroke="#3d8a9a" stroke-width="1.5"/>
+  <text x="73" y="278" fill="#3d8a9a" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Visual editing + autocomplete</text>
+  <text x="73" y="292" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Tab-complete, inline diffs, GUI chat</text>
+  <rect x="435" y="262" width="310" height="36" rx="6" fill="#132f38" stroke="#e8a87c" stroke-width="1.5"/>
+  <text x="453" y="278" fill="#e8a87c" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Multi-file autonomous edits</text>
+  <text x="453" y="292" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10">Runs shell commands, reads files, iterates</text>
+
+  <!-- Row 4: Best For -->
+  <text x="400" y="320" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="10" font-weight="600">BEST FOR</text>
+  <rect x="55" y="327" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="210" y="346" text-anchor="middle" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">Single-file edits, quick iterations</text>
+  <rect x="435" y="327" width="310" height="28" rx="6" fill="#132f38"/>
+  <text x="590" y="346" text-anchor="middle" fill="#a8c5cc" font-family="system-ui, sans-serif" font-size="12">Refactors, scaffolding, complex tasks</text>
+
+  <!-- Bottom insight -->
+  <text x="400" y="386" text-anchor="middle" fill="#6a8a94" font-family="system-ui, sans-serif" font-size="11">Many developers use both: Cursor for editing flow, Claude Code for autonomous tasks</text>
+</svg>

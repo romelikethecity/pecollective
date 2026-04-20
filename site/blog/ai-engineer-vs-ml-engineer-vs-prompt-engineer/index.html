@@ -172,6 +172,19 @@
 .related-articles li a { color: var(--gold, #e8a87c); font-size: 0.9375rem; }
 .related-articles li a:hover { color: var(--gold-light, #f0c4a8); text-decoration: underline; }
 </style>
+
+<style>
+.newsletter-mid { margin: 32px 0; padding: 20px 24px; background: linear-gradient(135deg, var(--bg-card, #132f38) 0%, rgba(232,168,124,0.08) 100%); border: 1px solid var(--gold, #e8a87c); border-radius: 12px; }
+.newsletter-mid__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.newsletter-mid__label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.875rem; color: var(--gold, #e8a87c); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.newsletter-mid__text { flex: 1; min-width: 200px; font-size: 0.9375rem; color: var(--text-secondary, #a8c5cc); }
+.newsletter-mid__form { display: flex; gap: 8px; position: relative; }
+.newsletter-mid__form input[type="email"] { padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.875rem; outline: none; width: 200px; }
+.newsletter-mid__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-mid__form button { padding: 8px 16px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.875rem; cursor: pointer; white-space: nowrap; }
+.newsletter-mid__form button:hover { background: var(--gold-hover, #d4956a); }
+@media (max-width: 640px) { .newsletter-mid__inner { flex-direction: column; text-align: center; } .newsletter-mid__form { width: 100%; } .newsletter-mid__form input[type="email"] { flex: 1; width: auto; } }
+</style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -362,6 +375,20 @@ Highest-paying employers: Google DeepMind, Meta FAIR, OpenAI, Anthropic. These f
 
 <p>AI engineers build software products that use pre-trained AI models. They don't train models from scratch. Instead, they integrate models via APIs and build the infrastructure around them: data pipelines, user interfaces, evaluation systems, and production architectures.</p>
 
+    <div class="newsletter-mid" id="newsletter-mid">
+      <div class="newsletter-mid__inner">
+        <span class="newsletter-mid__label">The AI Pulse</span>
+        <span class="newsletter-mid__text">Free weekly market data from 33,000+ AI job postings</span>
+        <form class="newsletter-mid__form" onsubmit="handleNewsletterSignup(event, this)">
+          <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="newsletter-capture__msg"></div>
+      </div>
+    </div>
+
+
 <p>A typical day involves writing code to integrate AI APIs into applications, building <a href="/glossary/rag/">RAG pipelines</a>, designing agent workflows, optimizing latency and costs, writing evaluation suites, and working with product teams to ship AI features.</p>
 
 <p>When something goes wrong, the AI engineer troubleshoots at the application level. Is the retrieval pipeline returning irrelevant results? Is the prompt causing <a href="/glossary/hallucination/">hallucinations</a>? Is the caching layer stale? They don't retrain the underlying model. They fix the system that uses it.</p>
@@ -534,8 +561,8 @@ Check our <a href="/salaries/">salary tracker</a> for current data from real job
       <div class="container container--narrow">
         
     <div class="newsletter-capture" id="newsletter">
-      <h2>See what AI skills pay in your role</h2>
-      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <h2>RAG and embedding trends, weekly</h2>
+      <p>Which models are gaining traction, what teams are actually shipping, and where the benchmarks are heading.</p>
       <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
         <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
         <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">

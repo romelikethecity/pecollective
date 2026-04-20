@@ -803,6 +803,19 @@
 .community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
 .community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
 </style>
+
+<style>
+.newsletter-mid { margin: 32px 0; padding: 20px 24px; background: linear-gradient(135deg, var(--bg-card, #132f38) 0%, rgba(232,168,124,0.08) 100%); border: 1px solid var(--gold, #e8a87c); border-radius: 12px; }
+.newsletter-mid__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.newsletter-mid__label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.875rem; color: var(--gold, #e8a87c); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.newsletter-mid__text { flex: 1; min-width: 200px; font-size: 0.9375rem; color: var(--text-secondary, #a8c5cc); }
+.newsletter-mid__form { display: flex; gap: 8px; position: relative; }
+.newsletter-mid__form input[type="email"] { padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.875rem; outline: none; width: 200px; }
+.newsletter-mid__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-mid__form button { padding: 8px 16px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.875rem; cursor: pointer; white-space: nowrap; }
+.newsletter-mid__form button:hover { background: var(--gold-hover, #d4956a); }
+@media (max-width: 640px) { .newsletter-mid__inner { flex-direction: column; text-align: center; } .newsletter-mid__form { width: 100%; } .newsletter-mid__form input[type="email"] { flex: 1; width: auto; } }
+</style>
 </head>
 
 
@@ -855,6 +868,19 @@
 <style>
 .community-cta-enhanced .community-proof { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin: 12px 0 16px; font-size: 0.8125rem; color: var(--text-muted, #6a8a94); }
 .community-cta-enhanced .community-proof span { padding: 4px 10px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+</style>
+
+<style>
+.newsletter-mid { margin: 32px 0; padding: 20px 24px; background: linear-gradient(135deg, var(--bg-card, #132f38) 0%, rgba(232,168,124,0.08) 100%); border: 1px solid var(--gold, #e8a87c); border-radius: 12px; }
+.newsletter-mid__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.newsletter-mid__label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.875rem; color: var(--gold, #e8a87c); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.newsletter-mid__text { flex: 1; min-width: 200px; font-size: 0.9375rem; color: var(--text-secondary, #a8c5cc); }
+.newsletter-mid__form { display: flex; gap: 8px; position: relative; }
+.newsletter-mid__form input[type="email"] { padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border, rgba(255,255,255,0.1)); background: var(--bg-darker, #0a1f25); color: var(--text-primary, #fff); font-size: 0.875rem; outline: none; width: 200px; }
+.newsletter-mid__form input[type="email"]:focus { border-color: var(--gold, #e8a87c); }
+.newsletter-mid__form button { padding: 8px 16px; border-radius: 8px; border: none; background: var(--gold, #e8a87c); color: var(--bg-darker, #0a1f25); font-weight: 600; font-size: 0.875rem; cursor: pointer; white-space: nowrap; }
+.newsletter-mid__form button:hover { background: var(--gold-hover, #d4956a); }
+@media (max-width: 640px) { .newsletter-mid__inner { flex-direction: column; text-align: center; } .newsletter-mid__form { width: 100%; } .newsletter-mid__form input[type="email"] { flex: 1; width: auto; } }
 </style>
 </head>
 <body>
@@ -1164,8 +1190,8 @@
 
   
     <div class="newsletter-capture" id="newsletter">
-      <h2>See what AI skills pay in your role</h2>
-      <p>Weekly data from 22,000+ job postings. Free.</p>
+      <h2>RAG and embedding trends, weekly</h2>
+      <p>Which models are gaining traction, what teams are actually shipping, and where the benchmarks are heading.</p>
       <form class="newsletter-capture__form" onsubmit="handleNewsletterSignup(event, this)">
         <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
         <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">

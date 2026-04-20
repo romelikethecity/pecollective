@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0f2d35" rx="12"/>
+  <line x1="613" y1="293" x2="675.5304075534033" y2="285.3222313654757" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="675.5304075534033" cy="285.3222313654757" r="3" fill="#60a5fa" opacity="0.5"/><line x1="650" y1="96" x2="713.0276961927813" y2="107.11348337068354" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="713.0276961927813" cy="107.11348337068354" r="3" fill="#60a5fa" opacity="0.5"/><line x1="687" y1="149" x2="744.9154240722439" y2="178.50938248307054" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="744.9154240722439" cy="178.50938248307054" r="3" fill="#60a5fa" opacity="0.5"/><line x1="524" y1="202" x2="571.476426822351" y2="247.84745245029382" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="571.476426822351" cy="247.84745245029382" r="3" fill="#60a5fa" opacity="0.5"/><line x1="561" y1="255" x2="593.4822445565046" y2="313.5995203783395" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="593.4822445565046" cy="313.5995203783395" r="3" fill="#60a5fa" opacity="0.5"/><line x1="598" y1="308" x2="612.1379949756076" y2="374.5140368498988" stroke="#60a5fa" opacity="0.4" stroke-width="2"/><circle cx="612.1379949756076" cy="374.5140368498988" r="3" fill="#60a5fa" opacity="0.5"/>
+  <rect x="40" y="40" width="400" height="320" rx="12" fill="#132f38" opacity="0.95"/>
+  <rect x="40" y="40" width="6" height="320" rx="3" fill="#60a5fa"/>
+  <rect x="60" y="60" width="90" height="22" rx="11" fill="#60a5fa" opacity="0.2"/>
+  <text x="105" y="76" text-anchor="middle" fill="#60a5fa" font-family="system-ui,sans-serif" font-size="9" font-weight="700">VECTOR & EMBEDDINGS</text>
+  <text x="60" y="120" fill="#ffffff" font-family="system-ui,sans-serif" font-size="22" font-weight="700">Cosine Similarity</text>
+  <rect x="60" y="140" width="360" height="1" fill="#1a4a56" opacity="0.5"/>
+  <text x="60" y="170" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="12">Definition, examples, and practical</text>
+  <text x="60" y="190" fill="#a8c5cc" font-family="system-ui,sans-serif" font-size="12">applications in AI/ML engineering.</text>
+  <rect x="60" y="220" width="120" height="30" rx="6" fill="#1a4a56"/>
+  <text x="120" y="240" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Learn More</text>
+  <text x="60" y="290" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">Part of the PE Collective AI Glossary</text>
+  <text x="60" y="310" fill="#6a8a94" font-family="system-ui,sans-serif" font-size="10">120+ terms defined with real-world context</text>
+</svg>

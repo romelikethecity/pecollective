@@ -14,12 +14,12 @@
     gtag('config', 'G-WMWEZTSWM0');
   </script>
 
-  <meta name="description" content="2026 pgvector benchmarks: HNSW is faster than IVFFlat in most Postgres vector search use cases. Choose the right index based on performance data.">
+  <meta name="description" content="pgvector adds vector similarity search to Postgres. No new infra needed. Covers setup, indexing (HNSW vs IVFFlat), and when it beats Pinecone.">
 
-  <title>pgvector: HNSW vs IVFFlat Benchmarks in Postgres (2026)</title>
+  <title>pgvector Review 2026: Vector Search Inside PostgreSQL</title>
 
-  <meta property="og:title" content="pgvector: HNSW vs IVFFlat Benchmarks in Postgres (2026)">
-  <meta property="og:description" content="2026 pgvector benchmarks: HNSW is faster than IVFFlat in most Postgres vector search use cases. Choose the right index based on performance data.">
+  <meta property="og:title" content="pgvector Review 2026: Vector Search Inside PostgreSQL">
+  <meta property="og:description" content="pgvector adds vector similarity search to Postgres. No new infra needed. Covers setup, indexing (HNSW vs IVFFlat), and when it beats Pinecone.">
   <meta property="og:image" content="https://pecollective.com/assets/social-preview.png">
   <meta property="og:site_name" content="PE Collective">
 
@@ -29,8 +29,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@pe_collective">
-  <meta name="twitter:title" content="pgvector: HNSW vs IVFFlat Benchmarks in Postgres (2026)">
-  <meta name="twitter:description" content="2026 pgvector benchmarks: HNSW is faster than IVFFlat in most Postgres vector search use cases. Choose the right index based on performance data.">
+  <meta name="twitter:title" content="pgvector Review 2026: Vector Search Inside PostgreSQL">
+  <meta name="twitter:description" content="pgvector adds vector similarity search to Postgres. No new infra needed. Covers setup, indexing (HNSW vs IVFFlat), and when it beats Pinecone.">
   <meta name="twitter:image" content="https://pecollective.com/assets/social-preview.png">
 
   <!-- BreadcrumbList Schema -->
@@ -143,6 +143,7 @@
             "name": "PE Collective"
         },
         "datePublished": "2026-02-20",
+  "dateModified": "2026-04-22",
         "reviewRating": {
             "@type": "Rating",
             "ratingValue": "4.0",
@@ -783,7 +784,14 @@ SELECT id, content FROM documents ORDER BY embedding &lt;=&gt; '[0.1, 0.2, ...]'
 </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  
+    <!-- Updated April 2026 freshness section -->
+    <section style="max-width: 800px; margin: 40px auto; padding: 24px 32px; background: var(--bg-card, #132f38); border-left: 3px solid var(--gold, #e8a87c); border-radius: 8px;">
+        <p style="color: var(--gold, #e8a87c); font-weight: 600; font-size: 0.875rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Updated April 2026</p>
+        <p style="color: var(--text-secondary, #a8c5cc); font-size: 0.9375rem; line-height: 1.6; margin: 0;">pgvector 0.8 improved HNSW index build speed and streaming inserts in early 2026. Recall on large datasets improved. Still the best choice when you want vectors inside existing Postgres.</p>
+    </section>
+
+    <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">

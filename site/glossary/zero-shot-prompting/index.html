@@ -1226,6 +1226,17 @@
         </div>
 
         
+      <!-- Added April 2026: Practical comparison -->
+      <div style="margin-top: 48px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 16px;">Zero-Shot vs Few-Shot: When to Use Each Approach</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Zero-shot prompting works when the task is common and well-defined. Classification, summarization, translation, and simple Q&A all perform well without examples. GPT-4.1 and Claude Opus handle these tasks correctly 85-95% of the time with a clear instruction alone.</p>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Switch to few-shot when your output needs a specific format, tone, or domain vocabulary. If you want the model to write product descriptions in your brand voice, showing it 3-5 examples is faster and more reliable than describing the voice in words. The examples act as implicit instructions that the model picks up without you having to articulate every rule.</p>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Cost is a real factor. Each example you add to a few-shot prompt consumes tokens. At <a href="/blog/llm-token-pricing-guide/" style="color: var(--gold);">current token prices</a>, adding 5 examples might increase your per-request cost by 40-60%. For high-volume applications processing thousands of requests daily, that adds up. Zero-shot keeps prompts short and costs low.</p>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Chain-of-thought prompting sits between the two. Adding "Think step by step" to a zero-shot prompt improves accuracy on reasoning tasks by 15-25% without the token overhead of multiple examples. Most <a href="/blog/best-prompt-engineering-courses/" style="color: var(--gold);">prompt engineering courses</a> teach this technique early because the improvement is reliable and free.</p>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">The practical rule: start with zero-shot. If the output isn't right, add 2-3 examples. If it's still off, the problem is probably the model's capability, not your prompting technique. At that point, consider a more capable model or fine-tuning instead of adding more examples to an already-long prompt.</p>
+      </div>
+
+
       <div class="newsletter-cta">
         <h2>Level up your AI vocabulary.</h2>
         <p>Weekly data from 22,000+ job postings. Free.</p>
